@@ -111,7 +111,7 @@ segments:
   - type: code
     start: 0xCDA50
     vram: 0x800F65E0
-    dir: overlay0
+    dir: ovl_0_MemoryMatch
     name: MemoryMatch
     overlay: True
     subsegments:
@@ -121,7 +121,7 @@ segments:
   - type: bin
     start: 0x14E940
     vram: 0x800F65E0
-    dir: overlay14
+    dir: ovl_14_CoinBlockBlitz
     name: CoinBlockBlitz
     overlay: True
     subsegments:
