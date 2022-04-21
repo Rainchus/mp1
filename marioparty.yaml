@@ -1,0 +1,133 @@
+name: Marioparty (North America)
+sha1: 1159bd56730094bfc71be30113e1cfc8bacf34f3
+options:
+  basename: marioparty
+  target_path: baserom.us.z64
+  base_path: .
+  compiler: GCC
+  find_file_boundaries: True
+  header_encoding: ASCII
+  # platform: n64
+  undefined_funcs_auto_path: undefined_funcs_auto.txt
+  undefined_syms_auto_path: undefined_syms_auto.txt
+  ld_script_path: marioparty.ld
+  # symbol_addrs_path: symbol_addrs.txt
+  # undefined_syms_path: undefined_syms.txt
+  # c_path: c
+  asm_path: asm
+  src_path: src
+  build_path: build
+  # extensions_path: tools/splat_ext
+  # auto_all_sections: True
+segments:
+  - name: header
+    type: header
+    start: 0x0
+  - name: boot
+    type: bin
+    start: 0x40
+  - name: main
+    type: code
+    start: 0x1000
+    vram: 0x80000400
+    subsegments:
+      - [0x1130, c]
+      - [0x99E0, c]
+      - [0xB980, c]
+      - [0x138F0, c]
+      - [0x14370, c]
+      - [0x14E20, c]
+      - [0x156F0, c]
+      - [0x17D50, c]
+      - [0x180C0, c]
+      - [0x19470, c]
+      - [0x19E70, c]
+      - [0x1A2A0, c]
+      - [0x1ACF0, c]
+      - [0x1B200, c]
+      - [0x1DE40, c]
+      - [0x1EA70, c]
+      - [0x22F90, c]
+      - [0x23C40, c]
+      - [0x241F0, c]
+      - [0x24740, c]
+      - [0x29C90, c]
+      - [0x2C0C0, c]
+      - [0x34D80, c]
+      - [0x388E0, c]
+      - [0x3AC60, c]
+      - [0x3BF30, c]
+      - [0x3C280, c]
+      - [0x3CED0, c]
+      - [0x3DEB0, c]
+      - [0x3E560, c]
+      - [0x3F5B0, c]
+      - [0x42CA0, c]
+      - [0x42E40, c]
+      - [0x43760, c]
+      - [0x46100, c]
+      - [0x467E0, c]
+      - [0x46AE0, c]
+      - [0x47320, c]
+      - [0x48D90, c]
+      - [0x4D770, c]
+      - [0x4E530, c]
+      - [0x51200, c]
+      - [0x53680, c]
+      - [0x53C80, c]
+      - [0x54120, c]
+      - [0x57330, c]
+      - [0x59510, c]
+      - [0x59710, c]
+      - [0x59E80, c]
+      - [0x5C460, c]
+      - [0x5CDB0, c]
+      - [0x61B70, c]
+      - [0x62140, c]
+      - [0x643C0, c]
+      - [0x64B40, c]
+      - [0x64FD0, c]
+      - [0x65770, c]
+      - [0x69010, c]
+      - [0x6C470, c]
+      - [0x6D4E0, c]
+      - [0x72D90, c]
+      - [0x7C9F0, c]
+      - [0x7CC80, c]
+      - [0x7CD60, c]
+      - [0x80770, c]
+      - [0x80BE0, c]
+      - [0x821F0, c]
+      - [0x82440, c]
+      - [0x82590, c]
+      - [0x82680, c]
+      - [0x828C0, c]
+      - [0x82AF0, c]
+      - [0x83260, c]
+      - [0x833C0, c]
+      - [0x83490, c]
+  - type: bin
+    start: 0x835D0
+  - type: code
+    start: 0xCDA50
+    vram: 0x800F65E0
+    dir: ovl_0_MemoryMatch
+    name: MemoryMatch
+    overlay: True
+    subsegments:
+      - [0xCDA50, c]
+  - type: bin
+    start: 0xD4C50
+    subsegments:
+      - [0xD4C50, bin]
+  - type: code
+    start: 0x14E940
+    vram: 0x800F65E0
+    dir: ovl_14_CoinBlockBlitz
+    name: CoinBlockBlitz
+    overlay: True
+    subsegments:
+      - [0x14E940, c]
+  - type: bin
+    start: 0x152B20
+  - [0x2000000]
