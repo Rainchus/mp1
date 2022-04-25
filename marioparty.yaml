@@ -19,6 +19,7 @@ options:
   build_path: build
   # extensions_path: tools/splat_ext
   # auto_all_sections: True
+  asm_inc_header: "\t.set noat\n\t.set noreorder\n"
 segments:
   - name: header
     type: header
@@ -31,6 +32,8 @@ segments:
     start: 0x1000
     vram: 0x80000400
     subsegments:
+      - [0x1000, hasm, entrypoint]
+      - [0x1060, c]
       - [0x1130, c]
       - [0x99E0, c]
       - [0xB980, c]

@@ -1,0 +1,6 @@
+baserom.us.z64
+undefined_funcs_auto.txt
+undefined_syms_auto.txt
+build/
+assets/
+marioparty.ld
