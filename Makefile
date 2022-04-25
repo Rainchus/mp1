@@ -49,13 +49,13 @@ SHA1SUM = sha1sum
 
 CROSS := mips-linux-gnu-
 AS := $(CROSS)as
-OLD_AS := tools/gcc/as
-CC := tools/gcc/cc1
+OLD_AS := tools/gcc_2.7.2/as
+CC := tools/gcc_2.7.2/cc1
 CPP := cpp -P
 LD := $(CROSS)ld
 OBJCOPY := $(CROSS)objcopy
 
-export COMPILER_PATH := $(WORKING_DIR)/tools/gcc
+export COMPILER_PATH := $(WORKING_DIR)/tools/gcc_2.7.2
 
 ASFLAGS    := -G 0 -I include -mips3 -mabi=32 $(GRUCODE_ASFLAGS)
 OLDASFLAGS := -G 0 -I include -mips2 $(GRUCODE_ASFLAGS)
@@ -74,7 +74,6 @@ endif
 
 # Object files
 OBJECTS = $(shell grep -E 'build.+\.o' marioparty.ld -o)
-
 
 ### Targets ###
 
@@ -115,7 +114,7 @@ $(BUILD_DIR)/src/%.i: src/%.c
 # Go from .i to .s...
 $(BUILD_DIR)/src/%.s: $(BUILD_DIR)/src/%.i
 	@mkdir -p $(shell dirname $@)
-	tools/gcc/gcc $(CFLAGS) -o $@ $<
+	tools/gcc_2.7.2/gcc $(CFLAGS) -o $@ $<
 
 # Run a separate assembler for src and asm .s files.
 $(BUILD_DIR)/src/%.c.o: $(BUILD_DIR)/src/%.s
