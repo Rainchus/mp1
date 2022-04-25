@@ -1,16 +1,11 @@
 ### Build Options ###
 
-# Override these options in settings.mk or with `make SETTING=value'.
-
-BASEROM = baserom.us.z64
-TARGET = marioparty
-COMPARE = 1
-NON_MATCHING = 0
-CHECK = 0
-
-# Microcode
-GRUCODE_CFLAGS := -DF3DEX_GBI_2
-GRUCODE_ASFLAGS := --defsym F3DEX_GBI_2=1
+BASEROM      := baserom.us.z64
+TARGET       := marioparty
+COMPARE      ?= 1
+NON_MATCHING ?= 0
+CHECK        ?= 1
+VERBOSE      ?= 0
 
 # Patches
 # PATCHES_ASFLAGS := --defsym MP_SAVETYPE_PATCH=1
@@ -25,55 +20,71 @@ ifeq ($(NON_MATCHING),1)
 override COMPARE=0
 endif
 
+ifeq ($(VERBOSE),0)
+V := @
+endif
+
 
 ### Output ###
 
 BUILD_DIR := build
-ROM := $(BUILD_DIR)/$(TARGET).z64
-ELF := $(BUILD_DIR)/$(TARGET).elf
+ROM       := $(BUILD_DIR)/$(TARGET).z64
+ELF       := $(BUILD_DIR)/$(TARGET).elf
 LD_SCRIPT := $(TARGET).ld
-LD_MAP := $(BUILD_DIR)/$(TARGET).map
+LD_MAP    := $(BUILD_DIR)/$(TARGET).map
 
 
 ### Tools ###
 
-PYTHON := python3
-N64CKSUM := tools/n64cksum
+PYTHON     := python3
+N64CKSUM   := $(PYTHON) tools/n64cksum.py
 SPLAT_YAML := marioparty.yaml
-SPLAT = $(PYTHON) tools/splat/split.py $(SPLAT_YAML)
-EMULATOR = mupen64plus
-SHA1SUM = sha1sum
+SPLAT      := $(PYTHON) tools/splat/split.py $(SPLAT_YAML)
+EMULATOR   := mupen64plus
+DIFF       := diff
 
+CROSS    := mips-linux-gnu-
+AS       := $(CROSS)as
+LD       := $(CROSS)ld
+OBJCOPY  := $(CROSS)objcopy
+STRIP    := $(CROSS)strip
+
+CC       := tools/gcc_2.7.2/gcc
+CC_HOST  := gcc
+CPP      := cpp -P
+
+PRINT := printf '
+ ENDCOLOR := \033[0m
+ WHITE     := \033[0m
+ ENDWHITE  := $(ENDCOLOR)
+ GREEN     := \033[0;32m
+ ENDGREEN  := $(ENDCOLOR)
+ BLUE      := \033[0;34m
+ ENDBLUE   := $(ENDCOLOR)
+ YELLOW    := \033[0;33m
+ ENDYELLOW := $(ENDCOLOR)
+ENDLINE := \n'
 
 ### Compiler Options ###
 
-CROSS := mips-linux-gnu-
-AS := $(CROSS)as
-OLD_AS := tools/gcc_2.7.2/as
-CC := tools/gcc_2.7.2/cc1
-CPP := cpp -P
-LD := $(CROSS)ld
-OBJCOPY := $(CROSS)objcopy
+ASFLAGS      := -G 0 -I include -mips3 -mabi=32
+CFLAGS       := -O1 -G0 -mips3
+CPPFLAGS     := -I include -I $(BUILD_DIR)/include -I src -DF3DEX_GBI_2
+LDFLAGS      := -T undefined_syms.txt -T undefined_funcs.txt -T undefined_funcs_auto.txt -T undefined_syms_auto.txt -T $(LD_SCRIPT) -Map $(LD_MAP) --no-check-sections
+CFLAGS_CHECK := -fsyntax-only -fsigned-char -nostdinc -fno-builtin -D CC_CHECK\
+                -std=gnu90 -Wall -Wextra -Wno-format-security -Wno-unused-parameter -Wno-pointer-to-int-cast -Wno-int-to-pointer-cast
 
-export COMPILER_PATH := $(WORKING_DIR)/tools/gcc_2.7.2
-
-ASFLAGS    := -G 0 -I include -mips3 -mabi=32 $(GRUCODE_ASFLAGS)
-OLDASFLAGS := -G 0 -I include -mips2 $(GRUCODE_ASFLAGS)
-CFLAGS     := -O1 -G0 -mips2
-LDFLAGS    := -T undefined_syms.txt -T undefined_funcs.txt -T undefined_funcs_auto.txt -T undefined_syms_auto.txt -T $(BUILD_DIR)/$(LD_SCRIPT) -Map $(LD_MAP) --no-check-sections
-
-# Check code syntax with host compiler
-CC_CHECK := gcc -fsyntax-only -fsigned-char -nostdinc -fno-builtin -I include -I $(BUILD_DIR)/include -I src\
-	-D CC_CHECK\
-	-std=gnu90 -Wall -Wextra -Wno-format-security -Wno-unused-parameter -Wno-pointer-to-int-cast -Wno-int-to-pointer-cast $(GRUCODE_CFLAGS)
 ifneq ($(CHECK),1)
-CC_CHECK += -w
+CFLAGS_CHECK += -w
 endif
 
 ### Sources ###
 
 # Object files
-OBJECTS = $(shell grep -E 'build.+\.o' marioparty.ld -o)
+OBJECTS := $(shell grep -E 'build.+\.o' marioparty.ld -o)
+DEPENDS := $(OBJECTS:=.d) 
+
+-include $(DEPENDS)
 
 ### Targets ###
 
@@ -81,88 +92,67 @@ OBJECTS = $(shell grep -E 'build.+\.o' marioparty.ld -o)
 #build/src/libultra/libc/%.o: CFLAGS := -O2 $(CFLAGSCOMMON)
 #build/src/lib/%.o: CFLAGS := -O2 $(CFLAGSCOMMON)
 
+all: $(ROM)
+
 clean:
-	rm -rf asm
-	rm -rf assets
-	rm -rf build
-	rm -f *auto.txt
-	rm -f marioparty.ld
+	$(V)rm -rf build
 
+distclean: clean
+	$(V)rm -rf asm
+	$(V)rm -rf assets
+	$(V)rm -f *auto.txt
+	$(V)rm -f marioparty.ld
+	$(V)rm include/ld_addrs.h
 
-clean-all:
-	rm -rf $(BUILD_DIR) asm assets include/ld_addrs.h
-
-setup: clean split
+setup: distclean split
 
 split:
-	rm -rf assets asm
-	$(SPLAT)
+	$(V)$(SPLAT)
 
 test: $(ROM)
-	$(EMULATOR) $<
+	$(V)$(EMULATOR) $<
 
-$(BUILD_DIR)/$(LD_SCRIPT): $(LD_SCRIPT)
+# Compile .c files with kmc gcc (use strip to fix objects so that they can be linked with modern gnu ld) 
+$(BUILD_DIR)/src/%.c.o: src/%.c
+	@$(PRINT)$(GREEN)Compiling C file: $(ENDGREEN)$(BLUE)$<$(ENDBLUE)$(ENDLINE)
 	@mkdir -p $(shell dirname $@)
-	$(CPP) -DBUILD_DIR=$(BUILD_DIR) -o $@ $<
+	@$(CC_HOST) $(CFLAGS_CHECK) $(CPPFLAGS) -MMD -MP -MT $@ -MF $@.d -I include/ $<
+	$(V)export COMPILER_PATH=tools/gcc_2.7.2 && $(CC) $(CFLAGS) $(CPPFLAGS) -I include/ -c -o $@ $<
+	@$(STRIP) $@ -N dummy-symbol-name
 
-# Pre-process .c files with the modern cpp.
-$(BUILD_DIR)/src/%.i: src/%.c
-	@mkdir -p $(shell dirname $@)
-	@$(CC_CHECK) -MMD -MP -MT $@ -MF $@.d $<
-	$(CPP) -MMD -MP -MT $@ -MF $@.d -I include/ -o $@ $<
-
-# Go from .i to .s...
-$(BUILD_DIR)/src/%.s: $(BUILD_DIR)/src/%.i
-	@mkdir -p $(shell dirname $@)
-	tools/gcc_2.7.2/gcc $(CFLAGS) -o $@ $<
-
-# Run a separate assembler for src and asm .s files.
-$(BUILD_DIR)/src/%.c.o: $(BUILD_DIR)/src/%.s
-	@mkdir -p $(shell dirname $@)
-	$(OLD_AS) $(OLDASFLAGS) -o $@ $<
-
+# Assemble .s files with modern gnu as
 $(BUILD_DIR)/asm/%.s.o: asm/%.s
+	@$(PRINT)$(GREEN)Assembling asm file: $(ENDGREEN)$(BLUE)$<$(ENDBLUE)$(ENDLINE)
 	@mkdir -p $(shell dirname $@)
-	$(AS) $(ASFLAGS) -o $@ $<
-
-$(BUILD_DIR)/data/%.data.o: asm/data/%.data.s
-	@mkdir -p $(shell dirname $@)
-	$(AS) $(ASFLAGS) -o $@ $<
-
-$(BUILD_DIR)/rodata/%.rodata.o: asm/data/%.rodata.s
-	@mkdir -p $(shell dirname $@)
-	$(AS) $(ASFLAGS) -o $@ $<
+	$(V)$(AS) $(ASFLAGS) -o $@ $<
 
 # Create .o files from .bin files.
 $(BUILD_DIR)/%.bin.o: %.bin
+	@$(PRINT)$(GREEN)Objcopying binary file: $(ENDGREEN)$(BLUE)$<$(ENDBLUE)$(ENDLINE)
 	@mkdir -p $(shell dirname $@)
-	$(LD) -r -b binary -o $@ $<
+	$(V)$(LD) -r -b binary -o $@ $<
 
-# Continue the rest of the build...
-$(BUILD_DIR)/$(TARGET).elf: $(BUILD_DIR)/$(LD_SCRIPT) $(OBJECTS)
-	$(LD) $(LDFLAGS) -o $@
+# Link the .o files into the .elf
+$(BUILD_DIR)/$(TARGET).elf: $(OBJECTS)
+	@$(PRINT)$(GREEN)Linking elf file:$(ENDGREEN)$(BLUE)$@$(ENDBLUE)$(ENDLINE)
+	$(V)$(LD) $(LDFLAGS) -o $@
 
-$(BUILD_DIR)/$(TARGET).bin: $(BUILD_DIR)/$(TARGET).elf
-	$(OBJCOPY) $< $@ -O binary
-
-$(ROM): $(BUILD_DIR)/$(TARGET).bin
-	@cp $< $@
-	$(N64CKSUM) $< $@
+# Convert the .elf to the final rom
+$(ROM): $(BUILD_DIR)/$(TARGET).elf
+	@$(PRINT)$(GREEN)Creating z64: $(ENDGREEN)$(BLUE)$@$(ENDBLUE)$(ENDLINE)
+	$(V)$(OBJCOPY) $< $@ -O binary
+	$(V)$(N64CKSUM) $@
 ifeq ($(COMPARE),1)
-	@$(SHA1SUM) -c $(TARGET).sha1 || (echo 'The build succeeded, but did not match the base ROM. This is expected if you are making changes to the game. To skip this check, use "make COMPARE=0".' && false)
+	@$(DIFF) $(BASEROM) $(ROM) && printf "OK\n" || (echo 'The build succeeded, but did not match the base ROM. This is expected if you are making changes to the game. To skip this check, use "make COMPARE=0".' && false)
 endif
-
 
 ### Make Settings ###
 
-.PHONY: clean test setup submodules split $(ROM)
+.PHONY: all clean distclean test setup split $(ROM)
 .DELETE_ON_ERROR:
-.SECONDARY:
-.PRECIOUS: $(ROM)
-.DEFAULT_GOAL := $(ROM)
 
 # Remove built-in implicit rules to improve performance
 MAKEFLAGS += --no-builtin-rules
 
-# Fail targets if any command in the pipe exits with error
-SHELL = /bin/bash -e -o pipefail
+# Print target for debugging
+print-% : ; $(info $* is a $(flavor $*) variable set to [$($*)]) @true
