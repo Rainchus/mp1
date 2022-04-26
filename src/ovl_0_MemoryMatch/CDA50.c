@@ -176,11 +176,32 @@ void func_800F796C_CEDDC(unk_801DEC9C* arg0) {
 
 INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F7994_CEE04);
 
+#ifdef NON_MATCHING
+u16 func_800F7AFC_CEF6C(u16 arg0) {
+    u32 temp_v0;
+
+    temp_v0 = (D_800FD7E0 * 0x19971204 + 0x19760831) >> 0x10;
+    D_800FD7E0 = temp_v0;
+    if (arg0 == 0) {
+        return D_800FD7E2;
+    } else {
+        return (temp_v0 % arg0);
+    }
+}
+#else
 INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F7AFC_CEF6C);
+#endif
 
 INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F7B6C_CEFDC);
 
+#ifdef NON_MATCHING
+void func_800F7B6C_CEFDC(u16 arg0) { //matches with mips3
+    D_800FD7E0 = arg0 * D_800FD7E0;
+    D_800FD7E0 += arg0;
+}
+#else
 INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F7B90_CF000);
+#endif
 
 void func_800F7C08_CF078(void) {
     D_800F33EC.y = -41.39f;

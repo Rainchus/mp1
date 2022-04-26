@@ -74,6 +74,8 @@ void func_800F830C_CF77C(void);
 void func_800F94E0_D0950(void);
 
 extern unk_Struct00* D_800C3110;
+extern u32 D_800FD7E0;
+extern u16 D_800FD7E2;
 extern s32 D_800ED430;
 extern s16 D_800ED440;
 extern s16 D_800F2BC0;
