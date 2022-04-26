@@ -68,7 +68,7 @@ ENDLINE := \n'
 ### Compiler Options ###
 
 ASFLAGS      := -G 0 -I include -mips3 -mabi=32
-CFLAGS       := -O1 -G0 -mips3
+CFLAGS       := -O1 -G0 -mips2
 CPPFLAGS     := -I include -I $(BUILD_DIR)/include -I src -DF3DEX_GBI_2
 LDFLAGS      := -T undefined_syms.txt -T undefined_funcs.txt -T undefined_funcs_auto.txt -T undefined_syms_auto.txt -T $(LD_SCRIPT) -Map $(LD_MAP) --no-check-sections
 CFLAGS_CHECK := -fsyntax-only -fsigned-char -nostdinc -fno-builtin -D CC_CHECK\
@@ -149,7 +149,6 @@ endif
 ### Make Settings ###
 
 .PHONY: all clean distclean test setup split
-.DELETE_ON_ERROR:
 
 # Remove built-in implicit rules to improve performance
 MAKEFLAGS += --no-builtin-rules
