@@ -1,4 +1,5 @@
 #include "common.h"
+#include "CDA50.h"
 
 INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F65E0_CDA50);
 
@@ -28,7 +29,15 @@ INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F7B6C_CEFDC);
 
 INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F7B90_CF000);
 
-INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F7C08_CF078);
+void func_800F7C08_CF078(void) {
+    D_800F33EC.y = -41.39f;
+    D_800F33EC.x = 0;
+    D_800F33EC.z = 0;
+    D_800F6524.x = -5.0f;
+    D_800F6524.y = -30.0f;
+    D_800F6524.z = 0;
+    D_800EE98C = 1556.0f;
+}
 
 INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F7C70_CF0E0);
 

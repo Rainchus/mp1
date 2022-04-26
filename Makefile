@@ -84,8 +84,6 @@ endif
 OBJECTS := $(shell grep -E 'build.+\.o' marioparty.ld -o)
 DEPENDS := $(OBJECTS:=.d) 
 
--include $(DEPENDS)
-
 ### Targets ###
 
 #build/src/libultra/os/%.o: CFLAGS := -O2 $(CFLAGSCOMMON)
@@ -93,6 +91,8 @@ DEPENDS := $(OBJECTS:=.d)
 #build/src/lib/%.o: CFLAGS := -O2 $(CFLAGSCOMMON)
 
 all: $(ROM)
+
+-include $(DEPENDS)
 
 clean:
 	$(V)rm -rf build
@@ -102,7 +102,7 @@ distclean: clean
 	$(V)rm -rf assets
 	$(V)rm -f *auto.txt
 	$(V)rm -f marioparty.ld
-	$(V)rm include/ld_addrs.h
+	$(V)rm -f include/ld_addrs.h
 
 setup: distclean split
 
@@ -148,7 +148,7 @@ endif
 
 ### Make Settings ###
 
-.PHONY: all clean distclean test setup split $(ROM)
+.PHONY: all clean distclean test setup split
 .DELETE_ON_ERROR:
 
 # Remove built-in implicit rules to improve performance

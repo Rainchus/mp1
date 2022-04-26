@@ -1,4 +1,5 @@
 #include "common.h"
+#include "180C0.h"
 
 INCLUDE_ASM(s32, "180C0", func_800174C0);
 
@@ -8,7 +9,13 @@ INCLUDE_ASM(s32, "180C0", func_80017528);
 
 INCLUDE_ASM(s32, "180C0", func_8001755C);
 
-INCLUDE_ASM(s32, "180C0", func_8001758C);
+u32 func_8001758C(void) {
+    u32 temp_lo;
+
+    temp_lo = D_800C2FF4 * 0x41C64E6D;
+    D_800C2FF4 = temp_lo + 0x3039;
+    return (temp_lo + 0x303A) >> 16 & 0xFF;
+}
 
 INCLUDE_ASM(s32, "180C0", func_800175C0);
 
