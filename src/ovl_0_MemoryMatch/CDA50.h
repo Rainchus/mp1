@@ -58,7 +58,7 @@ void func_800F8E38_D02A8(void);
 void func_800F90CC_D053C(void);
 void func_800F963C_D0AAC(void);
 void func_800FB360_D27D0(void);
-void func_800F7B6C_CEFDC(u8);
+void func_800F7B6C_CEFDC(u16);
 void func_800F7C08_CF078(void);
 void func_800F7D74_CF1E4(void);
 void func_800F8FEC_D045C(void);

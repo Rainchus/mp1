@@ -192,16 +192,12 @@ u16 func_800F7AFC_CEF6C(u16 arg0) {
 INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F7AFC_CEF6C);
 #endif
 
-INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F7B6C_CEFDC);
-
-#ifdef NON_MATCHING
 void func_800F7B6C_CEFDC(u16 arg0) { //matches with mips3
     D_800FD7E0 = arg0 * D_800FD7E0;
     D_800FD7E0 += arg0;
 }
-#else
+
 INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F7B90_CF000);
-#endif
 
 void func_800F7C08_CF078(void) {
     D_800F33EC.y = -41.39f;

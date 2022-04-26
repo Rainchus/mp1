@@ -68,7 +68,7 @@ ENDLINE := \n'
 ### Compiler Options ###
 
 ASFLAGS      := -G 0 -I include -mips3 -mabi=32
-CFLAGS       := -O1 -G0 -mips2
+CFLAGS       := -O1 -G0 -mips3 -mgp32 -mfp32
 CPPFLAGS     := -I include -I $(BUILD_DIR)/include -I src -DF3DEX_GBI_2
 LDFLAGS      := -T undefined_syms.txt -T undefined_funcs.txt -T undefined_funcs_auto.txt -T undefined_syms_auto.txt -T $(LD_SCRIPT) -Map $(LD_MAP) --no-check-sections
 CFLAGS_CHECK := -fsyntax-only -fsigned-char -nostdinc -fno-builtin -D CC_CHECK\
