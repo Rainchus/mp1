@@ -37,7 +37,13 @@ void func_80060198(void);
 void func_8008B6A0(s32);
 void func_80060398(s32);
 void func_800726AC(s32, s32);
-void func_80075CCC(s32);
+void func_80075CCC(s32, ...);
+s16 ReadImgPackand(s32);
+void func_80025930(s16, s32, s32);
 s32 func_80076174(void);
+f32 func_800B0CD8(void);
+void* ReadMainFS(s32);
+void FreeMainFS(void*);
+s32 func_800678A4(void*);
 
 #endif

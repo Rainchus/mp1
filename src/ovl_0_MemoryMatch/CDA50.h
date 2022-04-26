@@ -32,9 +32,10 @@ typedef struct unk_801DEC9C {
 /* 0x0C */ s32 unk_0C;
 /* 0x10 */ s32 unk_10;
 /* 0x14 */ void* unk_14;
-/* 0x18 */ s32 unk_18;
-/* 0x1C */ s32 unk_1C;
-/* 0x20 */ char unk_20[0x10];
+/* 0x18 */ f32 unk_18;
+/* 0x1C */ f32 unk_1C;
+/* 0x20 */ f32 unk_20;
+/* 0x24 */ char unk_24[0x0C];
 /* 0x30 */ f32 unk_30;
 /* 0x34 */ f32 unk_34;
 /* 0x38 */ f32 unk_38;
@@ -46,7 +47,8 @@ typedef struct unk_801DEC9C {
 /* 0x4D */ u8 unk_4D;
 /* 0x4E */ u8 unk_4E;
 /* 0x4F */ u8 unk_4F;
-} unk_801DEC9C;
+/* 0x50 */ void* unk_50;
+} unk_801DEC9C; //sizeof 0x54
 
 void func_800F6858_CDCC8(unk_801DEC9C*);
 void func_800F796C_CEDDC(unk_801DEC9C*);
@@ -65,11 +67,11 @@ void func_800F8FEC_D045C(void);
 void func_800F9178_D05E8(void);
 void func_800F7350_CE7C0(void);
 void func_800F73A4_CE814(void);
-void func_800F7874_CECE4(unk_801DEC9C* arg0);
+void func_800F7874_CECE4(unk_801DEC9C*);
 void func_800F7E20_CF290(void);
 void func_800F8F58_D03C8(void);
-s32 func_800F901C_D048C(void);
-s32 func_800F9BC8_D1038(s32);
+u16 func_800F901C_D048C(void);
+s32 func_800F9BC8_D1038(unk_801DEC9C*);
 void func_800F830C_CF77C(void);
 void func_800F94E0_D0950(void);
 
@@ -82,7 +84,6 @@ extern s16 D_800F2BC0;
 extern s32 D_800FD8D0;
 extern s32 D_800FD8DC;
 extern s32 D_800FD8EC;
-extern f64 D_800FD900;
 extern s32 D_800FDDDC;
 extern f32 D_800FDDE8;
 extern f32 D_800FDE28;
@@ -92,3 +93,26 @@ extern s16 D_800FE2C0;
 extern u16 D_800FE2C2;
 extern u16 D_800FE2C4;
 extern u16 D_800F5144;
+
+extern unk_801DEC9C* D_800F3FB0;
+extern Vec3f D_800FDDC0;
+extern Vec3f D_800FDDCC;
+
+typedef struct tikiThing {
+/* 0x00 */ s16 unk_00;
+/* 0x02 */ s16 unk_02;
+/* 0x04 */ f32 unk_04;
+/* 0x08 */ s32 unk_08;
+/* 0x0C */ f32 unk_0C;
+/* 0x10 */ f32 unk_10;
+/* 0x14 */ f32 unk_14;
+} tikiThing;
+
+extern tikiThing D_800FDE50[8]; //related hitbox of tikis
+
+//likely rodata
+extern f64 D_800FD900;
+extern f64 D_800FDA58;
+extern f64 D_800FDA60;
+extern f64 D_800FDA68;
+extern f64 D_800FDA70;

@@ -86,7 +86,7 @@ void func_800F71C4_CE634(unk_801DEC9C* arg0) {
     func_800F9178_D05E8();
     func_800F7E20_CF290();
     func_800F796C_CEDDC(arg0);
-    if ((func_800F901C_D048C() & 0xFFFF) == 0) {
+    if (func_800F901C_D048C() == 0) {
         D_800FE2C4 = 1;
     }
     
@@ -114,7 +114,7 @@ void func_800F71C4_CE634(unk_801DEC9C* arg0) {
         if (D_800FE180 == 0) {
             arg0->unk_14 = (*func_800F73A4_CE814);
         } else {
-            arg0->unk_14 = &func_800F7874_CECE4;
+            arg0->unk_14 = (*func_800F7874_CECE4);
         }
         
         func_80009730();
@@ -176,28 +176,33 @@ void func_800F796C_CEDDC(unk_801DEC9C* arg0) {
 
 INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F7994_CEE04);
 
-#ifdef NON_MATCHING
 u16 func_800F7AFC_CEF6C(u16 arg0) {
-    u32 temp_v0;
-
-    temp_v0 = (D_800FD7E0 * 0x19971204 + 0x19760831) >> 0x10;
-    D_800FD7E0 = temp_v0;
+    D_800FD7E0 = D_800FD7E0 * 0x19971204;
+    D_800FD7E0 = (D_800FD7E0 + 0x19760831) >> 0x10;
     if (arg0 == 0) {
-        return D_800FD7E2;
+        return D_800FD7E0;
     } else {
-        return (temp_v0 % arg0);
+        return (D_800FD7E0 % arg0);
     }
 }
-#else
-INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F7AFC_CEF6C);
-#endif
 
-void func_800F7B6C_CEFDC(u16 arg0) { //matches with mips3
+void func_800F7B6C_CEFDC(u16 arg0) {
     D_800FD7E0 = arg0 * D_800FD7E0;
     D_800FD7E0 += arg0;
 }
 
-INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F7B90_CF000);
+f32 func_800F7B90_CF000(void) {
+    f32 phi_f4 = func_800B0CD8();
+
+    if (D_800FDA58 < phi_f4) {
+        phi_f4 -= D_800FDA58;  
+    } else {
+        if (phi_f4 < 0.0) {
+            phi_f4 += D_800FDA60;
+        }
+    }
+    return phi_f4;
+}
 
 void func_800F7C08_CF078(void) {
     D_800F33EC.y = -41.39f;
@@ -209,7 +214,26 @@ void func_800F7C08_CF078(void) {
     D_800EE98C = 1556.0f;
 }
 
-INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F7C70_CF0E0);
+void func_800F7C70_CF0E0(f32 arg0) { //uses rodata
+    unk_801DEC9C* temp_a0;
+
+    if (arg0 == 0.0) {
+        temp_a0 = D_800F3FB0;
+        D_800FDDC0.x = D_800F6524.x;
+        D_800FDDC0.y = D_800F6524.y;
+        D_800FDDC0.z = D_800F6524.z;
+        D_800FDDCC.x = temp_a0->unk_18;
+        D_800FDDCC.y = temp_a0->unk_1C;
+        D_800FDDCC.z = temp_a0->unk_20;
+        return;
+    }
+    
+    D_800F6524.x = D_800FDDC0.x + (arg0 * (D_800FDDCC.x - D_800FDDC0.x));
+    D_800F6524.y = D_800FDDC0.y + (arg0 * (D_800FDDCC.y - D_800FDDC0.y));
+    D_800F6524.z = D_800FDDC0.z + (arg0 * (D_800FDDCC.z - D_800FDDC0.z));
+    //D_800EE98C = (1416.3999999999999 - (arg0 * 840.0));
+    D_800EE98C = (D_800FDA70 - (arg0 * D_800FDA68));
+}
 
 INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F7D74_CF1E4);
 
@@ -236,19 +260,45 @@ INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F89A8_CFE18);
 
 INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F8BC0_D0030);
 
-INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F8C38_D00A8);
+void func_800F8C38_D00A8(void) {
+    tikiThing* temp_a0 = D_800FDE50;
+    u16 i = 0;
+    f32 zero = 0;
+    
+    for (i = 0; i < 8; i++) {
+        temp_a0->unk_00 = 0;
+        temp_a0->unk_02 = 0;
+        temp_a0->unk_04 = 0;
+        temp_a0->unk_08 = 0;
+        temp_a0->unk_14 = zero;
+        temp_a0->unk_10 = zero;
+        temp_a0->unk_0C = zero;
+        temp_a0++;
+    }
+}
 
 INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F8C80_D00F0);
 
 INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F8D84_D01F4);
 
-INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F8DF4_D0264);
+u16 func_800F8DF4_D0264(s32 arg0) {
+    void* temp_s0;
+    s32 temp_s1;
+
+    temp_s0 = ReadMainFS(arg0);
+    temp_s1 = func_800678A4(temp_s0);
+    FreeMainFS(temp_s0);
+    return temp_s1;
+}
 
 INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F8E38_D02A8);
 
 INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F8F58_D03C8);
 
-INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F8FEC_D045C);
+void func_800F8FEC_D045C(void) {
+    func_80075CCC(8, 0x2D, 0xA0, 0x20);
+    D_800FDE2C = 0;
+}
 
 INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F901C_D048C);
 
@@ -259,7 +309,13 @@ INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F9178_D05E8);
 void func_800F94E0_D0950(void) {
 }
 
-INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F94E8_D0958);
+s16 func_800F94E8_D0958(s32 arg0) {
+    s16 temp_s0;
+
+    temp_s0 = ReadImgPackand(arg0);
+    func_80025930(D_800ECDE0[temp_s0].unk_00, 0x70000000, 0x70000000);
+    return temp_s0;
+}
 
 INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F953C_D09AC);
 

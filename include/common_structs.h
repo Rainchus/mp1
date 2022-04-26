@@ -36,4 +36,33 @@ typedef struct playerMain {
 } playerMain; //sizeof 0x30
 //P1 800F32B0, P2 800F32E0, P3 800F3310, P4 800F3340
 
+typedef struct Vec2f {
+               f32 x;
+               f32 y;
+} Vec2f;
+
+typedef struct Vec2s {
+               s32 x;
+               s32 y;
+} Vec2s;
+
+typedef struct Vec3f {
+               f32 x;
+               f32 y;
+               f32 z;
+} Vec3f;
+
+typedef struct Vec3s {
+               s32 x;
+               s32 y;
+               s32 z;
+} Vec3s;
+
+typedef struct Vec4f {
+               f32 x;
+               f32 y;
+               f32 z;
+               f32 yaw;
+} Vec4f;
+
 #endif
