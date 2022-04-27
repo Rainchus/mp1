@@ -10,8 +10,8 @@ void func_800F65E0_1D9690(void) {
     func_80060088();
     func_8001DE70(64);
     func_8005D8B8(func_8005D384(0x7FDA, 0, 0, -1, (*func_8005EB1C)), 0xA0);
-    func_800234B8(0U, 0xFFU, 0xFFU, 0xFFU);
-    func_800234B8(1U, 0xFFU, 0xFFU, 0xFFU);
+    func_800234B8(0U, 0xFF, 0xFF, 0xFF);
+    func_800234B8(1U, 0xFF, 0xFF, 0xFF);
     func_80023504(1, -96.0f, 100.0f, 26.0f);
     func_800178A0(1);
     temp_s0 = func_800178E8();
@@ -19,7 +19,7 @@ void func_800F65E0_1D9690(void) {
     func_800176C4(temp_s0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
     func_8001D494(0, 30.0f, 80.0f, 4000.0f);
     func_800F6FC0_1DA070();
-    SGS_InitializeSeed((GetRandomByte() << 8) | GetRandomByte());
+    func_800F747C_1DA52C((GetRandomByte() << 8) | GetRandomByte());
     D_800F2BC0 = 0;
     D_800ED440 = 0;
     D_800EE984 = 0;
@@ -64,7 +64,7 @@ INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F736C_1DA41C);
 
 INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F73EC_1DA49C);
 
-u16 SGS_AdvanceSeed(u16 arg0) { //shared overlay function
+u16 func_800F740C_1DA4BC(u16 arg0) { //shared overlay function
     D_800FD5C0 = D_800FD5C0 * 0x19971204;
     D_800FD5C0 = (D_800FD5C0 + 0x19760831) >> 0x10;
     if (arg0 == 0) {
@@ -74,7 +74,7 @@ u16 SGS_AdvanceSeed(u16 arg0) { //shared overlay function
     }
 }
 
-void SGS_InitializeSeed(u16 arg0) { //shared overlay function
+void func_800F747C_1DA52C(u16 arg0) { //shared overlay function
     D_800FD5C0 = arg0 + (arg0 * D_800FD5C0);
 }
 
@@ -170,7 +170,50 @@ INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800FB520_1DE5D0);
 
 INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800FB6E0_1DE790);
 
+#ifdef NON_MATCHING
+void func_800FB840_1DE8F0(unk_SGS_Struct* arg0) {
+    s32 phi_v0, phi_s3, phi_s4;
+    f32 temp_f20;
+    u16 sp10[2];
+    u16 i;
+    u16* temp_a0;
+    
+    sp10[0] = (arg0->unk_4C << 8) | arg0->unk_4D;
+    sp10[1] = (arg0->unk_4E << 8) | arg0->unk_4F;
+    
+    for (i = 0; i < ARRAY_COUNT(D_800FD5DC); i++) {
+        phi_v0 = func_800F740C_1DA4BC(0);
+        temp_a0 = &D_800FD5DC[i];
+        phi_v0 &= 3;
+        *temp_a0 = *temp_a0 + phi_v0;
+        if ((*temp_a0) >= 0x169) {
+            *temp_a0 = *temp_a0 - 0x168;
+        }
+        
+        if (i == 0) {
+            phi_s3 = func_800AEAC0(D_800FD5DC[i] * 2) * 10.0f + 120.0f;
+            phi_s4 = func_800AEFD0(D_800FD5DC[i]) * 6.0f + 15.0f;
+        } else {
+            phi_s3 = func_800AEAC0(D_800FD5DC[i] * 2) * 10.0f + 160.0f;
+            phi_s4 = func_800AEFD0(D_800FD5DC[i]) * 6.0f + 30.0f;
+        }
+        
+        if (D_800FD5DC[i] < 0xB4) {
+            func_800672B0(sp10[i], 0, 3);
+        } else {
+            func_800672B0(sp10[i], 0, 0);
+            func_800671DC(sp10[i], 0, 3);
+        }
+        
+        //temp_f20 = func_800AEAC0(D_800FD5DC[i]) * D_800FD818 + D_800FD820;
+        temp_f20 = func_800AEAC0(D_800FD5DC[i]) * 0.2 + 0.5;
+        func_80066DC4(sp10[i], 0, phi_s3, phi_s4);
+        func_80067354(sp10[i], 0, temp_f20, temp_f20);
+    }
+}
+#else
 INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800FB840_1DE8F0);
+#endif
 
 INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800FBAE4_1DEB94);
 
