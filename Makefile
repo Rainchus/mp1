@@ -70,7 +70,7 @@ ENDLINE := \n'
 ASFLAGS      := -G 0 -I include -mips3 -mabi=32
 CFLAGS       := -O1 -G0 -mips3 -mgp32 -mfp32
 CPPFLAGS     := -I include -I $(BUILD_DIR)/include -I src -DF3DEX_GBI_2
-LDFLAGS      := -T undefined_syms.txt -T undefined_funcs.txt -T undefined_funcs_auto.txt -T undefined_syms_auto.txt -T $(LD_SCRIPT) -Map $(LD_MAP) --no-check-sections
+LDFLAGS      := -T symbol_addrs.txt -T undefined_syms.txt -T undefined_funcs.txt -T undefined_funcs_auto.txt -T undefined_syms_auto.txt -T $(LD_SCRIPT) -Map $(LD_MAP) --no-check-sections
 CFLAGS_CHECK := -fsyntax-only -fsigned-char -nostdinc -fno-builtin -D CC_CHECK\
                 -std=gnu90 -Wall -Wextra -Wno-format-security -Wno-unused-parameter -Wno-pointer-to-int-cast -Wno-int-to-pointer-cast
 
@@ -96,6 +96,7 @@ all: $(ROM)
 
 clean:
 	$(V)rm -rf build
+	$(V)rm -rf asm
 
 distclean: clean
 	$(V)rm -rf asm

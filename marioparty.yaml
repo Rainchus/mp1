@@ -11,7 +11,7 @@ options:
   undefined_funcs_auto_path: undefined_funcs_auto.txt
   undefined_syms_auto_path: undefined_syms_auto.txt
   ld_script_path: marioparty.ld
-  # symbol_addrs_path: symbol_addrs.txt
+  symbol_addrs_path: symbol_addrs.txt
   # undefined_syms_path: undefined_syms.txt
   # c_path: c
   asm_path: asm

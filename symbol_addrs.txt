@@ -1,0 +1,4 @@
+ReadMainFS = 0x800145B0;
+FreeMainFS = 0x80014730;
+ReadImgPackand = 0x800177F4;
+GetRandomByte = 0x8001758C;

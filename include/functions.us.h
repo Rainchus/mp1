@@ -4,11 +4,11 @@
 #include "types.h"
 #include "common_structs.h"
 
-u32 func_8001758C(void);
+u8 GetRandomByte(void);
 void func_80017660(s32, f32, f32, f32, f32);
 void func_800176C4(s32, f32, f32, f32, f32, f32, f32);
 void func_800178A0(s32);
-s32 func_800178E8(void);
+u8 func_800178E8(void);
 void func_8001D494(s32, f32, f32, f32);
 void func_8001DE70(s32);
 void func_80023448(s32);

@@ -32,7 +32,7 @@ void func_800F65E0_CDA50(void) { //needs rodata support
     D_800ED440 = 0;
     D_800F2BC0 = 0;
     D_800FDDDC = func_8005D384(0x20, 0, 0, -1, (*func_800F6858_CDCC8));
-    func_800F7B6C_CEFDC(func_8001758C() & 0xFF);
+    func_800F7B6C_CEFDC(GetRandomByte() & 0xFF);
     func_800F7D74_CF1E4();
     D_800FE2C2 = -1;
     D_800FDE2C = 0;

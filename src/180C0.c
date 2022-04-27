@@ -9,12 +9,9 @@ INCLUDE_ASM(s32, "180C0", func_80017528);
 
 INCLUDE_ASM(s32, "180C0", func_8001755C);
 
-u32 func_8001758C(void) {
-    u32 temp_lo;
-
-    temp_lo = D_800C2FF4 * 0x41C64E6D;
-    D_800C2FF4 = temp_lo + 0x3039;
-    return (temp_lo + 0x303A) >> 16 & 0xFF;
+u8 GetRandomByte(void) {
+    D_800C2FF4 = D_800C2FF4 * 0x41C64E6D + 0x3039;
+    return (D_800C2FF4 + 1) >> 16;
 }
 
 INCLUDE_ASM(s32, "180C0", func_800175C0);
@@ -27,7 +24,7 @@ INCLUDE_ASM(s32, "180C0", func_8001775C);
 
 INCLUDE_ASM(s32, "180C0", func_800177B0);
 
-INCLUDE_ASM(s32, "180C0", func_800177F4);
+INCLUDE_ASM(s32, "180C0", ReadImgPackand);
 
 INCLUDE_ASM(s32, "180C0", func_80017850);
 
