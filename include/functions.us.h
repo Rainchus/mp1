@@ -25,7 +25,7 @@ void func_80086F08(f32*, void*);
 f32 func_800AEAC0(f32);
 f32 func_800AEFD0(f32);
 u32 func_8005EB1C(void);
-s32 func_80059798(s32);
+s32 IsBoardFeatureFlagSet(s32);
 s16 func_8000C544(void);
 s32 func_80075FE0(void);
 s32 func_80072718(void);

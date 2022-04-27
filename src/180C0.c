@@ -5,7 +5,7 @@ INCLUDE_ASM(s32, "180C0", func_800174C0);
 
 INCLUDE_ASM(s32, "180C0", func_800174F4);
 
-INCLUDE_ASM(s32, "180C0", func_80017528);
+INCLUDE_ASM(s32, "180C0", LoadFormFile);
 
 INCLUDE_ASM(s32, "180C0", func_8001755C);
 
@@ -14,7 +14,7 @@ u8 GetRandomByte(void) {
     return (D_800C2FF4 + 1) >> 16;
 }
 
-INCLUDE_ASM(s32, "180C0", func_800175C0);
+INCLUDE_ASM(s32, "180C0", LoadOverlay);
 
 INCLUDE_ASM(s32, "180C0", func_80017660);
 

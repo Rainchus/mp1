@@ -38,17 +38,17 @@ INCLUDE_ASM(s32, "59E80", func_800596DC);
 
 INCLUDE_ASM(s32, "59E80", func_80059768);
 
-INCLUDE_ASM(s32, "59E80", func_80059798);
+INCLUDE_ASM(s32, "59E80", IsBoardFeatureFlagSet);
 
-INCLUDE_ASM(s32, "59E80", func_800597DC);
+INCLUDE_ASM(s32, "59E80", SetBoardFeatureFlag);
 
-INCLUDE_ASM(s32, "59E80", func_8005982C);
+INCLUDE_ASM(s32, "59E80", ClearBoardFeatureFlag);
 
-INCLUDE_ASM(s32, "59E80", func_80059880);
+INCLUDE_ASM(s32, "59E80", MakeHeap);
 
-INCLUDE_ASM(s32, "59E80", func_800598A0);
+INCLUDE_ASM(s32, "59E80", Malloc);
 
-INCLUDE_ASM(s32, "59E80", func_8005992C);
+INCLUDE_ASM(s32, "59E80", Free);
 
 INCLUDE_ASM(s32, "59E80", func_800599DC);
 
@@ -56,11 +56,29 @@ INCLUDE_ASM(s32, "59E80", func_80059AA4);
 
 INCLUDE_ASM(s32, "59E80", func_80059AD8);
 
-INCLUDE_ASM(s32, "59E80", func_80059B00);
+s32 Align16(s32 arg0) {
+    return (arg0 + 0x1F) & ~0xF;
+}
 
-INCLUDE_ASM(s32, "59E80", func_80059B10);
+s32 func_80059B10(s32 arg0) {
+    if (arg0 < 0) {
+        if (arg0 + 3 == D_800ED147) {
+            return 1;
+        } else {
+            return 0;
+        }
+    } else {
+        return IsBoardFeatureFlagSet(arg0);
+    }
+}
 
-INCLUDE_ASM(s32, "59E80", func_80059B48);
+s32 func_80059B48(s32 arg0) {
+    if (arg0 < 0) {
+        return 1;
+    } else {
+        return IsBoardFeatureFlagSet(arg0);
+    }
+}
 
 INCLUDE_ASM(s32, "59E80", func_80059B74);
 

@@ -1,18 +1,18 @@
 #include "common.h"
 
-INCLUDE_ASM(s32, "53680", func_80052A80);
+INCLUDE_ASM(s32, "53680", GetCurrentPlayerIndex);
 
-INCLUDE_ASM(s32, "53680", func_80052A8C);
+INCLUDE_ASM(s32, "53680", GetPlayerStruct);
 
-INCLUDE_ASM(s32, "53680", func_80052ACC);
+INCLUDE_ASM(s32, "53680", PlayerIsCurrent);
 
-INCLUDE_ASM(s32, "53680", func_80052AE8);
+INCLUDE_ASM(s32, "53680", PlayerStructIsCurrent);
 
-INCLUDE_ASM(s32, "53680", func_80052B20);
+INCLUDE_ASM(s32, "53680", PlayerIsCPU);
 
-INCLUDE_ASM(s32, "53680", func_80052B48);
+INCLUDE_ASM(s32, "53680", AdjustPlayerCoins);
 
-INCLUDE_ASM(s32, "53680", func_80052BB8);
+INCLUDE_ASM(s32, "53680", PlayerHasCoins);
 
 INCLUDE_ASM(s32, "53680", func_80052BE8);
 

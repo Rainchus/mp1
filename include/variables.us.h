@@ -9,6 +9,7 @@ extern s16 D_800FE30C;
 extern s16 D_800FE30E;
 extern s32 D_800ED430;
 extern s16 D_800ED440;
+extern s8 D_800ED147;
 
 typedef struct unk_800ECDE0 {
 /* 0x00 */ s16 unk_00;
