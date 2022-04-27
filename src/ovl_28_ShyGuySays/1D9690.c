@@ -170,9 +170,9 @@ INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800FB520_1DE5D0);
 
 INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800FB6E0_1DE790);
 
-#ifdef NON_MATCHING
 void func_800FB840_1DE8F0(unk_SGS_Struct* arg0) {
-    s32 phi_v0, phi_s3, phi_s4;
+    u16 phi_v0;
+    s32 phi_s3, phi_s4;
     f32 temp_f20;
     u16 sp10[2];
     u16 i;
@@ -185,9 +185,11 @@ void func_800FB840_1DE8F0(unk_SGS_Struct* arg0) {
         phi_v0 = func_800F740C_1DA4BC(0);
         temp_a0 = &D_800FD5DC[i];
         phi_v0 &= 3;
-        *temp_a0 = *temp_a0 + phi_v0;
-        if ((*temp_a0) >= 0x169) {
-            *temp_a0 = *temp_a0 - 0x168;
+        phi_v0 = (*temp_a0) + (phi_v0 & 0xFF);
+        *temp_a0 = phi_v0;
+        
+        if (phi_v0 >= 0x169) {
+            *temp_a0 = phi_v0 - 0x168;
         }
         
         if (i == 0) {
@@ -205,15 +207,12 @@ void func_800FB840_1DE8F0(unk_SGS_Struct* arg0) {
             func_800671DC(sp10[i], 0, 3);
         }
         
-        //temp_f20 = func_800AEAC0(D_800FD5DC[i]) * D_800FD818 + D_800FD820;
-        temp_f20 = func_800AEAC0(D_800FD5DC[i]) * 0.2 + 0.5;
+        temp_f20 = func_800AEAC0(D_800FD5DC[i]) * D_800FD818 + D_800FD820;
+        //temp_f20 = func_800AEAC0(D_800FD5DC[i]) * 0.2 + 0.5; //(use once file has rodata support)
         func_80066DC4(sp10[i], 0, phi_s3, phi_s4);
         func_80067354(sp10[i], 0, temp_f20, temp_f20);
     }
 }
-#else
-INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800FB840_1DE8F0);
-#endif
 
 INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800FBAE4_1DEB94);
 
