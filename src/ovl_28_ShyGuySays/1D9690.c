@@ -19,7 +19,7 @@ void func_800F65E0_1D9690(void) {
     func_800176C4(temp_s0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
     func_8001D494(0, 30.0f, 80.0f, 4000.0f);
     func_800F6FC0_1DA070();
-    func_800F747C_1DA52C((GetRandomByte() << 8) | GetRandomByte());
+    SGS_InitializeSeed((GetRandomByte() << 8) | GetRandomByte());
     D_800F2BC0 = 0;
     D_800ED440 = 0;
     D_800EE984 = 0;
@@ -64,9 +64,19 @@ INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F736C_1DA41C);
 
 INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F73EC_1DA49C);
 
-INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F740C_1DA4BC);
+u16 SGS_AdvanceSeed(u16 arg0) { //shared overlay function
+    D_800FD5C0 = D_800FD5C0 * 0x19971204;
+    D_800FD5C0 = (D_800FD5C0 + 0x19760831) >> 0x10;
+    if (arg0 == 0) {
+        return D_800FD5C0;
+    } else {
+        return (D_800FD5C0 % arg0);
+    }
+}
 
-INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F747C_1DA52C);
+void SGS_InitializeSeed(u16 arg0) { //shared overlay function
+    D_800FD5C0 = arg0 + (arg0 * D_800FD5C0);
+}
 
 INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F74A0_1DA550);
 

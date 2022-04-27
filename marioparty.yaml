@@ -133,4 +133,16 @@ segments:
       - [0x14E940, c]
   - type: bin
     start: 0x152B20
+  - type: code
+    start: 0x1D9690
+    vram: 0x800F65E0
+    dir: ovl_28_ShyGuySays
+    name: ShyGuySays
+    overlay: True
+    subsegments:
+      - [0x1D9690, c]
+  - type: bin
+    start: 0x1E0670
+    subsegments:
+      - [0x1E0670, bin]
   - [0x2000000]
