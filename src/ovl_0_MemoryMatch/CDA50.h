@@ -1,26 +1,10 @@
 #include "common.h"
 
-typedef struct viewAngle {
-/* 0x00 */ f32 y;
-/* 0x04 */ f32 x;
-/* 0x08 */ f32 z;
-} viewAngle;
-
-typedef struct cameraPosition {
-/* 0x00 */ f32 x;
-/* 0x04 */ f32 y;
-/* 0x08 */ f32 z;
-} cameraPosition;
-
 typedef struct unk_Struct00 {
 /* 0x00 */ char unk_00[0x40];
 /* 0x40 */ f32 unk_40;
 /* 0x44 */ char unk_44[0xF4];
 } unk_Struct00; //sizeof 0x138
-
-extern f32 D_800EE98C;
-extern viewAngle D_800F33EC;
-extern cameraPosition D_800F6524;
 
 typedef struct unk_801DEC9C {
 /* 0x00 */ u16 unk_00;

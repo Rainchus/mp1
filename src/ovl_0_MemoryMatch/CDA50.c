@@ -59,7 +59,7 @@ void func_800F6858_CDCC8(unk_801DEC9C* arg0) {
     func_800F8E38_D02A8();
     func_800F90CC_D053C();
     func_800FB360_D27D0();
-    if (IsBoardFeatureFlagSet(0x2B) != 0) {
+    if (IsBoardFeatureFlagSet(MINIGAME_ISLAND_ENDING) != 0) {
         D_800FE180 = 1;
     }
 }

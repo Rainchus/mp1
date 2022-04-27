@@ -39,7 +39,10 @@ typedef struct playerMain {
 typedef struct Object {
 /* 0x00 */ char unk_00[0x14];
 /* 0x14 */ void* func_ptr;
-/* 0x18 */ char unk_18[0x34];
+/* 0x18 */ f32 unk_18;
+/* 0x1C */ char unk_1C[4];
+/* 0x20 */ f32 unk_20;
+/* 0x24 */ char unk_24[0x28];
 /* 0x4C */ u8  unk_4C;
 /* 0x4C */ u8  unk_4D;
 /* 0x4C */ u8  unk_4E;
@@ -74,5 +77,17 @@ typedef struct Vec4f {
                f32 z;
                f32 yaw;
 } Vec4f;
+
+typedef struct viewAngle {
+/* 0x00 */ f32 y;
+/* 0x04 */ f32 x;
+/* 0x08 */ f32 z;
+} viewAngle;
+
+typedef struct cameraPosition {
+/* 0x00 */ f32 x;
+/* 0x04 */ f32 y;
+/* 0x08 */ f32 z;
+} cameraPosition;
 
 #endif

@@ -10,6 +10,13 @@ extern s16 D_800FE30E;
 extern s32 D_800ED430;
 extern u16 D_800ED440;
 extern s8 D_800ED147;
+extern f32 D_800EE98C;
+extern viewAngle D_800F33EC;
+extern cameraPosition D_800F6524;
+void func_80066DC4(s16, s16, s16, s16);
+void func_800671DC(s16, s16, s16);
+void func_800672B0(s16, s16, s16);
+void func_80067354(s16, s32, f32, f32);
 
 void func_80060128(s32);
 

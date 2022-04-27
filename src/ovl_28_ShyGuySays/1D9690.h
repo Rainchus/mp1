@@ -19,13 +19,16 @@ extern s16 D_800FDC1C;
 extern s16 D_800FDD10;
 extern s16 D_800F2BC0;
 extern u32 D_800FD5C0;
+extern f64 D_800FD630;
+extern f64 D_800FD638;
+extern f64 D_800FD640;
+extern f64 D_800FD648;
+extern f64 D_800FD650;
+extern Vec3f D_800FD980;
+extern Vec3f D_800FD98C;
+extern Vec3f* D_800FDC64;
 
 extern Object* D_800FDC20;
-
-void func_80066DC4(s16, s16, s16, s16);
-void func_800671DC(s16, s16, s16);
-void func_800672B0(s16, s16, s16);
-void func_80067354(s16, s32, f32, f32);
 u16 func_800F740C_1DA4BC(u16 arg0);
 void func_800F6930_1D99E0(void);
 void func_800FA77C_1DD82C(void);

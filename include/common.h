@@ -7,5 +7,6 @@
 #include "include_asm.h"
 #include "variables.us.h"
 #include "macros.h"
+#include "enums.h"
 
 #endif

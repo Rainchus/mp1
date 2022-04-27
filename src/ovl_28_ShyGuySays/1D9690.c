@@ -52,7 +52,7 @@ void func_800F67F8_1D98A8(Object* arg0) {
     func_800F71F4_1DA2A4();
     D_800FD9A0 = 1;
     func_80060128(0x19);
-    if (IsBoardFeatureFlagSet(0x2B) != 0) {
+    if (IsBoardFeatureFlagSet(MINIGAME_ISLAND_ENDING) != 0) {
         D_800FDC1C = 1;
     }
 }
@@ -67,9 +67,35 @@ INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F6E50_1D9F00);
 
 INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F6F98_1DA048);
 
-INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F6FC0_1DA070);
+void func_800F6FC0_1DA070(void) {
+    D_800F33EC.y = -14.5f;
+    D_800F33EC.x = 0.0f;
+    D_800F33EC.z = 0.0f;
+    D_800F6524.x = 0.0f;
+    D_800F6524.y = 191.2f;
+    D_800F6524.z = 0.2f;
+    D_800EE98C = 1069.0f;
+}
 
-INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F702C_1DA0DC);
+void func_800F702C_1DA0DC(Object* arg0, f32 arg1) {
+    s16 temp_s0 = (D_800F2AF8[0]->unk_4C << 8) | D_800F2AF8[0]->unk_4D;
+
+    if (arg1 == 0.0) {
+        D_800FD980.x = arg0->unk_18;
+        D_800FD980.y = 100.0f;
+        D_800FD980.z = arg0->unk_20;
+        D_800FD98C.x = D_800F6524.x;
+        D_800FD98C.y = D_800F6524.y;
+        D_800FD98C.z = D_800F6524.z;
+        return;
+    }
+
+    D_800F6524.x = D_800FD98C.x + (arg1 * (D_800FD980.x - D_800FD98C.x));
+    D_800F6524.y = D_800FD98C.y + (arg1 * (D_800FD980.y - D_800FD98C.y));
+    D_800F6524.z = D_800FD98C.z + (arg1 * (D_800FD980.z - D_800FD98C.z));
+    D_800EE98C = (D_800FD638 - (arg1 * D_800FD630));
+    func_80066DC4(temp_s0, 0, (D_800FDC64->z * 320.0f), (D_800FD650 - (arg1 * D_800FD648) + 2.0 * func_800AEAC0(arg1 * D_800FD640)));
+}
 
 INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F71F4_1DA2A4);
 
