@@ -1,7 +1,6 @@
 #include "common.h"
 #include "1D9690.h"
 
-//INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F65E0_1D9690);
 void func_800F65E0_1D9690(void) {
     u8 temp_s0;
 
@@ -32,13 +31,31 @@ void func_800F65E0_1D9690(void) {
     D_800FDC1C = 0;
     D_800FDC1E = 0;
     D_800FDD10 = 1;
-    D_800FDC20 = 0;
+    D_800FDC20 = NULL;
     D_800FD998 = func_8005D384(0x20, 0, 0, -1, (*func_800F67F8_1D98A8));
     func_8007B168(&D_800FD5F0, 1);
     func_800602AC(0x1A5);
 }
 
-INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F67F8_1D98A8);
+void func_800F67F8_1D98A8(Object* arg0) {
+    arg0->func_ptr = (*func_800F6930_1D99E0);
+    func_800F736C_1DA41C();
+    func_800F8068_1DB118();
+    D_800FDC20 = func_8005D384(1, 7, 0, -1, (*func_800FBAE4_1DEB94));
+    func_8005D8B8(D_800FDC20, 0xA0);
+    func_800F81A4_1DB254();
+    D_800F2AF8[D_800ED440] = func_8005D384(0, 0, 0, -1, (*func_800FA77C_1DD82C));
+    D_800ED440++;
+    D_800F2AF8[D_800ED440] = func_8005D384(0, 0, 0, -1, (*func_800FB6E0_1DE790));
+    D_800ED440++;
+    func_800FB30C_1DE3BC();
+    func_800F71F4_1DA2A4();
+    D_800FD9A0 = 1;
+    func_80060128(0x19);
+    if (IsBoardFeatureFlagSet(0x2B) != 0) {
+        D_800FDC1C = 1;
+    }
+}
 
 INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F6930_1D99E0);
 
@@ -170,11 +187,11 @@ INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800FB520_1DE5D0);
 
 INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800FB6E0_1DE790);
 
-void func_800FB840_1DE8F0(unk_SGS_Struct* arg0) {
+void func_800FB840_1DE8F0(Object* arg0) {
     u16 phi_v0;
     s32 phi_s3, phi_s4;
     f32 temp_f20;
-    u16 sp10[2];
+    s16 sp10[2];
     u16 i;
     u16* temp_a0;
     
@@ -184,8 +201,7 @@ void func_800FB840_1DE8F0(unk_SGS_Struct* arg0) {
     for (i = 0; i < ARRAY_COUNT(D_800FD5DC); i++) {
         phi_v0 = func_800F740C_1DA4BC(0);
         temp_a0 = &D_800FD5DC[i];
-        phi_v0 &= 3;
-        phi_v0 = (*temp_a0) + (phi_v0 & 0xFF);
+        phi_v0 = (*temp_a0) + (phi_v0 & 0x3);
         *temp_a0 = phi_v0;
         
         if (phi_v0 >= 0x169) {
@@ -208,7 +224,7 @@ void func_800FB840_1DE8F0(unk_SGS_Struct* arg0) {
         }
         
         temp_f20 = func_800AEAC0(D_800FD5DC[i]) * D_800FD818 + D_800FD820;
-        //temp_f20 = func_800AEAC0(D_800FD5DC[i]) * 0.2 + 0.5; //(use once file has rodata support)
+        //temp_f20 = func_800AEAC0(D_800FD5DC[i]) * 0.2 + 0.5;
         func_80066DC4(sp10[i], 0, phi_s3, phi_s4);
         func_80067354(sp10[i], 0, temp_f20, temp_f20);
     }

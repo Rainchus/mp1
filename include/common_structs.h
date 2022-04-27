@@ -36,6 +36,16 @@ typedef struct playerMain {
 } playerMain; //sizeof 0x30
 //P1 800F32B0, P2 800F32E0, P3 800F3310, P4 800F3340
 
+typedef struct Object {
+/* 0x00 */ char unk_00[0x14];
+/* 0x14 */ void* func_ptr;
+/* 0x18 */ char unk_18[0x34];
+/* 0x4C */ u8  unk_4C;
+/* 0x4C */ u8  unk_4D;
+/* 0x4C */ u8  unk_4E;
+/* 0x4C */ u8  unk_4F;
+} Object; //sizeof 0x50
+
 typedef struct Vec2f {
                f32 x;
                f32 y;
