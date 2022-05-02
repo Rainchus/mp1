@@ -45,5 +45,6 @@ f32 func_800B0CD8(void);
 void* ReadMainFS(s32);
 void FreeMainFS(void*);
 s32 func_800678A4(void*);
+s16 func_80023FC8(s16);
 
 #endif

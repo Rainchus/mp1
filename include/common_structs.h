@@ -40,9 +40,15 @@ typedef struct Object {
 /* 0x00 */ char unk_00[0x14];
 /* 0x14 */ void* func_ptr;
 /* 0x18 */ f32 unk_18;
-/* 0x1C */ char unk_1C[4];
+/* 0x1C */ f32 unk_1C;
 /* 0x20 */ f32 unk_20;
-/* 0x24 */ char unk_24[0x28];
+/* 0x24 */ char unk_24[0xC];
+/* 0x30 */ f32 unk_30;
+/* 0x34 */ f32 unk_34;
+/* 0x38 */ f32 unk_38;
+/* 0x3C */ char unk_3C[4];
+/* 0x40 */ void* unk_40; //unk pointer
+/* 0x42 */ char unk_44[0x8];
 /* 0x4C */ u8  unk_4C;
 /* 0x4C */ u8  unk_4D;
 /* 0x4C */ u8  unk_4E;

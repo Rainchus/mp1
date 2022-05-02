@@ -1,5 +1,8 @@
 #include "common.h"
 
+#define NUM_OF_TILES 9
+extern Vec3f D_800FD7F0[NUM_OF_TILES];
+
 typedef struct unk_Struct00 {
 /* 0x00 */ char unk_00[0x40];
 /* 0x40 */ f32 unk_40;
