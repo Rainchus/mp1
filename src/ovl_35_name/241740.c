@@ -1,0 +1,11 @@
+#include "common.h"
+
+INCLUDE_ASM(s32, "ovl_35_name/241740", func_800F65E0_241740);
+
+INCLUDE_ASM(s32, "ovl_35_name/241740", func_800F6610_241770);
+
+INCLUDE_ASM(s32, "ovl_35_name/241740", func_800F6684_2417E4);
+
+INCLUDE_ASM(s32, "ovl_35_name/241740", func_800F66AC_24180C);
+
+INCLUDE_ASM(s32, "ovl_35_name/241740", func_800F66D8_241838);

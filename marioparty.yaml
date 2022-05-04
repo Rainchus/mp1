@@ -134,6 +134,186 @@ segments:
   - type: bin
     start: 0xDFDF0
   - type: code
+    start: 0x0E02F0
+    vram: 0x800F65E0
+    dir: ovl_02_name
+    name: name_02
+    overlay: True
+    subsegments:
+      - [0x0E02F0, c]
+  - type: bin
+    start: 0x0E7E10
+  - type: code
+    start: 0x0E8F60
+    vram: 0x800F65E0
+    dir: ovl_03_name
+    name: name_03
+    overlay: True
+    subsegments:
+      - [0x0E8F60, c]
+  - type: bin
+    start: 0x0EE3F0
+  - type: code
+    start: 0x0EE9A0
+    vram: 0x800F65E0
+    dir: ovl_04_name
+    name: name_04
+    overlay: True
+    subsegments:
+      - [0x0EE9A0, c]
+  - type: bin
+    start: 0x0F6750
+  - type: code
+    start: 0x0F6AB0
+    vram: 0x800F65E0
+    dir: ovl_05_name
+    name: name_05
+    overlay: True
+    subsegments:
+      - [0x0F6AB0, c]
+  - type: bin
+    start: 0x0FF0E0
+  - type: code
+    start: 0x0FF570
+    vram: 0x800F65E0
+    dir: ovl_06_name
+    name: name_06
+    overlay: True
+    subsegments:
+      - [0x0FF570, c]
+  - type: bin
+    start: 0x10BA80
+  - type: code
+    start: 0x10CD10
+    vram: 0x800F65E0
+    dir: ovl_07_name
+    name: name_07
+    overlay: True
+    subsegments:
+      - [0x10CD10, c]
+  - type: bin
+    start: 0x110460
+  - type: code
+    start: 0x110F90
+    vram: 0x800F65E0
+    dir: ovl_08_name
+    name: name_08
+    overlay: True
+    subsegments:
+      - [0x110F90, c]
+  - type: bin
+    start: 0x113B20
+  - type: code
+    start: 0x113DC0
+    vram: 0x800F65E0
+    dir: ovl_09_name
+    name: name_09
+    overlay: True
+    subsegments:
+      - [0x113DC0, c]
+  - type: bin
+    start: 0x1170E0
+  - type: code
+    start: 0x117210
+    vram: 0x800F65E0
+    dir: ovl_0A_name
+    name: name_0A
+    overlay: True
+    subsegments:
+      - [0x117210, c]
+  - type: bin
+    start: 0x11C2A0
+  - type: code
+    start: 0x11C810
+    vram: 0x800F65E0
+    dir: ovl_0B_name
+    name: name_0B
+    overlay: True
+    subsegments:
+      - [0x11C810, c]
+  - type: bin
+    start: 0x1216F0
+  - type: code
+    start: 0x1217D0
+    vram: 0x800F65E0
+    dir: ovl_0C_name
+    name: name_0C
+    overlay: True
+    subsegments:
+      - [0x1217D0, c]
+  - type: bin
+    start: 0x124FD0
+  - type: code
+    start: 0x1250D0
+    vram: 0x800F65E0
+    dir: ovl_0D_name
+    name: name_0D
+    overlay: True
+    subsegments:
+      - [0x1250D0, c]
+  - type: bin
+    start: 0x12B7E0
+  - type: code
+    start: 0x12BC20
+    vram: 0x800F65E0
+    dir: ovl_0E_name
+    name: name_0E
+    overlay: True
+    subsegments:
+      - [0x12BC20, c]
+  - type: bin
+    start: 0x131A10
+  - type: code
+    start: 0x131FA0
+    vram: 0x800F65E0
+    dir: ovl_0F_name
+    name: name_0F
+    overlay: True
+    subsegments:
+      - [0x131FA0, c]
+  - type: bin
+    start: 0x136F40
+  - type: code
+    start: 0x137050
+    vram: 0x800F65E0
+    dir: ovl_10_name
+    name: name_10
+    overlay: True
+    subsegments:
+      - [0x137050, c]
+  - type: bin
+    start: 0x13EE10
+  - type: code
+    start: 0x13EFB0
+    vram: 0x800F65E0
+    dir: ovl_11_name
+    name: name_11
+    overlay: True
+    subsegments:
+      - [0x13EFB0, c]
+  - type: bin
+    start: 0x145CA0
+  - type: code
+    start: 0x146200
+    vram: 0x800F65E0
+    dir: ovl_12_name
+    name: name_12
+    overlay: True
+    subsegments:
+      - [0x146200, c]
+  - type: bin
+    start: 0x149C40
+  - type: code
+    start: 0x149E80
+    vram: 0x800F65E0
+    dir: ovl_13_name
+    name: name_13
+    overlay: True
+    subsegments:
+      - [0x149E80, c]
+  - type: bin
+    start: 0x14E540
+  - type: code
     start: 0x14E940
     vram: 0x800F65E0
     dir: ovl_14_CoinBlockBlitz
@@ -143,6 +323,78 @@ segments:
       - [0x14E940, c]
   - type: bin
     start: 0x152B20
+  - type: bin
+    start: 0x1A4E00
+  - type: code
+    start: 0x1A4EB0
+    vram: 0x800F65E0
+    dir: ovl_21_name
+    name: name_21
+    overlay: True
+    subsegments:
+      - [0x1A4EB0, c]
+  - type: bin
+    start: 0x1AA080
+  - type: code
+    start: 0x1AA2A0
+    vram: 0x800F65E0
+    dir: ovl_22_name
+    name: name_22
+    overlay: True
+    subsegments:
+      - [0x1AA2A0, c]
+  - type: bin
+    start: 0x1B3730
+  - type: code
+    start: 0x1B3E00
+    vram: 0x800F65E0
+    dir: ovl_23_name
+    name: name_23
+    overlay: True
+    subsegments:
+      - [0x1B3E00, c]
+  - type: bin
+    start: 0x1BCD20
+  - type: code
+    start: 0x1BD640
+    vram: 0x800F65E0
+    dir: ovl_24_name
+    name: name_24
+    overlay: True
+    subsegments:
+      - [0x1BD640, c]
+  - type: bin
+    start: 0x1C1D90
+  - type: code
+    start: 0x1C1EB0
+    vram: 0x800F65E0
+    dir: ovl_25_name
+    name: name_25
+    overlay: True
+    subsegments:
+      - [0x1C1EB0, c]
+  - type: bin
+    start: 0x1CBB80
+  - type: code
+    start: 0x1CCCF0
+    vram: 0x800F65E0
+    dir: ovl_26_name
+    name: name_26
+    overlay: True
+    subsegments:
+      - [0x1CCCF0, c]
+  - type: bin
+    start: 0x1D3300
+  - type: code
+    start: 0x1D3990
+    vram: 0x800F65E0
+    dir: ovl_27_name
+    name: name_27
+    overlay: True
+    subsegments:
+      - [0x1D3990, c]
+  - type: bin
+    start: 0x1D93B0
   - type: code
     start: 0x1D9690
     vram: 0x800F65E0
@@ -153,6 +405,914 @@ segments:
       - [0x1D9690, c]
   - type: bin
     start: 0x1E0670
+  - type: code
+    start: 0x1E0A30
+    vram: 0x800F65E0
+    dir: ovl_29_name
+    name: name_29
+    overlay: True
     subsegments:
-      - [0x1E0670, bin]
+      - [0x1E0A30, c]
+  - type: bin
+    start: 0x1E8DD0
+  - type: code
+    start: 0x1E9440
+    vram: 0x800F65E0
+    dir: ovl_2A_name
+    name: name_2A
+    overlay: True
+    subsegments:
+      - [0x1E9440, c]
+  - type: bin
+    start: 0x1F0BB0
+  - type: code
+    start: 0x1F0DA0
+    vram: 0x800F65E0
+    dir: ovl_2B_name
+    name: name_2B
+    overlay: True
+    subsegments:
+      - [0x1F0DA0, c]
+  - type: bin
+    start: 0x1F60F0
+  - type: code
+    start: 0x1F62C0
+    vram: 0x800F65E0
+    dir: ovl_2C_name
+    name: name_2C
+    overlay: True
+    subsegments:
+      - [0x1F62C0, c]
+  - type: bin
+    start: 0x1FEF50
+  - type: code
+    start: 0x1FF1E0
+    vram: 0x800F65E0
+    dir: ovl_2D_name
+    name: name_2D
+    overlay: True
+    subsegments:
+      - [0x1FF1E0, c]
+  - type: bin
+    start: 0x206E40
+  - type: code
+    start: 0x207040
+    vram: 0x800F65E0
+    dir: ovl_2E_name
+    name: name_2E
+    overlay: True
+    subsegments:
+      - [0x207040, c]
+  - type: bin
+    start: 0x20EEB0
+  - type: code
+    start: 0x20F570
+    vram: 0x800F65E0
+    dir: ovl_2F_name
+    name: name_2F
+    overlay: True
+    subsegments:
+      - [0x20F570, c]
+  - type: bin
+    start: 0x218330
+  - type: code
+    start: 0x218510
+    vram: 0x800F65E0
+    dir: ovl_30_name
+    name: name_30
+    overlay: True
+    subsegments:
+      - [0x218510, c]
+  - type: bin
+    start: 0x221890
+  - type: code
+    start: 0x222320
+    vram: 0x800F65E0
+    dir: ovl_31_name
+    name: name_31
+    overlay: True
+    subsegments:
+      - [0x222320, c]
+  - type: bin
+    start: 0x22BF30
+  - type: code
+    start: 0x22C9E0
+    vram: 0x800F65E0
+    dir: ovl_32_name
+    name: name_32
+    overlay: True
+    subsegments:
+      - [0x22C9E0, c]
+  - type: bin
+    start: 0x233EE0
+  - type: code
+    start: 0x2341E0
+    vram: 0x800F65E0
+    dir: ovl_33_name
+    name: name_33
+    overlay: True
+    subsegments:
+      - [0x2341E0, c]
+  - type: bin
+    start: 0x23BDF0
+  - type: code
+    start: 0x23CF40
+    vram: 0x800F65E0
+    dir: ovl_34_name
+    name: name_34
+    overlay: True
+    subsegments:
+      - [0x23CF40, c]
+  - type: bin
+    start: 0x241460
+  - type: code
+    start: 0x241740
+    vram: 0x800F65E0
+    dir: ovl_35_name
+    name: name_35
+    overlay: True
+    subsegments:
+      - [0x241740, c]
+  - type: bin
+    start: 0x241880
+  - type: code
+    start: 0x2418A0
+    vram: 0x800F65E0
+    dir: ovl_36_name
+    name: name_36
+    overlay: True
+    subsegments:
+      - [0x2418A0, c]
+  - type: bin
+    start: 0x244B50
+  - type: code
+    start: 0x2455C0
+    vram: 0x800F65E0
+    dir: ovl_37_name
+    name: name_37
+    overlay: True
+    subsegments:
+      - [0x2455C0, c]
+  - type: bin
+    start: 0x246A60
+  - type: code
+    start: 0x246DF0
+    vram: 0x800F65E0
+    dir: ovl_38_name
+    name: name_38
+    overlay: True
+    subsegments:
+      - [0x246DF0, c]
+  - type: bin
+    start: 0x248820
+  - type: code
+    start: 0x248F00
+    vram: 0x800F65E0
+    dir: ovl_39_name
+    name: name_39
+    overlay: True
+    subsegments:
+      - [0x248F00, c]
+  - type: bin
+    start: 0x24C0D0
+  - type: code
+    start: 0x24C390
+    vram: 0x800F65E0
+    dir: ovl_3A_name
+    name: name_3A
+    overlay: True
+    subsegments:
+      - [0x24C390, c]
+  - type: bin
+    start: 0x24F280
+  - type: code
+    start: 0x24FA80
+    vram: 0x800F65E0
+    dir: ovl_3B_name
+    name: name_3B
+    overlay: True
+    subsegments:
+      - [0x24FA80, c]
+  - type: bin
+    start: 0x251400
+  - type: code
+    start: 0x2518D0
+    vram: 0x800F65E0
+    dir: ovl_3C_name
+    name: name_3C
+    overlay: True
+    subsegments:
+      - [0x2518D0, c]
+  - type: bin
+    start: 0x253A50
+  - type: code
+    start: 0x254450
+    vram: 0x800F65E0
+    dir: ovl_3D_name
+    name: name_3D
+    overlay: True
+    subsegments:
+      - [0x254450, c]
+  - type: bin
+    start: 0x2569F0
+  - type: code
+    start: 0x256FF0
+    vram: 0x800F65E0
+    dir: ovl_3E_name
+    name: name_3E
+    overlay: True
+    subsegments:
+      - [0x256FF0, c]
+  - type: bin
+    start: 0x259140
+  - type: code
+    start: 0x2592A0
+    vram: 0x800F65E0
+    dir: ovl_3F_name
+    name: name_3F
+    overlay: True
+    subsegments:
+      - [0x2592A0, c]
+  - type: bin
+    start: 0x259DD0
+  - type: code
+    start: 0x259EB0
+    vram: 0x800F65E0
+    dir: ovl_40_name
+    name: name_40
+    overlay: True
+    subsegments:
+      - [0x259EB0, c]
+  - type: bin
+    start: 0x25F920
+  - type: code
+    start: 0x25FC70
+    vram: 0x800F65E0
+    dir: ovl_41_name
+    name: name_41
+    overlay: True
+    subsegments:
+      - [0x25FC70, c]
+  - type: bin
+    start: 0x277320
+  - type: code
+    start: 0x278ED0
+    vram: 0x800F65E0
+    dir: ovl_42_name
+    name: name_42
+    overlay: True
+    subsegments:
+      - [0x278ED0, c]
+  - type: bin
+    start: 0x27C7C0
+  - type: code
+    start: 0x27CB30
+    vram: 0x800F65E0
+    dir: ovl_43_name
+    name: name_43
+    overlay: True
+    subsegments:
+      - [0x27CB30, c]
+  - type: bin
+    start: 0x2809F0
+  - type: code
+    start: 0x280C80
+    vram: 0x800F65E0
+    dir: ovl_44_name
+    name: name_44
+    overlay: True
+    subsegments:
+      - [0x280C80, c]
+  - type: bin
+    start: 0x281BA0
+  - type: code
+    start: 0x281D40
+    vram: 0x800F65E0
+    dir: ovl_45_name
+    name: name_45
+    overlay: True
+    subsegments:
+      - [0x281D40, c]
+  - type: bin
+    start: 0x2826F0
+  - type: code
+    start: 0x282820
+    vram: 0x800F65E0
+    dir: ovl_46_name
+    name: name_46
+    overlay: True
+    subsegments:
+      - [0x282820, c]
+  - type: bin
+    start: 0x285110
+  - type: code
+    start: 0x285230
+    vram: 0x800F65E0
+    dir: ovl_47_name
+    name: name_47
+    overlay: True
+    subsegments:
+      - [0x285230, c]
+  - type: bin
+    start: 0x285B30
+  - type: code
+    start: 0x285B70
+    vram: 0x800F65E0
+    dir: ovl_48_name
+    name: name_48
+    overlay: True
+    subsegments:
+      - [0x285B70, c]
+  - type: bin
+    start: 0x286650
+  - type: code
+    start: 0x286700
+    vram: 0x800F65E0
+    dir: ovl_49_name
+    name: name_49
+    overlay: True
+    subsegments:
+      - [0x286700, c]
+  - type: bin
+    start: 0x2871F0
+  - type: code
+    start: 0x2872A0
+    vram: 0x800F65E0
+    dir: ovl_4A_name
+    name: name_4A
+    overlay: True
+    subsegments:
+      - [0x2872A0, c]
+  - type: bin
+    start: 0x2887A0
+  - type: code
+    start: 0x2888A0
+    vram: 0x800F65E0
+    dir: ovl_4B_name
+    name: name_4B
+    overlay: True
+    subsegments:
+      - [0x2888A0, c]
+  - type: bin
+    start: 0x289A80
+  - type: code
+    start: 0x289BA0
+    vram: 0x800F65E0
+    dir: ovl_4C_name
+    name: name_4C
+    overlay: True
+    subsegments:
+      - [0x289BA0, c]
+  - type: bin
+    start: 0x28AAB0
+  - type: code
+    start: 0x28ABA0
+    vram: 0x800F65E0
+    dir: ovl_4D_name
+    name: name_4D
+    overlay: True
+    subsegments:
+      - [0x28ABA0, c]
+  - type: bin
+    start: 0x28BBE0
+  - type: code
+    start: 0x28BC70
+    vram: 0x800F65E0
+    dir: ovl_4E_name
+    name: name_4E
+    overlay: True
+    subsegments:
+      - [0x28BC70, c]
+  - type: bin
+    start: 0x28CED0
+  - type: code
+    start: 0x28CFF0
+    vram: 0x800F65E0
+    dir: ovl_4F_name
+    name: name_4F
+    overlay: True
+    subsegments:
+      - [0x28CFF0, c]
+  - type: bin
+    start: 0x28DF40
+  - type: code
+    start: 0x28E030
+    vram: 0x800F65E0
+    dir: ovl_50_name
+    name: name_50
+    overlay: True
+    subsegments:
+      - [0x28E030, c]
+  - type: bin
+    start: 0x28E570
+  - type: code
+    start: 0x28E630
+    vram: 0x800F65E0
+    dir: ovl_51_name
+    name: name_51
+    overlay: True
+    subsegments:
+      - [0x28E630, c]
+  - type: bin
+    start: 0x28EC50
+  - type: code
+    start: 0x28ECA0
+    vram: 0x800F65E0
+    dir: ovl_52_name
+    name: name_52
+    overlay: True
+    subsegments:
+      - [0x28ECA0, c]
+  - type: bin
+    start: 0x290730
+  - type: code
+    start: 0x2908F0
+    vram: 0x800F65E0
+    dir: ovl_53_name
+    name: name_53
+    overlay: True
+    subsegments:
+      - [0x2908F0, c]
+  - type: bin
+    start: 0x291280
+  - type: code
+    start: 0x291360
+    vram: 0x800F65E0
+    dir: ovl_54_name
+    name: name_54
+    overlay: True
+    subsegments:
+      - [0x291360, c]
+  - type: bin
+    start: 0x291F10
+  - type: code
+    start: 0x292020
+    vram: 0x800F65E0
+    dir: ovl_55_name
+    name: name_55
+    overlay: True
+    subsegments:
+      - [0x292020, c]
+  - type: bin
+    start: 0x293160
+  - type: code
+    start: 0x293260
+    vram: 0x800F65E0
+    dir: ovl_56_name
+    name: name_56
+    overlay: True
+    subsegments:
+      - [0x293260, c]
+  - type: bin
+    start: 0x293A30
+  - type: code
+    start: 0x293A70
+    vram: 0x800F65E0
+    dir: ovl_57_name
+    name: name_57
+    overlay: True
+    subsegments:
+      - [0x293A70, c]
+  - type: bin
+    start: 0x295350
+  # - type: code #overlay is blank
+  #   start: 0x295450
+  #   vram: 0x800F65E0
+  #   dir: ovl_58_name
+  #   name: name_58
+  #   overlay: True
+  #   subsegments:
+  #     - [0x295450, c]
+  # - type: bin
+  #   start: 0x295450
+  - type: code
+    start: 0x295450
+    vram: 0x800F65E0
+    dir: ovl_59_name
+    name: name_59
+    overlay: True
+    subsegments:
+      - [0x295450, c]
+  - type: bin
+    start: 0x295D40
+  - type: code
+    start: 0x295E40
+    vram: 0x800F65E0
+    dir: ovl_5A_name
+    name: name_5A
+    overlay: True
+    subsegments:
+      - [0x295E40, c]
+  - type: bin
+    start: 0x296A60
+  - type: code
+    start: 0x296B70
+    vram: 0x800F65E0
+    dir: ovl_5B_name
+    name: name_5B
+    overlay: True
+    subsegments:
+      - [0x296B70, c]
+  - type: bin
+    start: 0x297B20
+  - type: code
+    start: 0x297BE0
+    vram: 0x800F65E0
+    dir: ovl_5C_name
+    name: name_5C
+    overlay: True
+    subsegments:
+      - [0x297BE0, c]
+  - type: bin
+    start: 0x297F90
+  - type: code
+    start: 0x297FB0
+    vram: 0x800F65E0
+    dir: ovl_5D_name
+    name: name_5D
+    overlay: True
+    subsegments:
+      - [0x297FB0, c]
+  - type: bin
+    start: 0x298A30
+  - type: code
+    start: 0x298AE0
+    vram: 0x800F65E0
+    dir: ovl_5E_name
+    name: name_5E
+    overlay: True
+    subsegments:
+      - [0x298AE0, c]
+  - type: bin
+    start: 0x29A2C0
+  - type: code
+    start: 0x29A400
+    vram: 0x800F65E0
+    dir: ovl_5F_name
+    name: name_5F
+    overlay: True
+    subsegments:
+      - [0x29A400, c]
+  - type: bin
+    start: 0x29AA80
+  - type: code
+    start: 0x29AB30
+    vram: 0x800F65E0
+    dir: ovl_60_name
+    name: name_60
+    overlay: True
+    subsegments:
+      - [0x29AB30, c]
+  - type: bin
+    start: 0x29B280
+  - type: code
+    start: 0x29B410
+    vram: 0x800F65E0
+    dir: ovl_61_name
+    name: name_61
+    overlay: True
+    subsegments:
+      - [0x29B410, c]
+  - type: bin
+    start: 0x2A1D30
+  - type: code
+    start: 0x2A2500
+    vram: 0x800F65E0
+    dir: ovl_62_name
+    name: name_62
+    overlay: True
+    subsegments:
+      - [0x2A2500, c]
+  - type: bin
+    start: 0x2A8C50
+  - type: code
+    start: 0x2A9970
+    vram: 0x800F65E0
+    dir: ovl_63_name
+    name: name_63
+    overlay: True
+    subsegments:
+      - [0x2A9970, c]
+  - type: bin
+    start: 0x2B0670
+  - type: code
+    start: 0x2B1670
+    vram: 0x800F65E0
+    dir: ovl_64_name
+    name: name_64
+    overlay: True
+    subsegments:
+      - [0x2B1670, c]
+  - type: bin
+    start: 0x2B7150
+  - type: code
+    start: 0x2B74A0
+    vram: 0x800F65E0
+    dir: ovl_65_name
+    name: name_65
+    overlay: True
+    subsegments:
+      - [0x2B74A0, c]
+  - type: bin
+    start: 0x2BA290
+  - type: code
+    start: 0x2BA4C0
+    vram: 0x800F65E0
+    dir: ovl_66_name
+    name: name_66
+    overlay: True
+    subsegments:
+      - [0x2BA4C0, c]
+  - type: bin
+    start: 0x2BA9B0
+  - type: code
+    start: 0x2BA9E0
+    vram: 0x800F65E0
+    dir: ovl_67_name
+    name: name_67
+    overlay: True
+    subsegments:
+      - [0x2BA9E0, c]
+  - type: bin
+    start: 0x2BB350
+  - type: code
+    start: 0x2BB390
+    vram: 0x800F65E0
+    dir: ovl_68_name
+    name: name_68
+    overlay: True
+    subsegments:
+      - [0x2BB390, c]
+  - type: bin
+    start: 0x2BB5B0
+  - type: code
+    start: 0x2BB5C0
+    vram: 0x800F65E0
+    dir: ovl_69_name
+    name: name_69
+    overlay: True
+    subsegments:
+      - [0x2BB5C0, c]
+  - type: bin
+    start: 0x2BE910
+  - type: code
+    start: 0x2BF1A0
+    vram: 0x800F65E0
+    dir: ovl_6A_name
+    name: name_6A
+    overlay: True
+    subsegments:
+      - [0x2BF1A0, c]
+  - type: bin
+    start: 0x2CA400
+  - type: code
+    start: 0x2CAA00
+    vram: 0x800F65E0
+    dir: ovl_6B_name
+    name: name_6B
+    overlay: True
+    subsegments:
+      - [0x2CAA00, c]
+  - type: bin
+    start: 0x2D42E0
+  - type: code
+    start: 0x2D4830
+    vram: 0x800F65E0
+    dir: ovl_6C_name
+    name: name_6C
+    overlay: True
+    subsegments:
+      - [0x2D4830, c]
+  - type: bin
+    start: 0x2D6BF0
+  - type: code
+    start: 0x2D6FC0
+    vram: 0x800F65E0
+    dir: ovl_6D_name
+    name: name_6D
+    overlay: True
+    subsegments:
+      - [0x2D6FC0, c]
+  - type: bin
+    start: 0x2D92A0
+  - type: code
+    start: 0x2D9570
+    vram: 0x800F65E0
+    dir: ovl_6E_name
+    name: name_6E
+    overlay: True
+    subsegments:
+      - [0x2D9570, c]
+  - type: bin
+    start: 0x2DAE30
+  - type: code
+    start: 0x2DB2A0
+    vram: 0x800F65E0
+    dir: ovl_6F_name
+    name: name_6F
+    overlay: True
+    subsegments:
+      - [0x2DB2A0, c]
+  - type: bin
+    start: 0x2F3190
+  - type: code
+    start: 0x2F40C0
+    vram: 0x800F65E0
+    dir: ovl_70_name
+    name: name_70
+    overlay: True
+    subsegments:
+      - [0x2F40C0, c]
+  - type: bin
+    start: 0x2F6F70
+  - type: code
+    start: 0x2F6FB0
+    vram: 0x800F65E0
+    dir: ovl_71_name
+    name: name_71
+    overlay: True
+    subsegments:
+      - [0x2F6FB0, c]
+  - type: bin
+    start: 0x2F7060
+  - type: code
+    start: 0x2F7080
+    vram: 0x800F65E0
+    dir: ovl_72_name
+    name: name_72
+    overlay: True
+    subsegments:
+      - [0x2F7080, c]
+  - type: bin
+    start: 0x2F8B50
+  - type: code
+    start: 0x2F9040
+    vram: 0x800F65E0
+    dir: ovl_73_name
+    name: name_73
+    overlay: True
+    subsegments:
+      - [0x2F9040, c]
+  - type: bin
+    start: 0x2F95F0
+  - type: code
+    start: 0x2F96E0
+    vram: 0x800F65E0
+    dir: ovl_74_name
+    name: name_74
+    overlay: True
+    subsegments:
+      - [0x2F96E0, c]
+  - type: bin
+    start: 0x2F9FE0
+  - type: code
+    start: 0x2FA120
+    vram: 0x800F65E0
+    dir: ovl_75_name
+    name: name_75
+    overlay: True
+    subsegments:
+      - [0x2FA120, c]
+  - type: bin
+    start: 0x2FA760
+  - type: code
+    start: 0x2FA8A0
+    vram: 0x800F65E0
+    dir: ovl_76_name
+    name: name_76
+    overlay: True
+    subsegments:
+      - [0x2FA8A0, c]
+  - type: bin
+    start: 0x2FAC80
+  - type: code
+    start: 0x2FADB0
+    vram: 0x800F65E0
+    dir: ovl_77_name
+    name: name_77
+    overlay: True
+    subsegments:
+      - [0x2FADB0, c]
+  - type: bin
+    start: 0x2FD7E0
+  - type: code
+    start: 0x2FD940
+    vram: 0x800F65E0
+    dir: ovl_78_name
+    name: name_78
+    overlay: True
+    subsegments:
+      - [0x2FD940, c]
+  - type: bin
+    start: 0x300430
+  - type: code
+    start: 0x3005B0
+    vram: 0x800F65E0
+    dir: ovl_79_name
+    name: name_79
+    overlay: True
+    subsegments:
+      - [0x3005B0, c]
+  - type: bin
+    start: 0x301410
+  - type: code
+    start: 0x3014C0
+    vram: 0x800F65E0
+    dir: ovl_7A_name
+    name: name_7A
+    overlay: True
+    subsegments:
+      - [0x3014C0, c]
+  - type: bin
+    start: 0x302C90
+  - type: code
+    start: 0x303E70
+    vram: 0x800F65E0
+    dir: ovl_7B_name
+    name: name_7B
+    overlay: True
+    subsegments:
+      - [0x303E70, c]
+  - type: bin
+    start: 0x308890
+  - type: code
+    start: 0x308A50
+    vram: 0x800F65E0
+    dir: ovl_7C_name
+    name: name_7C
+    overlay: True
+    subsegments:
+      - [0x308A50, c]
+  - type: bin
+    start: 0x30C440
+  - type: code
+    start: 0x30C540
+    vram: 0x800F65E0
+    dir: ovl_7D_name
+    name: name_7D
+    overlay: True
+    subsegments:
+      - [0x30C540, c]
+  - type: bin
+    start: 0x30F080
+  - type: code
+    start: 0x30F1B0
+    vram: 0x800F65E0
+    dir: ovl_7E_name
+    name: name_7E
+    overlay: True
+    subsegments:
+      - [0x30F1B0, c]
+  - type: bin
+    start: 0x310CA0
+  - type: code
+    start: 0x311E90
+    vram: 0x800F65E0
+    dir: ovl_7F_name
+    name: name_7F
+    overlay: True
+    subsegments:
+      - [0x311E90, c]
+  - type: bin
+    start: 0x3127C0
+  - type: code
+    start: 0x312850
+    vram: 0x800F65E0
+    dir: ovl_80_name
+    name: name_80
+    overlay: True
+    subsegments:
+      - [0x312850, c]
+  - type: bin
+    start: 0x314730
+  - type: code
+    start: 0x314950
+    vram: 0x800F65E0
+    dir: ovl_81_name
+    name: name_81
+    overlay: True
+    subsegments:
+      - [0x314950, c]
+  - type: bin
+    start: 0x316350
+  - type: code
+    start: 0x316440
+    vram: 0x800F65E0
+    dir: ovl_82_name
+    name: name_82
+    overlay: True
+    subsegments:
+      - [0x316440, c]
+  - type: bin
+    start: 0x3177A0
+  - type: code
+    start: 0x317980
+    vram: 0x800F65E0
+    dir: ovl_83_name
+    name: name_83
+    overlay: True
+    subsegments:
+      - [0x317980, c]
+  - type: bin
+    start: 0x31AC50
   - [0x2000000]
