@@ -276,8 +276,8 @@ segments:
   - type: code
     start: 0x137050
     vram: 0x800F65E0
-    dir: ovl_10
-    name: name_10
+    dir: ovl_10_BashNCash
+    name: BashNCash
     overlay: True
     subsegments:
       - [0x137050, c]
@@ -286,8 +286,8 @@ segments:
   - type: code
     start: 0x13EFB0
     vram: 0x800F65E0
-    dir: ovl_11
-    name: name_11
+    dir: ovl_11_BowlOver
+    name: BowlOver
     overlay: True
     subsegments:
       - [0x13EFB0, c]
@@ -296,8 +296,8 @@ segments:
   - type: code
     start: 0x146200
     vram: 0x800F65E0
-    dir: ovl_12
-    name: name_12
+    dir: ovl_12_GroundPound
+    name: GroundPound
     overlay: True
     subsegments:
       - [0x146200, c]
@@ -306,8 +306,8 @@ segments:
   - type: code
     start: 0x149E80
     vram: 0x800F65E0
-    dir: ovl_13
-    name: name_13
+    dir: ovl_13_BalloonBurst
+    name: BalloonBurst
     overlay: True
     subsegments:
       - [0x149E80, c]
@@ -323,13 +323,131 @@ segments:
       - [0x14E940, c]
   - type: bin
     start: 0x152B20
+  - type: code
+    start: 0x152BE0
+    vram: 0x800F65E0
+    dir: ovl_15_CoinBlockBash
+    name: CoinBlockBash
+    overlay: True
+    subsegments:
+      - [0x152BE0, c]
+  - type: bin
+    start: 0x15E120
+  - type: code
+    start: 0x15EAF0
+    vram: 0x800F65E0
+    dir: ovl_16_SkateBoardSkamper
+    name: SkateBoardSkamper
+    overlay: True
+    subsegments:
+      - [0x15EAF0, c]
+  - type: bin
+    start: 0x165F10
+  - type: code
+    start: 0x166220
+    vram: 0x800F65E0
+    dir: ovl_17_BoxMountainMayhem
+    name: BoxMountainMayhem
+    overlay: True
+    subsegments:
+      - [0x166220, c]
+  - type: bin
+    start: 0x16BC00
+  - type: code
+    start: 0x16BD20
+    vram: 0x800F65E0
+    dir: ovl_18_PlatformPeril
+    name: PlatformPeril
+    overlay: True
+    subsegments:
+      - [0x16BD20, c]
+  - type: bin
+    start: 0x1724D0
+  - type: code
+    start: 0x1738E0
+    vram: 0x800F65E0
+    dir: ovl_19_TeeteringTowers
+    name: TeeteringTowers
+    overlay: True
+    subsegments:
+      - [0x1738E0, c]
+  - type: bin
+    start: 0x177C30
+  - type: code
+    start: 0x1784E0
+    vram: 0x800F65E0
+    dir: ovl_1A_MushroomMixup
+    name: MushroomMixup
+    overlay: True
+    subsegments:
+      - [0x1784E0, c]
+  - type: bin
+    start: 0x17E600
+  - type: code
+    start: 0x17E710
+    vram: 0x800F65E0
+    dir: ovl_1B_HammerDrop
+    name: HammerDrop
+    overlay: True
+    subsegments:
+      - [0x17E710, c]
+  - type: bin
+    start: 0x1836C0
+  - type: code
+    start: 0x1837D0
+    vram: 0x800F65E0
+    dir: ovl_1C_GrabBag
+    name: GrabBag
+    overlay: True
+    subsegments:
+      - [0x1837D0, c]
+  - type: bin
+    start: 0x188280
+  - type: code
+    start: 0x188410
+    vram: 0x800F65E0
+    dir: ovl_1D_BobsledRun
+    name: BobsledRun
+    overlay: True
+    subsegments:
+      - [0x188410, c]
+  - type: bin
+    start: 0x1910D0
+  - type: code
+    start: 0x191700
+    vram: 0x800F65E0
+    dir: ovl_1E_BumperBalls
+    name: BumperBalls
+    overlay: True
+    subsegments:
+      - [0x191700, c]
+  - type: bin
+    start: 0x197C50
+  - type: code
+    start: 0x197E20
+    vram: 0x800F65E0
+    dir: ovl_1F_TightropeTreachery
+    name: TightropeTreachery
+    overlay: True
+    subsegments:
+      - [0x197E20, c]
+  - type: bin
+    start: 0x19FAF0
+  - type: code
+    start: 0x19FEE0
+    vram: 0x800F65E0
+    dir: ovl_20_KnockBlockTower
+    name: KnockBlockTower
+    overlay: True
+    subsegments:
+      - [0x19FEE0, c]
   - type: bin
     start: 0x1A4E00
   - type: code
     start: 0x1A4EB0
     vram: 0x800F65E0
-    dir: ovl_21
-    name: name_21
+    dir: ovl_21_TipsyTourney
+    name: TipsyTourney
     overlay: True
     subsegments:
       - [0x1A4EB0, c]
@@ -338,8 +456,8 @@ segments:
   - type: code
     start: 0x1AA2A0
     vram: 0x800F65E0
-    dir: ovl_22
-    name: name_22
+    dir: ovl_22_BombsAway
+    name: BombsAway
     overlay: True
     subsegments:
       - [0x1AA2A0, c]
@@ -348,8 +466,8 @@ segments:
   - type: code
     start: 0x1B3E00
     vram: 0x800F65E0
-    dir: ovl_23
-    name: name_23
+    dir: ovl_23_CraneGame
+    name: CraneGame
     overlay: True
     subsegments:
       - [0x1B3E00, c]
@@ -358,8 +476,8 @@ segments:
   - type: code
     start: 0x1BD640
     vram: 0x800F65E0
-    dir: ovl_24
-    name: name_24
+    dir: ovl_24_FlowerShower
+    name: FlowerShower
     overlay: True
     subsegments:
       - [0x1BD640, c]
@@ -368,8 +486,8 @@ segments:
   - type: code
     start: 0x1C1EB0
     vram: 0x800F65E0
-    dir: ovl_25
-    name: name_25
+    dir: ovl_25_SlotCarDerby
+    name: SlotCarDerby
     overlay: True
     subsegments:
       - [0x1C1EB0, c]
@@ -378,8 +496,8 @@ segments:
   - type: code
     start: 0x1CCCF0
     vram: 0x800F65E0
-    dir: ovl_26
-    name: name_26
+    dir: ovl_26_MarioBandstand
+    name: MarioBandstand
     overlay: True
     subsegments:
       - [0x1CCCF0, c]
@@ -388,8 +506,8 @@ segments:
   - type: code
     start: 0x1D3990
     vram: 0x800F65E0
-    dir: ovl_27
-    name: name_27
+    dir: ovl_27_DesertDash
+    name: DesertDash
     overlay: True
     subsegments:
       - [0x1D3990, c]
@@ -408,8 +526,8 @@ segments:
   - type: code
     start: 0x1E0A30
     vram: 0x800F65E0
-    dir: ovl_29
-    name: name_29
+    dir: ovl_29_LimboDance
+    name: LimboDance
     overlay: True
     subsegments:
       - [0x1E0A30, c]
@@ -428,8 +546,8 @@ segments:
   - type: code
     start: 0x1F0DA0
     vram: 0x800F65E0
-    dir: ovl_2B
-    name: name_2B
+    dir: ovl_2B_CastAways
+    name: CastAways
     overlay: True
     subsegments:
       - [0x1F0DA0, c]
@@ -438,7 +556,7 @@ segments:
   - type: code
     start: 0x1F62C0
     vram: 0x800F65E0
-    dir: ovl_2C
+    dir: ovl_2C_KeyPaWay
     name: name_2C
     overlay: True
     subsegments:
@@ -448,8 +566,8 @@ segments:
   - type: code
     start: 0x1FF1E0
     vram: 0x800F65E0
-    dir: ovl_2D
-    name: name_2D
+    dir: ovl_2D_RunningOfTheBulb
+    name: RunningOfTheBulb
     overlay: True
     subsegments:
       - [0x1FF1E0, c]
@@ -458,8 +576,8 @@ segments:
   - type: code
     start: 0x207040
     vram: 0x800F65E0
-    dir: ovl_2E
-    name: name_2E
+    dir: ovl_2E_HotRopeJump
+    name: HotRopeJump
     overlay: True
     subsegments:
       - [0x207040, c]
@@ -468,8 +586,8 @@ segments:
   - type: code
     start: 0x20F570
     vram: 0x800F65E0
-    dir: ovl_2F
-    name: name_2F
+    dir: ovl_2F_HandcarHavoc
+    name: HandcarHavoc
     overlay: True
     subsegments:
       - [0x20F570, c]
@@ -478,8 +596,8 @@ segments:
   - type: code
     start: 0x218510
     vram: 0x800F65E0
-    dir: ovl_30
-    name: name_30
+    dir: ovl_30_DeepSeaDivers
+    name: DeepSeaDivers
     overlay: True
     subsegments:
       - [0x218510, c]
@@ -488,8 +606,8 @@ segments:
   - type: code
     start: 0x222320
     vram: 0x800F65E0
-    dir: ovl_31
-    name: name_31
+    dir: ovl_31_PiranhasPursuit
+    name: PiranhasPursuit
     overlay: True
     subsegments:
       - [0x222320, c]
@@ -498,8 +616,8 @@ segments:
   - type: code
     start: 0x22C9E0
     vram: 0x800F65E0
-    dir: ovl_32
-    name: name_32
+    dir: ovl_32_TugOWar
+    name: TugOWar
     overlay: True
     subsegments:
       - [0x22C9E0, c]
@@ -508,8 +626,8 @@ segments:
   - type: code
     start: 0x2341E0
     vram: 0x800F65E0
-    dir: ovl_33
-    name: name_33
+    dir: ovl_33_PaddleBattle
+    name: PaddleBattle
     overlay: True
     subsegments:
       - [0x2341E0, c]
@@ -518,8 +636,8 @@ segments:
   - type: code
     start: 0x23CF40
     vram: 0x800F65E0
-    dir: ovl_34
-    name: name_34
+    dir: ovl_34_BumperBallMaze
+    name: BumperBallMaze
     overlay: True
     subsegments:
       - [0x23CF40, c]
@@ -538,8 +656,8 @@ segments:
   - type: code
     start: 0x2418A0
     vram: 0x800F65E0
-    dir: ovl_36
-    name: name_36
+    dir: ovl_36_DKsJungleAdventure
+    name: DKsJungleAdventure
     overlay: True
     subsegments:
       - [0x2418A0, c]
@@ -548,8 +666,8 @@ segments:
   - type: code
     start: 0x2455C0
     vram: 0x800F65E0
-    dir: ovl_37
-    name: name_37
+    dir: ovl_37_PeachsBirthdayCake
+    name: PeachsBirthdayCake
     overlay: True
     subsegments:
       - [0x2455C0, c]
@@ -558,8 +676,8 @@ segments:
   - type: code
     start: 0x246DF0
     vram: 0x800F65E0
-    dir: ovl_38
-    name: name_38
+    dir: ovl_38_YoshisTropicalIsland
+    name: YoshisTropicalIsland
     overlay: True
     subsegments:
       - [0x246DF0, c]
@@ -568,8 +686,8 @@ segments:
   - type: code
     start: 0x248F00
     vram: 0x800F65E0
-    dir: ovl_39
-    name: name_39
+    dir: ovl_39_WariosBattleCanyon
+    name: WariosBattleCanyon
     overlay: True
     subsegments:
       - [0x248F00, c]
@@ -578,8 +696,8 @@ segments:
   - type: code
     start: 0x24C390
     vram: 0x800F65E0
-    dir: ovl_3A
-    name: name_3A
+    dir: ovl_3A_LuigisEngineRoom
+    name: LuigisEngineRoom
     overlay: True
     subsegments:
       - [0x24C390, c]
@@ -588,8 +706,8 @@ segments:
   - type: code
     start: 0x24FA80
     vram: 0x800F65E0
-    dir: ovl_3B
-    name: name_3B
+    dir: ovl_3B_MariosRainbowCastle
+    name: MariosRainbowCastle
     overlay: True
     subsegments:
       - [0x24FA80, c]
@@ -598,8 +716,8 @@ segments:
   - type: code
     start: 0x2518D0
     vram: 0x800F65E0
-    dir: ovl_3C
-    name: name_3C
+    dir: ovl_3C_BowsersMagmaMountain
+    name: BowsersMagmaMountain
     overlay: True
     subsegments:
       - [0x2518D0, c]
@@ -608,8 +726,8 @@ segments:
   - type: code
     start: 0x254450
     vram: 0x800F65E0
-    dir: ovl_3D
-    name: name_3D
+    dir: ovl_3D_EternalStar
+    name: EternalStar
     overlay: True
     subsegments:
       - [0x254450, c]
@@ -618,8 +736,8 @@ segments:
   - type: code
     start: 0x256FF0
     vram: 0x800F65E0
-    dir: ovl_3E
-    name: name_3E
+    dir: ovl_3E_FirstMap
+    name: FirstMap
     overlay: True
     subsegments:
       - [0x256FF0, c]
@@ -638,8 +756,8 @@ segments:
   - type: code
     start: 0x259EB0
     vram: 0x800F65E0
-    dir: ovl_40
-    name: name_40
+    dir: ovl_40_ResultsEternalStar
+    name: ResultsEternalStar
     overlay: True
     subsegments:
       - [0x259EB0, c]
@@ -648,8 +766,8 @@ segments:
   - type: code
     start: 0x25FC70
     vram: 0x800F65E0
-    dir: ovl_41
-    name: name_41
+    dir: ovl_41_YoshisTropicalIslandEndingScene
+    name: YoshisTropicalIslandEndingScene
     overlay: True
     subsegments:
       - [0x25FC70, c]
@@ -658,8 +776,8 @@ segments:
   - type: code
     start: 0x278ED0
     vram: 0x800F65E0
-    dir: ovl_42
-    name: name_42
+    dir: ovl_42_UnknownEndGameBonuses0
+    name: UnknownEndGameBonuses0
     overlay: True
     subsegments:
       - [0x278ED0, c]
@@ -668,8 +786,8 @@ segments:
   - type: code
     start: 0x27CB30
     vram: 0x800F65E0
-    dir: ovl_43
-    name: name_43
+    dir: ovl_43_UnknownEndGameBonuses1
+    name: UnknownEndGameBonuses1
     overlay: True
     subsegments:
       - [0x27CB30, c]
@@ -678,8 +796,8 @@ segments:
   - type: code
     start: 0x280C80
     vram: 0x800F65E0
-    dir: ovl_44
-    name: name_44
+    dir: ovl_44_UnknownStarPurchaseScene0
+    name: UnknownStarPurchaseScene0
     overlay: True
     subsegments:
       - [0x280C80, c]
@@ -688,8 +806,8 @@ segments:
   - type: code
     start: 0x281D40
     vram: 0x800F65E0
-    dir: ovl_45
-    name: name_45
+    dir: ovl_45_UnknownBowserScene0
+    name: UnknownBowserScene0
     overlay: True
     subsegments:
       - [0x281D40, c]
@@ -698,8 +816,8 @@ segments:
   - type: code
     start: 0x282820
     vram: 0x800F65E0
-    dir: ovl_46
-    name: name_46
+    dir: ovl_46_BowserSpaceEvent
+    name: BowserSpaceEvent
     overlay: True
     subsegments:
       - [0x282820, c]
@@ -718,8 +836,8 @@ segments:
   - type: code
     start: 0x285B70
     vram: 0x800F65E0
-    dir: ovl_48
-    name: name_48
+    dir: ovl_48_BowserVisitDKBoard
+    name: BowserVisitDKBoard
     overlay: True
     subsegments:
       - [0x285B70, c]
@@ -728,8 +846,8 @@ segments:
   - type: code
     start: 0x286700
     vram: 0x800F65E0
-    dir: ovl_49
-    name: name_49
+    dir: ovl_49_BowserVisitPeachBoard
+    name: BowserVisitPeachBoard
     overlay: True
     subsegments:
       - [0x286700, c]
@@ -738,8 +856,8 @@ segments:
   - type: code
     start: 0x2872A0
     vram: 0x800F65E0
-    dir: ovl_4A
-    name: name_4A
+    dir: ovl_4A_GoombaCoinStealPeachBoard
+    name: GoombaCoinStealPeachBoard
     overlay: True
     subsegments:
       - [0x2872A0, c]
@@ -748,8 +866,8 @@ segments:
   - type: code
     start: 0x2888A0
     vram: 0x800F65E0
-    dir: ovl_4B
-    name: name_4B
+    dir: ovl_4B_FlowerLotteryPeachBoard
+    name: FlowerLotteryPeachBoard
     overlay: True
     subsegments:
       - [0x2888A0, c]
@@ -758,8 +876,8 @@ segments:
   - type: code
     start: 0x289BA0
     vram: 0x800F65E0
-    dir: ovl_4C
-    name: name_4C
+    dir: ovl_4C_PiranhaPlantStarStealPeachBoard
+    name: PiranhaPlantStarStealPeachBoard
     overlay: True
     subsegments:
       - [0x289BA0, c]
@@ -768,8 +886,8 @@ segments:
   - type: code
     start: 0x28ABA0
     vram: 0x800F65E0
-    dir: ovl_4D
-    name: name_4D
+    dir: ovl_4D_ThowmpTollYoshiBoard
+    name: ThowmpTollYoshiBoard
     overlay: True
     subsegments:
       - [0x28ABA0, c]
@@ -778,8 +896,8 @@ segments:
   - type: code
     start: 0x28BC70
     vram: 0x800F65E0
-    dir: ovl_4E
-    name: name_4E
+    dir: ovl_4E_BowserToadSwapPlacesYoshiBoard
+    name: BowserToadSwapPlacesYoshiBoard
     overlay: True
     subsegments:
       - [0x28BC70, c]
@@ -788,8 +906,8 @@ segments:
   - type: code
     start: 0x28CFF0
     vram: 0x800F65E0
-    dir: ovl_4F
-    name: name_4F
+    dir: ovl_4F_BowserVisitYoshiBoard
+    name: BowserVisitYoshiBoard
     overlay: True
     subsegments:
       - [0x28CFF0, c]
@@ -1048,8 +1166,8 @@ segments:
   - type: code
     start: 0x2BB5C0
     vram: 0x800F65E0
-    dir: ovl_69
-    name: name_69
+    dir: ovl_69_GameModeOverworld
+    name: GameModeOverworld
     overlay: True
     subsegments:
       - [0x2BB5C0, c]

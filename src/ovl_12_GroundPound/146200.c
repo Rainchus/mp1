@@ -1,0 +1,87 @@
+#include "common.h"
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F65E0_146200);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F67E0_146400);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F6814_146434);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F6924_146544);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F6A84_1466A4);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F6B0C_14672C);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F6EE4_146B04);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F6F40_146B60);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F6FD4_146BF4);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F7044_146C64);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F7078_146C98);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F70AC_146CCC);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F7180_146DA0);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F7310_146F30);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F73E4_147004);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F750C_14712C);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F7560_147180);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F7628_147248);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F7844_147464);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F796C_14758C);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F7BB8_1477D8);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F7FEC_147C0C);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F823C_147E5C);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F8264_147E84);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F8480_1480A0);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F8568_148188);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F8688_1482A8);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F86FC_14831C);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F8744_148364);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F8AA0_1486C0);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F8C20_148840);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F9094_148CB4);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F9314_148F34);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F95D4_1491F4);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F9870_149490);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F9908_149528);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F9950_149570);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F9A24_149644);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F9B18_149738);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F9E4C_149A6C);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F9E80_149AA0);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F9F18_149B38);
+
+INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F9FEC_149C0C);

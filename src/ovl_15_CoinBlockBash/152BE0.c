@@ -1,0 +1,175 @@
+#include "common.h"
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800F65E0_152BE0);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800F66F8_152CF8);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800F6770_152D70);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800F6C20_153220);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800F6C54_153254);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800F6C80_153280);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800F6CC8_1532C8);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800F6EA0_1534A0);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800F7048_153648);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800F7148_153748);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800F7644_153C44);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800F766C_153C6C);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800F7674_153C74);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800F7680_153C80);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800F77BC_153DBC);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800F78DC_153EDC);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800F78E8_153EE8);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800F7A5C_15405C);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800F8014_154614);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800F8184_154784);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800F81E0_1547E0);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800F8CD0_1552D0);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800F8D98_155398);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800F96A0_155CA0);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800F9814_155E14);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800F99A0_155FA0);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800F9A98_156098);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800F9CF0_1562F0);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800F9FE4_1565E4);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FA388_156988);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FA600_156C00);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FA7AC_156DAC);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FA944_156F44);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FAA7C_15707C);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FACEC_1572EC);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FB490_157A90);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FB4F4_157AF4);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FB71C_157D1C);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FB900_157F00);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FBF70_158570);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FC054_158654);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FC2AC_1588AC);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FD8CC_159ECC);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FDC5C_15A25C);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FDCB4_15A2B4);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FDCF8_15A2F8);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FDD50_15A350);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FDDEC_15A3EC);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FDEA0_15A4A0);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FDF20_15A520);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FE0AC_15A6AC);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FE284_15A884);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FE294_15A894);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FE470_15AA70);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FE650_15AC50);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FE684_15AC84);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FE854_15AE54);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FE8DC_15AEDC);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FEA5C_15B05C);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FEE04_15B404);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FEE90_15B490);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FF2B0_15B8B0);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FF904_15BF04);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FFBA8_15C1A8);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FFBB8_15C1B8);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FFD60_15C360);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FFD6C_15C36C);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FFD78_15C378);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FFE30_15C430);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FFE64_15C464);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FFE74_15C474);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FFE84_15C484);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FFE90_15C490);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_800FFED0_15C4D0);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_801000B8_15C6B8);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_80100160_15C760);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_80100264_15C864);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_801002CC_15C8CC);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_80100304_15C904);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_8010034C_15C94C);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_80100394_15C994);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_801003D0_15C9D0);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_80100410_15CA10);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_80100454_15CA54);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_801004E8_15CAE8);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_80101748_15DD48);
+
+INCLUDE_ASM(s32, "ovl_15_CoinBlockBash/152BE0", func_80101A5C_15E05C);
