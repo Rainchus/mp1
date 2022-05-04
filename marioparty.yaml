@@ -916,8 +916,8 @@ segments:
   - type: code
     start: 0x28E030
     vram: 0x800F65E0
-    dir: ovl_50
-    name: name_50
+    dir: ovl_50_LoadCannonWarioBoard
+    name: LoadCannonWarioBoard
     overlay: True
     subsegments:
       - [0x28E030, c]
@@ -926,8 +926,8 @@ segments:
   - type: code
     start: 0x28E630
     vram: 0x800F65E0
-    dir: ovl_51
-    name: name_51
+    dir: ovl_51_ChangeCannonTargetWarioBoard
+    name: ChangeCannonTargetWarioBoard
     overlay: True
     subsegments:
       - [0x28E630, c]
@@ -936,8 +936,8 @@ segments:
   - type: code
     start: 0x28ECA0
     vram: 0x800F65E0
-    dir: ovl_52
-    name: name_52
+    dir: ovl_52_FlyGuyWarioBoard
+    name: FlyGuyWarioBoard
     overlay: True
     subsegments:
       - [0x28ECA0, c]
@@ -946,8 +946,8 @@ segments:
   - type: code
     start: 0x2908F0
     vram: 0x800F65E0
-    dir: ovl_53
-    name: name_53
+    dir: ovl_53_BowserVisitWarioBoard
+    name: BowserVisitWarioBoard
     overlay: True
     subsegments:
       - [0x2908F0, c]
@@ -956,8 +956,8 @@ segments:
   - type: code
     start: 0x291360
     vram: 0x800F65E0
-    dir: ovl_54
-    name: name_54
+    dir: ovl_54_BowserVisitLuigiBoard
+    name: BowserVisitLuigiBoard
     overlay: True
     subsegments:
       - [0x291360, c]
@@ -966,8 +966,8 @@ segments:
   - type: code
     start: 0x292020
     vram: 0x800F65E0
-    dir: ovl_55
-    name: name_55
+    dir: ovl_55_MoveDoorsLuigiBoard
+    name: MoveDoorsLuigiBoard
     overlay: True
     subsegments:
       - [0x292020, c]
@@ -976,8 +976,8 @@ segments:
   - type: code
     start: 0x293260
     vram: 0x800F65E0
-    dir: ovl_56
-    name: name_56
+    dir: ovl_56_BowserToadSwapPlacesMarioBoard
+    name: BowserToadSwapPlacesMarioBoard
     overlay: True
     subsegments:
       - [0x293260, c]
@@ -986,7 +986,7 @@ segments:
   - type: code
     start: 0x293A70
     vram: 0x800F65E0
-    dir: ovl_57
+    dir: ovl_57_BowserVisitMarioBoard
     name: name_57
     overlay: True
     subsegments:
@@ -1006,8 +1006,8 @@ segments:
   - type: code
     start: 0x295450
     vram: 0x800F65E0
-    dir: ovl_59
-    name: name_59
+    dir: ovl_59_BowserVisitMagmaMountain
+    name: BowserVisitMagmaMountain
     overlay: True
     subsegments:
       - [0x295450, c]
@@ -1016,8 +1016,8 @@ segments:
   - type: code
     start: 0x295E40
     vram: 0x800F65E0
-    dir: ovl_5A
-    name: name_5A
+    dir: ovl_5A_ShortcutRouletteMagmaMountain
+    name: ShortcutRouletteMagmaMountain
     overlay: True
     subsegments:
       - [0x295E40, c]
@@ -1026,8 +1026,8 @@ segments:
   - type: code
     start: 0x296B70
     vram: 0x800F65E0
-    dir: ovl_5B
-    name: name_5B
+    dir: ovl_5B_BowservisitMagmaMountain
+    name: BowservisitMagmaMountain
     overlay: True
     subsegments:
       - [0x296B70, c]
@@ -1036,8 +1036,8 @@ segments:
   - type: code
     start: 0x297BE0
     vram: 0x800F65E0
-    dir: ovl_5C
-    name: name_5C
+    dir: ovl_5C_HappeningSpaceEternalStar
+    name: HappeningSpaceEternalStar
     overlay: True
     subsegments:
       - [0x297BE0, c]
@@ -1046,8 +1046,8 @@ segments:
   - type: code
     start: 0x297FB0
     vram: 0x800F65E0
-    dir: ovl_5D
-    name: name_5D
+    dir: ovl_5D_BowserVisitEternalStar
+    name: BowserVisitEternalStar
     overlay: True
     subsegments:
       - [0x297FB0, c]
@@ -1056,8 +1056,8 @@ segments:
   - type: code
     start: 0x298AE0
     vram: 0x800F65E0
-    dir: ovl_5E
-    name: name_5E
+    dir: ovl_5E_StarVisitEternalStar
+    name: StarVisitEternalStar
     overlay: True
     subsegments:
       - [0x298AE0, c]
@@ -1066,8 +1066,8 @@ segments:
   - type: code
     start: 0x29A400
     vram: 0x800F65E0
-    dir: ovl_5F
-    name: name_5F
+    dir: ovl_5F_KoopaVisitEternalStar
+    name: KoopaVisitEternalStar
     overlay: True
     subsegments:
       - [0x29A400, c]
@@ -1086,8 +1086,8 @@ segments:
   - type: code
     start: 0x29B410
     vram: 0x800F65E0
-    dir: ovl_61
-    name: name_61
+    dir: ovl_61_OpeningScene
+    name: OpeningScene
     overlay: True
     subsegments:
       - [0x29B410, c]
@@ -1106,8 +1106,8 @@ segments:
   - type: code
     start: 0x2A9970
     vram: 0x800F65E0
-    dir: ovl_63
-    name: name_63
+    dir: ovl_63_StaffScene
+    name: StaffScene
     overlay: True
     subsegments:
       - [0x2A9970, c]
@@ -1116,8 +1116,8 @@ segments:
   - type: code
     start: 0x2B1670
     vram: 0x800F65E0
-    dir: ovl_64
-    name: name_64
+    dir: ovl_64_ResultsEternalStar2
+    name: ResultsEternalStar2
     overlay: True
     subsegments:
       - [0x2B1670, c]
@@ -1126,8 +1126,8 @@ segments:
   - type: code
     start: 0x2B74A0
     vram: 0x800F65E0
-    dir: ovl_65
-    name: name_65
+    dir: ovl_65_UnknownBooStealScene
+    name: UnknownBooStealScene
     overlay: True
     subsegments:
       - [0x2B74A0, c]
@@ -1136,8 +1136,8 @@ segments:
   - type: code
     start: 0x2BA4C0
     vram: 0x800F65E0
-    dir: ovl_66
-    name: name_66
+    dir: ovl_66_LogosSequence
+    name: LogosSequence
     overlay: True
     subsegments:
       - [0x2BA4C0, c]
@@ -1146,8 +1146,8 @@ segments:
   - type: code
     start: 0x2BA9E0
     vram: 0x800F65E0
-    dir: ovl_67
-    name: name_67
+    dir: ovl_67_LogosSequenceCopy
+    name: LogosSequenceCopy
     overlay: True
     subsegments:
       - [0x2BA9E0, c]
@@ -1156,8 +1156,8 @@ segments:
   - type: code
     start: 0x2BB390
     vram: 0x800F65E0
-    dir: ovl_68
-    name: name_68
+    dir: ovl_68_SaveDataCorrupted
+    name: SaveDataCorrupted
     overlay: True
     subsegments:
       - [0x2BB390, c]
@@ -1176,8 +1176,8 @@ segments:
   - type: code
     start: 0x2BF1A0
     vram: 0x800F65E0
-    dir: ovl_6A
-    name: name_6A
+    dir: ovl_6A_AdventureModeSetup
+    name: AdventureModeSetup
     overlay: True
     subsegments:
       - [0x2BF1A0, c]
@@ -1186,8 +1186,8 @@ segments:
   - type: code
     start: 0x2CAA00
     vram: 0x800F65E0
-    dir: ovl_6B
-    name: name_6B
+    dir: ovl_6B_MinigameHouse
+    name: MinigameHouse
     overlay: True
     subsegments:
       - [0x2CAA00, c]
@@ -1196,8 +1196,8 @@ segments:
   - type: code
     start: 0x2D4830
     vram: 0x800F65E0
-    dir: ovl_6C
-    name: name_6C
+    dir: ovl_6C_MushroomShop
+    name: MushroomShop
     overlay: True
     subsegments:
       - [0x2D4830, c]
@@ -1206,8 +1206,8 @@ segments:
   - type: code
     start: 0x2D6FC0
     vram: 0x800F65E0
-    dir: ovl_6D
-    name: name_6D
+    dir: ovl_6D_MushroomBank
+    name: MushroomBank
     overlay: True
     subsegments:
       - [0x2D6FC0, c]
@@ -1216,8 +1216,8 @@ segments:
   - type: code
     start: 0x2D9570
     vram: 0x800F65E0
-    dir: ovl_6E
-    name: name_6E
+    dir: ovl_6E_OptionsHouse
+    name: OptionsHouse
     overlay: True
     subsegments:
       - [0x2D9570, c]
@@ -1226,8 +1226,8 @@ segments:
   - type: code
     start: 0x2DB2A0
     vram: 0x800F65E0
-    dir: ovl_6F
-    name: name_6F
+    dir: ovl_6F_MinigameInstructions
+    name: MinigameInstructions
     overlay: True
     subsegments:
       - [0x2DB2A0, c]
@@ -1236,8 +1236,8 @@ segments:
   - type: code
     start: 0x2F40C0
     vram: 0x800F65E0
-    dir: ovl_70
-    name: name_70
+    dir: ovl_70_TestingRoom
+    name: TestingRoom
     overlay: True
     subsegments:
       - [0x2F40C0, c]
@@ -1246,8 +1246,8 @@ segments:
   - type: code
     start: 0x2F6FB0
     vram: 0x800F65E0
-    dir: ovl_71
-    name: name_71
+    dir: ovl_71_MinigameIslandOverworld
+    name: MinigameIslandOverworld
     overlay: True
     subsegments:
       - [0x2F6FB0, c]
@@ -1256,8 +1256,8 @@ segments:
   - type: code
     start: 0x2F7080
     vram: 0x800F65E0
-    dir: ovl_72
-    name: name_72
+    dir: ovl_72_MinigameIslandOverworldCopy
+    name: MinigameIslandOverworldCopy
     overlay: True
     subsegments:
       - [0x2F7080, c]
@@ -1306,8 +1306,8 @@ segments:
   - type: code
     start: 0x2FADB0
     vram: 0x800F65E0
-    dir: ovl_77
-    name: name_77
+    dir: ovl_77_MinigameIslandFinish
+    name: MinigameIslandFinish
     overlay: True
     subsegments:
       - [0x2FADB0, c]
@@ -1316,8 +1316,8 @@ segments:
   - type: code
     start: 0x2FD940
     vram: 0x800F65E0
-    dir: ovl_78
-    name: name_78
+    dir: ovl_78_MinigameIslandStart
+    name: MinigameIslandStart
     overlay: True
     subsegments:
       - [0x2FD940, c]
@@ -1336,8 +1336,8 @@ segments:
   - type: code
     start: 0x3014C0
     vram: 0x800F65E0
-    dir: ovl_7A
-    name: name_7A
+    dir: ovl_7A_DebugRandomPlay
+    name: DebugRandomPlay
     overlay: True
     subsegments:
       - [0x3014C0, c]
@@ -1346,8 +1346,8 @@ segments:
   - type: code
     start: 0x303E70
     vram: 0x800F65E0
-    dir: ovl_7B
-    name: name_7B
+    dir: ovl_7B_MinigameStadiumMinigameResultsScreen
+    name: MinigameStadiumMinigameResultsScreen
     overlay: True
     subsegments:
       - [0x303E70, c]
@@ -1356,8 +1356,8 @@ segments:
   - type: code
     start: 0x308A50
     vram: 0x800F65E0
-    dir: ovl_7C
-    name: name_7C
+    dir: ovl_7C_UnknownResultsScreen
+    name: UnknownResultsScreen
     overlay: True
     subsegments:
       - [0x308A50, c]
@@ -1366,8 +1366,8 @@ segments:
   - type: code
     start: 0x30C540
     vram: 0x800F65E0
-    dir: ovl_7D
-    name: name_7D
+    dir: ovl_7D_MinigameIslandMISS
+    name: MinigameIslandMISS
     overlay: True
     subsegments:
       - [0x30C540, c]
@@ -1376,8 +1376,8 @@ segments:
   - type: code
     start: 0x30F1B0
     vram: 0x800F65E0
-    dir: ovl_7E
-    name: name_7E
+    dir: ovl_7E_DebugSequentialPlay
+    name: DebugSequentialPlay
     overlay: True
     subsegments:
       - [0x30F1B0, c]
@@ -1386,8 +1386,8 @@ segments:
   - type: code
     start: 0x311E90
     vram: 0x800F65E0
-    dir: ovl_7F
-    name: name_7F
+    dir: ovl_7F_MinigameStadiumStart
+    name: MinigameStadiumStart
     overlay: True
     subsegments:
       - [0x311E90, c]
@@ -1396,8 +1396,8 @@ segments:
   - type: code
     start: 0x312850
     vram: 0x800F65E0
-    dir: ovl_80
-    name: name_80
+    dir: ovl_80_MinigameStadiumResults
+    name: MinigameStadiumResults
     overlay: True
     subsegments:
       - [0x312850, c]
@@ -1406,8 +1406,8 @@ segments:
   - type: code
     start: 0x314950
     vram: 0x800F65E0
-    dir: ovl_81
-    name: name_81
+    dir: ovl_81_PressStartScreen
+    name: PressStartScreen
     overlay: True
     subsegments:
       - [0x314950, c]
@@ -1416,8 +1416,8 @@ segments:
   - type: code
     start: 0x316440
     vram: 0x800F65E0
-    dir: ovl_82
-    name: name_82
+    dir: ovl_82_MiniGameStadiumStartCopy
+    name: MiniGameStadiumStartCopy
     overlay: True
     subsegments:
       - [0x316440, c]
@@ -1426,8 +1426,8 @@ segments:
   - type: code
     start: 0x317980
     vram: 0x800F65E0
-    dir: ovl_83
-    name: name_83
+    dir: ovl_83_DebugMinigameMenu
+    name: DebugMinigameMenu
     overlay: True
     subsegments:
       - [0x317980, c]
