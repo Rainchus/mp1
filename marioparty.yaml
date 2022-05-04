@@ -114,7 +114,7 @@ segments:
   - type: code
     start: 0xCDA50
     vram: 0x800F65E0
-    dir: ovl_0_MemoryMatch
+    dir: ovl_00_MemoryMatch
     name: MemoryMatch
     overlay: True
     subsegments:
