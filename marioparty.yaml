@@ -124,6 +124,16 @@ segments:
     subsegments:
       - [0xD4C50, bin]
   - type: code
+    start: 0xD51E0
+    vram: 0x800F65E0
+    dir: ovl_01_name
+    name: name_01
+    overlay: True
+    subsegments:
+      - [0xD51E0, c]
+  - type: bin
+    start: 0xDFDF0
+  - type: code
     start: 0x14E940
     vram: 0x800F65E0
     dir: ovl_14_CoinBlockBlitz

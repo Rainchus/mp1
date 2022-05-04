@@ -61,6 +61,15 @@ u16 func_800F901C_D048C(void);
 s32 func_800F9BC8_D1038(unk_801DEC9C*);
 void func_800F830C_CF77C(void);
 void func_800F94E0_D0950(void);
+void func_800F89A8_CFE18(void);
+
+typedef struct test {
+    char unk_00[0x4C];
+    s32 unk_4C;
+    char unk_50[0x70];
+} test;
+
+extern test *D_800F2B7C;
 
 extern unk_Struct00* D_800C3110;
 extern u32 D_800FD7E0;
@@ -93,6 +102,12 @@ typedef struct tikiThing {
 } tikiThing;
 
 extern tikiThing D_800FDE50[8]; //related hitbox of tikis
+
+extern Vec3f D_800FD7E4;
+extern Object* D_800FE2E8;
+extern Object* D_800FE2EC;
+extern Object* D_800FE2F0;
+extern Object* D_800FE2F4;
 
 //likely rodata
 extern f64 D_800FD900;

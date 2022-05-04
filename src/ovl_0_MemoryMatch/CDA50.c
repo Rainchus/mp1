@@ -287,7 +287,58 @@ INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F84A8_CF918);
 
 INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F8654_CFAC4);
 
+#ifdef NON_MATCHING
+void func_800F87DC_CFC4C(Object* arg0) { //matches but needs rodata support
+    u16 temp_s1 = arg0->unk_4C;
+    
+    arg0->func_ptr = func_800F89A8_CFE18;
+    arg0->unk_38 = 1.0f;
+    arg0->unk_34 = 1.0f;
+    arg0->unk_30 = 1.0f;
+    switch (temp_s1) {
+    case 0:
+        *arg0->unk_40 = LoadFormFile(0x120001, 0xB9);
+        break;
+    case 1:
+        *arg0->unk_40 = LoadFormFile(0x120002, 0xB9);
+        break;
+    case 2:
+        *arg0->unk_40 = LoadFormFile(0x120003, 0xB9);
+        break;
+    case 3:
+        *arg0->unk_40 = LoadFormFile(0x120004, 0xB9);
+        break;
+    case 4:
+        *arg0->unk_40 = LoadFormFile(0x120005, 0xB9);
+        break;
+    }
+
+    switch(temp_s1) {
+        case 5:
+            *arg0->unk_40 = func_80023FC8(*D_800FE2E8->unk_40);
+            break;
+        case 6:
+            *arg0->unk_40 = func_80023FC8(*D_800FE2EC->unk_40);
+            break;
+        case 7:
+            *arg0->unk_40 = func_80023FC8(*D_800FE2F0->unk_40);
+            break;
+        case 8:
+            *arg0->unk_40 = func_80023FC8(*D_800FE2F4->unk_40);
+            break;
+    }
+
+    arg0->unk_18 = (D_800FD7F0[temp_s1].x * D_800FD7E4.x);
+    arg0->unk_1C = (D_800FD7F0[temp_s1].y * D_800FD7E4.y);
+    arg0->unk_20 = (D_800FD7F0[temp_s1].z * D_800FD7E4.z);
+    D_800F2B7C[*arg0->unk_40].unk_4C = 0;
+    arg0->unk_4E = 0;
+    arg0->unk_4F = 0;
+}
+
+#else
 INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F87DC_CFC4C);
+#endif
 
 INCLUDE_ASM(s32, "ovl_0_MemoryMatch/CDA50", func_800F89A8_CFE18);
 

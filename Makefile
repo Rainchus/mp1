@@ -5,7 +5,7 @@ TARGET       := marioparty
 COMPARE      ?= 1
 NON_MATCHING ?= 0
 CHECK        ?= 1
-VERBOSE      ?= 0
+VERBOSE      ?= 1
 
 # Patches
 # PATCHES_ASFLAGS := --defsym MP_SAVETYPE_PATCH=1
