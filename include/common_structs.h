@@ -47,8 +47,8 @@ typedef struct Object {
 /* 0x34 */ f32 unk_34;
 /* 0x38 */ f32 unk_38;
 /* 0x3C */ char unk_3C[4];
-/* 0x40 */ void* unk_40; //unk pointer
-/* 0x42 */ char unk_44[0x8];
+/* 0x40 */ s16 *unk_40;
+/* 0x44 */ char unk_44[0x8];
 /* 0x4C */ u8  unk_4C;
 /* 0x4C */ u8  unk_4D;
 /* 0x4C */ u8  unk_4E;
