@@ -1,6 +1,7 @@
 #include "types.h"
 
 extern playerMain D_800F32B0[4];
+extern u8 D_800ED5C3;
 extern s16 D_800FE150;
 extern u8 D_800FD86E;
 extern s16 D_800FE30E;
@@ -13,12 +14,6 @@ extern s8 D_800ED147;
 extern f32 D_800EE98C;
 extern viewAngle D_800F33EC;
 extern cameraPosition D_800F6524;
-void func_80066DC4(s16, s16, s16, s16);
-void func_800671DC(s16, s16, s16);
-void func_800672B0(s16, s16, s16);
-void func_80067354(s16, s32, f32, f32);
-
-void func_80060128(s32);
 
 typedef struct unk_800ECDE0 {
 /* 0x00 */ s16 unk_00;

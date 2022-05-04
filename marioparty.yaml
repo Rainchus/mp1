@@ -746,8 +746,8 @@ segments:
   - type: code
     start: 0x2592A0
     vram: 0x800F65E0
-    dir: ovl_3F
-    name: name_3F
+    dir: ovl_3F_Last5Turns
+    name: Last5Turns
     overlay: True
     subsegments:
       - [0x2592A0, c]

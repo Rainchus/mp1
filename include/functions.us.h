@@ -46,5 +46,27 @@ void* ReadMainFS(s32);
 void FreeMainFS(void*);
 s32 func_800678A4(void*);
 s16 func_80023FC8(s16);
+void func_80049F0C(void);
+void func_8004A140(void);
+s32 func_80054654(void);
+void func_80070ED4(void);
+void func_8004F1D0(void);
+void func_80049E70(s32*);
+void func_80049F4C(s32);
+void func_8003DAA8(void);
+void func_8004F140(s16);
+void func_80049F0C(void);
+void func_8004A140(void);
+void func_800544E4(void);
+void func_80054834(s32, s32);
+void func_8005DC28(void*, s32, s32, s32);
+void func_80060128(s32);
+void func_8006CEA0(void);
+void func_80072644(s32, s32);
+void func_80066DC4(s16, s16, s16, s16);
+void func_800671DC(s16, s16, s16);
+void func_800672B0(s16, s16, s16);
+void func_80067354(s16, s32, f32, f32);
+void func_80060128(s32);
 
 #endif
