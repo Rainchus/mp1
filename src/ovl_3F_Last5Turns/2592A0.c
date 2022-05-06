@@ -19,6 +19,7 @@ void func_800F65E0_2592A0(void) {
 }
 
 INCLUDE_ASM(s32, "ovl_3F_Last5Turns/2592A0", func_800F66AC_25936C);
+//https://decomp.me/scratch/HSDhd (added jump tables so it can be decomped)
 
 void func_800F6F10_259BD0(void) {
     if (func_80072718() == 0) {

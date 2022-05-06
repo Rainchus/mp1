@@ -17,7 +17,7 @@ extern s32 D_800FD9A0;
 extern s16 D_800FDC1C;
 
 extern s16 D_800FDD10;
-extern s16 D_800F2BC0;
+extern u16 D_800F2BC0;
 extern u32 D_800FD5C0;
 extern f64 D_800FD630;
 extern f64 D_800FD638;
