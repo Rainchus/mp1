@@ -59,13 +59,21 @@ INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F8384_1934A4);
 
 INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F84AC_1935CC);
 
-INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F8538_193658);
+void func_800F8538_193658(s32 arg0) {
+    func_800F85A8_1936C8(arg0, 0);
+}
 
-INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F8554_193674);
+void func_800F8554_193674(s32 arg0) {
+    func_800F85A8_1936C8(arg0, 1);
+}
 
-INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F8570_193690);
+void func_800F8570_193690(s32 arg0) {
+    func_800F85A8_1936C8(arg0, 2);
+}
 
-INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F858C_1936AC);
+void func_800F858C_1936AC(s32 arg0) {
+    func_800F85A8_1936C8(arg0, 3);
+}
 
 INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F85A8_1936C8);
 
