@@ -16,5 +16,6 @@ extern viewAngle D_800F33EC;
 extern cameraPosition D_800F6524;
 extern u32 D_800FB4D0;
 extern u16 D_800F2BC0;
+extern unk_Struct00* D_800C3110;
 
 extern unk_800ECDE0* D_800ECDE0;

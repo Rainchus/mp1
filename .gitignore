@@ -5,3 +5,4 @@ asm/
 build/
 assets/
 marioparty.ld
+ctx.c

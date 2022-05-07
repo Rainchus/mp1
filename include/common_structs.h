@@ -9,7 +9,8 @@ typedef struct playerMain {
 /* 0x02 */ u8 cpuDifficultyCopy;
 /* 0x03 */ u8 flags; //including CPU flag
 /* 0x04 */ u8 characterID;
-/* 0x05 */ char unk_05[3];
+/* 0x05 */ char unk_05;
+/* 0x06 */ u16 unk_06;
 /* 0x08 */ u16 coinAmount;
 /* 0x0A */ s16 miniGameCoins; //coins to give to player after minigame
 /* 0x0C */ u16 starAmount;
@@ -36,22 +37,25 @@ typedef struct playerMain {
 } playerMain; //sizeof 0x30
 //P1 800F32B0, P2 800F32E0, P3 800F3310, P4 800F3340
 
+typedef struct unk_Struct00 {
+/* 0x00 */ char unk_00[0x40];
+/* 0x40 */ f32 unk_40;
+/* 0x44 */ char unk_44[0xF4];
+} unk_Struct00; //sizeof 0x138
+
 typedef struct unkGlobalStruct_00 {
-/* 0x00 */ char unk_00[2];
+/* 0x00 */ u16 unk_00;
 /* 0x02 */ u16 unk_02;
-/* 0x03 */ char unk_04[0x38];
+/* 0x04 */ u16 unk_04;
+/* 0x06 */ char unk_06[0x36];
 /* 0x3C */ f32 unk_3C;
-/* 0x40 */ char unk_40[0x70];
+/* 0x40 */ char unk_40[2];
+/* 0x42 */ u16 unk_42;
+/* 0x44 */ char unk_44[0x6C];
 /* 0xB0 */ u16 unk_B0;
 /* 0xB2 */ char unk_B2[1];
 /* 0xB3 */ s8 unk_B3;
 } unkGlobalStruct_00;
-
-typedef struct unkGlobalStruct_01 {
-/* 0x00 */ s16 unk_00;
-/* 0x02 */ s16 unk_02;
-/* 0x04 */ s16 unk_04;
-} unkGlobalStruct_01;
 
 typedef struct Object {
 /* 0x00 */ char unk_00[0x14];
@@ -66,7 +70,7 @@ typedef struct Object {
 /* 0x34 */ f32 unk_34;
 /* 0x38 */ f32 unk_38;
 /* 0x3C */ char unk_3C[4];
-/* 0x40 */ unkGlobalStruct_01* unk_40;
+/* 0x40 */ unkGlobalStruct_00* unk_40;
 /* 0x44 */ char unk_44[0x8];
 /* 0x4C */ u8  unk_4C;
 /* 0x4C */ u8  unk_4D;

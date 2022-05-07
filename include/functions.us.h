@@ -77,4 +77,13 @@ void func_80017DB0(Object*);
 void func_800184BC(Object*, s32);
 void func_8006071C(s8, f32*);
 
+void FreePerm(void*);
+s16 InitSprite(s32);
+void func_8002578C(s32);
+void func_8002890C(s32, s32, s32);
+void func_8002ADF0(s32*, s32);
+s16 func_80039084(void*);
+void func_8005D98C(s32, s32);
+Object** func_8005DB44(s32);
+
 #endif

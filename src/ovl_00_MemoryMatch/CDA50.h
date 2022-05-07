@@ -3,12 +3,6 @@
 #define NUM_OF_TILES 9
 extern Vec3f D_800FD7F0[NUM_OF_TILES];
 
-typedef struct unk_Struct00 {
-/* 0x00 */ char unk_00[0x40];
-/* 0x40 */ f32 unk_40;
-/* 0x44 */ char unk_44[0xF4];
-} unk_Struct00; //sizeof 0x138
-
 typedef struct unk_801DEC9C {
 /* 0x00 */ u16 unk_00;
 /* 0x02 */ u16 unk_02;
@@ -63,15 +57,6 @@ void func_800F830C_CF77C(void);
 void func_800F94E0_D0950(void);
 void func_800F89A8_CFE18(void);
 
-typedef struct test {
-    char unk_00[0x4C];
-    s32 unk_4C;
-    char unk_50[0x70];
-} test;
-
-extern test *D_800F2B7C;
-
-extern unk_Struct00* D_800C3110;
 extern u32 D_800FD7E0;
 extern u16 D_800FD7E2;
 extern s32 D_800FD8D0;

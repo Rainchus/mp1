@@ -28,6 +28,7 @@ INCLUDE_ASM(s32, "ovl_0B_MusicalMushroom/11C810", func_800F7508_11D738);
 
 #ifdef NON_MATCHING
 void func_800F75D8_11D808(Object* arg0) { //matches but needs rodata support
+    //line 1 was: unkGlobalStruct_00* temp_s1 = arg0->unk_50; but i think global struct 00 and 01 are the same struct
     unkGlobalStruct_00* temp_s1 = arg0->unk_50;
     f32* temp_a1 = &D_800FB778_D2BE8[arg0->unk_4C];
 

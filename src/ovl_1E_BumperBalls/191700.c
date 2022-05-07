@@ -1,7 +1,66 @@
 #include "common.h"
 #include "191700.h"
 
-INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F65E0_191700);
+void func_800F65E0_191700(void) {
+    void* temp_s0;
+    void* temp_s0_2;
+    s32 i;
+
+    func_8005CF30(0x20, 0);
+    func_80060088();
+    D_800FCD1E = 4;
+    
+    for (i = 0; i < 4; i++) {
+        if (D_800F32B0[i].unk_06 & 1) {
+            D_800FCD1E--;
+        }
+    }
+    
+    func_80029090(2);
+    func_8001DE70(24);
+    func_8002ADF0(&D_800EDEC0, 64);
+    func_8002890C(0, 32, 128);
+    func_8002578C(1);
+    func_800FB1E0_196300(20.0f, 3000.0f, 328.0f, 0, 0, 0, 0, -140.0f);
+    func_80017660(0, 0.0f, 0.0f, 320.0f, 240.0f);
+    func_800176C4(0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
+    func_8005D8B8(func_8005D384(0x7FDA, 0, 0, -1, (*func_8005EB1C)), 160);
+    func_80023448(3);
+    func_800234B8(0U, 0x2CU, 0x2CU, 0x40U);
+    func_800234B8(1U, 0x60U, 0x60U, 0x10U);
+    func_80023504(1, 100.0f, 80.0f, 100.0f);
+    func_800234B8(2U, 0U, 0U, 0U);
+    func_80023504(2, 100.0f, 80.0f, 100.0f);
+    func_800234B8(3U, 0U, 0U, 0U);
+    func_80023504(3, 100.0f, 80.0f, 100.0f);
+    func_8005D98C(0, 4);
+    D_800FCD2C = func_8005DB44(0);
+    func_8005D98C(1, 4);
+    D_800FCD30 = func_8005DB44(1);
+    func_8005D8B8(func_8005D384(0x64, 0, 0, -1, (*func_800FB298_1963B8)), 160);
+    func_8005D384(20, 9, 7, 0, (*func_800F6E2C_191F4C));
+    func_8005D384(20, 9, 7, 0, (*func_800F6E68_191F88));
+    func_8005D384(20, 9, 7, 0, (*func_800F6E84_191FA4));
+    func_8005D384(20, 9, 7, 0, (*func_800F6EA0_191FC0));
+    func_8005D384(10, 7, 0, 1, (*func_800F8538_193658));
+    func_8005D384(10, 7, 0, 1, (*func_800F8554_193674));
+    func_8005D384(10, 7, 0, 1, (*func_800F8570_193690));
+    func_8005D384(10, 7, 0, 1, (*func_800F858C_1936AC));
+    func_8005D384(0, 0, 0, -1, (*func_800F6A60_191B80));
+    D_800FCD20 = func_8005D384(6, 3, 0, -1, (*func_800F6D98_191EB8));
+    func_8005D384(0x2710, 0, 0, -1, (*func_800F9588_1946A8));
+    D_800FCD18 = InitSprite(0x75);
+    temp_s0 = ReadMainFS(0x25);
+    D_800FCD1A = func_80039084(temp_s0);
+    FreePerm(temp_s0);
+    temp_s0_2 = ReadMainFS(0x24);
+    D_800FCD1C = func_80039084(temp_s0_2);
+    FreePerm(temp_s0_2);
+    func_8007B168(&D_800FCC28, 1);
+    D_800FCD12 = IsBoardFeatureFlagSet(MINIGAME_ISLAND_ENDING);
+    D_800FCFF0 = 0;
+    func_80072644(0, 16);
+}
 
 void func_800F6A60_191B80(Object* arg0) {
     D_800FCFF4 = 0;
@@ -93,19 +152,61 @@ INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F9A7C_194B9C);
 
 INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F9B70_194C90);
 
-INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F9CA8_194DC8);
+void func_800F9CA8_194DC8(s32 arg0, s32 arg1, s32 arg2, s32 arg3) {
+    func_800F9CC8_194DE8(arg3, (arg1 - 2));
+}
 
 INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F9CC8_194DE8);
 
-INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F9EE0_195000);
+s32 func_800F9EE0_195000(void) {
+    u16 phi_a0_2 = 0;
+    s32 i;
+
+    for (i = 0; i < 4; i++) {
+        if (D_800FCD2C[i]->unk_50->unk_00 != 3) {
+            phi_a0_2++;
+        }
+    }
+
+    return (phi_a0_2 < 4) ^ 1;
+}
 
 INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F9F30_195050);
 
-INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800FA36C_19548C);
+s32 func_800FA36C_19548C(Object* arg0) { //slightly jank match
+    unkGlobalStruct_00* temp_v1 = arg0->unk_50;
+    s32 tempVar;
+    
+    if ((u32)(temp_v1->unk_00 - 3) <= 1U) {
+        return 1;
+    } else {
+        if (temp_v1->unk_00 != 5) {
+            tempVar = 0;
+            return tempVar;
+        } else {
+            return 1;
+        }
+    }
+}
 
 INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800FA3A0_1954C0);
 
-INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800FA510_195630);
+void func_800FA510_195630(Object* arg0) {
+    switch (arg0->unk_50->unk_42) {
+    case 1:
+        func_800FA5A4_1956C4();
+        return;
+    case 2:
+        func_800FA950_195A70();
+        return;
+    case 3:
+        func_800FAB54_195C74();
+        return;
+    case 4:
+        func_800FAE60_195F80();
+        return;
+    }
+}
 
 INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800FA5A4_1956C4);
 
@@ -115,7 +216,18 @@ INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800FAB54_195C74);
 
 INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800FAE60_195F80);
 
-INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800FB1E0_196300);
+void func_800FB1E0_196300(f32 arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, f32 arg7) {
+    func_800178A0(1);
+    func_800178E8();
+    D_800EE98C = arg1;
+    D_800F33EC.y = arg2;
+    D_800F33EC.x = arg3;
+    D_800F33EC.z = arg4;
+    D_800F6524.x = arg5;
+    D_800F6524.y = arg6;
+    D_800F6524.z = arg7;
+    D_800C3110->unk_40 = arg0;
+}
 
 INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800FB298_1963B8);
 
