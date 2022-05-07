@@ -6,7 +6,7 @@ void func_800F65E0_191700(void) {
     void* temp_s0_2;
     s32 i;
 
-    func_8005CF30(0x20, 0);
+    func_8005CF30(32, 0);
     func_80060088();
     D_800FCD1E = 4;
     
@@ -26,18 +26,18 @@ void func_800F65E0_191700(void) {
     func_800176C4(0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
     func_8005D8B8(func_8005D384(0x7FDA, 0, 0, -1, (*func_8005EB1C)), 160);
     func_80023448(3);
-    func_800234B8(0U, 0x2CU, 0x2CU, 0x40U);
-    func_800234B8(1U, 0x60U, 0x60U, 0x10U);
+    func_800234B8(0, 44, 44, 64);
+    func_800234B8(1, 96, 96, 16);
     func_80023504(1, 100.0f, 80.0f, 100.0f);
-    func_800234B8(2U, 0U, 0U, 0U);
+    func_800234B8(2, 0, 0, 0);
     func_80023504(2, 100.0f, 80.0f, 100.0f);
-    func_800234B8(3U, 0U, 0U, 0U);
+    func_800234B8(3, 0, 0, 0);
     func_80023504(3, 100.0f, 80.0f, 100.0f);
     func_8005D98C(0, 4);
     D_800FCD2C = func_8005DB44(0);
     func_8005D98C(1, 4);
     D_800FCD30 = func_8005DB44(1);
-    func_8005D8B8(func_8005D384(0x64, 0, 0, -1, (*func_800FB298_1963B8)), 160);
+    func_8005D8B8(func_8005D384(100, 0, 0, -1, (*func_800FB298_1963B8)), 160);
     func_8005D384(20, 9, 7, 0, (*func_800F6E2C_191F4C));
     func_8005D384(20, 9, 7, 0, (*func_800F6E68_191F88));
     func_8005D384(20, 9, 7, 0, (*func_800F6E84_191FA4));
@@ -49,11 +49,11 @@ void func_800F65E0_191700(void) {
     func_8005D384(0, 0, 0, -1, (*func_800F6A60_191B80));
     D_800FCD20 = func_8005D384(6, 3, 0, -1, (*func_800F6D98_191EB8));
     func_8005D384(0x2710, 0, 0, -1, (*func_800F9588_1946A8));
-    D_800FCD18 = InitSprite(0x75);
-    temp_s0 = ReadMainFS(0x25);
+    D_800FCD18 = InitSprite(117);
+    temp_s0 = ReadMainFS(37);
     D_800FCD1A = func_80039084(temp_s0);
     FreePerm(temp_s0);
-    temp_s0_2 = ReadMainFS(0x24);
+    temp_s0_2 = ReadMainFS(36);
     D_800FCD1C = func_80039084(temp_s0_2);
     FreePerm(temp_s0_2);
     func_8007B168(&D_800FCC28, 1);
@@ -231,7 +231,9 @@ void func_800FB1E0_196300(f32 arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 
 
 INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800FB298_1963B8);
 
-INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800FB2D0_1963F0);
+void func_800FB2D0_1963F0(void) {
+    func_8005DFB8(1);
+}
 
 INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800FB2EC_19640C);
 
