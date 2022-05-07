@@ -53,11 +53,14 @@ void func_800F700C_259CCC(void) {
     func_8004F1D0();
 }
 
+// TODO: needs correct type
+extern u8 FE2310_ROM_START[];
+
 void func_800F7034_259CF4(void) {
     func_800178A0(1);
     func_80017660(0, 0.0f, 0.0f, 320.0f, 240.0f);
     func_800176C4(0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
-    func_80049E70(&D_FE2310); //TODO is ROM addr, should use linker symbol
+    func_80049E70(&FE2310_ROM_START);
     func_80049F4C(D_800F7110_111AC0[D_800F71F0_222F30]);
 }
 
