@@ -14,11 +14,7 @@ extern s8 D_800ED147;
 extern f32 D_800EE98C;
 extern viewAngle D_800F33EC;
 extern cameraPosition D_800F6524;
-
-typedef struct unk_800ECDE0 {
-/* 0x00 */ s16 unk_00;
-/* 0x02 */ s16 unk_02;
-/* 0x04 */ char unk_04[0x20];
-} unk_800ECDE0;
+extern u32 D_800FB4D0;
+extern u16 D_800F2BC0;
 
 extern unk_800ECDE0* D_800ECDE0;

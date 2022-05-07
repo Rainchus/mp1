@@ -4,6 +4,7 @@
 #include "types.h"
 #include "common_structs.h"
 
+f64 fabs(f64 f);
 u8 GetRandomByte(void);
 void func_80017660(s32, f32, f32, f32, f32);
 void func_800176C4(s32, f32, f32, f32, f32, f32, f32);
@@ -44,6 +45,7 @@ s32 func_80076174(void);
 f32 func_800B0CD8(void);
 void* ReadMainFS(s32);
 void FreeMainFS(void*);
+s16 LoadFormFile(s32, s32);
 s32 func_800678A4(void*);
 s16 func_80023FC8(s16);
 void func_80049F0C(void);
@@ -51,7 +53,7 @@ void func_8004A140(void);
 s32 func_80054654(void);
 void func_80070ED4(void);
 void func_8004F1D0(void);
-void func_80049E70(s32*);
+void func_80049E70(Addr*);
 void func_80049F4C(s32);
 void func_8003DAA8(void);
 void func_8004F140(s16);
@@ -68,5 +70,11 @@ void func_800671DC(s16, s16, s16);
 void func_800672B0(s16, s16, s16);
 void func_80067354(s16, s32, f32, f32);
 void func_80060128(s32);
+
+void func_80009458(void);
+void func_80009624(unkGlobalStruct_00*, s32);
+void func_80017DB0(Object*);
+void func_800184BC(Object*, s32);
+void func_8006071C(s8, f32*);
 
 #endif

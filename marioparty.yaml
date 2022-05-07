@@ -1433,4 +1433,8 @@ segments:
       - [0x317980, c]
   - type: bin
     start: 0x31AC50
+  - type: bin
+    start: 0xFE2310
+  - type: bin
+    start: 0xFE24BC
   - [0x2000000]

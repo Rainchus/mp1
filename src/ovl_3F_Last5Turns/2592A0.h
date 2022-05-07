@@ -41,4 +41,4 @@ void func_800F70E8_259DA8(void);
 void func_800F6F10_259BD0(void);
 extern s32 D_800F7110_111AC0[];
 extern u8 D_800F71F0_222F30;
-extern s32 D_FE2310;
+extern Addr D_FE2310;

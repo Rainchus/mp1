@@ -1,22 +1,49 @@
 #include "common.h"
+#include "191700.h"
 
 INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F65E0_191700);
 
-INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F6A60_191B80);
+void func_800F6A60_191B80(Object* arg0) {
+    D_800FCFF4 = 0;
+    D_800FCD28 = 0;
+    D_800FCD24 = 0;
+    D_800FCD16 = 60;
+    D_800FCD14_13D784 = 30;
+    D_800FCD0E = 0;
+    D_800FCD10 = 4;
+    arg0->func_ptr = (*func_800F6AB4_191BD4);
+}
 
 INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F6AB4_191BD4);
 
-INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F6D98_191EB8);
+void func_800F6D98_191EB8(Object* arg0) {
+    arg0->unk_40->unk_00 = LoadFormFile(0x310000, 0x20289);
+    arg0->unk_40->unk_02 = LoadFormFile(0x380002, 0x48D);
+    arg0->unk_40->unk_04 = LoadFormFile(0x380003, 0x48D);
+    func_800FB2EC_19640C();
+    arg0->func_ptr = (*func_800F6E10_191F30);
+}
 
-INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F6E10_191F30);
+void func_800F6E10_191F30(Object* arg0) { //unused arg?
+    func_800FC618_197738();
+}
 
-INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F6E2C_191F4C);
+void func_800F6E2C_191F4C(s32 arg0) {
+    LoadFormFile(0x310002, 0x69D);
+    func_800F6EBC_191FDC(arg0, 0);
+}
 
-INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F6E68_191F88);
+void func_800F6E68_191F88 (s32 arg0) {
+    func_800F6EBC_191FDC(arg0, 1);
+}
 
-INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F6E84_191FA4);
+void func_800F6E84_191FA4 (s32 arg0) {
+    func_800F6EBC_191FDC(arg0, 2);
+}
 
-INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F6EA0_191FC0);
+void func_800F6EA0_191FC0 (s32 arg0) {
+    func_800F6EBC_191FDC(arg0, 3);
+}
 
 INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F6EBC_191FDC);
 

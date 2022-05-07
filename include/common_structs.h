@@ -36,24 +36,50 @@ typedef struct playerMain {
 } playerMain; //sizeof 0x30
 //P1 800F32B0, P2 800F32E0, P3 800F3310, P4 800F3340
 
+typedef struct unkGlobalStruct_00 {
+/* 0x00 */ char unk_00[2];
+/* 0x02 */ u16 unk_02;
+/* 0x03 */ char unk_04[0x38];
+/* 0x3C */ f32 unk_3C;
+/* 0x40 */ char unk_40[0x70];
+/* 0xB0 */ u16 unk_B0;
+/* 0xB2 */ char unk_B2[1];
+/* 0xB3 */ s8 unk_B3;
+} unkGlobalStruct_00;
+
+typedef struct unkGlobalStruct_01 {
+/* 0x00 */ s16 unk_00;
+/* 0x02 */ s16 unk_02;
+/* 0x04 */ s16 unk_04;
+} unkGlobalStruct_01;
+
 typedef struct Object {
 /* 0x00 */ char unk_00[0x14];
 /* 0x14 */ void* func_ptr;
 /* 0x18 */ f32 unk_18;
 /* 0x1C */ f32 unk_1C;
 /* 0x20 */ f32 unk_20;
-/* 0x24 */ char unk_24[0xC];
+/* 0x24 */ f32 unk_24;
+/* 0x28 */ f32 unk_28;
+/* 0x2C */ f32 unk_2C;
 /* 0x30 */ f32 unk_30;
 /* 0x34 */ f32 unk_34;
 /* 0x38 */ f32 unk_38;
 /* 0x3C */ char unk_3C[4];
-/* 0x40 */ s16 *unk_40;
+/* 0x40 */ unkGlobalStruct_01* unk_40;
 /* 0x44 */ char unk_44[0x8];
 /* 0x4C */ u8  unk_4C;
 /* 0x4C */ u8  unk_4D;
 /* 0x4C */ u8  unk_4E;
 /* 0x4C */ u8  unk_4F;
-} Object; //sizeof 0x50
+/* 0x50 */ unkGlobalStruct_00* unk_50;
+} Object; //sizeof 0x54
+
+typedef struct unk_800ECDE0 {
+/* 0x00 */ s16 unk_00;
+/* 0x02 */ s16 unk_02;
+/* 0x04 */ char unk_04[0x20];
+} unk_800ECDE0;
 
 typedef struct Vec2f {
                f32 x;
