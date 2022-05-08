@@ -234,11 +234,88 @@ void func_800F7C70_CF0E0(f32 arg0) { //uses rodata
 
 INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800F7D74_CF1E4);
 
-INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800F7DC0_CF230);
+void func_800F7DC0_CF230(s16 arg0, s16 arg1) {
+    s16 i;
+    for (i = 0; i < 0x0A; i++) {
+        if (D_800FE158[i].unk0 == -1) {
+            D_800FE158[i].unk0 = arg0;
+            D_800FE158[i].unk2 = arg1;
+            return;
+        }
+    }
+}
 
 INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800F7E20_CF290);
 
+typedef struct unkStruct_01 {
+/* 0x00 */ s8 unk_00;
+/* 0x01 */ s8 unk_01;
+} unkStruct_01;
+
+typedef struct unkStruct_02 {
+/* 0x00 */ u16 unk_00;
+} unkStruct_02;
+
+// void func_800090B8(u16, Vec3f*);
+// void func_800F8D84_D01F4(Vec3f*, Vec2f*);
+// extern s32 D_800F2AF8[];
+// extern unkStruct_02 D_800FD85C[];
+// extern Vec3f D_800FDA78;
+// extern Object* D_800FDDE0;
+// extern s16 D_800FDE40;
+// extern unkStruct D_800FDE42;
+// extern unkStruct D_800FDE46;
+// void func_800F8130_CF5A0(void);
+// void func_800F87DC_CFC4C(void);
+// void func_800FB0A8_D2518(void);
+
 INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800F7EDC_CF34C);
+// void func_800F7EDC_CF34C(void) {
+//     Object* temp;
+//     Vec3f sp18;
+//     Vec2f sp24;
+//     Object* temp_v0_3;
+//     s32 temp_a0;
+//     u16 temp_v1;
+//     u8 temp_s0_2;
+//     u8 phi_s0;
+//     u16 i;
+
+//     sp18 = D_800FDA78;
+//     sp24.x = 0;
+//     sp24.y = 0;
+//     func_800090B8(D_800ED440, &D_800FDA78);
+//     temp = func_8005D384(0, 1, 0, -1, (*func_800FB0A8_D2518));
+//     D_800ED440++;
+//     D_800F2AF8[D_800ED440] = D_800ED440;
+//     temp = func_8005D384(1, 3, 0, -1, (*func_800F8130_CF5A0));
+//     D_800FDDE0 = temp;
+//     temp->unk_40->unk_00 = LoadFormFile(0x120000, 0x99);
+//     temp->unk_40->unk_02 = LoadFormFile(0x12000A, 0xB9);
+//     temp->unk_40->unk_04 = LoadFormFile(0x12000B, 0xB9);
+//     sp18.x = -540.0f;
+//     sp18.y = 0.0f;
+//     sp18.z = -280.0f;
+//     sp24.x = 160.0f;
+//     sp24.y = 200.0f;
+//     func_800F8D84_D01F4(&sp18, &sp24);
+//     for (i = 0; i < 9; i++) {
+//         temp_v0_3 = func_8005D384(0, 1, 0, -1, (*func_800F87DC_CFC4C));
+//         temp_v0_3->unk_4C = i;
+//         temp_v0_3->unk_4D = D_800FD85C[temp_a0].unk_00; //temp_a0 is uninitialized
+//         temp_v0_3->unk_38 = 1.0f;
+//         temp_v0_3->unk_34 = 1.0f;
+//         temp_v0_3->unk_30 = 1.0f;
+//         D_800FE30E++;
+//     }
+//     D_800FDE40 = 0;
+//     D_800FDE46.unk0 = -1;
+//     D_800FDE46.unk2 = -1;
+//     D_800FDE42.unk0 = 0;
+//     D_800FDE42.unk2 = 0;
+//     func_800F8314_CF784();
+//     func_80072644(0, 0x10);
+// }
 
 INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800F8130_CF5A0);
 

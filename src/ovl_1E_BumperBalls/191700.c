@@ -110,7 +110,27 @@ INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F74E8_192608);
 
 INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F7EC4_192FE4);
 
-INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F821C_19333C);
+void func_800F821C_19333C(Object* arg0) {
+    unkGlobalStruct_00* temp_s1 = arg0->unk_50;
+    s32 temp_v1 = arg0->unk_10;
+
+    if (temp_v1 != 0) {
+        arg0->unk_10 = 0;
+        if (temp_v1 == 1) {
+            temp_s1->unk_00 = 5;
+            func_80025C20(arg0->unk_40->unk_00, func_80025E48(arg0->unk_48->unk_0A), 0, 0xF, 0);
+        }
+    }
+    if (temp_s1->unk_00 != 5) {
+        func_8005D95C(arg0, arg0->unk_18, (2.0f * func_800AEAC0(temp_s1->unk_50)) + arg0->unk_1C, arg0->unk_20);
+        temp_s1->unk_50 = temp_s1->unk_50 + 8.0f;
+        temp_s1->unk_50 = temp_s1->unk_50;
+        
+        if (temp_s1->unk_50 >= 360.0f) {
+            temp_s1->unk_50 = temp_s1->unk_50 - 360.0f;
+        }
+    }
+}
 
 INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F8304_193424);
 
@@ -229,7 +249,10 @@ void func_800FB1E0_196300(f32 arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 
     D_800C3110->unk_40 = arg0;
 }
 
-INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800FB298_1963B8);
+void func_800FB298_1963B8(void) {
+    s32 i;
+    for (i = 0; i < D_800F3778; i++) {}
+}
 
 void func_800FB2D0_1963F0(void) {
     func_8005DFB8(1);

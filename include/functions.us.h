@@ -70,7 +70,9 @@ void func_800671DC(s16, s16, s16);
 void func_800672B0(s16, s16, s16);
 void func_80067354(s16, s32, f32, f32);
 void func_80060128(s32);
-
+void func_80025C20(s16, s16, s32, s32, s32);
+s16 func_80025E48(s16);
+void func_8005D95C(Object*, f32, f32, f32);
 void func_80009458(void);
 void func_80009624(unkGlobalStruct_00*, s32);
 void func_80017DB0(Object*);

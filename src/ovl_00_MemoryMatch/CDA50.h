@@ -31,6 +31,13 @@ typedef struct unk_801DEC9C {
 /* 0x50 */ void* unk_50;
 } unk_801DEC9C; //sizeof 0x54
 
+typedef struct unkStruct {
+    s16 unk0;
+    s16 unk2;
+} unkStruct;
+
+extern unkStruct D_800FE158[];
+
 void func_800F6858_CDCC8(unk_801DEC9C*);
 void func_800F796C_CEDDC(unk_801DEC9C*);
 void func_800F71C4_CE634(unk_801DEC9C*);
