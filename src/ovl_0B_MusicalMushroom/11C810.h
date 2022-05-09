@@ -9,3 +9,6 @@ void func_800F7484_11D6B4(Object*, f32, s32, s32);
 void func_800F7508_11D738(Object*, f32*);
 extern u32 D_800FB4D0;
 extern f32 D_800FB778_D2BE8[4];
+extern f64 D_800FB580;
+extern f32 D_800FB678;
+void func_800F9660_11F890(void);

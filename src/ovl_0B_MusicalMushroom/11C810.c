@@ -94,7 +94,56 @@ INCLUDE_ASM(s32, "ovl_0B_MusicalMushroom/11C810", func_800F9338_11F568);
 
 INCLUDE_ASM(s32, "ovl_0B_MusicalMushroom/11C810", func_800F9660_11F890);
 
-INCLUDE_ASM(s32, "ovl_0B_MusicalMushroom/11C810", func_800F9D70_11FFA0);
+//INCLUDE_ASM(s32, "ovl_0B_MusicalMushroom/11C810", func_800F9D70_11FFA0);
+
+void func_800F9D70_11FFA0(Object* arg0) {
+    s32 temp_v1_2;
+    u32 temp_v1;
+    u8 temp_s0;
+    unkGlobalStruct_00* temp_v0;
+    u32 phi_s2;
+    u32 phi_s1;
+    f64 phi_f2;
+    s32 zero = 0;
+
+    arg0->unk_40->unk_00 = func_800174C0(0x1D0000, 0x299);
+    arg0->unk_20 = zero;
+    arg0->unk_1C = zero;
+    arg0->unk_18 = zero;
+    arg0->unk_50 = func_80023684(44, 31000);
+    temp_v0 = arg0->unk_50;
+    func_8009B770(temp_v0, 0, 44);
+    arg0->func_ptr = (*func_800F9660_11F890);
+    temp_v1 = GetRandomByte() % 100;
+    phi_s2 = 140;
+    
+    if (temp_v1 < 20) {
+        phi_s1 = 200;
+    } else {
+        phi_s2 = 200;
+        if (temp_v1 < 80) {
+            phi_s1 = 270;
+        } else {
+            phi_s2 = 270;
+            phi_s1 = 360;
+        }
+    }
+    
+    temp_s0 = GetRandomByte();
+    temp_v1_2 = (temp_s0 << 8) | GetRandomByte();
+    temp_v1_2 = phi_s2 + (temp_v1_2 % (phi_s1 - phi_s2)); //phi_s1 - phi_s2 will always be 60, 70, or 90
+    phi_f2 = temp_v1_2;
+    
+    if (temp_v1_2 < 0) {
+        phi_f2 += D_800FB580;
+    }
+    
+    D_800FB678 = phi_f2;
+    temp_v0->unk_04.b[0] = 1;
+    func_80008FB8(arg0, 0.5f);
+    func_80008FC4(arg0, 20.0f);
+    temp_v0->unk_04.b[1] = 0;
+}
 
 INCLUDE_ASM(s32, "ovl_0B_MusicalMushroom/11C810", func_800F9EFC_12012C);
 

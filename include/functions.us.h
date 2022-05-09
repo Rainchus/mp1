@@ -78,6 +78,11 @@ void func_80009624(unkGlobalStruct_00*, s32);
 void func_80017DB0(Object*);
 void func_800184BC(Object*, s32);
 void func_8006071C(s8, f32*);
+void func_80008FB8(Object*, f32);
+void func_80008FC4(Object*, f32);
+u16 func_800174C0(s32, s32);
+unkGlobalStruct_00* func_80023684(s32, s32);
+void func_8009B770(unkGlobalStruct_00*, s32, s32);
 
 void FreePerm(void*);
 s16 InitSprite(s32);

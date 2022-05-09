@@ -78,7 +78,7 @@ INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F6AB4_191BD4);
 void func_800F6D98_191EB8(Object* arg0) {
     arg0->unk_40->unk_00 = LoadFormFile(0x310000, 0x20289);
     arg0->unk_40->unk_02 = LoadFormFile(0x380002, 0x48D);
-    arg0->unk_40->unk_04 = LoadFormFile(0x380003, 0x48D);
+    arg0->unk_40->unk_04.unsigned16 = LoadFormFile(0x380003, 0x48D);
     func_800FB2EC_19640C();
     arg0->func_ptr = (*func_800F6E10_191F30);
 }
