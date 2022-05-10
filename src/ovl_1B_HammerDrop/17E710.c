@@ -151,7 +151,6 @@ void func_800F7BB4_17FCE4(Object* arg0) {
     D_800EDEB4[temp_a0->unk_56] |= 0x2000;
 }
 
-//INCLUDE_ASM(s32, "ovl_1B_HammerDrop/17E710", func_800F7BFC_17FD2C);
 s32 func_800F7BFC_17FD2C(Object* arg0, f32 arg1) {
     Object* temp_v0;
     f32 temp_f0, temp_f12, temp_f4, phi_f20;

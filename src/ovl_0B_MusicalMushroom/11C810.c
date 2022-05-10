@@ -94,8 +94,6 @@ INCLUDE_ASM(s32, "ovl_0B_MusicalMushroom/11C810", func_800F9338_11F568);
 
 INCLUDE_ASM(s32, "ovl_0B_MusicalMushroom/11C810", func_800F9660_11F890);
 
-//INCLUDE_ASM(s32, "ovl_0B_MusicalMushroom/11C810", func_800F9D70_11FFA0);
-
 void func_800F9D70_11FFA0(Object* arg0) {
     s32 temp_v1_2;
     u32 temp_v1;
