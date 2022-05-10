@@ -84,6 +84,8 @@ u16 func_800174C0(s32, s32);
 unkGlobalStruct_00* func_80023684(s32, s32);
 void func_8009B770(unkGlobalStruct_00*, s32, s32);
 void func_80009500(void);
+void func_800090B8(u16);
+f32 sqrtf(f32);
 
 void FreePerm(void*);
 s16 InitSprite(s32);

@@ -139,7 +139,40 @@ void func_800F9908_149528(Object* arg0) {
 
 INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F9950_149570);
 
+#ifdef NON_MATCHING
+s32 func_800F9A24_149644(Object* arg0, f32 arg1) { //matches, needs rodata support
+    unkStructGroundPound_00* phi_s0;
+    f32 temp_f12, temp_f14;
+    s32 phi_s3;
+    s32 i;
+    f32 temp;
+    f64 temp2 = D_800FA250;
+
+    phi_s0 = D_800FA380;
+    phi_s3 = -1;
+    
+   
+    for (i = 0; i < 9; i++, phi_s0++) {
+        if (phi_s0->unk_08 == 0) {
+            break;
+        }
+        temp_f14 = phi_s0->unk_00 - arg0->unk_18;
+        temp_f12 = phi_s0->unk_04 - arg0->unk_20;
+        if ((SQ(temp_f14) + SQ(temp_f12) < D_800FA2E8)) {
+            temp = arg1 - func_800B0CD8(temp_f12, temp_f14);
+            // replace with correct constant later
+            if ((fabs((temp)) < 1.5)) {
+                phi_s3 = i;
+                break;
+            }
+        }
+    }
+
+    return phi_s3;
+}
+#else
 INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F9A24_149644);
+#endif
 
 INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F9B18_149738);
 

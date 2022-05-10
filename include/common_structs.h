@@ -40,8 +40,15 @@ typedef struct playerMain {
 typedef struct unk_Struct00 {
 /* 0x00 */ char unk_00[0x40];
 /* 0x40 */ f32 unk_40;
-/* 0x44 */ char unk_44[0xF4];
+/* 0x44 */ f32 unk_44;
+/* 0x48 */ f32 unk_48;
+/* 0x4C */ char unk_4C[0xEC];
 } unk_Struct00; //sizeof 0x138
+
+typedef struct unk_Struct01 {
+/* 0x00 */ char unk_00[0x24];
+/* 0x24 */ s32 unk_24;
+} unk_Struct01;
 
 typedef struct unkGlobalStruct_00 {
 /* 0x00 */ u16 unk_00;
@@ -58,12 +65,16 @@ typedef struct unkGlobalStruct_00 {
 /* 0x42 */ u16 unk_42;
 /* 0x44 */ char unk_44[0xC];
 /* 0x50 */ f32 unk_50;
-/* 0x54 */ char unk_54[4];
+/* 0x54 */ char unk_54[2];
+/* 0x56 */ s8 unk_56;
+/* 0x57 */ s8 unk_57;
 /* 0x58 */ s8 unk_58;
 /* 0x59 */ char unk_59[0x57];
 /* 0xB0 */ u16 unk_B0;
 /* 0xB2 */ char unk_B2[1];
 /* 0xB3 */ s8 unk_B3;
+/* 0xB4 */ char unk_B4[0x30];
+/* 0xE4 */ unk_Struct01* unk_E4;
 } unkGlobalStruct_00;
 
 typedef struct Object {

@@ -51,3 +51,4 @@ MakeHeap = 0x80059880;
 Malloc = 0x800598A0;
 Free = 0x8005992C;
 Align16 = 0x80059B00;
+sqrtf = 0x800855B0;

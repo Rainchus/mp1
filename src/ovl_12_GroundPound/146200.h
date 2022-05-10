@@ -1,5 +1,12 @@
 #include "common.h"
 
+typedef struct unkStructGroundPound_00 {
+/* 0x00 */ f32 unk_00;
+/* 0x04 */ f32 unk_04;
+/* 0x06 */ u16 unk_08;
+/* 0x08 */ u16 unk_0A;
+} unkStructGroundPound_00;
+
 void func_800F7FEC_147C0C(void);
 void func_800F9E80_149AA0(f32, f32, f32, f32, f32, f32, f32);
 void func_800F67E0_146400(Object* arg0);
@@ -11,6 +18,9 @@ void func_800F6924_146544(void);
 void func_800F6B0C_14672C(void);
 s32 func_80093780(void);
 
+extern f64 D_800FA250;
+extern f32 D_800FA2E8;
+extern unkStructGroundPound_00 D_800FA380[];
 extern s32 D_800FA2F0;
 extern s32 D_800FA2F8;
 extern s32 D_800FA2FC;
