@@ -4,3 +4,9 @@
 [submodule "splat"]
 	path = tools/splat
 	url = https://github.com/ethteck/splat
+[submodule "tools/asm-differ"]
+	path = tools/asm-differ
+	url = https://github.com/simonlindholm/asm-differ.git
+[submodule "asm-differ"]
+	path = asm-differ
+	url = https://github.com/simonlindholm/asm-differ.git
