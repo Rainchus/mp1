@@ -1,4 +1,5 @@
 #include "common.h"
+#include "54120.h"
 
 INCLUDE_ASM(s32, "54120", func_80053520);
 
@@ -83,20 +84,22 @@ INCLUDE_ASM(s32, "54120", func_80055B80);
 INCLUDE_ASM(s32, "54120", func_80055B9C);
 
 void func_80055D28(void) {
-    s32 temp_s1_2;
+    s32 lives;
 
     while (1) {
-        temp_s1_2 = D_800F37BB;
-        temp_s1_2 = (~temp_s1_2 >> 0x1F) & D_800F37BB;
+        lives = D_800F37BB;
+        if (lives < 0) {
+            lives = 0;
+        }
         
-        if (temp_s1_2 >= 0x64) {
-            temp_s1_2 = 0x63;
+        if (lives >= 100) {
+            lives = 99;
         }
         
         func_800672B0(D_800D84E4, 0, 1);
-        func_800672DC(D_800D84E4, 0, (temp_s1_2 / 10), 0);
+        func_800672DC(D_800D84E4, 0, (lives / 10), 0);
         func_800672B0(D_800D84E4, 1, 1);
-        func_800672DC(D_800D84E4, 1, (temp_s1_2 % 10), 0);
+        func_800672DC(D_800D84E4, 1, (lives % 10), 0);
         func_800635B4();      
     }
 }
