@@ -1,5 +1,18 @@
 #include "common.h"
 
+typedef struct box {
+    u16 activeBool;
+    s16 unk_02;
+    s32 xPosStart;
+    s32 yPosStart;
+    s32 width;
+    s32 height;
+    u32 rgba;
+} box;
+
+extern box D_800ED448[];
+extern u16 D_800F64E4;
+
 INCLUDE_ASM(s32, "62140", func_80061540);
 
 INCLUDE_ASM(s32, "62140", func_80061638);
@@ -60,7 +73,30 @@ INCLUDE_ASM(s32, "62140", func_8006223C);
 
 INCLUDE_ASM(s32, "62140", func_800622BC);
 
-INCLUDE_ASM(s32, "62140", func_80062364);
+s16 func_80062364(s32 xPosStart, s32 yPosStart, s32 width, s32 height, s32 rgba) {
+    box* boxPtr;
+    s32 i;
+
+    if (D_800F64E4 >= 4) {
+        return -1;
+    }
+
+    for (i = 0; i < 4; i++) {
+       if (D_800ED448[i].activeBool == 0) {
+            break;
+        }
+    }
+
+    boxPtr = &D_800ED448[i];
+    boxPtr->activeBool = 1;
+    boxPtr->xPosStart = xPosStart;
+    boxPtr->yPosStart = yPosStart;
+    boxPtr->width = width;
+    boxPtr->height = height;
+    boxPtr->rgba = rgba;
+    D_800F64E4++;
+    return i;
+}
 
 INCLUDE_ASM(s32, "62140", func_80062408);
 

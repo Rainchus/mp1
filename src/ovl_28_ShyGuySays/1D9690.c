@@ -97,7 +97,15 @@ void func_800F702C_1DA0DC(Object* arg0, f32 arg1) {
     func_80066DC4(temp_s0, 0, (D_800FDC64->z * 320.0f), (D_800FD650 - (arg1 * D_800FD648) + 2.0 * func_800AEAC0(arg1 * D_800FD640)));
 }
 
-INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F71F4_1DA2A4);
+void func_800F71F4_1DA2A4(void) {
+    s16 i = 0;
+    temp2* anotherTemp = D_800FDCE8;
+
+    for (i = 0; i < 10; i++) {
+        anotherTemp[i].unk2 = -1;
+        D_800FDCE8[i].unk0 = -1;
+    }
+}
 
 INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F7244_1DA2F4);
 
@@ -158,6 +166,96 @@ INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F82B0_1DB360);
 INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F8818_1DB8C8);
 
 INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F8D58_1DBE08);
+// void func_800F8D58_1DBE08(Object* arg0) { //matches but needs rodata support
+//     unkStruct_ShyGuySays_01* temp_s1;
+//     s32 phi_a0;
+//     s16 phi_s0;
+
+//     temp_s1 = &D_800FD9C0[arg0->unk_4C];
+//     if (temp_s1->unk_8C == 0) {
+//         temp_s1->unk_8C = 1;
+//         temp_s1->unk_8A = 0;
+//         phi_a0 = MIN(20, D_800FDC54);
+//         temp_s1->unk_18 = temp_s1->unk_0A + func_800F740C_1DA4BC(phi_a0 + 5);
+//     }
+    
+//     switch ( func_800FD200_1E02B0() ) {
+//     case 0:
+//         break;
+//     case 1:
+//         if (D_800FDC4C < 3) {
+//             return;
+//         }
+//         if (D_800FDC4C == 3 && func_800FD1D0_1E0280() < D_800FD710) {
+//             return;
+//         }
+//         temp_s1->unk_8A++;
+//         if (temp_s1->unk_8A < temp_s1->unk_18) {
+//             return;
+//         }
+//         phi_s0 = 100 - (temp_s1->unk_0C * (D_800FD9A8 - 4));
+//         phi_s0 &= (~phi_s0 >> 0x1F);
+//         if (D_800FD9A8 < 5) {
+//             phi_s0 = 100;
+//         }
+//         if (func_800F740C_1DA4BC(100) >= phi_s0) {
+//             func_800F9118_1DC1C8(arg0, 1);
+//             temp_s1->unk_04 = 1;
+//             temp_s1->unk_8C = 0;
+//         } else {                
+//             func_800F9118_1DC1C8(arg0, 2);
+//             temp_s1->unk_04 = 2;
+//             temp_s1->unk_8C = 0;
+//         }
+//         break;
+//     case 2:
+//         if (D_800FDC4C < 3) {
+//             return;
+//         }
+//         if (D_800FDC4C == 3 && func_800FD1D0_1E0280() < D_800FD718) {
+//             return;
+//         }
+//         temp_s1->unk_8A++;
+//         if (temp_s1->unk_8A < temp_s1->unk_18) {
+//             return;
+//         }
+//         phi_s0 = 100 - (temp_s1->unk_0C * (D_800FD9A8 - 4));
+//         phi_s0 &= (~phi_s0 >> 0x1F);
+//         if ((s32) D_800FD9A8 < 5) {
+//             phi_s0 = 100;
+//         }
+//         if (func_800F740C_1DA4BC(100) < phi_s0) {
+//             func_800F9118_1DC1C8(arg0, 1);
+//             temp_s1->unk_04 = 1;
+//             temp_s1->unk_8C = 0;
+//         } else {                
+//             func_800F9118_1DC1C8(arg0, 2);
+//             temp_s1->unk_04 = 2;
+//             temp_s1->unk_8C = 0;
+//         }
+//         break;
+//     case 3:
+//         if (D_800FDC4C <= 0 || D_800FD99C < 0xA) {
+//             return;
+//         }
+//         if ((temp_s1->unk_0A >= 4) && (func_800F740C_1DA4BC(0) & 3)) {
+//             if ((func_800F740C_1DA4BC(0) & 1) != 0) {
+//                 func_800F9118_1DC1C8(arg0, 1);
+//                 temp_s1->unk_04 = 1;
+//                 temp_s1->unk_8C = 0;
+//             } else {
+//                 func_800F9118_1DC1C8(arg0, 2);
+//                 temp_s1->unk_04 = 2;
+//                 temp_s1->unk_8C = 0;
+//             }
+//         }
+//         break;
+//     }
+
+//     if (temp_s1->unk_18 >= D_800FDC54 + 4.0f) {
+//         temp_s1->unk_18 = D_800FDC54 + 4.0f;
+//     }
+// }
 
 INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F9118_1DC1C8);
 
@@ -258,9 +356,9 @@ void func_800FB840_1DE8F0(Object* arg0) {
 
 INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800FBAE4_1DEB94);
 
-INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800FBE60_1DEF10);
+INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800FBE60_1DEF10); //main step function?
 
-INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800FCA8C_1DFB3C);
+INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800FCA8C_1DFB3C); //a1 is flag chosen (1 is B, 2 is A, 3 is fake out)
 
 INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800FD124_1E01D4);
 
