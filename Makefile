@@ -112,7 +112,8 @@ split:
 
 test: $(ROM)
 	$(V)$(EMULATOR) $<
-
+	
+export VR4300MUL := OFF
 # Compile .c files with kmc gcc (use strip to fix objects so that they can be linked with modern gnu ld) 
 $(BUILD_DIR)/src/%.c.o: src/%.c
 	@$(PRINT)$(GREEN)Compiling C file: $(ENDGREEN)$(BLUE)$<$(ENDBLUE)$(ENDLINE)

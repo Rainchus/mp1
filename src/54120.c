@@ -82,7 +82,24 @@ INCLUDE_ASM(s32, "54120", func_80055B80);
 
 INCLUDE_ASM(s32, "54120", func_80055B9C);
 
-INCLUDE_ASM(s32, "54120", func_80055D28);
+void func_80055D28(void) {
+    s32 temp_s1_2;
+
+    while (1) {
+        temp_s1_2 = D_800F37BB;
+        temp_s1_2 = (~temp_s1_2 >> 0x1F) & D_800F37BB;
+        
+        if (temp_s1_2 >= 0x64) {
+            temp_s1_2 = 0x63;
+        }
+        
+        func_800672B0(D_800D84E4, 0, 1);
+        func_800672DC(D_800D84E4, 0, (temp_s1_2 / 10), 0);
+        func_800672B0(D_800D84E4, 1, 1);
+        func_800672DC(D_800D84E4, 1, (temp_s1_2 % 10), 0);
+        func_800635B4();      
+    }
+}
 
 INCLUDE_ASM(s32, "54120", func_80055E08);
 
