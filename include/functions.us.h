@@ -4,13 +4,15 @@
 #include "types.h"
 #include "common_structs.h"
 
+void func_8006B870(void);
+s32 func_8006B8A4(s32, s32, s32, s32, s32);
 f64 fabs(f64 f);
 u8 GetRandomByte(void);
-void func_80017660(s32, f32, f32, f32, f32);
-void func_800176C4(s32, f32, f32, f32, f32, f32, f32);
+void func_80017660(u8, f32, f32, f32, f32);
+void func_800176C4(u8, f32, f32, f32, f32, f32, f32);
 void func_800178A0(s32);
-u8 func_800178E8(void);
-void func_8001D494(s32, f32, f32, f32);
+s16 func_800178E8(void);
+void func_8001D494(s16, f32, f32, f32);
 void func_8001DE70(s32);
 void func_80023448(s32);
 void func_800234B8(u8, u8, u8, u8);
@@ -86,6 +88,8 @@ void func_8009B770(unkGlobalStruct_00*, s32, s32);
 void func_80009500(void);
 void func_800090B8(u16);
 f32 sqrtf(f32);
+void* MallocPerm(s32 size);
+s16 func_80060288(void);
 
 void FreePerm(void*);
 s16 InitSprite(s32);

@@ -3,13 +3,13 @@
 //800FD9C4 game state?
 //800FD9A8 turns
 
-typedef struct temp2 {
-    s16 unk0;
-    s16 unk2;
-} temp2;
+typedef struct anotherStruct {
+/* 0x00 */ f32 unk_00[64];
+} anotherStruct;
 
 typedef struct unkStruct_ShyGuySays_01 {
-/* 0x00 */ char unk_00[4];
+/* 0x00 */ s16 unk_00;
+/* 0x02 */ s16 unk_02;
 /* 0x04 */ s32 unk_04;
 /* 0x08 */ char unk_08[2];
 /* 0x0A */ s16 unk_0A;
@@ -23,7 +23,39 @@ typedef struct unkStruct_ShyGuySays_01 {
 /* 0x8E */ char unk_8E[6];
 } unkStruct_ShyGuySays_01; //0x94 in size
 
-extern temp2 D_800FDCE8[];
+typedef struct unkStructShyGuySays_02 {
+/* 0x00 */ char unk_00[0x08];
+/* 0x08 */ u16 unk_08;
+/* 0x0A */ u16 unk_0A;
+/* 0x0C */ char unk_0C[0x3C];
+/* 0x48 */ f32 unk_48;
+/* 0x4C */ f32 unk_4C;
+/* 0x50 */ f32 unk_50;
+/* 0x54 */ char unk_54[0x6C];
+} unkStructShyGuySays_02; //sizeof 0xC0
+
+typedef struct unkStructShyGuySays_03 {
+/* 0x00 */ s16 unk_00;
+/* 0x02 */ s16 unk_02;
+} unkStructShyGuySays_03;
+
+typedef struct unkStruct_ShyGuySays_05 {
+/* 0x00 */ f32 unk_00[64];
+} unkStruct_ShyGuySays_05;
+
+typedef struct unkStruct_ShyGuySays_04 {
+/* 0x00 */ unkStruct_ShyGuySays_05* unk_00;
+/* 0x04 */ f32 unk_04;
+/* 0x08 */ f32 unk_08;
+/* 0x0C */ char unk_0C[0x184];
+} unkStruct_ShyGuySays_04;
+
+extern unkStruct_ShyGuySays_05* D_800FDC64;
+extern unkStructShyGuySays_02* D_800F2B7C;
+extern unkStruct_ShyGuySays_01 D_800FD9CE[];
+extern u16 D_800F5144;
+extern s16 D_800FD5CE;
+extern unkStructShyGuySays_03 D_800FDCE8[];
 extern f64 D_800FD710;
 extern f64 D_800FD718;
 extern f64 D_800FD720;
@@ -54,17 +86,28 @@ extern f64 D_800FD648;
 extern f64 D_800FD650;
 extern Vec3f D_800FD980;
 extern Vec3f D_800FD98C;
-extern Vec3f* D_800FDC64;
 extern Object* D_800FDC20;
 extern u16 D_800FD5DC[2];
 extern f64 D_800FD818; //BSS
 extern f64 D_800FD820; //BSS
+extern f64 func_800FD658_1C8F28; //BSS
 
+
+void func_800FB424_1DE4D4(void);
+extern u16 D_800FD5C4;
+
+void func_800F69F8_1D9AA8(void);
+void func_800F6F98_1DA048(Object*);
+void func_800F72A4_1DA354(void);
+void func_800F69F8_1D9AA8(void);
+void func_80060268(s16);
+void func_800F73EC_1DA49C(void);
+void func_800FA8D4_1DD984(void);
 void func_800F9118_1DC1C8(Object*, s32);
 f32 func_800FD1D0_1E0280(void);
 s16 func_800FD200_1E02B0(void);
 u16 func_800F740C_1DA4BC(u16 arg0);
-void func_800F6930_1D99E0(void);
+void func_800F6930_1D99E0(Object*);
 void func_800FA77C_1DD82C(void);
 void func_800FB6E0_1DE790(void);
 void func_800FBAE4_1DEB94(void);

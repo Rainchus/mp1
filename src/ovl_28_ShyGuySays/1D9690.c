@@ -57,15 +57,83 @@ void func_800F67F8_1D98A8(Object* arg0) {
     }
 }
 
-INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F6930_1D99E0);
+void func_800F6930_1D99E0(Object* arg0) {
+    func_800F6F98_1DA048(arg0);
+    func_800F72A4_1DA354();
+    switch (D_800FD5C4) {
+    case 0:
+        if (func_80072718() == 0) {
+            D_800FDD10 = func_80060288();
+            func_80075CCC(0);
+            D_800FD5C4 = 1;
+            return;
+        }
+        return;
+    case 1:
+        if (func_80075FE0() == 0) {
+            D_800FD9A0 = 2;
+            D_800FD5C4 = 2;
+            return;
+        }
+        break;
+    case 2:
+        func_800FB424_1DE4D4();
+        break;
+    }
+}
 
-INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F69F8_1D9AA8);
+void func_800F69F8_1D9AA8(void) {
+    func_800F73EC_1DA49C();
+    func_800FA8D4_1DD984();
+    func_80060198();
+    func_80060268(D_800FDD10);
+    func_8005DFB8(1);
+}
 
 INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F6A38_1D9AE8);
+//https://decomp.me/scratch/iuV5i
 
-INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F6E50_1D9F00);
+void func_800F6E50_1D9F00(Object* arg0) {
+    unkStruct_ShyGuySays_01* temp_v1_2;
 
-INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F6F98_1DA048);
+    func_800F6F98_1DA048(arg0);
+    func_800F72A4_1DA354();
+    switch (D_800FD5CE) {
+    case 0:
+        func_80075CCC(2);
+        temp_v1_2 = &D_800FD9C0[D_800FDC1E];
+        if ((temp_v1_2->unk_00 != 0) && (temp_v1_2->unk_04 != 0x200)) {
+            D_800F32B0[D_800FDC1E].miniGameCoins += 10;
+        }
+        D_800FD5CE++;
+        return;
+    case 1:
+        if (func_80075FE0() != 2) {
+            return;
+        }
+        D_800FD5CE++;
+        return;
+    case 2:
+        if (func_80076174() == 0) {
+            func_800726AC(0, 20);
+            func_80060398(40);
+            D_800FD5CE++;
+            return;
+        }
+        return;
+    default:
+        if (func_80072718() == 0) {
+            arg0->func_ptr = (*func_800F69F8_1D9AA8);
+        }
+        break;
+    }
+}
+
+void func_800F6F98_1DA048(Object* arg0) {
+    if (D_800F5144 == 1) {
+        arg0->func_ptr = (*func_800F69F8_1D9AA8);
+    }
+}
 
 void func_800F6FC0_1DA070(void) {
     D_800F33EC.y = -14.5f;
@@ -94,26 +162,57 @@ void func_800F702C_1DA0DC(Object* arg0, f32 arg1) {
     D_800F6524.y = D_800FD98C.y + (arg1 * (D_800FD980.y - D_800FD98C.y));
     D_800F6524.z = D_800FD98C.z + (arg1 * (D_800FD980.z - D_800FD98C.z));
     D_800EE98C = (D_800FD638 - (arg1 * D_800FD630));
-    func_80066DC4(temp_s0, 0, (D_800FDC64->z * 320.0f), (D_800FD650 - (arg1 * D_800FD648) + 2.0 * func_800AEAC0(arg1 * D_800FD640)));
+    func_80066DC4(temp_s0, 0, (D_800FDC64->unk_00[2] * 320.0f), (D_800FD650 - (arg1 * D_800FD648) + 2.0 * func_800AEAC0(arg1 * D_800FD640)));
 }
 
 void func_800F71F4_1DA2A4(void) {
-    s16 i = 0;
-    temp2* anotherTemp = D_800FDCE8;
+    s16 i;
 
     for (i = 0; i < 10; i++) {
-        anotherTemp[i].unk2 = -1;
-        D_800FDCE8[i].unk0 = -1;
+        D_800FDCE8[i].unk_00 = D_800FDCE8[i].unk_02 = -1;
     }
 }
 
-INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F7244_1DA2F4);
+void func_800F7244_1DA2F4(s16 arg0, s16 arg1) {
+    s16 i;
 
-INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F72A4_1DA354);
+    for (i = 0; i < 10; i++) {
+        if (D_800FDCE8[i].unk_00 == -1) {
+            D_800FDCE8[i].unk_00 = arg0;  
+            D_800FDCE8[i].unk_02 = arg1;
+            return;
+        }
+    }
+}
 
-INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F736C_1DA41C);
+void func_800F72A4_1DA354(void) {
+    s16 i;
 
-INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F73EC_1DA49C);
+    for (i = 0; i < 10; i++) {
+        if (D_800FDCE8[i].unk_00 != -1) {
+            D_800FDCE8[i].unk_02 = D_800FDCE8[i].unk_02 - 1;
+            if (D_800FDCE8[i].unk_02 <= 0) {         
+                func_800602AC(D_800FDCE8[i].unk_00);
+                D_800FDCE8[i].unk_00 = D_800FDCE8[i].unk_02 = -1;
+            }
+        }
+    }
+}
+
+void func_800F736C_1DA41C(void) {
+    u16 i;
+
+    D_800FDC64 = MallocPerm(sizeof(unkStruct_ShyGuySays_04));
+    D_800FDC64->unk_00[0] = 1.0f;
+    
+    for (i = 1; i < 100; i++) {
+        D_800FDC64->unk_00[i] = func_800FD658_1C8F28 / (f32) i;
+    }
+}
+
+void func_800F73EC_1DA49C(void) {
+    FreePerm(D_800FDC64);
+}
 
 u16 func_800F740C_1DA4BC(u16 arg0) { //shared overlay function
     D_800FD5C0 = D_800FD5C0 * 0x19971204;
@@ -143,7 +242,20 @@ INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F781C_1DA8CC);
 
 INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F7874_1DA924);
 
-INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F79E4_1DAA94);
+void func_800F79E4_1DAA94(s16 arg0, unkStructShyGuySays_03* arg1, s16 arg2) {
+    D_800F2B7C[arg0].unk_08 = arg1->unk_00;
+    D_800F2B7C[arg0].unk_4C = 1.0f;
+
+    if (arg2 >= 0) {
+        D_800F2B7C[arg0].unk_0A = 0;
+        D_800F2B7C[arg0].unk_48 = 0;
+        D_800F2B7C[arg0].unk_50 = arg1->unk_02;
+    } else {
+        D_800F2B7C[arg0].unk_0A = 4;
+        D_800F2B7C[arg0].unk_48 = arg1->unk_02;
+        D_800F2B7C[arg0].unk_50 = 0;        
+    }
+}
 
 INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F7A8C_1DAB3C);
 
@@ -277,9 +389,31 @@ INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F9A7C_1DCB2C);
 
 INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F9AFC_1DCBAC);
 
-INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F9C50_1DCD00);
+void func_800F9C50_1DCD00(u16 arg0[]) {
+    u16 i;
+    D_800FD9A6--;
+    
+    if (D_800FD9A6 > 0) {
+        for (i = 0; i < 4; i++) {
+            D_800FD9CE[i].unk_00 -= D_800FD9A6;
+        }
+    }
 
-INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F9D14_1DCDC4);
+    for (i = 0; i < 4; i++) {
+        arg0[i] = D_800FD9CE[i].unk_00;
+    }
+
+}
+
+void func_800F9D14_1DCDC4(s16 arg0) {   
+    u16 i;
+
+    for (i = 0; i < 4; i++) {
+        if ((D_800FD9C0[i].unk_00 != 0) && (D_800FD9C0[i].unk_04 != 0x200)) {
+            D_800FD9CE[i].unk_00 = arg0;
+        }
+    }
+}
 
 INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F9D80_1DCE30);
 
