@@ -93,6 +93,36 @@ typedef struct tikiThing {
 /* 0x14 */ f32 unk_14;
 } tikiThing;
 
+typedef struct unk_MemoryMatch_00 {
+/* 0x00 */ s16 unk_00;
+/* 0x02 */ s16 unk_02;
+/* 0x04 */ s16 unk_04;
+/* 0x06 */ s16 unk_06;
+/* 0x08 */ s32 unk_08;
+/* 0x0C */ s32 unk_0C;
+/* 0x10 */ s16 unk_10;
+/* 0x12 */ s16 unk_12;
+/* 0x14 */ s16 unk_14;
+/* 0x16 */ s16 unk_16;
+/* 0x18 */ s16 unk_18;
+/* 0x1A */ s16 unk_1A;
+/* 0x1C */ s16 unk_1C;
+/* 0x1E */ s16 unk_1E;
+} unk_MemoryMatch_00;
+
+typedef struct unk_MemoryMatch_01 {
+/* 0x00 */ u16 unk_00;
+/* 0x02 */ u16 unk_02;
+/* 0x04 */ u16 unk_04;
+/* 0x06 */ u16 unk_06;
+/* 0x08 */ u16 unk_08;
+/* 0x0A */ u16 unk_0A;
+} unk_MemoryMatch_01;
+
+u16 func_800F8DF4_D0264(u32);
+extern unk_MemoryMatch_01 D_800FDE30;
+extern unk_MemoryMatch_00 D_800FE318[0x10];
+
 extern tikiThing D_800FDE50[8]; //related hitbox of tikis
 
 extern Vec3f D_800FD7E4;

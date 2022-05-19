@@ -1,12 +1,47 @@
 #include "common.h"
+#include "117210.h"
 
 INCLUDE_ASM(s32, "ovl_0A_GhostGuess/117210", func_800F65E0_117210);
 
-INCLUDE_ASM(s32, "ovl_0A_GhostGuess/117210", func_800F69DC_11760C);
+void func_800F69DC_11760C(Object* arg0) {
+    s32 temp_s1;
+    void* temp_s0;
 
-INCLUDE_ASM(s32, "ovl_0A_GhostGuess/117210", func_800F6AAC_1176DC);
+    arg0->func_ptr = (*func_800F79D4_118604);
+    temp_s0 = ReadMainFS(0x1C000A);
+    temp_s1 = func_800678A4(temp_s0);
+    FreeMainFS(temp_s0);
+    D_800FBEC0 = func_80064EF4(1, 0);
+    func_80067208(D_800FBEC2[0], 0, temp_s1, 0);
+    func_800674BC(D_800FBEC2[0], 0, 0x9000);
+    func_80067354(D_800FBEC2[0], 0, 1.0f, 1.0f);
+    func_80066DC4(D_800FBEC2[0], 0, 160, 120);
+    func_800FB3B0_11BFE0();
+}
 
-INCLUDE_ASM(s32, "ovl_0A_GhostGuess/117210", func_800F6AE0_117710);
+void func_800F6AAC_1176DC(void) {
+    if (func_80072718() == 0) {
+        func_800FB21C_11BE4C();
+        func_8005DFB8(1);
+    }
+}
+
+void func_800F6AE0_117710(Object* arg0) {
+    unkGlobalStruct_00* temp_s0;
+
+    arg0->func_ptr = NULL;
+    arg0->unk_18 = arg0->unk_1C = arg0->unk_20 = 0.0f;
+    arg0->unk_30 = arg0->unk_34 = arg0->unk_38 = 5.0f;
+    arg0->unk_40->unk_00 = func_800174C0(0x1C0000, 0x2DD);
+    temp_s0 = func_80023684(44, 31000);
+    arg0->unk_50 = temp_s0;
+    func_8009B770(temp_s0, 0, 44);
+    temp_s0->unk_04.b[0] = 1;
+    temp_s0->unk_04.b[1] = 0;
+    func_80009000(arg0, 4, 1.0f);
+    func_80008FC4(arg0, 20.0f);
+    func_80008FB8(arg0, 1.0f);
+}
 
 INCLUDE_ASM(s32, "ovl_0A_GhostGuess/117210", func_800F6BA4_1177D4);
 
@@ -47,8 +82,28 @@ INCLUDE_ASM(s32, "ovl_0A_GhostGuess/117210", func_800FB2D0_11BF00);
 
 INCLUDE_ASM(s32, "ovl_0A_GhostGuess/117210", func_800FB3B0_11BFE0);
 
-INCLUDE_ASM(s32, "ovl_0A_GhostGuess/117210", func_800FB448_11C078);
+void func_800FB448_11C078(f32 arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, u16 arg7) {
+    D_800FC324 = arg0;
+    D_800FC2FC.x = arg1;
+    D_800FC2FC.y = arg2;
+    D_800FC2FC.z = arg3;
+    D_800FC314.x = arg4;
+    D_800FC314.y = arg5;
+    D_800FC314.z = arg6;
+    if (D_800FC328 == 0) {
+        D_800FC32A = arg7;
+        D_800FC328 = arg7;
+    }
+}
 
-INCLUDE_ASM(s32, "ovl_0A_GhostGuess/117210", func_800FB4B0_11C0E0);
+void func_800FB4B0_11C0E0(void) {
+    D_800FC320 = D_800FC324;
+    D_800FC308.x = D_800FC314.x;
+    D_800FC308.y = D_800FC314.y;
+    D_800FC308.z = D_800FC314.z;
+    D_800FC2F0.x = D_800FC2FC.x;
+    D_800FC2F0.y = D_800FC2FC.y;
+    D_800FC2F0.z = D_800FC2FC.z;
+}
 
 INCLUDE_ASM(s32, "ovl_0A_GhostGuess/117210", func_800FB514_11C144);

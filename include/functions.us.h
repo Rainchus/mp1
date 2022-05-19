@@ -48,7 +48,7 @@ f32 func_800B0CD8(void);
 void* ReadMainFS(s32);
 void FreeMainFS(void*);
 s16 LoadFormFile(s32, s32);
-s32 func_800678A4(void*);
+s16 func_800678A4(void*);
 s16 func_80023FC8(s16);
 void func_80049F0C(void);
 void func_8004A140(void);
@@ -90,6 +90,14 @@ void func_800090B8(u16);
 f32 sqrtf(f32);
 void* MallocPerm(s32 size);
 s16 func_80060288(void);
+void func_80018C90(u16);
+u16 func_80019060(s16, s16, s16);
+void func_80067480(s16, s32, s16); //could also be  void func_80067480(s16, s32, u16); (as required by functions in face lift)
+void func_800672DC(s16, u16, u16, s32);
+void func_800674BC(s16, s16, u16);
+s16 func_80064EF4(s32, s32);
+void func_80067208(s16, s32, s16, s32);
+void func_80009000(Object*, s32, f32);
 
 void FreePerm(void*);
 s16 InitSprite(s32);

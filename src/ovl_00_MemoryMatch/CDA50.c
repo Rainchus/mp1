@@ -442,17 +442,42 @@ INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800F8C80_D00F0);
 
 INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800F8D84_D01F4);
 
-u16 func_800F8DF4_D0264(s32 arg0) {
-    void* temp_s0;
-    s32 temp_s1;
+u16 func_800F8DF4_D0264(u32 arg0) {
+    void* fsData;
+    s16 temp_s1;
 
-    temp_s0 = ReadMainFS(arg0);
-    temp_s1 = func_800678A4(temp_s0);
-    FreeMainFS(temp_s0);
+    fsData = ReadMainFS(arg0);
+    temp_s1 = func_800678A4(fsData);
+    FreeMainFS(fsData);
     return temp_s1;
 }
 
-INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800F8E38_D02A8);
+void func_800F8E38_D02A8(void) {
+    unk_MemoryMatch_00* phi_s0;
+    u16 i;
+
+    D_800FDE30.unk_00 = func_800F8DF4_D0264(0x12000F);
+    D_800FDE30.unk_02 = func_800F8DF4_D0264(0x75);
+    D_800FDE30.unk_04 = func_800F8DF4_D0264(0x120013);
+    D_800FDE30.unk_06 = func_800F8DF4_D0264(0x120014);
+    D_800FDE30.unk_08 = func_800F8DF4_D0264(0x120015);
+    D_800FDE30.unk_0A = func_800F8DF4_D0264(0x120016);
+    phi_s0 = &D_800FE318[0];
+    for (i = 0; i < 0x10; i++) {
+        phi_s0->unk_04 = func_80064EF4(1, 0);
+        func_80067480(phi_s0->unk_04, 0, -1);
+        func_800674BC(phi_s0->unk_04, 0, 0x8000);
+        func_800672B0(phi_s0->unk_04, 0, 0);
+        phi_s0->unk_00 = 0;
+        phi_s0->unk_02 = 0;
+        phi_s0->unk_06 = 0;
+        phi_s0->unk_08 = 0;
+        phi_s0->unk_0C = 0;
+        phi_s0->unk_10 = phi_s0->unk_12 = phi_s0->unk_14 = phi_s0->unk_16 = 0;
+        phi_s0->unk_18 = phi_s0->unk_1A = phi_s0->unk_1C = phi_s0->unk_1E = 0;
+        phi_s0++;
+    }
+}
 
 INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800F8F58_D03C8);
 

@@ -57,7 +57,8 @@ typedef struct unkGlobalStruct_00 {
                 u16 unsigned16;
                 u8 b[2];
             } unk_04;
-/* 0x06 */ char unk_06[0x4];
+/* 0x06 */ s16 unk_06;
+/* 0x08 */ s16 unk_08;
 /* 0x0A */ u16 unk_0A;
 /* 0x0A */ char unk_0C[0x30];
 /* 0x3C */ f32 unk_3C;
