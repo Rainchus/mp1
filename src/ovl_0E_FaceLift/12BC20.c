@@ -154,16 +154,12 @@ INCLUDE_ASM(s32, "ovl_0E_FaceLift/12BC20", func_800FBE78_1314B8);
 
 INCLUDE_ASM(s32, "ovl_0E_FaceLift/12BC20", func_800FC094_1316D4);
 
-#ifdef NON_MATCHING
 void func_800FC0F0_131730(s16 arg0) {
     s16 i;
     for (i = 0; i < 4; i++) {
         func_80067480(arg0, i, 0x8000);
     }
 }
-#else
-INCLUDE_ASM(s32, "ovl_0E_FaceLift/12BC20", func_800FC0F0_131730);
-#endif
 
 #ifdef NON_MATCHING
 void func_800FC14C_13178C(s16 arg0, s16 arg1) {
