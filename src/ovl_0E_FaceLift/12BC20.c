@@ -139,14 +139,14 @@ INCLUDE_ASM(s32, "ovl_0E_FaceLift/12BC20", func_800FB858_130E98);
 INCLUDE_ASM(s32, "ovl_0E_FaceLift/12BC20", func_800FB9E8_131028);
 
 void func_800FBE08_131448(void) {
-    void* temp_s0;
+    void* fsData;
 
-    temp_s0 = ReadMainFS(0x0000007E);
-    D_800FCA1E = func_800678A4(temp_s0);
-    FreeMainFS(temp_s0);
-    temp_s0 = ReadMainFS(0x0020000C);
-    D_800FCA2A = func_800678A4(temp_s0);
-    FreeMainFS(temp_s0);
+    fsData = ReadMainFS(0x0000007E);
+    D_800FCA1E = func_800678A4(fsData);
+    FreeMainFS(fsData);
+    fsData = ReadMainFS(0x0020000C);
+    D_800FCA2A = func_800678A4(fsData);
+    FreeMainFS(fsData);
     D_800FCA28 = 0;
 }
 
