@@ -326,7 +326,7 @@ void func_800F8314_CF784(void) {
     Vec3f temp_f0;
     s16 temp_s0;
     s16 phi_v1;
-    u16 temp_s3 = func_800F7AFC_CEF6C(0x200);
+    u16 temp_s3 = func_800F7AFC_CEF6C(512);
     u16 i;
 
     for (i = 0; i < temp_s3; i++) {
@@ -368,25 +368,25 @@ INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800F8654_CFAC4);
 void func_800F87DC_CFC4C(Object* arg0) { //matches but needs rodata support
     u16 temp_s1 = arg0->unk_4C;
     
-    arg0->func_ptr = func_800F89A8_CFE18;
+    arg0->func_ptr = (*func_800F89A8_CFE18);
     arg0->unk_38 = 1.0f;
     arg0->unk_34 = 1.0f;
     arg0->unk_30 = 1.0f;
     switch (temp_s1) {
     case 0:
-        *arg0->unk_40 = LoadFormFile(0x120001, 0xB9);
+        *(arg0->unk_40) = LoadFormFile(MM_FIRE_FLOWER, 0xB9);
         break;
     case 1:
-        *arg0->unk_40 = LoadFormFile(0x120002, 0xB9);
+        *(arg0->unk_40) = LoadFormFile(MM_SHELL, 0xB9);
         break;
     case 2:
-        *arg0->unk_40 = LoadFormFile(0x120003, 0xB9);
+        *(arg0->unk_40) = LoadFormFile(MM_1UP, 0xB9);
         break;
     case 3:
-        *arg0->unk_40 = LoadFormFile(0x120004, 0xB9);
+        *(arg0->unk_40) = LoadFormFile(MM_MUSHROOM, 0xB9);
         break;
     case 4:
-        *arg0->unk_40 = LoadFormFile(0x120005, 0xB9);
+        *(arg0->unk_40) = LoadFormFile(MM_BOWSER, 0xB9);
         break;
     }
 

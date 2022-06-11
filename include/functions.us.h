@@ -107,5 +107,6 @@ void func_8002ADF0(s32*, s32);
 s16 func_80039084(void*);
 void func_8005D98C(s32, s32);
 Object** func_8005DB44(s32);
+void func_80009468(void);
 
 #endif

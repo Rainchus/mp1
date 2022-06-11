@@ -1,10 +1,22 @@
 #include "common.h"
+#include "16BD20.h"
 
 INCLUDE_ASM(s32, "ovl_18_PlatformPeril/16BD20", func_800F65E0_16BD20);
 
 INCLUDE_ASM(s32, "ovl_18_PlatformPeril/16BD20", func_800F66E8_16BE28);
 
-INCLUDE_ASM(s32, "ovl_18_PlatformPeril/16BD20", func_800F6720_16BE60);
+void func_800F6720_16BE60(Object* arg0) {
+    D_800FE2F8 = 0;
+    D_800FCD90 = 0;
+    func_800FC1DC_17191C();
+    func_80009468();
+    func_800F6F68_16C6A8();
+    func_800F90C0_16E800();
+    func_800F76E4_16CE24();
+    func_800F8B7C_16E2BC();
+    func_800FC8E4_172024();
+    arg0->func_ptr = (*func_800F6790_16BED0);
+}
 
 INCLUDE_ASM(s32, "ovl_18_PlatformPeril/16BD20", func_800F6790_16BED0);
 
