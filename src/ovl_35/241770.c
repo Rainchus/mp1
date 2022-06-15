@@ -1,5 +1,4 @@
 #include "common.h"
-#include "241770.h"
 
 void func_800F66AC_24180C(void);
 
