@@ -70,6 +70,15 @@ void func_800F6DE8_285A38(void) {
     func_8003E694(D_800F6F24);
 }
 
-INCLUDE_ASM(s32, "ovl_47/285230", func_800F6E14_285A64);
+void func_800F6E14_285A64(void) {
+    func_800178A0(1);
+    func_80017660(0, 0.0f, 0.0f, 320.0f, 240.0f);
+    func_800176C4(0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
+    func_80049E70(&D_FE2310);
+    func_80049F4C(2);
+}
 
-INCLUDE_ASM(s32, "ovl_47/285230", func_800F6EB4_285B04);
+void func_800F6EB4_285B04(void) {
+    func_8004A140();
+    func_80049F0C();
+}
