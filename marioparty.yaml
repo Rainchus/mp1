@@ -8,6 +8,7 @@ options:
   find_file_boundaries: True
   header_encoding: ASCII
   # platform: n64
+  symbol_name_format: $VRAM_$ROM
   undefined_funcs_auto_path: undefined_funcs_auto.txt
   undefined_syms_auto_path: undefined_syms_auto.txt
   ld_script_path: marioparty.ld
@@ -29,6 +30,7 @@ segments:
     start: 0x40
   - name: main
     type: code
+    symbol_name_format: $VRAM
     start: 0x1000
     vram: 0x80000400
     subsegments:
@@ -117,6 +119,7 @@ segments:
     dir: ovl_00_MemoryMatch
     name: MemoryMatch
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0xCDA50, c]
   - type: bin
@@ -129,6 +132,7 @@ segments:
     dir: ovl_01_ChanceTime
     name: ChanceTime
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0xD51E0, c]
   - type: bin
@@ -139,6 +143,7 @@ segments:
     dir: ovl_02_SlotMachine
     name: SlotMachine
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x0E02F0, c]
   - type: bin
@@ -149,6 +154,7 @@ segments:
     dir: ovl_03_BuriedTreasure
     name: BuriedTreasure
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x0E8F60, c]
   - type: bin
@@ -159,6 +165,7 @@ segments:
     dir: ovl_04_TreasureDivers
     name: TreasureDivers
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x0EE9A0, c]
   - type: bin
@@ -169,6 +176,7 @@ segments:
     dir: ovl_05_ShellGame
     name: ShellGame
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x0F6AB0, c]
   - type: bin
@@ -179,6 +187,7 @@ segments:
     dir: ovl_06_UnusedMinigame0
     name: UnusedMinigame0
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x0FF570, c]
   - type: bin
@@ -189,6 +198,7 @@ segments:
     dir: ovl_07_HotBobOmb
     name: HotBobOmb
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x10CD10, c]
   - type: bin
@@ -199,6 +209,7 @@ segments:
     dir: ovl_08_UnusedMinigame1
     name: UnusedMinigame1
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x110F90, c]
   - type: bin
@@ -209,6 +220,7 @@ segments:
     dir: ovl_09_PipeMaze
     name: PipeMaze
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x113DC0, c]
   - type: bin
@@ -219,6 +231,7 @@ segments:
     dir: ovl_0A_GhostGuess
     name: GhostGuess
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x117210, c]
   - type: bin
@@ -229,6 +242,7 @@ segments:
     dir: ovl_0B_MusicalMushroom
     name: MusicalMushroom
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x11C810, c]
   - type: bin
@@ -239,6 +253,7 @@ segments:
     dir: ovl_0C_PedalPower
     name: PedalPower
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x1217D0, c]
   - type: bin
@@ -249,6 +264,7 @@ segments:
     dir: ovl_0D_CrazyCutter
     name: CrazyCutter
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x1250D0, c]
   - type: bin
@@ -259,6 +275,7 @@ segments:
     dir: ovl_0E_FaceLift
     name: FaceLift
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x12BC20, c]
   - type: bin
@@ -269,6 +286,7 @@ segments:
     dir: ovl_0F_WhackAPlant
     name: WhackAPlant
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x131FA0, c]
   - type: bin
@@ -279,6 +297,7 @@ segments:
     dir: ovl_10_BashNCash
     name: BashNCash
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x137050, c]
   - type: bin
@@ -289,6 +308,7 @@ segments:
     dir: ovl_11_BowlOver
     name: BowlOver
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x13EFB0, c]
   - type: bin
@@ -299,6 +319,7 @@ segments:
     dir: ovl_12_GroundPound
     name: GroundPound
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x146200, c]
   - type: bin
@@ -309,6 +330,7 @@ segments:
     dir: ovl_13_BalloonBurst
     name: BalloonBurst
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x149E80, c]
   - type: bin
@@ -319,6 +341,7 @@ segments:
     dir: ovl_14_CoinBlockBlitz
     name: CoinBlockBlitz
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x14E940, c]
   - type: bin
@@ -329,6 +352,7 @@ segments:
     dir: ovl_15_CoinBlockBash
     name: CoinBlockBash
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x152BE0, c]
   - type: bin
@@ -339,6 +363,7 @@ segments:
     dir: ovl_16_SkateBoardSkamper
     name: SkateBoardSkamper
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x15EAF0, c]
   - type: bin
@@ -349,6 +374,7 @@ segments:
     dir: ovl_17_BoxMountainMayhem
     name: BoxMountainMayhem
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x166220, c]
   - type: bin
@@ -359,6 +385,7 @@ segments:
     dir: ovl_18_PlatformPeril
     name: PlatformPeril
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x16BD20, c]
   - type: bin
@@ -369,6 +396,7 @@ segments:
     dir: ovl_19_TeeteringTowers
     name: TeeteringTowers
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x1738E0, c]
   - type: bin
@@ -379,6 +407,7 @@ segments:
     dir: ovl_1A_MushroomMixup
     name: MushroomMixup
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x1784E0, c]
   - type: bin
@@ -389,6 +418,7 @@ segments:
     dir: ovl_1B_HammerDrop
     name: HammerDrop
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x17E710, c]
   - type: bin
@@ -399,6 +429,7 @@ segments:
     dir: ovl_1C_GrabBag
     name: GrabBag
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x1837D0, c]
   - type: bin
@@ -409,6 +440,7 @@ segments:
     dir: ovl_1D_BobsledRun
     name: BobsledRun
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x188410, c]
   - type: bin
@@ -419,6 +451,7 @@ segments:
     dir: ovl_1E_BumperBalls
     name: BumperBalls
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x191700, c]
   - type: bin
@@ -429,6 +462,7 @@ segments:
     dir: ovl_1F_TightropeTreachery
     name: TightropeTreachery
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x197E20, c]
   - type: bin
@@ -439,6 +473,7 @@ segments:
     dir: ovl_20_KnockBlockTower
     name: KnockBlockTower
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x19FEE0, c]
   - type: bin
@@ -449,6 +484,7 @@ segments:
     dir: ovl_21_TipsyTourney
     name: TipsyTourney
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x1A4EB0, c]
   - type: bin
@@ -459,6 +495,7 @@ segments:
     dir: ovl_22_BombsAway
     name: BombsAway
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x1AA2A0, c]
   - type: bin
@@ -469,6 +506,7 @@ segments:
     dir: ovl_23_CraneGame
     name: CraneGame
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x1B3E00, c]
   - type: bin
@@ -479,6 +517,7 @@ segments:
     dir: ovl_24_FlowerShower
     name: FlowerShower
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x1BD640, c]
   - type: bin
@@ -489,6 +528,7 @@ segments:
     dir: ovl_25_SlotCarDerby
     name: SlotCarDerby
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x1C1EB0, c]
   - type: bin
@@ -499,6 +539,7 @@ segments:
     dir: ovl_26_MarioBandstand
     name: MarioBandstand
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x1CCCF0, c]
   - type: bin
@@ -509,6 +550,7 @@ segments:
     dir: ovl_27_DesertDash
     name: DesertDash
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x1D3990, c]
   - type: bin
@@ -519,6 +561,7 @@ segments:
     dir: ovl_28_ShyGuySays
     name: ShyGuySays
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x1D9690, c]
   - type: bin
@@ -529,6 +572,7 @@ segments:
     dir: ovl_29_LimboDance
     name: LimboDance
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x1E0A30, c]
   - type: bin
@@ -539,6 +583,7 @@ segments:
     dir: ovl_2A
     name: name_2A
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x1E9440, c]
   - type: bin
@@ -549,6 +594,7 @@ segments:
     dir: ovl_2B_CastAways
     name: CastAways
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x1F0DA0, c]
   - type: bin
@@ -559,6 +605,7 @@ segments:
     dir: ovl_2C_KeyPaWay
     name: name_2C
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x1F62C0, c]
   - type: bin
@@ -569,6 +616,7 @@ segments:
     dir: ovl_2D_RunningOfTheBulb
     name: RunningOfTheBulb
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x1FF1E0, c]
   - type: bin
@@ -579,6 +627,7 @@ segments:
     dir: ovl_2E_HotRopeJump
     name: HotRopeJump
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x207040, c]
   - type: bin
@@ -589,6 +638,7 @@ segments:
     dir: ovl_2F_HandcarHavoc
     name: HandcarHavoc
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x20F570, c]
   - type: bin
@@ -599,6 +649,7 @@ segments:
     dir: ovl_30_DeepSeaDivers
     name: DeepSeaDivers
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x218510, c]
   - type: bin
@@ -609,6 +660,7 @@ segments:
     dir: ovl_31_PiranhasPursuit
     name: PiranhasPursuit
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x222320, c]
   - type: bin
@@ -619,6 +671,7 @@ segments:
     dir: ovl_32_TugOWar
     name: TugOWar
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x22C9E0, c]
   - type: bin
@@ -629,6 +682,7 @@ segments:
     dir: ovl_33_PaddleBattle
     name: PaddleBattle
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2341E0, c]
   - type: bin
@@ -639,6 +693,7 @@ segments:
     dir: ovl_34_BumperBallMaze
     name: BumperBallMaze
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x23CF40, c]
   - type: bin
@@ -649,6 +704,7 @@ segments:
     dir: ovl_35
     name: name_35
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x241740, c]
   - type: bin
@@ -659,6 +715,7 @@ segments:
     dir: ovl_36_DKsJungleAdventure
     name: DKsJungleAdventure
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2418A0, c]
   - type: bin
@@ -669,6 +726,7 @@ segments:
     dir: ovl_37_PeachsBirthdayCake
     name: PeachsBirthdayCake
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2455C0, c]
   - type: bin
@@ -679,6 +737,7 @@ segments:
     dir: ovl_38_YoshisTropicalIsland
     name: YoshisTropicalIsland
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x246DF0, c]
   - type: bin
@@ -689,6 +748,7 @@ segments:
     dir: ovl_39_WariosBattleCanyon
     name: WariosBattleCanyon
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x248F00, c]
   - type: bin
@@ -699,6 +759,7 @@ segments:
     dir: ovl_3A_LuigisEngineRoom
     name: LuigisEngineRoom
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x24C390, c]
   - type: bin
@@ -709,6 +770,7 @@ segments:
     dir: ovl_3B_MariosRainbowCastle
     name: MariosRainbowCastle
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x24FA80, c]
   - type: bin
@@ -719,6 +781,7 @@ segments:
     dir: ovl_3C_BowsersMagmaMountain
     name: BowsersMagmaMountain
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2518D0, c]
   - type: bin
@@ -729,6 +792,7 @@ segments:
     dir: ovl_3D_EternalStar
     name: EternalStar
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x254450, c]
   - type: bin
@@ -739,6 +803,7 @@ segments:
     dir: ovl_3E_FirstMap
     name: FirstMap
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x256FF0, c]
   - type: bin
@@ -749,6 +814,7 @@ segments:
     dir: ovl_3F_Last5Turns
     name: Last5Turns
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2592A0, c]
   - type: bin
@@ -759,6 +825,7 @@ segments:
     dir: ovl_40_ResultsEternalStar
     name: ResultsEternalStar
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x259EB0, c]
   - type: bin
@@ -769,6 +836,7 @@ segments:
     dir: ovl_41_YoshisTropicalIslandEndingScene
     name: YoshisTropicalIslandEndingScene
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x25FC70, c]
   - type: bin
@@ -779,6 +847,7 @@ segments:
     dir: ovl_42_UnknownEndGameBonuses0
     name: UnknownEndGameBonuses0
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x278ED0, c]
   - type: bin
@@ -789,6 +858,7 @@ segments:
     dir: ovl_43_UnknownEndGameBonuses1
     name: UnknownEndGameBonuses1
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x27CB30, c]
   - type: bin
@@ -799,6 +869,7 @@ segments:
     dir: ovl_44_UnknownStarPurchaseScene0
     name: UnknownStarPurchaseScene0
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x280C80, c]
   - type: bin
@@ -809,6 +880,7 @@ segments:
     dir: ovl_45_UnknownBowserScene0
     name: UnknownBowserScene0
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x281D40, c]
   - type: bin
@@ -819,6 +891,7 @@ segments:
     dir: ovl_46_BowserSpaceEvent
     name: BowserSpaceEvent
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x282820, c]
   - type: bin
@@ -829,6 +902,7 @@ segments:
     dir: ovl_47
     name: name_47
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x285230, c]
   - type: bin
@@ -839,6 +913,7 @@ segments:
     dir: ovl_48_BowserVisitDKBoard
     name: BowserVisitDKBoard
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x285B70, c]
   - type: bin
@@ -849,6 +924,7 @@ segments:
     dir: ovl_49_BowserVisitPeachBoard
     name: BowserVisitPeachBoard
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x286700, c]
   - type: bin
@@ -859,6 +935,7 @@ segments:
     dir: ovl_4A_GoombaCoinStealPeachBoard
     name: GoombaCoinStealPeachBoard
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2872A0, c]
   - type: bin
@@ -869,6 +946,7 @@ segments:
     dir: ovl_4B_FlowerLotteryPeachBoard
     name: FlowerLotteryPeachBoard
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2888A0, c]
   - type: bin
@@ -879,6 +957,7 @@ segments:
     dir: ovl_4C_PiranhaPlantStarStealPeachBoard
     name: PiranhaPlantStarStealPeachBoard
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x289BA0, c]
   - type: bin
@@ -889,6 +968,7 @@ segments:
     dir: ovl_4D_ThowmpTollYoshiBoard
     name: ThowmpTollYoshiBoard
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x28ABA0, c]
   - type: bin
@@ -899,6 +979,7 @@ segments:
     dir: ovl_4E_BowserToadSwapPlacesYoshiBoard
     name: BowserToadSwapPlacesYoshiBoard
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x28BC70, c]
   - type: bin
@@ -909,6 +990,7 @@ segments:
     dir: ovl_4F_BowserVisitYoshiBoard
     name: BowserVisitYoshiBoard
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x28CFF0, c]
   - type: bin
@@ -919,6 +1001,7 @@ segments:
     dir: ovl_50_LoadCannonWarioBoard
     name: LoadCannonWarioBoard
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x28E030, c]
   - type: bin
@@ -929,6 +1012,7 @@ segments:
     dir: ovl_51_ChangeCannonTargetWarioBoard
     name: ChangeCannonTargetWarioBoard
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x28E630, c]
   - type: bin
@@ -939,6 +1023,7 @@ segments:
     dir: ovl_52_FlyGuyWarioBoard
     name: FlyGuyWarioBoard
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x28ECA0, c]
   - type: bin
@@ -949,6 +1034,7 @@ segments:
     dir: ovl_53_BowserVisitWarioBoard
     name: BowserVisitWarioBoard
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2908F0, c]
   - type: bin
@@ -959,6 +1045,7 @@ segments:
     dir: ovl_54_BowserVisitLuigiBoard
     name: BowserVisitLuigiBoard
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x291360, c]
   - type: bin
@@ -969,6 +1056,7 @@ segments:
     dir: ovl_55_MoveDoorsLuigiBoard
     name: MoveDoorsLuigiBoard
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x292020, c]
   - type: bin
@@ -979,6 +1067,7 @@ segments:
     dir: ovl_56_BowserToadSwapPlacesMarioBoard
     name: BowserToadSwapPlacesMarioBoard
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x293260, c]
   - type: bin
@@ -989,6 +1078,7 @@ segments:
     dir: ovl_57_BowserVisitMarioBoard
     name: name_57
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x293A70, c]
   - type: bin
@@ -1009,6 +1099,7 @@ segments:
     dir: ovl_59_BowserVisitMagmaMountain
     name: BowserVisitMagmaMountain
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x295450, c]
   - type: bin
@@ -1019,6 +1110,7 @@ segments:
     dir: ovl_5A_ShortcutRouletteMagmaMountain
     name: ShortcutRouletteMagmaMountain
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x295E40, c]
   - type: bin
@@ -1029,6 +1121,7 @@ segments:
     dir: ovl_5B_BowservisitMagmaMountain
     name: BowservisitMagmaMountain
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x296B70, c]
   - type: bin
@@ -1039,6 +1132,7 @@ segments:
     dir: ovl_5C_HappeningSpaceEternalStar
     name: HappeningSpaceEternalStar
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x297BE0, c]
   - type: bin
@@ -1049,6 +1143,7 @@ segments:
     dir: ovl_5D_BowserVisitEternalStar
     name: BowserVisitEternalStar
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x297FB0, c]
   - type: bin
@@ -1059,6 +1154,7 @@ segments:
     dir: ovl_5E_StarVisitEternalStar
     name: StarVisitEternalStar
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x298AE0, c]
   - type: bin
@@ -1069,6 +1165,7 @@ segments:
     dir: ovl_5F_KoopaVisitEternalStar
     name: KoopaVisitEternalStar
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x29A400, c]
   - type: bin
@@ -1079,6 +1176,7 @@ segments:
     dir: ovl_60
     name: name_60
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x29AB30, c]
   - type: bin
@@ -1089,6 +1187,7 @@ segments:
     dir: ovl_61_OpeningScene
     name: OpeningScene
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x29B410, c]
   - type: bin
@@ -1099,6 +1198,7 @@ segments:
     dir: ovl_62
     name: name_62
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2A2500, c]
   - type: bin
@@ -1109,6 +1209,7 @@ segments:
     dir: ovl_63_StaffScene
     name: StaffScene
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2A9970, c]
   - type: bin
@@ -1119,6 +1220,7 @@ segments:
     dir: ovl_64_ResultsEternalStar2
     name: ResultsEternalStar2
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2B1670, c]
   - type: bin
@@ -1129,6 +1231,7 @@ segments:
     dir: ovl_65_UnknownBooStealScene
     name: UnknownBooStealScene
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2B74A0, c]
   - type: bin
@@ -1139,6 +1242,7 @@ segments:
     dir: ovl_66_LogosSequence
     name: LogosSequence
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2BA4C0, c]
   - type: bin
@@ -1149,6 +1253,7 @@ segments:
     dir: ovl_67_LogosSequenceCopy
     name: LogosSequenceCopy
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2BA9E0, c]
   - type: bin
@@ -1159,6 +1264,7 @@ segments:
     dir: ovl_68_SaveDataCorrupted
     name: SaveDataCorrupted
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2BB390, c]
   - type: bin
@@ -1169,6 +1275,7 @@ segments:
     dir: ovl_69_GameModeOverworld
     name: GameModeOverworld
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2BB5C0, c]
   - type: bin
@@ -1179,6 +1286,7 @@ segments:
     dir: ovl_6A_AdventureModeSetup
     name: AdventureModeSetup
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2BF1A0, c]
   - type: bin
@@ -1189,6 +1297,7 @@ segments:
     dir: ovl_6B_MinigameHouse
     name: MinigameHouse
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2CAA00, c]
   - type: bin
@@ -1199,6 +1308,7 @@ segments:
     dir: ovl_6C_MushroomShop
     name: MushroomShop
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2D4830, c]
   - type: bin
@@ -1209,6 +1319,7 @@ segments:
     dir: ovl_6D_MushroomBank
     name: MushroomBank
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2D6FC0, c]
   - type: bin
@@ -1219,6 +1330,7 @@ segments:
     dir: ovl_6E_OptionsHouse
     name: OptionsHouse
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2D9570, c]
   - type: bin
@@ -1229,6 +1341,7 @@ segments:
     dir: ovl_6F_MinigameInstructions
     name: MinigameInstructions
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2DB2A0, c]
   - type: bin
@@ -1239,6 +1352,7 @@ segments:
     dir: ovl_70_TestingRoom
     name: TestingRoom
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2F40C0, c]
   - type: bin
@@ -1249,6 +1363,7 @@ segments:
     dir: ovl_71_MinigameIslandOverworld
     name: MinigameIslandOverworld
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2F6FB0, c]
   - type: bin
@@ -1259,6 +1374,7 @@ segments:
     dir: ovl_72_MinigameIslandOverworldCopy
     name: MinigameIslandOverworldCopy
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2F7080, c]
   - type: bin
@@ -1269,6 +1385,7 @@ segments:
     dir: ovl_73
     name: name_73
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2F9040, c]
   - type: bin
@@ -1279,6 +1396,7 @@ segments:
     dir: ovl_74
     name: name_74
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2F96E0, c]
   - type: bin
@@ -1289,6 +1407,7 @@ segments:
     dir: ovl_75
     name: name_75
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2FA120, c]
   - type: bin
@@ -1299,6 +1418,7 @@ segments:
     dir: ovl_76
     name: name_76
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2FA8A0, c]
   - type: bin
@@ -1309,6 +1429,7 @@ segments:
     dir: ovl_77_MinigameIslandFinish
     name: MinigameIslandFinish
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2FADB0, c]
   - type: bin
@@ -1319,6 +1440,7 @@ segments:
     dir: ovl_78_MinigameIslandStart
     name: MinigameIslandStart
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x2FD940, c]
   - type: bin
@@ -1329,6 +1451,7 @@ segments:
     dir: ovl_79
     name: name_79
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x3005B0, c]
   - type: bin
@@ -1339,6 +1462,7 @@ segments:
     dir: ovl_7A_DebugRandomPlay
     name: DebugRandomPlay
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x3014C0, c]
   - type: bin
@@ -1349,6 +1473,7 @@ segments:
     dir: ovl_7B_MinigameStadiumMinigameResultsScreen
     name: MinigameStadiumMinigameResultsScreen
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x303E70, c]
   - type: bin
@@ -1359,6 +1484,7 @@ segments:
     dir: ovl_7C_UnknownResultsScreen
     name: UnknownResultsScreen
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x308A50, c]
   - type: bin
@@ -1369,6 +1495,7 @@ segments:
     dir: ovl_7D_MinigameIslandMISS
     name: MinigameIslandMISS
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x30C540, c]
   - type: bin
@@ -1379,6 +1506,7 @@ segments:
     dir: ovl_7E_DebugSequentialPlay
     name: DebugSequentialPlay
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x30F1B0, c]
   - type: bin
@@ -1389,6 +1517,7 @@ segments:
     dir: ovl_7F_MinigameStadiumStart
     name: MinigameStadiumStart
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x311E90, c]
   - type: bin
@@ -1399,6 +1528,7 @@ segments:
     dir: ovl_80_MinigameStadiumResults
     name: MinigameStadiumResults
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x312850, c]
   - type: bin
@@ -1409,6 +1539,7 @@ segments:
     dir: ovl_81_PressStartScreen
     name: PressStartScreen
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x314950, c]
   - type: bin
@@ -1419,6 +1550,7 @@ segments:
     dir: ovl_82_MiniGameStadiumStartCopy
     name: MiniGameStadiumStartCopy
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x316440, c]
   - type: bin
@@ -1429,6 +1561,7 @@ segments:
     dir: ovl_83_DebugMinigameMenu
     name: DebugMinigameMenu
     overlay: True
+    exclusive_ram_id: minigame
     subsegments:
       - [0x317980, c]
   - type: bin
