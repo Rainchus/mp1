@@ -42,9 +42,9 @@ void func_800F6F5C_259C1C(Object* obj) {
 void func_800F6FA8_259C68(void) {
     func_8003DAA8();
     D_800F71F4_1DA2A4 = func_8003DBE0(8, &D_800F7154);
-    D_800F71F4_1DA2A4->pos.x = D_800F7130.x;
-    D_800F71F4_1DA2A4->pos.y = D_800F7130.y;
-    D_800F71F4_1DA2A4->pos.z = D_800F7130.z;
+    D_800F71F4_1DA2A4->unk_0C = D_800F7130.x;
+    D_800F71F4_1DA2A4->unk_10 = D_800F7130.y;
+    D_800F71F4_1DA2A4->unk_14 = D_800F7130.z;
     func_8004F140(*D_800F71F4_1DA2A4->unk_3C->unk_40);
 }
 

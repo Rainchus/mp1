@@ -3,6 +3,35 @@
 
 #include "types.h"
 
+typedef struct Vec2f {
+               f32 x;
+               f32 y;
+} Vec2f;
+
+typedef struct Vec2s {
+               s32 x;
+               s32 y;
+} Vec2s;
+
+typedef struct Vec3f {
+               f32 x;
+               f32 y;
+               f32 z;
+} Vec3f;
+
+typedef struct Vec3s {
+               s32 x;
+               s32 y;
+               s32 z;
+} Vec3s;
+
+typedef struct Vec4f {
+               f32 x;
+               f32 y;
+               f32 z;
+               f32 yaw;
+} Vec4f;
+
 typedef struct playerMain {
 /* 0x00 */ char unk_00;
 /* 0x01 */ u8 cpuDifficulty;
@@ -49,6 +78,22 @@ typedef struct unk_Struct01 {
 /* 0x00 */ char unk_00[0x24];
 /* 0x24 */ s32 unk_24;
 } unk_Struct01;
+
+typedef struct unk_Struct04 {
+    /* 0x00 */ Vec3f pos;
+    /* 0x0C */ char unk_0C[0x34];
+    /* 0x40 */ u16* unk_40;
+} unk_Struct04; //sizeof 0xAC?
+
+typedef struct unk_Struct03 {
+/* 0x00 */ char unk_00[0x0C];
+/* 0x0C */ f32 unk_0C;
+/* 0x10 */ f32 unk_10;
+/* 0x14 */ f32 unk_14;
+/* 0x18 */ f32 unk_18;
+/* 0x1C */ char unk_1C[0x20];
+/* 0x3C */ unk_Struct04* unk_3C;
+} unk_Struct03; // //sizeof 0xAC?
 
 typedef struct unkGlobalStruct_00 {
 /* 0x00 */ u16 unk_00;
@@ -107,35 +152,6 @@ typedef struct unk_800ECDE0 {
 /* 0x02 */ s16 unk_02;
 /* 0x04 */ char unk_04[0x20];
 } unk_800ECDE0;
-
-typedef struct Vec2f {
-               f32 x;
-               f32 y;
-} Vec2f;
-
-typedef struct Vec2s {
-               s32 x;
-               s32 y;
-} Vec2s;
-
-typedef struct Vec3f {
-               f32 x;
-               f32 y;
-               f32 z;
-} Vec3f;
-
-typedef struct Vec3s {
-               s32 x;
-               s32 y;
-               s32 z;
-} Vec3s;
-
-typedef struct Vec4f {
-               f32 x;
-               f32 y;
-               f32 z;
-               f32 yaw;
-} Vec4f;
 
 typedef struct viewAngle {
 /* 0x00 */ f32 y;

@@ -1,5 +1,6 @@
 #include "types.h"
 
+extern u16 D_800F5144;
 extern s16 D_800C597A;
 extern playerMain D_800F32B0[4];
 extern u8 D_800ED5C3;
@@ -20,5 +21,7 @@ extern u16 D_800F2BC0;
 extern unk_Struct00* D_800C3110;
 extern u8 D_800ED5DD;
 extern u8 D_800F6F20;
+extern s32 D_800F6EE0;
+extern s16 D_800F6EE2;
 
 extern unk_800ECDE0* D_800ECDE0;
