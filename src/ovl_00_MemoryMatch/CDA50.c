@@ -424,16 +424,13 @@ INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800F8BC0_D0030);
 void func_800F8C38_D00A8(void) {
     tikiThing* temp_a0 = D_800FDE50;
     u16 i = 0;
-    f32 zero = 0;
     
     for (i = 0; i < 8; i++) {
         temp_a0->unk_00 = 0;
         temp_a0->unk_02 = 0;
         temp_a0->unk_04 = 0;
         temp_a0->unk_08 = 0;
-        temp_a0->unk_14 = zero;
-        temp_a0->unk_10 = zero;
-        temp_a0->unk_0C = zero;
+        temp_a0->unk_0C = temp_a0->unk_10 = temp_a0->unk_14 = 0;
         temp_a0++;
     }
 }

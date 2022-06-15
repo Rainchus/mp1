@@ -4,6 +4,16 @@
 #include "types.h"
 #include "common_structs.h"
 
+void func_80009340(Object*, s32, s32, s32, s32);
+void func_8001E2F8(u8, u8);
+void func_8001E360(u8, u8, u8, u8);
+void func_80021240(s16);
+void func_80025798(s16, f32, f32, f32);
+void func_800257E4(s16, f32, f32, f32);
+void func_80025830(s16, f32, f32, f32);
+void func_80025EB4(s16, s32, s32);
+void func_80009438(void);
+void func_8000942C(void);
 void func_8003E694(unk_Struct03*);
 void* func_8003DBE0(u8, Vec3f*);
 void func_8004CCD0(f32*, f32*, f32*);
