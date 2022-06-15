@@ -140,7 +140,8 @@ typedef struct Object {
 /* 0x38 */ f32 unk_38;
 /* 0x3C */ char unk_3C[4];
 /* 0x40 */ unkGlobalStruct_00* unk_40;
-/* 0x44 */ char unk_44[0x4];
+/* 0x44 */ u16 unk_44;
+/* 0x46 */ char unk_46[2];
 /* 0x48 */ unkGlobalStruct_00* unk_48;
 /* 0x4C */ u8  unk_4C;
 /* 0x4C */ u8  unk_4D;

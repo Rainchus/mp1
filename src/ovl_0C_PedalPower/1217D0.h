@@ -21,3 +21,5 @@ extern s8 D_800FA72C;
 extern s8 D_800FA72D;
 extern s8 D_800FA738;
 extern Vec3f D_800FA73C;
+extern u8 D_800F9E20;
+extern f32 D_800F9E38[];
