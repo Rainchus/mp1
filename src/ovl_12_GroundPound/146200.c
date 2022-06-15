@@ -34,35 +34,34 @@ void func_800F67E0_146400(Object* arg0) {
     arg0->func_ptr = (*func_800F6814_146434);
 }
 
-INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F6814_146434); //doesn't match because??
-// void func_800F6814_146434(void) {
-//     if (D_800C5982 != 1) {
-//         switch (D_800FA260) {
-//         case 0:
-//             func_800F6924_146544();
-//             return;
-//         case 1:
-//             D_800FA268--;
-//             if (D_800FA268 == 0) {
-//                 if ((u16) D_800FA266 != 0) {
-//                     D_800FA266--;
-//                     func_80079078(D_800FA266);
-//                 }
-//                 D_800FA268 = 30;
-//             }
-//             if (D_800FA266 == 0 || D_800FA310 != 0) {
-//                 D_800FA260 = 2;
-//                 D_800FA264 = 1;
-//                 return;
-//             }
-//             break;
-//         case 2:
-//             func_800F6B0C_14672C();
-//             break;
-//         }
+void func_800F6814_146434(void) {
+    if (D_800C5982 != 1) {
+        switch (D_800FA260) {
+        case 0:
+            func_800F6924_146544();
+            return;
+        case 1:
+            D_800FA268--;
+            if (D_800FA268 == 0) {
+                if (D_800FA266 != 0) {
+                    D_800FA266--;
+                    func_80079078(D_800FA266);
+                }
+                D_800FA268 = 30;
+            }
+            if (D_800FA266 == 0 || D_800FA310 != 0) {
+                D_800FA260 = 2;
+                D_800FA264 = 1;
+                return;
+            }
+            break;
+        case 2:
+            func_800F6B0C_14672C();
+            break;
+        }
         
-//     }
-// }
+    }
+}
 
 INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F6924_146544);
 

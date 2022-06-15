@@ -4,6 +4,15 @@
 #include "types.h"
 #include "common_structs.h"
 
+void func_8005E3A8(void);
+void func_800635B4(void);
+void func_800568A4(void);
+void ClearBoardFeatureFlag(s32 flag);
+void SetBoardFeatureFlag(s32 flag);
+void func_800567D4(void);
+void func_8005E044(s32, s32, s32);
+void func_8005E36C(s32, s32, s32, s32);
+void ExecBoardScene( void(*function), s32);
 void func_8006B870(void);
 s32 func_8006B8A4(s32, s32, s32, s32, s32);
 f64 fabs(f64 f);

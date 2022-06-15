@@ -1,11 +1,7 @@
 #include "common.h"
 
-INCLUDE_ASM(s32, "ovl_35/241740", func_800F65E0_241740);
+void func_800F6720_16BE60(Object* arg0);
 
-INCLUDE_ASM(s32, "ovl_35/241740", func_800F6610_241770);
-
-INCLUDE_ASM(s32, "ovl_35/241740", func_800F6684_2417E4);
-
-INCLUDE_ASM(s32, "ovl_35/241740", func_800F66AC_24180C);
-
-INCLUDE_ASM(s32, "ovl_35/241740", func_800F66D8_241838);
+void func_800F65E0_241740(void) {
+    ExecBoardScene((*func_800F6720_16BE60), D_800C597A);
+}
