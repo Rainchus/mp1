@@ -143,7 +143,41 @@ void func_800F7AEC_122CDC(Object* arg0) {
     arg0->func_ptr = (*func_800F6944_121B34);
 }
 
-INCLUDE_ASM(s32, "ovl_0C_PedalPower/1217D0", func_800F7C04_122DF4);
+void func_800F7C04_122DF4(Object* arg0) {
+    u16 temp_v0, temp_v0_2, temp_v0_3, temp_v0_4;
+    unkGlobalStruct_00* temp_s0;
+
+    temp_v0 = func_800174C0(0x1E0004, 0x99);
+    arg0->unk_40->unk_06 = temp_v0;
+    D_800F9EFA = temp_v0;
+    temp_v0_2 = func_800174C0(0x1E0006, 0x99);
+    arg0->unk_40->unk_04.unsigned16 = temp_v0_2;
+    D_800F9EF6 = temp_v0_2;
+    temp_v0_3 = func_800174C0(0x1E0000, 0x99);
+    arg0->unk_40->unk_00 = temp_v0_3;
+    D_800F9EF8 = temp_v0_3;
+    temp_v0_4 = func_800174C0(0x1E0001, 0x699);
+    arg0->unk_40->unk_02 = temp_v0_4;
+    D_800F9EFC = temp_v0_4;
+    arg0->unk_40->unk_08 = func_800174C0(0x1E0009, 0x99);
+    arg0->unk_40->unk_0A = func_800174C0(0x1E000A, 0x99);
+    func_80025CA8(D_800F9EF6, D_800FA720);
+    func_80025EB4(D_800F9EF8, 2, 1);
+    func_80025EB4(D_800F9EF6, 2, 1);
+    func_80026040(D_800F9EFA);
+    func_80039C48(&D_800F9E90, &D_800F9EFE);
+    D_800F9F04 = 0;
+    arg0->unk_18 = arg0->unk_1C = arg0->unk_20 = 0.0f;
+    arg0->unk_24 = 0.0f;
+    func_80025798(arg0->unk_40->unk_00, arg0->unk_18, arg0->unk_1C, arg0->unk_20);
+    func_80025798(arg0->unk_40->unk_0A, arg0->unk_18, arg0->unk_1C, arg0->unk_20 + 100.0f);
+    temp_s0 = func_80023684(44, 0x7918);
+    arg0->unk_50 = temp_s0;
+    func_8009B770(temp_s0, 0, 0x2C);
+    temp_s0->unk_04.b[0] = 1;
+    temp_s0->unk_04.b[1] = 0;
+    arg0->func_ptr = (*func_800F7DD4_122FC4);
+}
 
 INCLUDE_ASM(s32, "ovl_0C_PedalPower/1217D0", func_800F7DD4_122FC4);
 
