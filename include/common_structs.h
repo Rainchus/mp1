@@ -40,7 +40,7 @@ typedef struct playerMain {
 /* 0x04 */ u8 characterID;
 /* 0x05 */ char unk_05;
 /* 0x06 */ u16 unk_06;
-/* 0x08 */ u16 coinAmount;
+/* 0x08 */ s16 coinAmount;
 /* 0x0A */ s16 miniGameCoins; //coins to give to player after minigame
 /* 0x0C */ u16 starAmount;
 /* 0x0E */ u16 curChainIndex;
@@ -91,7 +91,11 @@ typedef struct unk_Struct03 {
 /* 0x10 */ f32 unk_10;
 /* 0x14 */ f32 unk_14;
 /* 0x18 */ f32 unk_18;
-/* 0x1C */ char unk_1C[0x20];
+/* 0x1C */ char unk_1C[8];
+/* 0x24 */ s32 unk_24;
+/* 0x28 */ char unk_28[8];
+/* 0x30 */ f32 unk_30;
+/* 0x34 */ char unk_34[8];
 /* 0x3C */ unk_Struct04* unk_3C;
 } unk_Struct03; // //sizeof 0xAC?
 
