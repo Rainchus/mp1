@@ -56,7 +56,7 @@ void func_8005CF30 (s32 maxObjects, s32 maxProcesses);
 Object* func_8005D384(s32, s32, s32, s32, void*);
 void func_8005D8B8(Object*, s32);
 void func_80060088(void);
-void func_800602AC(s32);
+s32 func_800602AC(s32);
 void func_8007B168(s32*, s32);
 void func_80086F08(f32*, void*);
 f32 func_800AEAC0(f32);
