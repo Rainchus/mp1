@@ -144,21 +144,12 @@ void func_800F7AEC_122CDC(Object* arg0) {
 }
 
 void func_800F7C04_122DF4(Object* arg0) {
-    u16 temp_v0, temp_v0_2, temp_v0_3, temp_v0_4;
     unkGlobalStruct_00* temp_s0;
 
-    temp_v0 = func_800174C0(0x1E0004, 0x99);
-    arg0->unk_40->unk_06 = temp_v0;
-    D_800F9EFA = temp_v0;
-    temp_v0_2 = func_800174C0(0x1E0006, 0x99);
-    arg0->unk_40->unk_04.unsigned16 = temp_v0_2;
-    D_800F9EF6 = temp_v0_2;
-    temp_v0_3 = func_800174C0(0x1E0000, 0x99);
-    arg0->unk_40->unk_00 = temp_v0_3;
-    D_800F9EF8 = temp_v0_3;
-    temp_v0_4 = func_800174C0(0x1E0001, 0x699);
-    arg0->unk_40->unk_02 = temp_v0_4;
-    D_800F9EFC = temp_v0_4;
+    D_800F9EFA = arg0->unk_40->unk_06 = func_800174C0(0x1E0004, 0x99);
+    D_800F9EF6 = arg0->unk_40->unk_04.unsigned16 = func_800174C0(0x1E0006, 0x99);
+    D_800F9EF8 = arg0->unk_40->unk_00 = func_800174C0(0x1E0000, 0x99);
+    D_800F9EFC = arg0->unk_40->unk_02 = func_800174C0(0x1E0001, 0x699);
     arg0->unk_40->unk_08 = func_800174C0(0x1E0009, 0x99);
     arg0->unk_40->unk_0A = func_800174C0(0x1E000A, 0x99);
     func_80025CA8(D_800F9EF6, D_800FA720);

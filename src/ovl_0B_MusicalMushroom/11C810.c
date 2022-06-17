@@ -41,7 +41,7 @@ void func_800F75D8_11D808(Object* arg0) { //matches but needs rodata support
         func_800F7508_11D738(arg0, temp_a1);
         break;
     case 3:
-        func_8006071C(temp_s1->unk_B3, temp_a1);
+        func_8006071C(temp_s1->unk_B3);
         
         if (arg0->unk_4C == (D_800F2BC0 - 1)) {
             D_800FB4D0 = 4;

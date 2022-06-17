@@ -4,6 +4,9 @@
 #include "types.h"
 #include "common_structs.h"
 
+void func_8001D934(s32, s32, f32*);
+void func_80079078(s16);
+void func_8005D718(s32);
 s32 func_8005021C(f32); //getRandInRange
 void func_800A0D00(void*, f32, f32, f32);
 void func_80025CA8(s16, s32);
@@ -110,7 +113,7 @@ void func_80009458(void);
 void func_80009624(unkGlobalStruct_00*, s32);
 void func_80017DB0(Object*);
 void func_800184BC(Object*, s32);
-void func_8006071C(s8, f32*);
+void func_8006071C(s16);
 void func_80008FB8(Object*, f32);
 void func_80008FC4(Object*, f32);
 u16 func_800174C0(s32, s32);
