@@ -8,6 +8,8 @@ typedef struct unkCrazyCutter_00 {
     /* 0x30 */ s32 unk_30;
 } unkCrazyCutter_00;
 
+void func_800FBB2C_12A61C(void);
+void func_800FA880_129370(void);
 void func_800FA56C_12905C(void);
 void func_800F68C4_1253B4(Object*);
 void func_800F978C_12827C(void);
@@ -22,6 +24,19 @@ void func_800F94DC_127FCC(s32);
 void func_800F94F8_127FE8(s32);
 void func_800F9514_128004(s32);
 void func_800F731C_125E0C(s32, s32);
+s32 func_800FC4F0_12AFE0(s8, s32, s32*, s32*);
+void func_800FBB94_12A684(void);
+extern s16 D_800FD5C0;
+extern s32 D_800FD51C;
+extern s32 D_800FD528;
+extern s32 D_800FD52C;
+extern s32 D_800FD538;
+extern s32 D_800FD518;
+extern s32 D_800FD520;
+extern s32 D_800FD524;
+extern s32 D_800FD530;
+extern s32 D_800FD4D8[];
+extern u16 D_800FD590;
 extern f32 D_800FCCF0[];
 extern f32 D_800FCD00[];
 extern s32 D_800FD488[];

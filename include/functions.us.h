@@ -4,6 +4,8 @@
 #include "types.h"
 #include "common_structs.h"
 
+void func_80064D38(s8);
+void func_8006752C(s8, s32, u8);
 void func_8001D934(s32, s32, f32*);
 void func_80079078(s16);
 void func_8005D718(s32);

@@ -215,18 +215,46 @@ INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FA38C_128E7C);
 
 INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FA56C_12905C);
 
-INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FA808_1292F8);
+void func_800FA808_1292F8(Object* arg0) {
+    if (func_80075FE0() == 0 || func_80075FE0() & 2) {
+        if (D_800FD590 == 0) {
+            func_800FBB2C_12A61C();
+            D_800FD590 += 1;
+        }
+        arg0->func_ptr = (*func_800FA880_129370);
+    }
+}
 
 INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FA880_129370);
 
 INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FA9D8_1294C8);
 
-INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FAA18_129508);
+void func_800FAA18_129508(s32 arg0) {
+    s32 i;
 
-INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FAAB0_1295A0);
+    if (func_80072718() == 0) {
+        for (i = 0; i < 4; i++) {
+            if (func_800FAAB0_1295A0(i, 0x4000) == 0) {
+                D_800F32B0[i].miniGameCoins += 10; 
+            }
+        }
+        func_800601D4(0x28);
+        func_8005DFB8(1);
+        func_8005D718(arg0);
+    }
+}
 
-INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FAACC_1295BC);
+s32 func_800FAAB0_1295A0(s32 arg0, s32 arg1) {
+    return (arg1 & D_800FD4D8[arg0]) != 0;
+}
 
+void func_800FAACC_1295BC(s32 arg0, s32 arg1, s32 arg2) {
+    if (arg2 != 0) {
+        D_800FD4D8[arg0] = arg1 | D_800FD4D8[arg0];
+    } else {
+        D_800FD4D8[arg0] = ~arg1 & D_800FD4D8[arg0];
+    }
+}
 INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FAB0C_1295FC);
 
 INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FAC38_129728);
@@ -235,9 +263,43 @@ INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FAF8C_129A7C);
 
 INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FB2B8_129DA8);
 
-INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FB450_129F40);
+void func_800FB450_129F40(s32 arg0) {
+    s8 temp_s1;
+    s8 temp_s0;
 
-INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FB548_12A038);
+    if (arg0 != D_800FD530) {
+        D_800FD530 = arg0;
+        temp_s1 = InitSprite(arg0 | 0x1F0000);
+        temp_s0 = func_80064EF4(1, 0);
+        func_8006752C(temp_s0, 0, 0xFF);
+        func_80067480(temp_s0, 0, 0xFFFF);
+        func_800674BC(temp_s0, 0, 0x9000);
+        func_80067354(temp_s0, 0, 1.0f, 1.0f);
+        func_800672B0(temp_s0, 0, 1);
+        func_80067208(temp_s0, 0, temp_s1, 0);
+        D_800FD518 = func_800FC4F0_12AFE0(temp_s0, 0, &D_800FD520, &D_800FD524);
+        func_80064D38(temp_s0);
+    }
+}
+
+void func_800FB548_12A038(s32 arg0) {
+    s8 temp_s1;
+    s8 temp_s0;
+
+    if (arg0 != D_800FD538) {
+        D_800FD538 = arg0;
+        temp_s1 = InitSprite(arg0 | 0x1F0000);
+        temp_s0 = func_80064EF4(1, 0);
+        func_8006752C(temp_s0, 0, 0xFF);
+        func_80067480(temp_s0, 0, 0xFFFF);
+        func_800674BC(temp_s0, 0, 0x9000);
+        func_80067354(temp_s0, 0, 1.0f, 1.0f);
+        func_800672B0(temp_s0, 0, 1);
+        func_80067208(temp_s0, 0, temp_s1, 0);
+        D_800FD51C = func_800FC4F0_12AFE0(temp_s0, 0, &D_800FD528, &D_800FD52C);
+        func_80064D38(temp_s0);
+    }
+}
 
 INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FB640_12A130);
 
@@ -247,7 +309,20 @@ INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FB944_12A434);
 
 INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FBAFC_12A5EC);
 
+#ifdef NON_MATCHING
+void func_800FBB2C_12A61C(void) {
+    Object* temp_s0;
+    unkGlobalStruct_00* temp_v0;
+
+    temp_s0 = func_8005D384(0xC, 0, 0, -1, (*func_800FBB94_12A684));
+    temp_v0 = func_80023684(4, 0x7918);
+    temp_s0->unk_50 = temp_v0;
+    temp_v0->unk_00 = 90; //temp_v0->unk_00 is currently a u16 in repo?
+    D_800FD5C0 = func_800602AC(0x1C0);
+}
+#else
 INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FBB2C_12A61C);
+#endif
 
 INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FBB94_12A684);
 
@@ -257,26 +332,21 @@ INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FBFB4_12AAA4);
 
 INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FC024_12AB14);
 
-INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FC240_12AD30);
+void func_800FC240_12AD30(s16 arg0) {
+    s16 i;
+    
+    for (i = 0; i < 4; i++) {
+        func_800674BC(arg0, i, 0x8000);
+    }
+}
+
 
 INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FC29C_12AD8C);
 
-INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FC45C_12AF4C);
-
-INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FC4F0_12AFE0);
-
-INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FC70C_12B1FC);
-
-INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FC8C0_12B3B0);
-
-INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FC998_12B488);
-
-INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FC9F4_12B4E4);
-
-INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FCA20_12B510);
-
-INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FCAAC_12B59C);
-
-INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FCC64_12B754);
-
-INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FCCC8_12B7B8);
+void func_800FC45C_12AF4C(s16 arg0, s16 arg1) {
+    s16 i = 0;
+    
+    for (i = 0; i < 4; i++) {
+        func_80067354(arg0, i, arg1 / 10.0f, arg1 / 10.0f);
+    }
+}
