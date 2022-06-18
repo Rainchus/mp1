@@ -64,8 +64,8 @@ void func_800F690C_17EA3C(Object* arg0) {
     func_800176C4(0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
     temp_s1 = func_80023684(0x2C, 0x7918);
     arg0->unk_50 = temp_s1;
-    arg0->unk_40->unk_00 = func_800174C0(0x330001, 0x69D);
-    arg0->unk_40->unk_02 = func_800174C0(0x170000, 0x699);
+    arg0->unk_40->unk_00.unsigned16[0] = func_800174C0(0x330001, 0x69D);
+    arg0->unk_40->unk_00.unsigned16[1] = func_800174C0(0x170000, 0x699);
     arg0->unk_40->unk_04.unsigned16 = func_800174C0(0x170006, 0x699);
     func_800090B8(D_800ED440);
     D_800F2AF8[D_800ED440++] = arg0;
@@ -77,8 +77,8 @@ void func_800F690C_17EA3C(Object* arg0) {
 
 void func_800F6A54_17EB84(Object* arg0) {
     arg0->unk_50 = func_80023684(0x2C, 0x7918);
-    arg0->unk_40->unk_00 = LoadFormFile(0x380002, 0x48D);
-    arg0->unk_40->unk_02 = LoadFormFile(0x380003, 0x48D);
+    arg0->unk_40->unk_00.unsigned16[0] = LoadFormFile(0x380002, 0x48D);
+    arg0->unk_40->unk_00.unsigned16[1] = LoadFormFile(0x380003, 0x48D);
     func_8005D95C(arg0, 0.0f, 1000.0f, 1000.0f);
     func_800FA2E0_182410();
     arg0->func_ptr = (*func_800F6ADC_17EC0C);

@@ -309,7 +309,6 @@ INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FB944_12A434);
 
 INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FBAFC_12A5EC);
 
-#ifdef NON_MATCHING
 void func_800FBB2C_12A61C(void) {
     Object* temp_s0;
     unkGlobalStruct_00* temp_v0;
@@ -317,12 +316,9 @@ void func_800FBB2C_12A61C(void) {
     temp_s0 = func_8005D384(0xC, 0, 0, -1, (*func_800FBB94_12A684));
     temp_v0 = func_80023684(4, 0x7918);
     temp_s0->unk_50 = temp_v0;
-    temp_v0->unk_00 = 90; //temp_v0->unk_00 is currently a u16 in repo?
+    temp_v0->unk_00.signed32 = 90; //temp_v0->unk_00 is currently a u16 in repo?
     D_800FD5C0 = func_800602AC(0x1C0);
 }
-#else
-INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FBB2C_12A61C);
-#endif
 
 INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FBB94_12A684);
 

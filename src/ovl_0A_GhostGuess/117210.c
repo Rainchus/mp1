@@ -32,7 +32,7 @@ void func_800F6AE0_117710(Object* arg0) {
     arg0->func_ptr = NULL;
     arg0->unk_18 = arg0->unk_1C = arg0->unk_20 = 0.0f;
     arg0->unk_30 = arg0->unk_34 = arg0->unk_38 = 5.0f;
-    arg0->unk_40->unk_00 = func_800174C0(0x1C0000, 0x2DD);
+    arg0->unk_40->unk_00.unsigned16[0] = func_800174C0(0x1C0000, 0x2DD);
     temp_s0 = func_80023684(44, 31000);
     arg0->unk_50 = temp_s0;
     func_8009B770(temp_s0, 0, 44);

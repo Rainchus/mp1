@@ -28,7 +28,15 @@ INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/12AFE0", func_800FC998_12B488);
 //     return 0;
 // }
 
-INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/12AFE0", func_800FC9F4_12B4E4);
+s32 func_800FC9F4_12B4E4(s32 arg0, s32 arg1, s32 arg2, u8* arg3, u8 arg4) {
+    u8 temp_v1;
+    u8* temp_a3;
+
+    temp_a3 = arg3 + (arg2 * arg1) + arg0;
+    temp_v1 = *temp_a3;
+    *temp_a3 = arg4;
+    return *temp_a3 != temp_v1;
+}
 
 INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/12AFE0", func_800FCA20_12B510);
 

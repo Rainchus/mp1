@@ -100,8 +100,10 @@ typedef struct unk_Struct03 {
 } unk_Struct03; // //sizeof 0xAC?
 
 typedef struct unkGlobalStruct_00 {
-/* 0x00 */ u16 unk_00;
-/* 0x02 */ u16 unk_02;
+/* 0x00 */ union {
+    u16 unsigned16[2];
+    s32 signed32;
+} unk_00;
 /* 0x04 */ union {
                 u16 unsigned16;
                 u8 b[2];

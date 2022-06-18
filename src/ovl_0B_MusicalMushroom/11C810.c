@@ -104,7 +104,7 @@ void func_800F9D70_11FFA0(Object* arg0) {
     f64 phi_f2;
     s32 zero = 0;
 
-    arg0->unk_40->unk_00 = func_800174C0(0x1D0000, 0x299);
+    arg0->unk_40->unk_00.unsigned16[0] = func_800174C0(0x1D0000, 0x299);
     arg0->unk_20 = zero;
     arg0->unk_1C = zero;
     arg0->unk_18 = zero;

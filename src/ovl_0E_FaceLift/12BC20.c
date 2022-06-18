@@ -43,9 +43,9 @@ void func_800F8DC8_12E408(Object* arg0) {
 
     func_800F80A4_12D6E4(arg0, 4);
     temp_v0 = arg0->unk_40;
-    func_800FA374_12F9B4(temp_v0->unk_00, temp_v0->unk_02);
-    func_800258EC(arg0->unk_40->unk_00, 4, 4);
-    func_800258EC(arg0->unk_40->unk_02, 4, 4);
+    func_800FA374_12F9B4(temp_v0->unk_00.unsigned16[0], temp_v0->unk_00.unsigned16[1]);
+    func_800258EC(arg0->unk_40->unk_00.unsigned16[0], 4, 4);
+    func_800258EC(arg0->unk_40->unk_00.unsigned16[1], 4, 4);
     func_800258EC(arg0->unk_40->unk_04.unsigned16, 4, 4);
     func_800258EC(arg0->unk_40->unk_06, 4, 4);
     arg0->unk_40->unk_08 = LoadFormFile(0x200003, 0x219);
