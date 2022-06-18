@@ -1,8 +1,5 @@
 #include "common.h"
 
-void func_80025B34(s16);
-void func_80026040(s16);
-void func_80025798(s16, f32, f32, f32);
 void func_800F9134_116914(void);
 void func_800F6678_113E58(void);
 void func_800F68BC_11409C(void);

@@ -3,6 +3,8 @@
 
 #define SQ(x) x*x
 
+#define PI      3.142857f
+
 #define ARRAY_COUNT(arr) (s32)(sizeof(arr) / sizeof(arr[0]))
 
 #ifndef MIN

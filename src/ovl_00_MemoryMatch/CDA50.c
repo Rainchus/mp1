@@ -188,8 +188,8 @@ void func_800F7B6C_CEFDC(u16 arg0) {
     D_800FD7E0 += arg0;
 }
 
-f32 func_800F7B90_CF000(void) {
-    f32 phi_f4 = func_800B0CD8();
+f32 func_800F7B90_CF000(f32 arg0, f32 arg1) {
+    f32 phi_f4 = func_800B0CD8(arg0, arg1);
 
     if (D_800FDA58 < phi_f4) {
         phi_f4 -= D_800FDA58;  

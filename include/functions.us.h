@@ -4,6 +4,22 @@
 #include "types.h"
 #include "common_structs.h"
 
+u16 func_800174F4(s32, s32);
+void func_8001775C(Object*, s32, s32);
+void func_800264F8(s16, s16, f32, s32*, s32*, s32);
+f32 func_80088060(f32);
+void func_8001D420(s32, Vec3f*, s16*, s32*);
+void func_8001D57C(s32);
+f32 func_800B1750(f32);
+void SetBasicSpriteSize(u16, f32, f32);
+void func_80018E50(s32, u16, s32);
+void func_80009058(Object*, f32, f32, f32, f32, f32, f32);
+void SetBasicSpritePos(u16, s32, s16);
+void func_80018D84(u16, s32);
+void func_80060540(s32, s32);
+void func_8009ECB0(s32, f32, f32, f32);
+void func_800258EC(s16, s32, s32);
+s16 func_8001E00C(s32, s32, s32);
 void func_80064D38(s8);
 void func_8006752C(s8, s32, u8);
 void func_8001D934(s32, s32, f32*);
@@ -12,11 +28,12 @@ void func_8005D718(s32);
 s32 func_8005021C(f32); //getRandInRange
 void func_800A0D00(void*, f32, f32, f32);
 void func_80025CA8(s16, s32);
+void func_80025B34(s16);
 void func_80026040(s16);
 void func_80039C48(s32*, s16*);
 void func_80009340(Object*, s32, s32, s32, s32);
-void func_8001E2F8(u8, u8);
-void func_8001E360(u8, u8, u8, u8);
+void func_8001E2F8(s16, u8);
+void func_8001E360(s16, u8, u8, u8);
 void func_80021240(s16);
 void func_80025798(s16, f32, f32, f32);
 void func_800257E4(s16, f32, f32, f32);
@@ -80,10 +97,10 @@ void func_80075CCC(s32, ...);
 s16 ReadImgPackand(s32);
 void func_80025930(s16, s32, s32);
 s32 func_80076174(void);
-f32 func_800B0CD8(void);
+f32 func_800B0CD8(f32, f32);
 void* ReadMainFS(s32);
 void FreeMainFS(void*);
-s16 LoadFormFile(s32, s32);
+u16 LoadFormFile(s32, s32);
 s16 func_800678A4(void*);
 s16 func_80023FC8(s16);
 void func_80049F0C(void);
