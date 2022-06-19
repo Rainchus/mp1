@@ -4,6 +4,14 @@
 #include "types.h"
 #include "common_structs.h"
 
+void func_80009028(Object*, s32, f32, f32, f32, f32);
+void func_80009090(Object*);
+s32 CreateTextWindow(s32, s32, s32, s32);
+void HideTextWindow(s32);
+void ShowTextWindow(s32);
+void func_8004DBD4(s16, s8);
+void func_8006D7D8(s16, s32, s32, s32);
+void func_8006E070(s16, s32);
 u16 func_800174F4(s32, s32);
 void func_8001775C(Object*, s32, s32);
 void func_800264F8(s16, s16, f32, s32*, s32*, s32);

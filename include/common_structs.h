@@ -116,27 +116,29 @@ typedef struct unkGlobalStruct_00 {
     /* 0x06 */ s16 unk_06;
     /* 0x08 */ s16 unk_08;
     /* 0x0A */ u16 unk_0A;
-    /* 0x0C */ char unk_0C[0x16];                     /* maybe part of unk_0A[0xC]? */
+    /* 0x0C */ char unk_0C[0x16];
     /* 0x22 */ u8 unk_22;
-    /* 0x23 */ char unk_23[0x11];                    /* maybe part of unk_22[0x12]? */
-    /* 0x34 */ f32 unk_34;                           /* inferred */
-    /* 0x38 */ f32 unk_38;                           /* inferred */
+    /* 0x23 */ char unk_23[0x5];
+    /* 0x24 */ struct unkGlobalStruct_00* unk_28;
+    /* 0x28 */ char unk_2C[0x8];
+    /* 0x34 */ f32 unk_34;
+    /* 0x38 */ f32 unk_38;
     /* 0x3C */ f32 unk_3C;
     /* 0x40 */ char unk_40[2];
     /* 0x42 */ u16 unk_42;
-    /* 0x44 */ char unk_44[0xC];                     /* maybe part of unk_42[7]? */
+    /* 0x44 */ char unk_44[0xC];
     /* 0x50 */ f32 unk_50;
     /* 0x54 */ char unk_54[2];
     /* 0x56 */ s8 unk_56;
     /* 0x57 */ s8 unk_57;
     /* 0x58 */ s8 unk_58;
-    /* 0x59 */ char unk_59[0x57];                    /* maybe part of unk_58[0x58]? */
+    /* 0x59 */ char unk_59[0x57];
     /* 0xB0 */ u16 unk_B0;
     /* 0xB2 */ char unk_B2[1];
     /* 0xB3 */ s8 unk_B3;
-    /* 0xB4 */ char unk_B4[0x30];                    /* maybe part of unk_B3[0x31]? */
+    /* 0xB4 */ char unk_B4[0x30];
     /* 0xE4 */ unk_Struct01* unk_E4;
-} unkGlobalStruct_00;                               /* size = 0xE8 */
+} unkGlobalStruct_00; /* size = 0xE8 */
 
 typedef struct Object {
 /* 0x00 */ char unk_00[0x10];
