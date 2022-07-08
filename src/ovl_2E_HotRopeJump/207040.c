@@ -1,4 +1,5 @@
 #include "common.h"
+#include "207040.h"
 
 INCLUDE_ASM(s32, "ovl_2E_HotRopeJump/207040", func_800F65E0_207040);
 
@@ -24,7 +25,14 @@ INCLUDE_ASM(s32, "ovl_2E_HotRopeJump/207040", func_800F8968_2093C8);
 
 INCLUDE_ASM(s32, "ovl_2E_HotRopeJump/207040", func_800F8A14_209474);
 
-INCLUDE_ASM(s32, "ovl_2E_HotRopeJump/207040", func_800F8C08_209668);
+void func_800F8C08_209668(void) {
+    func_800FB328_20BD88();
+    D_800B8980 = D_80100310;
+    D_800B8964 = D_80100314;
+    D_800B8968 = D_80100318;
+    D_800B8994 = D_8010031C;
+    func_800FA60C_20B06C();
+}
 
 INCLUDE_ASM(s32, "ovl_2E_HotRopeJump/207040", func_800F8C68_2096C8);
 

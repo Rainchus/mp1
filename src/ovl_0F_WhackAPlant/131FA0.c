@@ -10,7 +10,35 @@ void func_800F6B8C_13254C(void) {
 
 }
 
-INCLUDE_ASM(s32, "ovl_0F_WhackAPlant/131FA0", func_800F6BC4_132584);
+void func_800F6BC4_132584(Object* arg0) {
+    s16 temp_s2;
+    s32 i;
+
+    D_800FB740 = 0;
+    D_800FB69A = 0;
+    D_800FB6F4 = 0;
+    D_800FB710[1] = 0;
+
+    for (i = 0; i < 9; i++) {
+        temp_s2 = func_8001E00C(-1, 0x68D, 8);
+        D_800ECDE0[temp_s2].unk_02 = D_800FB6BA;
+        func_80025930(D_800ECDE0[temp_s2].unk_00, 0x60000000, 0x60000000);
+        D_800FB6C0[i] = temp_s2;
+        D_800FB6EA[i] = 0;
+    }
+
+    for (i = 0; i < 9; i++) {
+        temp_s2 = func_8001E00C(-1, 0x68D, 8);
+        D_800ECDE0[temp_s2].unk_02 = D_800FB6BC;
+        func_80025930(D_800ECDE0[temp_s2].unk_00, 0x60000000, 0x60000000);
+        D_800FB6D8[i] = temp_s2;
+        func_8001E2F8(temp_s2, 0xE0);
+        func_8001E360(temp_s2, 0xFF, 0xFF, 0xBE);
+    }
+
+    D_800ED430 = 1;
+    arg0->func_ptr = &func_800F6D54_132714;
+}
 
 void func_800F6D54_132714(void) {
     switch (D_800FB740) {
@@ -93,24 +121,21 @@ void func_800F7F90_133950(Object* arg0) {
 }
 
 
-#ifdef NON_MATCHING
 void func_800F8098_133A58(Object* arg0) {
-    if ((D_800FB61E++) < 0x5A) {
+    u16 temp = (++D_800FB61E);
+    if (temp < 0x5A) {
         arg0->unk_1C += -2.7777777f;
     }
     
     if (D_800FB620 != 0) {
-        if (!(D_800FB620--)) {
+        u16 temp2 = (--D_800FB620); 
+        if (!temp2) {
             func_80060540(0x24B, 0);
         }
     }
     
     func_80017DB0(arg0);
 }
-#else
-INCLUDE_ASM(s32, "ovl_0F_WhackAPlant/131FA0", func_800F8098_133A58);
-#endif
-
 
 INCLUDE_ASM(s32, "ovl_0F_WhackAPlant/131FA0", func_800F8134_133AF4);
 

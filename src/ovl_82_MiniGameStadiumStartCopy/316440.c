@@ -1,8 +1,28 @@
 #include "common.h"
+#include "316440.h"
 
-INCLUDE_ASM(s32, "ovl_82_MiniGameStadiumStartCopy/316440", func_800F65E0_316440);
+void func_800F65E0_316440(void) {
+    func_8005CF30(50, 10);
+    func_800F7880_3176E0();
+    func_800F77E0_317640();
+    func_8006CEA0();
+    func_8005DC28(&func_800F76E0_317540, 0x300, 0x2000, 0);
+    func_8005D384(0x1000, 0, 0, -1, &func_800F7794_3175F4);
+}
 
-INCLUDE_ASM(s32, "ovl_82_MiniGameStadiumStartCopy/316440", func_800F6650_3164B0);
+void func_800F6650_3164B0(s32 arg0, s32 arg1) {
+    playerMain* temp_s0;
+    playerMain* temp_s1;
+    void* temp_s2;
+
+    temp_s1 = GetPlayerStruct(arg0);
+    temp_s2 = GetPlayerStruct(arg1);
+    temp_s0 = MallocPerm(sizeof(playerMain));
+    func_8008C040(temp_s1, temp_s0, sizeof(playerMain));
+    func_8008C040(temp_s2, temp_s1, sizeof(playerMain));
+    func_8008C040(temp_s0, temp_s2, sizeof(playerMain));
+    FreePerm(temp_s0);
+}
 
 INCLUDE_ASM(s32, "ovl_82_MiniGameStadiumStartCopy/316440", func_800F66D8_316538);
 

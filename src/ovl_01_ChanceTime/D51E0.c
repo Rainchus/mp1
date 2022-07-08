@@ -130,7 +130,56 @@ void func_800F99D8_D85D8(Object* arg0) {
     arg0->func_ptr = &func_800F8A6C_D766C;
 }
 
-INCLUDE_ASM(s32, "ovl_01_ChanceTime/D51E0", func_800F9B50_D8750);
+void func_800F9B50_D8750(void) {
+    s16 var_s0;
+    s32 tmp;
+
+    var_s0 = CreateTextWindow(0x46, 0x3C, 0x10, 4);
+
+    ShowTextWindow(var_s0);
+    if (D_8010175C == 0) {
+        func_8006DA5C(var_s0, D_80101330[D_800F32B0[D_801012E0].characterID], 0);
+        func_8006DA5C(var_s0, D_80101330[D_800F32B0[D_801012E1].characterID], 1);
+    } else {
+        func_8006DA5C(var_s0, D_80101330[D_800F32B0[D_801012E1].characterID], 0);
+        func_8006DA5C(var_s0, D_80101330[D_800F32B0[D_801012E0].characterID], 1);
+    }
+
+    if (D_801011F6 == 0) {
+        func_8006DA5C(var_s0, &D_80101480, 2);
+    } else {
+        func_8006DA5C(var_s0, &D_80101488, 2);
+    }
+
+    tmp = D_801012E2;
+
+    switch(tmp)
+    {
+        case 4:
+        func_8006D7D8(var_s0, 0xF0, -1, -1);
+        break;
+        case 0:
+        case 1:
+        func_8006D7D8(var_s0, 0xEE, -1, -1);
+        break;
+        case 10:
+        func_8006D7D8(var_s0, 0xF4, -1, -1);
+        break;
+        default:
+        func_8006D7D8(var_s0, 0xED, -1, -1);
+        break;
+    }
+    
+    
+    func_8006E070(var_s0, 0);
+    WaitForTextConfirmation(var_s0);
+    HideTextWindow(var_s0);
+    D_801011F5 = 1;
+
+    while (1) {
+        func_800635B4();
+    }
+}
 
 INCLUDE_ASM(s32, "ovl_01_ChanceTime/D51E0", func_800F9D60_D8960);
 
