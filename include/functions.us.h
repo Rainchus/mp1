@@ -4,6 +4,12 @@
 #include "types.h"
 #include "common_structs.h"
 
+void func_8005D96C(Object*, f32, f32, f32);
+void func_8005D97C(Object*, f32, f32, f32);
+void func_8001D240(s32);
+void func_8005AD18(void);
+void func_80062450(void);
+s32 func_8005CE48(s32);
 playerMain* GetPlayerStruct(s32 playerIndex);
 void func_8008C040(playerMain*, playerMain*, s32);
 void WaitForTextConfirmation(s16);
@@ -130,7 +136,7 @@ void func_80049F0C(void);
 void func_8004A140(void);
 void func_800544E4(void);
 void func_80054834(s32, s32);
-void func_8005DC28(void*, s32, s32, s32);
+s32 func_8005DC28(void*, s32, s32, s32);
 void func_80060128(s32);
 void func_8006CEA0(void);
 void func_80072644(s32, s32);

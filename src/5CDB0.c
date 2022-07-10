@@ -1,5 +1,7 @@
 #include "common.h"
 
+extern s8 D_800F37BC[];
+
 INCLUDE_ASM(s32, "5CDB0", func_8005C1B0);
 
 INCLUDE_ASM(s32, "5CDB0", func_8005C208);
@@ -46,7 +48,25 @@ INCLUDE_ASM(s32, "5CDB0", func_8005CE48);
 
 INCLUDE_ASM(s32, "5CDB0", func_8005CE8C);
 
-INCLUDE_ASM(s32, "5CDB0", func_8005CEDC);
+void func_8005CEDC(s32 arg0) {
+    s32 temp_a1;
+    s32 var_v0;
+
+    if (arg0 < 0) {
+        var_v0 = arg0 + 7;
+    } else {
+        var_v0 = arg0;
+    }
+    
+    temp_a1 = var_v0 >> 3;
+    var_v0 = arg0;
+    
+    if (arg0 < 0) {
+        var_v0 = arg0 + 7;
+    }
+    
+    D_800F37BC[temp_a1] = D_800F37BC[temp_a1] & ~(1 << (arg0 - ((var_v0 >> 3) * 8)));
+}
 
 INCLUDE_ASM(s32, "5CDB0", func_8005CF30);
 

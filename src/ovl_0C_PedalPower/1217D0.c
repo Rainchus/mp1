@@ -106,8 +106,8 @@ void func_800F6D2C_121F1C(Object* arg0) {
     arg0->func_ptr = (*func_800F6ED0_1220C0);
     arg0->unk_40->unk_00.unsigned16[0] = LoadFormFile(0xA0088, 0x649);
     func_80009340(arg0, 1, 0x26, 0x64D, 8);
-    func_8001E360(temp_s1->unk_22, 255, 255, 255);
-    func_8001E2F8(temp_s1->unk_22, 255);
+    func_8001E360(temp_s1->unk_20.b[2], 255, 255, 255);
+    func_8001E2F8(temp_s1->unk_20.b[2], 255);
     func_80025EB4(arg0->unk_40->unk_00.unsigned16[0], 2, 1);
     func_80021240(arg0->unk_40->unk_00.unsigned16[0]);
     func_80025798(arg0->unk_40->unk_00.unsigned16[0], arg0->unk_18, arg0->unk_1C, arg0->unk_20);

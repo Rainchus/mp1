@@ -1,10 +1,71 @@
 #include "common.h"
+#include "29B410.h"
 
-INCLUDE_ASM(s32, "ovl_61_OpeningScene/29B410", func_800F65E0_29B410);
+void func_800F65E0_29B410(void) {
+    Vec3s sp18;
+    Vec3s sp28;
+    Object* temp_s0;
 
-INCLUDE_ASM(s32, "ovl_61_OpeningScene/29B410", func_800F6788_29B5B8);
+    func_80062450();
+    D_800C5972 = 0;
+    D_800C59A6 = -1;
+    D_800F64F2 = 1;
+    func_8001D240(1);
+    func_80029090(1);
+    func_8001DE70(25);
+    func_8005CF30(50, 20);
+    func_80060088();
+    func_8006CEA0();
+    func_8005AD18();
+    
+    sp18 = D_800FD4A0;
+    sp28 = D_800FD4AC;
 
-INCLUDE_ASM(s32, "ovl_61_OpeningScene/29B410", func_800F6804_29B634);
+    func_800FB670_2A04A0(&sp18, &sp28, 1200.0f);
+    func_800FB7F8_2A0628(20.0f, 80.0f, 8000.0f);
+    temp_s0 = func_8005D384(0x7FDA, 0, 0, -1, func_800FB810_2A0640);
+    func_8005D8B8(temp_s0, 0xA0);
+    func_800FB810_2A0640(temp_s0);
+    func_80023448(3);
+    func_800234B8(0, 0x78, 0x78, 0x78);
+    func_800234B8(1, 0x40, 0x40, 0x60);
+    func_80023504(1, 50.0f, 50.0f, 100.0f);
+    func_800234B8(2, 0, 0, 0);
+    func_800234B8(3, 0, 0, 0);
+    D_800FD730[1] = func_8005DC28(&func_800FB86C_2A069C, 0x300, 0x2000, 0);
+}
+
+void func_800F6788_29B5B8(Object* arg0) {
+    s32 pad[2]; //required to match stack alignment
+    
+    if (arg0->unk_4D != 0) {
+        arg0->unk_4D--;
+        return;
+    }
+    
+    arg0->unk_4C++;
+    
+    if (arg0->unk_4C >= 7) {
+        arg0->unk_4C = 0;
+    }
+    
+    arg0->unk_4D = 0x50;
+    
+    func_800FBD48_2A0B78(D_80110460, D_80110448[arg0->unk_4C] + 12, 40.0f);
+}
+
+Object* func_800F6804_29B634(unkGlobalStruct_00* arg0) {
+    Object* temp_s0;
+
+    temp_s0 = func_8005D384(0x1000, 0, 0, -1, &func_800F6788_29B5B8);
+    func_8005D96C(temp_s0, 0, 0, 0);
+    func_8005D97C(temp_s0, arg0->unk_18 + arg0->unk_0C, arg0->unk_1C + arg0->unk_10, arg0->unk_20.floatingPoint + arg0->unk_14);
+    func_8005D95C(temp_s0, D_80110450->unk_0C, D_80110450->unk_10, D_80110450->unk_14);
+    temp_s0->unk_4C = 2;
+    temp_s0->unk_4D = 48;
+    temp_s0->unk_50 = arg0;
+    return temp_s0;
+}
 
 INCLUDE_ASM(s32, "ovl_61_OpeningScene/29B410", func_800F68D4_29B704);
 
