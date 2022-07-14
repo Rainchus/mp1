@@ -114,24 +114,86 @@ void func_80052D34() {
     }
 }
 
-INCLUDE_ASM(s32, "53680", func_80052DC8);
+void func_80052DC8(s16 index, void *param_2) {
+    u8 character;
+    Process* process;
 
-INCLUDE_ASM(s32, "53680", func_80052E84);
+    playerMain* player = GetPlayerStruct(index);
+    player->playerIndex = index;
 
-INCLUDE_ASM(s32, "53680", func_80052ECC);
+    // This was hard to match, seems awkward still.
+    if (D_800D8380 != 0) {
+        if (PlayerIsCurrent(index) != 0) {
+            character = player->characterID;
+        }
+        else {
+            character = func_80052F6C(index);
+        }
+    }
+    else {
+        character = player->characterID;
+    }
 
-INCLUDE_ASM(s32, "53680", func_80052F04);
+    player->playerObj = func_8003DBE0(character, param_2);
 
-INCLUDE_ASM(s32, "53680", func_80052F34);
+    process = InitProcess(func_80052D34, 0x5000, 0, 0);
+    player->process = process;
+    process->user_data = player;
+}
 
-INCLUDE_ASM(s32, "53680", func_80052F6C);
+void func_80052E84(s16 index) {
+    playerMain* player = GetPlayerStruct(index);
+    func_80052DC8(index, D_800C5490[player->characterID]);
+}
 
-INCLUDE_ASM(s32, "53680", func_80052F9C);
+void func_80052ECC(s16 index, u8 param_2) {
+    playerMain* player = GetPlayerStruct(index);
+    func_8003E1BC(player->playerObj, param_2);
+}
 
-INCLUDE_ASM(s32, "53680", func_80052FD4);
+u8 func_80052F04(s16 index) {
+    playerMain* player = GetPlayerStruct(index);
+    return D_800C54A8[player->characterID];
+}
 
-INCLUDE_ASM(s32, "53680", func_80053020);
+void func_80052F34(s16 index) {
+    u8 var1 = func_80052F04(index);
+    func_80052ECC(index, var1);
+}
 
-INCLUDE_ASM(s32, "53680", func_80053064);
+u8 func_80052F6C(s16 index) {
+    playerMain* player = GetPlayerStruct(index);
+    return D_800C54B0[player->characterID];
+}
 
-INCLUDE_ASM(s32, "53680", func_80053074);
+void func_80052F9C(s16 index) {
+    u8 var1 = func_80052F6C(index);
+    func_80052ECC(index, var1);
+}
+
+void func_80052FD4(s16 index) {
+    playerMain* player = GetPlayerStruct(index);
+    if (player->playerObj != NULL) {
+        EndProcess(player->process);
+        func_8003E694(player->playerObj);
+        player->playerObj = NULL;
+    }
+}
+
+void func_80053020() {
+    s32 i;
+    playerMain* player;
+
+    for (i = 0; i < 4; i++) {
+        player = GetPlayerStruct(i);
+        player->playerObj = NULL;
+    }
+    D_800D8380 = 0;
+}
+
+void func_80053064() {
+    D_800D8380 = 1;
+}
+
+void func_80053074() {
+}

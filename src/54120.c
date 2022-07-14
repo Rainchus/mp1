@@ -100,7 +100,7 @@ void func_80055D28(void) {
         func_800672DC(D_800D84E4, 0, (lives / 10), 0);
         func_800672B0(D_800D84E4, 1, 1);
         func_800672DC(D_800D84E4, 1, (lives % 10), 0);
-        func_800635B4();      
+        SleepVProcess();      
     }
 }
 

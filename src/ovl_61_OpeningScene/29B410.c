@@ -32,7 +32,7 @@ void func_800F65E0_29B410(void) {
     func_80023504(1, 50.0f, 50.0f, 100.0f);
     func_800234B8(2, 0, 0, 0);
     func_800234B8(3, 0, 0, 0);
-    D_800FD730[1] = func_8005DC28(&func_800FB86C_2A069C, 0x300, 0x2000, 0);
+    D_800FD730[1] = InitProcess(&func_800FB86C_2A069C, 0x300, 0x2000, 0);
 }
 
 void func_800F6788_29B5B8(Object* arg0) {

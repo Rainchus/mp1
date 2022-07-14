@@ -21,7 +21,7 @@ void func_800F65E0_29AB30(void) {
     func_800546B4(2, gPlayers[2].turn_status);
     func_800546B4(3, gPlayers[3].turn_status);
     func_8006CEA0();
-    func_8005DC28(&func_800F66C4_29AC14, 0x300, 0, 0);
+    InitProcess(&func_800F66C4_29AC14, 0x300, 0, 0);
     func_8005D384(0x1000, 0, 0, -1, &func_800F6978_29AEC8);
     func_80072644(1, 0x10);
 }
@@ -68,7 +68,7 @@ void func_800F66C4_29AC14(void) {
     func_80063550(20);
     D_800F5144 = 1;
     while (1) {
-        func_800635B4();
+        SleepVProcess();
     }
 }
 

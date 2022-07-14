@@ -22,11 +22,11 @@ void func_800F6684_2417E4(void) {
 void func_800F66AC_24180C(void) {
     func_8005DFB8(1);
     func_8005E3A8();
-    func_800635B4();
+    SleepVProcess();
 }
 
 void func_800F66D8_241838(void) {
     func_8005CF30(10, 10);
     func_80060088();
-    func_8005DC28((*func_800F66AC_24180C), 0x1005, 0, 0);
+    InitProcess((*func_800F66AC_24180C), 0x1005, 0, 0);
 }

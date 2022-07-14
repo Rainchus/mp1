@@ -12,7 +12,7 @@ void func_800F65E0_2592A0(void) {
     func_80054834(2, 0x1C);
     func_80054834(3, 0x1C);
     func_8006CEA0();
-    func_8005DC28((*func_800F66AC_25936C), 0x300, 0, 0);
+    InitProcess((*func_800F66AC_25936C), 0x300, 0, 0);
     func_8005D384(0x1000, 0, 0, -1, (*func_800F6F5C_259C1C));
     func_80060128(0x13);
     func_80072644(1, 0x10);

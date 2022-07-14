@@ -177,7 +177,7 @@ void func_800F9B50_D8750(void) {
     D_801011F5 = 1;
 
     while (1) {
-        func_800635B4();
+        SleepVProcess();
     }
 }
 

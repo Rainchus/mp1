@@ -73,3 +73,6 @@ gPlayers = 0x800F32B0;
 SetPlayerAnimation = 0x80052BE8;
 GetCurrentProcess = 0x800633A8;
 SleepVProcess = 0x800635B4;
+InitProcess = 0x8005DC28;
+EndProcess = 0x8005DD90;
+CallProcess = 0x80063610;

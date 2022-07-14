@@ -112,6 +112,34 @@ typedef struct Object {
 /* 0x50 */ unkGlobalStruct_00* unk_50;
 } Object; //sizeof 0x54
 
+typedef struct jump_buf
+{
+    void *sp;
+    void *func;
+    u32 regs[21];
+} jmp_buf;
+
+typedef void (*process_func)();
+
+typedef struct Process {
+    /*0x00*/ struct process *next;
+    /*0x04*/ struct process *youngest_child;
+    /*0x08*/ struct process *oldest_child;
+    /*0x0C*/ struct process *relative;
+    /*0x10*/ struct process *parent_oldest_child;
+    /*0x14*/ struct process *new_process;
+    /*0x18*/ void *heap;
+    /*0x1C*/ u16 exec_mode;
+    /*0x1E*/ u16 stat;
+    /*0x20*/ u16 priority;
+    /*0x22*/ s16 dtor_idx;
+    /*0x24*/ s32 sleep_time;
+    /*0x28*/ void *base_sp;
+    /*0x2C*/ jmp_buf prc_jump;
+    /*0x88*/ process_func destructor;
+    /*0x8C*/ void *user_data;
+} Process;
+
 typedef struct playerMain {
 /* 0x00 */ char unk_00;
 /* 0x01 */ u8 cpuDifficulty;
@@ -131,7 +159,7 @@ typedef struct playerMain {
 /* 0x17 */ u8 turn_status; //space type player landed on
 /* 0x18 */ u8 playerIndex; //0, 1, 2, or 3
 /* 0x19 */ char unk_19[3]; //likely padding
-/* 0x1C */ void* unk_1C; //some heap instance
+/* 0x1C */ Process* process; //some heap instance
 /* 0x20 */ Object* playerObj; //ptr to playerObj on heap
 /* 0x24 */ u16 totalMinigameCoins;
 /* 0x26 */ s16 coinPeak;
@@ -199,33 +227,5 @@ typedef struct HeapNode {
     struct HeapNode* prev;
     struct HeapNode* next;
 } HeapNode;
-
-typedef struct jump_buf
-{
-    void *sp;
-    void *func;
-    u32 regs[21];
-} jmp_buf;
-
-typedef void (*process_func)();
-
-typedef struct Process {
-    /*0x00*/ struct process *next;
-    /*0x04*/ struct process *youngest_child;
-    /*0x08*/ struct process *oldest_child;
-    /*0x0C*/ struct process *relative;
-    /*0x10*/ struct process *parent_oldest_child;
-    /*0x14*/ struct process *new_process;
-    /*0x18*/ void *heap;
-    /*0x1C*/ u16 exec_mode;
-    /*0x1E*/ u16 stat;
-    /*0x20*/ u16 priority;
-    /*0x22*/ s16 dtor_idx;
-    /*0x24*/ s32 sleep_time;
-    /*0x28*/ void *base_sp;
-    /*0x2C*/ jmp_buf prc_jump;
-    /*0x88*/ process_func destructor;
-    /*0x8C*/ void *user_data;
-} Process;
 
 #endif
