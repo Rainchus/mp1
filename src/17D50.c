@@ -33,7 +33,7 @@ void func_80017150(DecodeStruct* decode) { //DecodeNone
 
 INCLUDE_ASM(s32, "17D50", func_800171EC);
 
-void func_8001745C(void* src, void* dest, s32 len, s32 decode_type) { //DecodeFile
+void DecodeFile(void* src, void* dest, s32 len, s32 decode_type) {
     DecodeStruct decode_struct;
     DecodeStruct* decode_ptr = &decode_struct;
     decode_struct.src = (u8 *)src;

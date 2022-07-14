@@ -4,12 +4,16 @@
 #include "types.h"
 #include "common_structs.h"
 
+void SleepVProcess(void);
+Process* GetCurrentProcess(void);
+void func_8003E8B8(Object* ptr, s16 a, s16 b, s16 c, u16 d);
+void DecodeFile(void* src, void* dest, s32 len, s32 decode_type);
+void* MallocTemp(u32 size);
 void bcopy(void*, void*, int);
 s32 bcmp(void*, void*, int);
 void bzero(void*, s32);
-void func_80061FE8(u8*, u8*, s32);
+void func_80061FE8(u8*, void*, s32);
 void func_80021B14(s16, u8, s32);
-void func_8003E81C(void*, s32, s32);
 void func_800421E0(void);
 void func_8004EE14(s32, f32*, s32, void*);
 void func_8004F00C(void*, s32, f32);
@@ -18,7 +22,7 @@ void func_8004F4D4(void*, s32, s32);
 void func_80055960(u8, s32);
 void func_80060468(s32, u8);
 void func_80063550(s32);
-void func_8003E81C(void*, s32, s32);
+void func_8003E81C(void*, s32, u16);
 void func_800421E0(void);
 void func_8004E3E0(s32, f32*, s32, void*);
 void func_8004F00C(void*, s32, f32);

@@ -143,7 +143,7 @@ void func_800F7874_CECE4(unk_801DEC9C* arg0) {
     case 0:
         func_80075CCC(2);
         if (D_800FE30E < 2) {
-            D_800F32B0[D_800FE30C].miniGameCoins += 2;
+            gPlayers[D_800FE30C].miniGameCoins += 2;
         }
         D_800FD878++;
         break;

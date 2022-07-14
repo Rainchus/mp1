@@ -103,7 +103,7 @@ void func_800F6E50_1D9F00(Object* arg0) {
         func_80075CCC(2);
         temp_v1_2 = &D_800FD9C0[D_800FDC1E];
         if ((temp_v1_2->unk_00 != 0) && (temp_v1_2->unk_04 != 0x200)) {
-            D_800F32B0[D_800FDC1E].miniGameCoins += 10;
+            gPlayers[D_800FDC1E].miniGameCoins += 10;
         }
         D_800FD5CE++;
         return;

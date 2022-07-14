@@ -50,5 +50,5 @@ INCLUDE_ASM(s32, "ovl_7D_MinigameIslandMISS/30C540", func_800F9008_30EF68);
 INCLUDE_ASM(s32, "ovl_7D_MinigameIslandMISS/30C540", func_800F9020_30EF80);
 
 s32 func_800F90F0_30F050(s16 arg0) {
-    return (D_800F91B0[arg0].unk_00 > D_800F32B0[0].miniGameCoins) ^ 1;
+    return (D_800F91B0[arg0].unk_00 > gPlayers[0].miniGameCoins) ^ 1;
 }

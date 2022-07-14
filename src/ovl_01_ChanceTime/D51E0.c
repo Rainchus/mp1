@@ -12,7 +12,7 @@ void func_800F7818_D6418(s32 arg0) {
     s32 temp_a1;
     s32 temp_a2;
 
-    temp_v0 = D_800F32B0[D_80101AAE].characterID;
+    temp_v0 = gPlayers[D_80101AAE].characterID;
     temp_a1 = D_800C59AC[temp_v0].unk_00;
     temp_a2 = D_800C59AC[temp_v0].unk_04;
     
@@ -34,7 +34,7 @@ void func_800F80D8_D6CD8(s32 arg0) {
     s32 temp2;
     s32 temp3;
 
-    temp_v1 = D_800F32B0[D_80101AAF].characterID;
+    temp_v1 = gPlayers[D_80101AAF].characterID;
     temp2 = D_800C59AC[temp_v1].unk_00;
     temp3 = D_800C59AC[temp_v1].unk_04;
     func_800F7E08_D6A08(arg0, temp2, temp3, D_80101AAF, -800.0f, 10.0f, 800.0f);
@@ -45,7 +45,7 @@ void func_800F8168_D6D68(s32 arg0) {
     s32 temp2;
     s32 temp3;
 
-    temp_v1 = D_800F32B0[D_80101AB0].characterID;
+    temp_v1 = gPlayers[D_80101AB0].characterID;
     temp2 = D_800C59AC[temp_v1].unk_00;
     temp3 = D_800C59AC[temp_v1].unk_04;
     func_800F7E08_D6A08(arg0, temp2, temp3, D_80101AB0, -700.0f, 10.0f, 800.0f);
@@ -56,7 +56,7 @@ void func_800F81F8_D6DF8(s32 arg0) {
     s32 temp2;
     s32 temp3;
 
-    temp_v1 = D_800F32B0[D_80101AB1].characterID;
+    temp_v1 = gPlayers[D_80101AB1].characterID;
     temp2 = D_800C59AC[temp_v1].unk_00;
     temp3 = D_800C59AC[temp_v1].unk_04;
     func_800F7E08_D6A08(arg0, temp2, temp3, D_80101AB1, -600.0f, 10.0f, 800.0f);
@@ -138,11 +138,11 @@ void func_800F9B50_D8750(void) {
 
     ShowTextWindow(var_s0);
     if (D_8010175C == 0) {
-        func_8006DA5C(var_s0, D_80101330[D_800F32B0[D_801012E0].characterID], 0);
-        func_8006DA5C(var_s0, D_80101330[D_800F32B0[D_801012E1].characterID], 1);
+        func_8006DA5C(var_s0, D_80101330[gPlayers[D_801012E0].characterID], 0);
+        func_8006DA5C(var_s0, D_80101330[gPlayers[D_801012E1].characterID], 1);
     } else {
-        func_8006DA5C(var_s0, D_80101330[D_800F32B0[D_801012E1].characterID], 0);
-        func_8006DA5C(var_s0, D_80101330[D_800F32B0[D_801012E0].characterID], 1);
+        func_8006DA5C(var_s0, D_80101330[gPlayers[D_801012E1].characterID], 0);
+        func_8006DA5C(var_s0, D_80101330[gPlayers[D_801012E0].characterID], 1);
     }
 
     if (D_801011F6 == 0) {

@@ -235,7 +235,7 @@ void func_800FAA18_129508(s32 arg0) {
     if (func_80072718() == 0) {
         for (i = 0; i < 4; i++) {
             if (func_800FAAB0_1295A0(i, 0x4000) == 0) {
-                D_800F32B0[i].miniGameCoins += 10; 
+                gPlayers[i].miniGameCoins += 10; 
             }
         }
         func_800601D4(0x28);

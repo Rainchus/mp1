@@ -11,7 +11,7 @@ void func_800F65E0_191700(void) {
     D_800FCD1E = 4;
     
     for (i = 0; i < 4; i++) {
-        if (D_800F32B0[i].unk_06 & 1) {
+        if (gPlayers[i].unk_06 & 1) {
             D_800FCD1E--;
         }
     }

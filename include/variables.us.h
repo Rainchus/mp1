@@ -3,7 +3,7 @@
 extern Addr D_FE2310;
 extern u16 D_800F5144;
 extern s16 D_800C597A;
-extern playerMain D_800F32B0[4];
+extern playerMain gPlayers[4];
 extern u8 D_800ED5C3;
 extern s16 D_800FE150;
 extern u8 D_800FD86E;

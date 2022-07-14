@@ -132,7 +132,7 @@ void func_800F9908_149528(Object* arg0) {
     
     D_800FA2F4_120524 = -1;
     D_800FA2F8 = 0;
-    D_800FA2FC = D_800F32B0[temp->unk_58].cpuDifficulty;
+    D_800FA2FC = gPlayers[temp->unk_58].cpuDifficulty;
     D_800FA2F0 = 0;
 }
 
