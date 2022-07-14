@@ -1,6 +1,8 @@
 #include "common.h"
 #include "D51E0.h"
 
+void func_8004DBD4(s16, s8);
+
 INCLUDE_ASM(s32, "ovl_01_ChanceTime/DD760", func_800FEB60_DD760);
 
 INCLUDE_ASM(s32, "ovl_01_ChanceTime/DD760", func_800FEBA0_DD7A0);

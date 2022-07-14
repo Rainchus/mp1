@@ -1184,9 +1184,8 @@ segments:
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
-      - [0x29AB30, c]
-  - type: bin
-    start: 0x29B280
+    - [0x29AB30, c]
+    #- [0x29B280, .rodata, 29B280]
   - type: code
     start: 0x29B410
     vram: 0x800F65E0

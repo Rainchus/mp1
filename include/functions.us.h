@@ -4,6 +4,25 @@
 #include "types.h"
 #include "common_structs.h"
 
+void func_80021B14(s16, u8, s32);
+void func_8003E81C(void*, s32, s32);
+void func_800421E0(void);
+void func_8004EE14(s32, f32*, s32, void*);
+void func_8004F00C(void*, s32, f32);
+void func_8004F044(void*);
+void func_8004F4D4(void*, s32, s32);
+void func_80055960(u8, s32);
+void func_80060468(s32, u8);
+void func_80063550(s32);
+void func_8003E81C(void*, s32, s32);
+void func_800421E0(void);
+void func_8004E3E0(s32, f32*, s32, void*);
+void func_8004F00C(void*, s32, f32);
+void func_8004F044(void*);
+void func_8004F4D4(void*, s32, s32);
+void func_80055960(u8, s32);
+void func_80060468(s32, u8);
+void func_80063550(s32);
 void func_8005D96C(Object*, f32, f32, f32);
 void func_8005D97C(Object*, f32, f32, f32);
 void func_8001D240(s32);
@@ -21,7 +40,6 @@ void func_80009090(Object*);
 void HideTextWindow(s16);
 s32 CreateTextWindow(s32, s32, s32, s32);
 void ShowTextWindow(s16);
-void func_8004DBD4(s16, s8);
 void func_8006D7D8(s16, s32, s32, s32);
 void func_8006E070(s16, s32);
 u16 func_800174F4(s32, s32);
