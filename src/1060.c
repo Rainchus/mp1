@@ -1,16 +1,16 @@
 #include "common.h"
 //import libultra and this file matches
 
-extern void osInitialize(void);
-extern void thread3_main(void *arg);
+// extern void osInitialize(void);
+// extern void thread3_main(void *arg);
 
-extern OSThread gInitThread;
-extern u8 gThread1Stack[];
-extern OSThread gMainThread;
-extern u8 gThread3Stack[];
+// extern OSThread gInitThread;
+// extern u8 gThread1Stack[];
+// extern OSThread gMainThread;
+// extern u8 gThread3Stack[];
 
-void ultraMain(void);
-void thread1_idle(void *arg);
+// void ultraMain(void);
+// void thread1_idle(void *arg);
 
 INCLUDE_ASM(s32, "1060", ultraMain);
 // void ultraMain(void) {
