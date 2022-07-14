@@ -127,7 +127,7 @@ void func_800F6B8C_29B0DC(void) {
             var_a0 = 9;
         }
         break;
-    case 3:                                         /* switch 1 */
+    case 3:
         switch (D_800F32B0[D_800F6EC1].curChainIndex) {
         case 2:
             var_a0 = 29;

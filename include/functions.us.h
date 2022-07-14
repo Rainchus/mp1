@@ -4,6 +4,10 @@
 #include "types.h"
 #include "common_structs.h"
 
+void bcopy(void*, void*, int);
+s32 bcmp(void*, void*, int);
+void bzero(void*, s32);
+void func_80061FE8(u8*, u8*, s32);
 void func_80021B14(s16, u8, s32);
 void func_8003E81C(void*, s32, s32);
 void func_800421E0(void);

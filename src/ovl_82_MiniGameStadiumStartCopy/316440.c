@@ -18,9 +18,9 @@ void func_800F6650_3164B0(s32 arg0, s32 arg1) {
     temp_s1 = GetPlayerStruct(arg0);
     temp_s2 = GetPlayerStruct(arg1);
     temp_s0 = MallocPerm(sizeof(playerMain));
-    func_8008C040(temp_s1, temp_s0, sizeof(playerMain));
-    func_8008C040(temp_s2, temp_s1, sizeof(playerMain));
-    func_8008C040(temp_s0, temp_s2, sizeof(playerMain));
+    bcopy(temp_s1, temp_s0, sizeof(playerMain));
+    bcopy(temp_s2, temp_s1, sizeof(playerMain));
+    bcopy(temp_s0, temp_s2, sizeof(playerMain));
     FreePerm(temp_s0);
 }
 

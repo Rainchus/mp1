@@ -192,4 +192,12 @@ typedef struct cameraPosition {
 /* 0x08 */ f32 z;
 } cameraPosition;
 
+typedef struct HeapNode {
+    s32 size;
+    u8 heap_constant;
+    u8 used; // bool
+    struct HeapNode* prev;
+    struct HeapNode* next;
+} HeapNode;
+
 #endif
