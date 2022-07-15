@@ -64,7 +64,7 @@ void func_800618A4(unk62140* arg0) {
     }
 }
 
-s32 func_80061930(s16 arg0, s32* arg1, s32* arg2, s32* arg3) { //matches but type issues
+s32 func_80061930(s16 arg0, s32* arg1, s32* arg2, s32* arg3) {
     Vec3s sp10;
     unk62140_2 sp20;
     sp20.unk_00 = arg0;
@@ -163,9 +163,7 @@ void func_8006248C(s8 arg0, s8 arg1, s8 arg2) {
     D_800F09E4.unk_00 = arg0;
     D_800F09E4.unk_01 = arg1;
     D_800F09E4.unk_02 = arg2;
-    D_800F09E4.unk_05 = 0;
-    D_800F09E4.unk_04 = 0;
-    D_800F09E4.unk_03 = 0;
+    D_800F09E4.unk_03 = D_800F09E4.unk_04 = D_800F09E4.unk_05 = 0;
     D_800EE310 = 1;
 }
 
@@ -185,9 +183,21 @@ void func_80062500(void) {
     D_800F09E4.unk_03 = D_800F09E4.unk_04 = D_800F09E4.unk_05 = 0;
 }
 
-INCLUDE_ASM(s32, "62140", func_80062518);
+void func_80062518(void) {
+    D_800EE310 = 0;
+}
 
-INCLUDE_ASM(s32, "62140", func_80062524);
+void func_80062524(s16 arg0, u8* arg1) {
+    u8* temp_v0;
+    
+    if (&D_800D9378[arg0] != NULL) {
+        temp_v0 = (u8*)&D_800D9378[arg0];
+        for (; *arg1 != 0; temp_v0++, arg1++) {
+            *temp_v0 = *arg1;
+        }
+        *temp_v0 = 0;
+    }
+}
 
 INCLUDE_ASM(s32, "62140", func_8006257C);
 

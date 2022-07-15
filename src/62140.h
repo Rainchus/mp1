@@ -41,6 +41,12 @@ typedef struct unk62140_3 {
 /* 0x06 */ s8 unk_0C;
 } unk62140_3;
 
+typedef struct unkStruct_zz {
+    s32 unk_00;
+    char unk_04[0x44];
+} unkStruct_zz;
+
+extern unkStruct_zz D_800D9378[];
 
 void func_800642FC(Vec3s*, void*, void*, s32); //maybe incorrect
 void func_800618A4(unk62140* arg0);
