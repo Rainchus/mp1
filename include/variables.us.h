@@ -1,5 +1,10 @@
 #include "types.h"
 
+#define EXEC_PROCESS_DEFAULT 0
+#define EXEC_PROCESS_SLEEPING 1
+#define EXEC_PROCESS_WATCH 2
+#define EXEC_PROCESS_DEAD 3
+
 extern Addr D_FE2310;
 extern u16 D_800F5144;
 extern s16 D_800C597A;
@@ -27,5 +32,9 @@ extern s16 D_800F6EE2;
 extern s32 D_800EDEC0;
 extern u8 D_800F37F0;
 extern s16 D_800F3FA8;
+extern s16 process_count;
+extern Process* top_process;
+extern jmp_buf process_jmp_buf; // 800E2370
+extern Process* current_process;
 
 extern unk_800ECDE0* D_800ECDE0;

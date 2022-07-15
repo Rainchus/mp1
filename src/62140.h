@@ -42,7 +42,7 @@ typedef struct unk62140_3 {
 } unk62140_3;
 
 
-void func_800642FC(Vec3f*, void*, s16*, s32); //maybe incorrect
+void func_800642FC(Vec3s*, void*, void*, s32); //maybe incorrect
 void func_800618A4(unk62140* arg0);
 s32 func_80061714(void);
 s32 func_80061784(s16* arg0);

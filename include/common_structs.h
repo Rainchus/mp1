@@ -122,12 +122,12 @@ typedef struct jump_buf
 typedef void (*process_func)();
 
 typedef struct Process {
-    /*0x00*/ struct process *next;
-    /*0x04*/ struct process *youngest_child;
-    /*0x08*/ struct process *oldest_child;
-    /*0x0C*/ struct process *relative;
-    /*0x10*/ struct process *parent_oldest_child;
-    /*0x14*/ struct process *new_process;
+    /*0x00*/ struct Process *next;
+    /*0x04*/ struct Process *youngest_child;
+    /*0x08*/ struct Process *oldest_child;
+    /*0x0C*/ struct Process *relative;
+    /*0x10*/ struct Process *parent_oldest_child;
+    /*0x14*/ struct Process *new_process;
     /*0x18*/ void *heap;
     /*0x1C*/ u16 exec_mode;
     /*0x1E*/ u16 stat;

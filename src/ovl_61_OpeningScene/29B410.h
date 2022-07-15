@@ -8,7 +8,7 @@ extern s16 D_800C59A6;
 extern s8 D_800F64F2;
 extern Vec3s D_800FD4A0;
 extern Vec3s D_800FD4AC;
-extern s32 D_800FD730[];
+extern Process* D_800FD730[];
 void func_800FB86C_2A069C(void);
 void func_800FBD48_2A0B78(s32, s32, f32);
 extern s32 D_80110448[];
