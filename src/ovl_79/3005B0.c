@@ -33,8 +33,8 @@ s32 func_800F6AB4_300A84(void) {
 INCLUDE_ASM(s32, "ovl_79/3005B0", func_800F6B00_300AD0);
 
 void func_800F6D18_300CE8(s16 arg0) {
-  s32 var = (0x10000 << D_800F32B3) >> 0x10; //TODO: Fake match
-  func_8007155C(arg0, (0x10000 << D_800F32B3) >> 0x10);
+    s16 thing = 1 << D_800F32B3;
+    func_8007155C(arg0, thing);
 }
 
 INCLUDE_ASM(s32, "ovl_79/3005B0", func_800F6D4C_300D1C);

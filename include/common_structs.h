@@ -87,7 +87,9 @@ typedef struct unkGlobalStruct_00 {
 } unkGlobalStruct_00; /* size = 0xE8 */
 
 typedef struct Object {
-/* 0x00 */ char unk_00[0x10];
+/* 0x00 */ char unk_00[0x0A];
+/* 0x0A */ s16 unk_0A;
+/* 0x0C */ char unk_0C[4];
 /* 0x10 */ s32 unk_10;
 /* 0x14 */ void* func_ptr;
 /* 0x18 */ f32 unk_18;
@@ -100,7 +102,7 @@ typedef struct Object {
 /* 0x34 */ f32 unk_34;
 /* 0x38 */ f32 unk_38;
 /* 0x3C */ s16 unk_3C;
-/* 0x3C */ char unk_3E[2];
+/* 0x3E */ char unk_3E[2];
 /* 0x40 */ unkGlobalStruct_00* unk_40;
 /* 0x44 */ u16 unk_44;
 /* 0x46 */ char unk_46[2];
@@ -227,5 +229,128 @@ typedef struct HeapNode {
     struct HeapNode* prev;
     struct HeapNode* next;
 } HeapNode;
+
+typedef struct board_overlay_entrypoint {
+    s16 index;
+    void* fn;
+} board_overlay_entrypoint;
+
+typedef struct GameStatus {
+/* 0x00 */ s16 unk_00;
+/* 0x02 */ s16 unk_02;
+/* 0x04 */ s8 pad[6];
+/* 0x0A */ s16 chosenStarSpaceIndex;
+/* 0x0C */ s16 starSpaces[7];
+/* 0x1A */ s16 unk_1A;
+} GameStatus;
+
+typedef struct EventListEntry {
+    s16 activation_type;
+    s16 execution_type;
+    void (*event_fn)();
+} EventListEntry;
+
+typedef struct EventTableEntry {
+    s16 space_index;
+    struct EventListEntry* event_list;
+} EventTableEntry;
+
+typedef struct SpaceData {
+    s8 unk_00;
+    u8 space_type; // enum board_space_type
+    s16 unk_02;
+    Vec3f coords;
+    f32 sx;
+    f32 sy;
+    f32 sz;
+    EventListEntry* event_list;
+} SpaceData;
+
+typedef struct ChainData {
+    u16 len;
+    s16* space_indices;
+} ChainData;
+
+typedef struct event_list_entry {
+    s16 activation_type;
+    s16 execution_type;
+    void (*event_fn)();
+} event_list_entry;
+
+typedef struct event_table_entry {
+    s16 space_index;
+    struct event_list_entry* event_list;
+} event_table_entry;
+
+
+typedef struct mpSource_object_indirect2 {
+    s16 unk0;
+} mpSource_object_indirect2;
+
+// Is this really just object? What is up with unk60?
+typedef struct mpSource_object_indirect {
+    s8 pad[24];
+
+    /*0x18*/ f32 rot1;
+    f32 rot2;
+    f32 rot3;
+
+    /*0x24*/ f32 unk36;
+    f32 unk40;
+    f32 unk44;
+
+    /*0x30*/ f32 unk48;
+    f32 funk52;
+    f32 funk56;
+
+    u16 unk60;
+    struct mpSource_object_indirect2 *unk64;
+    s16 unk68;
+    s16 pad70;
+    s32 pad72;
+    u8 unk76;
+} mpSource_object_indirect;
+
+
+typedef struct mystery_struct_ret_func_80048224 {
+    struct mpSource_object* unk0;
+    s8 pad[4];
+    s16 unk8; // window id
+} mystery_struct_ret_func_80048224;
+
+
+typedef struct mpSource_object {
+    /*0x00*/ struct object *prev; // may be NULL
+    /*0x04*/ struct object *next;
+    /*0x08*/ s8 pad1[2];
+    /*0x0A*/ u16 unka;
+
+    /*0x0C*/ Vec3f coords;
+
+    /*0x18*/ f32 rot1;
+    f32 rot2;
+    f32 rot3;
+
+    /*0x24*/ f32 unk36;
+    f32 unk40;
+    f32 unk44;
+
+    /*0x30*/ f32 unk48;
+    f32 funk52;
+    f32 funk56;
+
+    mpSource_object_indirect* unk60;
+    void *unk64;
+    s8 pad5[2];
+    s16 unk70;
+} mpSource_object;
+
+typedef struct mpSource_f2b7cstruct {
+    s8 pad[108];
+    void *unk108;
+    s8 pad112[12];
+    void *unk124;
+    s8 pad2[64];
+} mpSource_f2b7cstruct;
 
 #endif

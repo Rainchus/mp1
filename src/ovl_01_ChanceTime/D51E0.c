@@ -122,9 +122,7 @@ void func_800F99D8_D85D8(Object* arg0) {
     arg0->unk_20 = temp_f22;
     arg0->unk_28 = 0.0f;
     func_80025798(arg0->unk_40->unk_00.unsigned16[1], temp_f20, arg0->unk_28, temp_f22);
-    arg0->unk_38 = 0.9f;
-    arg0->unk_34 = 0.9f;
-    arg0->unk_30 = 0.9f;
+    arg0->unk_30 = arg0->unk_34 = arg0->unk_38 = 0.9f;
     func_800F9948_D8548(arg0->unk_40->unk_00.signed16[0]);
     func_80025B34(arg0->unk_40->unk_00.unsigned16[0]);
     arg0->func_ptr = &func_800F8A6C_D766C;
@@ -156,18 +154,18 @@ void func_800F9B50_D8750(void) {
     switch(tmp)
     {
         case 4:
-        func_8006D7D8(var_s0, 0xF0, -1, -1);
-        break;
+            LoadStringIntoWindow(var_s0, 0xF0, -1, -1);
+            break;
         case 0:
         case 1:
-        func_8006D7D8(var_s0, 0xEE, -1, -1);
-        break;
+            LoadStringIntoWindow(var_s0, 0xEE, -1, -1);
+            break;
         case 10:
-        func_8006D7D8(var_s0, 0xF4, -1, -1);
-        break;
+            LoadStringIntoWindow(var_s0, 0xF4, -1, -1);
+            break;
         default:
-        func_8006D7D8(var_s0, 0xED, -1, -1);
-        break;
+            LoadStringIntoWindow(var_s0, 0xED, -1, -1);
+            break;
     }
     
     
@@ -234,9 +232,7 @@ void func_800FE9D8_DD5D8(Object* arg0) {
     arg0->unk_18 = 140.0f;
     arg0->unk_1C = 230.0f;
     arg0->unk_20 = 1400.0f;
-    arg0->unk_38 = 1.5f;
-    arg0->unk_34 = 1.5f;
-    arg0->unk_30 = 1.5f;
+    arg0->unk_30 = arg0->unk_34 = arg0->unk_38 = 1.5f;
     arg0->unk_24 = arg0->unk_28 = arg0->unk_2C = 0.0f;
     func_80025798(arg0->unk_40->unk_00.unsigned16[1], arg0->unk_18, arg0->unk_1C, arg0->unk_20);
     func_80025830(arg0->unk_40->unk_00.unsigned16[1], 0.8f, 0.8f, 0.8f);

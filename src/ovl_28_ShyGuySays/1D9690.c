@@ -34,7 +34,7 @@ void func_800F65E0_1D9690(void) {
     D_800FDC20 = NULL;
     D_800FD998 = func_8005D384(0x20, 0, 0, -1, (*func_800F67F8_1D98A8));
     func_8007B168(&D_800FD5F0, 1);
-    func_800602AC(0x1A5);
+    PlaySound(0x1A5);
 }
 
 void func_800F67F8_1D98A8(Object* arg0) {
@@ -192,7 +192,7 @@ void func_800F72A4_1DA354(void) {
         if (D_800FDCE8[i].unk_00 != -1) {
             D_800FDCE8[i].unk_02 = D_800FDCE8[i].unk_02 - 1;
             if (D_800FDCE8[i].unk_02 <= 0) {         
-                func_800602AC(D_800FDCE8[i].unk_00);
+                PlaySound(D_800FDCE8[i].unk_00);
                 D_800FDCE8[i].unk_00 = D_800FDCE8[i].unk_02 = -1;
             }
         }
