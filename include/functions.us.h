@@ -82,7 +82,7 @@ void func_80060468(s32, u8);
 void SleepProcess(s32);
 void func_8005D96C(Object*, f32, f32, f32);
 void func_8005D97C(Object*, f32, f32, f32);
-void func_8001D240(s32);
+void InitCameras(s32);
 void func_8005AD18(void);
 void func_80062450(void);
 s32 func_8005CE48(s32);

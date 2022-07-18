@@ -4,25 +4,25 @@
 // bss
 struct mpSource_object *D_800FA300;
 struct mpSource_object *D_800FA304;
-struct mpSource_object *bss_toad_model;
-struct mpSource_object *bss_toad_instances[DK_STAR_COUNT];
-struct mpSource_object *bss_thwomp_model;
-struct mpSource_object *thwomp_instances[DK_THWOMP_COUNT];
-struct mpSource_object *boo_model;
-struct mpSource_object *boo_instances[DK_BOO_COUNT];
-struct mpSource_object *coin_gate_model;
-// Seems awkward this isn't an array like the others,
-// but memory alignment issues occur with an array.
-struct mpSource_object *coin_gate_right;
-struct mpSource_object *coin_gate_left;
-void *arrow_unk_1;
-void *arrow_unk_2;
-void *arrow_unk_3;
-void *arrow_unk_4;
-f32 ov054_unk_boulder_float_1;
-f32 ov054_unk_boulder_float_2;
-s16 boulder_active;
-struct mpSource_object *boulder_obj_model;
+// struct mpSource_object *bss_toad_model;
+// struct mpSource_object *bss_toad_instances[DK_STAR_COUNT];
+// struct mpSource_object *bss_thwomp_model;
+// struct mpSource_object *thwomp_instances[DK_THWOMP_COUNT];
+// struct mpSource_object *boo_model;
+// struct mpSource_object *boo_instances[DK_BOO_COUNT];
+// struct mpSource_object *coin_gate_model;
+// // Seems awkward this isn't an array like the others,
+// // but memory alignment issues occur with an array.
+// struct mpSource_object *coin_gate_right;
+// struct mpSource_object *coin_gate_left;
+// void *arrow_unk_1;
+// void *arrow_unk_2;
+// void *arrow_unk_3;
+// void *arrow_unk_4;
+// f32 ov054_unk_boulder_float_1;
+// f32 ov054_unk_boulder_float_2;
+// s16 boulder_active;
+// struct mpSource_object *boulder_obj_model;
 
 s16 func_800F6610_2418D0(void) {
     return D_800F9910[D_800ED5C0.starSpaces[D_800ED5C0.chosenStarSpaceIndex]];
@@ -397,27 +397,30 @@ INCLUDE_ASM(s32, "ovl_36_DKsJungleAdventure/2418D0", func_800F7024_2422E4);
 //     }
 // }
 
-void func_800F7190_242450(void) { //ov054_Entrypoint2
-    func_80060128(8);
-    InitCameras(2);
-    func_800F7024_2422E4();
+void func_800F7190_242450(void);
+INCLUDE_ASM(s32, "ovl_36_DKsJungleAdventure/2418D0", func_800F7190_242450);
 
-    EventTableHydrate(main_event_table);
+// void func_800F7190_242450(void) { //ov054_Entrypoint2
+//     func_80060128(8);
+//     InitCameras(2);
+//     func_800F7024_2422E4();
 
-    if (!IsBoardFeatureFlagSet(0xe)) {
-        EventTableHydrate(koopa_event_table);
-    }
+//     EventTableHydrate(main_event_table);
 
-    if (!IsBoardFeatureFlagSet(0xf)) {
-        EventTableHydrate(boo_event_table);
-    }
+//     if (!IsBoardFeatureFlagSet(0xe)) {
+//         EventTableHydrate(koopa_event_table);
+//     }
 
-    if (!IsBoardFeatureFlagSet(0xd)) {
-        EventTableHydrate(bowser_event_table);
-    }
+//     if (!IsBoardFeatureFlagSet(0xf)) {
+//         EventTableHydrate(boo_event_table);
+//     }
 
-    func_800584F0(0);
-}
+//     if (!IsBoardFeatureFlagSet(0xd)) {
+//         EventTableHydrate(bowser_event_table);
+//     }
+
+//     func_800584F0(0);
+// }
 
 void func_800F7224_2424E4(void) { //ov054_Entrypoint3
     InitCameras(1);
