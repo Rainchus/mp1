@@ -238,7 +238,8 @@ typedef struct board_overlay_entrypoint {
 typedef struct GameStatus {
 /* 0x00 */ s16 unk_00;
 /* 0x02 */ s16 unk_02;
-/* 0x04 */ s8 pad[6];
+/* 0x04 */ s8 unk_04[4];
+/* 0x08 */ s16 currentTurn;
 /* 0x0A */ s16 chosenStarSpaceIndex;
 /* 0x0C */ s16 starSpaces[7];
 /* 0x1A */ s16 unk_1A;

@@ -1,6 +1,4 @@
 #include "common.h"
-
-extern GameStatus D_800ED5C0;
 extern s16 D_800F9910[];
 
 extern board_overlay_entrypoint D_800F9890[];
