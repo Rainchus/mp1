@@ -12,13 +12,13 @@ void func_800F65E0_17E710(void) {
     func_8005D8B8(func_8005D384(0x7FDA, 0, 0, -1, func_8005EB1C), 0xA0);
     func_800F6848_17E978(2370.0f, 324.0f, 0.0f, 0.0f, 0.0f, 205.0f, 0.0f);
     func_8005D98C(4, 4);
-    func_8005D384(0xA, 0, 0, -1, (*func_800F6814_17E944));
-    func_8005D384(2, 2, 0, -1, (*func_800F690C_17EA3C));
-    func_8005D384(2, 3, 0, -1, (*func_800F6A54_17EB84));
-    func_8005D384(4, 0xA, 0x32, -1, (*func_800F7488_17F5B8));
-    func_8005D384(4, 0xA, 0x32, -1, (*func_800F74A4_17F5D4));
-    func_8005D384(4, 0xA, 0x32, -1, (*func_800F74C0_17F5F0));
-    func_8005D384(4, 0xA, 0x32, -1, (*func_800F74DC_17F60C));
+    func_8005D384(0xA, 0, 0, -1, &func_800F6814_17E944);
+    func_8005D384(2, 2, 0, -1, &func_800F690C_17EA3C);
+    func_8005D384(2, 3, 0, -1, &func_800F6A54_17EB84);
+    func_8005D384(4, 0xA, 0x32, -1, &func_800F7488_17F5B8);
+    func_8005D384(4, 0xA, 0x32, -1, &func_800F74A4_17F5D4);
+    func_8005D384(4, 0xA, 0x32, -1, &func_800F74C0_17F5F0);
+    func_8005D384(4, 0xA, 0x32, -1, &func_800F74DC_17F60C);
     func_8007B168(&D_800FB5C0, 1);
     func_800F7D28_17FE58();
     func_800F9350_181480();
@@ -72,7 +72,7 @@ void func_800F690C_17EA3C(Object* arg0) {
     func_8009B770(arg0->unk_50, 0, 0x2C);
     temp_s1->unk_04.b[0] = 1;
     temp_s1->unk_04.b[1] = 0;
-    arg0->func_ptr = (*func_800FA2D8_182408);
+    arg0->func_ptr = &func_800FA2D8_182408;
 }
 
 void func_800F6A54_17EB84(Object* arg0) {
@@ -81,7 +81,7 @@ void func_800F6A54_17EB84(Object* arg0) {
     arg0->unk_40->unk_00.unsigned16[1] = LoadFormFile(0x380003, 0x48D);
     func_8005D95C(arg0, 0.0f, 1000.0f, 1000.0f);
     func_800FA2E0_182410();
-    arg0->func_ptr = (*func_800F6ADC_17EC0C);
+    arg0->func_ptr = &func_800F6ADC_17EC0C;
 }
 
 void func_800F6ADC_17EC0C(void) {

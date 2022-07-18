@@ -84,7 +84,7 @@ void func_800F689C_121A8C(s32 arg0, u32 arg1) {
 INCLUDE_ASM(s32, "ovl_0C_PedalPower/1217D0", func_800F6944_121B34);
 
 void func_800F6CF8_121EE8(void) {
-    func_8005D384(2, 2, 0, -1, (*func_800F6D2C_121F1C));
+    func_8005D384(2, 2, 0, -1, &func_800F6D2C_121F1C);
 }
 
 void func_800F6D2C_121F1C(Object* arg0) {
@@ -103,7 +103,7 @@ void func_800F6D2C_121F1C(Object* arg0) {
     arg0->unk_34 = 1.2f;
     arg0->unk_30 = 1.2f;
     arg0->unk_28 = -45.0f;
-    arg0->func_ptr = (*func_800F6ED0_1220C0);
+    arg0->func_ptr = &func_800F6ED0_1220C0;
     arg0->unk_40->unk_00.unsigned16[0] = LoadFormFile(0xA0088, 0x649);
     func_80009340(arg0, 1, 0x26, 0x64D, 8);
     func_8001E360(temp_s1->unk_20.b[2], 255, 255, 255);
@@ -140,7 +140,7 @@ void func_800F7AEC_122CDC(Object* arg0) {
     func_8009B770(temp_s1, 0, 0x2C);
     temp_s1->unk_04.b[0] = 1;
     temp_s1->unk_04.b[1] = 0;
-    arg0->func_ptr = (*func_800F6944_121B34);
+    arg0->func_ptr = &func_800F6944_121B34;
 }
 
 void func_800F7C04_122DF4(Object* arg0) {
@@ -167,7 +167,7 @@ void func_800F7C04_122DF4(Object* arg0) {
     func_8009B770(temp_s0, 0, 0x2C);
     temp_s0->unk_04.b[0] = 1;
     temp_s0->unk_04.b[1] = 0;
-    arg0->func_ptr = (*func_800F7DD4_122FC4);
+    arg0->func_ptr = &func_800F7DD4_122FC4;
 }
 
 INCLUDE_ASM(s32, "ovl_0C_PedalPower/1217D0", func_800F7DD4_122FC4);

@@ -111,7 +111,7 @@ void func_800F9D70_11FFA0(Object* arg0) {
     arg0->unk_50 = func_80023684(44, 31000);
     temp_v0 = arg0->unk_50;
     func_8009B770(temp_v0, 0, 44);
-    arg0->func_ptr = (*func_800F9660_11F890);
+    arg0->func_ptr = &func_800F9660_11F890;
     temp_v1 = GetRandomByte() % 100;
     phi_s2 = 140;
     

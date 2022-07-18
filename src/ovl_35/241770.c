@@ -28,5 +28,5 @@ void func_800F66AC_24180C(void) {
 void func_800F66D8_241838(void) {
     func_8005CF30(10, 10);
     func_80060088();
-    InitProcess((*func_800F66AC_24180C), 0x1005, 0, 0);
+    InitProcess(&func_800F66AC_24180C, 0x1005, 0, 0);
 }

@@ -15,7 +15,7 @@ void func_800F6720_16BE60(Object* arg0) {
     func_800F76E4_16CE24();
     func_800F8B7C_16E2BC();
     func_800FC8E4_172024();
-    arg0->func_ptr = (*func_800F6790_16BED0);
+    arg0->func_ptr = &func_800F6790_16BED0;
 }
 
 INCLUDE_ASM(s32, "ovl_18_PlatformPeril/16BD20", func_800F6790_16BED0);

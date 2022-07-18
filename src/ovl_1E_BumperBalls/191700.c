@@ -24,7 +24,7 @@ void func_800F65E0_191700(void) {
     func_800FB1E0_196300(20.0f, 3000.0f, 328.0f, 0, 0, 0, 0, -140.0f);
     func_80017660(0, 0.0f, 0.0f, 320.0f, 240.0f);
     func_800176C4(0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
-    func_8005D8B8(func_8005D384(0x7FDA, 0, 0, -1, (*func_8005EB1C)), 160);
+    func_8005D8B8(func_8005D384(0x7FDA, 0, 0, -1, &func_8005EB1C), 160);
     func_80023448(3);
     func_800234B8(0, 44, 44, 64);
     func_800234B8(1, 96, 96, 16);
@@ -37,18 +37,18 @@ void func_800F65E0_191700(void) {
     D_800FCD2C = func_8005DB44(0);
     func_8005D98C(1, 4);
     D_800FCD30 = func_8005DB44(1);
-    func_8005D8B8(func_8005D384(100, 0, 0, -1, (*func_800FB298_1963B8)), 160);
-    func_8005D384(20, 9, 7, 0, (*func_800F6E2C_191F4C));
-    func_8005D384(20, 9, 7, 0, (*func_800F6E68_191F88));
-    func_8005D384(20, 9, 7, 0, (*func_800F6E84_191FA4));
-    func_8005D384(20, 9, 7, 0, (*func_800F6EA0_191FC0));
-    func_8005D384(10, 7, 0, 1, (*func_800F8538_193658));
-    func_8005D384(10, 7, 0, 1, (*func_800F8554_193674));
-    func_8005D384(10, 7, 0, 1, (*func_800F8570_193690));
-    func_8005D384(10, 7, 0, 1, (*func_800F858C_1936AC));
-    func_8005D384(0, 0, 0, -1, (*func_800F6A60_191B80));
-    D_800FCD20 = func_8005D384(6, 3, 0, -1, (*func_800F6D98_191EB8));
-    func_8005D384(0x2710, 0, 0, -1, (*func_800F9588_1946A8));
+    func_8005D8B8(func_8005D384(100, 0, 0, -1, &func_800FB298_1963B8), 160);
+    func_8005D384(20, 9, 7, 0, &func_800F6E2C_191F4C);
+    func_8005D384(20, 9, 7, 0, &func_800F6E68_191F88);
+    func_8005D384(20, 9, 7, 0, &func_800F6E84_191FA4);
+    func_8005D384(20, 9, 7, 0, &func_800F6EA0_191FC0);
+    func_8005D384(10, 7, 0, 1, &func_800F8538_193658);
+    func_8005D384(10, 7, 0, 1, &func_800F8554_193674);
+    func_8005D384(10, 7, 0, 1, &func_800F8570_193690);
+    func_8005D384(10, 7, 0, 1, &func_800F858C_1936AC);
+    func_8005D384(0, 0, 0, -1, &func_800F6A60_191B80);
+    D_800FCD20 = func_8005D384(6, 3, 0, -1, &func_800F6D98_191EB8);
+    func_8005D384(0x2710, 0, 0, -1, &func_800F9588_1946A8);
     D_800FCD18 = InitSprite(117);
     temp_s0 = ReadMainFS(37);
     D_800FCD1A = func_80039084(temp_s0);
@@ -70,7 +70,7 @@ void func_800F6A60_191B80(Object* arg0) {
     D_800FCD14_13D784 = 30;
     D_800FCD0E = 0;
     D_800FCD10 = 4;
-    arg0->func_ptr = (*func_800F6AB4_191BD4);
+    arg0->func_ptr = &func_800F6AB4_191BD4;
 }
 
 INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F6AB4_191BD4);
@@ -80,7 +80,7 @@ void func_800F6D98_191EB8(Object* arg0) {
     arg0->unk_40->unk_00.unsigned16[1] = LoadFormFile(0x380002, 0x48D);
     arg0->unk_40->unk_04.unsigned16 = LoadFormFile(0x380003, 0x48D);
     func_800FB2EC_19640C();
-    arg0->func_ptr = (*func_800F6E10_191F30);
+    arg0->func_ptr = &func_800F6E10_191F30;
 }
 
 void func_800F6E10_191F30(Object* arg0) { //unused arg?

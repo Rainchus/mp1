@@ -12,8 +12,8 @@ void func_800F65E0_28ABA0(void) {
     func_800546B4(2, gPlayers[2].turn_status);
     func_800546B4(3, gPlayers[3].turn_status);
     func_8006CEA0();
-    InitProcess((*func_800F6A98_28B058), 0x300, 0, 0);
-    func_8005D384(0x1000, 0, 0, -1, (*func_800F73BC_28B97C));
+    InitProcess(&func_800F6A98_28B058, 0x300, 0, 0);
+    func_8005D384(0x1000, 0, 0, -1, &func_800F73BC_28B97C);
     if (D_800C597A != 0) {
         func_80072644(6, 8);
     } else {
@@ -107,7 +107,7 @@ void func_800F73BC_28B97C(Object* arg0) {
         } else {
             func_800726AC(1, 16);
         }
-        arg0->func_ptr = (*func_800F7340_28B900);
+        arg0->func_ptr = &func_800F7340_28B900;
     }
 }
 

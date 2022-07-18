@@ -61,12 +61,12 @@ void func_800F8DC8_12E408(Object* arg0) {
     func_80023504(1, 0.0f, 119.0f, 0.0f);
     func_80023504(2, 0.0f, -117.0f, 22.0f);
     func_800234B8(2, 0xFF, 0, 0);
-    func_80025F10(func_8002451C(0, (*func_800F9988_12EFC8), 0), 16);
+    func_80025F10(func_8002451C(0, &func_800F9988_12EFC8, 0), 16);
     D_800FC9F0.x = ((-17.25f - D_800FC500.unk_50) / (D_800FC500.unk_50 - D_800FC500.unk_00));
     D_800FC9F0.y = ((-17.25f - D_800FC500.unk_50) / (D_800FC500.unk_50 - D_800FC500.unk_28));
     arg0->unk_4C = 0;
     func_80072644(0, 16);
-    arg0->func_ptr = (*func_800F8FCC_12E60C);
+    arg0->func_ptr = &func_800F8FCC_12E60C;
 }
 
 INCLUDE_ASM(s32, "ovl_0E_FaceLift/12BC20", func_800F8FCC_12E60C);
@@ -85,7 +85,7 @@ void func_800F9AD4_12F114(Object* arg0) {
     D_800FC960 = func_80019060(InitSprite(0x20000B), 0, 1);
     func_80018C90(D_800FC960);
     arg0->unk_4D = 0;
-    arg0->func_ptr = (*func_800F9B38_12F178);
+    arg0->func_ptr = &func_800F9B38_12F178;
 }
 
 INCLUDE_ASM(s32, "ovl_0E_FaceLift/12BC20", func_800F9B38_12F178);
@@ -105,7 +105,7 @@ INCLUDE_ASM(s32, "ovl_0E_FaceLift/12BC20", func_800FA7D0_12FE10);
 void func_800FA9DC_13001C(Object* arg0) {
     if (D_800FC3D0_DAFD0 != 0 || D_800F5144 != 0) {
         func_800726AC(0, 0x14);
-        arg0->func_ptr = (*func_800FAA38_130078);
+        arg0->func_ptr = &func_800FAA38_130078;
         func_800601D4(40);
     }
 }

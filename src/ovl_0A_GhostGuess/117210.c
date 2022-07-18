@@ -7,7 +7,7 @@ void func_800F69DC_11760C(Object* arg0) {
     s32 temp_s1;
     void* temp_s0;
 
-    arg0->func_ptr = (*func_800F79D4_118604);
+    arg0->func_ptr = &func_800F79D4_118604;
     temp_s0 = ReadMainFS(0x1C000A);
     temp_s1 = func_800678A4(temp_s0);
     FreeMainFS(temp_s0);

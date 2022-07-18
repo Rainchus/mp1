@@ -12,7 +12,7 @@ void func_800F65E0_CDA50(void) { //needs rodata support
     func_8005CF30 (50, 0);
     func_80060088();
     func_8001DE70(64);
-    func_8005D8B8(func_8005D384(0x7FDA, 0, 0, -1, (*func_8005EB1C)), 0xA0);
+    func_8005D8B8(func_8005D384(0x7FDA, 0, 0, -1, &func_8005EB1C), 0xA0);
     func_80023448(2);
     func_800234B8(0, 0xA0, 0xA0, 0xA0);
     func_800234B8(1, 0xFF, 0xFF, 0xFF);
@@ -31,7 +31,7 @@ void func_800F65E0_CDA50(void) { //needs rodata support
     func_80086F08(&D_800FDDE8, ++temp_s0_2);
     D_800ED440 = 0;
     D_800F2BC0 = 0;
-    D_800FDDDC = func_8005D384(0x20, 0, 0, -1, (*func_800F6858_CDCC8));
+    D_800FDDDC = func_8005D384(0x20, 0, 0, -1, &func_800F6858_CDCC8);
     func_800F7B6C_CEFDC(GetRandomByte() & 0xFF);
     func_800F7D74_CF1E4();
     D_800FE2C2 = -1;
@@ -49,8 +49,8 @@ void func_800F65E0_CDA50(void) { //needs rodata support
 INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800F65E0_CDA50);
 #endif
 
-void func_800F6858_CDCC8(unk_801DEC9C* arg0) {
-    arg0->unk_14 = (*func_800F68CC_CDD3C);
+void func_800F6858_CDCC8(Object* arg0) {
+    arg0->func_ptr = &func_800F68CC_CDD3C;
     D_800FE2C2 = 0;
     D_800FDE2C = 0;
     func_800F8C38_D00A8();
@@ -66,20 +66,20 @@ void func_800F6858_CDCC8(unk_801DEC9C* arg0) {
 
 INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800F68CC_CDD3C);
 
-void func_800F714C_CE5BC(unk_801DEC9C* arg0) {
+void func_800F714C_CE5BC(Object* arg0) {
     func_800F9178_D05E8();
     func_800F796C_CEDDC(arg0);
     if (func_80075FE0() == 0) {
         D_800FDE2C = 0;
         D_800FE2C2 = 1;
-        arg0->unk_14 = (*func_800F71C4_CE634);
+        arg0->func_ptr = &func_800F71C4_CE634;
         func_800F8FEC_D045C();
         D_800FE150 = func_8000C544();
         D_800ED430 = 1;
     }
 }
 
-void func_800F71C4_CE634(unk_801DEC9C* arg0) {
+void func_800F71C4_CE634(Object* arg0) {
     func_800F8F58_D03C8();
     func_800F9178_D05E8();
     func_800F7E20_CF290();
@@ -95,9 +95,9 @@ void func_800F71C4_CE634(unk_801DEC9C* arg0) {
             D_800ED430 = 0;
             D_800FDE2C = 0;
             if (D_800FE180 == 0) {
-                arg0->unk_14 = (*func_800F73A4_CE814);
+                arg0->func_ptr = &func_800F73A4_CE814;
             } else {
-                arg0->unk_14 = (*func_800F7874_CECE4);
+                arg0->func_ptr = &func_800F7874_CECE4;
             }
             func_800790C0();
             func_80009730();
@@ -109,9 +109,9 @@ void func_800F71C4_CE634(unk_801DEC9C* arg0) {
         D_800ED430 = 0;
         D_800FDE2C = 0;
         if (D_800FE180 == 0) {
-            arg0->unk_14 = (*func_800F73A4_CE814);
+            arg0->func_ptr = &func_800F73A4_CE814;
         } else {
-            arg0->unk_14 = (*func_800F7874_CECE4);
+            arg0->func_ptr = &func_800F7874_CECE4;
         }
         
         func_80009730();
@@ -119,9 +119,9 @@ void func_800F71C4_CE634(unk_801DEC9C* arg0) {
     }
 }
 
-void func_800F7318_CE788(unk_801DEC9C* arg0) {
+void func_800F7318_CE788(Object* arg0) {
     if (func_80072718() == 0) {
-        arg0->unk_14 = (*func_800F7350_CE7C0);
+        arg0->func_ptr = &func_800F7350_CE7C0;
     }
 }
 
@@ -136,7 +136,7 @@ void func_800F7350_CE7C0(void) {
 
 INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800F73A4_CE814);
 
-void func_800F7874_CECE4(unk_801DEC9C* arg0) {
+void func_800F7874_CECE4(Object* arg0) {
     func_800F796C_CEDDC(arg0);
     func_800F9178_D05E8();
     switch (D_800FD878) {
@@ -157,7 +157,7 @@ void func_800F7874_CECE4(unk_801DEC9C* arg0) {
         if (func_80076174() == 0) {
             func_800726AC(0, 20);
             func_80060398(40);
-            arg0->unk_14 = (*func_800F7318_CE788);
+            arg0->func_ptr = &func_800F7318_CE788;
             D_800FD878++;
             break;
         }
@@ -165,9 +165,9 @@ void func_800F7874_CECE4(unk_801DEC9C* arg0) {
     }
 }
 
-void func_800F796C_CEDDC(unk_801DEC9C* arg0) {
+void func_800F796C_CEDDC(Object* arg0) {
     if (D_800F5144 == 1) {
-        arg0->unk_14 = (*func_800F7318_CE788);
+        arg0->func_ptr = &func_800F7318_CE788;
     }
 }
 
@@ -212,7 +212,7 @@ void func_800F7C08_CF078(void) {
 }
 
 void func_800F7C70_CF0E0(f32 arg0) { //uses rodata
-    unk_801DEC9C* temp_a0;
+    Object* temp_a0;
 
     if (arg0 == 0.0) {
         temp_a0 = D_800F3FB0;
@@ -285,10 +285,10 @@ INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800F7EDC_CF34C);
 //     sp24.x = 0;
 //     sp24.y = 0;
 //     func_800090B8(D_800ED440, &D_800FDA78);
-//     temp = func_8005D384(0, 1, 0, -1, (*func_800FB0A8_D2518));
+//     temp = func_8005D384(0, 1, 0, -1, &func_800FB0A8_D2518);
 //     D_800ED440++;
 //     D_800F2AF8[D_800ED440] = D_800ED440;
-//     temp = func_8005D384(1, 3, 0, -1, (*func_800F8130_CF5A0));
+//     temp = func_8005D384(1, 3, 0, -1, &func_800F8130_CF5A0);
 //     D_800FDDE0 = temp;
 //     temp->unk_40->unk_00 = LoadFormFile(0x120000, 0x99);
 //     temp->unk_40->unk_02 = LoadFormFile(0x12000A, 0xB9);
@@ -300,7 +300,7 @@ INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800F7EDC_CF34C);
 //     sp24.y = 200.0f;
 //     func_800F8D84_D01F4(&sp18, &sp24);
 //     for (i = 0; i < 9; i++) {
-//         temp_v0_3 = func_8005D384(0, 1, 0, -1, (*func_800F87DC_CFC4C));
+//         temp_v0_3 = func_8005D384(0, 1, 0, -1, &func_800F87DC_CFC4C);
 //         temp_v0_3->unk_4C = i;
 //         temp_v0_3->unk_4D = D_800FD85C[temp_a0].unk_00; //temp_a0 is uninitialized
 //         temp_v0_3->unk_38 = 1.0f;
@@ -368,7 +368,7 @@ INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800F8654_CFAC4);
 void func_800F87DC_CFC4C(Object* arg0) { //matches but needs rodata support
     u16 temp_s1 = arg0->unk_4C;
     
-    arg0->func_ptr = (*func_800F89A8_CFE18);
+    arg0->func_ptr = &func_800F89A8_CFE18;
     arg0->unk_30 = arg0->unk_34 = arg0->unk_38 = 1.0f;
     switch (temp_s1) {
     case 0:

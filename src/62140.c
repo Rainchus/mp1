@@ -19,7 +19,7 @@ s32 func_80061714(void) {
 void func_80061758(void) {
     Vec3s sp10;
 
-    func_800642FC(&sp10, (*func_80061714), 0, 1);
+    func_800642FC(&sp10, &func_80061714, 0, 1);
 }
 
 s32 func_80061784(s16* arg0) {
@@ -43,7 +43,7 @@ s32 func_80061784(s16* arg0) {
 
 void func_80061808(s16 arg0) {
     Vec3s sp10;
-    func_800642FC(&sp10, (*func_80061784), &arg0, 2);
+    func_800642FC(&sp10, &func_80061784, &arg0, 2);
 }
 
 void func_80061838(s16* arg0) {
@@ -69,7 +69,7 @@ s32 func_80061930(s16 arg0, s32* arg1, s32* arg2, s32* arg3) {
     unk62140_2 sp20;
     sp20.unk_00 = arg0;
 
-    func_800642FC(&sp10, (*func_800618A4), &sp20, 2);
+    func_800642FC(&sp10, &func_800618A4, &sp20, 2);
     *arg1 = sp20.unk_04;
     *arg2 = sp20.unk_08;
     *arg3 = sp20.unk_0C;

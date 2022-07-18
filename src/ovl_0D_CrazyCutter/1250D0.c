@@ -8,7 +8,7 @@ void func_800F686C_12535C(Object* arg0) {
     if (D_800FD460 == 0) {
         D_800FD460 = 20;
         func_80075CCC(0);
-        arg0->func_ptr = (*func_800F68C4_1253B4);
+        arg0->func_ptr = &func_800F68C4_1253B4;
     }
 }
 
@@ -18,7 +18,7 @@ void func_800F68C4_1253B4(Object* arg0) {
         if (D_800FD460 == 0) {
             D_800FD4B0 = 1;
             func_800F978C_12827C();
-            arg0->func_ptr = (*func_800F97C8_1282B8);
+            arg0->func_ptr = &func_800F97C8_1282B8;
         }
     }
 }
@@ -39,12 +39,12 @@ void func_800F69EC_1254DC(s32 arg0) {
     D_800FD468--;
     if (D_800FD468 == 0) {
         D_800FD464 = 1;
-        func_8005D384(4, 10, 10, 4, (*func_800F94C0_127FB0));
-        func_8005D384(4, 10, 10, 4, (*func_800F94DC_127FCC));
-        func_8005D384(4, 10, 10, 4, (*func_800F94F8_127FE8));
-        func_8005D384(4, 10, 10, 4, (*func_800F9514_128004));
-        func_8005D384(0, 0, 0, -1, (*func_800F686C_12535C));
-        func_8005D384(2, 1, 1, -1, (*func_800F6B04_1255F4));
+        func_8005D384(4, 10, 10, 4, &func_800F94C0_127FB0);
+        func_8005D384(4, 10, 10, 4, &func_800F94DC_127FCC);
+        func_8005D384(4, 10, 10, 4, &func_800F94F8_127FE8);
+        func_8005D384(4, 10, 10, 4, &func_800F9514_128004);
+        func_8005D384(0, 0, 0, -1, &func_800F686C_12535C);
+        func_8005D384(2, 1, 1, -1, &func_800F6B04_1255F4);
         func_80072644(0, 16);
         func_8005D718(arg0);
     }
@@ -221,7 +221,7 @@ void func_800FA808_1292F8(Object* arg0) {
             func_800FBB2C_12A61C();
             D_800FD590 += 1;
         }
-        arg0->func_ptr = (*func_800FA880_129370);
+        arg0->func_ptr = &func_800FA880_129370;
     }
 }
 
@@ -313,7 +313,7 @@ void func_800FBB2C_12A61C(void) {
     Object* temp_s0;
     unkGlobalStruct_00* temp_v0;
 
-    temp_s0 = func_8005D384(0xC, 0, 0, -1, (*func_800FBB94_12A684));
+    temp_s0 = func_8005D384(0xC, 0, 0, -1, &func_800FBB94_12A684);
     temp_v0 = func_80023684(4, 0x7918);
     temp_s0->unk_50 = temp_v0;
     temp_v0->unk_00.signed32 = 90;

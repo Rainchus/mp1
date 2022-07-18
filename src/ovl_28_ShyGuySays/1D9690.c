@@ -8,7 +8,7 @@ void func_800F65E0_1D9690(void) {
     func_8005CF30(50, 0);
     func_80060088();
     func_8001DE70(64);
-    func_8005D8B8(func_8005D384(0x7FDA, 0, 0, -1, (*func_8005EB1C)), 0xA0);
+    func_8005D8B8(func_8005D384(0x7FDA, 0, 0, -1, &func_8005EB1C), 0xA0);
     func_800234B8(0U, 0xFF, 0xFF, 0xFF);
     func_800234B8(1U, 0xFF, 0xFF, 0xFF);
     func_80023504(1, -96.0f, 100.0f, 26.0f);
@@ -32,21 +32,21 @@ void func_800F65E0_1D9690(void) {
     D_800FDC1E = 0;
     D_800FDD10 = 1;
     D_800FDC20 = NULL;
-    D_800FD998 = func_8005D384(0x20, 0, 0, -1, (*func_800F67F8_1D98A8));
+    D_800FD998 = func_8005D384(0x20, 0, 0, -1, &func_800F67F8_1D98A8);
     func_8007B168(&D_800FD5F0, 1);
     PlaySound(0x1A5);
 }
 
 void func_800F67F8_1D98A8(Object* arg0) {
-    arg0->func_ptr = (*func_800F6930_1D99E0);
+    arg0->func_ptr = &func_800F6930_1D99E0;
     func_800F736C_1DA41C();
     func_800F8068_1DB118();
-    D_800FDC20 = func_8005D384(1, 7, 0, -1, (*func_800FBAE4_1DEB94));
+    D_800FDC20 = func_8005D384(1, 7, 0, -1, &func_800FBAE4_1DEB94);
     func_8005D8B8(D_800FDC20, 0xA0);
     func_800F81A4_1DB254();
-    D_800F2AF8[D_800ED440] = func_8005D384(0, 0, 0, -1, (*func_800FA77C_1DD82C));
+    D_800F2AF8[D_800ED440] = func_8005D384(0, 0, 0, -1, &func_800FA77C_1DD82C);
     D_800ED440++;
-    D_800F2AF8[D_800ED440] = func_8005D384(0, 0, 0, -1, (*func_800FB6E0_1DE790));
+    D_800F2AF8[D_800ED440] = func_8005D384(0, 0, 0, -1, &func_800FB6E0_1DE790);
     D_800ED440++;
     func_800FB30C_1DE3BC();
     func_800F71F4_1DA2A4();
@@ -123,7 +123,7 @@ void func_800F6E50_1D9F00(Object* arg0) {
         return;
     default:
         if (func_80072718() == 0) {
-            arg0->func_ptr = (*func_800F69F8_1D9AA8);
+            arg0->func_ptr = &func_800F69F8_1D9AA8;
         }
         break;
     }
@@ -131,7 +131,7 @@ void func_800F6E50_1D9F00(Object* arg0) {
 
 void func_800F6F98_1DA048(Object* arg0) {
     if (D_800F5144 == 1) {
-        arg0->func_ptr = (*func_800F69F8_1D9AA8);
+        arg0->func_ptr = &func_800F69F8_1D9AA8;
     }
 }
 

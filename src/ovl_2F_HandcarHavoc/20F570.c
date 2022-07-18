@@ -15,7 +15,7 @@ void func_800F72B0_210240(Object* arg0) {
     D_80101CA8 = 0;
     D_800FF5D2 = 30;
     D_800FF5D4 = 300;
-    arg0->func_ptr = (*func_800F7314_2102A4);
+    arg0->func_ptr = &func_800F7314_2102A4;
 }
 
 INCLUDE_ASM(s32, "ovl_2F_HandcarHavoc/20F570", func_800F7314_2102A4);
@@ -106,7 +106,7 @@ void func_800FB7E4_214774(Object* arg0) {
 
     temp_a0 = D_800FF61C[arg0->unk_50->unk_B0];
     temp_a0->unk_50->unk_00.unsigned16[1] = 30;
-    temp_a0->func_ptr = (*func_800FB81C_2147AC);
+    temp_a0->func_ptr = &func_800FB81C_2147AC;
 }
 
 INCLUDE_ASM(s32, "ovl_2F_HandcarHavoc/20F570", func_800FB81C_2147AC);
