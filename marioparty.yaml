@@ -724,6 +724,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x2418A0, c]
+      - [0x2418D0, c]
   - type: bin
     start: 0x244B50
   - type: code

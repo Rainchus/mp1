@@ -10,7 +10,7 @@ void func_800F65E0_29B410(void) {
     D_800C5972 = 0;
     D_800C59A6 = -1;
     D_800F64F2 = 1;
-    func_8001D240(1);
+    InitCameras(1);
     func_80029090(1);
     func_8001DE70(25);
     func_8005CF30(50, 20);

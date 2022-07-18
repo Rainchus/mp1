@@ -23,7 +23,7 @@ void func_800F65E0_146200(void) {
     func_8005D384(0x2710, 0, 0, -1, (*func_800F6EE4_146B04));
     func_80072644(0, 0x10);
     D_800FA262 = 3;
-    func_800602AC(0x1A2);
+    PlaySound(0x1A2);
 }
 
 void func_800F67E0_146400(Object* arg0) {

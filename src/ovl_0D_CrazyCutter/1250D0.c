@@ -204,7 +204,7 @@ void func_800F98B4_1283A4(unkCrazyCutter_00* arg0) {
     D_800FD558[arg0->unk_30] = D_800FCCF0[arg0->unk_30] + arg0->unk_00;
     D_800FD568[arg0->unk_30] = arg0->unk_04;
     D_800FD578[arg0->unk_30] = D_800FCD00[arg0->unk_30] + arg0->unk_08 + -4.0f;
-    D_800FD5C8 = func_800602AC(0x237);
+    D_800FD5C8 = PlaySound(0x237);
 }
 
 INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800F9968_128458);
@@ -317,7 +317,7 @@ void func_800FBB2C_12A61C(void) {
     temp_v0 = func_80023684(4, 0x7918);
     temp_s0->unk_50 = temp_v0;
     temp_v0->unk_00.signed32 = 90;
-    D_800FD5C0 = func_800602AC(0x1C0);
+    D_800FD5C0 = PlaySound(0x1C0);
 }
 
 INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FBB94_12A684);

@@ -1,6 +1,6 @@
 #include "common.h"
 
-INCLUDE_ASM(s32, "1DE40", func_8001D240);
+INCLUDE_ASM(s32, "1DE40", InitCameras);
 
 void func_8001D40C(void) {
     D_800F3FA8 = D_800F37F0;

@@ -43,7 +43,7 @@ void func_800F65E0_CDA50(void) { //needs rodata support
     func_8007B168(&D_800FD8D0, 1);
     func_8007B168(&D_800FD8DC, 1);
     func_8007B168(&D_800FD8EC, 1);
-    func_800602AC(0x1A2);
+    PlaySound(0x1A2);
 }
 #else
 INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800F65E0_CDA50);
@@ -369,9 +369,7 @@ void func_800F87DC_CFC4C(Object* arg0) { //matches but needs rodata support
     u16 temp_s1 = arg0->unk_4C;
     
     arg0->func_ptr = (*func_800F89A8_CFE18);
-    arg0->unk_38 = 1.0f;
-    arg0->unk_34 = 1.0f;
-    arg0->unk_30 = 1.0f;
+    arg0->unk_30 = arg0->unk_34 = arg0->unk_38 = 1.0f;
     switch (temp_s1) {
     case 0:
         *(arg0->unk_40) = LoadFormFile(MM_FIRE_FLOWER, 0xB9);
