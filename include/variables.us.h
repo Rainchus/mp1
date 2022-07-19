@@ -38,5 +38,6 @@ extern Process* top_process;
 extern jmp_buf process_jmp_buf; // 800E2370
 extern Process* current_process;
 extern GameStatus D_800ED5C0;
+extern f32 D_800C34A4;
 
 extern unk_800ECDE0* D_800ECDE0;

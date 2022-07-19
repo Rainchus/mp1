@@ -152,7 +152,9 @@ typedef struct unk_Struct00 {
 
 typedef struct unk_Struct04 {
     /* 0x00 */ Vec3f pos;
-    /* 0x0C */ char unk_0C[0x34];
+    /* 0x0C */ char unk_0C[0x18];
+    /* 0x24 */ f32 unk_24;
+    /* 0x28 */ char unk_28[0x18];
     /* 0x40 */ s16* unk_40;
 } unk_Struct04; //sizeof 0xAC?
 
@@ -173,6 +175,8 @@ typedef struct unk_Struct03 {
 /* 0x30 */ f32 unk_34;
 /* 0x30 */ f32 unk_38;
 /* 0x3C */ unk_Struct04* unk_3C;
+/* 0x40 */ f32 unk_40;
+/* 0x44 */ f32 unk_44;
 } unk_Struct03; // //sizeof 0xAC? (this and mpSource_object are the same struct)
 
 typedef struct playerMain {
