@@ -142,6 +142,39 @@ typedef struct Process {
     /*0x8C*/ void *user_data;
 } Process;
 
+typedef struct unk_Struct00 {
+/* 0x00 */ char unk_00[0x40];
+/* 0x40 */ f32 unk_40;
+/* 0x44 */ f32 unk_44;
+/* 0x48 */ f32 unk_48;
+/* 0x4C */ char unk_4C[0xEC];
+} unk_Struct00; //sizeof 0x138
+
+typedef struct unk_Struct04 {
+    /* 0x00 */ Vec3f pos;
+    /* 0x0C */ char unk_0C[0x34];
+    /* 0x40 */ s16* unk_40;
+} unk_Struct04; //sizeof 0xAC?
+
+typedef struct unk_Struct03 {
+/* 0x00 */ struct unk_Struct03 *prev; // may be NULL
+/* 0x04 */ struct unk_Struct03 *next;
+/* 0x08 */ s8 pad1[2];
+/* 0x0A */ s16 unk_0A;
+/* 0x0C */ f32 unk_0C;
+/* 0x10 */ f32 unk_10;
+/* 0x14 */ f32 unk_14;
+/* 0x18 */ f32 unk_18;
+/* 0x1C */ char unk_1C[8];
+/* 0x24 */ f32 unk_24;
+/* 0x28 */ f32 unk_28;
+/* 0x2C */ f32 unk_2C;
+/* 0x30 */ f32 unk_30;
+/* 0x30 */ f32 unk_34;
+/* 0x30 */ f32 unk_38;
+/* 0x3C */ unk_Struct04* unk_3C;
+} unk_Struct03; // //sizeof 0xAC? (this and mpSource_object are the same struct)
+
 typedef struct playerMain {
 /* 0x00 */ char unk_00;
 /* 0x01 */ u8 cpuDifficulty;
@@ -162,7 +195,7 @@ typedef struct playerMain {
 /* 0x18 */ u8 playerIndex; //0, 1, 2, or 3
 /* 0x19 */ char unk_19[3]; //likely padding
 /* 0x1C */ Process* process; //some heap instance
-/* 0x20 */ Object* playerObj; //ptr to playerObj on heap
+/* 0x20 */ unk_Struct03* playerObj; //ptr to playerObj on heap
 /* 0x24 */ u16 totalMinigameCoins;
 /* 0x26 */ s16 coinPeak;
 /* 0x28 */ u8 happeningSpacesTotal;
@@ -175,34 +208,6 @@ typedef struct playerMain {
 /* 0x2F */ char unk_2F;
 } playerMain; //sizeof 0x30
 //P1 800F32B0, P2 800F32E0, P3 800F3310, P4 800F3340
-
-typedef struct unk_Struct00 {
-/* 0x00 */ char unk_00[0x40];
-/* 0x40 */ f32 unk_40;
-/* 0x44 */ f32 unk_44;
-/* 0x48 */ f32 unk_48;
-/* 0x4C */ char unk_4C[0xEC];
-} unk_Struct00; //sizeof 0x138
-
-typedef struct unk_Struct04 {
-    /* 0x00 */ Vec3f pos;
-    /* 0x0C */ char unk_0C[0x34];
-    /* 0x40 */ u16* unk_40;
-} unk_Struct04; //sizeof 0xAC?
-
-typedef struct unk_Struct03 {
-/* 0x00 */ char unk_00[0x0C];
-/* 0x0C */ f32 unk_0C;
-/* 0x10 */ f32 unk_10;
-/* 0x14 */ f32 unk_14;
-/* 0x18 */ f32 unk_18;
-/* 0x1C */ char unk_1C[8];
-/* 0x24 */ s32 unk_24;
-/* 0x28 */ char unk_28[8];
-/* 0x30 */ f32 unk_30;
-/* 0x34 */ char unk_34[8];
-/* 0x3C */ unk_Struct04* unk_3C;
-} unk_Struct03; // //sizeof 0xAC?
 
 typedef struct unk_800ECDE0 {
 /* 0x00 */ s16 unk_00;
@@ -257,14 +262,14 @@ typedef struct EventTableEntry {
 } EventTableEntry;
 
 typedef struct SpaceData {
-    s8 unk_00;
-    u8 space_type; // enum board_space_type
-    s16 unk_02;
-    Vec3f coords;
-    f32 sx;
-    f32 sy;
-    f32 sz;
-    EventListEntry* event_list;
+/* 0x00 */ s8 unk_00;
+/* 0x01 */ u8 space_type; // enum board_space_type
+/* 0x02 */ s16 unk_02;
+/* 0x04 */ Vec3f coords;
+/* 0x10 */ f32 sx;
+/* 0x14 */ f32 sy;
+/* 0x18*/  f32 sz;
+/* 0x1C */ EventListEntry* event_list;
 } SpaceData;
 
 typedef struct ChainData {
@@ -314,7 +319,7 @@ typedef struct mpSource_object_indirect {
 
 
 typedef struct mystery_struct_ret_func_80048224 {
-    struct mpSource_object* unk0;
+    struct unk_Struct03* unk0;
     s8 pad[4];
     s16 unk8; // window id
 } mystery_struct_ret_func_80048224;

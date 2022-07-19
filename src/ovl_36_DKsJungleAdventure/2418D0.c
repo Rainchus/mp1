@@ -2,8 +2,8 @@
 #include "dkJungleAdventure.h"
 
 // bss
-struct mpSource_object *D_800FA300;
-struct mpSource_object *D_800FA304;
+struct unk_Struct03 *D_800FA300;
+struct unk_Struct03 *D_800FA304;
 // struct mpSource_object *bss_toad_model;
 // struct mpSource_object *bss_toad_instances[DK_STAR_COUNT];
 // struct mpSource_object *bss_thwomp_model;
@@ -155,7 +155,7 @@ s32 func_800F6958_241C18(s32 current_space_index) {
 
 void func_800F6A38_241CF8(void) {
     SpaceData* space_data;
-    mpSource_object *ptr;
+    unk_Struct03* ptr;
     mpSource_f2b7cstruct *f2bstr;
     void *ret;
     s32 s0;
@@ -167,23 +167,23 @@ void func_800F6A38_241CF8(void) {
 
     PlaySound(109);
     ptr = func_8003DBE0(64, NULL);
-    ptr->unka |= 4;
+    ptr->unk_0A |= 4;
     func_8004CDCC(ptr);
-    func_800A0D50(&ptr->coords, &space_data->coords);
+    func_800A0D50(&ptr->unk_0C, &space_data->coords);
 
-    ptr->unk48 = 500.0f;
+    ptr->unk_30 = 500.0f;
 
     ret = func_80042728(ptr, 0);
 
     ftemp = 0.0f;
     for (s0 = 0; s0 < 6; s0++) {
-        func_800A0D00(&ptr->unk36, ftemp, ftemp, ftemp);
+        func_800A0D00(&ptr->unk_24, ftemp, ftemp, ftemp);
         ftemp += 0.4f;
         SleepVProcess();
     }
 
     for (s0 = 0; s0 < 3; s0++) {
-        func_800A0D00(&ptr->unk36, ftemp, ftemp, ftemp);
+        func_800A0D00(&ptr->unk_24, ftemp, ftemp, ftemp);
         ftemp -= 0.4f;
         SleepVProcess();
     }
@@ -194,7 +194,7 @@ void func_800F6A38_241CF8(void) {
     ftt = 0.0f;
     const20 = 20.0f;
     while (TRUE) {
-        f2bstr = &D_800F2B7C[ptr->unk60->unk64->unk0];
+        f2bstr = &D_800F2B7C[*ptr->unk_3C->unk_40];
         func_800A40D0(&f2bstr->unk124, ftt);
         ftemp -= 0.02f;
 
@@ -203,8 +203,8 @@ void func_800F6A38_241CF8(void) {
             break;
         }
 
-        func_800A0D00(&ptr->unk36, ftemp, ftemp, ftemp);
-        ptr->unk48 -= 6.0f;
+        func_800A0D00(&ptr->unk_24, ftemp, ftemp, ftemp);
+        ptr->unk_30 -= 6.0f;
         SleepVProcess();
     }
 
@@ -215,11 +215,11 @@ void func_800F6A38_241CF8(void) {
 }
 
 void func_800F6C48_241F08(mystery_struct_ret_func_80048224* a0) { //ov054_ShowNextStarSpotInner
-    mpSource_object* unk0ptr;
+    unk_Struct03* unk0ptr;
 
     unk0ptr = a0->unk0;
-    unk0ptr->funk52 = 20.0f;
-    unk0ptr->funk56 = -3.0f;
+    unk0ptr->unk_34 = 20.0f;
+    unk0ptr->unk_38 = -3.0f;
 
     func_8003E81C(a0->unk0, 0, 0);
     SleepProcess(3);
@@ -429,7 +429,7 @@ void func_800F7224_2424E4(void) { //ov054_Entrypoint3
 }
 
 void func_800F7250_242510(void) { //ov054_DrawBowserInner
-    mpSource_object *ptr;
+    unk_Struct03 *ptr;
 
     if (D_800FA300 != NULL) {
         return;
@@ -439,9 +439,9 @@ void func_800F7250_242510(void) { //ov054_DrawBowserInner
     func_8003E174(ptr);
     D_800FA300 = ptr;
 
-    ptr->unka |= 0x2;
+    ptr->unk_0A |= 0x2;
 
-    func_800A0D50(&ptr->coords, &GetSpaceData(0x70)->coords);
+    func_800A0D50(&ptr->unk_0C, &GetSpaceData(0x70)->coords);
     func_8003C314(7, ptr, -2, 0);
 }
 
@@ -452,7 +452,7 @@ void func_800F72CC_24258C(void) { //ov054_DrawBowserOuter
 
 //INCLUDE_ASM(s32, "ovl_36_DKsJungleAdventure/2418D0", func_800F72EC_2425AC);
 void func_800F72EC_2425AC(void) { //ov054_DrawKoopaInner
-    mpSource_object *ptr;
+    unk_Struct03 *ptr;
 
     if (D_800FA304 != NULL) {
         return;
@@ -462,9 +462,9 @@ void func_800F72EC_2425AC(void) { //ov054_DrawKoopaInner
     func_8003E174(ptr);
     D_800FA304 = ptr;
 
-    ptr->unka |= 0x2;
+    ptr->unk_0A |= 0x2;
 
-    func_800A0D50(&ptr->coords, &GetSpaceData(0x5D)->coords);
+    func_800A0D50(&ptr->unk_0C, &GetSpaceData(0x5D)->coords);
     func_8003C314(9, ptr, -1, -3);
 }
 
