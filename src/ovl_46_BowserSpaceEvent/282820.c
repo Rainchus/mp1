@@ -3,6 +3,74 @@
 
 void func_80055960(u8, s32);
 
+void func_800F677C_2829BC(void);
+void func_800F69F0_282C30(void);
+void func_800F6AF8_282D38(void);
+void func_800F7044_283284(void);
+void func_800F7410_283650(void);
+void func_800F7BFC_283E3C(void);
+void func_800F80EC_28432C(void);
+
+//bss
+u8 D_800F8FF0;
+u8 D_800F8FF1;
+u8 D_800F8FF2;
+u8 D_800F8FF3;
+unk_Struct03* D_800F8FF4; //80120570
+unk_Struct03* D_800F8FF8; //80120610
+u8 D_800F8FFC[4];
+
+
+static s32 D_800F8ED0 = 0;
+static s32 D_800F8ED4[] = {
+    0x00000002, 0x0000000C, 0x00000014, 0x00000020, 0x0000029, 0x00000031, 0x0000003A, 0x00000047
+};
+
+static Vec3f D_800F8EF4 = {
+    -115.0f, 0.0f, 1120.0f,
+};
+
+static Vec3f D_800F8F00 = {
+    115.0f, 0.0f, 1520.0f
+};
+
+static s32 D_800F8F0C[] =  {
+    0x00000005, 0x000A0068, 0x000A006A, 0x000A006C, 0x000A006D, 0x000A006B,
+};
+
+static s32 D_800F8F24[] = {
+    0x00000004, 0x0001003E, 0x0001003D, 0x00010095, 0x00010039,
+};
+
+static s32 D_800F8F38[] = {
+    0x00000004, 0x0002003E, 0x0002003D, 0x00020095, 0x00020039,
+};
+
+static s32 D_800F8F4C[] = {
+    0x00000004, 0x0006003E, 0x0006003D, 0x00060095, 0x00060039,
+};
+
+static s32 D_800F8F60[] = {
+    0x00000004, 0x0003003E, 0x0003003D, 0x00030095, 0x00030039,
+};
+
+static s32 D_800F8F74[] = {
+    0x00000004, 0x0004003E, 0x0004003D, 0x00040095, 0x00040039,
+};
+
+static s32 D_800F8F88[] = {
+    0x00000004, 0x0005003E, 0x0005003D, 0x00050095, 0x00050039,
+};
+
+static void* D_800F8F9C[] = {
+    D_800F8F24, D_800F8F38, D_800F8F4C,
+    D_800F8F60, D_800F8F74, D_800F8F88, 
+};
+
+static void (*D_800F8FB4[7])() = {
+    &func_800F677C_2829BC, &func_800F69F0_282C30, &func_800F6AF8_282D38, &func_800F7044_283284, &func_800F7410_283650, &func_800F7BFC_283E3C, &func_800F80EC_28432C
+};
+
 void func_800F65E0_282820(void) {
     D_800F8FF0 = D_800ED5C3;
     D_800F8FF1 = D_800ED5DD;
@@ -64,7 +132,7 @@ void func_800F677C_2829BC(void) {
         var_s0 = gPlayers[D_800F8FF1].coinAmount;
     } else {
         windowID = CreateTextWindow(0x28, 0x3C, 0x13, 3);
-        func_8008C490(&sp10, &D_800F8FD0, func_800F66FC_28293C());
+        func_8008C490(&sp10, "%d", func_800F66FC_28293C());
         func_8006DA5C(windowID, &sp10, 0);
         LoadStringIntoWindow(windowID, 0xCC, -1, -1);
         func_8006E070(windowID, 0);
@@ -288,7 +356,7 @@ void func_800F7044_283284(void) {
             var_a2 = -var_a2;
         }
         
-        func_8008C490(&sp10, &D_800F8FD0, var_a2);
+        func_8008C490(&sp10, "%d", var_a2);
         func_8006DA5C(windowID, &sp10, 1);
         LoadStringIntoWindow(windowID, 0xD7, -1, -1);
         func_8006E070(windowID, 0);
@@ -338,7 +406,7 @@ void func_800F7410_283650(void) {
     var_s2 = 0;
     if (D_800C597A == 0) {
         var_s1 = CreateTextWindow(0x28, 0x3C, 0x13, 3);
-        func_8008C490(&sp10, &D_800F8FD0, func_800F66FC_28293C());
+        func_8008C490(&sp10, "%d", func_800F66FC_28293C());
         func_8006DA5C(var_s1, &sp10, 0);
         LoadStringIntoWindow(var_s1, 0xDA, -1, -1);
         func_8006E070(var_s1, 0);
@@ -369,7 +437,7 @@ void func_800F7410_283650(void) {
     switch (var_s4) {
     case 4:
         var_s1 = CreateTextWindow(0x3C, 0x3C, 0x10, 3);
-        func_8008C490(&sp10, &D_800F8FD0, func_800F66FC_28293C());
+        func_8008C490(&sp10, "%d", func_800F66FC_28293C());
         func_8006DA5C(var_s1, &sp10, 0);
         LoadStringIntoWindow(var_s1, 0xDB, -1, -1);
         func_8006E070(var_s1, 0);
@@ -380,7 +448,7 @@ void func_800F7410_283650(void) {
         break;
     case 3:
         var_s1 = CreateTextWindow(0x3C, 0x3C, 0x10, 4);
-        func_8008C490(&sp10, &D_800F8FD0, func_800F66FC_28293C());
+        func_8008C490(&sp10, "%d", func_800F66FC_28293C());
         func_8006DA5C(var_s1, &sp10, 0);
         for (i = 0, var_s2 = 1; i < 4; i++) {
             if (gPlayers[i].miniGameCoins == 0) {
@@ -396,7 +464,7 @@ void func_800F7410_283650(void) {
         break;
     case 2:
         var_s1 = CreateTextWindow(0x3C, 0x3C, 0x10, 4);
-        func_8008C490(&sp10, &D_800F8FD0, func_800F66FC_28293C());
+        func_8008C490(&sp10, "%d", func_800F66FC_28293C());
         func_8006DA5C(var_s1, &sp10, 0);
         for (i = 0, var_s2 = 1; i < 4; i++) {
             if (gPlayers[i].miniGameCoins == 0) {
@@ -412,7 +480,7 @@ void func_800F7410_283650(void) {
         break;
     case 1:
         var_s1 = CreateTextWindow(0x50, 0x3C, 0xE, 4);
-        func_8008C490(&sp10, &D_800F8FD0, func_800F66FC_28293C());
+        func_8008C490(&sp10, "%d", func_800F66FC_28293C());
         func_8006DA5C(var_s1, &sp10, 0);
         i = 0;
         var_s2 = 1;
@@ -435,7 +503,7 @@ void func_800F7410_283650(void) {
         } else {
             var_s2 = func_800F66FC_28293C();
         }
-        func_8008C490(&sp10, &D_800F8FD0, var_s2);
+        func_8008C490(&sp10, "%d", var_s2);
         func_8006DA5C(var_s1, &sp10, 0);
         LoadStringIntoWindow(var_s1, 0xDF, -1, -1);
         func_8006E070(var_s1, 0);
@@ -515,7 +583,7 @@ void func_800F7BFC_283E3C(void) {
 
     if (D_800C597A == 0) {
         temp_s1 = CreateTextWindow(0x28, 0x3C, 0x11, 3);
-        func_8008C490(&sp10, &D_800F8FD0, func_800F66FC_28293C());
+        func_8008C490(&sp10, "%d", func_800F66FC_28293C());
         func_8006DA5C(temp_s1, &sp10, 0);
         LoadStringIntoWindow(temp_s1, 0xE1, -1, -1);
         func_8006E070(temp_s1, 0);
@@ -537,7 +605,7 @@ void func_800F7BFC_283E3C(void) {
     }
     if (gPlayers[D_800F8FF1].miniGameCoins < 0) {
         temp_s1 = CreateTextWindow(0x3C, 0x3C, 0x10, 3);
-        func_8008C490(&sp10, &D_800F8FD0, func_800F66FC_28293C());
+        func_8008C490(&sp10, "%d", func_800F66FC_28293C());
         func_8006DA5C(temp_s1, &sp10, 0);
         LoadStringIntoWindow(temp_s1, 0xE2, -1, -1);
         func_8006E070(temp_s1, 0);
@@ -547,7 +615,7 @@ void func_800F7BFC_283E3C(void) {
         HideTextWindow(temp_s1);
     } else if (gPlayers[D_800F8FF1].miniGameCoins > 0) {
         temp_s1 = CreateTextWindow(0x3C, 0x3C, 0x10, 3);
-        func_8008C490(&sp10, &D_800F8FD0, func_800F66FC_28293C());
+        func_8008C490(&sp10, "%d", func_800F66FC_28293C());
         func_8006DA5C(temp_s1, &sp10, 0);
         LoadStringIntoWindow(temp_s1, 0xE3, -1, -1);
         func_8006E070(temp_s1, 0);
@@ -557,7 +625,7 @@ void func_800F7BFC_283E3C(void) {
         HideTextWindow(temp_s1);
     } else {
         temp_s1 = CreateTextWindow(0x3C, 0x3C, 0x10, 3);
-        func_8008C490(&sp10, &D_800F8FD0, func_800F66FC_28293C());
+        func_8008C490(&sp10, "%d", func_800F66FC_28293C());
         func_8006DA5C(temp_s1, &sp10, 0);
         LoadStringIntoWindow(temp_s1, 0xE4, -1, -1);
         func_8006E070(temp_s1, 0);
@@ -631,7 +699,7 @@ void func_800F80EC_28432C(void) {
 
     if (D_800C597A == 0) {
         var_s1 = CreateTextWindow(0x28, 0x3C, 0x10, 3);
-        func_8008C490(&sp10, &D_800F8FD0, func_800F66FC_28293C());
+        func_8008C490(&sp10, "%d", func_800F66FC_28293C());
         func_8006DA5C(var_s1, &sp10, 0);
         LoadStringIntoWindow(var_s1, 0xE6, -1, -1);
         func_8006E070(var_s1, 0);
@@ -662,7 +730,7 @@ void func_800F80EC_28432C(void) {
     
     if (i != 4) {
         var_s1 = CreateTextWindow(0x3C, 0x3C, 0x10, 4);
-        func_8008C490(&sp10, &D_800F8FD0, func_800F66FC_28293C());
+        func_8008C490(&sp10, "%d", func_800F66FC_28293C());
         func_8006DA5C(var_s1, &sp10, 0);
 
         for (i = 0, var_s2 = 1; i < 4; i++) {
@@ -679,7 +747,7 @@ void func_800F80EC_28432C(void) {
         HideTextWindow(var_s1);
     } else {
         var_s1 = CreateTextWindow(0x3C, 0x3C, 0x10, 3);
-        func_8008C490(&sp10, &D_800F8FD0, func_800F66FC_28293C());
+        func_8008C490(&sp10, "%d", func_800F66FC_28293C());
         func_8006DA5C(var_s1, &sp10, 0);
         LoadStringIntoWindow(var_s1, 0xE8, -1, -1);
         func_8006E070(var_s1, 0);
@@ -858,48 +926,48 @@ void func_800F8608_284848(void) {
     }
 }
 
-INCLUDE_ASM(s32, "ovl_46_BowserSpaceEvent/282820", func_800F8B1C_284D5C);
-// void func_800F8B1C_284D5C(void) { //matches, needs rodata support for switch
-//     if ( func_80072718() == 0 ) {
-//         func_800F8EA8_2850E8();
-//         func_800F8DC0_285000();
-//         func_80054654();
-//         func_80070ED4();
-//         switch (D_800F8ED0) {
-//             case 0:
-//                 func_8005DFB8(1);
-//                 break;
-//             case 1:
-//                 SetBoardFeatureFlag(0x45);
-//                 func_8005E044(0x1, 0, 0x92);
-//                 break;
-//             case 2:
-//                 SetBoardFeatureFlag(0x45);
-//                 func_80059348(0x10);
-//                 func_8005DF44(0x6F, 0, 0x94);
-//                 func_8005E36C(1, 0x46, 1, 0x92);
-//                 break;
-//             case 3:
-//                 SetBoardFeatureFlag(0x45);
-//                 func_80059348(0xE);
-//                 func_8005DF44(0x6F, 0, 0x94);
-//                 func_8005E36C(1, 0x46, 1, 0x92);
-//                 break;
-//             case 4:
-//                 SetBoardFeatureFlag(0x45);
-//                 func_80059348(0x33);
-//                 func_8005DF44(0x6F, 0, 0x94);
-//                 func_8005E36C(1, 0x46, 1, 0x92);
-//                 break;
-//             case 5:
-//                 SetBoardFeatureFlag(0x45);
-//                 func_80059348(0x13);
-//                 func_8005DF44(0x6F, 0, 0x94);
-//                 func_8005E36C(1, 0x46, 1, 0x92);
-//                 break;
-//         }
-//     }
-// }
+//INCLUDE_ASM(s32, "ovl_46_BowserSpaceEvent/282820", func_800F8B1C_284D5C);
+void func_800F8B1C_284D5C(void) { //matches, needs rodata support for switch
+    if ( func_80072718() == 0 ) {
+        func_800F8EA8_2850E8();
+        func_800F8DC0_285000();
+        func_80054654();
+        func_80070ED4();
+        switch (D_800F8ED0) {
+            case 0:
+                func_8005DFB8(1);
+                break;
+            case 1:
+                SetBoardFeatureFlag(0x45);
+                func_8005E044(0x1, 0, 0x92);
+                break;
+            case 2:
+                SetBoardFeatureFlag(0x45);
+                func_80059348(0x10);
+                func_8005DF44(0x6F, 0, 0x94);
+                func_8005E36C(1, 0x46, 1, 0x92);
+                break;
+            case 3:
+                SetBoardFeatureFlag(0x45);
+                func_80059348(0xE);
+                func_8005DF44(0x6F, 0, 0x94);
+                func_8005E36C(1, 0x46, 1, 0x92);
+                break;
+            case 4:
+                SetBoardFeatureFlag(0x45);
+                func_80059348(0x33);
+                func_8005DF44(0x6F, 0, 0x94);
+                func_8005E36C(1, 0x46, 1, 0x92);
+                break;
+            case 5:
+                SetBoardFeatureFlag(0x45);
+                func_80059348(0x13);
+                func_8005DF44(0x6F, 0, 0x94);
+                func_8005E36C(1, 0x46, 1, 0x92);
+                break;
+        }
+    }
+}
 
 void func_800F8C20_284E60(Object* arg0) {
     if (D_800F5144 != 0) {

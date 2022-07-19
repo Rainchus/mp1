@@ -359,4 +359,11 @@ typedef struct mpSource_f2b7cstruct {
     s8 pad2[64];
 } mpSource_f2b7cstruct;
 
+typedef struct camera {
+    f32 unk_00;
+    f32 unk_04;
+    f32 unk_08;
+    f32 unk_0C;
+} camera;
+
 #endif
