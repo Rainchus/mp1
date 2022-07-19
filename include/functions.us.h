@@ -4,6 +4,8 @@
 #include "types.h"
 #include "common_structs.h"
 
+void func_80059348(s16);
+void func_8005DF44(s32, s32, s32);
 void func_8004F504(void*);
 void func_800503B0(s32, s32);
 void func_8008C490(s32*, s32*, s32);
@@ -93,8 +95,7 @@ s32 func_8005CE48(s32);
 playerMain* GetPlayerStruct(s32 playerIndex);
 void func_8008C040(playerMain*, playerMain*, s32);
 void WaitForTextConfirmation(s16);
-void func_8006DA5C(s16, s32*, s32);
-void func_8006E070(s16, s32);
+void func_8006DA5C(s16, void*, s8);
 void func_80009028(Object*, s32, f32, f32, f32, f32);
 void func_80009090(Object*);
 void HideTextWindow(s32);

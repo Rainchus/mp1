@@ -185,7 +185,7 @@ typedef struct playerMain {
 /* 0x06 */ u16 unk_06;
 /* 0x08 */ s16 coinAmount;
 /* 0x0A */ s16 miniGameCoins; //coins to give to player after minigame
-/* 0x0C */ u16 starAmount;
+/* 0x0C */ s16 starAmount;
 /* 0x0E */ s16 curChainIndex;
 /* 0x10 */ u16 curSpaceIndex;
 /* 0x12 */ u16 nextChainIndex;

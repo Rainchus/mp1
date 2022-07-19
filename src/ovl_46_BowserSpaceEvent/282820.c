@@ -240,7 +240,6 @@ void func_800F6AF8_282D38(void) {
     SleepProcess(0x1E);
 }
 
-// INCLUDE_ASM(s32, "ovl_46_BowserSpaceEvent/282820", func_800F7044_283284);
 void func_800F7044_283284(void) {
     s32 sp10;
     s32 windowID;
@@ -327,15 +326,580 @@ void func_800F7044_283284(void) {
     HideTextWindow(windowID);
 }
 
-INCLUDE_ASM(s32, "ovl_46_BowserSpaceEvent/282820", func_800F7410_283650);
+void func_800F7410_283650(void) {
+    s32 sp10;
+    s32 var_a1_2;
+    s32 var_s2;
+    s32 var_s1;
+    s32 var_s4;
+    s32 i;
+    s32 tempVar;
 
-INCLUDE_ASM(s32, "ovl_46_BowserSpaceEvent/282820", func_800F7BFC_283E3C);
+    var_s2 = 0;
+    if (D_800C597A == 0) {
+        var_s1 = CreateTextWindow(0x28, 0x3C, 0x13, 3);
+        func_8008C490(&sp10, &D_800F8FD0, func_800F66FC_28293C());
+        func_8006DA5C(var_s1, &sp10, 0);
+        LoadStringIntoWindow(var_s1, 0xDA, -1, -1);
+        func_8006E070(var_s1, 0);
+        ShowTextWindow(var_s1);
+        PlaySound(0x91);
+        func_8004DBD4(var_s1, D_800F8FF1);
+        HideTextWindow(var_s1);
+        
+        for (i = 0; i < 4; i++) {
+            gPlayers[i].unk_00 = i;
+        }
+        
+        D_800F8ED0 = 3;
+        func_8004F4D4(D_800F8FF4, 2, 0);
+        SleepProcess(0x1E);
+        return;
+    }
+    
+    var_s4 = 0;
+    
+    for (i = 0; i < 4; i++) {
+        //if (gPlayers[i].miniGameCoins <= 0) {
+        if ((s16)(gPlayers[i].miniGameCoins & 0xFFFFFFFF) <= 0U) { //fake match
+            var_s4++;
+        }
+    }
+    
+    switch (var_s4) {
+    case 4:
+        var_s1 = CreateTextWindow(0x3C, 0x3C, 0x10, 3);
+        func_8008C490(&sp10, &D_800F8FD0, func_800F66FC_28293C());
+        func_8006DA5C(var_s1, &sp10, 0);
+        LoadStringIntoWindow(var_s1, 0xDB, -1, -1);
+        func_8006E070(var_s1, 0);
+        ShowTextWindow(var_s1);
+        PlaySound(0x4D);
+        func_8004DBD4(var_s1, D_800F8FF1);
+        HideTextWindow(var_s1);
+        break;
+    case 3:
+        var_s1 = CreateTextWindow(0x3C, 0x3C, 0x10, 4);
+        func_8008C490(&sp10, &D_800F8FD0, func_800F66FC_28293C());
+        func_8006DA5C(var_s1, &sp10, 0);
+        for (i = 0, var_s2 = 1; i < 4; i++) {
+            if (gPlayers[i].miniGameCoins == 0) {
+                func_8006DA5C(var_s1, D_800C5218[gPlayers[i].characterID], var_s2++);
+            }
+        }
+        LoadStringIntoWindow(var_s1, 0xDC, -1, -1);
+        func_8006E070(var_s1, 0);
+        ShowTextWindow(var_s1);
+        PlaySound(0x4D);
+        func_8004DBD4(var_s1, D_800F8FF1);
+        HideTextWindow(var_s1);
+        break;
+    case 2:
+        var_s1 = CreateTextWindow(0x3C, 0x3C, 0x10, 4);
+        func_8008C490(&sp10, &D_800F8FD0, func_800F66FC_28293C());
+        func_8006DA5C(var_s1, &sp10, 0);
+        for (i = 0, var_s2 = 1; i < 4; i++) {
+            if (gPlayers[i].miniGameCoins == 0) {
+                func_8006DA5C(var_s1, D_800C5218[gPlayers[i].characterID], var_s2++);
+            }
+        }
+        LoadStringIntoWindow(var_s1, 0xDD, -1, -1);
+        func_8006E070(var_s1, 0);
+        ShowTextWindow(var_s1);
+        PlaySound(0x4D);
+        func_8004DBD4(var_s1, D_800F8FF1);
+        HideTextWindow(var_s1);
+        break;
+    case 1:
+        var_s1 = CreateTextWindow(0x50, 0x3C, 0xE, 4);
+        func_8008C490(&sp10, &D_800F8FD0, func_800F66FC_28293C());
+        func_8006DA5C(var_s1, &sp10, 0);
+        i = 0;
+        var_s2 = 1;
+        for (; i < 4; i++) {
+            if (gPlayers[i].miniGameCoins == 0) {
+                func_8006DA5C(var_s1, D_800C5218[gPlayers[i].characterID], var_s2++);
+            }
+        }
+        LoadStringIntoWindow(var_s1, 0xDE, -1, -1);
+        func_8006E070(var_s1, 0);
+        ShowTextWindow(var_s1);
+        PlaySound(0x4D);
+        func_8004DBD4(var_s1, D_800F8FF1);
+        HideTextWindow(var_s1);
+        break;
+    default:
+        var_s1 = CreateTextWindow(0x3C, 0x3C, 0x10, 4);
+        if (gPlayers[D_800F8FF1].coinAmount < func_800F66FC_28293C()) {
+            var_s2 = gPlayers[D_800F8FF1].coinAmount;
+        } else {
+            var_s2 = func_800F66FC_28293C();
+        }
+        func_8008C490(&sp10, &D_800F8FD0, var_s2);
+        func_8006DA5C(var_s1, &sp10, 0);
+        LoadStringIntoWindow(var_s1, 0xDF, -1, -1);
+        func_8006E070(var_s1, 0);
+        ShowTextWindow(var_s1);
+        PlaySound(0x4D);
+        func_8004DBD4(var_s1, D_800F8FF1);
+        HideTextWindow(var_s1);
+    }
 
-INCLUDE_ASM(s32, "ovl_46_BowserSpaceEvent/282820", func_800F80EC_28432C);
+    if (var_s4 == 0) {
+        func_800F6744_282984();
+        func_8004F4D4(D_800F8FF8, 0, 0);
+        func_8003E81C(D_800F8FF4, 1, 0);
+        func_80055960(D_800F8FF1, -var_s2);
+        if (gPlayers[D_800F8FF1].coinAmount != 0) {
+            func_800503B0(D_800F8FF1, 5);
+        }
+    } else {
+        for (i = 0; i < 4; i++) {
+            if (gPlayers[i].miniGameCoins == 0) {
+                func_80054868(i + 0xA);
+            }            
+        }
+        
+        SleepProcess(0x14);
+        
+        if (gPlayers[D_800F8FF1].miniGameCoins == 0) {
+            func_8004F4D4(D_800F8FF8, 0, 0);
+        }
+        func_8003E81C(D_800F8FF4, 1, 0U);
+        
+        tempVar = -1;
+        var_a1_2 = 0; //a0
+        
+    
+        for (i = 0; i < 4; i++) {
+            if ((gPlayers[i].miniGameCoins == 0) && (var_a1_2 < gPlayers[i].coinAmount)) {
+                if (tempVar != -1) {
+                    D_800F8FFC[tempVar] = 0;
+                }
+                D_800F8FFC[i] = 1;
+                var_a1_2 = gPlayers[i].coinAmount;
+                tempVar = i;
+            } else {
+                D_800F8FFC[i] = 0;
+            }
+            
+        }
 
-INCLUDE_ASM(s32, "ovl_46_BowserSpaceEvent/282820", func_800F8608_284848);
+        for (i = 0; i < 4; i++) {
+            if (gPlayers[i].miniGameCoins == 0) {
+                func_80055810(i, -func_800F66FC_28293C(), D_800F8FFC[i]);
+                if (gPlayers[i].coinAmount != 0) {
+                    func_800503B0(i, 5);
+                }
+            }
+        }
+    }
+    
+    func_8004F504(D_800F8FF4);
+    func_8004F4D4(D_800F8FF4, 0, 2);
+    var_s1 = CreateTextWindow(0x50, 0x3C, 0xE, 3);
+    LoadStringIntoWindow(var_s1, 0xE0, -1, -1);
+    func_8006E070(var_s1, 0);
+    ShowTextWindow(var_s1);
+    PlaySound(0x4C);
+    func_8004DBD4(var_s1, D_800F8FF1);
+    HideTextWindow(var_s1);
+}
+
+void func_800F7BFC_283E3C(void) {
+    s32 sp10;
+    s32 var_a1_2;
+    s32 temp_s1;
+    s32 tempVar;
+    s32 i;
+
+    if (D_800C597A == 0) {
+        temp_s1 = CreateTextWindow(0x28, 0x3C, 0x11, 3);
+        func_8008C490(&sp10, &D_800F8FD0, func_800F66FC_28293C());
+        func_8006DA5C(temp_s1, &sp10, 0);
+        LoadStringIntoWindow(temp_s1, 0xE1, -1, -1);
+        func_8006E070(temp_s1, 0);
+        ShowTextWindow(temp_s1);
+        PlaySound(0x91);
+        func_8004DBD4(temp_s1, D_800F8FF1);
+        HideTextWindow(temp_s1);
+        for (i = 0; i < 4; i++) {
+            if (i == D_800F8FF1) {
+                gPlayers[i].unk_00 = 0;
+            } else {
+                gPlayers[i].unk_00 = 1;
+            }
+        }
+        D_800F8ED0 = 4;
+        func_8004F4D4(D_800F8FF4, 2, 0);
+        SleepProcess(0x1E);
+        return;
+    }
+    if (gPlayers[D_800F8FF1].miniGameCoins < 0) {
+        temp_s1 = CreateTextWindow(0x3C, 0x3C, 0x10, 3);
+        func_8008C490(&sp10, &D_800F8FD0, func_800F66FC_28293C());
+        func_8006DA5C(temp_s1, &sp10, 0);
+        LoadStringIntoWindow(temp_s1, 0xE2, -1, -1);
+        func_8006E070(temp_s1, 0);
+        ShowTextWindow(temp_s1);
+        PlaySound(0x4D);
+        func_8004DBD4(temp_s1, D_800F8FF1);
+        HideTextWindow(temp_s1);
+    } else if (gPlayers[D_800F8FF1].miniGameCoins > 0) {
+        temp_s1 = CreateTextWindow(0x3C, 0x3C, 0x10, 3);
+        func_8008C490(&sp10, &D_800F8FD0, func_800F66FC_28293C());
+        func_8006DA5C(temp_s1, &sp10, 0);
+        LoadStringIntoWindow(temp_s1, 0xE3, -1, -1);
+        func_8006E070(temp_s1, 0);
+        ShowTextWindow(temp_s1);
+        PlaySound(0x4D);
+        func_8004DBD4(temp_s1, D_800F8FF1);
+        HideTextWindow(temp_s1);
+    } else {
+        temp_s1 = CreateTextWindow(0x3C, 0x3C, 0x10, 3);
+        func_8008C490(&sp10, &D_800F8FD0, func_800F66FC_28293C());
+        func_8006DA5C(temp_s1, &sp10, 0);
+        LoadStringIntoWindow(temp_s1, 0xE4, -1, -1);
+        func_8006E070(temp_s1, 0);
+        ShowTextWindow(temp_s1);
+        PlaySound(0x4D);
+        func_8004DBD4(temp_s1, D_800F8FF1);
+        HideTextWindow(temp_s1);
+    }
+
+    for (i = 0; i < 4; i++) {
+       if (gPlayers[i].miniGameCoins <= 0) {
+           func_80054868(i + 0xA);
+       }
+    }
+    
+    SleepProcess(0x14);
+    
+    if (gPlayers[D_800F8FF1].miniGameCoins <= 0) {
+        func_8004F4D4(D_800F8FF8, 0, 0);
+    }
+    
+    func_8003E81C(D_800F8FF4, 1, 0);
+    
+    tempVar = -1;
+    var_a1_2 = 0; //a0
+    
+
+    for (i = 0; i < 4; i++) {
+        if ((gPlayers[i].miniGameCoins <= 0) && (var_a1_2 < gPlayers[i].coinAmount)) {
+            if (tempVar != -1) {
+                D_800F8FFC[tempVar] = 0;
+            }
+            D_800F8FFC[i] = 1;
+            var_a1_2 = gPlayers[i].coinAmount;
+            tempVar = i;
+        } else {
+            D_800F8FFC[i] = 0;
+        }
+        
+    }
+    
+    for (i = 0; i < 4; i++) {
+        if (gPlayers[i].miniGameCoins > 0) {
+            continue;
+        } else {
+            func_80055810(i, -(func_800F66FC_28293C()), D_800F8FFC[i]);
+            if (gPlayers[i].coinAmount) {
+                func_800503B0(i, 5);
+            }
+        }
+    }
+    
+    func_8004F504(D_800F8FF4);
+    func_8004F4D4(D_800F8FF4, 0, 2);
+    temp_s1 = CreateTextWindow(0x50, 0x3C, 0xE, 3);
+    LoadStringIntoWindow(temp_s1, 0xE5, -1, -1);
+    func_8006E070(temp_s1, 0);
+    ShowTextWindow(temp_s1);
+    PlaySound(0x4C);
+    func_8004DBD4(temp_s1, D_800F8FF1);
+    HideTextWindow(temp_s1);
+}
+
+void func_800F80EC_28432C(void) {
+    s32 sp10;
+    s32 var_a1_2;
+    s32 var_s1;
+    s32 var_s2;
+    s32 i;
+    s32 tempVar;
+
+    if (D_800C597A == 0) {
+        var_s1 = CreateTextWindow(0x28, 0x3C, 0x10, 3);
+        func_8008C490(&sp10, &D_800F8FD0, func_800F66FC_28293C());
+        func_8006DA5C(var_s1, &sp10, 0);
+        LoadStringIntoWindow(var_s1, 0xE6, -1, -1);
+        func_8006E070(var_s1, 0);
+        ShowTextWindow(var_s1);
+        PlaySound(0x91);
+        func_8004DBD4(var_s1, D_800F8FF1);
+        HideTextWindow(var_s1);
+        
+        for (i = 0; i < 4; i++) {
+            if (i == D_800F8FF1) {
+                gPlayers[i].unk_00 = 0;
+            } else {
+                gPlayers[i].unk_00 = 1;
+            }
+        }
+        
+        D_800F8ED0 = 5;
+        func_8004F4D4(D_800F8FF4, 2, 0);
+        SleepProcess(0x1E);
+        return;
+    }
+
+    for (i = 0; i < 4; i++) {
+        if (gPlayers[i].miniGameCoins != 0) {
+            break;
+        }
+    }
+    
+    if (i != 4) {
+        var_s1 = CreateTextWindow(0x3C, 0x3C, 0x10, 4);
+        func_8008C490(&sp10, &D_800F8FD0, func_800F66FC_28293C());
+        func_8006DA5C(var_s1, &sp10, 0);
+
+        for (i = 0, var_s2 = 1; i < 4; i++) {
+            if (gPlayers[i].miniGameCoins == 0) {
+                func_8006DA5C(var_s1, D_800C5218[gPlayers[i].characterID], var_s2++);
+            }
+        }
+
+        LoadStringIntoWindow(var_s1, 0xE7, -1, -1);
+        func_8006E070(var_s1, 0);
+        ShowTextWindow(var_s1);
+        PlaySound(0x4D);
+        func_8004DBD4(var_s1, D_800F8FF1);
+        HideTextWindow(var_s1);
+    } else {
+        var_s1 = CreateTextWindow(0x3C, 0x3C, 0x10, 3);
+        func_8008C490(&sp10, &D_800F8FD0, func_800F66FC_28293C());
+        func_8006DA5C(var_s1, &sp10, 0);
+        LoadStringIntoWindow(var_s1, 0xE8, -1, -1);
+        func_8006E070(var_s1, 0);
+        ShowTextWindow(var_s1);
+        PlaySound(0x4D);
+        func_8004DBD4(var_s1, D_800F8FF1);
+        HideTextWindow(var_s1);
+    }
+
+    for (i = 0; i < 4; i++) {
+        if (gPlayers[i].miniGameCoins == 0) {
+            func_80054868(i + 0xA);
+        }        
+    }
+    
+    SleepProcess(0x14);
+    if (gPlayers[D_800F8FF1].miniGameCoins == 0) {
+        func_8004F4D4(D_800F8FF8, 0, 0);
+    }
+    
+    func_8003E81C(D_800F8FF4, 1, 0U);
+    
+    tempVar = -1;
+    var_a1_2 = 0;
+
+    for (i = 0; i < 4; i++) {
+        if ((gPlayers[i].miniGameCoins == 0) && (var_a1_2 < gPlayers[i].coinAmount)) {
+            if (tempVar != -1) {
+                D_800F8FFC[tempVar] = 0;
+            }
+            
+            D_800F8FFC[i] = 1;
+            var_a1_2 = gPlayers[i].coinAmount;
+            tempVar = i;
+        } else {
+            D_800F8FFC[i] = 0;
+        }
+    }
+
+    for (i = 0; i < 4; i++) {
+        if (gPlayers[i].miniGameCoins == 0) {
+            func_80055810(i, -func_800F66FC_28293C(), D_800F8FFC[i]);
+            if (gPlayers[i].coinAmount != 0) {
+                func_800503B0(i, 5);
+            }
+        }
+    }
+    
+    func_8004F504(D_800F8FF4);
+    func_8004F4D4(D_800F8FF4, 0, 2);
+    var_s1 = CreateTextWindow(0x50, 0x3C, 0xE, 3);
+    LoadStringIntoWindow(var_s1, 0xE9, -1, -1);
+    func_8006E070(var_s1, 0);
+    ShowTextWindow(var_s1);
+    PlaySound(0x4C);
+    func_8004DBD4(var_s1, D_800F8FF1);
+    HideTextWindow(var_s1);
+}
+
+void func_800F8608_284848(void) {
+    s32 windowID;
+    s32 var_s0_2;
+    s32 var_s2;
+    s32 i;
+    u8 new_var2;
+
+    var_s2 = 0;
+    if (D_800C597A == 0) {
+        func_8004935C();
+        func_800499CC(D_800F8FF1);
+        SleepProcess(0x1A);
+        if (gPlayers[D_800F8FF1].coinAmount == 0) {
+            if (gPlayers[D_800F8FF1].starAmount == 0) {
+                windowID = CreateTextWindow(0x50, 0x3C, 0xE, 4);
+                LoadStringIntoWindow(windowID, 0xCA, -1, -1);
+                func_8006E070(windowID, 0);
+                ShowTextWindow(windowID);
+                PlaySound(0x4D);
+                func_8004DBD4(windowID, D_800F8FF1);
+                HideTextWindow(windowID);
+                func_800F6744_282984();
+                func_8004F4D4(D_800F8FF8, 2, 0);
+                func_80055960(D_800F8FF1, 0x14);
+                SleepProcess(0x1E);
+                windowID = CreateTextWindow(0x50, 0x3C, 0xE, 3);
+                LoadStringIntoWindow(windowID, 0xCB, -1, -1);
+                func_8006E070(windowID, 0);
+                ShowTextWindow(windowID);
+                PlaySound(0x4C);
+                func_8004DBD4(windowID, D_800F8FF1);
+                HideTextWindow(windowID);
+            } else {
+                windowID = CreateTextWindow(0x50, 0x3C, 0xE, 4);
+                LoadStringIntoWindow(windowID, 0xC8, -1, -1);
+                func_8006E070(windowID, 0);
+                ShowTextWindow(windowID);
+                PlaySound(0x4D);
+                func_8004DBD4(windowID, D_800F8FF1);
+                HideTextWindow(windowID);
+                func_800F6744_282984();
+                func_8003E81C(D_800F8FF4, 1, 0);
+                func_8004F40C(D_800F8FF4, 0, 2);
+                func_8003E81C(D_800F8FF8, 1, 0);
+                func_80055994(D_800F8FF1, 2);
+                new_var2 = D_800F8FF1; //?
+                gPlayers[new_var2].starAmount--;
+                func_80060618(0x44A, D_800F8FF1);
+                func_80055960(D_800F8FF1, 0xA);
+                func_800503B0(D_800F8FF1, 6);
+                SleepProcess(0x1E);
+                windowID = CreateTextWindow(0x50, 0x3C, 0xE, 3);
+                LoadStringIntoWindow(windowID, 0xC9, -1, -1);
+                func_8006E070(windowID, 0);
+                ShowTextWindow(windowID);
+                PlaySound(0x4C);
+                func_8004DBD4(windowID, D_800F8FF1);
+                HideTextWindow(windowID);
+            }
+        } else {
+            windowID = CreateTextWindow(0x50, 0x3C, 0xD, 4);
+            LoadStringIntoWindow(windowID, 0xC6, -1, -1);
+            func_8006E070(windowID, 0);
+            ShowTextWindow(windowID);
+            PlaySound(0x4D);
+            func_8004DBD4(windowID, D_800F8FF1);
+            HideTextWindow(windowID);
+            func_8004F4D4(D_800F8FF4, 3, 0);
+            SleepProcess(0x20);
+            func_8004F4D4(D_800F8FF4, 0, 2);
+            func_8004EE14(0, D_800F32A0, 0xF, D_800F8FF4);
+            var_s0_2 = 0;
+            func_80049E60();
+            
+            while (func_80049328() == -1) {
+                if (func_80049340() == 2) {
+                    if (var_s0_2 == 0) {
+                        func_8004F4D4(D_800F8FF4, 1, 0);
+                        var_s0_2 = 1;
+                    } else if (++var_s0_2 == 0x28) {
+                        func_8004F4D4(D_800F8FF4, 4, 6);
+                    }
+                }
+                
+                if ((func_80049340() == 4) && (var_s2 == 0)) {
+                    func_8004EE14(0, &D_800F8F00.x, 0xF, D_800F8FF4);
+                    var_s2 = 1;
+                }
+                
+                SleepVProcess();     
+                
+            }
+
+            func_80049478();
+            func_8004F4D4(D_800F8FF4, 0, 2);
+            
+            if (D_800C597A == 0) {
+                D_800F8FB4[func_80049328()]();
+            } else {
+                SleepProcess(0x1A);
+                D_800F8FB4[func_80049334()](); //function ptr array
+            }
+        }
+    } else {
+        SleepProcess(0x1A);
+        D_800F8FB4[func_80049334()](); //function ptr array
+    }
+
+    for (i = 0; i < 4; i++) {
+        gPlayers[i].miniGameCoins = 0;
+    }
+    
+    D_800F5144 = 1;
+    
+    while (1) {
+        SleepVProcess();
+    }
+}
 
 INCLUDE_ASM(s32, "ovl_46_BowserSpaceEvent/282820", func_800F8B1C_284D5C);
+// void func_800F8B1C_284D5C(void) { //matches, needs rodata support for switch
+//     if ( func_80072718() == 0 ) {
+//         func_800F8EA8_2850E8();
+//         func_800F8DC0_285000();
+//         func_80054654();
+//         func_80070ED4();
+//         switch (D_800F8ED0) {
+//             case 0:
+//                 func_8005DFB8(1);
+//                 break;
+//             case 1:
+//                 SetBoardFeatureFlag(0x45);
+//                 func_8005E044(0x1, 0, 0x92);
+//                 break;
+//             case 2:
+//                 SetBoardFeatureFlag(0x45);
+//                 func_80059348(0x10);
+//                 func_8005DF44(0x6F, 0, 0x94);
+//                 func_8005E36C(1, 0x46, 1, 0x92);
+//                 break;
+//             case 3:
+//                 SetBoardFeatureFlag(0x45);
+//                 func_80059348(0xE);
+//                 func_8005DF44(0x6F, 0, 0x94);
+//                 func_8005E36C(1, 0x46, 1, 0x92);
+//                 break;
+//             case 4:
+//                 SetBoardFeatureFlag(0x45);
+//                 func_80059348(0x33);
+//                 func_8005DF44(0x6F, 0, 0x94);
+//                 func_8005E36C(1, 0x46, 1, 0x92);
+//                 break;
+//             case 5:
+//                 SetBoardFeatureFlag(0x45);
+//                 func_80059348(0x13);
+//                 func_8005DF44(0x6F, 0, 0x94);
+//                 func_8005E36C(1, 0x46, 1, 0x92);
+//                 break;
+//         }
+//     }
+// }
 
 void func_800F8C20_284E60(Object* arg0) {
     if (D_800F5144 != 0) {
@@ -364,8 +928,22 @@ void func_800F8C6C_284EAC(void) {
     func_8004CCD0(&D_800F8FF4->unk_0C, &D_800F8FF8->unk_0C, &D_800F8FF4->unk_18);
 }
 
-INCLUDE_ASM(s32, "ovl_46_BowserSpaceEvent/282820", func_800F8DC0_285000);
+void func_800F8DC0_285000(void) {
+    func_8003E694(D_800F8FF8);
+    func_8003E694(D_800F8FF4);
+    func_8004F2EC();
+}
 
-INCLUDE_ASM(s32, "ovl_46_BowserSpaceEvent/282820", func_800F8DF4_285034);
+void func_800F8DF4_285034(void) {
+    func_800178A0(1);
+    func_80017660(0, 0.0f, 0.0f, 320.0f, 240.0f);
+    func_800176C4(0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
+    func_80049E70(&D_FE2310);
+    func_80049F4C(D_800F8ED4[D_800F8FF0]);
+}
 
-INCLUDE_ASM(s32, "ovl_46_BowserSpaceEvent/282820", func_800F8EA8_2850E8);
+void func_800F8EA8_2850E8(void) {
+    func_8004A140();
+    func_80049F0C();
+}
+
