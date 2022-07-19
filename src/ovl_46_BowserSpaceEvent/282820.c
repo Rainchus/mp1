@@ -16,8 +16,8 @@ u8 D_800F8FF0;
 u8 D_800F8FF1;
 u8 D_800F8FF2;
 u8 D_800F8FF3;
-unk_Struct03* D_800F8FF4; //80120570
-unk_Struct03* D_800F8FF8; //80120610
+unk_Struct03* D_800F8FF4;
+unk_Struct03* D_800F8FF8;
 u8 D_800F8FFC[4];
 
 
@@ -926,8 +926,7 @@ void func_800F8608_284848(void) {
     }
 }
 
-//INCLUDE_ASM(s32, "ovl_46_BowserSpaceEvent/282820", func_800F8B1C_284D5C);
-void func_800F8B1C_284D5C(void) { //matches, needs rodata support for switch
+void func_800F8B1C_284D5C(void) {
     if ( func_80072718() == 0 ) {
         func_800F8EA8_2850E8();
         func_800F8DC0_285000();
@@ -1014,4 +1013,3 @@ void func_800F8EA8_2850E8(void) {
     func_8004A140();
     func_80049F0C();
 }
-
