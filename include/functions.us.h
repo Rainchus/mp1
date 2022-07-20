@@ -4,6 +4,15 @@
 #include "types.h"
 #include "common_structs.h"
 
+void func_80070D90(s16);
+void func_800717C0(s16);
+s16 func_8006D010(s32, s32, s32, s32, s32, s32);
+void func_8006E154(s16, s32);
+void func_800F86EC_2BD6CC(void);
+void func_80072080(s16);
+void func_80025F10(s16, s32);
+void func_80027C1C(s16, f32, f32, s32, s32);
+void func_8005AF60(void);
 void func_80026B8C(s16, f32, f32, s32);
 void func_8003E664(void*);
 void func_80059348(s16);
@@ -108,7 +117,7 @@ u16 func_800174F4(s32, s32);
 void func_8001775C(Object*, s32, s32);
 void func_800264F8(s16, s16, f32, s32*, s32*, s32);
 f32 func_80088060(f32);
-void func_8001D420(s32, Vec3f*, s16*, s32*);
+void func_8001D420(s32, void*, void*, void*);
 void func_8001D57C(s32);
 f32 func_800B1750(f32);
 void SetBasicSpriteSize(u16, f32, f32);

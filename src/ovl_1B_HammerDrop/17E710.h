@@ -22,7 +22,7 @@ extern Object* D_800FB998_EE318[];
 extern s32 D_800FB6A0;
 extern s16 D_800EDEB4[];
 extern s16 D_800F5460[];
-extern s8 D_800ECE14[];
+//extern s8 D_800ECE14[];
 extern s8 D_800F3843[];
 extern s32 D_800EDEC0;
 extern s32 D_800FB5C0;

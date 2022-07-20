@@ -1,8 +1,6 @@
 #include "common.h"
 #include "282820.h"
 
-void func_80055960(u8, s32);
-
 void func_800F677C_2829BC(void);
 void func_800F69F0_282C30(void);
 void func_800F6AF8_282D38(void);
@@ -22,6 +20,7 @@ u8 D_800F8FFC[4];
 
 
 static s32 D_800F8ED0 = 0;
+
 static s32 D_800F8ED4[] = {
     0x00000002, 0x0000000C, 0x00000014, 0x00000020, 0x0000029, 0x00000031, 0x0000003A, 0x00000047
 };
@@ -428,8 +427,8 @@ void func_800F7410_283650(void) {
     var_s4 = 0;
     
     for (i = 0; i < 4; i++) {
-        //if (gPlayers[i].miniGameCoins <= 0) {
-        if ((s16)(gPlayers[i].miniGameCoins & 0xFFFFFFFF) <= 0U) { //fake match
+        switch (gPlayers[i].miniGameCoins) {
+        case 0:
             var_s4++;
         }
     }

@@ -177,6 +177,8 @@ typedef struct unk_Struct03 {
 /* 0x3C */ unk_Struct04* unk_3C;
 /* 0x40 */ f32 unk_40;
 /* 0x44 */ f32 unk_44;
+/* 0x48 */ f32 unk_48;
+/* 0x4C */ f32 unk_4C;
 } unk_Struct03; // //sizeof 0xAC? (this and mpSource_object are the same struct)
 
 typedef struct playerMain {

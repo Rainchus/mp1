@@ -1,7 +1,6 @@
 #include "common.h"
 
 extern u16 D_800EC6EA[4];
-extern u8 *D_800ECE14;
 extern u16 D_800EDEB4[4];
 
 extern u16 D_800F2CF0[4];
