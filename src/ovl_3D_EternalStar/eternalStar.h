@@ -1,7 +1,19 @@
 #include "common.h"
 
-extern s16 D_800ED154;
+typedef struct unkStructTest {
+/* 0x00 */ s16 unk_00[12];
+/* 0x1A */ s16 unk_18;
+/* 0x1A */ s16 unk_1A;
+/* 0x1A */ s16 unk_1C;
+/* 0x1C */ s16 unk_1E;
+} unkStructTest;
+
+extern s16* D_800F8ED8[];
+extern s16 D_800F8F08[];
+extern unkStructTest D_800ED154;
 extern s16 D_800ED156;
+extern s16 D_800ED158[];
+
 extern s32 D_800F8CA0[]; //ai decision struct
 extern s32 D_800F8D30[]; //ai decision struct
 extern s32 D_800F8D00[]; //ai decision struct
@@ -36,7 +48,31 @@ extern unk_Struct03* D_800F91DC;
 extern unk_Struct03* D_800F91E0[];
 extern s16 D_800F8C38[];
 extern unk_Struct03* D_800F91E4;
+extern s16 D_800EE320;
+extern s32 D_800F91E8;
+extern s32 D_800F91EC;
+extern s32 D_800F91F0;
+extern s32 D_800F91F4;
+extern s16 D_800EE320;
+extern s32 D_800F91E8;
+extern s32 D_800F91EC;
+extern s32 D_800F91F0;
+extern s32 D_800F91F4;
 
+
+unk_Struct03* func_800F7D6C_255BDC(s16);
+void func_800F7E5C_255CCC(unk_Struct03*);
+void func_800F7E78_255CE8(unk_Struct03*);
+void func_800F7EE0_255D50(unk_Struct03*);
+s32 func_800F7A60_2558D0(void);
+s32 func_800F7AE8_255958(void);
+s32 func_800F79BC_25582C(void);
+s32 func_800F7A2C_25589C(void);
+s32 func_800F78CC_25573C(void);
+s32 func_800F7934_2557A4(void);
+s32 func_800F77CC_25563C(void);
+s32 func_800F784C_2556BC(void);
+void func_800F7B30_2559A0(s32, s32);
 void func_800F7224_255094(s16);
 void func_800F709C_254F0C(s16);
 void func_800F6E34_254CA4(void);

@@ -170,11 +170,8 @@ typedef struct unk_Struct03 {
 /* 0x04 */ struct unk_Struct03 *next;
 /* 0x08 */ s16 unk_08;
 /* 0x0A */ u16 unk_0A;
-/* 0x0C */ f32 unk_0C;
-/* 0x10 */ f32 unk_10;
-/* 0x14 */ f32 unk_14;
-/* 0x18 */ f32 unk_18;
-/* 0x1C */ char unk_1C[8];
+/* 0x0C */ Vec3f coords;
+/* 0x18 */ Vec3f unk_18;
 /* 0x24 */ f32 unk_24;
 /* 0x28 */ f32 unk_28;
 /* 0x2C */ f32 unk_2C;
@@ -182,7 +179,7 @@ typedef struct unk_Struct03 {
 /* 0x30 */ f32 unk_34;
 /* 0x30 */ f32 unk_38;
 /* 0x3C */ unk_Struct04* unk_3C;
-/* 0x40 */ f32 unk_40;
+/* 0x3C */ unk_Struct04* unk_40;
 /* 0x44 */ f32 unk_44;
 /* 0x48 */ f32 unk_48;
 /* 0x4C */ f32 unk_4C;
@@ -375,9 +372,7 @@ typedef struct mpSource_f2b7cstruct {
 } mpSource_f2b7cstruct;
 
 typedef struct camera {
-    f32 unk_00;
-    f32 unk_04;
-    f32 unk_08;
+    Vec3f coords;
     f32 unk_0C;
 } camera;
 

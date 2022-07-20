@@ -118,7 +118,9 @@ INCLUDE_ASM(s32, "48D90", func_8004B838);
 
 INCLUDE_ASM(s32, "48D90", func_8004B844);
 
-INCLUDE_ASM(s32, "48D90", func_8004B850);
+s32 func_8004B850(void) {
+    return D_800D6730 & 2;
+}
 
 INCLUDE_ASM(s32, "48D90", func_8004B860);
 

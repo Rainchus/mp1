@@ -979,19 +979,17 @@ void func_800F8C6C_284EAC(void) {
     func_8003DAA8();
     func_8004F2AC();
     D_800F8FF4 = func_8003DBE0(6, &D_800F8F0C);
-    D_800F8FF4->unk_0C = D_800F8EF4.x;
-    D_800F8FF4->unk_10 = D_800F8EF4.y;
-    D_800F8FF4->unk_14 = D_800F8EF4.z;
-    D_800F8FF4->unk_2C = 1.5f;
-    D_800F8FF4->unk_28 = 1.5f;
-    D_800F8FF4->unk_24 = 1.5f;
+    D_800F8FF4->coords.x = D_800F8EF4.x;
+    D_800F8FF4->coords.y = D_800F8EF4.y;
+    D_800F8FF4->coords.z = D_800F8EF4.z;
+    D_800F8FF4->unk_24 = D_800F8FF4->unk_28 = D_800F8FF4->unk_2C = 1.5f;
     D_800F8FF8 = func_8003DBE0(func_80052F04(D_800F8FF1), D_800F8F9C[gPlayers[D_800F8FF1].characterID]);
-    D_800F8FF8->unk_0C = D_800F8F00.x;
-    D_800F8FF8->unk_10 = D_800F8F00.y;
-    D_800F8FF8->unk_14 = D_800F8F00.z;
+    D_800F8FF8->coords.x = D_800F8F00.x;
+    D_800F8FF8->coords.y = D_800F8F00.y;
+    D_800F8FF8->coords.z = D_800F8F00.z;
     func_80021B14(*D_800F8FF8->unk_3C->unk_40, gPlayers[D_800F8FF1].characterID, 0x80);
-    func_8004CCD0(&D_800F8FF8->unk_0C, &D_800F8FF4->unk_0C, &D_800F8FF8->unk_18);
-    func_8004CCD0(&D_800F8FF4->unk_0C, &D_800F8FF8->unk_0C, &D_800F8FF4->unk_18);
+    func_8004CCD0(&D_800F8FF8->coords, &D_800F8FF4->coords, &D_800F8FF8->unk_18);
+    func_8004CCD0(&D_800F8FF4->coords, &D_800F8FF8->coords, &D_800F8FF4->unk_18);
 }
 
 void func_800F8DC0_285000(void) {

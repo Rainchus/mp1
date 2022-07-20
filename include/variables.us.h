@@ -40,5 +40,6 @@ extern Process* current_process;
 extern GameStatus D_800ED5C0;
 extern f32 D_800C34A4;
 extern s8 D_800ECE14[];
+extern s16 D_800D6730;
 
 extern unk_800ECDE0* D_800ECDE0;

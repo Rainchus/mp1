@@ -245,8 +245,8 @@ void func_800F6F68_254DD8(void) {
     if (IsBoardFeatureFlagSet(0x4F) != 0) {
         playerNoFeatureFlag = GetPlayerStruct(-1);
         ClearBoardFeatureFlag(0x4F);
-        func_800A0D50(&playerNoFeatureFlag->playerObj->unk_0C, &GetSpaceData(0x4E)->coords.x);
-        func_800A0E80(&playerNoFeatureFlag->playerObj->unk_18, &GetSpaceData(2)->coords.x, &playerNoFeatureFlag->playerObj->unk_0C);
+        func_800A0D50(&playerNoFeatureFlag->playerObj->coords, &GetSpaceData(0x4E)->coords);
+        func_800A0E80(&playerNoFeatureFlag->playerObj->unk_18, &GetSpaceData(2)->coords, &playerNoFeatureFlag->playerObj->coords);
     }
     
     if (IsBoardFeatureFlagSet(0x50) != 0) {
@@ -280,7 +280,7 @@ INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F709C_254F0C);
 //         var_s2->unk_0A |= 2;
 //         D_800F91C0[arg0] = var_s2;
 //         func_8004CDCC(var_s2);
-//         func_800A0D50(&var_s2->unk_0C, &GetSpaceData(D_800F8BF8[arg0])->coords.x);
+//         func_800A0D50(&var_s2->coords, &GetSpaceData(D_800F8BF8[arg0])->coords.x);
 //         func_8003C314(0xA, var_s2, D_800F8C18[arg0], D_800F8C18[arg0 + 1]);
 //     }
 // }
@@ -312,7 +312,7 @@ void func_800F7224_255094(s16 arg0) {
         var_s1->unk_0A |= 2;
         func_800A0D00(&var_s1->unk_24, 0.6f, 0.6f, 0.6f);
         var_s1->unk_30 = 100.0f;
-        func_800A0D50(&var_s1->unk_0C, &(GetSpaceData(D_800F8C34[arg0])->coords) );
+        func_800A0D50(&var_s1->coords, &(GetSpaceData(D_800F8C34[arg0])->coords) );
         func_8003C314(8, var_s1, 0, 0);
     }
 }
@@ -334,7 +334,7 @@ void func_800F736C_2551DC(void) {
         func_8003E174(temp_s0);
         D_800F91E4 = temp_s0;
         temp_s0->unk_0A |= 2;
-        func_800A0D50(&temp_s0->unk_0C, &GetSpaceData(2)->coords);
+        func_800A0D50(&temp_s0->coords, &GetSpaceData(2)->coords);
         func_8003C314(7, temp_s0, 0, 0);
     }
 }
@@ -369,8 +369,8 @@ void func_800F74D4_255344(void) {
     D_800F91E4 = 0;
     func_800F736C_2551DC();
     
-    if (IsBoardFeatureFlagSet(0x4F) != 0) {
-        func_800A0E80(&D_800F91E4->unk_18, &(GetSpaceData(0x4E)->coords.x), &D_800F91E4->unk_0C);
+    if (IsBoardFeatureFlagSet(0x4F)) {
+        func_800A0E80(&D_800F91E4->unk_18, &(GetSpaceData(0x4E)->coords), &D_800F91E4->coords);
         InitProcess(func_800F73F0_255260, 0x1005, 0, 0);
     }
 }
@@ -428,8 +428,8 @@ s16 func_800F7730_2555A0(void) {
 }
 
 s32 func_800F775C_2555CC(void) {
-    if (D_800ED154 != 0) {
-        if (IsBoardFeatureFlagSet(0x48) == 0) {
+    if (D_800ED154.unk_00[0] != 0) {
+        if (!(IsBoardFeatureFlagSet(0x48))) {
             return 0;
         }
     }
@@ -437,15 +437,33 @@ s32 func_800F775C_2555CC(void) {
 }
 
 s32 func_800F7794_255604(void) {
-    if (D_800ED156 != 0) {
-        if (IsBoardFeatureFlagSet(0x4C) == 0) {
+    if (D_800ED154.unk_00[1] != 0) {
+        if (!(IsBoardFeatureFlagSet(0x4C))) {
             return 0;
         }
     }
     return 1;
 }
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F77CC_25563C);
+s32 func_800F77CC_25563C(void) {
+    if (D_800ED158[0] != 0) {
+        switch (D_800ED158[13]) {
+        case 0:
+            if (!(IsBoardFeatureFlagSet(0x46)) || !(IsBoardFeatureFlagSet(0x47))) {
+                return 0;
+            }
+            break;
+        case 1:
+            if (!(IsBoardFeatureFlagSet(0x49)) || !(IsBoardFeatureFlagSet(0x4A))) {
+                return 0;
+            }
+            break;
+        default:
+            return 2;
+        }
+    }
+    return 1;
+}
 
 INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F784C_2556BC);
 
@@ -455,7 +473,13 @@ INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F7934_2557A4);
 
 INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F79BC_25582C);
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F7A2C_25589C);
+s32 func_800F7A2C_25589C(void) {
+    if (D_800ED158[5] != 0 && D_800ED158[13] == 2) {
+        return 3;
+    } else {
+        return 1;
+    }
+}
 
 INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F7A60_2558D0);
 
@@ -465,33 +489,163 @@ INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F7B30_2559A0);
 
 INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F7B6C_2559DC);
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F7BA0_255A10);
+void func_800F7BA0_255A10(void) {
+    func_800F7B30_2559A0(func_800F784C_2556BC(), func_800F77CC_25563C());
+}
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F7BD4_255A44);
+void func_800F7BD4_255A44(void) {
+    func_800F7B30_2559A0(func_800F78CC_25573C(), func_800F7934_2557A4());
+}
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F7C08_255A78);
+void func_800F7C08_255A78(void) {
+    func_800F7B30_2559A0(func_800F7A2C_25589C(), func_800F79BC_25582C());
+}
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F7C3C_255AAC);
+void func_800F7C3C_255AAC(void) {
+    func_800F7B30_2559A0(func_800F7AE8_255958(), func_800F7A60_2558D0());
+}
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F7C70_255AE0);
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F7D20_255B90);
+void func_800F7C70_255AE0(void) {
+    while (func_8004B850() != 0) {
+        SleepVProcess();
+    }
+    SleepVProcess();
+    D_800F91E8 = func_80045D84(0, 0x92, 1);
+    D_800F91EC = func_80045D84(1, 0xA0, 1);
+    D_800F91F0 = func_80045D84(3, 0xAE, 1);
+    D_800F91F4 = func_80045D84(0xB, 0xBC, 1);
+    SleepProcess(3);
+    D_800EE320 = 1;
+}
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F7D6C_255BDC);
+void func_800F7D20_255B90(void) {
+    D_800EE320 = 0;
+    func_80045E6C(D_800F91E8);
+    func_80045E6C(D_800F91EC);
+    func_80045E6C(D_800F91F0);
+    func_80045E6C(D_800F91F4);
+}
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F7E5C_255CCC);
+unk_Struct03* func_800F7D6C_255BDC(s16 arg0) {
+    unk_Struct03* temp_s0;
+    playerMain* temp_s1 = GetPlayerStruct(arg0);
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F7E78_255CE8);
+    if (temp_s1->playerIndex == GetCurrentPlayerIndex()) {
+        temp_s0 = func_8003DBE0(temp_s1->characterID, NULL);
+    } else {
+        temp_s0 = func_8003DBE0(func_80052F6C(arg0), NULL);
+    }
+    func_800A0D50(&temp_s0->coords, &temp_s1->playerObj->coords);
+    func_800A0D50(&temp_s0->unk_18, &temp_s1->playerObj->unk_18);
+    func_80025930(*temp_s0->unk_3C->unk_40, 0, 0x8000);
+    func_80025930(*temp_s0->unk_40->unk_40, 0, 0x8000);
+    func_80021240(*temp_s0->unk_3C->unk_40);
+    func_80021240(*temp_s0->unk_40->unk_40);
+    return temp_s0;
+}
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F7EE0_255D50);
+void func_800F7E5C_255CCC(unk_Struct03* arg0) {
+    func_8003E694(arg0);
+}
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F7F4C_255DBC);
+void func_800F7E78_255CE8(unk_Struct03* arg0) {
+    s32 i;
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F7F7C_255DEC);
+    for (i = 255; i >= 0; i = i - 8) {
+        func_800211BC(*arg0->unk_3C->unk_40, i);
+        func_800211BC(*arg0->unk_40->unk_40, ~i); 
+        SleepVProcess();
+    }
+}
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F8130_255FA0);
+void func_800F7EE0_255D50(unk_Struct03* arg0) {
+    s32 i;
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F8240_2560B0);
+    for (i = 0; i <= 255; i = i + 8) {
+        func_800211BC(*arg0->unk_3C->unk_40, i);
+        func_800211BC(*arg0->unk_40->unk_40, ~i); 
+        SleepVProcess();
+    }
+}
+
+void func_800F7F4C_255DBC(void) {
+    s32 i;
+
+    for (i = 0; i < 12; i++) {
+        D_800ED154.unk_00[i] = 0;
+    }
+}
+
+void func_800F7F7C_255DEC(void) {
+    unk_Struct03* temp_s1;
+    unk_Struct03* temp_s3;
+    Process* process;
+    SpaceData* space;
+    playerMain* player = GetPlayerStruct(-1);
+
+    player->playerObj->unk_0A &= 0xFFFD;
+    func_8003E664(player->playerObj);
+    temp_s3 = func_800F7D6C_255BDC(-1);
+    temp_s1 = func_8003DBE0(0x4C, NULL);
+    func_80025EB4(*temp_s1->unk_3C->unk_40, 2, 0);
+    func_800A0D50(&temp_s1->coords, &player->playerObj->coords);
+    func_80058910(-1, 3);
+    PlaySound(0x47);
+    func_800F7EE0_255D50(temp_s3);
+    func_8003E694(temp_s1);
+    space = GetSpaceData(GetAbsSpaceIndexFromChainSpaceIndex(player->nextChainIndex, player->nextSpaceIndex));
+    process = GetCurrentProcess();
+    LinkChildProcess(process, func_8004D648(&player->playerObj->coords, &space->coords, &player->playerObj->coords, 25.0f));
+    WaitForChildProcess();
+    SetPlayerOntoChain(-1, player->nextChainIndex, player->nextSpaceIndex);
+    temp_s1 = func_8003DBE0(0x4C, NULL);
+    func_80025EB4(*temp_s1->unk_3C->unk_40, 2, 0);
+    func_800A0D50(&temp_s1->coords, &player->playerObj->coords);
+    PlaySound(0x47);
+    func_800A0D50(&temp_s3->coords, &player->playerObj->coords);
+    func_800A0D50(&temp_s3->unk_18, &player->playerObj->unk_18);
+    func_800F7E78_255CE8(temp_s3);
+    func_8003E694(temp_s1);
+    func_800F7E5C_255CCC(temp_s3);
+    func_8003E5E0(player->playerObj);
+    player->playerObj->unk_0A |= 2;
+}
+
+void func_800F8130_255FA0(void) {
+    playerMain* player = GetPlayerStruct(-1);
+    s16 curSpaceIndex = GetCurrentSpaceIndex();
+    s32 i;
+
+    for (i = 0; i < 12; i++) {
+        if (D_800F8F08[i] != curSpaceIndex) {
+            continue;
+        } else {
+            while (func_8004B850() != 0) {
+                SleepProcess(1);
+            }
+            
+            D_800ED154.unk_00[i] = 1;
+
+            SetNextChainAndSpace(-1, D_800F8ED8[i][D_800ED154.unk_1E], 0);
+            func_800405DC(player->playerIndex);
+            func_800F7F7C_255DEC();
+            func_8003FEFC(player->playerIndex);
+            break;
+        }        
+    }
+
+    EndProcess(NULL);
+}
+
+void func_800F8240_2560B0(void) {
+    SetPlayerAnimation(-1, -1, 2);
+    SleepProcess(0x1E);
+    SetBoardFeatureFlag(0x4F);
+    func_800587BC(0x5D, 0, 3, 1);
+    func_8004CB20(1);
+    EndProcess(NULL);
+}
 
 INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F8298_256108);
 

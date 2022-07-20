@@ -43,13 +43,13 @@ void func_800F66C4_29AC14(void) {
     PlaySound(0x432);
     func_8004DBD4(textWindowID, D_800F6EC1);
     HideTextWindow(textWindowID);
-    func_8004CCD0(&D_800F6EC8->unk_0C , &D_800F32A0->unk_00, &D_800F6EC8->unk_18 );
+    func_8004CCD0(&D_800F6EC8->coords , &D_800F32A0->coords, &D_800F6EC8->unk_18 );
     func_8004F4D4(D_800F6EC8, 0, 0);
     func_80060468(0x451, gPlayers[D_800F6EC1].characterID);
     func_80055960(D_800F6EC1, 20);
     SleepProcess(40);
     func_8003E81C(D_800F6EC8, 1, 2);
-    func_8004EE14(0, &D_800F6EC4->unk_0C, 10, D_800F6EC8);
+    func_8004EE14(0, &D_800F6EC4->coords, 10, D_800F6EC8);
     SleepProcess(10);
     func_8004F4D4(D_800F6EC8, -1, 2);
     textWindowID = CreateTextWindow(100, 60, 14, 3);
@@ -92,18 +92,18 @@ void func_800F6978_29AEC8(Object* arg0) {
 void func_800F69BC_29AF0C(void) {
     func_8003DAA8();
     D_800F6EC4 = func_8003DBE0(8, &D_800F6E7C);
-    D_800F6EC4->unk_0C = D_800F6D50[D_800F6EC0].x;
-    D_800F6EC4->unk_10 = D_800F6D50[D_800F6EC0].y;
-    D_800F6EC4->unk_14 = D_800F6D50[D_800F6EC0].z;
+    D_800F6EC4->coords.x = D_800F6D50[D_800F6EC0].x;
+    D_800F6EC4->coords.y = D_800F6D50[D_800F6EC0].y;
+    D_800F6EC4->coords.z = D_800F6D50[D_800F6EC0].z;
     D_800F6EC4->unk_30 = 1000.0f;
     func_8004F140(*D_800F6EC4->unk_3C->unk_40);
     D_800F6EC8 = func_8003DBE0(func_80052F04(D_800F6EC1), ptr_800F6E64[gPlayers[D_800F6EC1].characterID]);
-    D_800F6EC8->unk_0C = D_800F6DB0[D_800F6EC0].x;
-    D_800F6EC8->unk_10 = D_800F6DB0[D_800F6EC0].y;
-    D_800F6EC8->unk_14 = D_800F6DB0[D_800F6EC0].z;
+    D_800F6EC8->coords.x = D_800F6DB0[D_800F6EC0].x;
+    D_800F6EC8->coords.y = D_800F6DB0[D_800F6EC0].y;
+    D_800F6EC8->coords.z = D_800F6DB0[D_800F6EC0].z;
     func_80021B14(*D_800F6EC8->unk_3C->unk_40, gPlayers[D_800F6EC1].characterID, 0x80);
-    func_8004CCD0(&D_800F6EC4->unk_0C, &D_800F6EC8->unk_0C, &D_800F6EC4->unk_18);
-    func_8004CCD0(&D_800F6EC8->unk_0C, &D_800F6EC4->unk_0C, &D_800F6EC8->unk_18);
+    func_8004CCD0(&D_800F6EC4->coords, &D_800F6EC8->coords, &D_800F6EC4->unk_18);
+    func_8004CCD0(&D_800F6EC8->coords, &D_800F6EC4->coords, &D_800F6EC8->unk_18);
 }
 
 void func_800F6B58_29B0A8(void) {

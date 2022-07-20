@@ -169,7 +169,7 @@ void func_800F6A38_241CF8(void) {
     ptr = func_8003DBE0(64, NULL);
     ptr->unk_0A |= 4;
     func_8004CDCC(ptr);
-    func_800A0D50(&ptr->unk_0C, &space_data->coords);
+    func_800A0D50(&ptr->coords, &space_data->coords);
 
     ptr->unk_30 = 500.0f;
 
@@ -441,7 +441,7 @@ void func_800F7250_242510(void) { //ov054_DrawBowserInner
 
     ptr->unk_0A |= 0x2;
 
-    func_800A0D50(&ptr->unk_0C, &GetSpaceData(0x70)->coords);
+    func_800A0D50(&ptr->coords, &GetSpaceData(0x70)->coords);
     func_8003C314(7, ptr, -2, 0);
 }
 
@@ -450,7 +450,6 @@ void func_800F72CC_24258C(void) { //ov054_DrawBowserOuter
     func_800F7250_242510();
 }
 
-//INCLUDE_ASM(s32, "ovl_36_DKsJungleAdventure/2418D0", func_800F72EC_2425AC);
 void func_800F72EC_2425AC(void) { //ov054_DrawKoopaInner
     unk_Struct03 *ptr;
 
@@ -464,7 +463,7 @@ void func_800F72EC_2425AC(void) { //ov054_DrawKoopaInner
 
     ptr->unk_0A |= 0x2;
 
-    func_800A0D50(&ptr->unk_0C, &GetSpaceData(0x5D)->coords);
+    func_800A0D50(&ptr->coords, &GetSpaceData(0x5D)->coords);
     func_8003C314(9, ptr, -1, -3);
 }
 
