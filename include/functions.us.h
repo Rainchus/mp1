@@ -4,6 +4,24 @@
 #include "types.h"
 #include "common_structs.h"
 
+s16 RunDecisionTree(void*);
+void LinkChildProcess(Process*, Process*);
+void WaitForChildProcess(void);
+void func_8004CD84(Vec3f*);
+Process* func_8004D1EC(f32*, Vec3f*, f32*, s32);
+unk_Struct03* func_8003E320(unk_Struct03*);
+unk_Struct03* func_8003E320(unk_Struct03*);
+void func_8003E664(unk_Struct03*);
+void func_800A0E80(f32*, f32*, f32*);
+void func_80052E84(s16);
+void func_80056A08(s32, s32, s32, s32);
+void func_8006DDC8(s16, s32, s16);
+void func_8003B798(ProcessHeader*);
+void func_80072080(s16);
+void func_80025F10(s16, s32);
+s16 func_8007194C(s32, s32, s32);
+void func_8001D520(s32, Vec3f*, Vec3f*);
+s16 GetCurrentSpaceIndex();
 void func_80070D90(s16);
 void func_800717C0(s16);
 s16 func_8006D010(s32, s32, s32, s32, s32, s32);
@@ -14,7 +32,6 @@ void func_80025F10(s16, s32);
 void func_80027C1C(s16, f32, f32, s32, s32);
 void func_8005AF60(void);
 void func_80026B8C(s16, f32, f32, s32);
-void func_8003E664(void*);
 void func_80059348(s16);
 void func_8005DF44(s32, s32, s32);
 void func_8004F504(void*);
@@ -69,9 +86,8 @@ void *Realloc(HeapNode* heap, void* mem, u32 new_size);
 u32 GetAllocatedHeapSize(HeapNode* heap);
 u32 GetUsedMemoryBlockCount(HeapNode* heap);
 s32 GetMemoryAllocSize(s32 value);
-void EndProcess(Process*);
+void EndProcess(void*);
 void func_8003E1BC(unk_Struct03*, u8);
-Process* InitProcess(process_func func, u16 priority, s32 stack_size, s32 extra_data_size);
 void SleepVProcess(void);
 Process* GetCurrentProcess(void);
 void func_8003E8B8(unk_Struct03* ptr, s16 a, s16 b, s16 c, u16 d);

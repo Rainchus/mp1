@@ -70,8 +70,8 @@ typedef struct unkGlobalStruct_00 {
     /* 0x34 */ f32 unk_34;
     /* 0x38 */ f32 unk_38;
     /* 0x3C */ f32 unk_3C;
-    /* 0x40 */ char unk_40[2];
-    /* 0x42 */ u16 unk_42;
+    /* 0x40 */ s32 unk_40;
+    // /* 0x42 */ u16 unk_42;
     /* 0x44 */ char unk_44[0xC];
     /* 0x50 */ f32 unk_50;
     /* 0x54 */ char unk_54[2];
@@ -113,6 +113,13 @@ typedef struct Object {
 /* 0x4C */ u8  unk_4F;
 /* 0x50 */ unkGlobalStruct_00* unk_50;
 } Object; //sizeof 0x54
+
+typedef struct ProcessHeader { //?
+/* 0x00 */ struct unk_Struct03* prev;
+/* 0x04 */ struct unk_Struct03* next;
+/* 0x08 */ s16 unk_08;
+/* 0x0A */ s16 unk_0A;
+} ProcessHeader;
 
 typedef struct jump_buf
 {
@@ -161,8 +168,8 @@ typedef struct unk_Struct04 {
 typedef struct unk_Struct03 {
 /* 0x00 */ struct unk_Struct03 *prev; // may be NULL
 /* 0x04 */ struct unk_Struct03 *next;
-/* 0x08 */ s8 pad1[2];
-/* 0x0A */ s16 unk_0A;
+/* 0x08 */ s16 unk_08;
+/* 0x0A */ u16 unk_0A;
 /* 0x0C */ f32 unk_0C;
 /* 0x10 */ f32 unk_10;
 /* 0x14 */ f32 unk_14;
@@ -179,6 +186,8 @@ typedef struct unk_Struct03 {
 /* 0x44 */ f32 unk_44;
 /* 0x48 */ f32 unk_48;
 /* 0x4C */ f32 unk_4C;
+/* 0x50 */ char unk_50[0x3C];
+/* 0x8C */ struct unk_Struct03* unk_8C;
 } unk_Struct03; // //sizeof 0xAC? (this and mpSource_object are the same struct)
 
 typedef struct playerMain {
