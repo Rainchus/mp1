@@ -46,7 +46,24 @@ void func_800F671C_25458C(void) {
     }
 }
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F67AC_25461C);
+s16 func_800F67AC_25461C(s16 arg0) {
+    GameStatus* gameStatus = &D_800ED5C0;
+    s32 i;
+    
+    for (i = 0; i < 7; i++) {
+        if (arg0 != D_800F8BD0[i]) {
+            continue;
+        } else {
+            if (IsBoardFeatureFlagSet(D_800F8BC0[i]) != 0) {
+                return 2;
+            } else {
+                gameStatus->unk_1A = D_800F8BC0[i];
+                return 1;
+            }
+        }
+    }
+    return 0;
+}
 
 void func_800F6850_2546C0(void) {
     func_8001D494(1, 40.0f, 80.0f, 8000.0f);
@@ -114,20 +131,18 @@ void func_800F6AE8_254958(ProcessHeader* arg0, s16 arg1) {
     func_8006DDC8(arg0->unk_08, 0x4B, (arg0->unk_0A + 0x5A));
 }
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F6B58_2549C8);
-// void func_800F6B58_2549C8(ProcessHeader* arg0) {
-//     func_8003E8B8(arg0->prev, 0, 0, 6, 0);
-//     SleepProcess(3);
-//     while (1) {
-//         if (!(func_8003E940(arg0->prev))) {
-//             SleepVProcess();
-//         } else {
-//             break;
-//         }
-//     }
-//     func_8003E8B8(arg0->prev, -1, 0, 6, 2);
-// }
-
+void func_800F6B58_2549C8(ProcessHeader* arg0) {
+    func_8003E8B8(arg0->prev, 0, 0, 6, 0);
+    SleepProcess(3);
+    while (1) {
+        if (!(func_8003E940(arg0->prev))) {
+            SleepVProcess();
+        } else {
+            break;
+        }
+    }
+    func_8003E8B8(arg0->prev, -1, 0, 6, 2);
+}
 
 void func_800F6BD8_254A48(void) {
     s32 var_a1;
@@ -137,6 +152,7 @@ void func_800F6BD8_254A48(void) {
     func_80060128(0x30);
     temp_s0 = func_800F68E4_254754(D_800F8BF0);
     func_80072644(2, 0x10);
+
     while (func_80072718() != 0) {
         SleepVProcess();
     }
@@ -148,6 +164,7 @@ void func_800F6BD8_254A48(void) {
     } else {
         var_a1 = 0x4F0;
     }
+
     LoadStringIntoWindow(temp_s0->unk_08, var_a1, -1, -1);
     func_80071C8C(temp_s0->unk_08, 1);
     PlaySound(0xF0);
@@ -160,6 +177,7 @@ void func_800F6BD8_254A48(void) {
     } else {
         var_a1_2 = 0x4F1;
     }
+
     LoadStringIntoWindow(temp_s0->unk_08, var_a1_2, -1, -1);
     func_80071C8C(temp_s0->unk_08, 1);
     WaitForTextConfirmation(temp_s0->unk_08);
@@ -203,8 +221,8 @@ void func_800F6E34_254CA4(void) {
     func_8005CF30(0x50, 0x28);
     func_80060088();
     func_80023448(1);
-    func_800234B8(0U, 0x78, 0x78, 0x78);
-    func_800234B8(1U, 0x40, 0x40, 0x60);
+    func_800234B8(0, 0x78, 0x78, 0x78);
+    func_800234B8(1, 0x40, 0x40, 0x60);
     func_80023504(1, -100.0f, 100.0f, 300.0f);
     func_80056A08(0x44, 0x4C, 0x48, 0);
     func_80052E84(0);
@@ -267,25 +285,28 @@ void func_800F7070_254EE0(void) {
     func_800584F0(1);
 }
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F709C_254F0C);
-// void func_800F709C_254F0C(s16 arg0) {
-//     unk_Struct03* var_s2;
+void func_800F709C_254F0C(s16 arg0) { //fake match
+    unk_Struct03* var_s2;
+    SpaceData* space;
+    s16 temp;
 
-//     if (D_800F91C0[arg0] == 0) {
-//         if (D_800F91BC == NULL) {
-//             var_s2 = func_8003DBE0(0x79U, NULL);
-//             func_8003E174(var_s2);
-//             D_800F91BC = var_s2;
-//         } else {
-//             var_s2 = func_8003E320(D_800F91BC);
-//         }
-//         var_s2->unk_0A |= 2;
-//         D_800F91C0[arg0] = var_s2;
-//         func_8004CDCC(var_s2);
-//         func_800A0D50(&var_s2->coords, &GetSpaceData(D_800F8BF8[arg0])->coords.x);
-//         func_8003C314(0xA, var_s2, D_800F8C18[arg0], D_800F8C18[arg0 + 1]);
-//     }
-// }
+    if (D_800F91C0[arg0] == 0) {
+        if (D_800F91BC == NULL) {
+            var_s2 = func_8003DBE0(0x79U, NULL);
+            func_8003E174(var_s2);
+            D_800F91BC = var_s2;
+        } else {
+            var_s2 = func_8003E320(D_800F91BC);
+        }
+        var_s2->unk_0A |= 2;
+        temp = arg0;
+        D_800F91C0[arg0] = var_s2;
+        func_8004CDCC(var_s2);
+        space = GetSpaceData(D_800F8BF8[temp]);
+        func_800A0D50(&var_s2->coords, &space->coords);
+        func_8003C314(0xA, var_s2, (s16)(D_800F8C18[temp] >> 16 ), (s16)(D_800F8C1A[temp] >> 16)); //wtf
+    }
+}
 
 void func_800F719C_25500C(void) {
     s32 i;
@@ -332,7 +353,7 @@ void func_800F736C_2551DC(void) {
     unk_Struct03* temp_s0;
 
     if (D_800F91E4 == NULL) {
-        temp_s0 = func_8003DBE0(0x3BU, &D_800F8C38);
+        temp_s0 = func_8003DBE0(0x3B, &D_800F8C38);
         func_8003E174(temp_s0);
         D_800F91E4 = temp_s0;
         temp_s0->unk_0A |= 2;
@@ -352,14 +373,14 @@ void func_800F73F0_255260(void) {
     }
     
     SleepProcess(0x1E);
-    func_8003E81C(D_800F91E4, 0, 0U);
+    func_8003E81C(D_800F91E4, 0, 0);
     PlaySound(0x4D);
 
     while ((func_8003E940(D_800F91E4) & 1) == 0) {
         SleepVProcess();
     }
 
-    func_8003E81C(D_800F91E4, -1, 2U);
+    func_8003E81C(D_800F91E4, -1, 2);
     func_8004CD84(&sp10);
     process = GetCurrentProcess();
     LinkChildProcess(process, func_8004D1EC(&D_800F91E4->unk_18, &sp10, &D_800F91E4->unk_18, 0x14));
@@ -467,13 +488,79 @@ s32 func_800F77CC_25563C(void) {
     return 1;
 }
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F784C_2556BC);
+s32 func_800F784C_2556BC(void) {
+    if (D_800ED154.unk_00[3] != 0) {
+        switch (D_800ED154.unk_1C) {
+        case 0:
+                return 2;
+        case 1:
+            if (IsBoardFeatureFlagSet(0x46) == 0 || IsBoardFeatureFlagSet(0x47) == 0) {
+                return 0;
+            }
+            break;
+        case 2:
+            if (IsBoardFeatureFlagSet(0x46) == 0) {
+                return 0;
+            }
+        }
+    }
+    return 1;
+}
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F78CC_25573C);
+s32 func_800F78CC_25573C(void) {
+    if (D_800ED154.unk_00[4] != 0) {
+        switch (D_800ED154.unk_1C) {
+        case 0:
+            if (IsBoardFeatureFlagSet(0x49) == 0 || IsBoardFeatureFlagSet(0x4A) == 0) {
+                return 0;
+            }
+            break;
+        case 1:
+            if (IsBoardFeatureFlagSet(0x4B) == 0) {
+                return 0;
+            }
+            break;
+        }
+    }
+    return 1;
+}
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F7934_2557A4);
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F79BC_25582C);
+s32 func_800F7934_2557A4(void) {
+    if (D_800ED154.unk_00[5] != 0) {
+        switch (D_800ED154.unk_1C) {
+        case 0:
+            return 3;
+        case 1:
+            return 2;
+        case 2:
+            if ( IsBoardFeatureFlagSet(0x49) == 0 || IsBoardFeatureFlagSet(0x4A) == 0) {
+                return 0;
+            }
+        }
+    }
+    return 1;
+}
+
+s32 func_800F79BC_25582C(void) {
+    if (D_800ED154.unk_00[6] != 0) {
+        switch (D_800ED154.unk_1C) {
+        case 0:
+            if (IsBoardFeatureFlagSet(0x4B) == 0) {
+                return 0;
+            }
+            break;
+        case 2:
+            if ( IsBoardFeatureFlagSet(0x4B) == 0) {
+                return 0;
+            }
+            break;
+        case 1:
+            return 3;
+        }
+    }
+    return 1;
+}
 
 s32 func_800F7A2C_25589C(void) {
     if (D_800ED158[5] != 0 && D_800ED158[13] == 2) {
@@ -483,13 +570,46 @@ s32 func_800F7A2C_25589C(void) {
     }
 }
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F7A60_2558D0);
+s32 func_800F7A60_2558D0(void) {
+    if (D_800ED154.unk_00[8] != 0) {
+        switch (D_800ED154.unk_1C) {
+            case 0:
+                return 2;
+            case 1:
+                if (IsBoardFeatureFlagSet(0x46) == 0) {
+                    return 0;
+                }
+                break;
+            case 2:
+                if (IsBoardFeatureFlagSet(0x46) == 0 || IsBoardFeatureFlagSet(0x47) == 0) {
+                    return 0;
+                }
+            break;
+        }
+    }
+    return 1;
+}
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F7AE8_255958);
+s32 func_800F7AE8_255958(void) {
+    if (D_800ED154.unk_00[9] != 0) {
+        if (D_800ED154.unk_1C == 0) {
+            if (IsBoardFeatureFlagSet(0x46) == 0) {
+                return 0;
+            }
+        } else {
+            return 2;
+        }
+    }
+    return 1;
+}
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F7B30_2559A0);
+void func_800F7B30_2559A0(s32 arg0, s32 arg1) { //fake match
+    D_800F8D6C[((arg0 & 3) << 2 | (arg1 & 3))]();
+}
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F7B6C_2559DC);
+void func_800F7B6C_2559DC(void) {
+    func_800F7B30_2559A0(func_800F775C_2555CC(), func_800F7794_255604());
+}
 
 void func_800F7BA0_255A10(void) {
     func_800F7B30_2559A0(func_800F784C_2556BC(), func_800F77CC_25563C());
@@ -629,7 +749,7 @@ void func_800F8130_255FA0(void) {
             
             D_800ED154.unk_00[i] = 1;
 
-            SetNextChainAndSpace(-1, D_800F8ED8[i][D_800ED154.unk_1E], 0);
+            SetNextChainAndSpace(-1, D_800F8ED8[i][D_800ED154.unk_1C], 0);
             func_800405DC(player->playerIndex);
             func_800F7F7C_255DEC();
             func_8003FEFC(player->playerIndex);
@@ -723,7 +843,68 @@ void func_800F8514_256384(void) {
     SetPlayerOntoChain(3, 0x12, 1);
 }
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F8588_2563F8);
+void func_800F8588_2563F8(void) {
+    playerMain* temp_s0_3;
+    playerMain* curPlayer;
+    s32 playerIndex;
+    unk_Struct03* objectStructs[4];
+    s32 i;
+    s32 j;
+
+    curPlayer = GetPlayerStruct(-1);
+    
+    while (func_80072718() != 0) {
+        SleepVProcess();
+    }
+    
+    SleepProcess(5);
+    playerIndex = curPlayer->playerIndex;
+    objectStructs[playerIndex] = func_800F7D6C_255BDC(playerIndex);
+    PlaySound(0x47);
+
+    for (i = 255; i >= 0; i = i - 8) { 
+        func_800211BC(*objectStructs[playerIndex]->unk_3C->unk_40, i & 0xFF);
+        func_800211BC(*objectStructs[playerIndex]->unk_40->unk_40, ~i & 0xFF);
+        SleepVProcess();
+    }
+
+    func_800F7E5C_255CCC(objectStructs[playerIndex]);
+    curPlayer->playerObj->unk_0A |= 2;
+    func_8003E5E0(curPlayer->playerObj);
+    SleepProcess(0xA);
+
+    for (j = 0; j < 4; j++) {
+        temp_s0_3 = GetPlayerStruct(j);
+        if (temp_s0_3 != curPlayer) {
+            objectStructs[j] = func_800F7D6C_255BDC(j);
+            func_800A0D00(&objectStructs[j]->unk_24, 0.7f, 0.7f, 0.7f);
+        }
+    }
+
+    PlaySound(0x47);
+
+    for (i = 255; i >= 0; i = i - 8) {
+        for (j = 0; j < 4; j++) {
+            temp_s0_3 = GetPlayerStruct(j);
+            if (temp_s0_3 != curPlayer) {
+                func_800211BC(*objectStructs[j]->unk_3C->unk_40, i & 0xFF);
+                func_800211BC(*objectStructs[j]->unk_40->unk_40, ~i & 0xFF); 
+            }       
+        }
+        SleepVProcess();
+    }
+
+    for (j = 0; j < 4; j++) {
+        temp_s0_3 = GetPlayerStruct(j);
+        if (temp_s0_3 != curPlayer) {
+            func_800F7E5C_255CCC(objectStructs[j]);
+            temp_s0_3->playerObj->unk_0A |= 2;
+            func_8003E5E0(temp_s0_3->playerObj);            
+        }
+    }
+        
+    EndProcess(NULL);
+}
 
 void func_800F87E4_256654(ProcessHeader* arg0) {
     s32 directionResult;
@@ -820,5 +1001,5 @@ void func_800F8B20_256990(void) {
     func_8001D4D4(1, &D_800F8BB0);
     func_800F6E34_254CA4();
     func_800584F0(2);
-    InitProcess(func_800F6BD8_254A48, 0x1005U, 0, 0);
+    InitProcess(&func_800F6BD8_254A48, 0x1005, 0, 0);
 }

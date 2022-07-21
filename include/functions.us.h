@@ -4,6 +4,8 @@
 #include "types.h"
 #include "common_structs.h"
 
+void func_800211BC(s16, u8);
+void func_8003E5E0(unk_Struct03*);
 void func_8001D4D4(s32, void*);
 void func_8004D2A4(s32, s32, s32);
 s32 DirectionPrompt(s32);

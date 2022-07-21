@@ -2,10 +2,11 @@
 
 typedef struct unkStructTest {
 /* 0x00 */ s16 unk_00[12];
-/* 0x1A */ s16 unk_18;
+/* 0x16 */ s16 unk_16;
+/* 0x18 */ s16 unk_18;
 /* 0x1A */ s16 unk_1A;
-/* 0x1A */ s16 unk_1C;
-/* 0x1C */ s16 unk_1E;
+/* 0x1C */ s16 unk_1C;
+/* 0x1E */ s16 unk_1E;
 } unkStructTest;
 
 extern s16* D_800F8ED8[];
@@ -38,8 +39,8 @@ extern f32 D_800F91B4;
 extern event_table_entry D_800F905C;
 extern event_table_entry D_800F9164;
 extern s16 D_800F8BF8[];
-extern s16 D_800F8C18[];
-extern s16 D_800F8C1A[];
+extern s32 D_800F8C18[]; //should be s16 array but size of 1?
+extern s32 D_800F8C1A[]; //should be s16 array but size of 1?
 extern unk_Struct03* D_800F91BC;
 extern unk_Struct03* D_800F91C0[];
 extern s16 D_800F8C08[];
@@ -65,7 +66,13 @@ extern ProcessHeader D_800F8FB0;
 extern ProcessHeader D_800F8FD4;
 extern ProcessHeader D_800F8FF8;
 extern s32 D_800F8BB0;
+extern void (*D_800F8D6C[16])();
 
+unk_Struct03* func_800F7D6C_255BDC(s16);
+void func_800F7E5C_255CCC(unk_Struct03*);
+s32 func_800F775C_2555CC(void);
+s32 func_800F7794_255604(void);
+void func_800F7B30_2559A0(s32, s32);
 void func_800F6BD8_254A48(void);
 void func_800F6E34_254CA4(void);
 s16 func_800F6610_254480(void);
