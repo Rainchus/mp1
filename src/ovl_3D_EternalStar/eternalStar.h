@@ -1,5 +1,7 @@
 #include "common.h"
 
+//start of rodata 800F8B80
+
 typedef struct unkStructTest {
 /* 0x00 */ s16 unk_00[12];
 /* 0x16 */ s16 unk_16;
@@ -67,6 +69,12 @@ extern ProcessHeader D_800F8FD4;
 extern ProcessHeader D_800F8FF8;
 extern s32 D_800F8BB0;
 extern void (*D_800F8D6C[16])();
+
+void func_800F6D30_254BA0(void);
+void func_800F6D6C_254BDC(void);
+void func_800F6F68_254DD8(void);
+void func_800F7070_254EE0(void);
+void func_800F8B20_256990(void);
 
 unk_Struct03* func_800F7D6C_255BDC(s16);
 void func_800F7E5C_255CCC(unk_Struct03*);
