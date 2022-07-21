@@ -4,13 +4,25 @@
 #include "types.h"
 #include "common_structs.h"
 
+void func_8001D4D4(s32, void*);
+void func_8004D2A4(s32, s32, s32);
+s32 DirectionPrompt(s32);
+u32 PlayerIsCPU(s16 index);
+void func_8003B908(s32);
+void func_8003BE84(s32, s32);
+void func_8003C060(s32, s16, s32);
+s32 func_8003C218(s16, void*);
+void func_8004CB20(s32); 
+void func_800587EC(s32, s32, s32);
+void func_8003D514(Vec3f*, f32);
+void func_8004D3F4(Vec3f*, Vec3f*, Vec3f*, s32);
 void SetPlayerAnimation(s32, s32, s32);
 void func_8004CB20(s32);
 void func_800587BC(s32, s32, s32, s32);
 void SetNextChainAndSpace(s32, s16, s32);
 void func_8003FEFC(u8);
 void func_800405DC(u8);
-s16 GetAbsSpaceIndexFromChainSpaceIndex(u16, u16);
+s16 GetAbsSpaceIndexFromChainSpaceIndex(s32, s32);
 void func_8003E5E0(unk_Struct03*);
 void func_8003E664(unk_Struct03*);
 Process* func_8004D648(Vec3f*, Vec3f*, Vec3f*, f32);

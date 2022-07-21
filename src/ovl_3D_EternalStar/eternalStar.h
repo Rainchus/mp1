@@ -58,8 +58,22 @@ extern s32 D_800F91E8;
 extern s32 D_800F91EC;
 extern s32 D_800F91F0;
 extern s32 D_800F91F4;
+extern s16 D_800ED5DC;
+extern ProcessHeader D_800F8F68;
+extern ProcessHeader D_800F8F8C;
+extern ProcessHeader D_800F8FB0;
+extern ProcessHeader D_800F8FD4;
+extern ProcessHeader D_800F8FF8;
+extern s32 D_800F8BB0;
 
-
+void func_800F6BD8_254A48(void);
+void func_800F6E34_254CA4(void);
+s16 func_800F6610_254480(void);
+s16 func_800F67AC_25461C(s16);
+void func_800F87E4_256654(ProcessHeader*);
+void func_800F7C70_255AE0(void);
+void func_800F7D20_255B90(void);
+void func_800F7F7C_255DEC(void);
 unk_Struct03* func_800F7D6C_255BDC(s16);
 void func_800F7E5C_255CCC(unk_Struct03*);
 void func_800F7E78_255CE8(unk_Struct03*);

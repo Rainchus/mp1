@@ -1,6 +1,8 @@
 #include "common.h"
 #include "eternalStar.h"
 
+void func_8004DBD4(s16, u8);
+
 s16 func_800F6610_254480(void) {
     s16 curSpaceIndex = GetCurrentSpaceIndex();
     s32 i;
@@ -647,32 +649,176 @@ void func_800F8240_2560B0(void) {
     EndProcess(NULL);
 }
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F8298_256108);
+void func_800F8298_256108(void) {
+    Vec3f sp10;
+    playerMain* player;
+    s16 textWindowID;
+    SpaceData* temp_s0;
+    s32 tempVar;
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F8514_256384);
+    player = GetPlayerStruct(-1);
+
+    while (func_80072718() != 0) {
+        SleepVProcess();
+    }
+    
+    SleepProcess(0x32);
+    SetNextChainAndSpace(-1, 0x13, 0);
+    func_800F7F7C_255DEC();
+    SetPlayerAnimation(-1, 0, 2);
+    temp_s0 = GetSpaceData(GetAbsSpaceIndexFromChainSpaceIndex(0x12, 1));
+    func_800A0E80(&player->playerObj->unk_18, &temp_s0->coords, &player->playerObj->coords);
+    func_8004D3F4(&player->playerObj->coords, &temp_s0->coords, &player->playerObj->coords, 0xF);
+    SleepProcess(0xF);
+    SetPlayerOntoChain(-1, 0x12, 1);
+    SetPlayerAnimation(-1, -1, 2);
+    SleepProcess(0xF);
+    func_800A0D50(&sp10, &player->playerObj->unk_18);
+    func_8003D514(&sp10, -90.0f);
+    func_8004D1EC(&player->playerObj->unk_18, &sp10, &player->playerObj->unk_18, 4);
+    SleepProcess(4);
+    func_8003D514(&sp10, 170.0f);
+    func_8004D1EC(&player->playerObj->unk_18, &sp10, &player->playerObj->unk_18, 8);
+    SleepProcess(8);
+    func_8003D514(&sp10, -80.0f);
+    func_8004D1EC(&player->playerObj->unk_18, &sp10, &player->playerObj->unk_18, 4);
+    SleepProcess(4);
+    tempVar = D_800ED172;
+    
+    while (1) {
+        D_800ED172 =  GetRandomByte() % 3;
+        if (tempVar != D_800ED172) {
+            break;
+        }
+    }
+    func_800F7F4C_255DBC();
+    textWindowID = CreateTextWindow(0x4C, 0x3C, 0xE, 3);
+    
+    switch (D_800ED172) {
+    case 0:
+        LoadStringIntoWindow(textWindowID, 0x1FD, -1, -1);
+        break;
+    case 1:
+        LoadStringIntoWindow(textWindowID, 0x1FE, -1, -1);
+        break;
+    default:
+        LoadStringIntoWindow(textWindowID, 0x1FF, -1, -1);
+        break;
+    }
+    
+    func_8006E070(textWindowID, 0);
+    ShowTextWindow(textWindowID);
+    func_8004DBD4(textWindowID, player->playerIndex);
+    HideTextWindow(textWindowID);
+    EndProcess(NULL);
+}
+
+void func_800F8514_256384(void) {
+    SetBoardFeatureFlag(0x50);
+    func_800587EC(0x5C, 0, 4);
+    func_8004CB20(1);
+    SetPlayerOntoChain(0, 0x12, 1);
+    SetPlayerOntoChain(1, 0x12, 1);
+    SetPlayerOntoChain(2, 0x12, 1);
+    SetPlayerOntoChain(3, 0x12, 1);
+}
 
 INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F8588_2563F8);
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F87E4_256654);
+void func_800F87E4_256654(ProcessHeader* arg0) {
+    s32 directionResult;
+    s32 temp_s2;
+    s32 i;
+    s32 tempVar;
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F88EC_25675C);
+    SetPlayerAnimation(-1, -1, 2);
+    SleepVProcess();
+    func_800F7C70_255AE0();
+    temp_s2 = func_8003C218(D_800ED5C0.unk_1C, arg0->prev);
+    func_8003C060(temp_s2, D_800ED5C0.unk_1C, 0);
+    
+    if (PlayerIsCPU(-1) != 0) {
+        tempVar = RunDecisionTree(arg0->next);
+        for (i = 0; i < tempVar; i++) {
+            func_8003BE84(temp_s2, -2);
+        }
+        func_8003BE84(temp_s2, -4);
+    }
+    
+    directionResult = DirectionPrompt(temp_s2);
+    
+    func_8003B908(temp_s2);
+    func_800F7D20_255B90();
+    
+    if (directionResult == 0) {
+        SetNextChainAndSpace(-1, arg0->unk_08, 0);
+    } else {
+        SetNextChainAndSpace(-1, arg0->unk_0A, 0);
+    }
+}
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F8914_256784);
+void func_800F88EC_25675C(void) {
+    func_800F87E4_256654(&D_800F8F68);
+    EndProcess(NULL);
+}
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F893C_2567AC);
+void func_800F8914_256784(void) {
+    func_800F87E4_256654(&D_800F8F8C);
+    EndProcess(NULL);
+}
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F8964_2567D4);
+void func_800F893C_2567AC(void) {
+    func_800F87E4_256654(&D_800F8FB0);
+    EndProcess(NULL);
+}
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F898C_2567FC);
+void func_800F8964_2567D4(void) {
+    func_800F87E4_256654(&D_800F8FD4);
+    EndProcess(NULL);
+}
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F89B4_256824);
+void func_800F898C_2567FC(void) {
+    func_800F87E4_256654(&D_800F8FF8);
+    EndProcess(NULL);
+}
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F89D8_256848);
+void func_800F89B4_256824(void) {
+    SetNextChainAndSpace(-1, 0x12, 2);
+}
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F89FC_25686C);
+void func_800F89D8_256848(void) {
+    SetNextChainAndSpace(-1, 7, 0);
+}
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F8A30_2568A0);
+void func_800F89FC_25686C(void) {
+    func_8004D2A4(-1, 8, 0);
+    func_800587EC(0x65, 0, 1);
+}
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F8A94_256904);
+void func_800F8A30_2568A0(void) {
+    if (func_800F67AC_25461C(GetCurrentSpaceIndex()) == 1) {
+        func_800587EC(0x5E, 0, 2);
+        func_8004D2A4(-1, 8, func_800F6610_254480());
+    }
+}
 
-INCLUDE_ASM(s32, "ovl_3D_EternalStar/254480", func_800F8B20_256990);
+void func_800F8A94_256904(void) {
+    playerMain* temp_s0;
+    s32 i;
+
+    if (func_800F67AC_25461C(GetCurrentSpaceIndex()) == 2) {
+        for (i = 0; i < 4; i++) {
+            temp_s0 = GetPlayerStruct(i);
+            temp_s0->unk_00 = i != GetCurrentPlayerIndex();
+        }
+        func_800587BC(1, 0, 5, 1);
+    }
+}
+
+void func_800F8B20_256990(void) {
+    InitCameras(2);
+    func_8001D4D4(1, &D_800F8BB0);
+    func_800F6E34_254CA4();
+    func_800584F0(2);
+    InitProcess(func_800F6BD8_254A48, 0x1005U, 0, 0);
+}

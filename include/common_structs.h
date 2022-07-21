@@ -260,6 +260,7 @@ typedef struct GameStatus {
 /* 0x0A */ s16 chosenStarSpaceIndex;
 /* 0x0C */ s16 starSpaces[7];
 /* 0x1A */ s16 unk_1A;
+/* 0x1C */ s16 unk_1C;
 } GameStatus;
 
 typedef struct EventListEntry {
