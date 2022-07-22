@@ -7,7 +7,7 @@ static Vec3f D_800F6D50[];
 static Vec3f D_800F6DB0[];
 static s32* ptr_800F6E64[];
 
-void func_8004DBD4(s16, u8);
+void func_8004DBD4(s32, u8);
 
 void func_800F65E0_29AB30(void) {
     D_800F6EC0 = D_800ED5C3;

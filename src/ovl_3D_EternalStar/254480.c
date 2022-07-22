@@ -1,7 +1,7 @@
 #include "common.h"
 #include "eternalStar.h"
 
-void func_8004DBD4(s16, u8);
+void func_8004DBD4(s32, u8);
 
 s16 func_800F6610_254480(void) {
     s16 curSpaceIndex = GetCurrentSpaceIndex();
@@ -887,8 +887,8 @@ void func_800F8588_2563F8(void) {
         for (j = 0; j < 4; j++) {
             temp_s0_3 = GetPlayerStruct(j);
             if (temp_s0_3 != curPlayer) {
-                func_800211BC(*objectStructs[j]->unk_3C->unk_40, i & 0xFF);
-                func_800211BC(*objectStructs[j]->unk_40->unk_40, ~i & 0xFF); 
+                func_800211BC(*objectStructs[j]->unk_3C->unk_40, i);
+                func_800211BC(*objectStructs[j]->unk_40->unk_40, ~i); 
             }       
         }
         SleepVProcess();

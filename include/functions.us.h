@@ -196,7 +196,7 @@ void func_80025EB4(s16, s32, s32);
 void func_80009438(void);
 void func_8000942C(void);
 void func_8003E694(void*);
-unk_Struct03* func_8003DBE0(u8, void*);
+unk_Struct03* func_8003DBE0(u8, void*); //unk_Struct03* func_8003DBE0(u8, unk_Struct03*);
 void func_8004CCD0(Vec3f*, Vec3f*, Vec3f*);
 u8 func_80052F04(s16);
 void func_8004F284(void);
