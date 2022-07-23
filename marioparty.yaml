@@ -13,6 +13,8 @@ options:
   undefined_syms_auto_path: undefined_syms_auto.txt
   ld_script_path: marioparty.ld
   symbol_addrs_path: symbol_addrs.txt
+  asm_function_macro: glabel
+  asm_data_macro: dlabel
   # undefined_syms_path: undefined_syms.txt
   # c_path: c
   asm_path: asm
