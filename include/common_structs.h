@@ -184,7 +184,7 @@ typedef struct unk_Struct03 {
 /* 0x3C */ unk_Struct04* unk_40;
 /* 0x44 */ f32 unk_44;
 /* 0x48 */ f32 unk_48;
-/* 0x4C */ f32 unk_4C;
+/* 0x4C */ s32 unk_4C;
 /* 0x50 */ char unk_50[0x3C];
 /* 0x8C */ struct unk_Struct03* unk_8C;
 } unk_Struct03; // //sizeof 0xAC? (this and mpSource_object are the same struct)

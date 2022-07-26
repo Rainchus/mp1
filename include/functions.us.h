@@ -4,6 +4,12 @@
 #include "types.h"
 #include "common_structs.h"
 
+void func_80008FD0(Object*, f32);
+void func_8000979C(Object*, s32, s32, s32, s32, s32);
+void func_8001874C(Object*, s32, s32, s32, s32);
+void func_800187D0(Object*, s32, s32, s32, s32);
+void func_800224A4(s32, f32, f32, f32);
+void func_80009618(s32);
 void func_8002456C(s16);
 void func_800211BC(s16, u8);
 void func_8003E5E0(unk_Struct03*);
@@ -231,7 +237,7 @@ Object* func_8005D384(s32, s32, s32, s32, void*);
 void func_8005D8B8(Object*, s32);
 void func_80060088(void);
 s32 PlaySound(s32);
-void func_8007B168(s32*, s32);
+void func_8007B168(void*, s32); //arg1 unknown pointer type
 void func_80086F08(f32*, void*);
 f32 func_800AEAC0(f32);
 f32 func_800AEFD0(f32);
