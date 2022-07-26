@@ -4,6 +4,7 @@
 #include "types.h"
 #include "common_structs.h"
 
+void func_8002456C(s16);
 void func_800211BC(s16, u8);
 void func_8003E5E0(unk_Struct03*);
 void func_8001D4D4(s32, void*);
@@ -137,7 +138,7 @@ void func_8003E81C(void*, s32, u16);
 void func_800A40D0(void*, f32);
 u16 func_8003E940(unk_Struct03*);
 void func_800421E0(void);
-void func_8004E3E0(s32, f32*, s32, void*);
+void func_8004E3E0(s32, void*, s32, void*); //arg2 should be Vec3f*
 void func_8004F044(void*);
 void func_8004F4D4(void*, s32, s32);
 void func_80055960(u8, s32);
@@ -178,7 +179,7 @@ void func_80064D38(s16);
 void func_8006752C(s8, s32, u8);
 void func_8001D934(s32, s32, f32*);
 void func_80079078(s16);
-void func_8005D718(s32);
+void func_8005D718(void*); //idk what type this arg is, either Object* or unk_struct03*
 s32 func_8005021C(f32); //getRandInRange
 void func_800A0D00(void*, f32, f32, f32);
 void func_80025CA8(s16, s32);

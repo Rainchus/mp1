@@ -2,15 +2,6 @@
 
 //start of rodata 800F8B80
 
-typedef struct unkStructTest {
-/* 0x00 */ s16 unk_00[12];
-/* 0x16 */ s16 unk_16;
-/* 0x18 */ s16 unk_18;
-/* 0x1A */ s16 unk_1A;
-/* 0x1C */ s16 unk_1C;
-/* 0x1E */ s16 unk_1E;
-} unkStructTest;
-
 extern s16* D_800F8ED8[];
 extern s16 D_800F8F08[];
 extern unkStructTest D_800ED154;

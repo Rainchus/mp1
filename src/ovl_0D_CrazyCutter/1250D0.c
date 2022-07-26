@@ -35,7 +35,7 @@ void func_800F6938_125428(f32 arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 
     func_8001D494(0, 10.0f, D_800C3110->unk_44, D_800C3110->unk_48);
 }
 
-void func_800F69EC_1254DC(s32 arg0) {
+void func_800F69EC_1254DC(unk_Struct03* arg0) {
     D_800FD468--;
     if (D_800FD468 == 0) {
         D_800FD464 = 1;
@@ -229,7 +229,7 @@ INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FA880_129370);
 
 INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FA9D8_1294C8);
 
-void func_800FAA18_129508(s32 arg0) {
+void func_800FAA18_129508(unk_Struct03* arg0) {
     s32 i;
 
     if (func_80072718() == 0) {

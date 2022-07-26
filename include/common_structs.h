@@ -161,7 +161,9 @@ typedef struct unk_Struct04 {
     /* 0x00 */ Vec3f pos;
     /* 0x0C */ char unk_0C[0x18];
     /* 0x24 */ f32 unk_24;
-    /* 0x28 */ char unk_28[0x18];
+    /* 0x28 */ char unk_28[4];
+    /* 0x2C */ f32 unk_2C;
+    /* 0x30 */ char unk_30[0x10];
     /* 0x40 */ s16* unk_40;
 } unk_Struct04; //sizeof 0xAC?
 
@@ -376,5 +378,13 @@ typedef struct camera {
     Vec3f coords;
     f32 unk_0C;
 } camera;
+
+typedef struct unkStructTest {
+/* 0x00 */ s16 unk_00[12];
+/* 0x18 */ s16 unk_16;
+/* 0x1A */ s16 unk_18;
+/* 0x1C */ s16 unk_1A;
+/* 0x1E */ s16 unk_1C;
+} unkStructTest;
 
 #endif

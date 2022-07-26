@@ -11,7 +11,7 @@ void func_800F6978_29AEC8(Object*);
 extern u8 D_800F6EC0;
 extern u8 D_800F6EC1;
 extern s32 D_800F6E64[];
-extern f32 D_800F6E10;
+extern Vec3f D_800F6E10;
 extern unk_Struct03* D_800F6EC4;
 extern unk_Struct03* D_800F6EC8;
 extern s32 D_800F6ECC;

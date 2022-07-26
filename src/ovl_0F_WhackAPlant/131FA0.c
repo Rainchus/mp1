@@ -256,9 +256,21 @@ void func_800FB250_136C10(f32 arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 
     D_800C3110->unk_40 = arg0;
 }
 
-INCLUDE_ASM(s32, "ovl_0F_WhackAPlant/131FA0", func_800FB308_136CC8);
+void func_800FB308_136CC8(Object* arg0, s16 arg1, f32 arg2, f32 arg3, f32 arg4) {
+    if (arg1 == 0) {
+        func_8005D95C(arg0, arg2, arg3, arg4);
+        return;
+    }
+    func_80025798(arg0->unk_40->unk_00.signed16[arg1], arg2, arg3, arg4);
+}
 
-INCLUDE_ASM(s32, "ovl_0F_WhackAPlant/131FA0", func_800FB378_136D38);
+void func_800FB378_136D38(Object* arg0, s16 arg1, f32 arg2, f32 arg3, f32 arg4) {
+    if (arg1 == 0) {
+        func_8005D96C(arg0, arg2, arg3, arg4);
+        return;
+    }
+    func_800257E4(arg0->unk_40->unk_00.signed16[arg1], arg2, arg3, arg4);
+}
 
 s32 func_800FB3E8_136DA8(f32 arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5) {
     f32 temp_f0;

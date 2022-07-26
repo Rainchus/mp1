@@ -78,7 +78,7 @@ INCLUDE_ASM(s32, "5CDB0", func_8005D4E0);
 
 INCLUDE_ASM(s32, "5CDB0", func_8005D5F4);
 
-INCLUDE_ASM(s32, "5CDB0", func_8005D718);
+INCLUDE_ASM(s32, "5CDB0", func_8005D718); //https://decomp.me/scratch/mL688
 
 INCLUDE_ASM(s32, "5CDB0", func_8005D8B0);
 

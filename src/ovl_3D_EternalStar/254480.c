@@ -603,7 +603,7 @@ s32 func_800F7AE8_255958(void) {
     return 1;
 }
 
-void func_800F7B30_2559A0(s32 arg0, s32 arg1) { //fake match
+void func_800F7B30_2559A0(s32 arg0, s32 arg1) {
     D_800F8D6C[((arg0 & 3) << 2 | (arg1 & 3))]();
 }
 
