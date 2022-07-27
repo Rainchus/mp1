@@ -1,4 +1,5 @@
 #include "common.h"
+#include "22C9E0.h"
 
 INCLUDE_ASM(s32, "ovl_32_TugOWar/22C9E0", func_800F65E0_22C9E0);
 
@@ -20,7 +21,24 @@ INCLUDE_ASM(s32, "ovl_32_TugOWar/22C9E0", func_800F851C_22E91C);
 
 INCLUDE_ASM(s32, "ovl_32_TugOWar/22C9E0", func_800F8DA0_22F1A0);
 
-INCLUDE_ASM(s32, "ovl_32_TugOWar/22C9E0", func_800F95D4_22F9D4);
+void func_800F95D4_22F9D4(Object* arg0) {
+    if (D_800FDB94_233F94 == 2) {
+        D_800FDB94_233F94 = func_800F77EC_22DBEC();
+    }
+    switch (D_800FDB94_233F94) {
+    case 0:
+        D_800FDAE0[1] = 1;
+        func_800F851C_22E91C(arg0);
+        break;
+    case 1:
+        D_800FDAE0[1] = 1;
+        func_800F8DA0_22F1A0(arg0);
+        break;
+    }
+    if (D_800ED430 == 1) {
+        D_800F6524.x = arg0->unk_18;
+    }
+}
 
 INCLUDE_ASM(s32, "ovl_32_TugOWar/22C9E0", func_800F9688_22FA88);
 
