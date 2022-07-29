@@ -102,9 +102,9 @@ void SwapPlayerLocationData(s16 arg0, s16 arg1) {
 }
 
 INCLUDE_ASM(s32, "4D770", SetPlayerLandedSpaceType);
-// void SetPlayerLandedSpaceType(s16 playerIndex, s16 spaceType) { //matches with rodata
-//     s32 spaceTemp;
+// void SetPlayerLandedSpaceType(s16 playerIndex, s16 spaceType) { //matches with rodata support
 //     playerMain* player = GetPlayerStruct(playerIndex);
+//     s32 spaceTemp;
     
 //     switch(--spaceType) {
 //         case 0:
@@ -122,10 +122,7 @@ INCLUDE_ASM(s32, "4D770", SetPlayerLandedSpaceType);
 //         case 3:
 //             spaceTemp = 4;
 //             break;
-
-
 //         default:
-//         case 4:
 //             spaceTemp = 0;
 //             break;
 //     }
@@ -347,8 +344,8 @@ void SetNextChainAndSpace(s16 arg0, s16 arg1, s16 arg2) {
 }
 
 s32 func_8004D8A4(void) {
-    s32 var_s0 = 0;
     GameStatus* gameStatus = &D_800ED5C0;
+    s32 var_s0 = 0;
     
     SetBoardFeatureFlag(D_800ED5C0.unk_1A);
     SetBoardFeatureFlag(0x4E);

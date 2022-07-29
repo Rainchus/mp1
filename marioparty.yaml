@@ -77,7 +77,7 @@ segments:
       - [0x46AE0, c]
       - [0x47320, c]
       - [0x48D90, c]
-      - [0x4D770, c]
+      - [0x4D770, c, 4D770] # [0xCBC60, .rodata, 4D770]
       - [0x4E530, c]
       - [0x51200, c]
       - [0x53680, c]
@@ -115,6 +115,13 @@ segments:
       - [0x83490, c]
   - type: bin
     start: 0x835D0
+  # - type: code
+  #   start: 0xCBC60
+  #   vram: 0x800CB060
+  #   subsegments:
+  #     - [0xCBC60, .rodata, 4D770]
+  - type: bin
+    start: 0xCBC90
   - type: code
     start: 0xCDA50
     vram: 0x800F65E0

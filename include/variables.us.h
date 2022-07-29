@@ -46,5 +46,7 @@ extern u16 D_800ED5C8;
 extern Vec2f D_800C51C0[];
 extern Vec2f D_800C51E0[];
 extern s32 D_800C5200[];
+extern s32 D_800C5214;
+extern s32 D_800C5210;
 
 extern unk_800ECDE0* D_800ECDE0;

@@ -1,32 +1,221 @@
 #include "common.h"
 
-INCLUDE_ASM(s32, "4E530", CreateTextWindow);
+extern Object* D_800F50C0[];
 
-INCLUDE_ASM(s32, "4E530", ShowTextWindow);
+s32 CreateTextWindow(s32 arg0, s32 arg1, s32 arg2, s32 arg3) {
+    s32 temp_s1;
 
-INCLUDE_ASM(s32, "4E530", HideTextWindow);
+    temp_s1 = func_8006D010(arg0, arg1, ((arg2 * 0xB) + 8), ((arg3 * 0xE) + 6), 0, 0);
+    func_8006E154(temp_s1, 0xC8);
+    func_800717C0(temp_s1);
+    func_8006DA1C(temp_s1, 0x40, 0x40);
+    return temp_s1;
+}
 
-INCLUDE_ASM(s32, "4E530", func_8004DB9C);
+void ShowTextWindow(s32 arg0) {
+    s32 i;
 
-INCLUDE_ASM(s32, "4E530", func_8004DBBC);
+    PlaySound(0x36);
+    func_80071740(arg0, 1);
+    func_8006DEC8(arg0, 0, 0);
+    func_8006E01C(arg0, 180.0f);
+    func_8006DE20(arg0, 0.0f, 0.0f);
+    
+    for (i = 0; i < 0xB5; i += 0x14) {
+        SleepVProcess();
+        func_8006E01C(arg0, 180.0f - i);
+        func_8006DE20(arg0, i / 180.0f, i / 180.0f);        
+    }
+    
+    func_80071740(arg0, 0);
+}
 
-INCLUDE_ASM(s32, "4E530", func_8004DBC8);
+void HideTextWindow(s32 arg0) {
+    s32 i;
+
+    PlaySound(0x37);
+    
+    for (i = 0xB4; i >= 0; i -= 0x14) {
+        SleepVProcess();
+        func_8006E01C(arg0, (0xB4 - i) * 2);
+        func_8006DE20(arg0, i / 180.0f, i / 180.0f);
+    }
+    
+    func_80070D90(arg0);
+    SleepVProcess();
+}
+
+void func_8004DB9C(s32 arg0) {
+    D_800C5214 = arg0;
+    func_8004DBC8(arg0);
+}
+
+s32 func_8004DBBC(void) {
+    return D_800C5214;
+}
+
+s32 func_8004DBC8(s32 arg0) {
+    D_800C5210 = arg0;
+}
 
 INCLUDE_ASM(s32, "4E530", func_8004DBD4);
 
 INCLUDE_ASM(s32, "4E530", WaitForTextConfirmation);
 
-INCLUDE_ASM(s32, "4E530", func_8004E0E8);
+void func_8004E0E8(s32 arg0) {
+    func_8007155C(arg0, 0xF);
+    func_800710A4(-1, -1, -1, -1);
+    
+    while ((func_8006FCC0(arg0)) != 0) {
+        SleepVProcess();
+    }
+}
 
-INCLUDE_ASM(s32, "4E530", func_8004E154);
+void func_8004E154(void) {
+    s32 i;
+
+    for (i = 0; i < 32; i++) {
+        D_800F50C0[i] = 0;
+    }
+
+}
 
 INCLUDE_ASM(s32, "4E530", func_8004E184);
 
-INCLUDE_ASM(s32, "4E530", func_8004E248);
+void func_8004E248(Object* arg0) {
+    unk_Struct03* temp_v0;
+    unkGlobalStruct_00* temp_v1;
 
-INCLUDE_ASM(s32, "4E530", func_8004E3E0);
+    temp_v1 = arg0->unk_50;
+    arg0->unk_4D--;
+    
+    if (temp_v1 == NULL) {
+        if (arg0->unk_4D == 0) {
+            gPlayers[arg0->unk_4C].playerObj->coords.x = arg0->unk_18;
+            gPlayers[arg0->unk_4C].playerObj->coords.y = arg0->unk_1C;
+            gPlayers[arg0->unk_4C].playerObj->coords.z = arg0->unk_20;
+            func_8005D718(arg0);
+            return;
+        }
+        temp_v0 = gPlayers[arg0->unk_4C].playerObj;
+        temp_v0->coords.x = temp_v0->coords.x + arg0->unk_30;
+        temp_v0 = gPlayers[arg0->unk_4C].playerObj;
+        temp_v0->coords.y = temp_v0->coords.y + arg0->unk_34;
+        temp_v0 = gPlayers[arg0->unk_4C].playerObj;
+        temp_v0->coords.z = temp_v0->coords.z + arg0->unk_38;
+        return;
+    }
+    
+    if (arg0->unk_4D == 0) {
+        temp_v1->unk_0C = arg0->unk_18;
+        temp_v1->unk_10 = arg0->unk_1C;
+        temp_v1->unk_14 = arg0->unk_20;
+        arg0->unk_50 = NULL;
+        func_8005D718(arg0);
+        return;
+    }
+    
+    temp_v1->unk_0C += arg0->unk_30;
+    temp_v1->unk_10 += arg0->unk_34;
+    temp_v1->unk_14 += arg0->unk_38;
+}
 
-INCLUDE_ASM(s32, "4E530", func_8004E564);
+Object* func_8004E3E0(s32 arg0, Vec3f* arg1, s32 arg2, void* arg3) { //fix arg3 type later
+    Object* obj;
+    s32 i;
+    arg3 = (unk_Struct03*)arg3;
+
+    obj = func_8005D384(0x1000, 0, 0, -1, &func_8004E248);
+    obj->unk_4C = arg0;
+    obj->unk_4D = arg2;
+    obj->unk_18 = arg1->x;
+    obj->unk_1C = arg1->y;
+    obj->unk_20 = arg1->z;
+    if (arg3 == NULL) {
+        obj->unk_30 = (arg1->x - gPlayers[arg0].playerObj->coords.x) / arg2;
+        obj->unk_34 = (arg1->y - gPlayers[arg0].playerObj->coords.y) / arg2;
+        obj->unk_38 = (arg1->z - gPlayers[arg0].playerObj->coords.z) / arg2;
+    } else {
+        obj->unk_30 = (arg1->x - ((unkGlobalStruct_00*)arg3)->unk_0C) / arg2;
+        obj->unk_34 = (arg1->y - ((unkGlobalStruct_00*)arg3)->unk_10) / arg2;
+        obj->unk_38 = (arg1->z - ((unkGlobalStruct_00*)arg3)->unk_14) / arg2;
+    }
+    
+    obj->unk_50 = (unkGlobalStruct_00* )arg3;
+
+    for (i = 0; i < 32; i++) {
+        if (D_800F50C0[i] == NULL) {
+            D_800F50C0[i] = obj;
+            return obj;
+            break;
+        }
+    }
+    return obj;
+}
+
+#ifdef NON_MATCHING
+void func_8004E564(Object* arg0) { //matches, needs rodata support
+    f32 temp_f20;
+    f32 temp_f20_2;
+    f32 temp_f20_3;
+    f32 temp_f20_4;
+    f32 temp_f20_5;
+    unk_Struct03* var_s0;
+    unk_Struct03* temp_v0;
+    unk_Struct03 *new_var;
+
+    var_s0 = (unk_Struct03*)arg0->unk_50;
+    arg0->unk_4D--;
+    
+    if (var_s0 == NULL) {
+        if (arg0->unk_4D == 0) {
+            gPlayers[arg0->unk_4C].playerObj->coords.x = arg0->unk_18;
+            gPlayers[arg0->unk_4C].playerObj->coords.y = arg0->unk_1C;
+            gPlayers[arg0->unk_4C].playerObj->coords.z = arg0->unk_20;
+            func_8005D718(arg0);
+            return;
+        }
+        
+        gPlayers[arg0->unk_4C].playerObj->coords.x = gPlayers[arg0->unk_4C].playerObj->coords.x + arg0->unk_30;
+        gPlayers[arg0->unk_4C].playerObj->coords.y = gPlayers[arg0->unk_4C].playerObj->coords.y + arg0->unk_34;
+        gPlayers[arg0->unk_4C].playerObj->coords.z = gPlayers[arg0->unk_4C].playerObj->coords.z + arg0->unk_38;   
+        new_var = gPlayers[arg0->unk_4C].playerObj;
+        temp_v0 = new_var;
+        temp_f20 = func_80088060(arg0->unk_4D * 180.0f / arg0->unk_4E * 0.017453292519943295) * arg0->unk_24;
+        temp_v0->coords.x += temp_f20 - (func_80088060((arg0->unk_4D + 1) * 180.0f / arg0->unk_4E * 0.017453292519943295) * arg0->unk_24);
+        temp_v0 = gPlayers[arg0->unk_4C].playerObj;
+        temp_f20_2 = func_80088060(arg0->unk_4D * 180.0f / arg0->unk_4E * 0.017453292519943295) * arg0->unk_28;
+        temp_v0->coords.y += temp_f20_2 - (func_80088060((arg0->unk_4D + 1) * 180.0f / arg0->unk_4E * 0.017453292519943295) * arg0->unk_28);
+        var_s0 = gPlayers[arg0->unk_4C].playerObj;
+        temp_f20_5 = func_80088060(arg0->unk_4D * 180.0f / arg0->unk_4E * 0.017453292519943295)* arg0->unk_2C;
+        temp_f20_5 = temp_f20_5 - (func_80088060(( (((arg0->unk_4D + 1) * 180.0f) / arg0->unk_4E) * 0.017453292519943295)) * arg0->unk_2C);
+        temp_f20_5 += var_s0->coords.z;
+        var_s0->coords.z = temp_f20_5;
+    } else if (arg0->unk_4D == 0) {
+        var_s0->coords.x = arg0->unk_18;
+        var_s0->coords.y = arg0->unk_1C;
+        var_s0->coords.z = arg0->unk_20;
+        arg0->unk_50 = NULL;
+        func_8005D718(arg0);
+        return;
+    } else {
+        var_s0->coords.x += arg0->unk_30;
+        var_s0->coords.y += arg0->unk_34;
+        var_s0->coords.z += arg0->unk_38;
+
+        temp_f20_3 = func_80088060(arg0->unk_4D * 180.0f / arg0->unk_4E * 0.017453292519943295)* arg0->unk_24;
+        var_s0->coords.x += temp_f20_3 - (func_80088060(( (((arg0->unk_4D + 1) * 180.0f) / arg0->unk_4E) * 0.017453292519943295)) * arg0->unk_24);
+        temp_f20_4 = func_80088060(arg0->unk_4D * 180.0f / arg0->unk_4E * 0.017453292519943295)* arg0->unk_28;
+        var_s0->coords.y += temp_f20_4 - (func_80088060(( (((arg0->unk_4D + 1) * 180.0f) / arg0->unk_4E) * 0.017453292519943295)) * arg0->unk_28);
+        temp_f20_5 = func_80088060(arg0->unk_4D * 180.0f / arg0->unk_4E * 0.017453292519943295)* arg0->unk_2C;
+        temp_f20_5 = temp_f20_5 - (func_80088060(( (((arg0->unk_4D + 1) * 180.0f) / arg0->unk_4E) * 0.017453292519943295)) * arg0->unk_2C);
+        temp_f20_5 += var_s0->coords.z;
+        var_s0->coords.z = temp_f20_5;
+    }
+}
+#else
+INCLUDE_ASM(s32, "4E530", func_8004E564)
+#endif
 
 INCLUDE_ASM(s32, "4E530", func_8004EA8C);
 

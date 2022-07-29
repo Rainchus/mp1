@@ -4,6 +4,18 @@
 #include "types.h"
 #include "common_structs.h"
 
+void func_8004E248(Object* arg0);
+s16 func_8006FCC0(s16);
+void func_800710A4(s32, s32, s32, s32);
+void func_8007155C(s16, s32);
+s32 func_8004DBC8(s32);
+void func_8006DA1C(s16, s32, s32);
+void func_8006E154(s16, s32);
+void func_800717C0(s32);
+void func_8006DE20(s16, f32, f32);
+void func_8006DEC8(s16, s32, s32);
+void func_8006E01C(s16, f32);
+void func_80071740(s16, s32);
 void func_80056730(s32, s32, s32);
 f32 func_800A13C0(Vec3f*, Vec3f*);
 void func_8004D328(void);
@@ -77,8 +89,7 @@ s16 func_8007194C(s32, s32, s32);
 void func_8001D520(s32, Vec3f*, Vec3f*);
 s16 GetCurrentSpaceIndex(void);
 void func_80070D90(s16);
-void func_800717C0(s16);
-s16 func_8006D010(s32, s32, s32, s32, s32, s32);
+s16 func_8006D010(s16, s16, s16, s16, s32, s32);
 void func_8006E154(s16, s32);
 void func_800F86EC_2BD6CC(void);
 void func_80072080(s16);
@@ -161,7 +172,7 @@ void func_8003E81C(void*, s32, u16);
 void func_800A40D0(void*, f32);
 u16 func_8003E940(unk_Struct03*);
 void func_800421E0(void);
-void func_8004E3E0(s32, void*, s32, void*); //arg2 should be Vec3f*
+Object* func_8004E3E0(s32, Vec3f*, s32, void*); //arg2 should be Vec3f*
 void func_8004F044(void*);
 void func_8004F4D4(void*, s32, s32);
 void func_80055960(u8, s32);
