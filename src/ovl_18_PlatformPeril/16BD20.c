@@ -164,13 +164,11 @@ void func_800F90C0_16E800(void) {
     D_800F3FB0[D_800F2BC0++] = func_8005D384(2, 9, 0x3C, 2, &func_800F96F0_16EE30);
 }
 
-//INCLUDE_ASM(s32, "ovl_18_PlatformPeril/16BD20", func_800F922C_16E96C);
 void func_800F922C_16E96C(Object* arg0, s32 arg1, s32 arg2, u16 arg3, f32 arg4, f32 arg5, f32 arg6) {
     unkGlobalStruct_00* temp_s0_2;
     s32 i;
     s32 temp = 0x699;
 
-    //temp_s0 = arg3 & 0xFFFF;
     func_8000979C(arg0, arg1, arg2, arg3, temp, temp);
     D_800FE2A0[arg3] = gPlayers[arg3].cpuDifficulty;
     func_800187D0(arg0, 0, arg1, 1, 0);
@@ -230,9 +228,21 @@ INCLUDE_ASM(s32, "ovl_18_PlatformPeril/16BD20", func_800F979C_16EEDC);
 
 INCLUDE_ASM(s32, "ovl_18_PlatformPeril/16BD20", func_800FAAE0_170220);
 
-INCLUDE_ASM(s32, "ovl_18_PlatformPeril/16BD20", func_800FAD30_170470);
+void func_800FAD30_170470(void) {
+    func_8005D384(3, 0, 0, -1, &func_800FAD64_1704A4);
+}
 
-INCLUDE_ASM(s32, "ovl_18_PlatformPeril/16BD20", func_800FAD64_1704A4);
+
+void func_800FAD64_1704A4(Object* arg0) {
+    s32 temp_s0;
+
+    arg0->func_ptr = NULL;
+    temp_s0 = InitSprite(0x2A0009);
+    temp_s0 = func_80019060(temp_s0, 0, 0);
+    func_80018D44(temp_s0, 0x4000);
+    SetBasicSpritePos(temp_s0, 0xA0, 0x78);
+    ShowBasicSprite(temp_s0);
+}
 
 INCLUDE_ASM(s32, "ovl_18_PlatformPeril/16BD20", func_800FADC8_170508);
 

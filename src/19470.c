@@ -1,8 +1,18 @@
 #include "common.h"
+#include "19470.h"
 
 INCLUDE_ASM(s32, "19470", func_80018870);
 
-INCLUDE_ASM(s32, "19470", InitSprite);
+s32 InitSprite(s32 arg0) {
+    s16 temp_s0;
+    void* temp_s1;
+
+    temp_s1 = ReadMainFS(arg0);
+    temp_s0 = func_800678A4(temp_s1);
+    D_800ED198[D_800F6530++] = temp_s0;
+    FreePerm(temp_s1);
+    return temp_s0;
+}
 
 INCLUDE_ASM(s32, "19470", func_8001897C);
 

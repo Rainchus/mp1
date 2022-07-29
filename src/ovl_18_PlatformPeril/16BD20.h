@@ -28,7 +28,7 @@ extern s32 D_800F2B7C;
 extern s32 D_800FE1B0[][2];
 extern s32 D_800FE2A0[];
 void func_800F979C_16EEDC(void);
-
+void func_800FAD64_1704A4(Object*);
 void func_800F66E8_16BE28(void);
 void func_800F6720_16BE60(Object*);
 s32 func_800FC95C_17209C(void);

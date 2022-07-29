@@ -27,7 +27,7 @@ void func_800FACD8_130318(Object*, s32);
 extern s32 D_800FCA18;
 extern u16 D_800FC3D0_DAFD0;
 extern u16 D_800F5144;
-extern u16 D_800FC960;
+extern s16 D_800FC960;
 extern unk_FaceLift_01 D_800FC4B0[];
 extern unk_FaceLift_00 D_800FC500;
 extern Vec3f D_800FC980[];

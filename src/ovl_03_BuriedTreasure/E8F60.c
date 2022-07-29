@@ -1,4 +1,5 @@
 #include "common.h"
+#include "E8F60.h"
 
 INCLUDE_ASM(s32, "ovl_03_BuriedTreasure/E8F60", func_800F65E0_E8F60);
 
@@ -88,8 +89,22 @@ void func_800FB918_EE298(void) {
 void func_800FB920_EE2A0(void) {
 }
 
-INCLUDE_ASM(s32, "ovl_03_BuriedTreasure/E8F60", func_800FB928_EE2A8);
+u16 func_800FB928_EE2A8(u16 arg0) { //shared overlay func
+    D_800FBE54 = (u32) ((D_800FBE54 * 0x19971204) + 0x19760831) >> 0x10;
 
-INCLUDE_ASM(s32, "ovl_03_BuriedTreasure/E8F60", func_800FB998_EE318);
+    if (arg0 == 0) {
+        return D_800FBE54;
+    } else {
+        return (D_800FBE54 % arg0);
+    }
+}
+
+void func_800FB998_EE318(u16 randByte) {
+    u16 i;
+    
+    for (i = 0; i < randByte; i++) {
+        func_800FB928_EE2A8(0); //pass 0 to getRand function to shuffle rng
+    }
+}
 
 INCLUDE_ASM(s32, "ovl_03_BuriedTreasure/E8F60", func_800FB9E8_EE368);

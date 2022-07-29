@@ -150,22 +150,23 @@ typedef struct Process {
 } Process;
 
 typedef struct unk_Struct00 {
-/* 0x00 */ char unk_00[0x40];
-/* 0x40 */ f32 unk_40;
-/* 0x44 */ f32 unk_44;
-/* 0x48 */ f32 unk_48;
-/* 0x4C */ char unk_4C[0xEC];
-} unk_Struct00; //sizeof 0x138
+    /* 0x000 */ Vec3f unk0;
+    /* 0x00C */ char padC[0x34];
+    /* 0x040 */ f32 unk_40;
+    /* 0x044 */ f32 unk_44;
+    /* 0x048 */ f32 unk_48;
+    /* 0x04C */ char pad4C[0xEC];
+} unk_Struct00;
 
 typedef struct unk_Struct04 {
     /* 0x00 */ Vec3f pos;
-    /* 0x0C */ char unk_0C[0x18];
+    /* 0x0C */ char padC[0x18];
     /* 0x24 */ f32 unk_24;
-    /* 0x28 */ char unk_28[4];
+    /* 0x28 */ f32 unk28;
     /* 0x2C */ f32 unk_2C;
-    /* 0x30 */ char unk_30[0x10];
+    /* 0x30 */ char pad30[0x10];
     /* 0x40 */ s16* unk_40;
-} unk_Struct04; //sizeof 0xAC?
+} unk_Struct04; /* size = 0x44 */
 
 typedef struct unk_Struct03 {
 /* 0x00 */ struct unk_Struct03 *prev; // may be NULL
@@ -257,7 +258,8 @@ typedef struct board_overlay_entrypoint {
 typedef struct GameStatus {
 /* 0x00 */ s16 unk_00;
 /* 0x02 */ s16 unk_02;
-/* 0x04 */ s8 unk_04[4];
+/* 0x04 */ s8 unk_04[2];
+/* 0x06 */ s16 maxTurns;
 /* 0x08 */ s16 currentTurn;
 /* 0x0A */ s16 chosenStarSpaceIndex;
 /* 0x0C */ s16 starSpaces[7];
@@ -386,5 +388,11 @@ typedef struct unkStructTest {
 /* 0x1C */ s16 unk_1A;
 /* 0x1E */ s16 unk_1C;
 } unkStructTest;
+
+typedef struct unkGlobalStruct {
+    f32 unk_00;
+    s32 unk_04;
+    f32 unk_08;
+} unkGlobalStruct;
 
 #endif

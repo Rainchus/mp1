@@ -82,11 +82,14 @@ INCLUDE_ASM(s32, "ovl_0E_FaceLift/12BC20", func_800F9988_12EFC8);
 INCLUDE_ASM(s32, "ovl_0E_FaceLift/12BC20", func_800F99E8_12F028);
 
 void func_800F9AD4_12F114(Object* arg0) {
-    D_800FC960 = func_80019060(InitSprite(0x20000B), 0, 1);
+    s16 temp = InitSprite(0x20000B);
+    
+    D_800FC960 = func_80019060(temp, 0, 1);
     func_80018C90(D_800FC960);
     arg0->unk_4D = 0;
     arg0->func_ptr = &func_800F9B38_12F178;
 }
+
 
 INCLUDE_ASM(s32, "ovl_0E_FaceLift/12BC20", func_800F9B38_12F178);
 
