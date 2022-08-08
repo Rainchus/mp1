@@ -4,6 +4,21 @@
 #include "types.h"
 #include "common_structs.h"
 
+s16 func_8007186C(s16);
+s32 func_8003EDDC(s32*);
+void func_8003EE3C(s32);
+s32 func_8003EE58(s32);
+s32 func_8005077C(s32);
+void func_80050A7C(s32);
+void func_80053454(s32);
+void func_8004501C(s32);
+void func_800446E0(void);
+void func_8004452C(void);
+void func_80043D68(void);
+void func_80047BE0(s32);
+s32 func_80054FA8(void);
+void func_800441D4(void);
+void func_800674F4(s16, s32, s32, s32, s32);
 void func_8004E248(Object* arg0);
 s16 func_8006FCC0(s16);
 void func_800710A4(s32, s32, s32, s32);
