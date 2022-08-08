@@ -258,7 +258,7 @@ void func_800F6CD8_241F98(void) {
         string_id = 1258;
     }
 
-    LoadStringIntoWindow(str->unk8, string_id, -1, -1);
+    LoadStringIntoWindow(str->unk8, (void*)string_id, -1, -1);
     func_80071C8C(str->unk8, 1);
     PlaySound(1125);
     WaitForTextConfirmation(str->unk8);
@@ -287,7 +287,7 @@ void func_800F6CD8_241F98(void) {
         string_id = 1259;
     }
 
-    LoadStringIntoWindow(str->unk8, string_id, -1, -1);
+    LoadStringIntoWindow(str->unk8, (void*)string_id, -1, -1);
     func_80071C8C(str->unk8, 1);
     WaitForTextConfirmation(str->unk8);
     func_80071E80(str->unk8, 1);

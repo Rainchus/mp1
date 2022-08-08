@@ -154,17 +154,17 @@ void func_800F9B50_D8750(void) {
     switch(tmp)
     {
         case 4:
-            LoadStringIntoWindow(var_s0, 0xF0, -1, -1);
+            LoadStringIntoWindow(var_s0, (void*)0xF0, -1, -1);
             break;
         case 0:
         case 1:
-            LoadStringIntoWindow(var_s0, 0xEE, -1, -1);
+            LoadStringIntoWindow(var_s0, (void*)0xEE, -1, -1);
             break;
         case 10:
-            LoadStringIntoWindow(var_s0, 0xF4, -1, -1);
+            LoadStringIntoWindow(var_s0, (void*)0xF4, -1, -1);
             break;
         default:
-            LoadStringIntoWindow(var_s0, 0xED, -1, -1);
+            LoadStringIntoWindow(var_s0, (void*)0xED, -1, -1);
             break;
     }
     

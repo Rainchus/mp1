@@ -100,7 +100,7 @@ void func_800F66B4_289C74(void) {
         func_8004EE14(0, &D_800F75E4->coords, 0xA, D_800F74F8);
         SleepProcess(0xA);
         windowID = CreateTextWindow(0x6E, 0x28, 0xF, 4);
-        LoadStringIntoWindow(windowID, 0x1A2, -1, -1);
+        LoadStringIntoWindow(windowID, (void*)0x1A2, -1, -1);
         func_8006E070(windowID, 0);
         ShowTextWindow(windowID);
         PlaySound(0x435);

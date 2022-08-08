@@ -165,7 +165,7 @@ void func_800F6BD8_254A48(void) {
         var_a1 = 0x4F0;
     }
 
-    LoadStringIntoWindow(temp_s0->unk_08, var_a1, -1, -1);
+    LoadStringIntoWindow(temp_s0->unk_08, (void*)var_a1, -1, -1);
     func_80071C8C(temp_s0->unk_08, 1);
     PlaySound(0xF0);
     WaitForTextConfirmation(temp_s0->unk_08);
@@ -178,7 +178,7 @@ void func_800F6BD8_254A48(void) {
         var_a1_2 = 0x4F1;
     }
 
-    LoadStringIntoWindow(temp_s0->unk_08, var_a1_2, -1, -1);
+    LoadStringIntoWindow(temp_s0->unk_08, (void*)var_a1_2, -1, -1);
     func_80071C8C(temp_s0->unk_08, 1);
     WaitForTextConfirmation(temp_s0->unk_08);
     func_80071E80(temp_s0->unk_08, 1);
@@ -816,13 +816,13 @@ void func_800F8298_256108(void) {
     
     switch (D_800ED172) {
     case 0:
-        LoadStringIntoWindow(textWindowID, 0x1FD, -1, -1);
+        LoadStringIntoWindow(textWindowID, (void*)0x1FD, -1, -1);
         break;
     case 1:
-        LoadStringIntoWindow(textWindowID, 0x1FE, -1, -1);
+        LoadStringIntoWindow(textWindowID, (void*)0x1FE, -1, -1);
         break;
     default:
-        LoadStringIntoWindow(textWindowID, 0x1FF, -1, -1);
+        LoadStringIntoWindow(textWindowID, (void*)0x1FF, -1, -1);
         break;
     }
     

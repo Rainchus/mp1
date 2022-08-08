@@ -40,7 +40,7 @@ void func_800F66B4_297CB4(void) {
     PlaySound(0x46A);
     SleepProcess(0xA);
     textWindowID = CreateTextWindow(0x50, 0x3C, 0xF, 3);
-    LoadStringIntoWindow(textWindowID, 0x208, -1, -1);
+    LoadStringIntoWindow(textWindowID, (void*)0x208, -1, -1);
     func_8006E070(textWindowID, 0);
     ShowTextWindow(textWindowID);
     func_8004DBD4(textWindowID, D_800F69B0);

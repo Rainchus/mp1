@@ -37,7 +37,7 @@ void func_800F66C4_29AC14(void) {
     PlaySound(117);
     SleepProcess(10);
     textWindowID = CreateTextWindow(80, 60, 12, 3);
-    LoadStringIntoWindow(textWindowID, 382, -1, -1);
+    LoadStringIntoWindow(textWindowID, (void*)382, -1, -1);
     func_8006E070(textWindowID, 0);
     ShowTextWindow(textWindowID);
     PlaySound(0x432);
@@ -53,7 +53,7 @@ void func_800F66C4_29AC14(void) {
     SleepProcess(10);
     func_8004F4D4(D_800F6EC8, -1, 2);
     textWindowID = CreateTextWindow(100, 60, 14, 3);
-    LoadStringIntoWindow(textWindowID, 383, -1, -1);
+    LoadStringIntoWindow(textWindowID, (void*)383, -1, -1);
     func_8006E070(textWindowID, 0);
     ShowTextWindow(textWindowID);
     PlaySound(0x432);

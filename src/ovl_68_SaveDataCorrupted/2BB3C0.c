@@ -18,12 +18,12 @@ void func_800F6610_2BB3C0(void) {
     temp_s2 = func_8006D010(0x34, 0x41, 0xD9, 0x22, 0, 0);
     func_8006E154(temp_s2, 0xFF);
     func_800717C0(temp_s2);
-    LoadStringIntoWindow(temp_s2, 0x38, -1, -1);
+    LoadStringIntoWindow(temp_s2, (void*)0x38, -1, -1);
     func_8006E070(temp_s2, 0);
     new_var = func_8006D010(0x3E, 0x8C, 0xC3, 0x14, 0, 0);
     func_8006E154(new_var, 0xFF);
     func_800717C0(new_var);
-    LoadStringIntoWindow(new_var, 0x39, -1, -1);
+    LoadStringIntoWindow(new_var, (void*)0x39, -1, -1);
     func_8006E070(new_var, 0);
     func_80072644(0xFF, 8);
     

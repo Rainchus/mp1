@@ -65,7 +65,7 @@ INCLUDE_ASM(s32, "51200", func_80050BE0);
 
 void func_80050D1C(s16 arg0, s32 arg1) {
     func_8006EB40(arg0);
-    LoadStringIntoWindow(arg0, arg1, -1, -1);
+    LoadStringIntoWindow(arg0, (void*)arg1, -1, -1);
 }
 
 void func_80050D68(void) {

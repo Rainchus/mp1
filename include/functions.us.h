@@ -4,6 +4,9 @@
 #include "types.h"
 #include "common_structs.h"
 
+void func_8006EB80(void);
+void func_8007149C(char*, char*);
+void func_80018CF8(s32, u8);
 s16 func_8007186C(s16);
 s32 func_8003EDDC(s32*);
 void func_8003EE3C(s32);
@@ -116,7 +119,7 @@ void func_80059348(s16);
 void func_8005DF44(s32, s32, s32);
 void func_8004F504(void*);
 void func_800503B0(s32, s32);
-void func_8008C490(s32*, char[], s32);
+void func_8008C490(); //sprintf, variadic args
 void func_8004F2AC(void);
 void func_80054868(s32);
 void func_80055A34(s32);
@@ -141,7 +144,7 @@ void func_8004B5C4(f32 unk);
 mystery_struct_ret_func_80048224* func_80048224(s16 *ptr);
 void func_8004847C(mystery_struct_ret_func_80048224 *);
 void func_8004A520(void);
-void LoadStringIntoWindow(s16 win_id, s32 string_id, s32 a, s32 b);
+void LoadStringIntoWindow(s16 win_id, void* string_id, s32 a, s32 b);
 void func_800427D4(void* );
 void func_800A0D50(Vec3f* ptr, Vec3f* ptr2);
 void* func_80042728(unk_Struct03* ptr, s32 num);
@@ -218,7 +221,7 @@ f32 func_800B1750(f32);
 void SetBasicSpriteSize(u16, f32, f32);
 void func_80018E50(s32, u16, s32);
 void func_80009058(Object*, f32, f32, f32, f32, f32, f32);
-void SetBasicSpritePos(s32, s32, s16);
+void SetBasicSpritePos(s32, s16, s16);
 void func_80018D84(u16, s32);
 void func_80060540(s32, s32);
 void func_8009ECB0(s32, f32, f32, f32);
