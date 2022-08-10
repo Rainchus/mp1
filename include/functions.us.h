@@ -4,6 +4,24 @@
 #include "types.h"
 #include "common_structs.h"
 
+void func_80021CDC(s16, u8, s32);
+void func_800500A4(void);
+void func_80050160(void);
+void func_80060618(s32, u8);
+f32 func_800855C0(f32);
+
+void func_8004EA8C(unk_Struct03*, Vec3f*, s32, Vec3s*);
+s32 func_8004F018(unk_Struct03*);
+void func_8004F40C(unk_Struct03*, s32, s32);
+void func_8004F8DC(void);
+s32 func_8004F954(s32, s32);
+void func_8004F9F4(s32, f32, f32, f32, s32);
+void func_8004FA90(s32, f32, f32, f32);
+void func_80025AD4(s16);
+void func_8005B244(void);
+void func_80059EBC(void);
+s16 func_80059C28(void);
+s16 func_800767B4(void*, void*, s32, s32, s32);
 void func_8006EB80(void);
 void func_8007149C(char*, char*);
 void func_80018CF8(s32, u8);
@@ -354,9 +372,9 @@ void func_80067480(s16, s32, s32); //could also be  void func_80067480(s16, s32,
 void func_800672DC(s16, u16, u16, s32);
 void func_800674BC(s16, s16, u16);
 s16 func_80064EF4(s32, s32);
-void func_80067208(s16, s32, s16, s32);
+void func_80067208(s16, s16, s16, u16);
 void func_80009000(Object*, s32, f32);
-
+void func_80072724(u8, u8, u8);
 void FreePerm(void*);
 s32 InitSprite(s32);
 void func_8002578C(s32);

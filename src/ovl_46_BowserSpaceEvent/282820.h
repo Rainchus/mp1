@@ -13,7 +13,6 @@ void func_80060618(s32, u8);
 
 extern char* D_800C5218[];
 
-void func_8004F40C(void*, s32, s32);
 void func_8005546C(s32);
 void func_80055544(s32);
 void func_80055810(s32, s32, u8);
