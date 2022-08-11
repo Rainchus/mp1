@@ -1,6 +1,43 @@
 #include "common.h"
 #include "28BC70.h"
 
+// static unk_Struct03* D_800F7840;
+// static unk_Struct03* D_800F7844;
+// static unk_Struct03* D_800F7848;
+// static unk_Struct03* D_800F784C;
+// static s32 D_800F7850;
+// static Object* D_800F7854;
+// static unk_Struct03* D_800F7858;
+// static Object* D_800F785C;
+
+// const Vec3f D_800F7860 = {0.0f, 0.0f, 1120.0f};
+// const Vec3f D_800F786C = {-250.0f, 0.0f, 80.0f};
+// const Vec3f D_800F7878 = {0.0f, -100.0f, -6000.0f};
+// const Vec3f D_800F7884 = {0.0f, 0.0f, 1120.0f};
+// const Vec3f D_800F7890 = {-6000.0f, 0.0f, -6000.0f};
+// const Vec3f D_800F789C = {-1500.0f, 0.0f, -2500.0f};
+// const Vec3f D_800F78A8 = {-500.0f, 0.0f, -1500.0f};
+// const Vec3f D_800F78B4 = {-2500.0f, 0.0f, -3500.0f};
+// const Vec3f D_800F78C0 = {700.0f, 0.0f, -6000.0f};
+// const Vec3f D_800F78CC = {-300.0f, 0.0f, -300.0f};
+// const Vec3f D_800F78D8 = {0.0f, 0.0f, 1120.0f};
+// const Vec3f D_800F78E4 = {-800.0f, 0.0f, -300.0f};
+
+// const s32 D_800F78F0[] = {0x00000003, 0x000A0068, 0x000A006A, 0x000A006C}; //cheep cheep (probaby some type of struct)
+// const s32 D_800F7900[] = {0x00000002, 0x00070006, 0x00070008, 0x00000000}; //toad
+
+// const char D_800F7910[] = "pukuSa-bmerge1";
+// const char D_800F7920[] = "pukuSa-bmerge2";
+// //D_800F7930 PI / 180.0 as double
+// const Vec3f D_800F7938 = {0.0f, 0.0f, 0.0f};
+// const Vec3f D_800F7944 = {200.0f, 0.0f, 0.0f};
+
+// //D_800F7950 PI / 180.0 as double
+// //D_800F7958 PI / 180.0 as double
+
+// u8 D_800F7960;
+
+
 void func_800F65E0_28BC70(void) {
     D_800F7960 = D_800ED5DD;
     func_8005CF30(0x32, 0xA);
@@ -12,7 +49,7 @@ void func_800F65E0_28BC70(void) {
     func_800546B4(2, gPlayers[2].turn_status);
     func_800546B4(3, gPlayers[3].turn_status);
     func_8006CEA0();
-    InitProcess(func_800F67BC_28BE4C, 0x300U, 0, 0);
+    InitProcess(func_800F67BC_28BE4C, 0x300, 0, 0);
     func_8005D384(0x1000, 0, 0, -1, &func_800F737C_28CA0C);
     func_80072644(4, 0x10);
 }
@@ -24,7 +61,6 @@ void func_800F66B4_28BD44(Object* arg0) {
 #ifdef NON_MATCHING
 void func_800F6708_28BD98(Object* arg0) { //needs rodata support
     Object* temp_s0;
-    Object* temp_s0_2;
 
     temp_s0 = D_800F7858;
     temp_s0->unk_18 = func_80088060(arg0->unk_18 * (PI / 180.0));
@@ -41,9 +77,9 @@ INCLUDE_ASM(s32, "ovl_4E_BowserToadSwapPlacesYoshiBoard/28BC70", func_800F6708_2
 
 #ifdef NON_MATCHING
 void func_800F67BC_28BE4C(void) {
+    Vec3s sp18, sp28;
     unk_Struct04* temp_s0;
     unk_Struct04* temp_s0_2;
-    Vec3s sp18, sp28;
     s32 temp_s1, temp_s3, temp_s4;
     s32 i;
     s32 var_s2;
@@ -264,7 +300,7 @@ void func_800F7330_28C9C0(void) {
 
 void func_800F737C_28CA0C(Object* arg0) {
     if (D_800F5144 != 0) {
-        func_800726AC(4, 0x10);
+        func_800726AC(4, 16);
         arg0->func_ptr = &func_800F7330_28C9C0;
     }
 }
@@ -280,7 +316,7 @@ void func_800F73C0_28CA50(void) {
     D_800F784C = func_8003DBE0(0x70, NULL);
     func_800A0D00(&D_800F784C->coords, D_800F78C0.x, D_800F78C0.y, D_800F78C0.z);
     D_800F784C->unk_30 = 130.0f;
-    D_800F7840 = func_8003DBE0(7U, &D_800F7900);
+    D_800F7840 = func_8003DBE0(7, &D_800F7900);
     func_800A0D00(&D_800F7840->coords, D_800F7860.x, D_800F7860.y, D_800F7860.z);
     D_800F7848 = func_8003DBE0(0x5C, NULL);
     func_800A0D00(&D_800F7848->coords, D_800F7878.x, D_800F7878.y, D_800F7878.z);

@@ -1,4 +1,5 @@
 #include "common.h"
+#include "24740.h"
 
 INCLUDE_ASM(s32, "24740", func_80023B40);
 
@@ -86,7 +87,20 @@ INCLUDE_ASM(s32, "24740", func_80026174);
 
 INCLUDE_ASM(s32, "24740", func_80026404);
 
-INCLUDE_ASM(s32, "24740", func_800264F8);
+void func_800264F8(s16 arg0, s16 arg1, f32 arg2, s32* arg3, s32* arg4, s32 arg5) { //arg4 is char array string ptr?
+    s16 temp_s0;
+    s16 temp_v0;
+    s32 temp_s2;
+    s32 temp_s3;
+
+    temp_s3 = D_800F2B7C[arg0].unk_6C;
+    temp_s2 = D_800F2B7C[arg1].unk_6C;
+    temp_s0 = func_80033718(temp_s3, arg3);
+    temp_v0 = func_80033718(temp_s2, arg4);
+    if (((~temp_s0 == 0) | (~temp_v0 == 0)) == 0) {
+        func_800265EC(temp_s3, temp_s2, arg2, temp_s0, temp_v0, arg5);
+    }
+}
 
 INCLUDE_ASM(s32, "24740", func_800265EC);
 
