@@ -4,6 +4,11 @@
 #include "types.h"
 #include "common_structs.h"
 
+void func_800F7F50_2F5A30(void);
+void func_8000941C(Object*, f32, f32, f32);
+void func_800090A4(Object*);
+void func_80009448(void);
+void func_8000C250(s32);
 void func_8004A510(void);
 void func_8004CC8C(s16, s16);
 void func_8004CDA0(s16);
