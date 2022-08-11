@@ -4,12 +4,17 @@
 #include "types.h"
 #include "common_structs.h"
 
+void func_8004CC8C(s16, s16);
+void func_8004CDA0(s16);
+void func_80052FD4(s16);
+extern s16 D_800ED5DC;
+Process* func_800532B4(void);
+Process* func_800531E8(void);
 void func_80021CDC(s16, u8, s32);
 void func_800500A4(void);
 void func_80050160(void);
 void func_80060618(s32, u8);
 f32 func_800855C0(f32);
-
 void func_8004EA8C(unk_Struct03*, Vec3f*, s32, Vec3s*);
 s32 func_8004F018(unk_Struct03*);
 void func_8004F40C(unk_Struct03*, s32, s32);
@@ -246,7 +251,7 @@ void func_8009ECB0(s32, f32, f32, f32);
 void func_800258EC(s16, s32, s32);
 s16 func_8001E00C(s32, s32, s32);
 void func_80064D38(s16);
-void func_8006752C(s8, s32, u8);
+void func_8006752C(s16, s32, u8);
 void func_8001D934(s32, s32, f32*);
 void func_80079078(s16);
 void func_8005D718(void*); //idk what type this arg is, either Object* or unk_struct03*
