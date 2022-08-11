@@ -5,7 +5,7 @@ INCLUDE_ASM(s32, "51200", func_80050600);
 
 INCLUDE_ASM(s32, "51200", func_8005077C);
 
-void func_80050A7C(s32 arg0) {
+void func_80050A7C(unk_Struct02* arg0) {
     func_80053454(arg0);
 }
 

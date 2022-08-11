@@ -395,4 +395,10 @@ typedef struct unkGlobalStruct {
     f32 unk_08;
 } unkGlobalStruct;
 
+typedef struct unk_Struct02 {
+    char unk_00[0x0A];
+    s16 unk_0A;
+    s16* unk_0C;
+} unk_Struct02;
+
 #endif

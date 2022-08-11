@@ -5,6 +5,12 @@
 #define EXEC_PROCESS_WATCH 2
 #define EXEC_PROCESS_DEAD 3
 
+#define CURRENT_PLAYER -1
+
+extern u16 D_800EC6EA[];
+extern s8 D_800ECC22;
+extern u8 D_800ED0D2;
+extern s16 D_800ED5DC;
 extern s16 D_800ED15E;
 extern Addr D_FE2310;
 extern u16 D_800F5144;
