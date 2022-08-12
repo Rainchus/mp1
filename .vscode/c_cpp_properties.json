@@ -1,0 +1,27 @@
+{
+    "version": 4,
+    "configurations": [
+        {
+            "name": "mp1",
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "${workspaceFolder}/include",
+                    "${workspaceFolder}/src"
+                ]
+            },
+            "includePath": [
+                "${workspaceFolder}/include",
+                "${workspaceFolder}/src",
+            ],
+            "defines": [
+                "F3DEX_GBI_2",
+                "_LANGUAGE_C",
+                "_MIPS_SZLONG=32",
+            ],
+            "cStandard": "c89",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x86"
+        }
+    ]
+}
