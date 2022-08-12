@@ -1,7 +1,7 @@
 #include "common.h"
 
 void func_800F66B4_28BD44(Object*);
-void func_800F6708_28BD98(void);
+void func_800F6708_28BD98(Object* arg0);
 void func_800F67BC_28BE4C(void);
 void func_800F73C0_28CA50(void);
 void func_800F7764_28CDF4(void);
