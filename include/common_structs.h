@@ -79,7 +79,7 @@ typedef struct unkGlobalStruct_00 {
     /* 0x57 */ s8 unk_57;
     /* 0x58 */ s8 unk_58;
     /* 0x59 */ char unk_59[7];
-    /* 0x60 */ f32* unk_60;
+    /* 0x60 */ f32 unk_60;
     /* 0x64 */ char unk_64[0x4C];
     /* 0xB0 */ u16 unk_B0;
     /* 0xB2 */ char unk_B2[1];
