@@ -7,6 +7,7 @@
 
 #define CURRENT_PLAYER -1
 
+extern s16 D_800F64F6; //matrix stack position
 extern u16 D_800EC6EA[];
 extern s8 D_800ECC22;
 extern u8 D_800ED0D2;

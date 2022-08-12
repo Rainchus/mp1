@@ -224,7 +224,77 @@ void func_800F71F4_2F4CD4(Object* arg0) {
     temp_s1->unk_04.b[1] = 5;
 }
 
+#ifdef NON_MATCHING //matches but tons of warnings
+typedef struct struct2 {
+/* 0x00 */ union {
+        u16 unsigned16[2];
+        s16 signed16[2];
+        s32 signed32;
+    } unk_00;
+s16 unk_04;
+s16 unk_06;
+s16 unk_08;
+s16 unk_0A;
+s16 unk_0C;
+s16 unk_0E;
+s16 unk_10;
+} struct2;
+
+typedef struct struct1 {
+    char unk_00[0x18];
+    f32 unk_18;
+    f32 unk_1C;
+    f32 unk_20;
+    char unk_24[0x1C];
+    struct2* unk_40;
+} struct1;
+
+void func_800F72DC_2F4DBC(struct1* arg0, s32 arg1, s32 arg2, s32 arg3, f32 arg4, f32 arg5, f32 arg6) {
+    func_8000979C(arg0, arg1, arg2, arg3 & 0xFFFF, 0xA99, 0xA99);
+    arg0->unk_40->unk_06 = LoadFormFile(0x19, 0xA8D);
+    arg0->unk_40->unk_08 = LoadFormFile(0x1A, 0xA8D);
+    arg0->unk_40->unk_0C = LoadFormFile(0x1B, 0xA8D);
+    arg0->unk_40->unk_0A = LoadFormFile(0x1C, 0xA8D);
+    arg0->unk_40->unk_0E = LoadFormFile(0x1E, 0xA8D);
+    arg0->unk_40->unk_10 = LoadFormFile(0x1D, 0xA8D);
+    func_800187D0(arg0, 0, arg1, 1, 0);
+    func_800187D0(arg0, 1, arg1 | 1, 1, 0);
+    func_800187D0(arg0, 2, arg1 | 3, 1, 0);
+    func_800187D0(arg0, 5, arg1 | 4, 0, 0);
+    func_800187D0(arg0, 6, arg1 | 5, 1, 0x13);
+    func_800187D0(arg0, 7, arg1 | 6, 1, 0x22);
+    func_800187D0(arg0, 8, arg1 | 9, 1, 0x1B);
+    func_800187D0(arg0, 9, arg1 | 0xA, 1, 0x27);
+    func_800187D0(arg0, 0x10, arg1 | 0x17, 1, 0);
+    func_800187D0(arg0, 0x11, arg1 | 0x18, 0, 0);
+    func_800187D0(arg0, 0x12, arg1 | 0x1C, 2, 0);
+    func_800187D0(arg0, 0x13, arg1 | 0x1D, 2, 0);
+    func_800187D0(arg0, 0xA, arg1 | 0x1E, 1, 0x27);
+    func_800187D0(arg0, 0x16, arg1 | 0x24, 1, 0);
+    func_8001874C(arg0, 0x15, arg1 | 0x62, 0, 0);
+    func_8001874C(arg0, 0x14, arg1 | 0x5F, 2, 0);
+    func_8001874C(arg0, 3, arg1 | 0x60, 1, 0);
+    func_8001874C(arg0, 4, arg1 | 0x61, 1, 0);
+    func_8001874C(arg0, 0x1E, arg1 | 0x63, 2, 0);
+    func_8001874C(arg0, 0x1F, arg1 | 0x64, 2, 0);
+    func_8001874C(arg0, 0x20, arg1 | 0x67, 0, 0);
+    func_8001874C(arg0, 0x21, arg1 | 0x68, 2, 0);
+    func_8001874C(arg0, 0x22, arg1 | 0x69, 2, 0);
+    arg0->unk_18 = arg4;
+    arg0->unk_1C = 10.0f;
+    arg0->unk_20 = arg6;
+    func_80025798(arg0->unk_40->unk_00.unsigned16[0], arg0->unk_18, arg0->unk_1C, arg6);
+    func_800090C4(arg0, 0, 2);
+    func_800090C4(arg0, 1, 2);
+    func_800090C4(arg0, 2, 2);
+    func_800090C4(arg0, 3, 2);
+    func_800090C4(arg0, 4, 2);
+    func_800090C4(arg0, 5, 2);
+    func_800090C4(arg0, 6, 2);
+}
+#else
 INCLUDE_ASM(s32, "ovl_70_TestingRoom/2F40C0", func_800F72DC_2F4DBC);
+#endif
 
 INCLUDE_ASM(s32, "ovl_70_TestingRoom/2F40C0", func_800F7690_2F5170);
 
