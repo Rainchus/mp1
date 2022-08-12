@@ -181,8 +181,8 @@ typedef struct unk_Struct03 {
 /* 0x28 */ f32 unk_28;
 /* 0x2C */ f32 unk_2C;
 /* 0x30 */ f32 unk_30;
-/* 0x30 */ f32 unk_34;
-/* 0x30 */ f32 unk_38;
+/* 0x34 */ f32 unk_34;
+/* 0x38 */ f32 unk_38;
 /* 0x3C */ unk_Struct04* unk_3C;
 /* 0x3C */ unk_Struct04* unk_40;
 /* 0x44 */ f32 unk_44;

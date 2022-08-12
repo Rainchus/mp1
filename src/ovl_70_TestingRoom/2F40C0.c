@@ -187,9 +187,42 @@ void func_800F7010_2F4AF0(Object* arg0) {
     temp_s1->unk_04.b[1] = 4;
 }
 
-INCLUDE_ASM(s32, "ovl_70_TestingRoom/2F40C0", func_800F7108_2F4BE8);
+void func_800F7108_2F4BE8(Object* arg0) {
+    unkGlobalStruct_00* temp_s1;
 
-INCLUDE_ASM(s32, "ovl_70_TestingRoom/2F40C0", func_800F71F4_2F4CD4);
+    arg0->unk_40->unk_00.unsigned16[0] = func_800174C0(0x380006, 0x899);
+    arg0->unk_18 = 0.0f;
+    temp_s1 = func_80023684(0x2C, 0x7918);
+    arg0->unk_50 = temp_s1;
+    func_8009B770(temp_s1, 0, 0x2C);
+    arg0->func_ptr = NULL;
+    temp_s1->unk_04.b[0] = 1;
+    func_80009090(arg0);
+    func_80009058(arg0, 250.0f, 250.0f, -250.0f, -250.0f, 250.0f, 250.0f);
+    func_80008FB8(arg0, 0.5f);
+    func_80008FC4(arg0, 15.0f);
+    func_8000941C(arg0, 2.0f, 2.0f, 2.0f);
+    temp_s1->unk_04.b[1] = 4;
+}
+
+void func_800F71F4_2F4CD4(Object* arg0) {
+    unkGlobalStruct_00* temp_s1;
+
+    arg0->unk_40->unk_00.unsigned16[0] = func_800174C0(0x38000C, 0x899);
+    arg0->unk_18 = -1600.0f;
+    arg0->unk_1C = 0.0f;
+    arg0->unk_20 = 2000.0f;
+    func_80025798(arg0->unk_40->unk_00.unsigned16[0], arg0->unk_18, arg0->unk_1C, 2000.0f);
+    temp_s1 = func_80023684(0x2C, 0x7918);
+    arg0->unk_50 = temp_s1;
+    func_8009B770(temp_s1, 0, 0x2C);
+    arg0->func_ptr = NULL;
+    temp_s1->unk_04.b[0] = 1;
+    func_80009000(arg0, 4, 0.0f);
+    func_80008FB8(arg0, 0.5f);
+    func_8000941C(arg0, 1.0f, 1.0f, 1.0f);
+    temp_s1->unk_04.b[1] = 5;
+}
 
 INCLUDE_ASM(s32, "ovl_70_TestingRoom/2F40C0", func_800F72DC_2F4DBC);
 
