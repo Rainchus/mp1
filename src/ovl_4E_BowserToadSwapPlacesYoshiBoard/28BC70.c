@@ -45,13 +45,13 @@ void func_800F66B4_28BD44(Object* arg0) {
     func_800264F8(*D_800F7848_28CED8->unk_3C->unk_40, D_800F7850_28CEE0, arg0->unk_18, "pukuSa-bmerge1", "pukuSa-bmerge2", 0);
 }
 
-void func_800F6708_28BD98(Object* arg0) { //needs rodata support
-    Object* temp_s0;
+void func_800F6708_28BD98(Object* arg0) {
+    unk_Struct03* temp_s0;
 
     temp_s0 = D_800F7858_28CEE8;
-    temp_s0->unk_18 = func_80088060(arg0->unk_18 * (0.017453292519943295));
+    temp_s0->unk_18.x = func_80088060(arg0->unk_18 * (0.017453292519943295));
     temp_s0 = D_800F7858_28CEE8;
-    temp_s0->unk_20 = func_800855C0(arg0->unk_18 * (0.017453292519943295));
+    temp_s0->unk_18.z = func_800855C0(arg0->unk_18 * (0.017453292519943295));
     arg0->unk_18 += 5.0f;
     if (arg0->unk_18 >= 360.0f) {
         arg0->unk_18 -= 360.0f;
@@ -66,7 +66,6 @@ void func_800F67BC_28BE4C(void) {
     s32 temp_s1, temp_s3, temp_s4;
     s32 i;
     s32 var_s2;
-    s32 var_s1_3;
 
     func_8004F8DC();
     temp_s3 = func_8004F954(0xA0146, 0xA);
@@ -92,7 +91,7 @@ void func_800F67BC_28BE4C(void) {
             PlaySound(0xAE);
         }
 
-        if (i < 0x2D == 0) {
+        if ((i < 0x2D) == 0) {
             D_800F7854_28CEE4->unk_18 = 1.0f - ((i - 0x2D) / 10.0f);
             D_800F7840_28CED0->coords.y += 5.0f;
             D_800F7840_28CED0->unk_0A |= 1;
@@ -131,7 +130,6 @@ void func_800F67BC_28BE4C(void) {
     }
 
     func_8004EA8C(D_800F7848_28CED8, &D_800F7890_28CF20, 0x2D, &sp18);
-    var_s1_3 = 0;
     func_8004F00C(D_800F7848_28CED8, 60.0f, -1.3f);
     func_8004EA8C(D_800F7840_28CED0, &D_800F7890_28CF20, 0x2D, &sp18);
     func_8004F00C(D_800F7840_28CED0, 60.0f, -1.3f);
@@ -172,7 +170,7 @@ void func_800F67BC_28BE4C(void) {
     D_800F784C_28CEDC = NULL;
     SleepProcess(5);
     func_8003E5E0(D_800F7858_28CEE8);
-    D_800ED15C.unk_02 = D_800ED15C.unk_02 + 1 & 1;
+    D_800ED15C.unk_02 = (D_800ED15C.unk_02 + 1) & 1;
 
     if (!(D_800ED15C.unk_02 & 1)) {
         func_80049F4C(0x16);
@@ -215,7 +213,7 @@ void func_800F67BC_28BE4C(void) {
     
     SleepProcess(5);
 
-    for (i; i <= 0; i += 10) {
+    for (; i <= 0; i += 10) {
         D_800F7848_28CED8->unk_3C->unk_24 = i;
         D_800F7854_28CEE4->unk_18 = (i / 30.0f) + 1.0f;
         SleepVProcess();

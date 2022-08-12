@@ -87,7 +87,7 @@ INCLUDE_ASM(s32, "24740", func_80026174);
 
 INCLUDE_ASM(s32, "24740", func_80026404);
 
-void func_800264F8(s16 arg0, s16 arg1, f32 arg2, s32* arg3, s32* arg4, s32 arg5) { //arg4 is char array string ptr?
+void func_800264F8(s16 arg0, s16 arg1, f32 arg2, char* arg3, char* arg4, s32 arg5) { //arg4 is char array string ptr?
     s16 temp_s0;
     s16 temp_v0;
     s32 temp_s2;
