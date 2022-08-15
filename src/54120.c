@@ -1,6 +1,8 @@
 #include "common.h"
 #include "54120.h"
 
+void func_80055810(s32 arg0, s32 arg1, s32);
+
 INCLUDE_ASM(s32, "54120", func_80053520);
 
 INCLUDE_ASM(s32, "54120", func_80053A1C);
@@ -57,7 +59,10 @@ INCLUDE_ASM(s32, "54120", func_800555D0);
 
 INCLUDE_ASM(s32, "54120", func_80055810);
 
-INCLUDE_ASM(s32, "54120", func_80055960);
+void func_80055960(s32 arg0, s32 arg1) {
+    func_80055810(arg0, arg1, 1);
+}
+
 
 INCLUDE_ASM(s32, "54120", func_8005597C);
 
