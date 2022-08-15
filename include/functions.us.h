@@ -245,7 +245,7 @@ void func_800421E0(void);
 Object* func_8004E3E0(s32, Vec3f*, s32, void*); //arg2 should be Vec3f*
 void func_8004F044(void*);
 void func_8004F4D4(void*, s32, s32);
-void func_80055960(s16, s32);
+void func_80055960(s32, s32);
 void SleepProcess(s32);
 void func_8005D96C(Object*, f32, f32, f32);
 void func_8005D97C(Object*, f32, f32, f32);

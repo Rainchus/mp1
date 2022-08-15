@@ -41,10 +41,10 @@ void func_800F6F5C_259C1C(Object* obj) {
 
 void func_800F6FA8_259C68(void) {
     func_8003DAA8();
-    D_800F71F4_1DA2A4 = func_8003DBE0(8, &D_800F7154);
-    D_800F71F4_1DA2A4->coords.x = D_800F7130.x;
-    D_800F71F4_1DA2A4->coords.y = D_800F7130.y;
-    D_800F71F4_1DA2A4->coords.z = D_800F7130.z;
+    D_800F71F4_1DA2A4 = func_8003DBE0(8, &D_800F7154_259E14);
+    D_800F71F4_1DA2A4->coords.x = D_800F7130_259DF0.x;
+    D_800F71F4_1DA2A4->coords.y = D_800F7130_259DF0.y;
+    D_800F71F4_1DA2A4->coords.z = D_800F7130_259DF0.z;
     func_8004F140(*D_800F71F4_1DA2A4->unk_3C->unk_40);
 }
 

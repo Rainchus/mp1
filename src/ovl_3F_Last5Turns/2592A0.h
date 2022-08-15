@@ -10,8 +10,8 @@ typedef struct unknownLast5Turns_01 {
 } unknownLast5Turns_01;
 
 unk_Struct03* D_800F71F4_1DA2A4;
-extern Vec3f D_800F7130;
-extern Vec3f D_800F7154;
+extern Vec3f D_800F7130_259DF0;
+extern Vec3f D_800F7154_259E14;
 
 void func_800F6FA8_259C68(void);
 void func_800F7034_259CF4(void);
