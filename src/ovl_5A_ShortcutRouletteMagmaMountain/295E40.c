@@ -1,7 +1,11 @@
 #include "common.h"
 #include "295E40.h"
 
-s32 D_800F7200_296A60 = NULL;
+typedef struct unkStruct_ovl5A_0 {
+    /* 0x00 */ u8 unk_00[4];
+} unkStruct_ovl5A_0;
+
+s32 D_800F7200_296A60 = 0;
 
 Vec3f D_800F7204_296A64 = {0.0f, 0.0f, 840.0f};
 Vec3f D_800F7210_296A70 = {80.0f, 0.0f, 1520.0f};
@@ -148,8 +152,8 @@ void func_800F6898_2960F8(void) {
         } while (var_s1 != 2);
 
         SleepProcess(0x28);
-        D_800ED156 = func_80041604(D_800F7310);
-        if (!(D_800ED156)) {
+        D_800ED154.unk_02 = func_80041604(D_800F7310);
+        if (!(D_800ED154.unk_02)) {
             windowID = CreateTextWindow(0x5A, 0x3C, 0xD, 3);
             LoadStringIntoWindow(windowID, (void* )0x1F5, -1, -1);
             func_8006E070(windowID, 0);
