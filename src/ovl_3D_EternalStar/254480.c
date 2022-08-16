@@ -91,7 +91,7 @@ ProcessHeader* func_800F68E4_254754(s32* arg0) {
         func_800A0D00(&temp_v0->unk_24, 0.5f, 0.5f, 0.5f);
         func_80025F10(*temp_s0->prev->unk_3C->unk_40, 2);
         process = InitProcess(&func_800F68B8_254728, 0x4000, 0, 0);
-        temp_s0->next = (void*)process;
+        temp_s0->process = process;
         process->user_data = temp_s0;
         temp_s0->unk_0A = 0x69;
         D_800F9180.x = 0;
@@ -119,7 +119,7 @@ ProcessHeader* func_800F68E4_254754(s32* arg0) {
 void func_800F6AA0_254910(ProcessHeader* arg0) {
     if (arg0 != NULL) {
         func_8003E694(arg0->prev);
-        EndProcess(arg0->next);
+        EndProcess(arg0->process);
         func_80072080(arg0->unk_08);
         func_8003B798(arg0);
     }
@@ -919,7 +919,7 @@ void func_800F87E4_256654(ProcessHeader* arg0) {
     func_8003C060(temp_s2, D_800ED5C0.unk_1C, 0);
     
     if (PlayerIsCPU(-1) != 0) {
-        tempVar = RunDecisionTree(arg0->next);
+        tempVar = RunDecisionTree(arg0->process);
         for (i = 0; i < tempVar; i++) {
             func_8003BE84(temp_s2, -2);
         }

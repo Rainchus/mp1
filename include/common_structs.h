@@ -116,13 +116,6 @@ typedef struct Object {
 /* 0x50 */ unkGlobalStruct_00* unk_50;
 } Object; //sizeof 0x54
 
-typedef struct ProcessHeader { //?
-/* 0x00 */ struct unk_Struct03* prev;
-/* 0x04 */ struct unk_Struct03* next;
-/* 0x08 */ s16 unk_08;
-/* 0x0A */ s16 unk_0A;
-} ProcessHeader;
-
 typedef struct jump_buf
 {
     void *sp;
@@ -150,6 +143,20 @@ typedef struct Process {
     /*0x88*/ process_func destructor;
     /*0x8C*/ void *user_data;
 } Process;
+
+typedef struct ProcessHeader { //?
+/* 0x00 */ struct unk_Struct03* prev;
+/* 0x04 */ Process* process;
+/* 0x08 */ s16 unk_08;
+/* 0x0A */ s16 unk_0A;
+} ProcessHeader;
+
+typedef struct unkProcessStruct {
+           s16 unk0;
+           s16 unk2;
+           Process* processInstance;
+           void (*unk8)();
+} unkProcessStruct;
 
 typedef struct unk_Struct00 {
     /* 0x000 */ Vec3f unk0;
