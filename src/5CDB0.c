@@ -1,6 +1,5 @@
 #include "common.h"
-
-extern s8 D_800F37BC[];
+#include "5CDB0.h"
 
 INCLUDE_ASM(s32, "5CDB0", func_8005C1B0);
 
@@ -114,25 +113,128 @@ INCLUDE_ASM(s32, "5CDB0", func_8005DBE4);
 
 INCLUDE_ASM(s32, "5CDB0", func_8005DC18);
 
-INCLUDE_ASM(s32, "5CDB0", InitProcess);
+Process* InitProcess(void (*func)(), u16 priority, s32 stack_size, s32 extra_data_size) {
+    unkProcessStruct* temp_s0;
+    Process* process;
+    s16 temp_s1;
+    
+    if (D_800C598A != D_800C5988) {
+        temp_s1 = D_800C598C;
+        temp_s0 = &D_800C5990[D_800C598C];
+        temp_s0->unk0 = 4;
+        D_800C598C = temp_s0->unk2;
+        process = CreateProcess(*func, priority, stack_size, extra_data_size);
+        temp_s0->processInstance = process;
+        process->dtor_idx = temp_s1;
+        SetProcessDestructor(temp_s0->processInstance, &func_8005DDDC);
+        temp_s0->unk8 = 0;
+        D_800C598A++;
+        return temp_s0->processInstance;
+    } else {
+        return NULL;
+    }
+}
 
-INCLUDE_ASM(s32, "5CDB0", func_8005DCD8);
+Process* func_8005DCD8(process_func arg0, u16 arg1, s32 arg2, s32 arg3, Process* arg4) {
+    unkProcessStruct* temp_s0;
+    Process* process;
+    s16 temp_s1;
+    
+    if (D_800C598A != D_800C5988) {
+        D_800C598C = D_800C598C;
+        temp_s1 = D_800C598C;
+        temp_s0 = &D_800C5990[D_800C598C];
+        temp_s0->unk0 = 4;
+        D_800C598C = temp_s0->unk2;
+        process = CreateChildProcess(arg0, arg1, arg2, arg3, arg4);
+        temp_s0->processInstance = process;
+        process->dtor_idx = temp_s1;
+        SetProcessDestructor(temp_s0->processInstance, func_8005DDDC);
+        temp_s0->unk8 = 0;
+        D_800C598A++;
+        return temp_s0->processInstance;
+    }
+    
+    return NULL;
+}
 
-INCLUDE_ASM(s32, "5CDB0", EndProcess);
+s32 EndProcess(Process* arg0) {
+    if (arg0 != NULL) {
+        return KillProcess(arg0);
+    }
+    
+    if (KillProcess(GetCurrentProcess()) == 0) {
+        SleepVProcess();
+    }
+    
+    return -1;
+}
 
-INCLUDE_ASM(s32, "5CDB0", func_8005DDDC);
+void func_8005DDDC(void) {
+    Process* temp_s1 = GetCurrentProcess();
+    unkProcessStruct* temp_s0 = &D_800C5990[temp_s1->dtor_idx];
+    
+    if (temp_s0->unk8 != 0) {
+        (temp_s0->unk8)();
+    }
+    
+    temp_s0->unk0 = 1;
+    temp_s0->unk2 = D_800C598C;
+    D_800C598C = temp_s1->dtor_idx;
+    D_800C598A--;
+}
 
-INCLUDE_ASM(s32, "5CDB0", func_8005DE6C);
+void func_8005DE6C(s32 arg0, void (*arg1)()) {
+    unkProcessStruct* temp = &D_800C5990[GetCurrentProcess()->dtor_idx];
+    temp->unk8 = arg1;
+}
 
-INCLUDE_ASM(s32, "5CDB0", func_8005DEB0);
+void func_8005DEB0(void) {
+    unkProcessStruct* var_v1 = D_800C5990;
+    s32 i;
+    
+    for (i = 0; i < D_800C5988; i++) {
+        if ((var_v1->unk0 & 4) && (var_v1->processInstance->exec_mode == EXEC_PROCESS_DEAD)) {
+            var_v1->unk0 = 1;
+            var_v1->unk2 = D_800C598C;
+            D_800C598C = i;
+            D_800C598A--;
+        }
+        var_v1++;
+    }
+}
 
-INCLUDE_ASM(s32, "5CDB0", func_8005DF44);
+INCLUDE_ASM(s32, "5CDB0", func_8005DF44); //https://decomp.me/scratch/wKEAC
 
-INCLUDE_ASM(s32, "5CDB0", func_8005DFB8);
+s32 func_8005DFB8(s32 arg0) {
+    s32 ret;
+    
+    D_800C597E = D_800C597E - arg0;
+    
+    if (D_800C597E >= 0) {
+        func_8005E044(D_800F37F8[D_800C597E].unk_00, D_800F37F8[D_800C597E].unk_04, D_800F37F8[D_800C597E].unk_06);
+        ret = 1;
+    } else {
+        D_800C597E = 0;
+        func_8005E044(D_800F37F8[0].unk_00, D_800F37F8[0].unk_04, D_800F37F8[0].unk_06);
+        ret = 0;
+    }
+    return ret;
+}
 
 INCLUDE_ASM(s32, "5CDB0", func_8005E044);
 
-INCLUDE_ASM(s32, "5CDB0", func_8005E36C);
+void func_8005E36C(s16 arg0, s32 arg1, s32 arg2, s32 arg3) {
+    unkStructTest2* temp_v0_2;
+    s32 temp_v0 = D_800C597E - arg0;
+    
+    if (temp_v0 >= 0) {
+        temp_v0_2 = &D_800F37F8[temp_v0];
+        temp_v0_2->unk_00 = arg1;
+        temp_v0_2->unk_04 = arg2;
+        temp_v0_2->unk_06 = arg3;
+    }
+}
 
 INCLUDE_ASM(s32, "5CDB0", func_8005E3A8);
 

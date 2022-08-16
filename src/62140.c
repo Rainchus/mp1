@@ -357,10 +357,10 @@ s32 SetKillStatusProcess(Process* process) {
     }
 }
 
-void KillProcess(Process* process) {
+s32 KillProcess(Process* process) {
     KillChildProcess(process);
     UnlinkChildProcess(process);
-    SetKillStatusProcess(process);
+    return SetKillStatusProcess(process);
 }
 
 void KillChildProcess(Process* process) {
