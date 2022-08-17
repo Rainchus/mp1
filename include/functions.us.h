@@ -4,6 +4,8 @@
 #include "types.h"
 #include "common_structs.h"
 
+void func_80019A78(Vec3f*, Vec3f*, Vec3f*, Vec3f*, Vec3f*, Vec3f*);
+void func_800A14F0(Vec3f*, Vec3f*, Vec3f*);
 void func_800410E8(u8);
 s32 func_80041624(u8);
 void func_8005DDDC(void);
@@ -418,7 +420,7 @@ s16 func_80060288(void);
 void func_80018C90(u16);
 s32 func_80019060(s32, s16, s16);
 void func_80067480(s16, s32, s32); //could also be  void func_80067480(s16, s32, u16); (as required by functions in face lift)
-void func_800672DC(s16, u16, u16, s32);
+void func_800672DC(s16, s32, u16, s32);
 void func_800674BC(s16, s16, u16);
 s16 func_80064EF4(s32, s32);
 void func_80067208(s16, s16, s16, u16);
