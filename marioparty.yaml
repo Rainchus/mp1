@@ -1022,8 +1022,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x28E030, c]
-  - type: bin
-    start: 0x28E570
+      - [0x28E570, .data, 28E030] #800F6B20
   - type: code
     start: 0x28E630
     vram: 0x800F65E0

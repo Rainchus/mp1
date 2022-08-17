@@ -96,7 +96,7 @@ void func_800F677C_2829BC(void) {
         LoadStringIntoWindow(windowID, (void*)0xCD, -1, -1);
         func_8006E070(windowID, 0);
         ShowTextWindow(windowID);
-        PlaySound(0x91);
+        PlaySound(145);
         func_8004DBD4(windowID, D_800F8FF1);
         HideTextWindow(windowID);
         var_s0 = gPlayers[D_800F8FF1].coinAmount;
@@ -107,7 +107,7 @@ void func_800F677C_2829BC(void) {
         LoadStringIntoWindow(windowID, (void*)0xCC, -1, -1);
         func_8006E070(windowID, 0);
         ShowTextWindow(windowID);
-        PlaySound(0x91);
+        PlaySound(145);
         func_8004DBD4(windowID, D_800F8FF1);
         HideTextWindow(windowID);
         var_s0 = func_800F66FC_28293C();
