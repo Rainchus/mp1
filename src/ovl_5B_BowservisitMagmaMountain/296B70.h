@@ -1,5 +1,8 @@
 #include "common.h"
 
+void func_8004DBD4(s32, u8);
+void func_80055994(u8, s32);
+
 void func_800F66C4_296C54(void);
 void func_800F7120_2976B0(void);
 void func_800F74C0_297A50(void);
@@ -7,12 +10,6 @@ void func_800F70D4_297664(Object*);
 void func_800F7404_297994(void);
 void func_800F7560_297AF0(void);
 void func_800F7074_297604(void);
-
-
-void func_800410E8(u8);
-s32 func_80041624(u8);
-void func_8004DBD4(s32, u8);
-void func_80055994(u8, s32);
 
 //bss
 extern u16 D_800F5460[];

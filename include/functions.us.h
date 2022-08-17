@@ -4,6 +4,8 @@
 #include "types.h"
 #include "common_structs.h"
 
+void func_800410E8(u8);
+s32 func_80041624(u8);
 void func_8005DDDC(void);
 Process* CreateChildProcess(process_func func, u16 priority, s32 stack_size, s32 extra_data_size, Process* parent);
 Process* CreateProcess(process_func func, u16 priority, s32 stack_size, s32 extra_data_size);
