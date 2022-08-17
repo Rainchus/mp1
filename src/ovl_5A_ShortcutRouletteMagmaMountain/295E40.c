@@ -71,7 +71,7 @@ s32 func_800F66D8_295F38(s32 arg0) {
     return func_8006FCF0(arg0, 0, 1);
 }
 
-void func_800F6898_2960F8(void) {
+void func_800F6898_2960F8(void) { //fix me: remove goto
     s32 windowID;
     s32 temp_s0_2;
     s32 var_s1;

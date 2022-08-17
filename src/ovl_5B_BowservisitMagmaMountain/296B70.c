@@ -37,7 +37,7 @@ void func_800F65E0_296B70(void) {
     func_80072644(3, 0x10);
 }
 
-void func_800F66C4_296C54(void) {
+void func_800F66C4_296C54(void) { //fix me: remove gotos
     s32 sp10;
     f32 temp_f20;
     f32 temp_f20_2;
@@ -251,7 +251,6 @@ void func_800F70D4_297664(Object* arg0) {
 void func_800F7120_2976B0(void) {
     unk_Struct03* temp_s0;
     unk_Struct03* temp_s0_2;
-
 
     func_8003DAA8();
     func_8004F2AC();

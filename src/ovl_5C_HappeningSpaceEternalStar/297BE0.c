@@ -1,5 +1,6 @@
 #include "common.h"
 
+
 void func_8004DBD4(s32, u8); //defined differently between some files?
 void func_800F66B4_297CB4(void);
 void func_800F6824_297E24(void);
@@ -9,11 +10,12 @@ void func_800F6898_297E98(void);
 void func_800F6960_297F60(void);
 void func_800F6794_297D94(void);
 
-static Vec3f D_800F6990 = {0.0f, 0.0f, 1320.0f};
-static s32 D_800F699C[] = { 0x00000004, 0x000A0068, 0x000A006A, 0x000A006C, 0x000A006B };
+Vec3f D_800F6990_297F90 = {0.0f, 0.0f, 1320.0f};
+s32 D_800F699C_297F9C[] = { 0x00000004, 0x000A0068, 0x000A006A, 0x000A006C, 0x000A006B };
 
-u8 D_800F69B0;
-unk_Struct03* D_800F69B4;
+//bss
+extern u8 D_800F69B0;
+extern unk_Struct03* D_800F69B4;
 
 
 void func_800F65E0_297BE0(void) {
@@ -74,10 +76,10 @@ void func_800F67E0_297DE0(Object* arg0) {
 void func_800F6824_297E24(void) {
     func_8003DAA8();
     func_8004F2AC();
-    D_800F69B4 = func_8003DBE0(6, &D_800F699C);
-    D_800F69B4->coords.x = D_800F6990.x;
-    D_800F69B4->coords.y = D_800F6990.y;
-    D_800F69B4->coords.z = D_800F6990.z;
+    D_800F69B4 = func_8003DBE0(6, &D_800F699C_297F9C);
+    D_800F69B4->coords.x = D_800F6990_297F90.x;
+    D_800F69B4->coords.y = D_800F6990_297F90.y;
+    D_800F69B4->coords.z = D_800F6990_297F90.z;
     D_800F69B4->unk_24 = D_800F69B4->unk_28 = D_800F69B4->unk_2C = 1.5f;
 }
 
