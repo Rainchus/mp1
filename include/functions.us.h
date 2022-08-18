@@ -4,6 +4,10 @@
 #include "types.h"
 #include "common_structs.h"
 
+void func_8004B730(Vec3f*, Vec2f*);
+void func_80045500(Object*);
+void func_800456C4(void);
+void func_8004B730(Vec3f*, Vec2f*);
 void func_80019A78(Vec3f*, Vec3f*, Vec3f*, Vec3f*, Vec3f*, Vec3f*);
 void func_800A14F0(Vec3f*, Vec3f*, Vec3f*);
 void func_800410E8(u8);
@@ -46,7 +50,7 @@ void func_800484C4(unk_Struct03*, s16);
 void func_8004E0E8(s32);
 Process* func_80041C04(s16);
 void SetPlayerLandedSpaceType(s16, u8);
-void ShowPlayerCoinChange(s16, s16);
+void ShowPlayerCoinChange(s32, s32);
 void func_800415CC(s16, s16);
 Process* func_800419D8(s16);
 Process* func_80048000(s16);
@@ -223,7 +227,7 @@ void SetSpaceType(s16, s32);
 void func_8004F2EC(void);
 void func_8004F5F0(void);
 void func_80067704(s16);
-void func_80067384(s16, s32, s32);
+void func_80067384(s16, s16, s32);
 void KillChildProcess(Process* process);
 s32 KillProcess(Process* process);
 s32 setjmp(jmp_buf* jump_buf);
@@ -397,7 +401,7 @@ void func_8006CEA0(void);
 void func_80066DC4(s16, s16, s16, s16);
 void func_800671DC(s16, s16, s16);
 void func_800672B0(s16, s16, s16);
-void func_80067354(s16, s32, f32, f32);
+void func_80067354(s16, s16, f32, f32);
 void func_80060128(s32);
 void func_80025C20(s16, s16, s32, s32, s32);
 s16 func_80025E48(s16);
@@ -420,7 +424,7 @@ s16 func_80060288(void);
 void func_80018C90(u16);
 s32 func_80019060(s32, s16, s16);
 void func_80067480(s16, s32, s32); //could also be  void func_80067480(s16, s32, u16); (as required by functions in face lift)
-void func_800672DC(s16, s32, u16, s32);
+void func_800672DC(s16, s16, u16, s32);
 void func_800674BC(s16, s16, u16);
 s16 func_80064EF4(s32, s32);
 void func_80067208(s16, s16, s16, u16);

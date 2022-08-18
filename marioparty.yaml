@@ -1283,8 +1283,6 @@ segments:
     subsegments:
       - [0x2BB390, c]
       - [0x2BB3C0, c]
-  - type: bin
-    start: 0x2BB5B0
   - type: code
     start: 0x2BB5C0
     vram: 0x800F65E0
@@ -1293,6 +1291,7 @@ segments:
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
+      #- [0x2BB5B0, data, 2BB5C0]
       - [0x2BB5C0, c]
       - [0x2BB5F0, c]
   - type: bin
