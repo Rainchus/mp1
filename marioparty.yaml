@@ -945,8 +945,8 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x286700, c]
-  - type: bin
-    start: 0x2871F0
+      - [0x2871F0, .data, 286700] #800F70D0
+      - [0x287290, .rodata, 286700]
   - type: code
     start: 0x2872A0
     vram: 0x800F65E0
@@ -1054,8 +1054,8 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x2908F0, c]
-  - type: bin
-    start: 0x291280
+      - [0x291280, .data, 2908F0] #800F6F70
+      - [0x291350, .rodata, 2908F0]
   - type: code
     start: 0x291360
     vram: 0x800F65E0
