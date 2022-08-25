@@ -14,6 +14,16 @@ extern u32 D_800F949C;
 extern s32 D_800F94A0;
 extern s16 D_800EDEB4[];
 
+typedef struct unk_ovl_70Struct {
+s32 unk_00;
+char unk_04[0x10];
+} unk_ovl_70Struct;
+
+void func_800F72DC_2F4DBC(void*, s32, s32, s32, f32, f32, f32);
+extern unk_ovl_70Struct D_800C59AC[];
+extern unk_ovl_70Struct D_800C59B0[];
+extern u8 D_800F32E4;
+
 void func_800F9400_2F6EE0(void);
 void func_800F7EDC_2F59BC(void);
 void func_800F6A44_2F4524(void);
@@ -23,7 +33,7 @@ void func_800F6E38_2F4918(Object*);
 void func_800F6F1C_2F49FC(Object*);
 void func_800F7010_2F4AF0(Object*);
 void func_800F7970_2F5450(void);
-void func_800F7A44_2F5524(void);
+void func_800F7A44_2F5524(Object*);
 void func_800F7AFC_2F55DC(void);
 void func_800F7B78_2F5658(void);
 void func_800F7BF4_2F56D4(void);

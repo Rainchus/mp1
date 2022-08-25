@@ -6,3 +6,8 @@ build/
 assets/
 marioparty.ld
 ctx.c
+.vscode/configurationCache.log
+.vscode/dryrun.log
+.vscode/targets.log
+.vscode/tasks.json
+__pycache__/

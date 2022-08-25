@@ -112,9 +112,81 @@ segments:
       - [0x82AF0, c]
       - [0x83260, c]
       - [0x833C0, c]
-      - [0x83490, c]
+      - [0x83490, bin]
+      #- [0x83490, c] #has some code, weird to split?
+      #- [0x83960, c]
+      - [0xA3370, c]
+      - [0xA3600, c]
+      - [0xA3650, c]
+      - [0xA3B10, c]
+      - [0xA3FB0, c]
+      - [0xA42C0, c]
+      - [0xA4770, c]
+      - [0xA4B40, c]
+      - [0xA4CD0, c]
+      - [0xA50B0, c]
+      - [0xA5250, c]
+      - [0xA5370, c]
+      - [0xA5620, c]
+      - [0xA57B0, c]
+      - [0xA58C0, c]
+      - [0xA5A20, c]
+      - [0xA5B30, c]
+      - [0xA5CA0, c]
+      - [0xA5EC0, c]
+      - [0xA62D0, c]
+      - [0xA6930, c]
+      - [0xA6BD0, c]
+      - [0xA7090, c]
+      - [0xA7380, c]
+      - [0xA7C30, c]
+      - [0xA8190, c]
+      - [0xA8450, c]
+      - [0xA8D50, c]
+      - [0xA9C10, c]
+      - [0xAA510, c]
+      - [0xAA7F0, c]
+      - [0xAB3D0, c]
+      - [0xABCD0, c]
+      - [0xABFB0, c]
+      - [0xACA30, c]
+      - [0xACA90, c]
+      - [0xACC50, c]
+      - [0xACCB0, c]
+      - [0xACF10, c]
+      - [0xACF80, c]
+      - [0xAD210, c]
+      - [0xAD380, c]
+      - [0xAD5D0, c]
+      - [0xAD740, c]
+      - [0xAD940, c]
+      - [0xADA70, c]
+      - [0xADBD0, c]
+      - [0xADF70, c]
+      - [0xAE150, c]
+      - [0xAE630, c]
+      - [0xAE820, c]
+      - [0xAED10, c]
+      - [0xAEF30, c]
+      - [0xAF450, c]
+      - [0xAF6C0, c]
+      - [0xAF960, c]
+      - [0xAFBD0, c]
+      - [0xAFE60, c]
+      - [0xAFF70, c]
+      - [0xB07B0, c]
+      - [0xB0BA0, c]
+      - [0xB0FC0, c]
+      - [0xB1930, c]
+      - [0xB1B60, c]
+      - [0xB1DC0, c]
+      - [0xB1FD0, c]
+      - [0xB22E0, c]
+      - [0xB2310, c]
+      - [0xB2340, c]
+      - [0xB2350, c]
   - type: bin
-    start: 0x835D0
+    start: 0xB2360
   # - type: code
   #   start: 0xCBC60
   #   vram: 0x800CB060
@@ -1270,7 +1342,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x2BA9E0, c]
-      - [0x2BAA10, c]
+      - [0x2BAA10, c] ###800F6F54 start of data
   - type: bin
     start: 0x2BB350
   - type: code
@@ -1536,8 +1608,9 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x311E90, c]
-  - type: bin
-    start: 0x3127C0
+      - [0x311EC0, c]
+      - [0x3127C0, .data, 311E90]
+      - [0x3127F0, data, 311EC0]
   - type: code
     start: 0x312850
     vram: 0x800F65E0

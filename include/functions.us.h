@@ -4,6 +4,7 @@
 #include "types.h"
 #include "common_structs.h"
 
+void func_8000960C(s32);
 void func_8004B730(Vec3f*, Vec2f*);
 void func_80045500(Object*);
 void func_800456C4(void);

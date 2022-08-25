@@ -302,7 +302,7 @@ INCLUDE_ASM(s32, "ovl_70_TestingRoom/2F40C0", func_800F77BC_2F529C);
 
 INCLUDE_ASM(s32, "ovl_70_TestingRoom/2F40C0", func_800F7970_2F5450);
 
-INCLUDE_ASM(s32, "ovl_70_TestingRoom/2F40C0", func_800F7A44_2F5524);
+INCLUDE_ASM(s32, "ovl_70_TestingRoom/2F40C0", func_800F7A44_2F5524); //https://decomp.me/scratch/LIhcP
 
 INCLUDE_ASM(s32, "ovl_70_TestingRoom/2F40C0", func_800F7AFC_2F55DC);
 
