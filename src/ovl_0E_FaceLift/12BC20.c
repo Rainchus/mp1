@@ -46,11 +46,11 @@ void func_800F8DC8_12E408(Object* arg0) {
     func_800FA374_12F9B4(temp_v0->unk_00.unsigned16[0], temp_v0->unk_00.unsigned16[1]);
     func_800258EC(arg0->unk_40->unk_00.unsigned16[0], 4, 4);
     func_800258EC(arg0->unk_40->unk_00.unsigned16[1], 4, 4);
-    func_800258EC(arg0->unk_40->unk_04.unsigned16, 4, 4);
-    func_800258EC(arg0->unk_40->unk_06, 4, 4);
-    arg0->unk_40->unk_08 = LoadFormFile(0x200003, 0x219);
-    func_80025F10(arg0->unk_40->unk_08, 16);
-    func_80025830(arg0->unk_40->unk_08, 3.8f, 3.8f, 3.8f);
+    func_800258EC(arg0->unk_40->unk_04.unsigned16[0], 4, 4);
+    func_800258EC(arg0->unk_40->unk_04.unsigned16[1], 4, 4);
+    arg0->unk_40->unk_08.unsigned16[0] = LoadFormFile(0x200003, 0x219);
+    func_80025F10(arg0->unk_40->unk_08.unsigned16[0], 16);
+    func_80025830(arg0->unk_40->unk_08.unsigned16[0], 3.8f, 3.8f, 3.8f);
     
     for (i = 0; i < 6; i++) {
         D_800FC980[i].x = D_800FC4B0[i].unk_00;

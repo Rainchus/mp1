@@ -252,7 +252,7 @@ typedef struct struct1 {
 void func_800F72DC_2F4DBC(struct1* arg0, s32 arg1, s32 arg2, s32 arg3, f32 arg4, f32 arg5, f32 arg6) {
     func_8000979C(arg0, arg1, arg2, arg3 & 0xFFFF, 0xA99, 0xA99);
     arg0->unk_40->unk_06 = LoadFormFile(0x19, 0xA8D);
-    arg0->unk_40->unk_08 = LoadFormFile(0x1A, 0xA8D);
+    arg0->unk_40->unk_08.unsigned16[0] = LoadFormFile(0x1A, 0xA8D);
     arg0->unk_40->unk_0C = LoadFormFile(0x1B, 0xA8D);
     arg0->unk_40->unk_0A = LoadFormFile(0x1C, 0xA8D);
     arg0->unk_40->unk_0E = LoadFormFile(0x1E, 0xA8D);

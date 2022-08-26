@@ -683,6 +683,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x1F0DA0, c]
+    #  - [0x1F60F0, rodata, 1F0DA0] #800FB930
   - type: bin
     start: 0x1F60F0
   - type: code
@@ -694,6 +695,8 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x1F62C0, c]
+      - [0x1FDF10, c]
+      #- [0x1FEF50, data, ] #800FF270
   - type: bin
     start: 0x1FEF50
   - type: code

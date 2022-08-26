@@ -78,7 +78,7 @@ INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F6AB4_191BD4);
 void func_800F6D98_191EB8(Object* arg0) {
     arg0->unk_40->unk_00.unsigned16[0] = LoadFormFile(0x310000, 0x20289);
     arg0->unk_40->unk_00.unsigned16[1] = LoadFormFile(0x380002, 0x48D);
-    arg0->unk_40->unk_04.unsigned16 = LoadFormFile(0x380003, 0x48D);
+    arg0->unk_40->unk_04.unsigned16[0] = LoadFormFile(0x380003, 0x48D);
     func_800FB2EC_19640C();
     arg0->func_ptr = &func_800F6E10_191F30;
 }
@@ -118,7 +118,7 @@ void func_800F821C_19333C(Object* arg0) {
         arg0->unk_10 = 0;
         if (temp_v1 == 1) {
             temp_s1->unk_00.unsigned16[0] = 5;
-            func_80025C20(arg0->unk_40->unk_00.unsigned16[0], func_80025E48(arg0->unk_48->unk_0A), 0, 0xF, 0);
+            func_80025C20(arg0->unk_40->unk_00.unsigned16[0], func_80025E48(arg0->unk_48->unk_08.unsigned16[1]), 0, 15, 0);
         }
     }
     if (temp_s1->unk_00.unsigned16[0] != 5) {

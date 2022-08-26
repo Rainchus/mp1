@@ -62,8 +62,8 @@ void func_800FF930_DE530(Object* arg0) {
     arg0->unk_40->unk_00.unsigned16[1] = func_80023FC8(arg0->unk_40->unk_00.unsigned16[0]);
     func_80025798(arg0->unk_40->unk_00.unsigned16[1], 0.0f, 0.0f, 1400.0f);
     func_80025830(arg0->unk_40->unk_00.unsigned16[1], 0.53f, 1.0f, 0.53f);
-    arg0->unk_40->unk_04.unsigned16 = func_80023FC8(arg0->unk_40->unk_00.unsigned16[0]);
-    func_80025798(arg0->unk_40->unk_04.unsigned16, 140.0f, 0.0f, 1400.0f);
-    func_80025830(arg0->unk_40->unk_04.unsigned16, 0.53f, 1.0f, 0.53f);
+    arg0->unk_40->unk_04.unsigned16[0] = func_80023FC8(arg0->unk_40->unk_00.unsigned16[0]);
+    func_80025798(arg0->unk_40->unk_04.unsigned16[0], 140.0f, 0.0f, 1400.0f);
+    func_80025830(arg0->unk_40->unk_04.unsigned16[0], 0.53f, 1.0f, 0.53f);
     arg0->func_ptr = NULL;
 }

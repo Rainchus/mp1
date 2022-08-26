@@ -1,8 +1,12 @@
 #include "common.h"
 
+void func_800236A4(s32, s32);
+
 INCLUDE_ASM(s32, "241F0", func_800235F0);
 
-INCLUDE_ASM(s32, "241F0", func_80023668);
+void* func_80023668(s32 arg0) {
+    func_800236A4(arg0, 0);
+}
 
 INCLUDE_ASM(s32, "241F0", func_80023684);
 

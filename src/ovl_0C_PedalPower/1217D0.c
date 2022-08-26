@@ -129,12 +129,12 @@ void func_800F7AEC_122CDC(Object* arg0) {
 
     arg0->unk_40->unk_00.unsigned16[0] = func_800174C0(0x1E0002, 0x99);
     arg0->unk_40->unk_00.unsigned16[1] = func_800174C0(0x1E0003, 0x99);
-    arg0->unk_40->unk_04.unsigned16 = func_800174C0(0x14, 0x99);
-    arg0->unk_40->unk_06 = func_800174C0(0x1E0008, 0x99);
+    arg0->unk_40->unk_04.unsigned16[0] = func_800174C0(0x14, 0x99);
+    arg0->unk_40->unk_04.unsigned16[1] = func_800174C0(0x1E0008, 0x99);
     arg0->unk_18 = arg0->unk_1C = arg0->unk_20 = 0.0f;
     arg0->unk_24 = 0.0f;
     func_80025798(arg0->unk_40->unk_00.unsigned16[0], arg0->unk_18, arg0->unk_1C, arg0->unk_20);
-    func_80025798(arg0->unk_40->unk_06, arg0->unk_18, arg0->unk_1C - 25.0f, arg0->unk_20);
+    func_80025798(arg0->unk_40->unk_04.unsigned16[1], arg0->unk_18, arg0->unk_1C - 25.0f, arg0->unk_20);
     temp_s1 = func_80023684(0x2C, 0x7918);
     arg0->unk_50 = temp_s1;
     func_8009B770(temp_s1, 0, 0x2C);
@@ -146,12 +146,12 @@ void func_800F7AEC_122CDC(Object* arg0) {
 void func_800F7C04_122DF4(Object* arg0) {
     unkGlobalStruct_00* temp_s0;
 
-    D_800F9EFA = arg0->unk_40->unk_06 = func_800174C0(0x1E0004, 0x99);
-    D_800F9EF6 = arg0->unk_40->unk_04.unsigned16 = func_800174C0(0x1E0006, 0x99);
+    D_800F9EFA = arg0->unk_40->unk_04.unsigned16[1] = func_800174C0(0x1E0004, 0x99);
+    D_800F9EF6 = arg0->unk_40->unk_04.unsigned16[0] = func_800174C0(0x1E0006, 0x99);
     D_800F9EF8 = arg0->unk_40->unk_00.unsigned16[0] = func_800174C0(0x1E0000, 0x99);
     D_800F9EFC = arg0->unk_40->unk_00.unsigned16[1] = func_800174C0(0x1E0001, 0x699);
-    arg0->unk_40->unk_08 = func_800174C0(0x1E0009, 0x99);
-    arg0->unk_40->unk_0A = func_800174C0(0x1E000A, 0x99);
+    arg0->unk_40->unk_08.unsigned16[0] = func_800174C0(0x1E0009, 0x99);
+    arg0->unk_40->unk_08.unsigned16[1] = func_800174C0(0x1E000A, 0x99);
     func_80025CA8(D_800F9EF6, D_800FA720);
     func_80025EB4(D_800F9EF8, 2, 1);
     func_80025EB4(D_800F9EF6, 2, 1);
@@ -161,7 +161,7 @@ void func_800F7C04_122DF4(Object* arg0) {
     arg0->unk_18 = arg0->unk_1C = arg0->unk_20 = 0.0f;
     arg0->unk_24 = 0.0f;
     func_80025798(arg0->unk_40->unk_00.unsigned16[0], arg0->unk_18, arg0->unk_1C, arg0->unk_20);
-    func_80025798(arg0->unk_40->unk_0A, arg0->unk_18, arg0->unk_1C, arg0->unk_20 + 100.0f);
+    func_80025798(arg0->unk_40->unk_08.unsigned16[1], arg0->unk_18, arg0->unk_1C, arg0->unk_20 + 100.0f);
     temp_s0 = func_80023684(44, 0x7918);
     arg0->unk_50 = temp_s0;
     func_8009B770(temp_s0, 0, 0x2C);

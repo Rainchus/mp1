@@ -4,6 +4,14 @@
 #include "types.h"
 #include "common_structs.h"
 
+void func_800179C0(s32);
+void func_80028510(s32, s32, s32, s32, s32);
+void func_80028BE0(s32);
+u16 func_800594FC(s16);
+void func_800603F0(s32);
+f32 fabsf(f32);
+void func_80026174(s16, s16, f32);
+u16 func_8005FD5C(void);
 void func_8000960C(s32);
 void func_8004B730(Vec3f*, Vec2f*);
 void func_80045500(Object*);
