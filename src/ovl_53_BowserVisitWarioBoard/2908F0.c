@@ -162,7 +162,6 @@ void func_800F6CE8_290FF8(void) {
     VEC3F_COPY_TO_OBJ(D_800F7058, D_800F6F7C_29128C);
     func_80021B14(*D_800F7058->unk_3C->unk_40, gPlayers[D_800F7050].characterID, 0x80);
     func_8004CCD0(&D_800F7058->coords, &D_800F7054->coords, &D_800F7058->unk_18);
-    D_800F7054 = D_800F7054;
     func_8004CCD0(&D_800F7054->coords, &D_800F7058->coords, &D_800F7054->unk_18);
 }
 

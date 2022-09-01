@@ -54,7 +54,7 @@ s32 func_8004DBBC(void) {
     return D_800C5214;
 }
 
-s32 func_8004DBC8(s32 arg0) {
+void func_8004DBC8(s32 arg0) {
     D_800C5210 = arg0;
 }
 

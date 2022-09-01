@@ -13,7 +13,6 @@ extern unk_ovl3C_struct D_800EE738;
 
 extern u8 D_800F64F8;
 extern s16 D_800EE984;
-void D_800F32B6;
 extern s32 D_800FF3B0;
 extern s16 D_800FF526;
 extern s16 D_800FF534;

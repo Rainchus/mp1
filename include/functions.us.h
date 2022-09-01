@@ -111,7 +111,7 @@ void func_8004E248(Object* arg0);
 s16 func_8006FCC0(s16);
 void func_800710A4(s32, s32, s32, s32);
 void func_8007155C(s16, s32);
-s32 func_8004DBC8(s32);
+void func_8004DBC8(s32);
 void func_8006DA1C(s16, s32, s32);
 void func_8006E154(s16, s32);
 void func_800717C0(s32);
