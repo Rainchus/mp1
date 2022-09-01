@@ -93,7 +93,6 @@ void func_800F77D0_288490(void) {
     }
 
     D_800F7BE8 = func_8003DBE0(func_80052F04(D_800F7BE0), D_800F7B88[gPlayers[D_800F7BE0].characterID]);
-    D_800F7BE8 = D_800F7BE8;
     D_800F7BE8->coords.x = D_800F7B1C.x;
     D_800F7BE8->coords.y = D_800F7B1C.y;
     D_800F7BE8->coords.z = D_800F7B1C.z;

@@ -53,7 +53,6 @@ void func_800F6848_17E978(f32 arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 
     D_800F6524.y = arg5;
     D_800F6524.z = arg6;
     D_800FB6CC = 25.0f;
-    D_800C3110 = D_800C3110;
     func_8001D494(0, 25.0f, D_800C3110->unk_44, D_800C3110->unk_48);
 }
 

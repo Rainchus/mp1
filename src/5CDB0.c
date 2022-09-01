@@ -141,7 +141,6 @@ Process* func_8005DCD8(process_func arg0, u16 arg1, s32 arg2, s32 arg3, Process*
     s16 temp_s1;
     
     if (D_800C598A != D_800C5988) {
-        D_800C598C = D_800C598C;
         temp_s1 = D_800C598C;
         temp_s0 = &D_800C5990[D_800C598C];
         temp_s0->unk0 = 4;

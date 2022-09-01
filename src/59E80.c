@@ -98,7 +98,7 @@ s32 func_80059400 (s16 arg0) {
     return ((&D_800ED112)[var0] & (1 << var1));
 }
 
-s8 func_80059448(s16 arg0) {
+void func_80059448(s16 arg0) {
     s16 var0;
     s16 var1;
 

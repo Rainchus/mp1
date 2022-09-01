@@ -82,7 +82,6 @@ void func_800F66B4_289C74(void) {
         func_8004EE14(0, &D_800F7550_28AB10, 5, D_800F74F0);
         SleepProcess(0x14);
         PlaySound(0x96);
-        D_800F74F8 = D_800F74F8;
         sp10.x = D_800F74F8->coords.x - 100.0f;
         sp10.y = D_800F74F8->coords.y;
         sp10.z = D_800F74F8->coords.z;
@@ -296,7 +295,6 @@ void func_800F718C_28A74C(void) {
     D_800F75E4->coords.z = D_800F752C.z;
     func_8004CCD0(&D_800F75E4->coords, &D_800F74F0->coords, &D_800F75E4->unk_18);
     D_800F74F4 = func_8003DBE0((gPlayers[D_800ED154.unk_00[D_800ED154.unk_1A]].characterID + 0x1D), NULL);
-    D_800F74F4 = D_800F74F4;
     D_800F74F4->coords.x = D_800F7538.x;
     D_800F74F4->coords.y = D_800F7538.y;
     D_800F74F4->coords.z = D_800F7538.z;
