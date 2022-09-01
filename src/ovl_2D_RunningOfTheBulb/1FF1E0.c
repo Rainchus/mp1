@@ -182,13 +182,45 @@ INCLUDE_ASM(s32, "ovl_2D_RunningOfTheBulb/1FF1E0", func_800F77B4_2003B4);
 
 INCLUDE_ASM(s32, "ovl_2D_RunningOfTheBulb/1FF1E0", func_800F7A0C_20060C);
 
-INCLUDE_ASM(s32, "ovl_2D_RunningOfTheBulb/1FF1E0", func_800F7AEC_2006EC);
+// void func_800F7A0C_20060C(Vec3f* arg0, Vec3f* arg1, Vec3f* arg2, Vec3f* arg3) { //matches with mulmul fix on
+//     f32 temp_f10;
+//     f32 temp_f12;
+//     f32 temp_f14;
+//     f32 temp_f4;
+//     f32 temp_f6;
+//     f32 temp_f8;
 
-INCLUDE_ASM(s32, "ovl_2D_RunningOfTheBulb/1FF1E0", func_800F7B08_200708);
+//     temp_f14 = arg1->x - arg0->x;
+//     temp_f12 = arg1->y - arg0->y;
+//     temp_f8 = arg1->z - arg0->z;
+//     temp_f10 = arg2->x - arg0->x;
+//     temp_f4 = arg2->y - arg0->y;
+//     temp_f6 = arg2->z - arg0->z;
+//     arg3->x = (temp_f12 * temp_f6) - (temp_f8 * temp_f4);
+//     arg3->y = (temp_f8 * temp_f10) - (temp_f14 * temp_f6);
+//     arg3->z = (temp_f14 * temp_f4) - (temp_f12 * temp_f10);
+//     temp_f14 = func_800B1750((arg3->x * arg3->x) + (arg3->y * arg3->y) + (arg3->z * arg3->z));
+//     arg3->x /= temp_f14;
+//     arg3->y /= temp_f14;
+//     arg3->z /= temp_f14;
+// }
 
-INCLUDE_ASM(s32, "ovl_2D_RunningOfTheBulb/1FF1E0", func_800F7B24_200724);
 
-INCLUDE_ASM(s32, "ovl_2D_RunningOfTheBulb/1FF1E0", func_800F7B40_200740);
+void func_800F7AEC_2006EC(s32 arg0) {
+    func_800F7B5C_20075C(arg0, 0);
+}
+
+void func_800F7B08_200708(s32 arg0) {
+    func_800F7B5C_20075C(arg0, 1);
+}
+
+void func_800F7B24_200724(s32 arg0) {
+    func_800F7B5C_20075C(arg0, 2);
+}
+
+void func_800F7B40_200740(s32 arg0) {
+    func_800F7B5C_20075C(arg0, 3);
+}
 
 INCLUDE_ASM(s32, "ovl_2D_RunningOfTheBulb/1FF1E0", func_800F7B5C_20075C);
 

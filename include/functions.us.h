@@ -314,7 +314,7 @@ void func_800258EC(s16, s32, s32);
 s16 func_8001E00C(s32, s32, s32);
 void func_80064D38(s16);
 void func_8006752C(s16, s32, u8);
-void func_8001D934(s16 index, Vec3f* arg1, Vec2f* arg2);
+void Convert3DTo2D(s16 index, Vec3f* arg1, Vec2f* arg2);
 void func_80079078(s16);
 void func_8005D718(void*); //idk what type this arg is, either Object* or unk_struct03*
 s32 func_8005021C(f32); //getRandInRange
