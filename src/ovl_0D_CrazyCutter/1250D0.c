@@ -150,12 +150,12 @@ void func_800F9654_128144(s32 arg0) {
     }
 }
 
-void func_800F9694_128184(s32 arg0, s16 arg1[], s32 arg2) {
-    f32 sp10[2];
+void func_800F9694_128184(Vec3f* arg0, s16 arg1[], s32 arg2) {
+    Vec2f sp10;
 
-    func_8001D934(0, arg0, sp10);
-    arg1[0] = sp10[0];
-    arg1[1] = sp10[1];
+    func_8001D934(0, arg0, &sp10);
+    arg1[0] = sp10.x;
+    arg1[1] = sp10.y;
     
     if (arg2 & 1) {
         arg1[0] = arg1[0] - 160;

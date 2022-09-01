@@ -72,10 +72,10 @@ void func_8004CDCC(unk_Struct03* unk) {
     Vec3f* temp_s2;
 
     temp_s2 = &unk->coords;
-    func_800A0E80(&sp10, &D_800C3110->unk0, temp_s2);
+    func_800A0E80(&sp10, &D_800C3110->pos, temp_s2);
     func_800A0D00(&sp20, sp10.x, 0.0f, sp10.z);
     unk->unk_3C->unk_24 = -func_8003D8CC(&sp10, &sp20);
-    func_8004CCD0(temp_s2, &D_800C3110->unk0, &sp10);
+    func_8004CCD0(temp_s2, &D_800C3110->pos, &sp10);
     unk->unk_3C->unk28 = func_8003D2B0(&sp10);
     unk->unk_3C->unk_2C = 0.0f;
 }

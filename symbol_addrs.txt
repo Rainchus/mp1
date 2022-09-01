@@ -112,3 +112,4 @@ fadeStatus = 0x800ED564;
 LeoDriveExist = 0x80081CC0;
 osGetMemSize = 0x800931A0;
 LeoDriveExistBool = 0x800C1900;
+guLookAtF = 0x8009C2A0;

@@ -14,6 +14,8 @@ typedef unsigned long long int  u64;
 typedef float                   f32;
 typedef double                  f64;
 
+typedef f32 Matrix4f[4][4];
+
 /// Linker symbol address, as in `ld_addrs.h`.
 typedef u8 Addr[];
 

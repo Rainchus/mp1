@@ -2,7 +2,7 @@
 #include "188410.h"
 
 void func_800F65E0_188410(void) {
-    Object* temp_v0_10;
+    Object* Obj;
 
     func_80029090(50);
     func_8002ADF0(&D_800EDEC0, 64);
@@ -44,14 +44,14 @@ void func_800F65E0_188410(void) {
     D_800F3FB0[D_800F2BC0++] = func_8005D384(2, 10, 60, -1, &func_800FBB5C_18D98C);
     func_8005D384(2, 10, 60, -1, &func_800FBCB8_18DAE8);
     func_8005D384(2, 10, 60, -1, &func_800FBD5C_18DB8C);
-    temp_v0_10 = func_8005D384(0x7FDA, 0, 0, -1, &func_800FC180_18DFB0);
-    temp_v0_10->unk_4C = 2;
-    func_8005D8B8(temp_v0_10, 0xA0);
+    Obj = func_8005D384(0x7FDA, 0, 0, -1, &func_800FC180_18DFB0);
+    Obj->unk_4C = 2;
+    func_8005D8B8(Obj, 0xA0);
     D_800B895C = 10.0f;
     D_800B8968 = 0.06f;
     D_800B896C = 5.0f;
     D_800B8980 = 80.0f;
-    func_80028510(0x3DE, 0x3E8, 0, 0, 50);
+    func_80028510(990, 1000, 0, 0, 50);
     func_80028BE0(4);
     func_8007B168(D_800FF840, 1);
     func_800234B8(0, 128, 128, 176);
@@ -62,11 +62,58 @@ void func_800F65E0_188410(void) {
 
 INCLUDE_ASM(s32, "ovl_1D_BobsledRun/188410", func_800F6B60_188990);
 
-INCLUDE_ASM(s32, "ovl_1D_BobsledRun/188410", func_800F6D20_188B50);
+void* func_800F6D20_188B50(unk_Struct03* arg0) {
+    unkGlobalStruct_00* temp_v1;
+    s32 i;
+    
+    if (arg0->unk_53 >= 0) {
+        for (i = 0; i < D_800ED440; i++) {
+            temp_v1 = (D_800F2AF8[i])->unk_50;
+            if (arg0->unk_53 == temp_v1->unk_04.b[1]) {
+                return temp_v1;
+            }
+        }
+    }
+    return NULL;
+}
 
-INCLUDE_ASM(s32, "ovl_1D_BobsledRun/188410", func_800F6D8C_188BBC);
+
+void func_800F6D8C_188BBC(void) {
+    if (func_80072718() == 0) {
+        func_8005DFB8(1);
+    }
+}
 
 INCLUDE_ASM(s32, "ovl_1D_BobsledRun/188410", func_800F6DB8_188BE8);
+
+// void func_800F6DB8_188BE8(unk_ovl_1D_Struct *arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4) {
+//     f32 temp_f20, temp_f22, temp_f24, temp_f26, temp_f28;
+//     f32 var_f0;
+//     f32 var_f26;
+    
+//     temp_f20 = arg1 - arg3;
+//     temp_f22 = arg2 - arg4;
+//     temp_f26 = func_800B1750((temp_f20 * temp_f20) + (temp_f22 * temp_f22));
+    
+    
+//     var_f26 = temp_f28 = arg0->unk_3C;
+//     temp_f24 = func_800AEAC0(temp_f28);
+//     temp_f28 = func_8000A72C(temp_f20, temp_f22, temp_f24, func_800AEFD0(var_f26));
+//     var_f26 = temp_f26;
+//     if (var_f26 != 0.0f) {
+//         if (var_f26 < (arg0->unk_40 * 0.4f)) {
+//             var_f26 = var_f26 * 0.05f;
+//         } else {
+//             if (var_f26 < (arg0->unk_40 * 0.8f)) {
+//                 var_f0 = 0.1f;
+//             } else {
+//                 var_f0 = 0.02f;
+//             }
+//             var_f26 = var_f26 * var_f0;
+//         }
+//         arg0->unk_40 = (var_f26 * temp_f28) + arg0->unk_40;
+//     }
+// }
 
 INCLUDE_ASM(s32, "ovl_1D_BobsledRun/188410", func_800F6F20_188D50);
 

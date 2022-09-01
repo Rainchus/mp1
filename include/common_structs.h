@@ -85,7 +85,7 @@ typedef struct unkGlobalStruct_00 {
     /* 0x59 */ char unk_59[7];
     /* 0x60 */ f32 unk_60;
     /* 0x64 */ f32 unk_64;
-    /* 0x68 */ f32 unk_68;
+    /* 0x68 */ struct unkGlobalStruct_00* unk_68;
     /* 0x6C */ char unk_6C[0x42];
     /* 0xAE */ u16 unkAE;
     /* 0xB0 */ u16 unk_B0;
@@ -166,12 +166,18 @@ typedef struct unkProcessStruct {
 } unkProcessStruct;
 
 typedef struct unk_Struct00 {
-    /* 0x000 */ Vec3f unk0;
-    /* 0x00C */ char padC[0x34];
+    /* 0x000 */ Vec3f pos;
+    /* 0x00C */ f32 unkC;
+    /* 0x010 */ f32 unk10;
+    /* 0x014 */ f32 unk14;
+    /* 0x018 */ f32 unk18;
+    /* 0x01C */ f32 unk1C;
+    /* 0x020 */ f32 unk20;
+    /* 0x024 */ char unk_24[0x1C];
     /* 0x040 */ f32 unk_40;
     /* 0x044 */ f32 unk_44;
     /* 0x048 */ f32 unk_48;
-    /* 0x04C */ char pad4C[0xEC];
+    /* 0x04C */ char pad4C[0x4AC];
 } unk_Struct00;
 
 typedef struct unk_Struct04 {
@@ -202,7 +208,9 @@ typedef struct unk_Struct03 {
 /* 0x44 */ f32 unk_44;
 /* 0x48 */ f32 unk_48;
 /* 0x4C */ s32 unk_4C;
-/* 0x50 */ char unk_50[0x3C];
+/* 0x50 */ char unk_50[3];
+/* 0x53 */ s8 unk_53;
+/* 0x50 */ char unk_54[0x38];
 /* 0x8C */ struct unk_Struct03* unk_8C;
 } unk_Struct03; // //sizeof 0xAC? (this and mpSource_object are the same struct)
 

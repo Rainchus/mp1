@@ -1,5 +1,12 @@
 #include "common.h"
 
+typedef struct unk_ovl_1D_Struct {
+char unk_00[0x3C];
+f32 unk_3C;
+f32 unk_40;
+} unk_ovl_1D_Struct;
+
+
 void func_800FC918_18E748(void);
 void func_800FCE2C_18EC5C(s32, s16);
 void func_800FD124_18EF54(void);
