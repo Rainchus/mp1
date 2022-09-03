@@ -1,3 +1,7 @@
 #include "common.h"
 
-INCLUDE_ASM(s32, "B2310", func_800B1710);
+extern f32 D_800C7EC0;
+
+void func_800B1710(f32 arg0) {
+    D_800C7EC0 = arg0;
+}
