@@ -3,6 +3,10 @@
     "configurations": [
         {
             "name": "mp1",
+            "compilerPath": "/usr/bin/gcc",
+            "compilerArgs": [
+                "-m32"
+            ],
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
@@ -12,16 +16,15 @@
             },
             "includePath": [
                 "${workspaceFolder}/include",
-                "${workspaceFolder}/src",
+                "${workspaceFolder}/src"
             ],
             "defines": [
                 "F3DEX_GBI_2",
                 "_LANGUAGE_C",
-                "_MIPS_SZLONG=32",
+                "_MIPS_SZLONG=32"
             ],
-            "cStandard": "c89",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "gcc-x86"
+            "cStandard": "gnu89",
+            "intelliSenseMode": "${default}"
         }
     ]
 }

@@ -11,3 +11,4 @@ ctx.c
 .vscode/targets.log
 .vscode/tasks.json
 __pycache__/
+.DS_Store

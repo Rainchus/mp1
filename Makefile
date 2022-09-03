@@ -24,6 +24,20 @@ ifeq ($(VERBOSE),0)
 V := @
 endif
 
+ifeq ($(OS),Windows_NT)
+  DETECTED_OS=windows
+else
+  UNAME_S := $(shell uname -s)
+  ifeq ($(UNAME_S),Linux)
+    DETECTED_OS=linux
+  endif
+  ifeq ($(UNAME_S),Darwin)
+    DETECTED_OS=macos
+    MAKE=gmake
+    CPPFLAGS += -xc++
+  endif
+endif
+
 
 ### Output ###
 
@@ -49,7 +63,7 @@ LD       := $(CROSS)ld
 OBJCOPY  := $(CROSS)objcopy
 STRIP    := $(CROSS)strip
 
-CC       := tools/gcc_2.7.2/gcc
+CC       := tools/gcc_2.7.2/$(DETECTED_OS)/gcc
 CC_HOST  := gcc
 CPP      := cpp -P
 
@@ -69,16 +83,18 @@ ENDLINE := \n'
 
 ### Compiler Options ###
 
-ASFLAGS      := -G 0 -I include -mips3 -mabi=32
-CFLAGS       := -O1 -G0 -mips3 -mgp32 -mfp32
-CPPFLAGS     := -I include -I $(BUILD_DIR)/include -I src -DF3DEX_GBI_2
-LDFLAGS      := -T symbol_addrs.txt -T undefined_syms.txt -T undefined_funcs.txt -T undefined_funcs_auto.txt -T undefined_syms_auto.txt -T $(LD_SCRIPT) -Map $(LD_MAP) --no-check-sections
-CFLAGS_CHECK := -fsyntax-only -fsigned-char -nostdinc -fno-builtin -D CC_CHECK\
-                -std=gnu90 -Wall -Wextra -Wno-format-security -Wno-unused-parameter -Wno-pointer-to-int-cast -Wno-int-to-pointer-cast -Wunused-variable
+ASFLAGS        := -G 0 -I include -mips3 -mabi=32
+CFLAGS         := -G0 -mips3 -mgp32 -mfp32
+CPPFLAGS       := -I include -I $(BUILD_DIR)/include -I src -DF3DEX_GBI_2
+LDFLAGS        := -T symbol_addrs.txt -T undefined_syms.txt -T undefined_funcs.txt -T undefined_funcs_auto.txt -T undefined_syms_auto.txt -T $(LD_SCRIPT) -Map $(LD_MAP) --no-check-sections
+CHECK_WARNINGS := -Wall -Wextra -Wno-format-security -Wno-unused-parameter -Wno-unused-variable -Wno-pointer-to-int-cast -Wno-int-to-pointer-cast -m32
+CFLAGS_CHECK   := -fsyntax-only -fsigned-char -nostdinc -fno-builtin -D CC_CHECK -std=gnu90 $(CHECK_WARNINGS)
 
 ifneq ($(CHECK),1)
 CFLAGS_CHECK += -w
 endif
+
+OPTFLAGS := -O1
 
 ### Sources ###
 
@@ -114,14 +130,46 @@ split:
 
 test: $(ROM)
 	$(V)$(EMULATOR) $<
-	
+
+# Flags for individual files. TODO: move these to a common directory and make this a directory thing instead
+build/src/ABCD0.c.o: OPTFLAGS = -O0
+build/src/ACA90.c.o: OPTFLAGS = -O0
+build/src/ACCB0.c.o: OPTFLAGS = -O0
+build/src/ACF80.c.o: OPTFLAGS = -O0
+build/src/AD380.c.o: OPTFLAGS = -O0
+build/src/AD740.c.o: OPTFLAGS = -O0
+build/src/ADA70.c.o: OPTFLAGS = -O0
+build/src/ADBD0.c.o: OPTFLAGS = -O0
+build/src/ADF70.c.o: OPTFLAGS = -O0
+build/src/AE150.c.o: OPTFLAGS = -O0
+build/src/AE630.c.o: OPTFLAGS = -O0
+build/src/AE820.c.o: OPTFLAGS = -O0
+build/src/AED10.c.o: OPTFLAGS = -O0
+build/src/AEF30.c.o: OPTFLAGS = -O0
+build/src/AF450.c.o: OPTFLAGS = -O0
+build/src/AF6C0.c.o: OPTFLAGS = -O0
+build/src/AF960.c.o: OPTFLAGS = -O0
+build/src/AFBD0.c.o: OPTFLAGS = -O0
+build/src/AFE60.c.o: OPTFLAGS = -O0
+build/src/AFF70.c.o: OPTFLAGS = -O0
+build/src/B07B0.c.o: OPTFLAGS = -O0
+build/src/B0BA0.c.o: OPTFLAGS = -O0
+build/src/B0FC0.c.o: OPTFLAGS = -O0
+build/src/B1930.c.o: OPTFLAGS = -O0
+build/src/B1B60.c.o: OPTFLAGS = -O0
+build/src/B1DC0.c.o: OPTFLAGS = -O0
+build/src/B1FD0.c.o: OPTFLAGS = -O0
+build/src/B22E0.c.o: OPTFLAGS = -O0
+build/src/B2310.c.o: OPTFLAGS = -O0
+
+
 export VR4300MUL := OFF
 # Compile .c files with kmc gcc (use strip to fix objects so that they can be linked with modern gnu ld) 
 $(BUILD_DIR)/src/%.c.o: src/%.c
 	@$(PRINT)$(GREEN)Compiling C file: $(ENDGREEN)$(BLUE)$<$(ENDBLUE)$(ENDLINE)
 	@mkdir -p $(shell dirname $@)
-	@$(CC_HOST) $(CFLAGS_CHECK) $(CPPFLAGS) -MMD -MP -MT $@ -MF $@.d -I include/ $<
-	$(V)export COMPILER_PATH=tools/gcc_2.7.2 && $(CC) $(CFLAGS) $(CPPFLAGS) -I include/ -c -o $@ $<
+	@$(CC_HOST) $(CFLAGS_CHECK) $(CPPFLAGS) -MMD -MP -MT $@ -MF $@.d $<
+	$(V)export COMPILER_PATH=tools/gcc_2.7.2/$(DETECTED_OS) && $(CC) $(OPTFLAGS) $(CFLAGS) $(CPPFLAGS) -c -o $@ $<
 	@$(STRIP) $@ -N dummy-symbol-name
 
 # Assemble .s files with modern gnu as
@@ -132,7 +180,7 @@ $(BUILD_DIR)/asm/%.s.o: asm/%.s
 
 # Create .o files from .bin files.
 $(BUILD_DIR)/%.bin.o: %.bin
-	@$(PRINT)$(GREEN)Objcopying binary file: $(ENDGREEN)$(BLUE)$<$(ENDBLUE)$(ENDLINE)
+	@$(PRINT)$(GREEN)objcopying binary file: $(ENDGREEN)$(BLUE)$<$(ENDBLUE)$(ENDLINE)
 	@mkdir -p $(shell dirname $@)
 	$(V)$(LD) -r -b binary -o $@ $<
 
@@ -146,7 +194,7 @@ $(ROM): $(BUILD_DIR)/$(TARGET).elf
 	@$(PRINT)$(GREEN)Creating z64: $(ENDGREEN)$(BLUE)$@$(ENDBLUE)$(ENDLINE)
 	$(V)$(OBJCOPY) $< $@ -O binary
 	$(V)$(OBJCOPY) -O binary --gap-fill 0xFF --pad-to 0x2000000 $< $@
-	@$(PRINT)$(PURPLE)ObjCopy gap fill 0xFF to 0x2000000$(PURPLE)$(ENDPURPLE)$(ENDLINE)
+	@$(PRINT)$(PURPLE)objcopy gap fill 0xFF to 0x2000000$(PURPLE)$(ENDPURPLE)$(ENDLINE)
 	$(V)$(N64CKSUM) $@
 ifeq ($(COMPARE),1)
 	@$(DIFF) $(BASEROM) $(ROM) && printf "OK\n" || (echo 'The build succeeded, but did not match the base ROM. This is expected if you are making changes to the game. To skip this check, use "make COMPARE=0".' && false)
