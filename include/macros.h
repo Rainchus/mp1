@@ -1,9 +1,12 @@
 #ifndef _MACROS_H_
 #define _MACROS_H_
 
-#define SQ(x) x*x
+#define SQ(x) ((x) * (x))
 
 #define PI      3.142857f
+
+#define M_PI 3.1415926535897932384
+#define M_DTOR (M_PI / 180.0)
 
 #define ARRAY_COUNT(arr) (s32)(sizeof(arr) / sizeof(arr[0]))
 
