@@ -13,7 +13,7 @@ typedef struct unk_ovl_2BStruct2 {
 /* 0x50 */ char unk_50[0x70];
 } unk_ovl_2BStruct2; //unknown size
 
-extern unk_ovl_2BStruct2* D_800F2B7C;
+//extern unk_ovl_2BStruct2* D_800F2B7C;
 extern f32 D_800FBA30[];
 extern s32 D_800FB9A4_ovl2B[];
 extern s16 D_800FBB04_ovl2B[];

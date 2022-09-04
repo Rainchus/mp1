@@ -244,7 +244,7 @@ INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F7874_1DA924);
 
 void func_800F79E4_1DAA94(s16 arg0, unkStructShyGuySays_03* arg1, s16 arg2) {
     D_800F2B7C[arg0].unk_08 = arg1->unk_00;
-    D_800F2B7C[arg0].unk_4C = 1.0f;
+    D_800F2B7C[arg0].unk_4C.float32 = 1.0f;
 
     if (arg2 >= 0) {
         D_800F2B7C[arg0].unk_0A = 0;

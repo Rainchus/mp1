@@ -33,12 +33,15 @@ typedef struct Vec4f {
 } Vec4f;
 
 typedef struct unk_Struct01 {
-    /* 0x00 */ char unk_00[8];
+    /* 0x00 */ u16 unk0;
+    /* 0x02 */ char pad2[6];
     /* 0x08 */ f32 unk_08;
     /* 0x0C */ f32 unk_0C;
     /* 0x10 */ f32 unk_10;
-    /* 0x14 */ char unk_14[0x10];
+    /* 0x14 */ char pad14[0x10];
     /* 0x24 */ s32 unk_24;
+    /* 0x28 */ char unk_28[8];
+    /* 0x30 */ s32 unk_30;
 } unk_Struct01;
 
 typedef struct unkGlobalStruct_00 {
@@ -61,7 +64,11 @@ typedef struct unkGlobalStruct_00 {
     } unk_08;
 
     /* 0x0C */ f32 unk_0C;
-    /* 0x10 */ f32 unk_10;
+
+/* 0x10 */ union {
+        f32 float32;
+        s16 signed16[2];
+    } unk_10;
     /* 0x14 */ f32 unk_14;
     /* 0x18 */ f32 unk_18;
     /* 0x1C */ f32 unk_1C;
@@ -69,7 +76,7 @@ typedef struct unkGlobalStruct_00 {
                     f32 floatingPoint;
                     u8 b[4];
                 } unk_20;
-    /* 0x24 */ char unk_24[0x4];
+    /* 0x24 */ f32 unk_24;
     /* 0x28 */ struct unkGlobalStruct_00* unk_28;
     /* 0x2C */ char unk_2C[0x8];
     /* 0x34 */ f32 unk_34;
@@ -424,5 +431,26 @@ typedef struct unk_Struct02 {
     s16 unk_0A;
     s16* unk_0C;
 } unk_Struct02;
+
+typedef struct unk_ovl_2D_struct { //actually global??
+    /* 0x00 */ s32 unk_00;
+    /* 0x00 */ s32 unk_04;
+    /* 0x00 */ s16 unk_08;
+    /* 0x0A */ s16 unk_0A;
+    /* 0x0C */ char unk_0C[0x3C];
+    /* 0x48 */ f32 unk_48;
+/* 0x4C */ union {
+        f32 float32;
+        u16 unsigned16[2];
+        s16 signed16[2];
+        s32 signed32;
+    } unk_4C;
+    /* 0x50 */ f32 unk_50;
+    /* 0x54 */ char unk_54[0x18];
+    /* 0x6C */ s32 unk_6C;
+    /* 0x70 */ char pad70[0xC];
+    /* 0x7C */ f32 unk7C;
+    /* 0x7C */ char pad7C[0x40];
+} unk_ovl_2D_struct;
 
 #endif

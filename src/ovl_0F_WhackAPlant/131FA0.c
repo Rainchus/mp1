@@ -117,7 +117,7 @@ void func_800F7F90_133950(Object* arg0) {
         }
     }
     func_80017DB0(arg0);
-    func_8009ECB0((arg0->unk_40->unk_00.signed16[0] * 0xC0) + D_800F2B7C + 0x7C, 0.0f, temp_s1->unk_3C, 0.0f);
+    func_8009ECB0(&D_800F2B7C[arg0->unk_40->unk_00.signed16[0]].unk7C, 0.0f, temp_s1->unk_3C, 0.0f);
 }
 
 

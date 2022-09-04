@@ -194,7 +194,7 @@ void func_800F6A38_241CF8(void) {
     ftt = 0.0f;
     const20 = 20.0f;
     while (TRUE) {
-        f2bstr = &D_800F2B7C[*ptr->unk_3C->unk_40];
+        f2bstr = (mpSource_f2b7cstruct*)&D_800F2B7C[*ptr->unk_3C->unk_40];
         func_800A40D0(&f2bstr->unk124, ftt);
         ftemp -= 0.02f;
 

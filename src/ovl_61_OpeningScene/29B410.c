@@ -59,8 +59,8 @@ Object* func_800F6804_29B634(unkGlobalStruct_00* arg0) {
 
     temp_s0 = func_8005D384(0x1000, 0, 0, -1, &func_800F6788_29B5B8);
     func_8005D96C(temp_s0, 0, 0, 0);
-    func_8005D97C(temp_s0, arg0->unk_18 + arg0->unk_0C, arg0->unk_1C + arg0->unk_10, arg0->unk_20.floatingPoint + arg0->unk_14);
-    func_8005D95C(temp_s0, D_80110450->unk_0C, D_80110450->unk_10, D_80110450->unk_14);
+    func_8005D97C(temp_s0, arg0->unk_18 + arg0->unk_0C, arg0->unk_1C + arg0->unk_10.float32, arg0->unk_20.floatingPoint + arg0->unk_14);
+    func_8005D95C(temp_s0, D_80110450->unk_0C, D_80110450->unk_10.float32, D_80110450->unk_14);
     temp_s0->unk_4C = 2;
     temp_s0->unk_4D = 48;
     temp_s0->unk_50 = arg0;

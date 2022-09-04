@@ -51,7 +51,7 @@ typedef struct unkStruct_ShyGuySays_04 {
 } unkStruct_ShyGuySays_04;
 
 extern unkStruct_ShyGuySays_05* D_800FDC64;
-extern unkStructShyGuySays_02* D_800F2B7C;
+//extern unkStructShyGuySays_02* D_800F2B7C;
 extern unkStruct_ShyGuySays_01 D_800FD9CE[];
 extern u16 D_800F5144;
 extern s16 D_800FD5CE;

@@ -1,11 +1,49 @@
 #include "common.h"
 
-typedef struct unk_ovl_2D_struct {
-/* 0x00 */ char unk_00[0x6C];
-/* 0x6C */ s32 unk_6C;
-/* 0x70 */ char unk_70[0x50];
-} unk_ovl_2D_struct;
 
+
+typedef struct unkfloatStruct {
+    f32 unk0;
+    f32 unk4;
+    f32 unk8;
+    f32 unkC;
+    f32 unk10;
+    f32 unk14;
+    char unk18[4];
+} unkfloatStruct;
+
+typedef struct heapThing {
+    u16 unk_00;
+    s16 unk_02;
+    s32 unk_04;
+    Object* unk_08;
+} heapThing;
+
+extern u16 D_800FE39C;
+void func_800FA78C_20338C(void);
+void func_800FAE18_203A18(void);
+extern Object* D_800FE478;
+
+f32 func_800FCEA0_205AA0(Object*, Object*, f32, f32, f32, f32);
+extern s16 D_800EDEB4[];
+extern s8 D_800F3843[];
+extern s16 D_800F5460[];
+extern Object* D_800FE478_ovl2D;
+extern Object* D_800FE4A0;
+extern s16 D_800FE4A4;
+void func_800F6E80_1FFA80(Object*);
+void func_800F8EA0_201AA0(void);
+void func_800FA2B8_202EB8(void);
+f32 func_800FDB84_206784(f32, f32);
+void func_800FE178_206D78(s32);
+extern u16 D_800FE3A0;
+
+extern unkfloatStruct D_800EE738;
+extern s32 D_800FE484; //unknown type
+extern s32 D_800FE4B8; //unknown type
+extern s32 D_800FE468_ovl2D; //unknown type
+
+extern s16 D_800F3778;
 extern s16 D_800FE458;
 extern s16 D_800FE45A;
 extern Object** D_800FE460;
@@ -22,12 +60,11 @@ extern Object* D_800FE478;
 extern s16 D_800EE984;
 extern s16 D_800FE44A;
 extern s16 D_800FE44C[];
-extern s16 D_800FE4B4;
+extern u16 D_800FE4B4;
 extern u16 D_800FE464;
 extern Object* D_800FE490;
 extern Object* D_800FE498;
 extern Object* D_800F2AF8[];
-extern unk_ovl_2D_struct* D_800F2B7C;
 extern char D_800FE3B0[];
 extern Vec3f D_800F652C;
 extern u16 D_800FE464;
@@ -36,7 +73,7 @@ extern Object* D_800FE478;
 void func_800F7B5C_20075C(s32 arg0, s32 arg1);
 void func_800F6FF4_1FFBF4(Object*);
 void func_800F6DF4_1FF9F4(Object*);
-void func_800FBAA4_2046A4(void);
+void func_800FBAA4_2046A4(Object*);
 void func_800FBB5C_20475C(void);
 void func_800F6B28_1FF728(void);
 void func_800F6AC0_1FF6C0(Object*);
@@ -53,4 +90,4 @@ void func_800FB180_203D80(void);
 void func_800FB28C_203E8C(void);
 void func_800FBF30_204B30(void);
 void func_800FE140_206D40(void);
-void func_800FE090_206C90(f32, f32, f32, f32, s32, f32, s32, f32);
+void func_800FE090_206C90(f32, f32, f32, f32, f32, f32, f32, f32);

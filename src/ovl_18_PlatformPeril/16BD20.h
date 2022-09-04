@@ -24,7 +24,7 @@ typedef struct unk_800FE2B0 {
     f32 unk14;
 } unk_800FE2B0;
 
-extern s32 D_800F2B7C;
+//extern s32 D_800F2B7C;
 extern s32 D_800FE1B0[][2];
 extern s32 D_800FE2A0[];
 void func_800F979C_16EEDC(void);

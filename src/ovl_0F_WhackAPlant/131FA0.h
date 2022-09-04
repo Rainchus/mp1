@@ -34,7 +34,7 @@ extern Object* D_800FB6F8;
 extern s16 D_800FB710[];
 extern f32 D_800FB718;
 extern Vec3f D_800FB724;
-extern s32 D_800F2B7C;
+//extern s32 D_800F2B7C;
 extern u16 D_800FB61C;
 extern s16 D_800FB698;
 extern s16 D_800FB730;

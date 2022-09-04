@@ -108,7 +108,7 @@ void func_8004E248(Object* arg0) {
     
     if (arg0->unk_4D == 0) {
         temp_v1->unk_0C = arg0->unk_18;
-        temp_v1->unk_10 = arg0->unk_1C;
+        temp_v1->unk_10.float32 = arg0->unk_1C;
         temp_v1->unk_14 = arg0->unk_20;
         arg0->unk_50 = NULL;
         func_8005D718(arg0);
@@ -116,7 +116,7 @@ void func_8004E248(Object* arg0) {
     }
     
     temp_v1->unk_0C += arg0->unk_30;
-    temp_v1->unk_10 += arg0->unk_34;
+    temp_v1->unk_10.float32 += arg0->unk_34;
     temp_v1->unk_14 += arg0->unk_38;
 }
 
@@ -137,7 +137,7 @@ Object* func_8004E3E0(s32 arg0, Vec3f* arg1, s32 arg2, void* arg3) { //fix arg3 
         obj->unk_38 = (arg1->z - gPlayers[arg0].playerObj->coords.z) / arg2;
     } else {
         obj->unk_30 = (arg1->x - ((unkGlobalStruct_00*)arg3)->unk_0C) / arg2;
-        obj->unk_34 = (arg1->y - ((unkGlobalStruct_00*)arg3)->unk_10) / arg2;
+        obj->unk_34 = (arg1->y - ((unkGlobalStruct_00*)arg3)->unk_10.float32) / arg2;
         obj->unk_38 = (arg1->z - ((unkGlobalStruct_00*)arg3)->unk_14) / arg2;
     }
     

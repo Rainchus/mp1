@@ -56,5 +56,6 @@ extern Vec2f D_800C51E0[];
 extern s32 D_800C5200[];
 extern s32 D_800C5214;
 extern s32 D_800C5210;
+extern unk_ovl_2D_struct* D_800F2B7C;
 
 extern unk_800ECDE0* D_800ECDE0;

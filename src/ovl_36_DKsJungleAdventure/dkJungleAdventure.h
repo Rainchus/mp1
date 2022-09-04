@@ -3,7 +3,7 @@ extern s16 D_800F9910[];
 
 extern board_overlay_entrypoint D_800F9890[];
 
-extern mpSource_f2b7cstruct *D_800F2B7C;
+//extern mpSource_f2b7cstruct *D_800F2B7C;
 
 #define DK_STAR_COUNT 7
 #define DK_BOO_COUNT 2

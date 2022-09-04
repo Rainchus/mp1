@@ -8,4 +8,4 @@ char unk_70[0x50];
 
 void func_800265EC(s32, s32, f32, s16, s32, s32);
 s16 func_80033718(s32, char*);
-extern anotherUnkStruct* D_800F2B7C;
+//extern anotherUnkStruct* D_800F2B7C;
