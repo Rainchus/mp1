@@ -251,7 +251,17 @@ INCLUDE_ASM(s32, "ovl_2D_RunningOfTheBulb/1FF1E0", func_800F98F0_2024F0);
 
 INCLUDE_ASM(s32, "ovl_2D_RunningOfTheBulb/1FF1E0", func_800F9C2C_20282C);
 
-INCLUDE_ASM(s32, "ovl_2D_RunningOfTheBulb/1FF1E0", func_800FA2B8_202EB8);
+void func_800FA2B8_202EB8(Object* arg0) {
+    unkGlobalStruct_00* temp = arg0->unk_50->unk_68;
+
+    if (arg0->unk_20 > -1600.0f) {
+        temp->unk_20.floatingPoint = 180.0f;
+        func_8009ECB0(&D_800F2B7C[arg0->unk_40->unk_00.signed16[0]].unk7C, 0.0f, 180.0f, 0.0f);
+        arg0->unk_20 += -13.116001f;
+        return;
+    }
+    arg0->func_ptr = NULL;
+}
 
 void func_800FA36C_202F6C(Object* arg0) {
     f32 var_f20 = 2.0f - ((arg0->unk_1C - 100.0f) / 240.0f);

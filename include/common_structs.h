@@ -9,8 +9,8 @@ typedef struct Vec2f {
 } Vec2f;
 
 typedef struct Vec2s {
-               s32 x;
-               s32 y;
+               s16 x;
+               s16 y;
 } Vec2s;
 
 typedef struct Vec3f {

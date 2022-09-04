@@ -33,7 +33,7 @@ extern Object* D_800FE4A0;
 extern s16 D_800FE4A4;
 void func_800F6E80_1FFA80(Object*);
 void func_800F8EA0_201AA0(void);
-void func_800FA2B8_202EB8(void);
+void func_800FA2B8_202EB8(Object*);
 f32 func_800FDB84_206784(f32, f32);
 void func_800FE178_206D78(s32);
 extern u16 D_800FE3A0;

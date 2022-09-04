@@ -4,6 +4,8 @@
 #include "types.h"
 #include "common_structs.h"
 
+void func_8004720C(Object*);
+void func_80077044(void*);
 void func_8005DC18(Object*, s32);
 void func_80038A9C(s32, void*, s32, char*);
 f32 func_8000A72C(f32, f32, f32, f32);
@@ -65,7 +67,7 @@ void SetPlayerLandedSpaceType(s16, u8);
 void ShowPlayerCoinChange(s32, s32);
 void func_800415CC(s16, s16);
 Process* func_800419D8(s16);
-Process* func_80048000(s16);
+Process* func_80048000(s32);
 void func_8005884C(void);
 void func_8004CC8C(s16, s16);
 void func_8004CDA0(s16);
@@ -313,7 +315,7 @@ void func_8009ECB0(void*, f32, f32, f32);
 void func_800258EC(s16, s32, s32);
 s16 func_8001E00C(s32, s32, s32);
 void func_80064D38(s16);
-void func_8006752C(s16, s32, u8);
+void func_8006752C(s16, s16, s32);
 void Convert3DTo2D(s16 index, Vec3f* arg1, Vec2f* arg2);
 void func_80079078(s16);
 void func_8005D718(void*); //idk what type this arg is, either Object* or unk_struct03*
