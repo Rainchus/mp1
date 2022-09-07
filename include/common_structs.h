@@ -38,10 +38,19 @@ typedef struct unk_Struct01 {
     /* 0x08 */ f32 unk_08;
     /* 0x0C */ f32 unk_0C;
     /* 0x10 */ f32 unk_10;
-    /* 0x14 */ char pad14[0x10];
+    /* 0x14 */ char unk_14[4];
+    /* 0x18 */ f32 unk_18;
+    /* 0x1C */ f32 unk_1C;
+    /* 0x20 */ f32 unk_20;
     /* 0x24 */ s32 unk_24;
     /* 0x28 */ char unk_28[8];
     /* 0x30 */ s32 unk_30;
+    /* 0x34 */ char unk_34[0x20];
+    /* 0x54 */ u16 unk_54;
+    /* 0x58 */ f32 unk_58;
+    /* 0x5C */ f32 unk_5C;
+    /* 0x60 */ f32 unk_60;
+    /* 0x64 */ f32 unk_64;
 } unk_Struct01;
 
 typedef struct unkGlobalStruct_00 {
@@ -452,5 +461,71 @@ typedef struct unk_ovl_2D_struct { //actually global??
     /* 0x7C */ f32 unk7C;
     /* 0x7C */ char pad7C[0x40];
 } unk_ovl_2D_struct;
+
+typedef struct SubTextWindow {
+    s8 unk0;
+    char unk_01;
+    s16 unk2;
+    s16 unk4;
+    s16 unk6;
+    s16 unk8;
+    s16 unkA;
+    s16 unkC;
+    s16 unkE;
+} SubTextWindow;
+typedef struct TextWindow {
+/* 0x00 */ u8 unk_00;
+/* 0x01 */ char unk_01;
+/* 0x02 */ u8 unk_02;
+/* 0x03 */ u8 unk_03;
+/* 0x04 */ u8 unk_04;
+/* 0x05 */ u8 unk_05;
+/* 0x06 */ u8 unk_06;
+/* 0x07 */ u8 unk_07;
+/* 0x08 */ u8 unk_08;
+/* 0x09 */ u8 unk_09;
+/* 0x0A */ u8 unk_0A;
+/* 0x0B */ char unk_0B[5];
+/* 0x10 */ s8 unk_10;
+/* 0x11 */ char unk_11;
+/* 0x12 */ u8 unk_12;
+/* 0x13 */ u8 unk_13;
+/* 0x14 */ char unk_14[4];
+/* 0x18 */ s16 unk_18;
+/* 0x1A */ s16 unk_1A;
+/* 0x1C */ s16 unk_1C;
+/* 0x1E */ char unk_1E[6];
+/* 0x24 */ s16 unk_24;
+/* 0x26 */ s16 unk_26;
+/* 0x28 */ s16 unk_28;
+/* 0x26 */ s16 unk_2A;
+/* 0x2C */ s16 unk_2C;
+/* 0x2E */ s16 unk_2E;
+/* 0x30 */ s16 unk_30;
+/* 0x32 */ s16 unk_32;
+/* 0x34 */ s16 unk_34;
+/* 0x36 */ char unk_36[0x2];
+/* 0x38 */ s16 unk_38;
+/* 0x3A */ char unk_3A[8];
+/* 0x42 */ s16 unk_42;
+/* 0x44 */ s16 unk_44;
+/* 0x46 */ s16 unk_46[20];
+/* 0x6E */ s16 unk_6E;
+/* 0x70 */ char unk_70[11];
+/* 0x7B */ s8 unk_7B[5]; //unknown array size
+/* 0x80 */ char unk_80[8];
+/* 0x88 */ void* unk_88[5]; //unknown array size
+/* 0x9C */ char unk_9C[0x14];
+/* 0xB0 */ u8* stringPtr;
+/* 0xB4 */ void* string;
+/* 0xB8 */ u8 usingStringIDBool;
+/* 0xB9 */ char unk_B9[7];
+/* 0xC0 */ void* unk_C0[10];
+/* 0xE8 */ unkGlobalStruct_00* unk_E8;
+/* 0xEC */ f32 unk_EC;
+/* 0xF0 */ f32 unk_F0;
+/* 0xF4 */ SubTextWindow unk_F4[5]; //unknown size
+/* 0x144 */ char unk_154[0x138];
+} TextWindow; //sizeof 0x27C
 
 #endif

@@ -10,5 +10,6 @@ ctx.c
 .vscode/dryrun.log
 .vscode/targets.log
 .vscode/tasks.json
+.vscode/settings.json
 __pycache__/
 .DS_Store

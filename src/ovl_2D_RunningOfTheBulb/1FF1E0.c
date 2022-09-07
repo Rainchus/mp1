@@ -224,15 +224,104 @@ void func_800F7B40_200740(s32 arg0) {
 
 INCLUDE_ASM(s32, "ovl_2D_RunningOfTheBulb/1FF1E0", func_800F7B5C_20075C);
 
-INCLUDE_ASM(s32, "ovl_2D_RunningOfTheBulb/1FF1E0", func_800F8210_200E10);
+void func_800F8210_200E10(Object* arg0) {
+    u16 temp_s0;
+    s32 temp_s1;
+    s16 temp_s3;
+    s16 temp_s4;
+    s16* temp_s1_2;
+    s16* temp_s2;
+    s8 temp_s5;
+    s8 temp_s6;
+    s16* temp;
+
+    if (D_800FE464 == 1) {
+        arg0->func_ptr = &func_800F82F4_200EF4;
+        return;
+    }
+    
+    temp_s0 = arg0->unk_50->unk_56;
+    temp_s5 = D_800ECE14[temp_s0];
+    temp_s6 = D_800F3843[temp_s0];
+    temp = D_800F5460;
+    temp_s2 = &temp[temp_s0];
+    temp_s4 = *temp_s2;
+    temp_s1_2 = &D_800EDEB4[temp_s0];
+    temp_s3 = *temp_s1_2;
+    func_80005A28(arg0);
+    D_800ECE14[temp_s0] = temp_s5;
+    D_800F3843[temp_s0] = temp_s6;
+    *temp_s2 = temp_s4;
+    *temp_s1_2 = temp_s3;
+}
+
 
 INCLUDE_ASM(s32, "ovl_2D_RunningOfTheBulb/1FF1E0", func_800F82F4_200EF4);
 
-INCLUDE_ASM(s32, "ovl_2D_RunningOfTheBulb/1FF1E0", func_800F8D80_201980);
+void func_800F8D80_201980(Object* arg0) {
+    unk_Struct01* temp_s0;
 
-INCLUDE_ASM(s32, "ovl_2D_RunningOfTheBulb/1FF1E0", func_800F8EA0_201AA0);
+    temp_s0 = arg0->unk_50->unk_E4;
+    temp_s0->unk_58 -= 0.05f;
+    func_8005D97C(arg0, temp_s0->unk_58, temp_s0->unk_58, temp_s0->unk_58);
+    func_8005D95C(arg0, arg0->unk_18 + temp_s0->unk_5C, arg0->unk_1C + temp_s0->unk_60, arg0->unk_20 + temp_s0->unk_64);
+    
+    if (++temp_s0->unk_54 >= 20) {
+        func_800258EC(arg0->unk_40->unk_00.unsigned16[0], 4, 4);
+        func_800258EC(arg0->unk_40->unk_00.unsigned16[1], 4, 4);
+        func_800258EC(arg0->unk_40->unk_10.signed16[1], 4, 4);
+        if (arg0 == D_800FE4A0) {
+            func_800258EC(D_800FE4AC->unk_40->unk_00.unsigned16[0], 4, 4);
+        }
+        arg0->func_ptr = NULL;
+    }
+}
 
-INCLUDE_ASM(s32, "ovl_2D_RunningOfTheBulb/1FF1E0", func_800F9094_201C94);
+void func_800F8EA0_201AA0(Object* arg0) {
+    Object* temp_s1;
+    f32 temp_f0;
+    s16* temp_a0;
+    s16* temp_v0_2;
+    u16 temp_s0;
+    u8 temp_s3;
+    u8 temp_s4;
+    u16 temp_s5;
+    u16 temp_s6;
+    unkGlobalStruct_00* temp_a1;
+    s16* temp;
+
+    temp_a1 = arg0->unk_50;
+    if ((D_800FE470[1])->unk_4C == 0) {
+        arg0->func_ptr = &func_800F9094_201C94;
+        return;
+    }
+    temp_s0 = temp_a1->unk_56;
+    temp_s3 = D_800ECE14[temp_s0];
+    temp_s4 = D_800F3843[temp_s0];
+    temp = D_800EDEB4;
+    temp_a0 = &temp[temp_s0];
+    temp_s5 = *temp_a0;
+    temp_v0_2 = &D_800F5460[temp_s0];
+    temp_s6 = *temp_v0_2;
+    *temp_v0_2 = 0;
+    *temp_a0 = 0;
+    D_800F3843[temp_s0] = 0;
+    D_800ECE14[temp_s0] = 0;
+    
+    if (arg0->unk_20 > D_800FE364[temp_a1->unk_58][1]) {
+        temp_f0 = func_800FCEA0_205AA0(arg0, NULL, D_800FE364[temp_a1->unk_58][0], D_800FE364[temp_a1->unk_58][1], 40.0f, 190.0f);
+        D_800ECE14[temp_s0] = (func_800AEAC0(temp_f0) * 80.0f);
+        D_800F3843[temp_s0] = (-func_800AEFD0(temp_f0) * 80.0f);
+    }
+    
+    func_80005A28(arg0);
+    D_800ECE14[temp_s0] = temp_s3;
+    D_800F3843[temp_s0] = temp_s4;
+    D_800EDEB4[temp_s0] = temp_s5;
+    D_800F5460[temp_s0] = temp_s6;
+}
+
+INCLUDE_ASM(s32, "ovl_2D_RunningOfTheBulb/1FF1E0", func_800F9094_201C94); //https://decomp.me/scratch/eJF8g
 
 INCLUDE_ASM(s32, "ovl_2D_RunningOfTheBulb/1FF1E0", func_800F947C_20207C);
 

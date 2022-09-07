@@ -18,20 +18,6 @@ s32 unk8;
 s32 unkC;
 } unkUserData;
 
-void func_800477AC(void);
-void func_80048060(void);
-void func_80046B24(void);
-void func_80067598(s16, s32, s32);
-void func_80047348(Object*);
-void func_80046E84(void);
-void func_80047DBC(void);
-void func_800479B8(s32);
-void func_8004388C(s32);
-void func_8004746C(s32);
-s32 func_80054FE4(void);
-s16 func_80076740(s8*, s32, s32, s32, s32);
-
-
 extern s32 D_800C4ED0[];
 extern s8 D_800C4EEC[];
 extern s16 D_800D64A4[];

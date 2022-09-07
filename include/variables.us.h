@@ -56,5 +56,9 @@ extern s32 D_800C5200[];
 extern s32 D_800C5214;
 extern s32 D_800C5210;
 extern unk_ovl_2D_struct* D_800F2B7C;
+extern u8 D_800C5DF0;
+extern u8 D_800C5DF2;
+extern u8 D_800C5E34[0x100];
+extern u8 D_800C5F34[0x100];
 
 extern unk_800ECDE0* D_800ECDE0;

@@ -534,6 +534,29 @@ INCLUDE_ASM(s32, "59E80", func_8005B6D0);
 
 INCLUDE_ASM(s32, "59E80", func_8005B75C);
 
-INCLUDE_ASM(s32, "59E80", func_8005B7E8);
+typedef struct testing {
+/* 0x00 */ s32 string;
+/* 0x04 */ u16 size;
+} testing;
 
-INCLUDE_ASM(s32, "59E80", func_8005B838);
+void func_8005B75C(s32, testing*);
+
+void* func_8005B7E8(s32 stringIndex) {
+    testing sp10;
+    void* temp_v0;
+
+    func_8005B75C(stringIndex, &sp10); //string index to pointer
+    temp_v0 = MallocPerm(sp10.size);
+    
+    if (temp_v0 != NULL) {
+        func_80061FE8((void*)sp10.string, temp_v0, sp10.size);
+    }
+    
+    return temp_v0;
+}
+
+void func_8005B838(void* arg0) {
+    if (arg0 != NULL) {
+        FreePerm(arg0);
+    }
+}
