@@ -119,7 +119,7 @@ void func_800F6E04_1F6AE4(u16 arg0, u32 arg1, u32 arg2, f32 arg3) {
     temp_v0 = D_800FF55C->unk_50;
     temp_v0->unk_04.unsigned32 = arg1;
     temp_v0->unk_08.unsigned32 = arg2;
-    temp_v0->unk_0C = arg3;
+    temp_v0->unk_0C.float32 = arg3;
     temp_v0->unk_00.unsigned16[0] = arg0;
     func_800258EC(D_800FF55C->unk_40->unk_00.unsigned16[0], 4, 0);
     func_8005D8B8(D_800FF55C, 0xA0);
@@ -135,8 +135,8 @@ void func_800F6E6C_1F6B4C(Object* arg0) {
     } else if ((func_8005FD5C() + D_800F64F8) == 0) {
         temp_f0 = temp_s0->unk_04.float32 + temp_s0->unk_08.float32;
         temp_s0->unk_04.float32 = temp_f0;
-        if (temp_s0->unk_0C < temp_f0) {
-            temp_s0->unk_04.float32 = temp_s0->unk_0C;
+        if (temp_s0->unk_0C.float32 < temp_f0) {
+            temp_s0->unk_04.float32 = temp_s0->unk_0C.float32;
         }
     }
     func_80026174(arg0->unk_40->unk_00.unsigned16[0], arg0->unk_40->unk_00.unsigned16[1], temp_s0->unk_04.float32);

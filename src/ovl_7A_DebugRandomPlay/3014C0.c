@@ -65,7 +65,7 @@ void func_800F7468_302348(void) {
 }
 
 void func_800F750C_3023EC(void) { //TODO: fix call to func_8006DA5C
-    char buffer[0x200];
+    u8 buffer[0x200];
 
     func_8006EB40(D_800F8FBC);
     func_8006EB80();

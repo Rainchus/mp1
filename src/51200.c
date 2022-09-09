@@ -72,7 +72,7 @@ void func_80050D68(void) {
     s16 temp_v0_2;
     s16 var_s0;
     s32* temp_s2;
-    s32 temp;
+    s16 temp;
     Process* process = GetCurrentProcess();
 
     temp_s2 = ((unk51200*)process->user_data)->unk0;

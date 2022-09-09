@@ -71,9 +71,10 @@ typedef struct unkGlobalStruct_00 {
         u16 unsigned16[2];
         u8 b[4];
     } unk_08;
-
-    /* 0x0C */ f32 unk_0C;
-
+/* 0x0C */ union {
+        f32 float32;
+        s16 signed16[2];
+    } unk_0C;
 /* 0x10 */ union {
         f32 float32;
         s16 signed16[2];
@@ -485,7 +486,10 @@ typedef struct TextWindow {
 /* 0x08 */ u8 unk_08;
 /* 0x09 */ u8 unk_09;
 /* 0x0A */ u8 unk_0A;
-/* 0x0B */ char unk_0B[5];
+/* 0x0B */ char unk_0B[2];
+/* 0x0D */ u8 unk_0D;
+/* 0x0E */ u8 unk_0E;
+/* 0x0F */ u8 unk_0F;
 /* 0x10 */ s8 unk_10;
 /* 0x11 */ char unk_11;
 /* 0x12 */ u8 unk_12;

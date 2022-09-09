@@ -324,9 +324,13 @@ void func_8006EA44(s16 arg0) {
     func_8006F3BC(arg0, (textWindow->unk_30 - 1), (textWindow->unk_32 - 1), (textWindow->unk_07 + 1), textWindow->unk_08 + 1);
 }
 
-INCLUDE_ASM(s32, "6D4E0", func_8006EB40);
+void func_8006EB40(s16 win_id) {
+    func_8006E984(&D_800ED4B0[win_id]);
+}
 
-INCLUDE_ASM(s32, "6D4E0", func_8006EB80);
+void func_8006EB80(void) {
+    D_800ED722 = 1;
+}
 
 INCLUDE_ASM(s32, "6D4E0", func_8006EB90);
 
@@ -338,7 +342,9 @@ INCLUDE_ASM(s32, "6D4E0", func_8006F718);
 
 INCLUDE_ASM(s32, "6D4E0", func_8006F9B0);
 
-INCLUDE_ASM(s32, "6D4E0", func_8006FCC0);
+s16 func_8006FCC0(s16 arg0) {
+    return D_800ED4B0[arg0].unk_00;
+}
 
 INCLUDE_ASM(s32, "6D4E0", func_8006FCF0);
 
@@ -350,37 +356,114 @@ INCLUDE_ASM(s32, "6D4E0", func_80070D90);
 
 INCLUDE_ASM(s32, "6D4E0", func_80070ED4);
 
-INCLUDE_ASM(s32, "6D4E0", func_80070FF8);
+void func_80070FF8(s16 arg0, s16 arg1, s16 arg2, s16 arg3, u8 arg4) {
+    func_800710E4(-(~arg0 == 0), -(~arg1 == 0), -(~arg2 == 0), -(~arg3 == 0), arg4);
+    func_800710E4(arg0, arg1, arg2, arg3, 1);
+}
 
-INCLUDE_ASM(s32, "6D4E0", func_800710A4);
+void func_800710A4(s32 arg0, s32 arg1, s32 arg2, s32 arg3) {
+    func_800710E4(arg0, arg1, arg2, arg3, 1);
+}
 
 INCLUDE_ASM(s32, "6D4E0", func_800710E4);
 
 INCLUDE_ASM(s32, "6D4E0", func_80071154);
 
-INCLUDE_ASM(s32, "6D4E0", func_80071264);
+void func_80071264(void) {
+    D_800F3718 = 0;
+    D_800F64C4 = 0;
+}
 
 INCLUDE_ASM(s32, "6D4E0", func_80071278);
 
 INCLUDE_ASM(s32, "6D4E0", func_800713F0);
 
-INCLUDE_ASM(s32, "6D4E0", func_8007149C);
+u8 func_800713F0(u8*);
 
-INCLUDE_ASM(s32, "6D4E0", func_800714F0);
+void func_8007149C(u8* arg0, u8* arg1) {
+    for (; *arg1 != 0; arg0++, arg1 += 2) {
+        *arg0 = func_800713F0(arg1);
+    }
+    *arg0 = 0;
+}
 
-INCLUDE_ASM(s32, "6D4E0", func_8007155C);
+void func_800714F0(s16 arg0, u8 arg1, u8 arg2, u8 arg3) {
+    TextWindow* textWindow = &D_800ED4B0[arg0];
+    
+    textWindow->unk_0D = arg1;
+    textWindow->unk_0E = arg2;
+    textWindow->unk_0F = arg3;
+    func_800674F4(textWindow->unk_44, 0, arg1, arg2, arg3);
+}
 
-INCLUDE_ASM(s32, "6D4E0", func_80071598);
+void func_8007155C(s16 arg0, s32 arg1) {
+    TextWindow* temp_v1 = &D_800ED4B0[arg0];
 
-INCLUDE_ASM(s32, "6D4E0", func_8007166C);
+    temp_v1->unk_01 = (temp_v1->unk_01 & 0xF0) | arg1;
+}
 
-INCLUDE_ASM(s32, "6D4E0", func_80071740);
+void func_80071598(s16 arg0) {
+    TextWindow* textWindow = &D_800ED4B0[arg0];
+    s16 i;
 
-INCLUDE_ASM(s32, "6D4E0", func_80071788);
+    for (i = 0; i < 10; i++) {
+        if (textWindow->unk_C0[i] != NULL) {
+            func_800674BC(textWindow->unk_44, i, 0x8000);
+        }
+    }
+    
+    if (textWindow->unk_E8 != NULL) {
+        func_800674BC(textWindow->unk_44, 0xA, 0x8000);
+    }
+    
+    if (textWindow->unk_42 != -1) {
+        func_800674BC(textWindow->unk_44, 0xB, 0x8000);
+    }
+    
+    textWindow->unk_06 |= 8;
+}
+
+void func_8007166C(s16 arg0) {
+    TextWindow* textWindow = &D_800ED4B0[arg0];
+    s16 i;
+
+    for (i = 0; i < 10; i++) {
+        if (textWindow->unk_C0[i] != NULL) {
+            func_80067480(textWindow->unk_44, i, 0x8000);
+        }
+    }
+    
+    if (textWindow->unk_E8 != NULL) {
+        func_80067480(textWindow->unk_44, 0xA, 0x8000);
+    }
+    
+    if (textWindow->unk_42 != -1) {
+        func_80067480(textWindow->unk_44, 0xB, 0x8000);
+    }
+    
+    textWindow->unk_06 &= ~0x8;
+}
+
+void func_80071740(s16 arg0, s32 arg1) {
+    TextWindow* textWindow = &D_800ED4B0[arg0];
+
+    if (arg1 != 0) {
+        textWindow->unk_06 |= 0x10;
+    } else {
+        textWindow->unk_06 &= ~0x10;
+    }
+}
+
+void func_80071788(s32 arg0, s16 arg1) {
+    TextWindow* textWindow = &D_800ED4B0[arg0];
+    textWindow->unk_F4[arg1].unk0 = 2;
+}
 
 INCLUDE_ASM(s32, "6D4E0", func_800717C0);
 
-INCLUDE_ASM(s32, "6D4E0", func_8007186C);
+s16 func_8007186C(s32 arg0) {
+    return D_800ED4B0[arg0].unk_11;
+}
 
 INCLUDE_ASM(s32, "6D4E0", func_80071894);
 

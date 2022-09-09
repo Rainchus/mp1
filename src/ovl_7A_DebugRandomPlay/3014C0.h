@@ -22,7 +22,7 @@ extern unkStruct2 D_800F7DB8[];
 extern s8 D_800F8F78;
 extern u8 D_800F8FB8;  //random minigame id
 extern s16 D_800F8FBC;
-extern char D_800F8FC0[];
+extern u8 D_800F8FC0[];
 
 void func_800F750C_3023EC(void);
 extern s32 D_800F8F6C; //"RANDOM PLAY" ascii text
