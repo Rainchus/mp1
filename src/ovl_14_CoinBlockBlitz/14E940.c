@@ -46,7 +46,7 @@ void func_800F65E0_14E940(void) {
     D_800EDE70[D_800EE984++] = func_8005D384(3, 4, 0, -1, &func_800FA440_1527A0);
 
     func_8005D384(1, 0, 0, -1, &func_800F6CB4_14F014);
-    func_80072644(0, 0x10);
+    SetFadeInTypeAndTime(0, 0x10);
 }
 
 void func_800F6CB4_14F014(void) {

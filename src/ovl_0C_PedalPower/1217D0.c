@@ -31,7 +31,7 @@ void func_800F65E0_1217D0(void) {
     func_80023504(3, -43.0f, -18.0f, -110.0f);
     func_800234B8(3, 0, 0, 0);
     func_8002890C(0, 15, 0);
-    func_80072644(0, 16);
+    SetFadeInTypeAndTime(0, 16);
 }
 
 void func_800F67AC_12199C(void) {

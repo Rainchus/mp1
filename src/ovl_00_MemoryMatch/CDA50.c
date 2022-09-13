@@ -314,7 +314,7 @@ INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800F7EDC_CF34C);
 //     D_800FDE42.unk0 = 0;
 //     D_800FDE42.unk2 = 0;
 //     func_800F8314_CF784();
-//     func_80072644(0, 0x10);
+//     SetFadeInTypeAndTime(0, 0x10);
 // }
 
 INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800F8130_CF5A0);

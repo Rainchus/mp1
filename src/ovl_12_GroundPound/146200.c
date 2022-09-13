@@ -21,7 +21,7 @@ void func_800F65E0_146200(void) {
     func_800F7FEC_147C0C();
     D_800FA43C = func_8005D384(8, 0xA, 0x64, -1, &func_800F8C20_148840);
     func_8005D384(0x2710, 0, 0, -1, &func_800F6EE4_146B04);
-    func_80072644(0, 0x10);
+    SetFadeInTypeAndTime(0, 0x10);
     D_800FA262 = 3;
     PlaySound(0x1A2);
 }

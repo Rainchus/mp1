@@ -15,7 +15,7 @@ void func_800F65E0_2592A0(void) {
     InitProcess(&func_800F66AC_25936C, 0x300, 0, 0);
     func_8005D384(0x1000, 0, 0, -1, &func_800F6F5C_259C1C);
     func_80060128(0x13);
-    func_80072644(1, 0x10);
+    SetFadeInTypeAndTime(1, 0x10);
 }
 
 INCLUDE_ASM(s32, "ovl_3F_Last5Turns/2592A0", func_800F66AC_25936C);
@@ -60,8 +60,8 @@ void func_800F7034_259CF4(void) {
     func_800178A0(1);
     func_80017660(0, 0.0f, 0.0f, 320.0f, 240.0f);
     func_800176C4(0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
-    func_80049E70(&FE2310_ROM_START);
-    func_80049F4C(D_800F7110_111AC0[D_800F71F0_222F30]);
+    LoadBackgroundData(&FE2310_ROM_START);
+    LoadBackgroundIndex(D_800F7110_111AC0[D_800F71F0_222F30]);
 }
 
 void func_800F70E8_259DA8(void) {

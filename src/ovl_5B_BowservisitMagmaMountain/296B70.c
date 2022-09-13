@@ -34,7 +34,7 @@ void func_800F65E0_296B70(void) {
     InitProcess(func_800F66C4_296C54, 0x300, 0, 0);
     func_8005D384(0x1000, 0, 0, -1, &func_800F70D4_297664);
     func_80060128(0x12);
-    func_80072644(3, 0x10);
+    SetFadeInTypeAndTime(3, 0x10);
 }
 
 void func_800F66C4_296C54(void) { //fix me: remove gotos
@@ -84,7 +84,7 @@ void func_800F66C4_296C54(void) { //fix me: remove gotos
         D_800F7590->coords.z = D_800F75B8_297B48.z;
         tempStruct04 = D_800F7590->unk_3C;
         tempStruct04->unk_24 = 90.0f;
-        D_800F7590->unk_24 = D_800F7590->unk_28 = D_800F7590->unk_2C = 0.5f;
+        D_800F7590->xScale = D_800F7590->yScale = D_800F7590->zScale = 0.5f;
         D_800F759C_297B2C = func_80042728(D_800F7590, 0);
             var_f24 = 0.0f;
             var_f22 = 7.0f;
@@ -257,7 +257,7 @@ void func_800F7120_2976B0(void) {
     D_800F7654 = func_8003DBE0(0x76U, NULL);
     func_80025B34(*D_800F7654->unk_3C->unk_40);
     VEC3F_COPY_TO_OBJ(D_800F7654, D_800F75A0_297B30);
-    D_800F7654->unk_24 = D_800F7654->unk_28 = D_800F7654->unk_2C = 1.5f;
+    D_800F7654->xScale = D_800F7654->yScale = D_800F7654->zScale = 1.5f;
     func_80025F60(*D_800F7654->unk_3C->unk_40, 0);
     temp_s0 = D_800F7654;
     temp_s0->unk_18.x = func_80088060(0.10471976f);
@@ -268,7 +268,7 @@ void func_800F7120_2976B0(void) {
     D_800F7658->coords.x = D_800F75A0_297B30.x;
     D_800F7658->coords.y = D_800F75A0_297B30.y;
     D_800F7658->coords.z = D_800F75A0_297B30.z + 200.0f;
-    D_800F7658->unk_24 = D_800F7658->unk_28 = D_800F7658->unk_2C = 1.5f;
+    D_800F7658->xScale = D_800F7658->yScale = D_800F7658->zScale = 1.5f;
     func_80025F60(*D_800F7658->unk_3C->unk_40, 0);
     func_800258EC(*D_800F7658->unk_40->unk_40, 0x180, 0x80);
     func_80025AD4(*D_800F7658->unk_40->unk_40);
@@ -313,8 +313,8 @@ void func_800F74C0_297A50(void) {
     func_800178A0(1);
     func_80017660(0, 0.0f, 0.0f, 320.0f, 240.0f);
     func_800176C4(0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
-    func_80049E70(&D_FE2310);
-    func_80049F4C(0x3B);
+    LoadBackgroundData(&D_FE2310);
+    LoadBackgroundIndex(0x3B);
 }
 
 void func_800F7560_297AF0(void) {

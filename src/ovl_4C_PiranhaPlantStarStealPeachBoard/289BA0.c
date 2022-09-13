@@ -62,7 +62,7 @@ void func_800F65E0_289BA0(void) {
     func_8006CEA0();
     InitProcess(func_800F66B4_289C74, 0x300, 0, 0);
     func_8005D384(0x1000, 0, 0, -1, &func_800F7020_28A5E0);
-    func_80072644(1, 0x10);
+    SetFadeInTypeAndTime(1, 0x10);
 }
 
 void func_800F66B4_289C74(void) {
@@ -139,9 +139,9 @@ void func_800F66B4_289C74(void) {
         D_800F74FC->coords.x = D_800F752C.x;
         D_800F74FC->coords.y = D_800F752C.y + 200.0f;
         D_800F74FC->coords.z = D_800F752C.z;
-        D_800F74FC->unk_24 = 0.5f;
-        D_800F74FC->unk_28 = 0.5f;
-        D_800F74FC->unk_2C = 0.5f;
+        D_800F74FC->xScale = 0.5f;
+        D_800F74FC->yScale = 0.5f;
+        D_800F74FC->zScale = 0.5f;
         D_800F7510_28AAD0 = func_80042728(D_800F74FC, 0);
         var_f22 = 0.0f;
         var_f24 = 7.0f;
@@ -190,7 +190,7 @@ void func_800F66B4_289C74(void) {
         D_800F75E4->coords.z = D_800F752C.z;
         func_80021B14(*D_800F75E4->unk_3C->unk_40, gPlayers[D_800ED154.unk_00[D_800ED154.unk_1A]].characterID, 0x80);
         func_8004CCD0(&D_800F75E4->coords, &D_800F32A0->coords, &D_800F75E4->unk_18);
-        func_80072644(0, 0x10);
+        SetFadeInTypeAndTime(0, 0x10);
         SleepProcess(0x1A);
         func_800500A4();
         PlaySound(0x44);
@@ -335,8 +335,8 @@ void func_800F741C_28A9DC(void) {
     func_800178A0(1);
     func_80017660(0, 0.0f, 0.0f, 320.0f, 240.0f);
     func_800176C4(0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
-    func_80049E70(&D_FE2310);
-    func_80049F4C(9);
+    LoadBackgroundData(&D_FE2310);
+    LoadBackgroundIndex(9);
     func_800F7064_28A624();
 }
 

@@ -114,3 +114,6 @@ osGetMemSize = 0x800931A0;
 LeoDriveExistBool = 0x800C1900;
 guLookAtF = 0x8009C2A0;
 Convert3DTo2D = 0x8001D934;
+LoadBackgroundData = 0x80049E70;
+LoadBackgroundIndex = 0x80049F4C;
+SetFadeInTypeAndTime = 0x80072644;

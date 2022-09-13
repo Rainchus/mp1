@@ -25,7 +25,7 @@ void func_800F65E0_2D6FC0(void) {
         D_800F8B98 = InitProcess(func_800F67B0_2D7190, 0xAU, 0, 0);
     }
     
-    func_80072644(0xFF, 8);
+    SetFadeInTypeAndTime(0xFF, 8);
     func_8005AF60();
 }
 

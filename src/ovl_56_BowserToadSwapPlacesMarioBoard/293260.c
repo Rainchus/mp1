@@ -19,7 +19,7 @@ void func_800F65E0_293260(void) {
     func_800546B4(3, gPlayers[3].turn_status);
     InitProcess(func_800F692C_2935AC, 0x300, 0, 0);
     func_8005D384(0x1000, 0, 0, -1, &func_800F6AC8_293748);
-    func_80072644(4, 16);
+    SetFadeInTypeAndTime(4, 16);
 }
 
 //very odd need for temps?
@@ -144,13 +144,13 @@ void func_800F6B1C_29379C(void) {
     func_8003DAA8();
     D_800F6DFC = func_8003DBE0(20, NULL);
     VEC3F_COPY_TO_OBJ(D_800F6DFC, D_800F6DB0_293A30);
-    D_800F6DFC->unk_24 = D_800F6DFC->unk_28 = D_800F6DFC->unk_2C = 1.5f;
+    D_800F6DFC->xScale = D_800F6DFC->yScale = D_800F6DFC->zScale = 1.5f;
     func_80025F60(*D_800F6DFC->unk_3C->unk_40, 0);
     D_800F6DF4 = func_8003DBE0(108, D_800F6DC8_293A48);
     D_800F6DF4->coords.x = D_800F6DBC_293A3C.x;
     D_800F6DF4->coords.y = D_800F6DBC_293A3C.y;
     D_800F6DF4->coords.z = D_800F6DBC_293A3C.z + 200.0f;
-    D_800F6DF4->unk_24 = D_800F6DF4->unk_28 = D_800F6DF4->unk_2C = 1.5f;
+    D_800F6DF4->xScale = D_800F6DF4->yScale = D_800F6DF4->zScale = 1.5f;
     D_800F6DF8 = func_8003DBE0(7, D_800F6DD0_293A54);
     D_800F6DF8->coords.x = D_800F6DBC_293A3C.x;
     D_800F6DF8->coords.y = D_800F6DBC_293A3C.y;
@@ -173,8 +173,8 @@ void func_800F6CE8_293968(void) {
     func_800178A0(1);
     func_80017660(0, 0.0f, 0.0f, 320.0f, 240.0f);
     func_800176C4(0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
-    func_80049E70(&D_FE2310);
-    func_80049F4C(51);
+    LoadBackgroundData(&D_FE2310);
+    LoadBackgroundIndex(51);
 }
 
 void func_800F6D88_293A08(void) {

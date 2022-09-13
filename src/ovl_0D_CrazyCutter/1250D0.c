@@ -45,7 +45,7 @@ void func_800F69EC_1254DC(unk_Struct03* arg0) {
         func_8005D384(4, 10, 10, 4, &func_800F9514_128004);
         func_8005D384(0, 0, 0, -1, &func_800F686C_12535C);
         func_8005D384(2, 1, 1, -1, &func_800F6B04_1255F4);
-        func_80072644(0, 16);
+        SetFadeInTypeAndTime(0, 16);
         func_8005D718(arg0);
     }
 }

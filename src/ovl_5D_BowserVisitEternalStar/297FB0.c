@@ -45,7 +45,7 @@ void func_800F65E0_297FB0(void) {
     InitProcess(func_800F66BC_29808C, 0x300, 0x2000, 0);
     func_8005D384(0x1000, 0, 0, -1, &func_800F6D88_298758);
     func_80060128(0x12);
-    func_80072644(3, 0x10);
+    SetFadeInTypeAndTime(3, 0x10);
 }
 
 void func_800F66BC_29808C(void) {
@@ -92,7 +92,7 @@ void func_800F66BC_29808C(void) {
         D_800F7060_298A30->coords.z = D_800F707C_298A4C.z;
         tempStruct04 = D_800F7060_298A30->unk_3C;
         tempStruct04->unk_24 = 90.0f;
-        D_800F7060_298A30->unk_24 = D_800F7060_298A30->unk_28 = D_800F7060_298A30->unk_2C = 0.5f;
+        D_800F7060_298A30->xScale = D_800F7060_298A30->yScale = D_800F7060_298A30->zScale = 0.5f;
         D_800F706C_298A3C = func_80042728(D_800F7060_298A30, 0);
         var_f24 = 0.0f;
         var_f22 = 7.0f;
@@ -217,9 +217,9 @@ void func_800F6DD4_2987A4(void) {
     D_800F7114->coords.x = D_800F7070_298A40.x;
     D_800F7114->coords.y = D_800F7070_298A40.y;
     D_800F7114->coords.z = D_800F7070_298A40.z;
-    D_800F7114->unk_2C = 1.5f;
-    D_800F7114->unk_28 = 1.5f;
-    D_800F7114->unk_24 = 1.5f;
+    D_800F7114->zScale = 1.5f;
+    D_800F7114->yScale = 1.5f;
+    D_800F7114->xScale = 1.5f;
     D_800F7118 = func_8003DBE0(func_80052F04(D_800F7110), D_800F70E4_298AB4[gPlayers[D_800F7110].characterID]);
     D_800F7118->coords.x = D_800F707C_298A4C.x;
     D_800F7118->coords.y = D_800F707C_298A4C.y;
@@ -255,8 +255,8 @@ void func_800F6F90_298960(void) {
     func_800178A0(1);
     func_80017660(0, 0.0f, 0.0f, 320.0f, 240.0f);
     func_800176C4(0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
-    func_80049E70(&D_FE2310);
-    func_80049F4C(0x46);
+    LoadBackgroundData(&D_FE2310);
+    LoadBackgroundIndex(0x46);
 }
 
 void func_800F7030_298A00(void) {

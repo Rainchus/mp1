@@ -214,9 +214,9 @@ typedef struct unk_Struct03 {
 /* 0x0A */ u16 unk_0A;
 /* 0x0C */ Vec3f coords;
 /* 0x18 */ Vec3f unk_18;
-/* 0x24 */ f32 unk_24;
-/* 0x28 */ f32 unk_28;
-/* 0x2C */ f32 unk_2C;
+/* 0x24 */ f32 xScale;
+/* 0x28 */ f32 yScale;
+/* 0x2C */ f32 zScale;
 /* 0x30 */ f32 unk_30;
 /* 0x34 */ f32 unk_34;
 /* 0x38 */ f32 unk_38;

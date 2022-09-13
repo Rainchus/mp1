@@ -88,7 +88,7 @@ ProcessHeader* func_800F68E4_254754(s32* arg0) {
     if (temp_s0 != NULL) {
         temp_v0 = func_8003DBE0(0x7B, arg0);
         temp_s0->prev = temp_v0;
-        func_800A0D00(&temp_v0->unk_24, 0.5f, 0.5f, 0.5f);
+        func_800A0D00(&temp_v0->xScale, 0.5f, 0.5f, 0.5f);
         func_80025F10(*temp_s0->prev->unk_3C->unk_40, 2);
         process = InitProcess(&func_800F68B8_254728, 0x4000, 0, 0);
         temp_s0->process = process;
@@ -151,7 +151,7 @@ void func_800F6BD8_254A48(void) {
 
     func_80060128(0x30);
     temp_s0 = func_800F68E4_254754(D_800F8BF0);
-    func_80072644(2, 0x10);
+    SetFadeInTypeAndTime(2, 0x10);
 
     while (func_80072718() != 0) {
         SleepVProcess();
@@ -333,7 +333,7 @@ void func_800F7224_255094(s16 arg0) {
         }
         D_800F91E0[arg0] = var_s1;
         var_s1->unk_0A |= 2;
-        func_800A0D00(&var_s1->unk_24, 0.6f, 0.6f, 0.6f);
+        func_800A0D00(&var_s1->xScale, 0.6f, 0.6f, 0.6f);
         var_s1->unk_30 = 100.0f;
         func_800A0D50(&var_s1->coords, &(GetSpaceData(D_800F8C34[arg0])->coords) );
         func_8003C314(8, var_s1, 0, 0);
@@ -877,7 +877,7 @@ void func_800F8588_2563F8(void) {
         temp_s0_3 = GetPlayerStruct(j);
         if (temp_s0_3 != curPlayer) {
             objectStructs[j] = func_800F7D6C_255BDC(j);
-            func_800A0D00(&objectStructs[j]->unk_24, 0.7f, 0.7f, 0.7f);
+            func_800A0D00(&objectStructs[j]->xScale, 0.7f, 0.7f, 0.7f);
         }
     }
 

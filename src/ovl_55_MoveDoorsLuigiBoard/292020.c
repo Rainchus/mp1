@@ -16,9 +16,9 @@ void func_800F65E0_292020(void) {
     func_8005D384(0x1000, 0, 0, -1, &func_800F74C8_292F08);
 
     if (D_800C597A != 0) {
-        func_80072644(6, 8);
+        SetFadeInTypeAndTime(6, 8);
     } else {
-        func_80072644(1, 16);
+        SetFadeInTypeAndTime(1, 16);
     }
 }
 
@@ -146,8 +146,8 @@ void func_800F765C_29309C(void) {
     func_800178A0(1);
     func_80017660(0U, 0.0f, 0.0f, 320.0f, 240.0f);
     func_800176C4(0U, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
-    func_80049E70(&D_FE2310);
-    func_80049F4C(41);
+    LoadBackgroundData(&D_FE2310);
+    LoadBackgroundIndex(41);
 }
 
 void func_800F76FC_29313C(void) {

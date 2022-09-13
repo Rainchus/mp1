@@ -16,7 +16,7 @@ void func_800F65E0_16BD20(void) {
     func_8005D384(4, 0, 0, -1, &func_800F66E8_16BE28);
     func_8005D384(1, 0, 0, 1, &func_800F6720_16BE60);
     D_800B895C = 10.0f;
-    func_80072644(0, 0x10);
+    SetFadeInTypeAndTime(0, 0x10);
 }
 
 

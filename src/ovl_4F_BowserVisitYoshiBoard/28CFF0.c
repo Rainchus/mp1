@@ -15,7 +15,7 @@ void func_800F65E0_28CFF0(void) {
     InitProcess(func_800F67F0_28D200, 0x300U, 0, 0);
     func_8005D384(0x1000, 0, 0, -1, &func_800F7218_28DC28);
     func_80060128(0x12);
-    func_80072644(3, 0x10);
+    SetFadeInTypeAndTime(3, 0x10);
 }
 
 void func_800F66BC_28D0CC(unk_Struct03* arg0) {

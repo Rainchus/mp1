@@ -38,7 +38,7 @@ void func_800F65E0_28BC70(void) {
     func_8006CEA0();
     InitProcess(func_800F67BC_28BE4C, 0x300, 0, 0);
     func_8005D384(0x1000, 0, 0, -1, &func_800F737C_28CA0C);
-    func_80072644(4, 0x10);
+    SetFadeInTypeAndTime(4, 0x10);
 }
 
 void func_800F66B4_28BD44(Object* arg0) {
@@ -103,7 +103,7 @@ void func_800F67BC_28BE4C(void) {
     D_800F7848_28CED8->unk_3C->unk_24 = 0.0f;
     D_800F7854_28CEE4->unk_18 = 0.0f;
     SleepProcess(0xA);
-    func_800A0D00(&D_800F7840_28CED0->unk_24, 0.5f, 0.5f, 0.5f);
+    func_800A0D00(&D_800F7840_28CED0->xScale, 0.5f, 0.5f, 0.5f);
     func_8004EE14(0, &D_800F7890_28CF20, 0x28, D_800F7848_28CED8);
     func_8004EE14(0, &D_800F7890_28CF20, 0x28, D_800F7840_28CED0);
     
@@ -173,14 +173,14 @@ void func_800F67BC_28BE4C(void) {
     D_800ED15C.unk_02 = (D_800ED15C.unk_02 + 1) & 1;
 
     if (!(D_800ED15C.unk_02 & 1)) {
-        func_80049F4C(0x16);
+        LoadBackgroundIndex(0x16);
     } else {
-        func_80049F4C(0x17);
+        LoadBackgroundIndex(0x17);
     }
     
-    func_80072644(0, 4);
+    SetFadeInTypeAndTime(0, 4);
     SleepProcess(4);
-    func_800A0D00(&D_800F7840_28CED0->unk_24, 0.5f, 0.5f, 0.5f);
+    func_800A0D00(&D_800F7840_28CED0->xScale, 0.5f, 0.5f, 0.5f);
     D_800F7840_28CED0->unk_30 = 80.0f;
     func_8003E5E0(D_800F7840_28CED0);
     D_800F7848_28CED8->unk_0A |= 1;
@@ -224,17 +224,17 @@ void func_800F67BC_28BE4C(void) {
     func_8004F40C(D_800F7840_28CED0, -1, 2);
     D_800F7840_28CED0->unk_0A &= ~0x1;
     func_8004CCD0(&D_800F7840_28CED0->coords, &D_800F7860_28CEF0, &D_800F7840_28CED0->unk_18);
-    func_800A0D00(&D_800F7840_28CED0->unk_24, 0.5f, 0.5f, 0.5f);
+    func_800A0D00(&D_800F7840_28CED0->xScale, 0.5f, 0.5f, 0.5f);
     func_8004E3E0(0, &D_800F7860_28CEF0, 0xA, D_800F7840_28CED0);
     
     func_8004F00C(D_800F7840_28CED0, 10.0f, -3.0f);
 
     for (i = 0; i < 10; i++) {
-        func_800A0D00(&D_800F7840_28CED0->unk_24, (i / 20.0f) + 0.5f, (i / 20.0f) + 0.5f, (i / 20.0f) + 0.5f);
+        func_800A0D00(&D_800F7840_28CED0->xScale, (i / 20.0f) + 0.5f, (i / 20.0f) + 0.5f, (i / 20.0f) + 0.5f);
         SleepVProcess();
     }
     
-    func_800A0D00(&D_800F7840_28CED0->unk_24, 1.0f, 1.0f, 1.0f);
+    func_800A0D00(&D_800F7840_28CED0->xScale, 1.0f, 1.0f, 1.0f);
     func_8004EE14(0, D_800F32A0, 0x1E, D_800F7840_28CED0);
     func_80025EB4(*D_800F7848_28CED8->unk_3C->unk_40, 1, 2);
     func_8004EE14(0, &D_800F78B4_28CF44, 0x14, D_800F7848_28CED8);
@@ -284,7 +284,7 @@ void func_800F73C0_28CA50(void) {
     func_8003DAA8();
     func_8004F2AC();
     D_800F7844_28CED4 = func_8003DBE0(6, &D_800F78F0_28CF80);
-    func_800A0D00(&D_800F7844_28CED4->unk_24, 1.5f, 1.5f, 1.5f);
+    func_800A0D00(&D_800F7844_28CED4->xScale, 1.5f, 1.5f, 1.5f);
     func_800A0D00(&D_800F7844_28CED4->coords, D_800F78C0_28CF50.x, D_800F78C0_28CF50.y, D_800F78C0_28CF50.z);
     D_800F7844_28CED4->unk_30 = 130.0f;
     D_800F7844_28CED4->unk_0A |= 1;
@@ -305,7 +305,7 @@ void func_800F73C0_28CA50(void) {
     D_800F7854_28CEE4->unk_18 = 1.0f;
     D_800F7858_28CEE8 = func_8003DBE0(0x71, NULL);
     func_800A0D00(&D_800F7858_28CEE8->coords, -1500.0f, 0.0f, -1500.0f);
-    func_800A0D00(&D_800F7858_28CEE8->unk_24, 5.0f, 1.0f, 5.0f);
+    func_800A0D00(&D_800F7858_28CEE8->xScale, 5.0f, 1.0f, 5.0f);
     func_800258EC(*D_800F7858_28CEE8->unk_3C->unk_40, 0x80000, 0x80000);
     func_80025AD4(*D_800F7858_28CEE8->unk_3C->unk_40);
     func_8003E664(D_800F7858_28CEE8);
@@ -353,11 +353,11 @@ void func_800F7764_28CDF4(void) {
     func_800178A0(1);
     func_80017660(0, 0.0f, 0.0f, 320.0f, 240.0f);
     func_800176C4(0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
-    func_80049E70(&D_FE2310);
+    LoadBackgroundData(&D_FE2310);
     if (D_800ED15E == 0) {
-        func_80049F4C(0x16);
+        LoadBackgroundIndex(0x16);
     } else {
-        func_80049F4C(0x17);
+        LoadBackgroundIndex(0x17);
     }
 }
 

@@ -65,7 +65,7 @@ void func_800F8DC8_12E408(Object* arg0) {
     D_800FC9F0.x = ((-17.25f - D_800FC500.unk_50) / (D_800FC500.unk_50 - D_800FC500.unk_00));
     D_800FC9F0.y = ((-17.25f - D_800FC500.unk_50) / (D_800FC500.unk_50 - D_800FC500.unk_28));
     arg0->unk_4C = 0;
-    func_80072644(0, 16);
+    SetFadeInTypeAndTime(0, 16);
     arg0->func_ptr = &func_800F8FCC_12E60C;
 }
 

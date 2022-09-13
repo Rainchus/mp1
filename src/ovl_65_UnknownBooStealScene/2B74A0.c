@@ -37,9 +37,9 @@ void func_800F65E0_2B74A0(void) {
     InitProcess(func_800F884C_2B970C, 0x300, 0, 0);
     func_8005D384(0x1000, 0, 0, -1, &func_800F8F18_2B9DD8);
     if (D_800C597A != 0) {
-        func_80072644(6, 8);
+        SetFadeInTypeAndTime(6, 8);
     } else {
-        func_80072644(1, 0x10);
+        SetFadeInTypeAndTime(1, 0x10);
     }
 }
 
@@ -67,7 +67,7 @@ INCLUDE_ASM(s32, "ovl_65_UnknownBooStealScene/2B74A0", func_800F8E9C_2B9D5C);
 
 INCLUDE_ASM(s32, "ovl_65_UnknownBooStealScene/2B74A0", func_800F8F18_2B9DD8);
 
-void func_800F8F78_2B9E38(unk_Struct03* arg0) {
+void func_800F8F78_2B9E38(Object* arg0) {
     unk_Struct03* temp_s0;
 
     temp_s0 = D_800F9604;

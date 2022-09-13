@@ -40,7 +40,7 @@ void func_800F65E0_2F40C0(void) {
     
     func_8005D8B8(func_8005D384(0x7FDA, 0, 0, -1, func_8005EB1C), 0xA0);
     D_800B895C = 10.0f;
-    func_80072644(0, 0x10);
+    SetFadeInTypeAndTime(0, 0x10);
 }
 
 void func_800F6A44_2F4524(void) {

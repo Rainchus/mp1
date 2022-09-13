@@ -177,13 +177,13 @@ void func_800F6A38_241CF8(void) {
 
     ftemp = 0.0f;
     for (s0 = 0; s0 < 6; s0++) {
-        func_800A0D00(&ptr->unk_24, ftemp, ftemp, ftemp);
+        func_800A0D00(&ptr->xScale, ftemp, ftemp, ftemp);
         ftemp += 0.4f;
         SleepVProcess();
     }
 
     for (s0 = 0; s0 < 3; s0++) {
-        func_800A0D00(&ptr->unk_24, ftemp, ftemp, ftemp);
+        func_800A0D00(&ptr->xScale, ftemp, ftemp, ftemp);
         ftemp -= 0.4f;
         SleepVProcess();
     }
@@ -203,7 +203,7 @@ void func_800F6A38_241CF8(void) {
             break;
         }
 
-        func_800A0D00(&ptr->unk_24, ftemp, ftemp, ftemp);
+        func_800A0D00(&ptr->xScale, ftemp, ftemp, ftemp);
         ptr->unk_30 -= 6.0f;
         SleepVProcess();
     }
@@ -242,7 +242,7 @@ void func_800F6CD8_241F98(void) {
 
     func_80060128(43);
     str = func_80048224(D_800F9920);
-    func_80072644(2, 16);
+    SetFadeInTypeAndTime(2, 16);
 
     while (func_80072718() != 0) {
         SleepVProcess();

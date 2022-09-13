@@ -23,7 +23,7 @@ void func_800F65E0_29AB30(void) {
     func_8006CEA0();
     InitProcess(&func_800F66C4_29AC14, 0x300, 0, 0);
     func_8005D384(0x1000, 0, 0, -1, &func_800F6978_29AEC8);
-    func_80072644(1, 0x10);
+    SetFadeInTypeAndTime(1, 0x10);
 }
 
 
@@ -118,7 +118,7 @@ void func_800F6B8C_29B0DC(void) {
     func_800178A0(1);
     func_80017660(0, 0.0f, 0.0f, 320.0f, 240.0f);
     func_800176C4(0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
-    func_80049E70(&D_FE2310);
+    LoadBackgroundData(&D_FE2310);
     switch (D_800F6EC0) {
     case 1:
         if (gPlayers[D_800F6EC1].curChainIndex == 2) {
@@ -150,7 +150,7 @@ void func_800F6B8C_29B0DC(void) {
     default:
         var_a0 = D_800F6D30[D_800F6EC0];
     }
-    func_80049F4C(var_a0);
+    LoadBackgroundIndex(var_a0);
 }
 
 void func_800F6D04_29B254(void) {

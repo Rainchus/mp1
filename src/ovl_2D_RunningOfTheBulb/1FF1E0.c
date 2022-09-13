@@ -53,7 +53,7 @@ void func_800F65E0_1FF1E0(void) {
     D_800FE45A = func_80039084(temp_s0);
     FreePerm(temp_s0);
     D_800FE458 = IsBoardFeatureFlagSet(43);
-    func_80072644(0, 16);
+    SetFadeInTypeAndTime(0, 16);
 }
 
 void func_800F6AC0_1FF6C0(Object* arg0) {

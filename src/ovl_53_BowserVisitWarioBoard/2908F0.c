@@ -35,7 +35,7 @@ void func_800F65E0_2908F0(void) {
     InitProcess(func_800F66BC_2909CC, 0x300, 0, 0);
     func_8005D384(0x1000, 0, 0, -1, &func_800F6C9C_290FAC);
     func_80060128(18);
-    func_80072644(3, 16);
+    SetFadeInTypeAndTime(3, 16);
 }
 
 void func_800F66BC_2909CC(void) {
@@ -157,7 +157,7 @@ void func_800F6CE8_290FF8(void) {
     func_8004FA90(D_800F705C, 2.0f, 2.0f, 2.0f);
     D_800F7054 = func_8003DBE0(6, D_800F7030_291340);
     VEC3F_COPY_TO_OBJ(D_800F7054, D_800F6F70_291280);
-    D_800F7054->unk_24 = D_800F7054->unk_28 = D_800F7054->unk_2C = 1.5f;
+    D_800F7054->xScale = D_800F7054->yScale = D_800F7054->zScale = 1.5f;
     D_800F7058 = func_8003DBE0(func_80052F04(D_800F7050), D_800F7018_291328[gPlayers[D_800F7050].characterID]);
     VEC3F_COPY_TO_OBJ(D_800F7058, D_800F6F7C_29128C);
     func_80021B14(*D_800F7058->unk_3C->unk_40, gPlayers[D_800F7050].characterID, 0x80);
@@ -175,8 +175,8 @@ void func_800F6EA0_2911B0(void) {
     func_800178A0(1);
     func_80017660(0, 0.0f, 0.0f, 320.0f, 240.0f);
     func_800176C4(0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
-    func_80049E70(&D_FE2310);
-    func_80049F4C(30);
+    LoadBackgroundData(&D_FE2310);
+    LoadBackgroundIndex(30);
 }
 
 void func_800F6F40_291250(void) {

@@ -187,6 +187,14 @@ segments:
       - [0xB2350, c] # sqrtf
   - type: bin
     start: 0xB2360
+  - type: code
+    start: 0xC25A0
+    vram: 0x800C19A0
+    subsegments:
+      - [0xC25A0, data, 180C0]
+  - type: bin
+    start: 0xC3DE0
+
   # - type: code
   #   start: 0xCBC60
   #   vram: 0x800CB060

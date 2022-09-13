@@ -33,7 +33,7 @@ void func_800F65E0_28E630(void) {
     func_8006CEA0();
     InitProcess(func_800F66B4_28E704, 0x300, 0, 0);
     func_8005D384(0x1000, 0, 0, -1, &func_800F6994_28E9E4);
-    func_80072644(4, 16);
+    SetFadeInTypeAndTime(4, 16);
 }
 
 
@@ -68,9 +68,9 @@ void func_800F66B4_28E704(void) {
     SleepProcess(6);
     func_800F6B04_28EB54();
     func_8004A140();
-    func_80049F4C(0x20);
+    LoadBackgroundIndex(0x20);
     func_800F69D8_28EA28(0);
-    func_80072644(0, 4);
+    SetFadeInTypeAndTime(0, 4);
     SleepProcess(4);
     windowID = CreateTextWindow(0x64, 0x50, 0xC, 3);
     LoadStringIntoWindow(windowID, (void* )0x1C5, -1, -1);
@@ -124,8 +124,8 @@ void func_800F6B30_28EB80(void) {
     func_800178A0(1);
     func_80017660(0, 0.0f, 0.0f, 320.0f, 240.0f);
     func_800176C4(0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
-    func_80049E70(&D_FE2310);
-    func_80049F4C(0x1D);
+    LoadBackgroundData(&D_FE2310);
+    LoadBackgroundIndex(0x1D);
 }
 
 void func_800F6BD0_28EC20(void) {

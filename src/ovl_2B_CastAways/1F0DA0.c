@@ -62,7 +62,7 @@ void func_800F65E0_1F0DA0(void) {
     D_800FBB44_ovl2B = func_80039084(filePtr);
     FreePerm(filePtr);
     D_800FBB50_ovl2B[3] = IsBoardFeatureFlagSet(0x2B);
-    func_80072644(0, 0x10);
+    SetFadeInTypeAndTime(0, 0x10);
     D_800FBB98_ovl2B = 0;
 }
 

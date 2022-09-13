@@ -59,7 +59,7 @@ void func_800F65E0_191700(void) {
     func_8007B168(&D_800FCC28, 1);
     D_800FCD12 = IsBoardFeatureFlagSet(MINIGAME_ISLAND_ENDING);
     D_800FCFF0 = 0;
-    func_80072644(0, 16);
+    SetFadeInTypeAndTime(0, 16);
 }
 
 void func_800F6A60_191B80(Object* arg0) {

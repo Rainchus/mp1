@@ -13,7 +13,7 @@ void func_800F65E0_113DC0(void) {
     func_800F7EA4_115684();
     func_800F7100_1148E0();
     func_800F68BC_11409C();
-    func_80072644(0, 16);
+    SetFadeInTypeAndTime(0, 16);
 }
 
 void func_800F6678_113E58(void) {

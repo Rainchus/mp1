@@ -15,9 +15,9 @@ void func_800F65E0_28ECA0(void) {
     InitProcess(func_800F742C_28FAEC, 0x300, 0, 0);
     func_8005D384(0x1000, 0, 0, -1, &func_800F7D90_290450);
     if (D_800C597A != 0) {
-        func_80072644(6, 8);
+        SetFadeInTypeAndTime(6, 8);
     } else {
-        func_80072644(1, 16);
+        SetFadeInTypeAndTime(1, 16);
     }
 }
 

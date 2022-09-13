@@ -68,7 +68,7 @@ void func_800F6814_257224(void) {
         func_8003E174(temp_s0);
         D_800F8898 = temp_s0;
         temp_s0->unk_0A |= 2;
-        func_800A0D00(&temp_s0->unk_24, 0.6f, 0.6f, 0.6f);
+        func_800A0D00(&temp_s0->xScale, 0.6f, 0.6f, 0.6f);
         temp_s0->unk_30 = 100.0f;
         func_800A0D50(&temp_s0->coords, &GetSpaceData(0x1B)->coords);
     }
@@ -219,7 +219,7 @@ void func_800F6DD8_2577E8(ovl_3E_HeapStruct* arg0) {
 void func_800F6E20_257830(void) {
     D_800F88A0 = -1;
     
-    func_80072644(2, 0x10);
+    SetFadeInTypeAndTime(2, 0x10);
     func_80072724(0xFF, 0xFF, 0xFF);
     while (func_80072718() != 0) {
         SleepVProcess();

@@ -25,7 +25,7 @@ void func_800F6610_2BB3C0(void) {
     func_800717C0(new_var);
     LoadStringIntoWindow(new_var, (void*)0x39, -1, -1);
     func_8006E070(new_var, 0);
-    func_80072644(0xFF, 8);
+    SetFadeInTypeAndTime(0xFF, 8);
     
     while (func_80072718() != 0) {
         SleepVProcess();

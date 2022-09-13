@@ -109,7 +109,7 @@ void func_80052D34() {
             val = 0.7f;
         }
 
-        func_800A0D00(&player->playerObj->unk_24, val, val, val);
+        func_800A0D00(&player->playerObj->xScale, val, val, val);
         
     }
 }
