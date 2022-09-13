@@ -1,5 +1,13 @@
 #include "common.h"
 
+typedef struct unkStructTemp {
+s32 unk_00;
+char unk_04[0x1C];
+} unkStructTemp;
+
+void func_80059B48(s32);
+extern unkStructTemp D_800F89C0[];
+
 extern s16 D_800F384C;
 extern s32 D_800F89B8;
 extern s32 D_800F8B90;

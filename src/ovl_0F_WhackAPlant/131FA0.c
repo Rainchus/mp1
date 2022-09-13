@@ -20,7 +20,7 @@ void func_800F6BC4_132584(Object* arg0) {
     D_800FB710[1] = 0;
 
     for (i = 0; i < 9; i++) {
-        temp_s2 = func_8001E00C(-1, 0x68D, 8);
+        temp_s2 = func_8001E00C((void*)-1, 0x68D, 8);
         D_800ECDE0[temp_s2].unk_02 = D_800FB6BA;
         func_80025930(D_800ECDE0[temp_s2].unk_00, 0x60000000, 0x60000000);
         D_800FB6C0[i] = temp_s2;
@@ -28,7 +28,7 @@ void func_800F6BC4_132584(Object* arg0) {
     }
 
     for (i = 0; i < 9; i++) {
-        temp_s2 = func_8001E00C(-1, 0x68D, 8);
+        temp_s2 = func_8001E00C((void*)-1, 0x68D, 8);
         D_800ECDE0[temp_s2].unk_02 = D_800FB6BC;
         func_80025930(D_800ECDE0[temp_s2].unk_00, 0x60000000, 0x60000000);
         D_800FB6D8[i] = temp_s2;

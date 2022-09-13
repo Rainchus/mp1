@@ -141,7 +141,10 @@ INCLUDE_ASM(s32, "ovl_6D_MushroomBank/2D6FC0", func_800F7620_2D8000);
 
 INCLUDE_ASM(s32, "ovl_6D_MushroomBank/2D6FC0", func_800F7754_2D8134);
 
-INCLUDE_ASM(s32, "ovl_6D_MushroomBank/2D6FC0", func_800F7B98_2D8578);
+void func_800F7B98_2D8578(s32 arg0) {
+    unkStructTemp* temp = &D_800F89C0[arg0];
+    func_80059B48(temp->unk_00);
+}
 
 INCLUDE_ASM(s32, "ovl_6D_MushroomBank/2D6FC0", func_800F7BC0_2D85A0);
 

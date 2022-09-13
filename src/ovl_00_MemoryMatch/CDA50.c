@@ -490,10 +490,10 @@ INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800F9178_D05E8);
 void func_800F94E0_D0950(void) {
 }
 
-s16 func_800F94E8_D0958(s32 arg0) {
+s16 func_800F94E8_D0958(s32 arg0, s32 arg1, s32 arg2) {
     s16 temp_s0;
 
-    temp_s0 = ReadImgPackand(arg0);
+    temp_s0 = ReadImgPackand(arg0, arg1, arg2);
     func_80025930(D_800ECDE0[temp_s0].unk_00, 0x70000000, 0x70000000);
     return temp_s0;
 }
