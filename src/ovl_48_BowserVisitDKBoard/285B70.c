@@ -28,7 +28,7 @@ extern Object* D_800F7180_ovl48;
 
 void func_800F65E0_285B70(void) {
     D_800F7170_ovl48 = D_800ED5DD;
-    func_8005CF30(50, 10);
+    InitObjSystem(50, 10);
     func_800F6FF8_286588();
     func_800F6E1C_2863AC();
     func_800544E4();

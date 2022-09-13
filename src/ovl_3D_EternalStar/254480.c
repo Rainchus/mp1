@@ -195,12 +195,12 @@ void func_800F6BD8_254A48(void) {
 
 void func_800F6D30_254BA0(void) {
     D_800ED5C2 = 7;
-    func_8005CF30(0xA, 0);
+    InitObjSystem(0xA, 0);
     func_8005E044(0x35, 0, 0x92);
 }
 
 void func_800F6D6C_254BDC(void) {
-    func_8005CF30(0xA, 0);
+    InitObjSystem(0xA, 0);
     SetPlayerOntoChain(0, 0x12, 0);
     SetPlayerOntoChain(1, 0x12, 0);
     SetPlayerOntoChain(2, 0x12, 0);
@@ -218,7 +218,7 @@ void func_800F6E34_254CA4(void) {
     playerMain* temp_s0;
     s32 i;
 
-    func_8005CF30(0x50, 0x28);
+    InitObjSystem(0x50, 0x28);
     func_80060088();
     func_80023448(1);
     func_800234B8(0, 0x78, 0x78, 0x78);

@@ -13,7 +13,7 @@ void func_800F65E0_29B410(void) {
     InitCameras(1);
     func_80029090(1);
     func_8001DE70(25);
-    func_8005CF30(50, 20);
+    InitObjSystem(50, 20);
     func_80060088();
     func_8006CEA0();
     func_8005AD18();

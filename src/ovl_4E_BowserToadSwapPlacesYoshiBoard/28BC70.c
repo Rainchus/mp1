@@ -27,7 +27,7 @@ s32 D_800F7900_28CF90[] = { 0x00000002, 0x00070006, 0x00070008, 0x00000000 }; //
 
 void func_800F65E0_28BC70(void) {
     D_800F7960 = D_800ED5DD;
-    func_8005CF30(0x32, 0xA);
+    InitObjSystem(0x32, 0xA);
     func_800F7764_28CDF4();
     func_800F73C0_28CA50();
     func_800544E4();

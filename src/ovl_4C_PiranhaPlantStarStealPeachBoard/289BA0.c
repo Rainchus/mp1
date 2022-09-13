@@ -51,7 +51,7 @@ static s32 D_800F75BC[] = { 00000003, 0x0000004A, 0x00000049, 0x0000004E, 0x0000
 
 void func_800F65E0_289BA0(void) {
     D_800F75E0 = D_800ED5DD;
-    func_8005CF30(0x32, 0x32);
+    InitObjSystem(0x32, 0x32);
     func_800F741C_28A9DC();
     func_800F718C_28A74C();
     func_800544E4();

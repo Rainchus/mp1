@@ -12,7 +12,7 @@ void func_8004DBD4(s32, u8);
 void func_800F65E0_29AB30(void) {
     D_800F6EC0 = D_800ED5C3;
     D_800F6EC1 = D_800ED5DD;
-    func_8005CF30(0x32, 0xA);
+    InitObjSystem(0x32, 0xA);
     func_800F6B8C_29B0DC();
     func_800F69BC_29AF0C();
     func_800544E4();

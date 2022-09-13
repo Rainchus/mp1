@@ -4,7 +4,7 @@
 void func_800F65E0_1FF1E0(void) {
     void* temp_s0;
 
-    func_8005CF30(36, 0);
+    InitObjSystem(36, 0);
     func_80060088();
     D_800EE984 = 0;
     D_800F2BC0 = 0;

@@ -380,7 +380,7 @@ void func_80023448(s32);
 void func_800234B8(u8, u8, u8, u8);
 void func_80023504(s32, f32, f32, f32);
 void func_80029090(s32);
-void func_8005CF30 (s32 maxObjects, s32 maxProcesses);
+void InitObjSystem (s32 maxObjects, s32 maxProcesses);
 Object* func_8005D384(s32, s32, s32, s32, void*);
 void func_8005D8B8(Object*, s32);
 void func_80060088(void);

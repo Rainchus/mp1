@@ -33,7 +33,7 @@ extern unk_Struct03* D_800F7118;
 
 void func_800F65E0_297FB0(void) {
     D_800F7110 = D_800ED5DD;
-    func_8005CF30(0x32, 0x32);
+    InitObjSystem(0x32, 0x32);
     func_800F6F90_298960();
     func_800F6DD4_2987A4();
     func_800544E4();

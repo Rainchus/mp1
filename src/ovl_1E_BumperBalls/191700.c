@@ -6,7 +6,7 @@ void func_800F65E0_191700(void) {
     void* temp_s0_2;
     s32 i;
 
-    func_8005CF30(32, 0);
+    InitObjSystem(32, 0);
     func_80060088();
     D_800FCD1E = 4;
     

@@ -8,7 +8,7 @@ void func_800F65E0_2888A0(void) {
         D_800ED178.unk2 = GetRandomByte() & 3 & 0xFF;
         D_800ED178.unk4 = D_800ED178.unk6 = D_800ED178.unk8 = D_800ED178.unkA = -1;
     }
-    func_8005CF30(50, 10);
+    InitObjSystem(50, 10);
     func_800F76EC_2899AC();
     func_800F744C_28970C();
     func_800544E4();

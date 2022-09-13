@@ -3,7 +3,7 @@
 
 void func_800F65E0_285230(void) {
     D_800F6F20 = D_800ED5DD;
-    func_8005CF30(50, 10);
+    InitObjSystem(50, 10);
     func_800F6E14_285A64();
     func_800F6D1C_28596C();
     func_800544E4();

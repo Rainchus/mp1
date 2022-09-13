@@ -67,7 +67,7 @@ void func_8005CEDC(s32 arg0) {
     D_800F37BC[temp_a1] = D_800F37BC[temp_a1] & ~(1 << (arg0 - ((var_v0 >> 3) * 8)));
 }
 
-INCLUDE_ASM(s32, "5CDB0", func_8005CF30);
+INCLUDE_ASM(s32, "5CDB0", InitObjSystem);
 
 INCLUDE_ASM(s32, "5CDB0", func_8005D184);
 

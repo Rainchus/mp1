@@ -7,7 +7,7 @@ void func_800F65E0_188410(void) {
     func_80029090(50);
     func_8002ADF0(&D_800EDEC0, 64);
     func_8001DE70(32);
-    func_8005CF30(50, 0);
+    InitObjSystem(50, 0);
     func_80060088();
     func_8000942C();
     func_800178A0(2);

@@ -31,7 +31,7 @@ void func_800F6AD4_2BAED4(void) {
     s32 var_s0;
 
     var_s0 = 1;
-    func_8005CF30(0xA, 0xA);
+    InitObjSystem(0xA, 0xA);
     LeoDriveExistBool = func_800827C0() == 1;
     if (LeoDriveExistBool != 0) {
         D_800F6F70 = LeoDriveExist(0x95, 0x96, &D_800ECDE8, 8);

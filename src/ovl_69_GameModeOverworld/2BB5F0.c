@@ -13,7 +13,7 @@ INCLUDE_ASM(s32, "ovl_69_GameModeOverworld/2BB5F0", func_800F6610_2BB5F0);
 //     InitCameras(1);
 //     func_80029090(1);
 //     func_8001DE70(0x19);
-//     func_8005CF30(0x32, 0x14);
+//     InitObjSystem(0x32, 0x14);
 //     func_80060088();
 //     func_8006CEA0();
 //     temp_s1 = func_8005D384(0x7FDA, 0, 0, -1, func_800F884C_2BD82C);

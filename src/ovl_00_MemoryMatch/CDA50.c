@@ -9,7 +9,7 @@ void func_800F65E0_CDA50(void) { //needs rodata support
     unk_Struct00* temp_s0_2;
 
     func_80029090(50);
-    func_8005CF30 (50, 0);
+    InitObjSystem (50, 0);
     func_80060088();
     func_8001DE70(64);
     func_8005D8B8(func_8005D384(0x7FDA, 0, 0, -1, &func_8005EB1C), 0xA0);

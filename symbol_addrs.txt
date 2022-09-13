@@ -117,3 +117,5 @@ Convert3DTo2D = 0x8001D934;
 LoadBackgroundData = 0x80049E70;
 LoadBackgroundIndex = 0x80049F4C;
 SetFadeInTypeAndTime = 0x80072644;
+HidePlayerHUDVisibility = 0x800547F8;
+InitObjSystem = 0x8005CF30;

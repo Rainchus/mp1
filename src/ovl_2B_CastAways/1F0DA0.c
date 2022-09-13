@@ -5,7 +5,7 @@ void func_800F65E0_1F0DA0(void) {
     s32 i;
     void* filePtr;
 
-    func_8005CF30(0x35, 0);
+    InitObjSystem(0x35, 0);
     func_80060088();
     func_80029090(1);
     func_8001DE70(0x64);

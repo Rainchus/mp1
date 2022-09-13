@@ -14,7 +14,7 @@ void func_800F65E0_29A400(void) {
     } else {
         D_800F6D12 = 0;
     }
-    func_8005CF30(0x32, 0xA);
+    InitObjSystem(0x32, 0xA);
     func_800F6B80_29A9A0();
     func_800F69CC_29A7EC();
     func_800544E4();

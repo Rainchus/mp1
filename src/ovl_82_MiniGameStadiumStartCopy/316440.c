@@ -2,7 +2,7 @@
 #include "316440.h"
 
 void func_800F65E0_316440(void) {
-    func_8005CF30(50, 10);
+    InitObjSystem(50, 10);
     func_800F7880_3176E0();
     func_800F77E0_317640();
     func_8006CEA0();

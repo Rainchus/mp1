@@ -23,7 +23,7 @@ extern s32 D_800F705C;
 
 void func_800F65E0_2908F0(void) {
     D_800F7050 = D_800ED5DD;
-    func_8005CF30(50, 10);
+    InitObjSystem(50, 10);
     func_800F6EA0_2911B0();
     func_800F6CE8_290FF8();
     func_800544E4();

@@ -50,7 +50,7 @@ void func_800F6610_2BB3C0(void) {
 }
 
 void func_800F67C0_2BB570(void) {
-    func_8005CF30(0xA, 0xA);
+    InitObjSystem(0xA, 0xA);
     func_80060088();
     InitProcess(&func_800F6610_2BB3C0, 0x1005, 0, 0);
 }

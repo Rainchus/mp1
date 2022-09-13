@@ -22,7 +22,7 @@ extern void* D_800F6C58;
 
 void func_800F65E0_28E630(void) {
     D_800F6C50 = D_800ED5DD;
-    func_8005CF30(50, 10);
+    InitObjSystem(50, 10);
     func_800F6B30_28EB80();
     func_800F69D8_28EA28(1);
     func_800544E4();

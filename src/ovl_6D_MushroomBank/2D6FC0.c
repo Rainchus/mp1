@@ -4,7 +4,7 @@
 void func_800F65E0_2D6FC0(void) {
     InitCameras(1);
     func_8001DE70(1);
-    func_8005CF30(0x20, 4);
+    InitObjSystem(0x20, 4);
     func_8005D8B8(func_8005D384(0x7FDA, 0, 0, -1, func_80059EBC), 0xA0);
     D_800F384C = 0;
     func_8006CEA0();

@@ -44,7 +44,7 @@ extern u8 D_800F8FFC[4];
 void func_800F65E0_282820(void) {
     D_800F8FF0 = D_800ED5C3;
     D_800F8FF1 = D_800ED5DD;
-    func_8005CF30(50, 10);
+    InitObjSystem(50, 10);
     func_800F8DF4_285034();
     func_800F8C6C_284EAC();
     func_800544E4();
@@ -52,10 +52,10 @@ void func_800F65E0_282820(void) {
     func_800546B4(1, gPlayers[1].turn_status);
     func_800546B4(2, gPlayers[2].turn_status);
     func_800546B4(3, gPlayers[3].turn_status);
-    func_800547F8(0, 1);
-    func_800547F8(1, 1);
-    func_800547F8(2, 1);
-    func_800547F8(3, 1);
+    HidePlayerHUDVisibility(0, 1);
+    HidePlayerHUDVisibility(1, 1);
+    HidePlayerHUDVisibility(2, 1);
+    HidePlayerHUDVisibility(3, 1);
     func_8006CEA0();
     InitProcess(func_800F8608_284848, 0x300, 0x2000, 0);
     func_8005D384(0x1000, 0, 0, -1, &func_800F8C20_284E60);

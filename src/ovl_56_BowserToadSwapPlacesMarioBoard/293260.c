@@ -9,7 +9,7 @@ s32 D_800F6DD0_293A54[] = {0x00000001, 0x00070004};
 
 void func_800F65E0_293260(void) {
     D_800F6DF0 = D_800ED5DD;
-    func_8005CF30(50, 10);
+    InitObjSystem(50, 10);
     func_800F6CE8_293968();
     func_800F6B1C_29379C();
     func_800544E4();

@@ -20,7 +20,7 @@ s32* D_800F6BBC[] = {D_800F6B74, D_800F6B80, D_800F6B8C, D_800F6B98, D_800F6BA4,
 
 void func_800F65E0_28E030(void) {
     D_800F6BE0 = D_800ED5DD;
-    func_8005CF30(0x32, 0xA);
+    InitObjSystem(0x32, 0xA);
     func_800F6A54_28E4A4();
     func_800F6918_28E368();
     func_800544E4();

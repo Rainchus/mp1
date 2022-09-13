@@ -307,7 +307,7 @@ void func_800F6F0C_2421CC(void) {  //ov054_Entrypoint0
     ed5c0 = &D_800ED5C0;
 
     ed5c0->unk_02 = 0;
-    func_8005CF30(10, 0); // InitObjectSystem
+    InitObjSystem(10, 0); // InitObjectSystem
     func_8005E044(53, 0, 146);
 }
 
@@ -315,7 +315,7 @@ void func_800F6F44_242204(void) { //ov054_Entrypoint1
     GameStatus* ed5c0;
     ed5c0 = &D_800ED5C0;
 
-    func_8005CF30(10, 0); // InitObjectSystem
+    InitObjSystem(10, 0); // InitObjectSystem
 
     SetPlayerOntoChain(0, 0, 0);
     SetPlayerOntoChain(1, 0, 0);
@@ -354,7 +354,7 @@ INCLUDE_ASM(s32, "ovl_36_DKsJungleAdventure/2418D0", func_800F7024_2422E4);
 //     s32 player_index;
 //     playerMain* player;
 
-//     func_8005CF30(80, 40); // InitObjectSystem
+//     InitObjSystem(80, 40); // InitObjectSystem
 //     func_80060088();
 //     func_80023448(1);
 //     func_800234B8(0, 0x78, 0x78, 0x78);

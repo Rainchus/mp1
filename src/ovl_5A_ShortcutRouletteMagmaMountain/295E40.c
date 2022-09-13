@@ -22,7 +22,7 @@ unkStruct_ovl5A_0 D_800F7300_296B60 = {{0x01, 0x02, 0x04, 0x08}};
 
 void func_800F65E0_295E40(void) {
     D_800F7310 = D_800ED5DD;
-    func_8005CF30(50, 10);
+    InitObjSystem(50, 10);
     func_800F711C_29697C();
     func_800F6F5C_2967BC();
     func_800544E4();

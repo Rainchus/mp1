@@ -21,7 +21,7 @@ void func_800F8DC0_285000(void);
 
 s32 func_800F66FC_28293C(void);
 void func_800F6744_282984(void);
-void func_800547F8(s32, s32);
+void HidePlayerHUDVisibility(s32 playerIndex, s32 hideHUDBool);
 void func_800F8608_284848(void);
 void func_800F8C6C_284EAC(void);
 void func_800F8DF4_285034(void);
