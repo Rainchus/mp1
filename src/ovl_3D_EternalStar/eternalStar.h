@@ -1,34 +1,72 @@
 #include "common.h"
 
 //start of rodata 800F8B80
+//bss 800F9160 - 800F91B0
+
+
+s16 func_800F753C_2553AC(void);
+s16 func_800F7564_2553D4(void);
+s16 func_800F758C_2553FC(void);
+s16 func_800F75B4_255424(void);
+s16 func_800F75DC_25544C(void);
+s16 func_800F7608_255478(void);
+s16 func_800F7630_2554A0(void);
+s16 func_800F7658_2554C8(void);
+s16 func_800F7684_2554F4(void);
+s16 func_800F76B0_255520(void);
+s16 func_800F76D8_255548(void);
+s16 func_800F7704_255574(void);
+s16 func_800F7730_2555A0(void);
+
+void func_800F7B6C_2559DC(void);
+void func_800F7BA0_255A10(void);
+void func_800F7BD4_255A44(void);
+void func_800F7C08_255A78(void);
+void func_800F7C3C_255AAC(void);
+void func_800F8130_255FA0(void);
+void func_800F8240_2560B0(void);
+void func_800F8298_256108(void);
+void func_800F8514_256384(void);
+void func_800F8588_2563F8(void);
+void func_800F88EC_25675C(void);
+void func_800F8914_256784(void);
+void func_800F893C_2567AC(void);
+void func_800F8964_2567D4(void);
+void func_800F898C_2567FC(void);
+void func_800F89B4_256824(void);
+void func_800F89D8_256848(void);
+void func_800F89FC_25686C(void);
+void func_800F8A30_2568A0(void);
+void func_800F8A94_256904(void);
+
 
 typedef struct {
     /* 0x0 */ s16 unk0;
     /* 0x2 */ s16 unk2;
 } my_struct; // size 0x4
 
-extern my_struct D_800F8C18[]; // tbd how big it is :)
+// extern my_struct D_800F8C18[]; // tbd how big it is :)
 
-extern s16* D_800F8ED8[];
+// extern s16* D_800F8ED8[];
 extern s16 D_800F8F08[];
 extern unkStructTest D_800ED154;
 extern s16 D_800ED156;
 extern s16 D_800ED158[];
 
-extern s32 D_800F8CA0[]; //ai decision struct
-extern s32 D_800F8D30[]; //ai decision struct
-extern s32 D_800F8D00[]; //ai decision struct
-extern s32 D_800F8CD0[]; //ai decision struct
-extern s32 D_800F8CA0[]; //ai decision struct
-extern s32 D_800F8C40[]; //ai decision struct
-extern s32 D_800F8C70[]; //ai decision struct
-extern s32 D_800F8D60[]; //ai decision struct
+// extern s32 D_800F8CA0[]; //ai decision struct
+// extern s32 D_800F8D30[]; //ai decision struct
+// extern s32 D_800F8D00[]; //ai decision struct
+// extern s32 D_800F8CD0[]; //ai decision struct
+// extern s32 D_800F8CA0[]; //ai decision struct
+// extern s32 D_800F8C40[]; //ai decision struct
+// extern s32 D_800F8C70[]; //ai decision struct
+// extern s32 D_800F8D60[]; //ai decision struct
 extern s16 D_800ED5C2;
 extern s16 D_800ED172;
-extern s32 D_800F8BF0[];
-extern s16 D_800F8BC0[]; //more spaceIDs
-extern s16 D_800F8BD0[]; //spaceIDs
-extern s16 D_800F8BE0[];
+// extern s32 D_800F8BF0[];
+// extern s16 D_800F8BC0[]; //more spaceIDs
+// extern s16 D_800F8BD0[]; //spaceIDs
+// extern s16 D_800F8BE0[];
 extern s16 D_800ED5CA;
 extern Vec3f D_800F9180;
 extern Vec3f D_800F918C;
@@ -41,30 +79,30 @@ extern event_table_entry D_800F9164;
 extern s16 D_800F8BF8[];
 extern unk_Struct03* D_800F91BC;
 extern unk_Struct03* D_800F91C0[];
-extern s16 D_800F8C08[];
-extern s16 D_800F8C34[];
+// extern s16 D_800F8C08[];
+// extern s16 D_800F8C34[];
 extern unk_Struct03* D_800F91DC;
 extern unk_Struct03* D_800F91E0[];
-extern s16 D_800F8C38[];
+// extern s16 D_800F8C38[];
 extern unk_Struct03* D_800F91E4;
-extern s16 D_800EE320;
+// extern s16 D_800EE320;
 extern s32 D_800F91E8;
 extern s32 D_800F91EC;
 extern s32 D_800F91F0;
 extern s32 D_800F91F4;
 extern s16 D_800EE320;
-extern s32 D_800F91E8;
-extern s32 D_800F91EC;
-extern s32 D_800F91F0;
-extern s32 D_800F91F4;
-extern s16 D_800ED5DC;
-extern ProcessHeader D_800F8F68;
-extern ProcessHeader D_800F8F8C;
-extern ProcessHeader D_800F8FB0;
-extern ProcessHeader D_800F8FD4;
-extern ProcessHeader D_800F8FF8;
-extern s32 D_800F8BB0;
-extern void (*D_800F8D6C[16])();
+// extern s32 D_800F91E8;
+// extern s32 D_800F91EC;
+// extern s32 D_800F91F0;
+// extern s32 D_800F91F4;
+// extern s16 D_800ED5DC;
+// extern ProcessHeader D_800F8F68;
+// extern ProcessHeader D_800F8F8C;
+// extern ProcessHeader D_800F8FB0;
+// extern ProcessHeader D_800F8FD4;
+// extern ProcessHeader D_800F8FF8;
+// //extern s32 D_800F8BB0;
+// extern void (*D_800F8D6C[16])();
 
 void func_800F6D30_254BA0(void);
 void func_800F6D6C_254BDC(void);

@@ -897,8 +897,7 @@ segments:
       - [0x254450, c]
       - [0x254480, c]
       - [0x2569F0, .rodata, 254450]
-  - type: bin
-    start: 0x2569F0
+      - [0x256A20, .rodata, 254480]
   - type: code
     start: 0x256FF0
     vram: 0x800F65E0

@@ -1,6 +1,189 @@
 #include "common.h"
 #include "eternalStar.h"
 
+typedef struct EventTableEntry_ovl3D {
+    s16 unk_00;
+    s16 unk_02;
+    void* func;
+} EventTableEntry_ovl3D;
+
+typedef struct EventTable_ovl3D {
+    s16 spaceID;
+    EventTableEntry_ovl3D* unkData;
+} EventTable_ovl3D;
+
+typedef struct EventTableUnkStruct {
+    s16* unk_00;
+    s32* unk_04;
+    s16 unk_08;
+    s16 unk_0A;
+} EventTableUnkStruct;
+
+f32 D_800F8BB0_256A20[] = {0.0f, 0.0f, 320.0f, 240.0f};
+s16 D_800F8BC0_256A30[] = {0x0046, 0x0047, 0x0048, 0x0049, 0x004A, 0x004B, 0x004C};
+s16 D_800F8BD0_256A40[] = {0x0055, 0x0054, 0x0053, 0x0052, 0x0051, 0x0050, 0x004F};
+s16 D_800F8BE0_256A50[] = {0x0001, 0x0009, 0x0008, 0x0007, 0x0006, 0x0005, 0x0004};
+s32 D_800F8BF0_256A60[] = {0x00000001, 0x000A00E8};
+s16 D_800F8BF8_256A68[] = {0x0001, 0x0009, 0x0008, 0x0007, 0x0006, 0x0005, 0x0004, 0x0000};
+s16 D_800F8C08_256A78[] = {0x0046, 0x0047, 0x0048, 0x0049, 0x004A, 0x004B, 0x004C, 0x0000};
+my_struct D_800F8C18_256A88[] = {
+    {2, 8},
+    {-2, 2},
+    {3, -1},
+    {5, 0},
+    {7, 0},
+    {0, -5},
+    {4, -5}
+};
+s16 D_800F8C34_256AA4[] = {0};
+s32 D_800F8C38_256AA8[] = {0x00000001, 0x000A006C};
+s32 D_800F8C40_256AB0[] = {0x05000000, 0x00000001, 0x00005541, 0x05000000, 0x00000002, 0x00005A46, 0x05000000, 0x00000004, 0x00005F4B, 0x00000000, 0x00000000, 0x00006450};
+s32 D_800F8C70_256AE0[] = {0x05000000, 0x00000001, 0x00005041, 0x05000000, 0x00000002, 0x00005546, 0x05000000, 0x00000004, 0x00005A4B, 0x00000000, 0x00000000, 0x00005F55};
+s32 D_800F8CA0_256B10[] = {0x05000000, 0x00000001, 0x00004650, 0x05000000, 0x00000002, 0x00004B55, 0x05000000, 0x00000004, 0x0000505A, 0x00000000, 0x00000000, 0x0000555F};
+s32 D_800F8CD0_256B40[] = {0x05000000, 0x00000001, 0x00005541, 0x05000000, 0x00000002, 0x00005041, 0x05000000, 0x00000004, 0x00004B3C, 0x00000000, 0x00000000, 0x00004637};
+s32 D_800F8D00_256B70[] = {0x05000000, 0x00000001, 0x00004B5A, 0x05000000, 0x00000002, 0x00004650, 0x05000000, 0x00000004, 0x00004146, 0x00000000, 0x00000000, 0x00003C3C};
+s32 D_800F8D30_256BA0[] = {0x05000000, 0x00000001, 0x0000141E, 0x05000000, 0x00000002, 0x00000A1E, 0x05000000, 0x00000004, 0x00000514, 0x00000000, 0x00000000, 0x0000000A};
+s32 D_800F8D60_256BD0[] = {0x00000000, 0x00000000, 0x00003232};
+s16 (*D_800F8D6C[16])() = {func_800F753C_2553AC, func_800F7564_2553D4, func_800F758C_2553FC, func_800F75B4_255424, func_800F75DC_25544C, func_800F753C_2553AC, func_800F7608_255478, func_800F7630_2554A0, func_800F7658_2554C8, func_800F7684_2554F4, func_800F753C_2553AC, func_800F76B0_255520, func_800F76D8_255548, func_800F7704_255574, func_800F7730_2555A0, func_800F753C_2553AC};
+s32 D_800F8DAC_256C1C[] = {0x05000000, 0x00000001, 0x00015541, 0x05000000, 0x00000002, 0x00015A46, 0x05000000, 0x00000004, 0x00015F4B, 0x00000000, 0x00000000, 0x00016450};
+s32 D_800F8DDC_256C4C[] = {0x06000000, func_800F7B6C_2559DC, 0x00016464, 0x00000000, 0x00000000, 0x00006464};
+s32 D_800F8DF4_256C64[] = {0x02000000, 0x00000004, D_800F8DAC_256C1C, 0x06000000, func_800F7BA0_255A10, 0x00016464, 0x00000000, 0x00000000, 0x00006464};
+s32 D_800F8E18_256C88[] = {0x06000000, func_800F7BD4_255A44, 0x00016464, 0x00000000, 0x00000000, 0x00006464};
+s32 D_800F8E30_256CA0[] = {0x02000000, 0x00000010, D_800F8DAC_256C1C, 0x06000000, func_800F7C08_255A78, 0x00016464, 0x00000000, 0x00000000, 0x00006464};
+s32 D_800F8E54_256CC4[] = {0x02000000, 0x00000040, D_800F8DAC_256C1C, 0x06000000, func_800F7C3C_255AAC, 0x00016464, 0x00000000, 0x00000000, 0x00006464};
+s32 D_800F8E78_256CE8[] = {0x00020002, 0x00020000};
+s32 D_800F8E80_256CF0[] = {0x000D000D, 0x000D0000};
+s32 D_800F8E88_256CF8[] = {0x0005000A, 0x00130000};
+s32 D_800F8E90_256D00[] = {0x00130005, 0x00060000};
+s32 D_800F8E98_256D08[] = {0x000A0014, 0x00110000};
+s32 D_800F8EA0_256D10[] = {0x00100013, 0x000A0000};
+s32 D_800F8EA8_256D18[] = {0x00140010, 0x00140000};
+s32 D_800F8EB0_256D20[] = {0x00110011, 0x00100000};
+s32 D_800F8EB8_256D28[] = {0x00130006, 0x00050000};
+s32 D_800F8EC0_256D30[] = {0x00060013, 0x00130000};
+s32 D_800F8EC8_256D38[] = {0x00130013, 0x00130000};
+s32 D_800F8ED0_256D40[] = {0x00130013, 0x00130000};
+s16* D_800F8ED8_256D48[] = {D_800F8E78_256CE8, D_800F8E80_256CF0, D_800F8E88_256CF8, D_800F8E90_256D00, D_800F8E98_256D08, D_800F8EA0_256D10, D_800F8EA8_256D18, D_800F8EB0_256D20, D_800F8EB8_256D28, D_800F8EC0_256D30, D_800F8EC8_256D38, D_800F8ED0_256D40};
+s16 D_800F8F08_256D78[] = {0x0042, 0x004D, 0x0044, 0x0045, 0x0049, 0x004A, 0x0062, 0x0063, 0x005E, 0x005F, 0x0060, 0x004B};
+
+EventTableEntry_ovl3D D_800F8F20_256D90[] = {
+    {1, 2, func_800F8130_255FA0},
+    {0, 0, 0}
+};
+
+EventTableEntry_ovl3D D_800F8F30_256DA0[] = {
+    {1, 2, func_800F8240_2560B0},
+    {2, 2, func_800F8298_256108},
+    {0, 0, 0}
+};
+
+EventTableEntry_ovl3D D_800F8F48_256DB8[] = {
+    {3, 1, func_800F8514_256384},
+    {4, 2, func_800F8588_2563F8},
+    {0, 0, 0}
+};
+
+s16 D_800F8F60_256DD0[] = {0x0027, 0x003E, -1, 0};
+EventTableUnkStruct D_800F8F68_256DD8 = {D_800F8F60_256DD0, D_800F8DDC_256C4C, 0x0001, 0x0000};
+
+EventTableEntry_ovl3D D_800F8F74_256DE4[] = {
+    {1, 2, func_800F88EC_25675C},
+    {0, 0, 0}
+};
+
+s16 D_800F8F84_256DF4[] = {0x0029, 0x0026, -1, 0};
+EventTableUnkStruct D_800F8F8C_256DFC = {D_800F8F84_256DF4, D_800F8DF4_256C64, 3, 4};
+
+EventTableEntry_ovl3D D_800F8F98_256E08[] = {
+    {1, 2, func_800F8914_256784},
+    {0, 0, 0}
+};
+
+s16 D_800F8FA8_256E18[] = {0x0049, 0x0036, -1, 0};
+EventTableUnkStruct D_800F8FB0_256E20 = {D_800F8FA8_256E18, D_800F8E18_256C88, 0x0009, 0x0008};
+
+
+EventTableEntry_ovl3D D_800F8FBC_256E2C[] = {
+    {1, 2, func_800F893C_2567AC},
+    {0, 0, 0}
+};
+
+s16 D_800F8FCC_256E3C[] = {0x0063, 0x001F, -1, 0};
+EventTableUnkStruct D_800F8FD4_256E44 = {D_800F8FCC_256E3C, D_800F8E30_256CA0, 0x000C, 0x000B};
+
+EventTableEntry_ovl3D D_800F8FE0_256E50[] = {
+    {1, 2, func_800F8964_2567D4},
+    {0, 0, 0}
+};
+
+s16 D_800F8FF0_256E60[] = {16, 15, -1, 0};
+EventTableUnkStruct D_800F8FF8_256E68 = {D_800F8FF0_256E60, D_800F8E54_256CC4, 0x000F, 0x000E};
+
+EventTableEntry_ovl3D D_800F9004_256E74[] = {
+    {1, 2, func_800F898C_2567FC},
+    {0, 0, 0}
+};
+
+EventTableEntry_ovl3D D_800F9014_256E84[] = {
+    {1, 1, func_800F89B4_256824},
+    {0, 0, 0}
+};
+
+EventTableEntry_ovl3D D_800F9024_256E94[] = {
+    {1, 1, func_800F89D8_256848},
+    {0, 0, 0}
+};
+
+EventTableEntry_ovl3D D_800F9034_256EA4[] = {
+    {1, 1, func_800F89FC_25686C},
+    {0, 0, 0}
+};
+
+EventTableEntry_ovl3D D_800F9044_256EB4[] = {
+    {1, 1, func_800F8A30_2568A0},
+    {3, 1, func_800F8A94_256904},
+    {0, 0, 0}
+};
+
+EventTable_ovl3D D_800F905C_256ECC[] = {
+    {0x0055, &D_800F9044_256EB4},
+    {0x0054, &D_800F9044_256EB4},
+    {0x0053, &D_800F9044_256EB4},
+    {0x0052, &D_800F9044_256EB4},
+    {0x0051, &D_800F9044_256EB4},
+    {0x0050, &D_800F9044_256EB4},
+    {0x004F, &D_800F9044_256EB4},
+    {0x0042, &D_800F8F20_256D90},
+    {0x004D, &D_800F8F20_256D90},
+    {0x0044, &D_800F8F20_256D90},
+    {0x0045, &D_800F8F20_256D90},
+    {0x0049, &D_800F8F20_256D90},
+    {0x004A, &D_800F8F20_256D90},
+    {0x0062, &D_800F8F20_256D90},
+    {0x0063, &D_800F8F20_256D90},
+    {0x005E, &D_800F8F20_256D90},
+    {0x005F, &D_800F8F20_256D90},
+    {0x0060, &D_800F8F20_256D90},
+    {0x004B, &D_800F8F20_256D90},
+    {0x002A, &D_800F8F48_256DB8},
+    {0x0034, &D_800F8F48_256DB8},
+    {0x000E, &D_800F8F48_256DB8},
+    {0x001A, &D_800F8F48_256DB8},
+    {0x0059, &D_800F8F74_256DE4},
+    {0x005C, &D_800F8F98_256E08},
+    {0x0035, &D_800F8FBC_256E2C},
+    {0x005B, &D_800F8FE0_256E50},
+    {0x005A, &D_800F9004_256E74},
+    {0x000A, &D_800F9014_256E84},
+    {0x002C, &D_800F9024_256E94},
+    {0x002E, &D_800F9024_256E94},
+    {0x0057, &D_800F8F30_256DA0},
+    {0xFFFF, 0x00000000},
+    {0x0056, &D_800F9034_256EA4},
+    {0xFFFF, 0x00000000},
+    {0x0000, 0x00000000}
+};
+
 void func_8004DBD4(s32, u8);
 
 s16 func_800F6610_254480(void) {
@@ -8,11 +191,11 @@ s16 func_800F6610_254480(void) {
     s32 i;
 
     for (i = 0; i < 7; i++) {
-        if (curSpaceIndex == D_800F8BD0[i]) {
-            return D_800F8BE0[i];
+        if (curSpaceIndex == D_800F8BD0_256A40[i]) {
+            return D_800F8BE0_256A50[i];
         }
     }
-    return D_800F8BE0[0];
+    return D_800F8BE0_256A50[0];
 }
 
 void func_800F667C_2544EC(void) {
@@ -38,10 +221,10 @@ void func_800F671C_25458C(void) {
     s32 i;
 
     for (i = 0; i < 7; i++) {
-        if (IsBoardFeatureFlagSet(D_800F8BC0[i])) {
-            SetSpaceType(D_800F8BD0[i], 6);
+        if (IsBoardFeatureFlagSet(D_800F8BC0_256A30[i])) {
+            SetSpaceType(D_800F8BD0_256A40[i], 6);
         } else {
-            SetSpaceType(D_800F8BD0[i], 5);
+            SetSpaceType(D_800F8BD0_256A40[i], 5);
         }
     }
 }
@@ -51,13 +234,13 @@ s16 func_800F67AC_25461C(s16 arg0) {
     s32 i;
     
     for (i = 0; i < 7; i++) {
-        if (arg0 != D_800F8BD0[i]) {
+        if (arg0 != D_800F8BD0_256A40[i]) {
             continue;
         } else {
-            if (IsBoardFeatureFlagSet(D_800F8BC0[i]) != 0) {
+            if (IsBoardFeatureFlagSet(D_800F8BC0_256A30[i]) != 0) {
                 return 2;
             } else {
-                gameStatus->unk_1A = D_800F8BC0[i];
+                gameStatus->unk_1A = D_800F8BC0_256A30[i];
                 return 1;
             }
         }
@@ -150,7 +333,7 @@ void func_800F6BD8_254A48(void) {
     ProcessHeader* temp_s0;
 
     func_80060128(0x30);
-    temp_s0 = func_800F68E4_254754(D_800F8BF0);
+    temp_s0 = func_800F68E4_254754(D_800F8BF0_256A60);
     SetFadeInTypeAndTime(2, 0x10);
 
     while (func_80072718() != 0) {
@@ -254,7 +437,7 @@ void func_800F6F68_254DD8(void) {
     func_80060128(0xF);
     InitCameras(2);
     func_800F6E34_254CA4();
-    EventTableHydrate(&D_800F905C);
+    EventTableHydrate(&D_800F905C_256ECC);
     
     if (IsBoardFeatureFlagSet(0xF) == 0) {
         EventTableHydrate(&D_800F9164);
@@ -302,9 +485,9 @@ void func_800F709C_254F0C(s16 arg0) {
 
         D_800F91C0[arg0] = var_s2;
         func_8004CDCC(var_s2);
-        space = GetSpaceData(D_800F8BF8[arg0]);
+        space = GetSpaceData(D_800F8BF8_256A68[arg0]);
         func_800A0D50(&var_s2->coords, &space->coords);
-        func_8003C314(0xA, var_s2, D_800F8C18[arg0].unk0, D_800F8C18[arg0].unk2);
+        func_8003C314(0xA, var_s2, D_800F8C18_256A88[arg0].unk0, D_800F8C18_256A88[arg0].unk2);
     }
 }
 
@@ -314,7 +497,7 @@ void func_800F719C_25500C(void) {
 
     for (i = 0; i < 7; i++) {
         D_800F91C0[i] = NULL;
-        if (IsBoardFeatureFlagSet(D_800F8C08[i]) == 0) {
+        if (IsBoardFeatureFlagSet(D_800F8C08_256A78[i]) == 0) {
             func_800F709C_254F0C(i);
         }
     }
@@ -335,7 +518,7 @@ void func_800F7224_255094(s16 arg0) {
         var_s1->unk_0A |= 2;
         func_800A0D00(&var_s1->xScale, 0.6f, 0.6f, 0.6f);
         var_s1->unk_30 = 100.0f;
-        func_800A0D50(&var_s1->coords, &(GetSpaceData(D_800F8C34[arg0])->coords) );
+        func_800A0D50(&var_s1->coords, &(GetSpaceData(D_800F8C34_256AA4[arg0])->coords) );
         func_8003C314(8, var_s1, 0, 0);
     }
 }
@@ -344,7 +527,7 @@ void func_800F732C_25519C(void) {
     s32 i;
     D_800F91DC = 0;
     
-    for (i = 0; i <= 0; i++) {
+    for (i = 0; i < 1; i++) {
         func_800F7224_255094(i);
     }
 }
@@ -353,7 +536,7 @@ void func_800F736C_2551DC(void) {
     unk_Struct03* temp_s0;
 
     if (D_800F91E4 == NULL) {
-        temp_s0 = func_8003DBE0(0x3B, &D_800F8C38);
+        temp_s0 = func_8003DBE0(0x3B, &D_800F8C38_256AA8);
         func_8003E174(temp_s0);
         D_800F91E4 = temp_s0;
         temp_s0->unk_0A |= 2;
@@ -367,7 +550,6 @@ void func_800F73F0_255260(void) {
     Process* process;
     Vec3f sp10;
     
-
     while (func_80072718() != 0) {
         SleepVProcess();
     }
@@ -399,55 +581,55 @@ void func_800F74D4_255344(void) {
 }
 
 s16 func_800F753C_2553AC(void) {
-    return RunDecisionTree(&D_800F8D60);
+    return RunDecisionTree(&D_800F8D60_256BD0);
 }
 
 s16 func_800F7564_2553D4(void) {
-    return RunDecisionTree(&D_800F8C40);
+    return RunDecisionTree(&D_800F8C40_256AB0);
 }
 
 s16 func_800F758C_2553FC(void) {
-    return RunDecisionTree(&D_800F8C70);
+    return RunDecisionTree(&D_800F8C70_256AE0);
 }
 
 s16 func_800F75B4_255424(void) {
-    return RunDecisionTree(&D_800F8CA0);
+    return RunDecisionTree(&D_800F8CA0_256B10);
 }
 
 s16 func_800F75DC_25544C(void) {
-    return RunDecisionTree(&D_800F8C40) ^ 1;
+    return RunDecisionTree(&D_800F8C40_256AB0) ^ 1;
 }
 
 s16 func_800F7608_255478(void) {
-    return RunDecisionTree(&D_800F8CD0);
+    return RunDecisionTree(&D_800F8CD0_256B40);
 }
 
 s16 func_800F7630_2554A0(void) {
-    return RunDecisionTree(&D_800F8D00);
+    return RunDecisionTree(&D_800F8D00_256B70);
 }
 
 s16 func_800F7658_2554C8(void) {
-    return RunDecisionTree(&D_800F8C70) ^ 1;
+    return RunDecisionTree(&D_800F8C70_256AE0) ^ 1;
 }
 
 s16 func_800F7684_2554F4(void) {
-    return RunDecisionTree(&D_800F8CD0) ^ 1;
+    return RunDecisionTree(&D_800F8CD0_256B40) ^ 1;
 }
 
 s16 func_800F76B0_255520(void) {
-    return RunDecisionTree(&D_800F8D30);
+    return RunDecisionTree(&D_800F8D30_256BA0);
 }
 
 s16 func_800F76D8_255548(void) {
-    return RunDecisionTree(&D_800F8CA0) ^ 1;
+    return RunDecisionTree(&D_800F8CA0_256B10) ^ 1;
 }
 
 s16 func_800F7704_255574(void) {
-    return RunDecisionTree(&D_800F8D00) ^ 1;
+    return RunDecisionTree(&D_800F8D00_256B70) ^ 1;
 }
 
 s16 func_800F7730_2555A0(void) {
-    return RunDecisionTree(&D_800F8D30) ^ 1;
+    return RunDecisionTree(&D_800F8D30_256BA0) ^ 1;
 }
 
 s32 func_800F775C_2555CC(void) {
@@ -740,7 +922,7 @@ void func_800F8130_255FA0(void) {
     s32 i;
 
     for (i = 0; i < 12; i++) {
-        if (D_800F8F08[i] != curSpaceIndex) {
+        if (D_800F8F08_256D78[i] != curSpaceIndex) {
             continue;
         } else {
             while (func_8004B850() != 0) {
@@ -749,7 +931,7 @@ void func_800F8130_255FA0(void) {
             
             D_800ED154.unk_00[i] = 1;
 
-            SetNextChainAndSpace(-1, D_800F8ED8[i][D_800ED154.unk_1C], 0);
+            SetNextChainAndSpace(-1, D_800F8ED8_256D48[i][D_800ED154.unk_1C], 0);
             func_800405DC(player->playerIndex);
             func_800F7F7C_255DEC();
             func_8003FEFC(player->playerIndex);
@@ -939,27 +1121,27 @@ void func_800F87E4_256654(ProcessHeader* arg0) {
 }
 
 void func_800F88EC_25675C(void) {
-    func_800F87E4_256654(&D_800F8F68);
+    func_800F87E4_256654(&D_800F8F68_256DD8);
     EndProcess(NULL);
 }
 
 void func_800F8914_256784(void) {
-    func_800F87E4_256654(&D_800F8F8C);
+    func_800F87E4_256654(&D_800F8F8C_256DFC);
     EndProcess(NULL);
 }
 
 void func_800F893C_2567AC(void) {
-    func_800F87E4_256654(&D_800F8FB0);
+    func_800F87E4_256654(&D_800F8FB0_256E20);
     EndProcess(NULL);
 }
 
 void func_800F8964_2567D4(void) {
-    func_800F87E4_256654(&D_800F8FD4);
+    func_800F87E4_256654(&D_800F8FD4_256E44);
     EndProcess(NULL);
 }
 
 void func_800F898C_2567FC(void) {
-    func_800F87E4_256654(&D_800F8FF8);
+    func_800F87E4_256654(&D_800F8FF8_256E68);
     EndProcess(NULL);
 }
 
@@ -998,7 +1180,7 @@ void func_800F8A94_256904(void) {
 
 void func_800F8B20_256990(void) {
     InitCameras(2);
-    func_8001D4D4(1, &D_800F8BB0);
+    func_8001D4D4(1, &D_800F8BB0_256A20);
     func_800F6E34_254CA4();
     func_800584F0(2);
     InitProcess(&func_800F6BD8_254A48, 0x1005, 0, 0);
