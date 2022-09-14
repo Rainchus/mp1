@@ -105,7 +105,7 @@ extern s16 D_800EE320;
 // extern void (*D_800F8D6C[16])();
 
 void func_800F6D30_254BA0(void);
-void func_800F6D6C_254BDC(void);
+void InitBoard(void);
 void func_800F6F68_254DD8(void);
 void func_800F7070_254EE0(void);
 void func_800F8B20_256990(void);

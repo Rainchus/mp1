@@ -21,4 +21,6 @@ obj->coords.y = vec3f.y; \
 obj->coords.z = vec3f.z;
 #endif
 
+#define ARRAY_COUNT(arr) (s32)(sizeof(arr) / sizeof(arr[0]))
+
 #endif

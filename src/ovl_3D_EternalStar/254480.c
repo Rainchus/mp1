@@ -25,7 +25,7 @@ s16 D_800F8BD0_256A40[] = {0x0055, 0x0054, 0x0053, 0x0052, 0x0051, 0x0050, 0x004
 s16 D_800F8BE0_256A50[] = {0x0001, 0x0009, 0x0008, 0x0007, 0x0006, 0x0005, 0x0004};
 s32 D_800F8BF0_256A60[] = {0x00000001, 0x000A00E8};
 s16 D_800F8BF8_256A68[] = {0x0001, 0x0009, 0x0008, 0x0007, 0x0006, 0x0005, 0x0004, 0x0000};
-s16 D_800F8C08_256A78[] = {0x0046, 0x0047, 0x0048, 0x0049, 0x004A, 0x004B, 0x004C, 0x0000};
+s16 D_800F8C08_256A78[] = {0x0046, 0x0047, 0x0048, 0x0049, 0x004A, 0x004B, 0x004C};
 my_struct D_800F8C18_256A88[] = {
     {2, 8},
     {-2, 2},
@@ -190,7 +190,7 @@ s16 func_800F6610_254480(void) {
     s16 curSpaceIndex = GetCurrentSpaceIndex();
     s32 i;
 
-    for (i = 0; i < 7; i++) {
+    for (i = 0; i < ARRAY_COUNT(D_800F8BE0_256A50); i++) {
         if (curSpaceIndex == D_800F8BD0_256A40[i]) {
             return D_800F8BE0_256A50[i];
         }
@@ -210,7 +210,7 @@ void func_800F667C_2544EC(void) {
 
 void func_800F66C8_254538(void) {
     D_800ED5CA++;
-    if (D_800ED5CA >= 7) {
+    if (D_800ED5CA >= ARRAY_COUNT(D_800F8BE0_256A50)) {
         D_800ED5CA = 0;
         SetBoardFeatureFlag(0x44);
         func_800F667C_2544EC();
@@ -220,7 +220,7 @@ void func_800F66C8_254538(void) {
 void func_800F671C_25458C(void) {
     s32 i;
 
-    for (i = 0; i < 7; i++) {
+    for (i = 0; i < ARRAY_COUNT(D_800F8BD0_256A40); i++) {
         if (IsBoardFeatureFlagSet(D_800F8BC0_256A30[i])) {
             SetSpaceType(D_800F8BD0_256A40[i], 6);
         } else {
@@ -233,7 +233,7 @@ s16 func_800F67AC_25461C(s16 arg0) {
     GameStatus* gameStatus = &D_800ED5C0;
     s32 i;
     
-    for (i = 0; i < 7; i++) {
+    for (i = 0; i < ARRAY_COUNT(D_800F8BD0_256A40); i++) {
         if (arg0 != D_800F8BD0_256A40[i]) {
             continue;
         } else {
@@ -382,7 +382,7 @@ void func_800F6D30_254BA0(void) {
     func_8005E044(0x35, 0, 0x92);
 }
 
-void func_800F6D6C_254BDC(void) {
+void InitBoard(void) {
     InitObjSystem(0xA, 0);
     SetPlayerOntoChain(0, 0x12, 0);
     SetPlayerOntoChain(1, 0x12, 0);
@@ -412,18 +412,22 @@ void func_800F6E34_254CA4(void) {
     func_80052E84(1);
     func_80052E84(2);
     func_80052E84(3);
+    
     for (i = 0; i < 4; i++) {
         temp_s0 = GetPlayerStruct(i);
         func_8003E174(temp_s0->playerObj);
         temp_s0->playerObj->unk_0A |= 2;
     }
+
     if (IsBoardFeatureFlagSet(0x4E) != 0) {
         ClearBoardFeatureFlag(0x4E);
         func_800F66C8_254538();
     }
+
     func_800F671C_25458C();
     func_800F74D4_255344();
     func_800F719C_25500C();
+
     if (IsBoardFeatureFlagSet(0xF) == 0) {
         func_800F732C_25519C();
     }
@@ -495,7 +499,7 @@ void func_800F719C_25500C(void) {
     s32 i;
     D_800F91BC = 0;
 
-    for (i = 0; i < 7; i++) {
+    for (i = 0; i < ARRAY_COUNT(D_800F8C08_256A78); i++) {
         D_800F91C0[i] = NULL;
         if (IsBoardFeatureFlagSet(D_800F8C08_256A78[i]) == 0) {
             func_800F709C_254F0C(i);
@@ -527,7 +531,7 @@ void func_800F732C_25519C(void) {
     s32 i;
     D_800F91DC = 0;
     
-    for (i = 0; i < 1; i++) {
+    for (i = 0; i < ARRAY_COUNT(D_800F8C34_256AA4); i++) {
         func_800F7224_255094(i);
     }
 }
@@ -733,7 +737,7 @@ s32 func_800F79BC_25582C(void) {
             }
             break;
         case 2:
-            if ( IsBoardFeatureFlagSet(0x4B) == 0) {
+            if (IsBoardFeatureFlagSet(0x4B) == 0) {
                 return 0;
             }
             break;
@@ -888,7 +892,7 @@ void func_800F7F7C_255DEC(void) {
     SpaceData* space;
     playerMain* player = GetPlayerStruct(-1);
 
-    player->playerObj->unk_0A &= 0xFFFD;
+    player->playerObj->unk_0A &= ~2;
     func_8003E664(player->playerObj);
     temp_s3 = func_800F7D6C_255BDC(-1);
     temp_s1 = func_8003DBE0(0x4C, NULL);
@@ -993,6 +997,7 @@ void func_800F8298_256108(void) {
             break;
         }
     }
+    
     func_800F7F4C_255DBC();
     textWindowID = CreateTextWindow(0x4C, 0x3C, 0xE, 3);
     
