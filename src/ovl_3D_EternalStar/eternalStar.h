@@ -2,6 +2,13 @@
 
 //start of rodata 800F8B80
 
+typedef struct {
+    /* 0x0 */ s16 unk0;
+    /* 0x2 */ s16 unk2;
+} my_struct; // size 0x4
+
+extern my_struct D_800F8C18[]; // tbd how big it is :)
+
 extern s16* D_800F8ED8[];
 extern s16 D_800F8F08[];
 extern unkStructTest D_800ED154;
@@ -32,8 +39,6 @@ extern f32 D_800F91B4;
 extern event_table_entry D_800F905C;
 extern event_table_entry D_800F9164;
 extern s16 D_800F8BF8[];
-extern s32 D_800F8C18[]; //should be s16 array but size of 1?
-extern s32 D_800F8C1A[]; //should be s16 array but size of 1?
 extern unk_Struct03* D_800F91BC;
 extern unk_Struct03* D_800F91C0[];
 extern s16 D_800F8C08[];

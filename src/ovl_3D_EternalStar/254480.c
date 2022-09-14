@@ -285,26 +285,26 @@ void func_800F7070_254EE0(void) {
     func_800584F0(1);
 }
 
-void func_800F709C_254F0C(s16 arg0) { //fake match
+void func_800F709C_254F0C(s16 arg0) {
     unk_Struct03* var_s2;
     SpaceData* space;
-    s16 temp;
 
     if (D_800F91C0[arg0] == 0) {
         if (D_800F91BC == NULL) {
-            var_s2 = func_8003DBE0(0x79U, NULL);
+            var_s2 = func_8003DBE0(0x79, NULL);
             func_8003E174(var_s2);
             D_800F91BC = var_s2;
         } else {
             var_s2 = func_8003E320(D_800F91BC);
         }
+        
         var_s2->unk_0A |= 2;
-        temp = arg0;
+
         D_800F91C0[arg0] = var_s2;
         func_8004CDCC(var_s2);
-        space = GetSpaceData(D_800F8BF8[temp]);
+        space = GetSpaceData(D_800F8BF8[arg0]);
         func_800A0D50(&var_s2->coords, &space->coords);
-        func_8003C314(0xA, var_s2, (s16)(D_800F8C18[temp] >> 16 ), (s16)(D_800F8C1A[temp] >> 16)); //wtf
+        func_8003C314(0xA, var_s2, D_800F8C18[arg0].unk0, D_800F8C18[arg0].unk2);
     }
 }
 
