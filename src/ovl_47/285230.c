@@ -53,11 +53,11 @@ void func_800F6CBC_28590C(Object* obj) {
 
 void func_800F6D1C_28596C(void) {
     func_8003DAA8();
-    D_800F6F24 = func_8003DBE0(10, &D_800F6F08);
+    D_800F6F24 = CreateObject(10, &D_800F6F08);
     D_800F6F24->coords.x = D_800F6EE4.x;
     D_800F6F24->coords.y = D_800F6EE4.y;
     D_800F6F24->coords.z = D_800F6EE4.z;
-    D_800F6F28 = func_8003DBE0(func_80052F04(D_800F6F20), NULL);
+    D_800F6F28 = CreateObject(func_80052F04(D_800F6F20), NULL);
     D_800F6F28->coords.x = D_800F6EFC.x;
     D_800F6F28->coords.y = D_800F6EFC.y;
     D_800F6F28->coords.z = D_800F6EFC.z;

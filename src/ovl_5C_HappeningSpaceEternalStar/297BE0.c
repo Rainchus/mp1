@@ -75,7 +75,7 @@ void func_800F67E0_297DE0(Object* arg0) {
 void func_800F6824_297E24(void) {
     func_8003DAA8();
     func_8004F2AC();
-    D_800F69B4 = func_8003DBE0(6, &D_800F699C_297F9C);
+    D_800F69B4 = CreateObject(6, &D_800F699C_297F9C);
     D_800F69B4->coords.x = D_800F6990_297F90.x;
     D_800F69B4->coords.y = D_800F6990_297F90.y;
     D_800F69B4->coords.z = D_800F6990_297F90.z;

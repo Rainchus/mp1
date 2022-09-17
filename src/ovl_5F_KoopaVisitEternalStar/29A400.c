@@ -89,16 +89,16 @@ void func_800F6988_29A7A8(Object* arg0) {
 void func_800F69CC_29A7EC(void) {
     func_8003DAA8();
     if (IsBoardFeatureFlagSet(0x2C) == 0) {
-        D_800F6D14 = func_8003DBE0(8, NULL);
+        D_800F6D14 = CreateObject(8, NULL);
         func_8004F140(*D_800F6D14->unk_3C->unk_40);
     } else {
-        D_800F6D14 = func_8003DBE0(0x83, NULL);
+        D_800F6D14 = CreateObject(0x83, NULL);
     }
 
     D_800F6D14->coords.x = D_800F6C94.x;
     D_800F6D14->coords.y = D_800F6C94.y;
     D_800F6D14->coords.z = D_800F6C94.z;
-    D_800F6D18 = func_8003DBE0(func_80052F04(D_800F6D11) & 0xFF, D_800F6CDC[gPlayers[D_800F6D11].characterID]);
+    D_800F6D18 = CreateObject(func_80052F04(D_800F6D11) & 0xFF, D_800F6CDC[gPlayers[D_800F6D11].characterID]);
     D_800F6D18->coords.x = D_800F6CA0.x;
     D_800F6D18->coords.y = D_800F6CA0.y;
     D_800F6D18->coords.z = D_800F6CA0.z;

@@ -145,7 +145,7 @@ u8 RNGPercentChance(s8 arg0) {
     return arg0 > ((GetRandomByte() * 99) >> 8);
 }
 
-s16 GetTurnsRemaining(void) {
+s16 GetTurnsElapsed(void) {
     GameStatus* gameStatus = &D_800ED5C0;
     return gameStatus->maxTurns - gameStatus->currentTurn + 1;
 }

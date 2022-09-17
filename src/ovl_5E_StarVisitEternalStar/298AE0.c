@@ -94,12 +94,12 @@ void func_800F7A90_299F90(void) {
     func_8004F2AC();
     func_8004F8DC();
     D_800F7F0C = func_8004F954(0x26, 0x20);
-    D_800F7F04 = func_8003DBE0(0x78, &D_800F7DF8);
+    D_800F7F04 = CreateObject(0x78, &D_800F7DF8);
     D_800F7F04->coords.x = D_800F7DD4.x;
     D_800F7F04->coords.y = D_800F7DD4.y;
     D_800F7F04->coords.z = D_800F7DD4.z;
     D_800F7F04->xScale = D_800F7F04->yScale = D_800F7F04->zScale = 1.5f;
-    D_800F7F08 = func_8003DBE0(func_80052F04(D_800F7F00), D_800F7EB4[gPlayers[D_800F7F00].characterID]);
+    D_800F7F08 = CreateObject(func_80052F04(D_800F7F00), D_800F7EB4[gPlayers[D_800F7F00].characterID]);
     D_800F7F08->coords.x = D_800F7DE0.x;
     D_800F7F08->coords.y = D_800F7DE0.y;
     D_800F7F08->coords.z = D_800F7DE0.z;

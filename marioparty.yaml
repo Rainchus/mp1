@@ -1292,8 +1292,8 @@ segments:
   - type: code
     start: 0x2A2500
     vram: 0x800F65E0
-    dir: ovl_62
-    name: name_62
+    dir: ovl_62_board_intro
+    name: BoardIntro
     overlay: True
     exclusive_ram_id: minigame
     subsegments:

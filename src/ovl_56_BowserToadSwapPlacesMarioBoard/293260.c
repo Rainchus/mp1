@@ -142,16 +142,16 @@ void func_800F6AC8_293748(Object* arg0) {
 
 void func_800F6B1C_29379C(void) {
     func_8003DAA8();
-    D_800F6DFC = func_8003DBE0(20, NULL);
+    D_800F6DFC = CreateObject(20, NULL);
     VEC3F_COPY_TO_OBJ(D_800F6DFC, D_800F6DB0_293A30);
     D_800F6DFC->xScale = D_800F6DFC->yScale = D_800F6DFC->zScale = 1.5f;
     func_80025F60(*D_800F6DFC->unk_3C->unk_40, 0);
-    D_800F6DF4 = func_8003DBE0(108, D_800F6DC8_293A48);
+    D_800F6DF4 = CreateObject(108, D_800F6DC8_293A48);
     D_800F6DF4->coords.x = D_800F6DBC_293A3C.x;
     D_800F6DF4->coords.y = D_800F6DBC_293A3C.y;
     D_800F6DF4->coords.z = D_800F6DBC_293A3C.z + 200.0f;
     D_800F6DF4->xScale = D_800F6DF4->yScale = D_800F6DF4->zScale = 1.5f;
-    D_800F6DF8 = func_8003DBE0(7, D_800F6DD0_293A54);
+    D_800F6DF8 = CreateObject(7, D_800F6DD0_293A54);
     D_800F6DF8->coords.x = D_800F6DBC_293A3C.x;
     D_800F6DF8->coords.y = D_800F6DBC_293A3C.y;
     D_800F6DF8->coords.z = D_800F6DBC_293A3C.z + 200.0f;

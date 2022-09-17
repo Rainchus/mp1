@@ -134,7 +134,7 @@ void func_80052DC8(s16 index, void *param_2) {
         character = player->characterID;
     }
 
-    player->playerObj = func_8003DBE0(character, param_2);
+    player->playerObj = CreateObject(character, param_2);
 
     process = InitProcess(func_80052D34, 0x5000, 0, 0);
     player->process = process;

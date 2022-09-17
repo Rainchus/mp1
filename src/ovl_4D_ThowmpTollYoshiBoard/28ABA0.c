@@ -113,12 +113,12 @@ void func_800F73BC_28B97C(Object* arg0) {
 
 void func_800F741C_28B9DC(void) {
     func_8003DAA8();
-    D_800F76B4 = func_8003DBE0(13, NULL);
+    D_800F76B4 = CreateObject(13, NULL);
     D_800F76B4->coords.x = D_800F7624.x;
     D_800F76B4->coords.y = D_800F7624.y;
     D_800F76B4->coords.z = D_800F7624.z;
     func_800A0D00(&D_800F76B4->xScale, 2.0f, 2.0f, 2.0f);
-    D_800F76B8 = func_8003DBE0(func_80052F04(D_800F76B0), D_800F7678[gPlayers[D_800F76B0].characterID]);
+    D_800F76B8 = CreateObject(func_80052F04(D_800F76B0), D_800F7678[gPlayers[D_800F76B0].characterID]);
     D_800F76B8->coords.x = D_800F7630.x;
     D_800F76B8->coords.y = D_800F7630.y;
     D_800F76B8->coords.z = D_800F7630.z;

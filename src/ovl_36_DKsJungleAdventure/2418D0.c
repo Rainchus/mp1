@@ -166,7 +166,7 @@ void func_800F6A38_241CF8(void) {
     space_data = (GetCurrentProcess())->user_data;
 
     PlaySound(109);
-    ptr = func_8003DBE0(64, NULL);
+    ptr = CreateObject(64, NULL);
     ptr->unk_0A |= 4;
     func_8004CDCC(ptr);
     func_800A0D50(&ptr->coords, &space_data->coords);
@@ -435,7 +435,7 @@ void func_800F7250_242510(void) { //ov054_DrawBowserInner
         return;
     }
 
-    ptr = func_8003DBE0(0x3B, NULL);
+    ptr = CreateObject(0x3B, NULL);
     func_8003E174(ptr);
     D_800FA300 = ptr;
 
@@ -457,7 +457,7 @@ void func_800F72EC_2425AC(void) { //ov054_DrawKoopaInner
         return;
     }
 
-    ptr = func_8003DBE0(0x39, NULL);
+    ptr = CreateObject(0x39, NULL);
     func_8003E174(ptr);
     D_800FA304 = ptr;
 

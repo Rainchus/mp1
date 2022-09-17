@@ -95,11 +95,11 @@ void func_800F6918_28E368(void) {
     s32 sp18[2] = { 0xE, 0xF };
 
     func_8003DAA8();
-    D_800F6BE4 = func_8003DBE0(sp18[D_800ED154], NULL);
+    D_800F6BE4 = CreateObject(sp18[D_800ED154], NULL);
     D_800F6BE4->coords.x = D_800F6B20.x;
     D_800F6BE4->coords.y = D_800F6B20.y;
     D_800F6BE4->coords.z = D_800F6B20.z;
-    D_800F6BE8 = func_8003DBE0(func_80052F04(D_800F6BE0), D_800F6BBC[gPlayers[D_800F6BE0].characterID]);
+    D_800F6BE8 = CreateObject(func_80052F04(D_800F6BE0), D_800F6BBC[gPlayers[D_800F6BE0].characterID]);
     D_800F6BE8->coords.x = D_800F6B2C.x;
     D_800F6BE8->coords.y = D_800F6B2C.y;
     D_800F6BE8->coords.z = D_800F6B2C.z;

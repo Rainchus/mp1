@@ -91,13 +91,13 @@ void func_800F6978_29AEC8(Object* arg0) {
 
 void func_800F69BC_29AF0C(void) {
     func_8003DAA8();
-    D_800F6EC4 = func_8003DBE0(8, &D_800F6E7C);
+    D_800F6EC4 = CreateObject(8, &D_800F6E7C);
     D_800F6EC4->coords.x = D_800F6D50[D_800F6EC0].x;
     D_800F6EC4->coords.y = D_800F6D50[D_800F6EC0].y;
     D_800F6EC4->coords.z = D_800F6D50[D_800F6EC0].z;
     D_800F6EC4->unk_30 = 1000.0f;
     func_8004F140(*D_800F6EC4->unk_3C->unk_40);
-    D_800F6EC8 = func_8003DBE0(func_80052F04(D_800F6EC1), ptr_800F6E64[gPlayers[D_800F6EC1].characterID]);
+    D_800F6EC8 = CreateObject(func_80052F04(D_800F6EC1), ptr_800F6E64[gPlayers[D_800F6EC1].characterID]);
     D_800F6EC8->coords.x = D_800F6DB0[D_800F6EC0].x;
     D_800F6EC8->coords.y = D_800F6DB0[D_800F6EC0].y;
     D_800F6EC8->coords.z = D_800F6DB0[D_800F6EC0].z;

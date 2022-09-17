@@ -135,7 +135,7 @@ void func_800F66B4_289C74(void) {
         func_800503B0(D_800F75E0, 6);
         PlaySound(0x6D);
         PlaySound(0x44);
-        D_800F74FC = func_8003DBE0(0x40, NULL);
+        D_800F74FC = CreateObject(0x40, NULL);
         D_800F74FC->coords.x = D_800F752C.x;
         D_800F74FC->coords.y = D_800F752C.y + 200.0f;
         D_800F74FC->coords.z = D_800F752C.z;
@@ -184,7 +184,7 @@ void func_800F66B4_289C74(void) {
         D_800F74F0 = NULL;
         D_800F74F4 = NULL;
         func_800F7120_28A6E0();
-        D_800F75E4 = func_8003DBE0(func_80052F04(D_800ED154.unk_00[D_800ED154.unk_1A]), D_800F75A4[gPlayers[D_800ED154.unk_00[D_800ED154.unk_1A]].characterID]);
+        D_800F75E4 = CreateObject(func_80052F04(D_800ED154.unk_00[D_800ED154.unk_1A]), D_800F75A4[gPlayers[D_800ED154.unk_00[D_800ED154.unk_1A]].characterID]);
         D_800F75E4->coords.x = 0.0f;
         D_800F75E4->coords.y = D_800F752C.y;
         D_800F75E4->coords.z = D_800F752C.z;
@@ -281,20 +281,20 @@ void func_800F7120_28A6E0(void) {
 void func_800F718C_28A74C(void) {
     func_8003DAA8();
     func_8004F2AC();
-    D_800F74F0 = func_8003DBE0(0xC, &D_800F75BC);
+    D_800F74F0 = CreateObject(0xC, &D_800F75BC);
     func_800A0D00(&D_800F74F0->coords, D_800F7514.x, D_800F7514.y, D_800F7514.z);
     func_800A0D00(&D_800F74F0->unk_18, 1.0f, 0.0f, 0.0f);
-    D_800F74F8 = func_8003DBE0(0xB, NULL);
+    D_800F74F8 = CreateObject(0xB, NULL);
     D_800F74F8->coords.x = D_800F7544_28AB04.x;
     D_800F74F8->coords.y = D_800F7544_28AB04.y;
     D_800F74F8->coords.z = D_800F7544_28AB04.z;
     func_8004CCD0(&D_800F74F8->coords, &D_800F32A0->coords, &D_800F74F8->unk_18);
-    D_800F75E4 = func_8003DBE0(func_80052F04(D_800F75E0), D_800F75A4[gPlayers[D_800F75E0].characterID]);
+    D_800F75E4 = CreateObject(func_80052F04(D_800F75E0), D_800F75A4[gPlayers[D_800F75E0].characterID]);
     D_800F75E4->coords.x = D_800F752C.x;
     D_800F75E4->coords.y = D_800F752C.y;
     D_800F75E4->coords.z = D_800F752C.z;
     func_8004CCD0(&D_800F75E4->coords, &D_800F74F0->coords, &D_800F75E4->unk_18);
-    D_800F74F4 = func_8003DBE0((gPlayers[D_800ED154.unk_00[D_800ED154.unk_1A]].characterID + 0x1D), NULL);
+    D_800F74F4 = CreateObject((gPlayers[D_800ED154.unk_00[D_800ED154.unk_1A]].characterID + 0x1D), NULL);
     D_800F74F4->coords.x = D_800F7538.x;
     D_800F74F4->coords.y = D_800F7538.y;
     D_800F74F4->coords.z = D_800F7538.z;

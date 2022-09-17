@@ -29,7 +29,7 @@ void func_800F66FC_25710C(void) {
     unk_Struct03* temp_s0;
 
     if (D_800F8890 == NULL) {
-        temp_s0 = func_8003DBE0(0x3A, NULL);
+        temp_s0 = CreateObject(0x3A, NULL);
         func_8003E174(temp_s0);
         D_800F8890 = temp_s0;
         temp_s0->unk_0A |= 2;
@@ -47,7 +47,7 @@ void func_800F678C_25719C(void) {
     unk_Struct03* temp_s0;
 
     if (D_800F8894 == NULL) {
-        temp_s0 = func_8003DBE0(0x39, NULL);
+        temp_s0 = CreateObject(0x39, NULL);
         func_8003E174(temp_s0);
         D_800F8894 = temp_s0;
         temp_s0->unk_0A |= 2;
@@ -64,7 +64,7 @@ void func_800F6814_257224(void) {
     unk_Struct03* temp_s0;
 
     if (D_800F8898 == NULL) {
-        temp_s0 = func_8003DBE0(0x6AU, NULL);
+        temp_s0 = CreateObject(0x6AU, NULL);
         func_8003E174(temp_s0);
         D_800F8898 = temp_s0;
         temp_s0->unk_0A |= 2;
@@ -83,7 +83,7 @@ void func_800F68C4_2572D4(void) {
     unk_Struct03* temp_s0;
 
     if (D_800F889C == NULL) {
-        temp_s0 = func_8003DBE0(0x3BU, NULL);
+        temp_s0 = CreateObject(0x3BU, NULL);
         func_8003E174(temp_s0);
         D_800F889C = temp_s0;
         temp_s0->unk_0A |= 2;

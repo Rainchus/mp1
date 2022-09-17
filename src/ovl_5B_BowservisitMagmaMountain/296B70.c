@@ -78,7 +78,7 @@ void func_800F66C4_296C54(void) { //fix me: remove gotos
         func_800503B0(D_800F7650, 6);
         func_80060618(0x44A, D_800F7650);
         PlaySound(0x79);
-        D_800F7590 = func_8003DBE0(0x25, 0);
+        D_800F7590 = CreateObject(0x25, 0);
         D_800F7590->coords.x = D_800F75B8_297B48.x;
         D_800F7590->coords.y = D_800F75B8_297B48.y + 200.0f;
         D_800F7590->coords.z = D_800F75B8_297B48.z;
@@ -254,7 +254,7 @@ void func_800F7120_2976B0(void) {
 
     func_8003DAA8();
     func_8004F2AC();
-    D_800F7654 = func_8003DBE0(0x76U, NULL);
+    D_800F7654 = CreateObject(0x76U, NULL);
     func_80025B34(*D_800F7654->unk_3C->unk_40);
     VEC3F_COPY_TO_OBJ(D_800F7654, D_800F75A0_297B30);
     D_800F7654->xScale = D_800F7654->yScale = D_800F7654->zScale = 1.5f;
@@ -263,7 +263,7 @@ void func_800F7120_2976B0(void) {
     temp_s0->unk_18.x = func_80088060(0.10471976f);
     temp_s0_2 = D_800F7654;
     temp_s0_2->unk_18.z = func_800855C0(0.10471976f);
-    D_800F7658 = func_8003DBE0(6U, &D_800F75C4_297B54);
+    D_800F7658 = CreateObject(6U, &D_800F75C4_297B54);
     func_80025B34(*D_800F7658->unk_3C->unk_40);
     D_800F7658->coords.x = D_800F75A0_297B30.x;
     D_800F7658->coords.y = D_800F75A0_297B30.y;
@@ -272,7 +272,7 @@ void func_800F7120_2976B0(void) {
     func_80025F60(*D_800F7658->unk_3C->unk_40, 0);
     func_800258EC(*D_800F7658->unk_40->unk_40, 0x180, 0x80);
     func_80025AD4(*D_800F7658->unk_40->unk_40);
-    D_800F765C = func_8003DBE0(func_80052F04(D_800F7650), D_800F7620[gPlayers[D_800F7650].characterID]);
+    D_800F765C = CreateObject(func_80052F04(D_800F7650), D_800F7620[gPlayers[D_800F7650].characterID]);
     func_80025B34(*D_800F765C->unk_3C->unk_40);
     VEC3F_COPY_TO_OBJ(D_800F765C, D_800F75B8_297B48);
     func_8004CCD0(&D_800F765C->coords, &D_800F7658->coords, &D_800F765C->unk_18);

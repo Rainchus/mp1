@@ -80,7 +80,7 @@ void func_800F77D0_288490(void) {
     func_8003DAA8();
     func_8004F2AC();
     func_8004F548();
-    D_800F7BE4 = func_8003DBE0(0xB, NULL);
+    D_800F7BE4 = CreateObject(0xB, NULL);
 
     if (D_800C597A == 0) {
         D_800F7BE4->coords.x = D_800F7B04.x;
@@ -92,7 +92,7 @@ void func_800F77D0_288490(void) {
         D_800F7BE4->coords.z = D_800F7B04.z;
     }
 
-    D_800F7BE8 = func_8003DBE0(func_80052F04(D_800F7BE0), D_800F7B88[gPlayers[D_800F7BE0].characterID]);
+    D_800F7BE8 = CreateObject(func_80052F04(D_800F7BE0), D_800F7B88[gPlayers[D_800F7BE0].characterID]);
     D_800F7BE8->coords.x = D_800F7B1C.x;
     D_800F7BE8->coords.y = D_800F7B1C.y;
     D_800F7BE8->coords.z = D_800F7B1C.z;

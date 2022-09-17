@@ -534,4 +534,10 @@ typedef struct TextWindow {
 /* 0x144 */ char unk_154[0x138];
 } TextWindow; //sizeof 0x27C
 
+typedef struct DecisionTreeNonLeafNode {
+    u32 type;
+    u32 node_data;
+    u32 next_grouper_ptr;
+} DecisionTreeNonLeafNode;
+
 #endif

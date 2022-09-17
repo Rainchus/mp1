@@ -51,18 +51,18 @@ s32 D_800F8DF4_256C64[] = {0x02000000, 0x00000004, D_800F8DAC_256C1C, 0x06000000
 s32 D_800F8E18_256C88[] = {0x06000000, func_800F7BD4_255A44, 0x00016464, 0x00000000, 0x00000000, 0x00006464};
 s32 D_800F8E30_256CA0[] = {0x02000000, 0x00000010, D_800F8DAC_256C1C, 0x06000000, func_800F7C08_255A78, 0x00016464, 0x00000000, 0x00000000, 0x00006464};
 s32 D_800F8E54_256CC4[] = {0x02000000, 0x00000040, D_800F8DAC_256C1C, 0x06000000, func_800F7C3C_255AAC, 0x00016464, 0x00000000, 0x00000000, 0x00006464};
-s32 D_800F8E78_256CE8[] = {0x00020002, 0x00020000};
-s32 D_800F8E80_256CF0[] = {0x000D000D, 0x000D0000};
-s32 D_800F8E88_256CF8[] = {0x0005000A, 0x00130000};
-s32 D_800F8E90_256D00[] = {0x00130005, 0x00060000};
-s32 D_800F8E98_256D08[] = {0x000A0014, 0x00110000};
-s32 D_800F8EA0_256D10[] = {0x00100013, 0x000A0000};
-s32 D_800F8EA8_256D18[] = {0x00140010, 0x00140000};
-s32 D_800F8EB0_256D20[] = {0x00110011, 0x00100000};
-s32 D_800F8EB8_256D28[] = {0x00130006, 0x00050000};
-s32 D_800F8EC0_256D30[] = {0x00060013, 0x00130000};
-s32 D_800F8EC8_256D38[] = {0x00130013, 0x00130000};
-s32 D_800F8ED0_256D40[] = {0x00130013, 0x00130000};
+s16 D_800F8E78_256CE8[] = {0x0002, 0x0002, 0x0002, 0x0000};
+s16 D_800F8E80_256CF0[] = {0x000D, 0x000D, 0x000D, 0x0000};
+s16 D_800F8E88_256CF8[] = {0x0005, 0x000A, 0x0013, 0x0000};
+s16 D_800F8E90_256D00[] = {0x0013, 0x0005, 0x0006, 0x0000};
+s16 D_800F8E98_256D08[] = {0x000A, 0x0014, 0x0011, 0x0000};
+s16 D_800F8EA0_256D10[] = {0x0010, 0x0013, 0x000A, 0x0000};
+s16 D_800F8EA8_256D18[] = {0x0014, 0x0010, 0x0014, 0x0000};
+s16 D_800F8EB0_256D20[] = {0x0011, 0x0011, 0x0010, 0x0000};
+s16 D_800F8EB8_256D28[] = {0x0013, 0x0006, 0x0005, 0x0000};
+s16 D_800F8EC0_256D30[] = {0x0006, 0x0013, 0x0013, 0x0000};
+s16 D_800F8EC8_256D38[] = {0x0013, 0x0013, 0x0013, 0x0000};
+s16 D_800F8ED0_256D40[] = {0x0013, 0x0013, 0x0013, 0x0000};
 s16* D_800F8ED8_256D48[] = {D_800F8E78_256CE8, D_800F8E80_256CF0, D_800F8E88_256CF8, D_800F8E90_256D00, D_800F8E98_256D08, D_800F8EA0_256D10, D_800F8EA8_256D18, D_800F8EB0_256D20, D_800F8EB8_256D28, D_800F8EC0_256D30, D_800F8EC8_256D38, D_800F8ED0_256D40};
 s16 D_800F8F08_256D78[] = {0x0042, 0x004D, 0x0044, 0x0045, 0x0049, 0x004A, 0x0062, 0x0063, 0x005E, 0x005F, 0x0060, 0x004B};
 
@@ -269,7 +269,7 @@ ProcessHeader* func_800F68E4_254754(s32* arg0) {
 
     temp_s0 = (ProcessHeader*)MallocTemp(sizeof(ProcessHeader));
     if (temp_s0 != NULL) {
-        temp_v0 = func_8003DBE0(0x7B, arg0);
+        temp_v0 = CreateObject(0x7B, arg0);
         temp_s0->prev = temp_v0;
         func_800A0D00(&temp_v0->xScale, 0.5f, 0.5f, 0.5f);
         func_80025F10(*temp_s0->prev->unk_3C->unk_40, 2);
@@ -478,7 +478,7 @@ void func_800F709C_254F0C(s16 arg0) {
 
     if (D_800F91C0[arg0] == 0) {
         if (D_800F91BC == NULL) {
-            var_s2 = func_8003DBE0(0x79, NULL);
+            var_s2 = CreateObject(0x79, NULL);
             func_8003E174(var_s2);
             D_800F91BC = var_s2;
         } else {
@@ -512,7 +512,7 @@ void func_800F7224_255094(s16 arg0) {
 
     if (D_800F91E0[arg0] == 0) {
         if (D_800F91DC == NULL) {
-            var_s1 = func_8003DBE0(0x6A, NULL);
+            var_s1 = CreateObject(0x6A, NULL);
             func_8003E174(var_s1);
             D_800F91DC = var_s1;
         } else {
@@ -540,7 +540,7 @@ void func_800F736C_2551DC(void) {
     unk_Struct03* temp_s0;
 
     if (D_800F91E4 == NULL) {
-        temp_s0 = func_8003DBE0(0x3B, &D_800F8C38_256AA8);
+        temp_s0 = CreateObject(0x3B, &D_800F8C38_256AA8);
         func_8003E174(temp_s0);
         D_800F91E4 = temp_s0;
         temp_s0->unk_0A |= 2;
@@ -840,9 +840,9 @@ unk_Struct03* func_800F7D6C_255BDC(s16 arg0) {
     playerMain* temp_s1 = GetPlayerStruct(arg0);
 
     if (temp_s1->playerIndex == GetCurrentPlayerIndex()) {
-        temp_s0 = func_8003DBE0(temp_s1->characterID, NULL);
+        temp_s0 = CreateObject(temp_s1->characterID, NULL);
     } else {
-        temp_s0 = func_8003DBE0(func_80052F6C(arg0), NULL);
+        temp_s0 = CreateObject(func_80052F6C(arg0), NULL);
     }
     func_800A0D50(&temp_s0->coords, &temp_s1->playerObj->coords);
     func_800A0D50(&temp_s0->unk_18, &temp_s1->playerObj->unk_18);
@@ -895,7 +895,7 @@ void func_800F7F7C_255DEC(void) {
     player->playerObj->unk_0A &= ~2;
     func_8003E664(player->playerObj);
     temp_s3 = func_800F7D6C_255BDC(-1);
-    temp_s1 = func_8003DBE0(0x4C, NULL);
+    temp_s1 = CreateObject(0x4C, NULL);
     func_80025EB4(*temp_s1->unk_3C->unk_40, 2, 0);
     func_800A0D50(&temp_s1->coords, &player->playerObj->coords);
     func_80058910(-1, 3);
@@ -907,7 +907,7 @@ void func_800F7F7C_255DEC(void) {
     LinkChildProcess(process, func_8004D648(&player->playerObj->coords, &space->coords, &player->playerObj->coords, 25.0f));
     WaitForChildProcess();
     SetPlayerOntoChain(-1, player->nextChainIndex, player->nextSpaceIndex);
-    temp_s1 = func_8003DBE0(0x4C, NULL);
+    temp_s1 = CreateObject(0x4C, NULL);
     func_80025EB4(*temp_s1->unk_3C->unk_40, 2, 0);
     func_800A0D50(&temp_s1->coords, &player->playerObj->coords);
     PlaySound(0x47);
@@ -925,7 +925,7 @@ void func_800F8130_255FA0(void) {
     s16 curSpaceIndex = GetCurrentSpaceIndex();
     s32 i;
 
-    for (i = 0; i < 12; i++) {
+    for (i = 0; i < ARRAY_COUNT(D_800F8F08_256D78); i++) {
         if (D_800F8F08_256D78[i] != curSpaceIndex) {
             continue;
         } else {
@@ -948,7 +948,7 @@ void func_800F8130_255FA0(void) {
 
 void func_800F8240_2560B0(void) {
     SetPlayerAnimation(-1, -1, 2);
-    SleepProcess(0x1E);
+    SleepProcess(30);
     SetBoardFeatureFlag(0x4F);
     func_800587BC(0x5D, 0, 3, 1);
     func_8004CB20(1);
@@ -997,7 +997,7 @@ void func_800F8298_256108(void) {
             break;
         }
     }
-    
+
     func_800F7F4C_255DBC();
     textWindowID = CreateTextWindow(0x4C, 0x3C, 0xE, 3);
     

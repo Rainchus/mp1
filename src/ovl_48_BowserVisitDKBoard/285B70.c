@@ -188,14 +188,14 @@ void func_800F6DD0_286360(Object* arg0) {
 void func_800F6E1C_2863AC(void) {
     func_8003DAA8();
     func_8004F2AC();
-    D_800F7174_ovl48 = func_8003DBE0(6, D_800F70F0_286680);
+    D_800F7174_ovl48 = CreateObject(6, D_800F70F0_286680);
     D_800F7174_ovl48->coords.x = D_800F70C0_286650.x;
     D_800F7174_ovl48->coords.y = D_800F70C0_286650.y;
     D_800F7174_ovl48->coords.z = D_800F70C0_286650.z;
     D_800F7174_ovl48->zScale = 1.5f;
     D_800F7174_ovl48->yScale = 1.5f;
     D_800F7174_ovl48->xScale = 1.5f;
-    D_800F7178_ovl48 = func_8003DBE0(0x28, NULL);
+    D_800F7178_ovl48 = CreateObject(0x28, NULL);
     D_800F7178_ovl48->coords.x = D_800F70CC_28665C[0].x;
     D_800F7178_ovl48->coords.y = 0.0f;
     D_800F7178_ovl48->unk_30 = D_800F70CC_28665C[0].y;
@@ -204,7 +204,7 @@ void func_800F6E1C_2863AC(void) {
     D_800F7180_ovl48->unk_24 = -12.0f;
     D_800F7180_ovl48->unk_28 = 0.0f;
     D_800F7180_ovl48->unk_4C = 0;
-    D_800F717C_ovl48 = func_8003DBE0(func_80052F04(D_800F7170_ovl48), D_800F7148_2866D8[gPlayers[D_800F7170_ovl48].characterID]);
+    D_800F717C_ovl48 = CreateObject(func_80052F04(D_800F7170_ovl48), D_800F7148_2866D8[gPlayers[D_800F7170_ovl48].characterID]);
     D_800F717C_ovl48->coords.x = D_800F70E4_286674.x;
     D_800F717C_ovl48->coords.y = D_800F70E4_286674.y;
     D_800F717C_ovl48->coords.z = D_800F70E4_286674.z;

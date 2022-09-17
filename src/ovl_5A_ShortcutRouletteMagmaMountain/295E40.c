@@ -228,7 +228,7 @@ void func_800F6F5C_2967BC(void) {
     func_8004F2AC();
     func_8004F8DC();
     D_800F7318 = func_8004F954(0x26, 0x20);
-    D_800F7314 = func_8003DBE0(func_80052F04(D_800F7310), D_800F72E8_296B48[gPlayers[D_800F7310].characterID]);
+    D_800F7314 = CreateObject(func_80052F04(D_800F7310), D_800F72E8_296B48[gPlayers[D_800F7310].characterID]);
     VEC3F_COPY_TO_OBJ(D_800F7314, D_800F7210_296A70);
     func_80021B14(*D_800F7314->unk_3C->unk_40, gPlayers[D_800F7310].characterID, 0x80);
     func_8004CCD0(&D_800F7314->coords, &D_800F7204_296A64, &D_800F7314->unk_18);
