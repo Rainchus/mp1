@@ -26,7 +26,7 @@ void func_800F65E0_146200(void) {
     PlaySound(0x1A2);
 }
 
-void func_800F67E0_146400(Object* arg0) {
+void func_800F67E0_146400(unkObjectStruct* arg0) {
     D_800FA260 = 0;
     D_800FA266 = 30;
     D_800FA268 = 30;
@@ -127,7 +127,7 @@ INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F95D4_1491F4);
 
 INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F9870_149490);
 
-void func_800F9908_149528(Object* arg0) {
+void func_800F9908_149528(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp = arg0->unk_50;
     
     D_800FA2F4_120524 = -1;
@@ -139,7 +139,7 @@ void func_800F9908_149528(Object* arg0) {
 INCLUDE_ASM(s32, "ovl_12_GroundPound/146200", func_800F9950_149570);
 
 #ifdef NON_MATCHING
-s32 func_800F9A24_149644(Object* arg0, f32 arg1) { //matches, needs rodata support
+s32 func_800F9A24_149644(unkObjectStruct* arg0, f32 arg1) { //matches, needs rodata support
     unkStructGroundPound_00* phi_s0;
     f32 temp_f12, temp_f14;
     s32 phi_s3;

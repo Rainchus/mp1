@@ -1,7 +1,7 @@
 #include "common.h"
 #include "296B70.h"
 
-unk_Struct03* D_800F7590_297B20 = NULL;
+Object* D_800F7590_297B20 = NULL;
 s32 D_800F7594_297B24 = -1;
 s32 D_800F7598_297B28 = -1;
 void* D_800F759C_297B2C = NULL;
@@ -45,7 +45,7 @@ void func_800F66C4_296C54(void) { //fix me: remove gotos
     f32 var_f24;
     s32 var_s2;
     s32 var_s1_3;
-    unk_Struct03* temp_s0_4;
+    Object* temp_s0_4;
     unk_Struct04* tempStruct04;
     s32 windowID;
     s32 tempVar;
@@ -112,7 +112,7 @@ void func_800F66C4_296C54(void) { //fix me: remove gotos
                 var_f24 += 10.0f;
                 var_f22 += 0.0f;
             } while (var_s1_3 < 0x15F);
-            func_8003E694(D_800F7590);
+            DestroyObject(D_800F7590);
             D_800F7590 = NULL;
             func_800427D4(D_800F759C_297B2C);
             D_800F759C_297B2C = NULL;
@@ -240,7 +240,7 @@ void func_800F7074_297604(void) {
     }
 }
 
-void func_800F70D4_297664(Object* arg0) {
+void func_800F70D4_297664(unkObjectStruct* arg0) {
     if (D_800F5144 != 0) {
         func_800726AC(3, 0x10);
         func_800601D4(0x20);
@@ -249,8 +249,8 @@ void func_800F70D4_297664(Object* arg0) {
 }
 
 void func_800F7120_2976B0(void) {
-    unk_Struct03* temp_s0;
-    unk_Struct03* temp_s0_2;
+    Object* temp_s0;
+    Object* temp_s0_2;
 
     func_8003DAA8();
     func_8004F2AC();
@@ -285,12 +285,12 @@ void func_800F7120_2976B0(void) {
 }
 
 void func_800F7404_297994(void) {
-    func_8003E694(D_800F7654);
-    func_8003E694(D_800F7658);
-    func_8003E694(D_800F765C);
+    DestroyObject(D_800F7654);
+    DestroyObject(D_800F7658);
+    DestroyObject(D_800F765C);
     
     if (D_800F7590 != NULL) {
-        func_8003E694(D_800F7590);
+        DestroyObject(D_800F7590);
     }
 
     if (D_800F759C_297B2C != NULL) {

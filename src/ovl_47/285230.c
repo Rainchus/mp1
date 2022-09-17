@@ -25,7 +25,7 @@ INCLUDE_ASM(s32, "ovl_47/285230", func_800F66D0_285320);
 
 INCLUDE_ASM(s32, "ovl_47/285230", func_800F6924_285574);
 
-void func_800F6C40_285890(Object* obj) {
+void func_800F6C40_285890(unkObjectStruct* obj) {
     if (func_80072718() == 0) {
         func_800F6EB4_285B04();
         func_800F6DE8_285A38();
@@ -40,7 +40,7 @@ void func_800F6C40_285890(Object* obj) {
     }
 }
 
-void func_800F6CBC_28590C(Object* obj) {
+void func_800F6CBC_28590C(unkObjectStruct* obj) {
     if (D_800F5144 != 0) {
         if (D_800F6EE0 != 0) {
             func_800726AC(6, 8);
@@ -66,8 +66,8 @@ void func_800F6D1C_28596C(void) {
 }
 
 void func_800F6DE8_285A38(void) {
-    func_8003E694(D_800F6F28);
-    func_8003E694(D_800F6F24);
+    DestroyObject(D_800F6F28);
+    DestroyObject(D_800F6F24);
 }
 
 void func_800F6E14_285A64(void) {

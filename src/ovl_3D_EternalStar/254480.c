@@ -264,7 +264,7 @@ void func_800F68B8_254728(void) {
 
 ProcessHeader* func_800F68E4_254754(s32* arg0) {
     Process* process;
-    unk_Struct03* temp_v0;
+    Object* temp_v0;
     ProcessHeader* temp_s0;
 
     temp_s0 = (ProcessHeader*)MallocTemp(sizeof(ProcessHeader));
@@ -301,7 +301,7 @@ ProcessHeader* func_800F68E4_254754(s32* arg0) {
 
 void func_800F6AA0_254910(ProcessHeader* arg0) {
     if (arg0 != NULL) {
-        func_8003E694(arg0->prev);
+        DestroyObject(arg0->prev);
         EndProcess(arg0->process);
         func_80072080(arg0->unk_08);
         func_8003B798(arg0);
@@ -473,7 +473,7 @@ void func_800F7070_254EE0(void) {
 }
 
 void func_800F709C_254F0C(s16 arg0) {
-    unk_Struct03* var_s2;
+    Object* var_s2;
     SpaceData* space;
 
     if (D_800F91C0[arg0] == 0) {
@@ -508,7 +508,7 @@ void func_800F719C_25500C(void) {
 }
 
 void func_800F7224_255094(s16 arg0) {
-    unk_Struct03* var_s1;
+    Object* var_s1;
 
     if (D_800F91E0[arg0] == 0) {
         if (D_800F91DC == NULL) {
@@ -537,7 +537,7 @@ void func_800F732C_25519C(void) {
 }
 
 void func_800F736C_2551DC(void) {
-    unk_Struct03* temp_s0;
+    Object* temp_s0;
 
     if (D_800F91E4 == NULL) {
         temp_s0 = CreateObject(0x3B, &D_800F8C38_256AA8);
@@ -835,8 +835,8 @@ void func_800F7D20_255B90(void) {
     func_80045E6C(D_800F91F4);
 }
 
-unk_Struct03* func_800F7D6C_255BDC(s16 arg0) {
-    unk_Struct03* temp_s0;
+Object* func_800F7D6C_255BDC(s16 arg0) {
+    Object* temp_s0;
     playerMain* temp_s1 = GetPlayerStruct(arg0);
 
     if (temp_s1->playerIndex == GetCurrentPlayerIndex()) {
@@ -853,11 +853,11 @@ unk_Struct03* func_800F7D6C_255BDC(s16 arg0) {
     return temp_s0;
 }
 
-void func_800F7E5C_255CCC(unk_Struct03* arg0) {
-    func_8003E694(arg0);
+void func_800F7E5C_255CCC(Object* arg0) {
+    DestroyObject(arg0);
 }
 
-void func_800F7E78_255CE8(unk_Struct03* arg0) {
+void func_800F7E78_255CE8(Object* arg0) {
     s32 i;
 
     for (i = 255; i >= 0; i = i - 8) {
@@ -867,7 +867,7 @@ void func_800F7E78_255CE8(unk_Struct03* arg0) {
     }
 }
 
-void func_800F7EE0_255D50(unk_Struct03* arg0) {
+void func_800F7EE0_255D50(Object* arg0) {
     s32 i;
 
     for (i = 0; i <= 255; i = i + 8) {
@@ -886,8 +886,8 @@ void func_800F7F4C_255DBC(void) {
 }
 
 void func_800F7F7C_255DEC(void) {
-    unk_Struct03* temp_s1;
-    unk_Struct03* temp_s3;
+    Object* temp_s1;
+    Object* temp_s3;
     Process* process;
     SpaceData* space;
     playerMain* player = GetPlayerStruct(-1);
@@ -901,7 +901,7 @@ void func_800F7F7C_255DEC(void) {
     func_80058910(-1, 3);
     PlaySound(0x47);
     func_800F7EE0_255D50(temp_s3);
-    func_8003E694(temp_s1);
+    DestroyObject(temp_s1);
     space = GetSpaceData(GetAbsSpaceIndexFromChainSpaceIndex(player->nextChainIndex, player->nextSpaceIndex));
     process = GetCurrentProcess();
     LinkChildProcess(process, func_8004D648(&player->playerObj->coords, &space->coords, &player->playerObj->coords, 25.0f));
@@ -914,7 +914,7 @@ void func_800F7F7C_255DEC(void) {
     func_800A0D50(&temp_s3->coords, &player->playerObj->coords);
     func_800A0D50(&temp_s3->unk_18, &player->playerObj->unk_18);
     func_800F7E78_255CE8(temp_s3);
-    func_8003E694(temp_s1);
+    DestroyObject(temp_s1);
     func_800F7E5C_255CCC(temp_s3);
     func_8003E5E0(player->playerObj);
     player->playerObj->unk_0A |= 2;
@@ -1034,7 +1034,7 @@ void func_800F8588_2563F8(void) {
     playerMain* temp_s0_3;
     playerMain* curPlayer;
     s32 playerIndex;
-    unk_Struct03* objectStructs[4];
+    Object* objectStructs[4];
     s32 i;
     s32 j;
 

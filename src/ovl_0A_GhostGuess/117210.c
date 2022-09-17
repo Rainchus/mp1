@@ -3,7 +3,7 @@
 
 INCLUDE_ASM(s32, "ovl_0A_GhostGuess/117210", func_800F65E0_117210);
 
-void func_800F69DC_11760C(Object* arg0) {
+void func_800F69DC_11760C(unkObjectStruct* arg0) {
     s32 temp_s1;
     void* temp_s0;
 
@@ -26,7 +26,7 @@ void func_800F6AAC_1176DC(void) {
     }
 }
 
-void func_800F6AE0_117710(Object* arg0) {
+void func_800F6AE0_117710(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp_s0;
 
     arg0->func_ptr = NULL;

@@ -131,10 +131,10 @@ void func_800F66BC_2867DC(void) {
     }
 }
 
-void func_800F6C10_286D30(Object* arg0) {
-    unk_Struct03* temp_s0;
-    unk_Struct03* temp_s0_2;
-    unk_Struct03* temp_s0_3;
+void func_800F6C10_286D30(unkObjectStruct* arg0) {
+    Object* temp_s0;
+    Object* temp_s0_2;
+    Object* temp_s0_3;
 
     temp_s0 = D_800F7188;
     temp_s0->unk_18.x = func_80088060(arg0->unk_24 * 0.017453292519943295);
@@ -165,7 +165,7 @@ void func_800F6D80_286EA0(void) {
     }
 }
 
-void func_800F6DCC_286EEC(Object* arg0) {
+void func_800F6DCC_286EEC(unkObjectStruct* arg0) {
     if (D_800F5144 != 0) {
         func_800726AC(3, 16);
         func_800601D4(32);
@@ -203,9 +203,9 @@ void func_800F6E18_286F38(void) {
 
 void func_800F6FBC_2870DC(void) {
     func_8005D718(D_800F7190);
-    func_8003E694(D_800F718C);
-    func_8003E694(D_800F7184);
-    func_8003E694(D_800F7188);
+    DestroyObject(D_800F718C);
+    DestroyObject(D_800F7184);
+    DestroyObject(D_800F7188);
     func_8004F2EC();
 }
 

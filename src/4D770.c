@@ -46,13 +46,13 @@ void func_8004CCD0(Vec3f* arg0, Vec3f* arg1, Vec3f* arg2) {
 }
 
 void func_8004CD08(s16 arg0, Vec3f* arg1) {
-    unk_Struct03* playerObject;
+    Object* playerObject;
 
     playerObject = GetPlayerStruct(arg0)->playerObj;
     func_8004CCD0(&playerObject->coords, arg1, &playerObject->unk_18);
 }
 
-void func_8004CD48(unk_Struct03* arg0, s16 arg1) {
+void func_8004CD48(Object* arg0, s16 arg1) {
     func_8004CCD0(&arg0->coords, &GetSpaceData(arg1)->coords, &arg0->unk_18);
 }
 
@@ -66,7 +66,7 @@ void func_8004CDA0(s16 arg0) {
     func_8004CD84(&GetPlayerStruct(arg0)->playerObj->unk_18);
 }
 
-void func_8004CDCC(unk_Struct03* unk) {
+void func_8004CDCC(Object* unk) {
     Vec3f sp10;
     Vec3f sp20;
     Vec3f* temp_s2;

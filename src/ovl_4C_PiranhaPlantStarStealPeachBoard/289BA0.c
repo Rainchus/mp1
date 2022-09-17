@@ -2,10 +2,10 @@
 #include "289BA0.h"
 
 //800F7500 - 800F7514 are bss vars
-static unk_Struct03* D_800F74F0_28AAB0 = 0;
-static unk_Struct03* D_800F74F4_28AAB4 = 0;
-static unk_Struct03* D_800F74F8_28AAB8 = 0;
-static unk_Struct03* D_800F74FC_28AABC = 0;
+static Object* D_800F74F0_28AAB0 = 0;
+static Object* D_800F74F4_28AAB4 = 0;
+static Object* D_800F74F8_28AAB8 = 0;
+static Object* D_800F74FC_28AABC = 0;
 static s32 D_800F7500_28AAC0 = -1;
 static s32 D_800F7504_28AAC4 = -1;
 static s32 D_800F7508_28AAC8 = -1;
@@ -70,7 +70,7 @@ void func_800F66B4_289C74(void) {
     f32 var_f22;
     f32 var_f24;
     s32 windowID;
-    unk_Struct03* temp_s0_2;
+    Object* temp_s0_2;
     s32 i;
     u8 new_var;
     f32 *new_var3;
@@ -178,9 +178,9 @@ void func_800F66B4_289C74(void) {
         
         func_800726AC(0, 0x10);
         SleepProcess(0x1A);
-        func_8003E694(D_800F75E4);
-        func_8003E694(D_800F74F0);
-        func_8003E694(D_800F74F4);
+        DestroyObject(D_800F75E4);
+        DestroyObject(D_800F74F0);
+        DestroyObject(D_800F74F4);
         D_800F74F0 = NULL;
         D_800F74F4 = NULL;
         func_800F7120_28A6E0();
@@ -210,7 +210,7 @@ void func_800F66B4_289C74(void) {
         
         PlaySound(0x474);
         func_800503B0(D_800ED154.unk_00[D_800ED154.unk_1A], 4);
-        func_8003E694(D_800F74FC);
+        DestroyObject(D_800F74FC);
         D_800F74FC = NULL;
         func_800427D4(D_800F7510_28AAD0);
         D_800F7510_28AAD0 = NULL;
@@ -247,7 +247,7 @@ void func_800F6FD4_28A594(void) {
     }
 }
 
-void func_800F7020_28A5E0(Object* arg0) {
+void func_800F7020_28A5E0(unkObjectStruct* arg0) {
     if (D_800F5144 != 0) {
         func_800726AC(1, 0x10);
         arg0->func_ptr = &func_800F6FD4_28A594;
@@ -302,19 +302,19 @@ void func_800F718C_28A74C(void) {
 }
 
 void func_800F7348_28A908(void) {
-    func_8003E694(D_800F75E4);
-    func_8003E694(D_800F74F8);
+    DestroyObject(D_800F75E4);
+    DestroyObject(D_800F74F8);
     
     if (D_800F74F0 != NULL) {
-        func_8003E694(D_800F74F0);
+        DestroyObject(D_800F74F0);
     }
     
     if (D_800F74F4 != NULL) {
-        func_8003E694(D_800F74F4);
+        DestroyObject(D_800F74F4);
     }
     
     if (D_800F74FC != NULL) {
-        func_8003E694(D_800F74FC);
+        DestroyObject(D_800F74FC);
     }
     
     if (D_800F7510_28AAD0 != NULL) {

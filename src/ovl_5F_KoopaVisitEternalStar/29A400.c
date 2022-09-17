@@ -79,7 +79,7 @@ void func_800F693C_29A75C(void) {
     }
 }
 
-void func_800F6988_29A7A8(Object* arg0) {
+void func_800F6988_29A7A8(unkObjectStruct* arg0) {
     if (D_800F5144 != 0) {
         func_800726AC(1, 0x10);
         arg0->func_ptr = &func_800F693C_29A75C;
@@ -108,8 +108,8 @@ void func_800F69CC_29A7EC(void) {
 }
 
 void func_800F6B3C_29A95C(void) {
-    func_8003E694(D_800F6D14);
-    func_8003E694(D_800F6D18);
+    DestroyObject(D_800F6D14);
+    DestroyObject(D_800F6D18);
     if (IsBoardFeatureFlagSet(0x2C) == 0) {
         func_8004F1D0();
     }

@@ -18,7 +18,7 @@ void func_800F65E0_28CFF0(void) {
     SetFadeInTypeAndTime(3, 0x10);
 }
 
-void func_800F66BC_28D0CC(unk_Struct03* arg0) {
+void func_800F66BC_28D0CC(Object* arg0) {
     D_800C34A4 = D_800F75F4;
     
     func_80025930(*D_800F7628->unk_3C->unk_40, 0x22000, 0x20000);

@@ -37,8 +37,8 @@ extern u8 D_800F8FF0;
 extern u8 D_800F8FF1;
 extern u8 D_800F8FF2;
 extern u8 D_800F8FF3;
-extern unk_Struct03* D_800F8FF4;
-extern unk_Struct03* D_800F8FF8;
+extern Object* D_800F8FF4;
+extern Object* D_800F8FF8;
 extern u8 D_800F8FFC[4];
 
 void func_800F65E0_282820(void) {
@@ -938,7 +938,7 @@ void func_800F8B1C_284D5C(void) {
     }
 }
 
-void func_800F8C20_284E60(Object* arg0) {
+void func_800F8C20_284E60(unkObjectStruct* arg0) {
     if (D_800F5144 != 0) {
         func_800726AC(3, 16);
         func_800601D4(32);
@@ -964,8 +964,8 @@ void func_800F8C6C_284EAC(void) {
 }
 
 void func_800F8DC0_285000(void) {
-    func_8003E694(D_800F8FF8);
-    func_8003E694(D_800F8FF4);
+    DestroyObject(D_800F8FF8);
+    DestroyObject(D_800F8FF4);
     func_8004F2EC();
 }
 

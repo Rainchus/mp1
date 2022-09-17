@@ -88,7 +88,7 @@ void func_800F6A44_2F4524(void) {
     }
 }
 
-void func_800F6BD8_2F46B8(Object* arg0) {
+void func_800F6BD8_2F46B8(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp_s1;
 
     arg0->unk_40->unk_00.unsigned16[0] = func_800174C0(0x380004, 0x99);
@@ -110,7 +110,7 @@ void func_800F6BD8_2F46B8(Object* arg0) {
     temp_s1->unk_04.b[1] = 0;
 }
 
-void func_800F6D04_2F47E4(Object* arg0) {
+void func_800F6D04_2F47E4(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp_s1;
 
     arg0->unk_40->unk_00.unsigned16[0] = func_800174C0(0x380008, 0x899);
@@ -129,7 +129,7 @@ void func_800F6D04_2F47E4(Object* arg0) {
     temp_s1->unk_04.b[1] = 1;
 }
 
-void func_800F6E38_2F4918(Object* arg0) {
+void func_800F6E38_2F4918(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp_s1;
 
     arg0->unk_40->unk_00.unsigned16[0] = func_800174C0(0x380000, 0x899);
@@ -150,7 +150,7 @@ void func_800F6E38_2F4918(Object* arg0) {
     temp_s1->unk_04.b[1] = 2;
 }
 
-void func_800F6F1C_2F49FC(Object* arg0) {
+void func_800F6F1C_2F49FC(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp_s1;
 
     arg0->unk_40->unk_00.unsigned16[0] = func_800174C0(0x380006, 0x899);
@@ -169,7 +169,7 @@ void func_800F6F1C_2F49FC(Object* arg0) {
     temp_s1->unk_04.b[1] = 3;
 }
 
-void func_800F7010_2F4AF0(Object* arg0) {
+void func_800F7010_2F4AF0(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp_s1;
 
     arg0->unk_40->unk_00.unsigned16[0] = func_800174C0(0x380006, 0x899);
@@ -187,7 +187,7 @@ void func_800F7010_2F4AF0(Object* arg0) {
     temp_s1->unk_04.b[1] = 4;
 }
 
-void func_800F7108_2F4BE8(Object* arg0) {
+void func_800F7108_2F4BE8(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp_s1;
 
     arg0->unk_40->unk_00.unsigned16[0] = func_800174C0(0x380006, 0x899);
@@ -205,7 +205,7 @@ void func_800F7108_2F4BE8(Object* arg0) {
     temp_s1->unk_04.b[1] = 4;
 }
 
-void func_800F71F4_2F4CD4(Object* arg0) {
+void func_800F71F4_2F4CD4(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp_s1;
 
     arg0->unk_40->unk_00.unsigned16[0] = func_800174C0(0x38000C, 0x899);

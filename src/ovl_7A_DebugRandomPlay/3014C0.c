@@ -3,19 +3,19 @@
 
 INCLUDE_ASM(s32, "ovl_7A_DebugRandomPlay/3014C0", func_800F65E0_3014C0);
 
-void func_800F698C_30186C(Object* arg0) {
+void func_800F698C_30186C(unkObjectStruct* arg0) {
     func_800F69FC_3018DC(arg0, 0);
 }
 
-void func_800F69A8_301888(Object* arg0) {
+void func_800F69A8_301888(unkObjectStruct* arg0) {
     func_800F69FC_3018DC(arg0, 1);
 }
 
-void func_800F69C4_3018A4(Object* arg0) {
+void func_800F69C4_3018A4(unkObjectStruct* arg0) {
     func_800F69FC_3018DC(arg0, 2);
 }
 
-void func_800F69E0_3018C0(Object* arg0) {
+void func_800F69E0_3018C0(unkObjectStruct* arg0) {
     func_800F69FC_3018DC(arg0, 3);
 }
 

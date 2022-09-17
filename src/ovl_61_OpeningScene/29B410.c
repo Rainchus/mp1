@@ -4,7 +4,7 @@
 void func_800F65E0_29B410(void) {
     Vec3s sp18;
     Vec3s sp28;
-    Object* temp_s0;
+    unkObjectStruct* temp_s0;
 
     func_80062450();
     D_800C5972 = 0;
@@ -35,7 +35,7 @@ void func_800F65E0_29B410(void) {
     D_800FD730[1] = InitProcess(&func_800FB86C_2A069C, 0x300, 0x2000, 0);
 }
 
-void func_800F6788_29B5B8(Object* arg0) {
+void func_800F6788_29B5B8(unkObjectStruct* arg0) {
     s32 pad[2]; //required to match stack alignment
     
     if (arg0->unk_4D != 0) {
@@ -54,8 +54,8 @@ void func_800F6788_29B5B8(Object* arg0) {
     func_800FBD48_2A0B78(D_80110460, D_80110448[arg0->unk_4C] + 12, 40.0f);
 }
 
-Object* func_800F6804_29B634(unkGlobalStruct_00* arg0) {
-    Object* temp_s0;
+unkObjectStruct* func_800F6804_29B634(unkGlobalStruct_00* arg0) {
+    unkObjectStruct* temp_s0;
 
     temp_s0 = func_8005D384(0x1000, 0, 0, -1, &func_800F6788_29B5B8);
     func_8005D96C(temp_s0, 0, 0, 0);

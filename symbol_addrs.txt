@@ -120,3 +120,4 @@ SetFadeInTypeAndTime = 0x80072644;
 HidePlayerHUDVisibility = 0x800547F8;
 InitObjSystem = 0x8005CF30;
 CreateObject = 0x8003DBE0;
+DestroyObject = 0x8003E694;

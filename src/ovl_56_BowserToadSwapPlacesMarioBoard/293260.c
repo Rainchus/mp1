@@ -24,8 +24,8 @@ void func_800F65E0_293260(void) {
 
 //very odd need for temps?
 void func_800F66AC_29332C(f32 arg0) {
-    unk_Struct03* temp_s0;
-    unk_Struct03* var_s0;
+    Object* temp_s0;
+    Object* var_s0;
     Vec3f* temp;
 
     if (D_800ED154.unk_00 != 0) {
@@ -129,7 +129,7 @@ void func_800F6A84_293704(void) {
     }
 }
 
-void func_800F6AC8_293748(Object* arg0) {
+void func_800F6AC8_293748(unkObjectStruct* arg0) {
     if (D_800F5144 != 0) {
         if (D_800ED154.unk_00 != 0) {
             func_800726AC(3, 16);
@@ -163,9 +163,9 @@ void func_800F6B1C_29379C(void) {
 }
 
 void func_800F6CB0_293930(void) {
-    func_8003E694(D_800F6DF4);
-    func_8003E694(D_800F6DF8);
-    func_8003E694(D_800F6DFC);
+    DestroyObject(D_800F6DF4);
+    DestroyObject(D_800F6DF8);
+    DestroyObject(D_800F6DFC);
 }
 
 

@@ -67,8 +67,8 @@ INCLUDE_ASM(s32, "ovl_65_UnknownBooStealScene/2B74A0", func_800F8E9C_2B9D5C);
 
 INCLUDE_ASM(s32, "ovl_65_UnknownBooStealScene/2B74A0", func_800F8F18_2B9DD8);
 
-void func_800F8F78_2B9E38(Object* arg0) {
-    unk_Struct03* temp_s0;
+void func_800F8F78_2B9E38(unkObjectStruct* arg0) {
+    Object* temp_s0;
 
     temp_s0 = D_800F9604;
     temp_s0->unk_30 = func_80088060(arg0->unk_28 * D_800F95C8)* 20.0f + 150.0f;

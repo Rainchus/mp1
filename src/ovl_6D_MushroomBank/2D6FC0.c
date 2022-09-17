@@ -54,7 +54,7 @@ INCLUDE_ASM(s32, "ovl_6D_MushroomBank/2D6FC0", func_800F67B0_2D7190);
 
 INCLUDE_ASM(s32, "ovl_6D_MushroomBank/2D6FC0", func_800F6E38_2D7818);
 
-void func_800F722C_2D7C0C(Object* arg0) {
+void func_800F722C_2D7C0C(unkObjectStruct* arg0) {
     if ((D_800F5144 != 0) || (D_800F89BC != 0)) {
         if (D_800F89B8 == 0) {
             func_800601D4(0x1E);
@@ -77,7 +77,7 @@ void func_800F72A8_2D7C88(void) {
     }
 }
 
-void func_800F7308_2D7CE8(Object* arg0) {
+void func_800F7308_2D7CE8(unkObjectStruct* arg0) {
     unk_ovl_2D_struct* temp_s0;
     void* file;
 

@@ -7,7 +7,7 @@ void func_800F6A84_293704(void);
 void func_800F692C_2935AC(void);
 void func_800F6B1C_29379C(void);
 void func_800F6CE8_293968(void);
-void func_800F6AC8_293748(Object*);
+void func_800F6AC8_293748(unkObjectStruct*);
 
 extern GameStatus D_800ED154;
 extern Vec3f D_800F6DB0;
@@ -15,7 +15,7 @@ extern Vec3f D_800F6DBC;
 extern s32 D_800F6DC8[];
 extern s32 D_800F6DD0[];
 extern u8 D_800F6DF0;
-extern unk_Struct03* D_800F6DF4;
-extern unk_Struct03* D_800F6DF8;
-extern unk_Struct03* D_800F6DFC;
+extern Object* D_800F6DF4;
+extern Object* D_800F6DF8;
+extern Object* D_800F6DFC;
 

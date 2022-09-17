@@ -2,7 +2,7 @@
 #include "188410.h"
 
 void func_800F65E0_188410(void) {
-    Object* Obj;
+    unkObjectStruct* Obj;
 
     func_80029090(50);
     func_8002ADF0(&D_800EDEC0, 64);
@@ -62,7 +62,7 @@ void func_800F65E0_188410(void) {
 
 INCLUDE_ASM(s32, "ovl_1D_BobsledRun/188410", func_800F6B60_188990);
 
-void* func_800F6D20_188B50(unk_Struct03* arg0) {
+void* func_800F6D20_188B50(Object* arg0) {
     unkGlobalStruct_00* temp_v1;
     s32 i;
     

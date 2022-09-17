@@ -11,13 +11,13 @@ typedef struct unkCrazyCutter_00 {
 void func_800FBB2C_12A61C(void);
 void func_800FA880_129370(void);
 void func_800FA56C_12905C(void);
-void func_800F68C4_1253B4(Object*);
+void func_800F68C4_1253B4(unkObjectStruct*);
 void func_800F978C_12827C(void);
-void func_800F97C8_1282B8(Object*);
+void func_800F97C8_1282B8(unkObjectStruct*);
 s32 func_800FAAB0_1295A0(s32, s32);
 void func_800FAACC_1295BC(s32, s32, s32);
 void func_800FA9D8_1294C8(void);
-void func_800F686C_12535C(Object*);
+void func_800F686C_12535C(unkObjectStruct*);
 void func_800F6B04_1255F4(void);
 void func_800F94C0_127FB0(s32);
 void func_800F94DC_127FCC(s32);

@@ -40,7 +40,7 @@ void func_800F72D4_289594(void) {
     }
 }
 
-void func_800F7320_2895E0(Object* arg0) {
+void func_800F7320_2895E0(unkObjectStruct* arg0) {
     if (D_800F5144 != 0) {
         func_800726AC(1, 0x10);
         arg0->func_ptr = &func_800F72D4_289594;
@@ -70,16 +70,16 @@ INCLUDE_ASM(s32, "ovl_4B_FlowerLotteryPeachBoard/2888A0", func_800F744C_28970C);
 void func_800F7658_289918(void) {
     s32 i;
 
-    func_8003E694(D_800F78E8);
-    func_8003E694(D_800F78E4);
+    DestroyObject(D_800F78E8);
+    DestroyObject(D_800F78E4);
     
     if (D_800F77C0 != NULL) {
-        func_8003E694(D_800F77C0);
+        DestroyObject(D_800F77C0);
     }
     
     for (i = 0; i < 4; i++) {
         if (D_800F77C4[i] != NULL) {
-            func_8003E694(D_800F77C4[i]);
+            DestroyObject(D_800F77C4[i]);
         }
     }
     func_8004F2EC();

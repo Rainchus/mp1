@@ -100,7 +100,7 @@ void func_800F7340_28B900(void) {
     }
 }
 
-void func_800F73BC_28B97C(Object* arg0) {
+void func_800F73BC_28B97C(unkObjectStruct* arg0) {
     if (D_800F5144 != 0) {
         if (D_800F7620 != 0) {
             func_800726AC(6, 8);
@@ -127,8 +127,8 @@ void func_800F741C_28B9DC(void) {
 }
 
 void func_800F7524_28BAE4(void) {
-    func_8003E694(D_800F76B8);
-    func_8003E694(D_800F76B4);
+    DestroyObject(D_800F76B8);
+    DestroyObject(D_800F76B4);
 }
 
 void func_800F7550_28BB10(void) {

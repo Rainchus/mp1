@@ -22,6 +22,6 @@ extern s16 D_800F9902;
 extern s32 D_800F9A34;
 extern u8 D_800F9914;
 extern s32 D_800F9984;
-extern Object* D_800EDE70[];
+extern unkObjectStruct* D_800EDE70[];
 extern u16 D_800EE984;
 extern s32 D_800F9B80;

@@ -46,7 +46,7 @@ void func_800F7610_2882D0(void) {
     }
 }
 
-void func_800F7688_288348(Object* arg0) {
+void func_800F7688_288348(unkObjectStruct* arg0) {
     if (D_800F5144 != 0) {
         if (D_800F7B00 != 0) {
             func_800726AC(6, 8);
@@ -106,19 +106,19 @@ void func_800F77D0_288490(void) {
 void func_800F7928_2885E8(void) {
     s32 i;
     
-    func_8003E694(D_800F7BE4);
+    DestroyObject(D_800F7BE4);
     
     if (D_800F7AE0 != NULL) {
-        func_8003E694(D_800F7AE0);
+        DestroyObject(D_800F7AE0);
     }
     
     if (D_800F7AE4 != NULL) {
-        func_8003E694(D_800F7AE4);
+        DestroyObject(D_800F7AE4);
     }
     
     for (i = 0; i < 3; i++) {
         if (D_800F7AE8[i] != NULL) {
-            func_8003E694(D_800F7AE8[i]);
+            DestroyObject(D_800F7AE8[i]);
         }
         
         if (D_800F7AF4[i] != 0) {
@@ -126,7 +126,7 @@ void func_800F7928_2885E8(void) {
         }
     }
 
-    func_8003E694(D_800F7BE8);
+    DestroyObject(D_800F7BE8);
     func_8004F2EC();
     func_8004F5F0();
 }

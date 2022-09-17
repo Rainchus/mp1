@@ -12,7 +12,7 @@ typedef struct unkOvl4BStruct {
 void func_800F6A48_288D08(void);
 void func_800F744C_28970C(void);
 void func_800F76EC_2899AC(void);
-void func_800F7320_2895E0(Object*);
+void func_800F7320_2895E0(unkObjectStruct*);
 void func_800F7658_289918(void);
 void func_800F7794_289A54(void);
 void func_800F72D4_289594(void);

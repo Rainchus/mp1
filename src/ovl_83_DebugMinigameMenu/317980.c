@@ -26,7 +26,7 @@ INCLUDE_ASM(s32, "ovl_83_DebugMinigameMenu/317980", func_800F7BD4_318F74);
 
 INCLUDE_ASM(s32, "ovl_83_DebugMinigameMenu/317980", func_800F855C_3198FC);
 
-void func_800F8A24_319DC4(Object* arg0) {
+void func_800F8A24_319DC4(unkObjectStruct* arg0) {
     arg0->func_ptr = &func_800F8A34_319DD4;
 }
 

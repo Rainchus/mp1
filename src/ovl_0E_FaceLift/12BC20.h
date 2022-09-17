@@ -17,12 +17,12 @@ s16 func_8002451C(s32, void*, s32);
 void func_80025830(s16, f32, f32, f32);
 void func_800258EC(s16, s32, s32);
 void func_80025F10(s16, s32);
-void func_800F80A4_12D6E4(Object*, s32);
+void func_800F80A4_12D6E4(unkObjectStruct*, s32);
 void func_800FA374_12F9B4(s16, s16);
 void func_800F8FCC_12E60C(void);
 void func_800F9988_12EFC8(void);
 void func_800FAA38_130078(void);
-void func_800FACD8_130318(Object*, s32);
+void func_800FACD8_130318(unkObjectStruct*, s32);
 
 extern s32 D_800FCA18;
 extern u16 D_800FC3D0_DAFD0;

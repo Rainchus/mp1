@@ -3,7 +3,7 @@
 
 INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800F65E0_1250D0);
 
-void func_800F686C_12535C(Object* arg0) {
+void func_800F686C_12535C(unkObjectStruct* arg0) {
     D_800FD460--;
     if (D_800FD460 == 0) {
         D_800FD460 = 20;
@@ -12,7 +12,7 @@ void func_800F686C_12535C(Object* arg0) {
     }
 }
 
-void func_800F68C4_1253B4(Object* arg0) {
+void func_800F68C4_1253B4(unkObjectStruct* arg0) {
     if (func_80075FE0() == 0 || func_80075FE0() & 2) {
         D_800FD460--;
         if (D_800FD460 == 0) {
@@ -35,7 +35,7 @@ void func_800F6938_125428(f32 arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 
     func_8001D494(0, 10.0f, D_800C3110->unk_44, D_800C3110->unk_48);
 }
 
-void func_800F69EC_1254DC(unk_Struct03* arg0) {
+void func_800F69EC_1254DC(Object* arg0) {
     D_800FD468--;
     if (D_800FD468 == 0) {
         D_800FD464 = 1;
@@ -55,7 +55,7 @@ INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800F6B04_1255F4);
 INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800F6F00_1259F0);
 
 #ifdef NON_EQUIVALENT
-void func_800F7180_125C70(Object* arg0) {
+void func_800F7180_125C70(unkObjectStruct* arg0) {
     s32 i;
     
     if (D_800FD554 == 0) {
@@ -175,7 +175,7 @@ void func_800F978C_12827C(void) {
     func_80075CCC(8, 30, 160, 32);
 }
 
-void func_800F97C8_1282B8(Object* arg0) {
+void func_800F97C8_1282B8(unkObjectStruct* arg0) {
     s32 i;
     s32 temp;
 
@@ -215,7 +215,7 @@ INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FA38C_128E7C);
 
 INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FA56C_12905C);
 
-void func_800FA808_1292F8(Object* arg0) {
+void func_800FA808_1292F8(unkObjectStruct* arg0) {
     if (func_80075FE0() == 0 || func_80075FE0() & 2) {
         if (D_800FD590 == 0) {
             func_800FBB2C_12A61C();
@@ -229,7 +229,7 @@ INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FA880_129370);
 
 INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FA9D8_1294C8);
 
-void func_800FAA18_129508(unk_Struct03* arg0) {
+void func_800FAA18_129508(Object* arg0) {
     s32 i;
 
     if (func_80072718() == 0) {
@@ -310,7 +310,7 @@ INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FB944_12A434);
 INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/1250D0", func_800FBAFC_12A5EC);
 
 void func_800FBB2C_12A61C(void) {
-    Object* temp_s0;
+    unkObjectStruct* temp_s0;
     unkGlobalStruct_00* temp_v0;
 
     temp_s0 = func_8005D384(0xC, 0, 0, -1, &func_800FBB94_12A684);

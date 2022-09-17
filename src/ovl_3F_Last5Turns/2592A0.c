@@ -31,7 +31,7 @@ void func_800F6F10_259BD0(void) {
     }
 }
 
-void func_800F6F5C_259C1C(Object* obj) {
+void func_800F6F5C_259C1C(unkObjectStruct* obj) {
     if (D_800F5144 != 0) {
         func_800726AC(1, 0x10);
         func_800601D4(0x20);
@@ -49,7 +49,7 @@ void func_800F6FA8_259C68(void) {
 }
 
 void func_800F700C_259CCC(void) {
-    func_8003E694(D_800F71F4_1DA2A4);
+    DestroyObject(D_800F71F4_1DA2A4);
     func_8004F1D0();
 }
 

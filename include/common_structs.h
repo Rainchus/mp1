@@ -112,7 +112,7 @@ typedef struct unkGlobalStruct_00 {
     /* 0xE4 */ unk_Struct01* unk_E4;
 } unkGlobalStruct_00; /* size = 0xE8 */
 
-typedef struct Object {
+typedef struct unkObjectStruct {
 /* 0x00 */ char unk_00[0x0A];
 /* 0x0A */ s16 unk_0A;
 /* 0x0C */ char unk_0C[4];
@@ -138,7 +138,7 @@ typedef struct Object {
 /* 0x4C */ u8  unk_4E;
 /* 0x4C */ u8  unk_4F;
 /* 0x50 */ unkGlobalStruct_00* unk_50;
-} Object; //sizeof 0x54
+} unkObjectStruct; //sizeof 0x54
 
 typedef struct jump_buf
 {
@@ -169,7 +169,7 @@ typedef struct Process {
 } Process;
 
 typedef struct ProcessHeader { //?
-/* 0x00 */ struct unk_Struct03* prev;
+/* 0x00 */ struct Object* prev;
 /* 0x04 */ Process* process;
 /* 0x08 */ s16 unk_08;
 /* 0x0A */ s16 unk_0A;
@@ -207,9 +207,9 @@ typedef struct unk_Struct04 {
     /* 0x40 */ s16* unk_40;
 } unk_Struct04; /* size = 0x44 */
 
-typedef struct unk_Struct03 {
-/* 0x00 */ struct unk_Struct03 *prev; // may be NULL
-/* 0x04 */ struct unk_Struct03 *next;
+typedef struct Object {
+/* 0x00 */ struct Object *prev; // may be NULL
+/* 0x04 */ struct Object *next;
 /* 0x08 */ s16 unk_08;
 /* 0x0A */ u16 unk_0A;
 /* 0x0C */ Vec3f coords;
@@ -228,8 +228,8 @@ typedef struct unk_Struct03 {
 /* 0x50 */ char unk_50[3];
 /* 0x53 */ s8 unk_53;
 /* 0x50 */ char unk_54[0x38];
-/* 0x8C */ struct unk_Struct03* unk_8C;
-} unk_Struct03; // //sizeof 0xAC? (this and mpSource_object are the same struct)
+/* 0x8C */ struct Object* unk_8C;
+} Object; // //sizeof 0xAC? (this and mpSource_object are the same struct)
 
 typedef struct playerMain {
 /* 0x00 */ char unk_00;
@@ -251,7 +251,7 @@ typedef struct playerMain {
 /* 0x18 */ u8 playerIndex; //0, 1, 2, or 3
 /* 0x19 */ char unk_19[3]; //likely padding
 /* 0x1C */ Process* process; //some heap instance
-/* 0x20 */ unk_Struct03* playerObj; //ptr to playerObj on heap
+/* 0x20 */ Object* playerObj; //ptr to playerObj on heap
 /* 0x24 */ u16 totalMinigameCoins;
 /* 0x26 */ s16 coinPeak;
 /* 0x28 */ u8 happeningSpacesTotal;
@@ -377,7 +377,7 @@ typedef struct mpSource_object_indirect {
 
 
 typedef struct mystery_struct_ret_func_80048224 {
-    struct unk_Struct03* unk0;
+    struct Object* unk0;
     s8 pad[4];
     s16 unk8; // window id
 } mystery_struct_ret_func_80048224;

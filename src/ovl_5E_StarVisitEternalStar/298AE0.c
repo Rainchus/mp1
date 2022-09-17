@@ -73,7 +73,7 @@ void func_800F7978_299E78(void) {
     }
 }
 
-void func_800F7A08_299F08(Object* arg0) {
+void func_800F7A08_299F08(unkObjectStruct* arg0) {
     if (D_800F5144 != 0) {
         if (D_800F7DC8 != 0) {
             func_800726AC(6, 8);

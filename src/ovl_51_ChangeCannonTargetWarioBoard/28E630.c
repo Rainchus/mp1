@@ -3,7 +3,7 @@
 void func_800F66B4_28E704(void);
 void func_800F69D8_28EA28(s32);
 void func_800F6B30_28EB80(void);
-void func_800F6994_28E9E4(Object*);
+void func_800F6994_28E9E4(unkObjectStruct*);
 void func_800F6B04_28EB54(void);
 void func_800F6BD0_28EC20(void);
 void func_800F69D8_28EA28(s32);
@@ -106,7 +106,7 @@ void func_800F6948_28E998(void) {
     }
 }
 
-void func_800F6994_28E9E4(Object* arg0) {
+void func_800F6994_28E9E4(unkObjectStruct* arg0) {
     if (D_800F5144 != 0) {
         func_800726AC(4, 16);
         arg0->func_ptr = &func_800F6948_28E998;
@@ -116,8 +116,8 @@ void func_800F6994_28E9E4(Object* arg0) {
 INCLUDE_ASM(s32, "ovl_51_ChangeCannonTargetWarioBoard/28E630", func_800F69D8_28EA28); //https://decomp.me/scratch/XixHe
 
 void func_800F6B04_28EB54(void) {
-    func_8003E694(D_800F6C54);
-    func_8003E694(D_800F6C58);
+    DestroyObject(D_800F6C54);
+    DestroyObject(D_800F6C58);
 }
 
 void func_800F6B30_28EB80(void) {

@@ -62,7 +62,7 @@ void func_800F65E0_191700(void) {
     SetFadeInTypeAndTime(0, 16);
 }
 
-void func_800F6A60_191B80(Object* arg0) {
+void func_800F6A60_191B80(unkObjectStruct* arg0) {
     D_800FCFF4 = 0;
     D_800FCD28 = 0;
     D_800FCD24 = 0;
@@ -75,7 +75,7 @@ void func_800F6A60_191B80(Object* arg0) {
 
 INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F6AB4_191BD4);
 
-void func_800F6D98_191EB8(Object* arg0) {
+void func_800F6D98_191EB8(unkObjectStruct* arg0) {
     arg0->unk_40->unk_00.unsigned16[0] = LoadFormFile(0x310000, 0x20289);
     arg0->unk_40->unk_00.unsigned16[1] = LoadFormFile(0x380002, 0x48D);
     arg0->unk_40->unk_04.unsigned16[0] = LoadFormFile(0x380003, 0x48D);
@@ -83,7 +83,7 @@ void func_800F6D98_191EB8(Object* arg0) {
     arg0->func_ptr = &func_800F6E10_191F30;
 }
 
-void func_800F6E10_191F30(Object* arg0) { //unused arg?
+void func_800F6E10_191F30(unkObjectStruct* arg0) { //unused arg?
     func_800FC618_197738();
 }
 
@@ -110,7 +110,7 @@ INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F74E8_192608);
 
 INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F7EC4_192FE4);
 
-void func_800F821C_19333C(Object* arg0) {
+void func_800F821C_19333C(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp_s1 = arg0->unk_50;
     s32 temp_v1 = arg0->unk_10;
 
@@ -193,7 +193,7 @@ s32 func_800F9EE0_195000(void) {
 
 INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F9F30_195050);
 
-s32 func_800FA36C_19548C(Object* arg0) { //slightly jank match
+s32 func_800FA36C_19548C(unkObjectStruct* arg0) { //slightly jank match
     unkGlobalStruct_00* temp_v1 = arg0->unk_50;
     s32 tempVar;
     
@@ -211,7 +211,7 @@ s32 func_800FA36C_19548C(Object* arg0) { //slightly jank match
 
 INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800FA3A0_1954C0);
 
-void func_800FA510_195630(Object* arg0) {
+void func_800FA510_195630(unkObjectStruct* arg0) {
     switch ((u16)arg0->unk_50->unk_40) {
     case 1:
         func_800FA5A4_1956C4();

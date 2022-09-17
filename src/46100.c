@@ -2,9 +2,9 @@
 
 extern s16 D_800D6470;
 extern s16 D_800D6472[];
-extern Object* D_800D6478;
+extern unkObjectStruct* D_800D6478;
 
-void func_80045500(Object* arg0) {
+void func_80045500(unkObjectStruct* arg0) {
     Vec3f sp10;
     Vec2f sp20;
 

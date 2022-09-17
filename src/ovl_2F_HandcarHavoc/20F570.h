@@ -1,6 +1,6 @@
 #include "common.h"
 
-extern Object** D_800FF61C;
+extern unkObjectStruct** D_800FF61C;
 extern s16 D_800FF400;
 extern s16 D_800FF5D2;
 extern s16 D_800FF5D4;

@@ -26,7 +26,7 @@ void func_800F664C_25705C(void) {
 }
 
 void func_800F66FC_25710C(void) {
-    unk_Struct03* temp_s0;
+    Object* temp_s0;
 
     if (D_800F8890 == NULL) {
         temp_s0 = CreateObject(0x3A, NULL);
@@ -44,7 +44,7 @@ void func_800F676C_25717C(void) {
 }
 
 void func_800F678C_25719C(void) {
-    unk_Struct03* temp_s0;
+    Object* temp_s0;
 
     if (D_800F8894 == NULL) {
         temp_s0 = CreateObject(0x39, NULL);
@@ -61,7 +61,7 @@ void func_800F67F4_257204(void) {
 }
 
 void func_800F6814_257224(void) {
-    unk_Struct03* temp_s0;
+    Object* temp_s0;
 
     if (D_800F8898 == NULL) {
         temp_s0 = CreateObject(0x6AU, NULL);
@@ -80,7 +80,7 @@ void func_800F68A4_2572B4(void) {
 }
 
 void func_800F68C4_2572D4(void) {
-    unk_Struct03* temp_s0;
+    Object* temp_s0;
 
     if (D_800F889C == NULL) {
         temp_s0 = CreateObject(0x3BU, NULL);
@@ -348,7 +348,7 @@ void func_800F74E0_257EF0(void) {
     func_800405DC(D_800ED5DC);
 }
 
-void func_800F7500_257F10(unk_Struct03* arg0, void* arg1) {
+void func_800F7500_257F10(Object* arg0, void* arg1) {
     LoadStringIntoWindow(arg0->unk_08, arg1, -1, -1);
     func_80071C8C(arg0->unk_08, 1);
     func_8004E0E8(arg0->unk_08);
@@ -356,8 +356,8 @@ void func_800F7500_257F10(unk_Struct03* arg0, void* arg1) {
     func_8006EB40(arg0->unk_08);
 }
 
-void func_800F7560_257F70(unk_Struct03** arg0) {
-    unk_Struct03* temp_v0;
+void func_800F7560_257F70(Object** arg0) {
+    Object* temp_v0;
 
     temp_v0 = *arg0;
     temp_v0->unk_34 = 20.0f;
@@ -372,8 +372,8 @@ void func_800F7560_257F70(unk_Struct03** arg0) {
     func_8003E81C(*arg0, -1, 2);
 }
 
-void func_800F75F0_258000(unk_Struct03* arg0, s16 arg1) {
-    unk_Struct03* temp_v0;
+void func_800F75F0_258000(Object* arg0, s16 arg1) {
+    Object* temp_v0;
     s32 i;
     s16 temp_s1;
     s16 new_var;
@@ -402,7 +402,7 @@ void func_800F75F0_258000(unk_Struct03* arg0, s16 arg1) {
 
 void func_800F7714_258124(void) {
     Process* process = GetCurrentProcess();
-    unk_Struct03** temp_s0 = process->user_data;
+    Object** temp_s0 = process->user_data;
 
     while (1) {
         SleepVProcess();

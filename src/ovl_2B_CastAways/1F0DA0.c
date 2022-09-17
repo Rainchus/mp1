@@ -73,7 +73,7 @@ void func_800F7014_1F17D4(void) {
     for (i = 0; i < D_800F3778_ovl2B; i++) {}
 }
 
-void func_800F704C_1F180C(Object* arg0) {
+void func_800F704C_1F180C(unkObjectStruct* arg0) {
     D_800FBB78_ovl2B[2] = 0;
     D_800FBB58_ovl2B = 60;
     D_800FBB5A_ovl2B = 30;
@@ -108,7 +108,7 @@ void func_800F70C4_1F1884(void) {
     }
 }
 
-void func_800F71AC_1F196C(Object* arg0) {
+void func_800F71AC_1F196C(unkObjectStruct* arg0) {
     s16 sprite;
 
     sprite = InitSprite(0x3F0002);
@@ -133,17 +133,17 @@ INCLUDE_ASM(s32, "ovl_2B_CastAways/1F0DA0", func_800F73AC_1F1B6C);
 
 INCLUDE_ASM(s32, "ovl_2B_CastAways/1F0DA0", func_800F75BC_1F1D7C);
 
-void func_800F761C_1F1DDC(Object* arg0) {
+void func_800F761C_1F1DDC(unkObjectStruct* arg0) {
     func_800F73AC_1F1B6C(arg0, 0);
     arg0->func_ptr = &func_800F76B8_1F1E78;
 }
 
-void func_800F7650_1F1E10(Object* arg0) {
+void func_800F7650_1F1E10(unkObjectStruct* arg0) {
     func_800F73AC_1F1B6C(arg0, 1);
     arg0->func_ptr = &func_800F76B8_1F1E78;
 }
 
-void func_800F7684_1F1E44(Object* arg0) {
+void func_800F7684_1F1E44(unkObjectStruct* arg0) {
     func_800F73AC_1F1B6C(arg0, 2);
     arg0->func_ptr = &func_800F76B8_1F1E78;
 }
@@ -154,19 +154,19 @@ INCLUDE_ASM(s32, "ovl_2B_CastAways/1F0DA0", func_800F7A38_1F21F8);
 
 INCLUDE_ASM(s32, "ovl_2B_CastAways/1F0DA0", func_800F8194_1F2954);
 
-void func_800F8AAC_1F326C(Object* arg0) {
+void func_800F8AAC_1F326C(unkObjectStruct* arg0) {
     func_800F8194_1F2954(arg0, 0);
 }
 
-void func_800F8AC8_1F3288(Object* arg0) {
+void func_800F8AC8_1F3288(unkObjectStruct* arg0) {
     func_800F8194_1F2954(arg0, 1);
 }
 
-void func_800F8AE4_1F32A4(Object* arg0) {
+void func_800F8AE4_1F32A4(unkObjectStruct* arg0) {
     func_800F8194_1F2954(arg0, 2);
 }
 
-void func_800F8B00_1F32C0(Object* arg0) {
+void func_800F8B00_1F32C0(unkObjectStruct* arg0) {
     func_800F8194_1F2954(arg0, 3);
 }
 

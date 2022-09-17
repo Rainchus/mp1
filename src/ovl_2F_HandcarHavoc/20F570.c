@@ -5,7 +5,7 @@ INCLUDE_ASM(s32, "ovl_2F_HandcarHavoc/20F570", func_800F65E0_20F570);
 
 INCLUDE_ASM(s32, "ovl_2F_HandcarHavoc/20F570", func_800F6BBC_20FB4C);
 
-void func_800F72B0_210240(Object* arg0) {
+void func_800F72B0_210240(unkObjectStruct* arg0) {
     D_80101C8A = 0;
     D_800FF628 = 0;
     D_800FF624 = 0;
@@ -101,8 +101,8 @@ INCLUDE_ASM(s32, "ovl_2F_HandcarHavoc/20F570", func_800FB5DC_21456C);
 void func_800FB7DC_21476C(void) {
 }
 
-void func_800FB7E4_214774(Object* arg0) {
-    Object* temp_a0;
+void func_800FB7E4_214774(unkObjectStruct* arg0) {
+    unkObjectStruct* temp_a0;
 
     temp_a0 = D_800FF61C[arg0->unk_50->unk_B0];
     temp_a0->unk_50->unk_00.unsigned16[1] = 30;

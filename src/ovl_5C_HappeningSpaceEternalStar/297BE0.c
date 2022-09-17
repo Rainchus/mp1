@@ -4,7 +4,7 @@ void func_8004DBD4(s32, u8); //defined differently between some files?
 void func_800F66B4_297CB4(void);
 void func_800F6824_297E24(void);
 void func_800F68C0_297EC0(void);
-void func_800F67E0_297DE0(Object* arg0);
+void func_800F67E0_297DE0(unkObjectStruct* arg0);
 void func_800F6898_297E98(void);
 void func_800F6960_297F60(void);
 void func_800F6794_297D94(void);
@@ -14,7 +14,7 @@ s32 D_800F699C_297F9C[] = { 0x00000004, 0x000A0068, 0x000A006A, 0x000A006C, 0x00
 
 //bss
 extern u8 D_800F69B0;
-extern unk_Struct03* D_800F69B4;
+extern Object* D_800F69B4;
 
 
 void func_800F65E0_297BE0(void) {
@@ -65,7 +65,7 @@ void func_800F6794_297D94(void) {
     }
 }
 
-void func_800F67E0_297DE0(Object* arg0) {
+void func_800F67E0_297DE0(unkObjectStruct* arg0) {
     if (D_800F5144 != 0) {
         func_800726AC(4, 0x10);
         arg0->func_ptr = &func_800F6794_297D94;
@@ -83,7 +83,7 @@ void func_800F6824_297E24(void) {
 }
 
 void func_800F6898_297E98(void) {
-    func_8003E694(D_800F69B4);
+    DestroyObject(D_800F69B4);
     func_8004F2EC();
 }
 

@@ -3,10 +3,10 @@
 extern char D_800CB110[];
 extern char D_800CB11C[];
 extern f64 D_800CB128;
-extern Object* D_800C5248;
+extern unkObjectStruct* D_800C5248;
 extern s32 D_800C524C;
 extern u16 D_800C524E;
-extern Object* D_800F50C0[];
+extern unkObjectStruct* D_800F50C0[];
 
 s32 CreateTextWindow(s32 arg0, s32 arg1, s32 arg2, s32 arg3) {
     s32 temp_s1;
@@ -88,8 +88,8 @@ void func_8004E154(void) {
 
 INCLUDE_ASM(s32, "4E530", func_8004E184);
 
-void func_8004E248(Object* arg0) {
-    unk_Struct03* temp_v0;
+void func_8004E248(unkObjectStruct* arg0) {
+    Object* temp_v0;
     unkGlobalStruct_00* temp_v1;
 
     temp_v1 = arg0->unk_50;
@@ -126,10 +126,10 @@ void func_8004E248(Object* arg0) {
     temp_v1->unk_14 += arg0->unk_38;
 }
 
-Object* func_8004E3E0(s32 arg0, Vec3f* arg1, s32 arg2, void* arg3) { //fix arg3 type later
-    Object* obj;
+unkObjectStruct* func_8004E3E0(s32 arg0, Vec3f* arg1, s32 arg2, void* arg3) { //fix arg3 type later
+    unkObjectStruct* obj;
     s32 i;
-    arg3 = (unk_Struct03*)arg3;
+    arg3 = (Object*)arg3;
 
     obj = func_8005D384(0x1000, 0, 0, -1, &func_8004E248);
     obj->unk_4C = arg0;
@@ -160,17 +160,17 @@ Object* func_8004E3E0(s32 arg0, Vec3f* arg1, s32 arg2, void* arg3) { //fix arg3 
 }
 
 #ifdef NON_MATCHING
-void func_8004E564(Object* arg0) { //matches, needs rodata support
+void func_8004E564(unkObjectStruct* arg0) { //matches, needs rodata support
     f32 temp_f20;
     f32 temp_f20_2;
     f32 temp_f20_3;
     f32 temp_f20_4;
     f32 temp_f20_5;
-    unk_Struct03* var_s0;
-    unk_Struct03* temp_v0;
-    unk_Struct03 *new_var;
+    Object* var_s0;
+    Object* temp_v0;
+    Object *new_var;
 
-    var_s0 = (unk_Struct03*)arg0->unk_50;
+    var_s0 = (Object*)arg0->unk_50;
     arg0->unk_4D--;
     
     if (var_s0 == NULL) {
@@ -229,12 +229,12 @@ INCLUDE_ASM(s32, "4E530", func_8004EC44);
 
 INCLUDE_ASM(s32, "4E530", func_8004EE14);
 
-void func_8004F00C(unk_Struct03* arg0, f32 arg1, f32 arg2) {
+void func_8004F00C(Object* arg0, f32 arg1, f32 arg2) {
     arg0->unk_34 = arg1;
     arg0->unk_38 = arg2;
 }
 
-s32 func_8004F018(unk_Struct03* arg0) {
+s32 func_8004F018(Object* arg0) {
     if (!(arg0->unk_38 != 0.0f)) {
         return 0;
     } else {
@@ -242,13 +242,13 @@ s32 func_8004F018(unk_Struct03* arg0) {
     }
 }
 
-void func_8004F044(unk_Struct03* arg0) {
+void func_8004F044(Object* arg0) {
     while (func_8004F018(arg0) != 0) {
         SleepVProcess();
     }
 }
 
-void func_8004F084(Object* arg0) {
+void func_8004F084(unkObjectStruct* arg0) {
     f32 temp_f0;
 
     func_800264F8(arg0->unk_3C, arg0->unk_44, (func_80088060((f32) (arg0->unk_18 * D_800CB128)) / 2.0f) + 0.5f, D_800CB110, D_800CB11C, 0);
@@ -259,7 +259,7 @@ void func_8004F084(Object* arg0) {
 }
 
 void func_8004F140(s32 arg0) {
-    Object* temp_v0;
+    unkObjectStruct* temp_v0;
 
     D_800C524C = LoadFormFile(0xA0076, 0x2AD);
     func_80026040(arg0);

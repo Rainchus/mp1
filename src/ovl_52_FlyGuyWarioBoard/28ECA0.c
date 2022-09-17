@@ -31,8 +31,8 @@ INCLUDE_ASM(s32, "ovl_52_FlyGuyWarioBoard/28ECA0", func_800F6DE0_28F4A0);
 
 INCLUDE_ASM(s32, "ovl_52_FlyGuyWarioBoard/28ECA0", func_800F7070_28F730);
 
-void func_800F72DC_28F99C(Object* arg0) {
-    unk_Struct03* temp_s0 = D_800F8234;
+void func_800F72DC_28F99C(unkObjectStruct* arg0) {
+    Object* temp_s0 = D_800F8234;
 
     temp_s0->unk_30 = ((func_80088060((arg0->unk_28 * D_800F8210)) * arg0->unk_4C) + arg0->unk_1C);
     arg0->unk_28 += 10.0f;
@@ -41,8 +41,8 @@ void func_800F72DC_28F99C(Object* arg0) {
     }
 }
 
-void func_800F7384_28FA44(Object* arg0) {
-    unk_Struct03* temp_s0 = D_800F8070;
+void func_800F7384_28FA44(unkObjectStruct* arg0) {
+    Object* temp_s0 = D_800F8070;
 
     temp_s0->unk_30 = ((func_80088060((arg0->unk_28 * D_800F8218)) * arg0->unk_4C) + arg0->unk_1C);
     arg0->unk_28 += 10.0f;
@@ -68,7 +68,7 @@ void func_800F7D14_2903D4(void) {
     }
 }
 
-void func_800F7D90_290450(Object* arg0) {
+void func_800F7D90_290450(unkObjectStruct* arg0) {
     if (D_800F5144 != 0) {
         if (D_800F807C != 0) {
             func_800726AC(6, 8);

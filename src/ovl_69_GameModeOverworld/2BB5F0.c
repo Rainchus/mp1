@@ -2,13 +2,13 @@
 #include "2BB5C0.h"
 
 void func_80025F10(s16, s32);
-unk_Struct03* func_80026A0C(s16, void*);
+Object* func_80026A0C(s16, void*);
 void func_800F731C_2BC2FC(void);
 extern char D_800FA180[];
 
 INCLUDE_ASM(s32, "ovl_69_GameModeOverworld/2BB5F0", func_800F6610_2BB5F0);
 // void func_800F6610_2BB5F0(void) { //matches, needs rodata support
-//     Object* temp_s1;
+//     unkObjectStruct* temp_s1;
 
 //     InitCameras(1);
 //     func_80029090(1);
@@ -130,7 +130,7 @@ void func_800F7DF0_2BCDD0(void) {
 
 INCLUDE_ASM(s32, "ovl_69_GameModeOverworld/2BB5F0", func_800F7E24_2BCE04);
 
-void func_800F86A8_2BD688(Object* arg0) {
+void func_800F86A8_2BD688(unkObjectStruct* arg0) {
     arg0->unk_40->unk_00.signed16[0] = -1;
     SetFadeInTypeAndTime(0xFF, 0x10);
     arg0->func_ptr = &func_800F86EC_2BD6CC;
@@ -173,7 +173,7 @@ s32 func_800F87D0_2BD7B0(u8 arg0) {
 }
 
 INCLUDE_ASM(s32, "ovl_69_GameModeOverworld/2BB5F0", func_800F884C_2BD82C);
-// void func_800F884C_2BD82C(Object* arg0) { //cleanup later, matches needs rodata support
+// void func_800F884C_2BD82C(unkObjectStruct* arg0) { //cleanup later, matches needs rodata support
 //     Vec3f sp10;
 //     Vec3f sp20;
 //     Vec3f sp30;
@@ -223,7 +223,7 @@ INCLUDE_ASM(s32, "ovl_69_GameModeOverworld/2BB5F0", func_800F884C_2BD82C);
 //     func_8001D57C(1);
 // }
 
-void func_800F8AB8_2BDA98(Object* arg0) {
+void func_800F8AB8_2BDA98(unkObjectStruct* arg0) {
     if ((D_800FA1C0 == 4) || (D_800FA1C2 != 0) || (D_800F5144 != 0)) {
         func_800726AC(0, 0x14);
         arg0->func_ptr = &func_800F8B38_2BDB18;

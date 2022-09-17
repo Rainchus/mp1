@@ -1,10 +1,10 @@
 #include "common.h"
 
-extern Object** D_800FCD2C;
+extern unkObjectStruct** D_800FCD2C;
 
 void func_800FC618_197738(void);
 void func_800FB2EC_19640C(void);
-void func_800F6E10_191F30(Object*);
+void func_800F6E10_191F30(unkObjectStruct*);
 void func_800F6EBC_191FDC(s32, s32);
 void func_800F85A8_1936C8(s32, s32);
 void func_800F9CC8_194DE8(s32, s32);
@@ -12,7 +12,7 @@ void func_800FA5A4_1956C4(void);
 void func_800FA950_195A70(void);
 void func_800FAB54_195C74(void);
 void func_800FAE60_195F80(void);
-void func_800F6AB4_191BD4(Object*);
+void func_800F6AB4_191BD4(unkObjectStruct*);
 void func_800F9588_1946A8(void);
 void func_800FB298_1963B8(void);
 
@@ -24,8 +24,8 @@ void func_800F8538_193658(s32 arg0);
 void func_800F8554_193674(s32 arg0);
 void func_800F8570_193690(s32 arg0);
 void func_800F858C_1936AC(s32 arg0);
-void func_800F6A60_191B80(Object* arg0);
-void func_800F6D98_191EB8(Object* arg0);
+void func_800F6A60_191B80(unkObjectStruct* arg0);
+void func_800F6D98_191EB8(unkObjectStruct* arg0);
 
 
 void func_800FB1E0_196300(f32 arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, f32 arg7);
@@ -45,8 +45,8 @@ extern s16 D_800FCD18;
 extern s16 D_800FCD1A;
 extern s16 D_800FCD1C;
 extern u16 D_800FCD1E;
-extern Object* D_800FCD20;
-extern Object** D_800FCD30;
+extern unkObjectStruct* D_800FCD20;
+extern unkObjectStruct** D_800FCD30;
 extern s16 D_800FCFF0;
 
 extern u16 D_800FCD14_13D784;

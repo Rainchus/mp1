@@ -49,7 +49,7 @@ void func_800F65E0_CDA50(void) { //needs rodata support
 INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800F65E0_CDA50);
 #endif
 
-void func_800F6858_CDCC8(Object* arg0) {
+void func_800F6858_CDCC8(unkObjectStruct* arg0) {
     arg0->func_ptr = &func_800F68CC_CDD3C;
     D_800FE2C2 = 0;
     D_800FDE2C = 0;
@@ -66,7 +66,7 @@ void func_800F6858_CDCC8(Object* arg0) {
 
 INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800F68CC_CDD3C);
 
-void func_800F714C_CE5BC(Object* arg0) {
+void func_800F714C_CE5BC(unkObjectStruct* arg0) {
     func_800F9178_D05E8();
     func_800F796C_CEDDC(arg0);
     if (func_80075FE0() == 0) {
@@ -79,7 +79,7 @@ void func_800F714C_CE5BC(Object* arg0) {
     }
 }
 
-void func_800F71C4_CE634(Object* arg0) {
+void func_800F71C4_CE634(unkObjectStruct* arg0) {
     func_800F8F58_D03C8();
     func_800F9178_D05E8();
     func_800F7E20_CF290();
@@ -119,7 +119,7 @@ void func_800F71C4_CE634(Object* arg0) {
     }
 }
 
-void func_800F7318_CE788(Object* arg0) {
+void func_800F7318_CE788(unkObjectStruct* arg0) {
     if (func_80072718() == 0) {
         arg0->func_ptr = &func_800F7350_CE7C0;
     }
@@ -136,7 +136,7 @@ void func_800F7350_CE7C0(void) {
 
 INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800F73A4_CE814);
 
-void func_800F7874_CECE4(Object* arg0) {
+void func_800F7874_CECE4(unkObjectStruct* arg0) {
     func_800F796C_CEDDC(arg0);
     func_800F9178_D05E8();
     switch (D_800FD878) {
@@ -165,7 +165,7 @@ void func_800F7874_CECE4(Object* arg0) {
     }
 }
 
-void func_800F796C_CEDDC(Object* arg0) {
+void func_800F796C_CEDDC(unkObjectStruct* arg0) {
     if (D_800F5144 == 1) {
         arg0->func_ptr = &func_800F7318_CE788;
     }
@@ -212,7 +212,7 @@ void func_800F7C08_CF078(void) {
 }
 
 void func_800F7C70_CF0E0(f32 arg0) { //uses rodata
-    Object* temp_a0;
+    unkObjectStruct* temp_a0;
 
     if (arg0 == 0.0) {
         temp_a0 = D_800F3FB0;
@@ -261,7 +261,7 @@ typedef struct unkStruct_02 {
 // extern s32 D_800F2AF8[];
 // extern unkStruct_02 D_800FD85C[];
 // extern Vec3f D_800FDA78;
-// extern Object* D_800FDDE0;
+// extern unkObjectStruct* D_800FDDE0;
 // extern s16 D_800FDE40;
 // extern unkStruct D_800FDE42;
 // extern unkStruct D_800FDE46;
@@ -271,10 +271,10 @@ typedef struct unkStruct_02 {
 
 INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800F7EDC_CF34C);
 // void func_800F7EDC_CF34C(void) {
-//     Object* temp;
+//     unkObjectStruct* temp;
 //     Vec3f sp18;
 //     Vec2f sp24;
-//     Object* temp_v0_3;
+//     unkObjectStruct* temp_v0_3;
 //     s32 temp_a0;
 //     u16 temp_v1;
 //     u8 temp_s0_2;
@@ -365,7 +365,7 @@ INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800F84A8_CF918);
 INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800F8654_CFAC4);
 
 #ifdef NON_MATCHING
-void func_800F87DC_CFC4C(Object* arg0) { //matches but needs rodata support
+void func_800F87DC_CFC4C(unkObjectStruct* arg0) { //matches but needs rodata support
     u16 temp_s1 = arg0->unk_4C;
     
     arg0->func_ptr = &func_800F89A8_CFE18;

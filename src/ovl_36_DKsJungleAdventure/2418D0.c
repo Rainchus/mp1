@@ -2,8 +2,8 @@
 #include "dkJungleAdventure.h"
 
 // bss
-struct unk_Struct03 *D_800FA300;
-struct unk_Struct03 *D_800FA304;
+struct Object *D_800FA300;
+struct Object *D_800FA304;
 // struct mpSource_object *bss_toad_model;
 // struct mpSource_object *bss_toad_instances[DK_STAR_COUNT];
 // struct mpSource_object *bss_thwomp_model;
@@ -155,7 +155,7 @@ s32 func_800F6958_241C18(s32 current_space_index) {
 
 void func_800F6A38_241CF8(void) {
     SpaceData* space_data;
-    unk_Struct03* ptr;
+    Object* ptr;
     mpSource_f2b7cstruct *f2bstr;
     void *ret;
     s32 s0;
@@ -210,12 +210,12 @@ void func_800F6A38_241CF8(void) {
 
     func_800427D4(ret);
     SleepProcess(30);
-    func_8003E694(ptr);
+    DestroyObject(ptr);
     EndProcess(NULL);
 }
 
 void func_800F6C48_241F08(mystery_struct_ret_func_80048224* a0) { //ov054_ShowNextStarSpotInner
-    unk_Struct03* unk0ptr;
+    Object* unk0ptr;
 
     unk0ptr = a0->unk0;
     unk0ptr->unk_34 = 20.0f;
@@ -429,7 +429,7 @@ void func_800F7224_2424E4(void) { //ov054_Entrypoint3
 }
 
 void func_800F7250_242510(void) { //ov054_DrawBowserInner
-    unk_Struct03 *ptr;
+    Object *ptr;
 
     if (D_800FA300 != NULL) {
         return;
@@ -451,7 +451,7 @@ void func_800F72CC_24258C(void) { //ov054_DrawBowserOuter
 }
 
 void func_800F72EC_2425AC(void) { //ov054_DrawKoopaInner
-    unk_Struct03 *ptr;
+    Object *ptr;
 
     if (D_800FA304 != NULL) {
         return;

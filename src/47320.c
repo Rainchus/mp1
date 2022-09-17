@@ -34,7 +34,7 @@ void func_80046760(void) {
     D_800D6500 &= 0xCF;
 }
 
-void func_80046828(Object* arg0) {
+void func_80046828(unkObjectStruct* arg0) {
     Vec2s* temp;
     s32 i;
     
@@ -88,7 +88,7 @@ void func_800471FC(void) {
     D_800D6510 = 1;
 }
 
-void func_8004720C(Object* arg0) {
+void func_8004720C(unkObjectStruct* arg0) {
     arg0->unk_1C = 74.0f - (func_80088060((f32) ((f64) arg0->unk_28 * D_800CB008)) * 5.0f);
     arg0->unk_28 += 8.0f;
     
@@ -100,7 +100,7 @@ void func_8004720C(Object* arg0) {
     func_80066DC4(D_800D6502, 0, (s32)arg0->unk_18 + 0x54, (s32)arg0->unk_1C - 0x23);
 }
 
-void func_80047348(Object* arg0) {
+void func_80047348(unkObjectStruct* arg0) {
     arg0->unk_18 -= 19.0f;
     
     if (arg0->unk_18 == 80.0f) {
@@ -152,7 +152,7 @@ void func_8004746C(s32 arg0) {
 }
 
 void func_80047694(s32 arg0) {
-    Object* temp_v0;
+    unkObjectStruct* temp_v0;
 
     if (!(D_800D6500 & 4)) {
         func_8004746C(arg0);
@@ -183,7 +183,7 @@ void func_80047694(s32 arg0) {
 INCLUDE_ASM(s32, "47320", func_800477AC);
 
 void func_800479B8(s32 arg0) {
-    Object* obj;
+    unkObjectStruct* obj;
     void* file;
     tempTest copyTempTest;
 

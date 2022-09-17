@@ -37,7 +37,7 @@ INCLUDE_ASM(s32, "ovl_0E_FaceLift/12BC20", func_800F8CE0_12E320);
 
 INCLUDE_ASM(s32, "ovl_0E_FaceLift/12BC20", func_800F8D5C_12E39C);
 
-void func_800F8DC8_12E408(Object* arg0) {
+void func_800F8DC8_12E408(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp_v0;
     s16 i;
 
@@ -81,7 +81,7 @@ INCLUDE_ASM(s32, "ovl_0E_FaceLift/12BC20", func_800F9988_12EFC8);
 
 INCLUDE_ASM(s32, "ovl_0E_FaceLift/12BC20", func_800F99E8_12F028);
 
-void func_800F9AD4_12F114(Object* arg0) {
+void func_800F9AD4_12F114(unkObjectStruct* arg0) {
     s16 temp = InitSprite(0x20000B);
     
     D_800FC960 = func_80019060(temp, 0, 1);
@@ -105,7 +105,7 @@ INCLUDE_ASM(s32, "ovl_0E_FaceLift/12BC20", func_800FA5B4_12FBF4);
 
 INCLUDE_ASM(s32, "ovl_0E_FaceLift/12BC20", func_800FA7D0_12FE10);
 
-void func_800FA9DC_13001C(Object* arg0) {
+void func_800FA9DC_13001C(unkObjectStruct* arg0) {
     if (D_800FC3D0_DAFD0 != 0 || D_800F5144 != 0) {
         func_800726AC(0, 0x14);
         arg0->func_ptr = &func_800FAA38_130078;
@@ -119,7 +119,7 @@ INCLUDE_ASM(s32, "ovl_0E_FaceLift/12BC20", func_800FAA64_1300A4);
 
 INCLUDE_ASM(s32, "ovl_0E_FaceLift/12BC20", func_800FAB24_130164);
 
-void func_800FACB8_1302F8(Object* arg0) {
+void func_800FACB8_1302F8(unkObjectStruct* arg0) {
     func_800FACD8_130318(arg0, D_800FCA18);
 }
 

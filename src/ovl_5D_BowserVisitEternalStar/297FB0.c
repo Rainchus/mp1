@@ -5,11 +5,11 @@ void func_800F7030_298A00(void);
 void func_800F66BC_29808C(void);
 void func_800F6DD4_2987A4(void);
 void func_800F6F90_298960(void);
-void func_800F6D88_298758(Object*);
+void func_800F6D88_298758(unkObjectStruct*);
 void func_8004DBD4(s32, u8);
 void func_80055994(u8, s32);
 
-unk_Struct03* D_800F7060_298A30 = NULL;
+Object* D_800F7060_298A30 = NULL;
 s32 D_800F7064_298A34 = -1;
 s32 D_800F7068_298A38 = -1;
 void* D_800F706C_298A3C = NULL;
@@ -28,8 +28,8 @@ s32* D_800F70E4_298AB4[] = {D_800F709C_298A6C, D_800F70A8_298A78, D_800F70B4_298
 
 //bss
 extern u8 D_800F7110;
-extern unk_Struct03* D_800F7114;
-extern unk_Struct03* D_800F7118;
+extern Object* D_800F7114;
+extern Object* D_800F7118;
 
 void func_800F65E0_297FB0(void) {
     D_800F7110 = D_800ED5DD;
@@ -56,7 +56,7 @@ void func_800F66BC_29808C(void) {
     f32 var_f24;
     s32 var_s2;
     s32 var_s1_3;
-    unk_Struct03* temp_s0_4;
+    Object* temp_s0_4;
     unk_Struct04* tempStruct04;
     s32 windowID;
     s32 temp;
@@ -120,7 +120,7 @@ void func_800F66BC_29808C(void) {
             var_f24 += 10.0f;
             var_f22 += 0.0f;
         } while (var_s1_3 < 0x15F);
-        func_8003E694(D_800F7060_298A30);
+        DestroyObject(D_800F7060_298A30);
         D_800F7060_298A30 = NULL;
         func_800427D4(D_800F706C_298A3C);
         D_800F706C_298A3C = NULL;
@@ -202,7 +202,7 @@ void func_800F6D3C_29870C(void) {
     }
 }
 
-void func_800F6D88_298758(Object* arg0) {
+void func_800F6D88_298758(unkObjectStruct* arg0) {
     if (D_800F5144 != 0) {
         func_800726AC(3, 0x10);
         func_800601D4(0x20);
@@ -229,11 +229,11 @@ void func_800F6DD4_2987A4(void) {
 }
 
 void func_800F6EEC_2988BC(void) {
-    func_8003E694(D_800F7118);
-    func_8003E694(D_800F7114);
+    DestroyObject(D_800F7118);
+    DestroyObject(D_800F7114);
 
     if (D_800F7060_298A30 != NULL) {
-        func_8003E694(D_800F7060_298A30);
+        DestroyObject(D_800F7060_298A30);
     }
 
     if (D_800F706C_298A3C != NULL) {

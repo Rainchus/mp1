@@ -175,7 +175,7 @@ void func_80052FD4(s16 index) {
     playerMain* player = GetPlayerStruct(index);
     if (player->playerObj != NULL) {
         EndProcess(player->process);
-        func_8003E694(player->playerObj);
+        DestroyObject(player->playerObj);
         player->playerObj = NULL;
     }
 }

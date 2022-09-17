@@ -38,9 +38,9 @@ typedef struct unkStruct {
 
 extern unkStruct D_800FE158[];
 
-void func_800F6858_CDCC8(Object*);
-void func_800F796C_CEDDC(Object*);
-void func_800F71C4_CE634(Object*);
+void func_800F6858_CDCC8(unkObjectStruct*);
+void func_800F796C_CEDDC(unkObjectStruct*);
+void func_800F71C4_CE634(unkObjectStruct*);
 void func_800F68CC_CDD3C(s32);
 void func_800F7EDC_CF34C(void);
 void func_800F8C38_D00A8(void);
@@ -55,11 +55,11 @@ void func_800F8FEC_D045C(void);
 void func_800F9178_D05E8(void);
 void func_800F7350_CE7C0(void);
 void func_800F73A4_CE814(void);
-void func_800F7874_CECE4(Object*);
+void func_800F7874_CECE4(unkObjectStruct*);
 void func_800F7E20_CF290(void);
 void func_800F8F58_D03C8(void);
 u16 func_800F901C_D048C(void);
-s32 func_800F9BC8_D1038(Object*);
+s32 func_800F9BC8_D1038(unkObjectStruct*);
 void func_800F830C_CF77C(void);
 void func_800F94E0_D0950(void);
 void func_800F89A8_CFE18(void);
@@ -79,7 +79,7 @@ extern u16 D_800FE2C2;
 extern u16 D_800FE2C4;
 extern u16 D_800F5144;
 
-extern Object* D_800F3FB0;
+extern unkObjectStruct* D_800F3FB0;
 extern Vec3f D_800FDDC0;
 extern Vec3f D_800FDDCC;
 
@@ -126,10 +126,10 @@ extern unk_MemoryMatch_00 D_800FE318[0x10];
 extern tikiThing D_800FDE50[8]; //related hitbox of tikis
 
 extern Vec3f D_800FD7E4;
-extern Object* D_800FE2E8;
-extern Object* D_800FE2EC;
-extern Object* D_800FE2F0;
-extern Object* D_800FE2F4;
+extern unkObjectStruct* D_800FE2E8;
+extern unkObjectStruct* D_800FE2EC;
+extern unkObjectStruct* D_800FE2F0;
+extern unkObjectStruct* D_800FE2F4;
 
 //likely rodata
 extern f64 D_800FD900;

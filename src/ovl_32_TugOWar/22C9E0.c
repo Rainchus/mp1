@@ -21,7 +21,7 @@ INCLUDE_ASM(s32, "ovl_32_TugOWar/22C9E0", func_800F851C_22E91C);
 
 INCLUDE_ASM(s32, "ovl_32_TugOWar/22C9E0", func_800F8DA0_22F1A0);
 
-void func_800F95D4_22F9D4(Object* arg0) {
+void func_800F95D4_22F9D4(unkObjectStruct* arg0) {
     if (D_800FDB94_233F94 == 2) {
         D_800FDB94_233F94 = func_800F77EC_22DBEC();
     }

@@ -79,7 +79,7 @@ void func_800F65E0_1F62C0(void) {
     SetFadeInTypeAndTime(0, 16);
 }
 
-void func_800F6BD8_1F68B8(Object* arg0) {
+void func_800F6BD8_1F68B8(unkObjectStruct* arg0) {
     s32 i;
 
     D_800FF580 = 0;
@@ -101,7 +101,7 @@ void func_800F6BD8_1F68B8(Object* arg0) {
 
 INCLUDE_ASM(s32, "ovl_2C_KeyPaWay/1F62C0", func_800F6C58_1F6938);
 
-void func_800F6D98_1F6A78(Object* arg0) {
+void func_800F6D98_1F6A78(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp_v0;
 
     temp_v0 = arg0->unk_50;
@@ -126,7 +126,7 @@ void func_800F6E04_1F6AE4(u16 arg0, u32 arg1, u32 arg2, f32 arg3) {
     D_800FF55C->func_ptr = &func_800F6E6C_1F6B4C;
 }
 
-void func_800F6E6C_1F6B4C(Object* arg0) {
+void func_800F6E6C_1F6B4C(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp_s0 = arg0->unk_50;
     f32 temp_f0;
     
@@ -196,7 +196,7 @@ INCLUDE_ASM(s32, "ovl_2C_KeyPaWay/1F62C0", func_800FA450_1FA130);
 
 INCLUDE_ASM(s32, "ovl_2C_KeyPaWay/1F62C0", func_800FA59C_1FA27C);
 
-void func_800FA7E0_1FA4C0(Object* arg0) {
+void func_800FA7E0_1FA4C0(unkObjectStruct* arg0) {
     arg0->unk_4C = 0;
     arg0->func_ptr = &func_800FA7F4_1FA4D4;
 }
@@ -232,14 +232,14 @@ INCLUDE_ASM(s32, "ovl_2C_KeyPaWay/1F62C0", func_800FDA7C_1FD75C);
 
 INCLUDE_ASM(s32, "ovl_2C_KeyPaWay/1F62C0", func_800FDE64_1FDB44);
 
-Object* func_800FDFAC_1FDC8C(Object* arg0) {
-    Object* sp10[6]; //likely some unknown struct
-    Object* temp_s0;
+unkObjectStruct* func_800FDFAC_1FDC8C(unkObjectStruct* arg0) {
+    unkObjectStruct* sp10[6]; //likely some unknown struct
+    unkObjectStruct* temp_s0;
     u16 var_a0;
     s32 i;
-    Object* temp_s5 = arg0;
+    unkObjectStruct* temp_s5 = arg0;
     u16 var_s3 = 15;
-    Object* var_s4 = NULL;
+    unkObjectStruct* var_s4 = NULL;
     unkGlobalStruct_00* temp_s2;
 
     for (i = 0; i < 4; i++) {
@@ -258,8 +258,8 @@ Object* func_800FDFAC_1FDC8C(Object* arg0) {
     return var_s4;
 }
 
-Object* func_800FE06C_1FDD4C(Object* arg0) {
-    Object* temp_s0;
+unkObjectStruct* func_800FE06C_1FDD4C(unkObjectStruct* arg0) {
+    unkObjectStruct* temp_s0;
     f32 temp_f0;
     f32 temp_f0_2;
     f32 temp_f12;

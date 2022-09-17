@@ -4,7 +4,7 @@ extern s8 D_800F384E;
 extern f32 D_800F75F4;
 extern f32 D_800F75F8;
 extern f32 D_800F75FC;
-extern unk_Struct03* D_800F7628;
+extern Object* D_800F7628;
 
 void func_800F67F0_28D200(void);
 void func_800F7264_28DC74(void);

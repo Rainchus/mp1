@@ -50,7 +50,7 @@ void func_800F65E0_F6AB0(void) {
 INCLUDE_ASM(s32, "ovl_05_ShellGame/F6AB0", func_800F65E0_F6AB0);
 #endif
 
-void func_800F689C_F6D6C(Object* arg0) {
+void func_800F689C_F6D6C(unkObjectStruct* arg0) {
     arg0->func_ptr = &func_800F68E8_F6DB8;
     func_800F9618_F9AE8();
     func_800F9738_F9C08();
@@ -59,7 +59,7 @@ void func_800F689C_F6D6C(Object* arg0) {
         D_800FF784 = 1;
     }
 }
-void func_800F68E8_F6DB8(Object* arg0) {
+void func_800F68E8_F6DB8(unkObjectStruct* arg0) {
     func_800F76C4_F7B94();
     func_800F85B4_F8A84();
     func_800F8CF8_F91C8();
@@ -104,7 +104,7 @@ void func_800F6A14_F6EE4(void) {
     func_8005DFB8(1);
 }
 
-void func_800F6A98_F6F68(Object* arg0) {
+void func_800F6A98_F6F68(unkObjectStruct* arg0) {
     if (D_800F5144 == 1) {
         arg0->func_ptr = &func_800F6A14_F6EE4;
     }
@@ -114,7 +114,7 @@ INCLUDE_ASM(s32, "ovl_05_ShellGame/F6AB0", func_800F6AC0_F6F90);
 
 INCLUDE_ASM(s32, "ovl_05_ShellGame/F6AB0", func_800F6EE4_F73B4);
 
-void func_800F6FFC_F74CC(Object* arg0) {
+void func_800F6FFC_F74CC(unkObjectStruct* arg0) {
     if (func_80072718() == 0) {
         arg0->func_ptr = &func_800F6A14_F6EE4;
     }
@@ -131,7 +131,7 @@ void func_800F7034_F7504(void) {
 }
 
 void func_800F7098_F7568(f32 arg0) {
-    Object* temp_a0;
+    unkObjectStruct* temp_a0;
     
     if (arg0 == 0.0) {
         temp_a0 = D_800F3FB0;

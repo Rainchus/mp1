@@ -211,7 +211,7 @@ void func_800F6E6C_2966CC(void) {
     }
 }
 
-void func_800F6EFC_29675C(Object* arg0) {
+void func_800F6EFC_29675C(unkObjectStruct* arg0) {
     if (D_800F5144 != 0) {
         if (D_800F7200_296A60 != 0) {
             func_800726AC(6, 8);
@@ -238,7 +238,7 @@ void func_800F6F5C_2967BC(void) {
 }
 
 void func_800F70E8_296948(void) {
-    func_8003E694(D_800F7314);
+    DestroyObject(D_800F7314);
     func_80052FD4(D_800F7310);
     func_8004F2EC();
 }

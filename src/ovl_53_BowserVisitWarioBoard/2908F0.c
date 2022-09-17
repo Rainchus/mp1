@@ -17,8 +17,8 @@ s32 D_800F7030_291340[] = {0x00000003, 0x000A0068, 0x000A006B, 0x000A006A};
 
 //bss
 extern u8 D_800F7050;
-extern unk_Struct03* D_800F7054;
-extern unk_Struct03* D_800F7058;
+extern Object* D_800F7054;
+extern Object* D_800F7058;
 extern s32 D_800F705C;
 
 void func_800F65E0_2908F0(void) {
@@ -141,7 +141,7 @@ void func_800F6C50_290F60(void) {
     }
 }
 
-void func_800F6C9C_290FAC(Object* arg0) {
+void func_800F6C9C_290FAC(unkObjectStruct* arg0) {
     if (D_800F5144 != 0) {
         func_800726AC(3, 16);
         func_800601D4(32);
@@ -166,8 +166,8 @@ void func_800F6CE8_290FF8(void) {
 }
 
 void func_800F6E6C_29117C(void) {
-    func_8003E694(D_800F7058);
-    func_8003E694(D_800F7054);
+    DestroyObject(D_800F7058);
+    DestroyObject(D_800F7054);
     func_8004F2EC();
 }
 

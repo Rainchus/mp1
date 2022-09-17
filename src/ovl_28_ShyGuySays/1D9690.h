@@ -64,7 +64,7 @@ extern s32 D_800FDC4C;
 extern f32 D_800FDC54;
 extern s16 D_800EE984;
 extern s32 D_800FD5F0;
-extern Object* D_800FD998;
+extern unkObjectStruct* D_800FD998;
 extern s32 D_800FD99C;
 extern s32 D_800FD9A0;
 extern s16 D_800FD9A4;
@@ -73,7 +73,7 @@ extern s16 D_800FD9A8;
 extern s16 D_800FDC1A;
 extern s16 D_800FDC1C;
 extern s16 D_800FDC1E;
-extern Object* D_800F2AF8[]; //object ptr array
+extern unkObjectStruct* D_800F2AF8[]; //object ptr array
 extern s32 D_800FD9A0;
 extern s16 D_800FDC1C;
 extern s16 D_800FDD10;
@@ -86,7 +86,7 @@ extern f64 D_800FD648;
 extern f64 D_800FD650;
 extern Vec3f D_800FD980;
 extern Vec3f D_800FD98C;
-extern Object* D_800FDC20;
+extern unkObjectStruct* D_800FDC20;
 extern u16 D_800FD5DC[2];
 extern f64 D_800FD818; //BSS
 extern f64 D_800FD820; //BSS
@@ -97,17 +97,17 @@ void func_800FB424_1DE4D4(void);
 extern u16 D_800FD5C4;
 
 void func_800F69F8_1D9AA8(void);
-void func_800F6F98_1DA048(Object*);
+void func_800F6F98_1DA048(unkObjectStruct*);
 void func_800F72A4_1DA354(void);
 void func_800F69F8_1D9AA8(void);
 void func_80060268(s16);
 void func_800F73EC_1DA49C(void);
 void func_800FA8D4_1DD984(void);
-void func_800F9118_1DC1C8(Object*, s32);
+void func_800F9118_1DC1C8(unkObjectStruct*, s32);
 f32 func_800FD1D0_1E0280(void);
 s16 func_800FD200_1E02B0(void);
 u16 func_800F740C_1DA4BC(u16 arg0);
-void func_800F6930_1D99E0(Object*);
+void func_800F6930_1D99E0(unkObjectStruct*);
 void func_800FA77C_1DD82C(void);
 void func_800FB6E0_1DE790(void);
 void func_800FBAE4_1DEB94(void);
@@ -116,6 +116,6 @@ void func_800F736C_1DA41C(void);
 void func_800F8068_1DB118(void);
 void func_800F81A4_1DB254(void);
 void func_800FB30C_1DE3BC(void);
-void func_800F67F8_1D98A8(Object* arg0);
+void func_800F67F8_1D98A8(unkObjectStruct* arg0);
 void func_800F747C_1DA52C(u16 arg0);
 void func_800F6FC0_1DA070(void);

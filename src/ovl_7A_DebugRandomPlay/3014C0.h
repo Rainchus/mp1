@@ -29,7 +29,7 @@ extern s32 D_800F8F6C; //"RANDOM PLAY" ascii text
 extern s16 D_800F8FBA;
 extern Process* D_800F91C8;
 extern s16 D_800F3778;
-void func_800F69FC_3018DC(Object* arg0, u16 arg1);
+void func_800F69FC_3018DC(unkObjectStruct* arg0, u16 arg1);
 void func_800F6BC4_301AA4(s32);
 void func_800F6DA0_301C80(s32);
 extern s32 D_800F88F0[];

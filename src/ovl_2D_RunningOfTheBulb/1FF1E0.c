@@ -56,7 +56,7 @@ void func_800F65E0_1FF1E0(void) {
     SetFadeInTypeAndTime(0, 16);
 }
 
-void func_800F6AC0_1FF6C0(Object* arg0) {
+void func_800F6AC0_1FF6C0(unkObjectStruct* arg0) {
     s32 i;
 
     D_800FE464 = 0;
@@ -90,7 +90,7 @@ void func_800F6B28_1FF728(void) {
     }
 }
 
-void func_800F6BE4_1FF7E4(Object* arg0) {
+void func_800F6BE4_1FF7E4(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp_s0_2;
     unkGlobalStruct_00* temp_s0_3;
     void* temp_s0;
@@ -123,7 +123,7 @@ void func_800F6BE4_1FF7E4(Object* arg0) {
     arg0->func_ptr = &func_800F6DF4_1FF9F4;
 }
 
-void func_800F6DF4_1FF9F4(Object* arg0) {
+void func_800F6DF4_1FF9F4(unkObjectStruct* arg0) {
     f32 temp_f2;
 
     if ((D_800FE464 != 0) && (arg0->unk_4C == 1)) {
@@ -137,7 +137,7 @@ void func_800F6DF4_1FF9F4(Object* arg0) {
     }
 }
 
-void func_800F6E80_1FFA80(Object* arg0) {
+void func_800F6E80_1FFA80(unkObjectStruct* arg0) {
     f32 temp_f2;
 
     temp_f2 = D_800F652C.x;
@@ -150,7 +150,7 @@ void func_800F6E80_1FFA80(Object* arg0) {
     }
 }
 
-void func_800F6F04_1FFB04(Object* arg0) {
+void func_800F6F04_1FFB04(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp_s0;
 
     arg0->unk_40->unk_00.signed16[0] = func_800174C0(0x41000A, 0x419);
@@ -166,7 +166,7 @@ void func_800F6F04_1FFB04(Object* arg0) {
     arg0->func_ptr = &func_800F6FF4_1FFBF4;
 }
 
-void func_800F6FF4_1FFBF4(Object* arg0) {
+void func_800F6FF4_1FFBF4(unkObjectStruct* arg0) {
     func_8005D95C(arg0, 0.0f, 0.0f, D_800F652C.x + -935.0f);
 }
 
@@ -224,7 +224,7 @@ void func_800F7B40_200740(s32 arg0) {
 
 INCLUDE_ASM(s32, "ovl_2D_RunningOfTheBulb/1FF1E0", func_800F7B5C_20075C);
 
-void func_800F8210_200E10(Object* arg0) {
+void func_800F8210_200E10(unkObjectStruct* arg0) {
     u16 temp_s0;
     s32 temp_s1;
     s16 temp_s3;
@@ -258,7 +258,7 @@ void func_800F8210_200E10(Object* arg0) {
 
 INCLUDE_ASM(s32, "ovl_2D_RunningOfTheBulb/1FF1E0", func_800F82F4_200EF4);
 
-void func_800F8D80_201980(Object* arg0) {
+void func_800F8D80_201980(unkObjectStruct* arg0) {
     unk_Struct01* temp_s0;
 
     temp_s0 = arg0->unk_50->unk_E4;
@@ -277,8 +277,8 @@ void func_800F8D80_201980(Object* arg0) {
     }
 }
 
-void func_800F8EA0_201AA0(Object* arg0) {
-    Object* temp_s1;
+void func_800F8EA0_201AA0(unkObjectStruct* arg0) {
+    unkObjectStruct* temp_s1;
     f32 temp_f0;
     s16* temp_a0;
     s16* temp_v0_2;
@@ -340,7 +340,7 @@ INCLUDE_ASM(s32, "ovl_2D_RunningOfTheBulb/1FF1E0", func_800F98F0_2024F0);
 
 INCLUDE_ASM(s32, "ovl_2D_RunningOfTheBulb/1FF1E0", func_800F9C2C_20282C);
 
-void func_800FA2B8_202EB8(Object* arg0) {
+void func_800FA2B8_202EB8(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp = arg0->unk_50->unk_68;
 
     if (arg0->unk_20 > -1600.0f) {
@@ -352,7 +352,7 @@ void func_800FA2B8_202EB8(Object* arg0) {
     arg0->func_ptr = NULL;
 }
 
-void func_800FA36C_202F6C(Object* arg0) {
+void func_800FA36C_202F6C(unkObjectStruct* arg0) {
     f32 var_f20 = 2.0f - ((arg0->unk_1C - 100.0f) / 240.0f);
     
     if (var_f20 < 1.0f) {
@@ -363,7 +363,7 @@ void func_800FA36C_202F6C(Object* arg0) {
     func_80025830(arg0->unk_40->unk_04.unsigned16[0], var_f20, 2.0f, var_f20);
 }
 
-void func_800FA41C_20301C(Object* arg0) {
+void func_800FA41C_20301C(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp_v1;
 
     temp_v1 = arg0->unk_50->unk_68;
@@ -404,7 +404,7 @@ INCLUDE_ASM(s32, "ovl_2D_RunningOfTheBulb/1FF1E0", func_800FB3F8_203FF8);
 
 INCLUDE_ASM(s32, "ovl_2D_RunningOfTheBulb/1FF1E0", func_800FB540_204140);
 
-void func_800FB738_204338(Object* arg0) {
+void func_800FB738_204338(unkObjectStruct* arg0) {
     u16 temp_v0;
     unkGlobalStruct_00* temp_s0;
     unkGlobalStruct_00* temp_v0_2;
@@ -443,7 +443,7 @@ void func_800FB738_204338(Object* arg0) {
 
 INCLUDE_ASM(s32, "ovl_2D_RunningOfTheBulb/1FF1E0", func_800FB8EC_2044EC);
 
-void func_800FBAA4_2046A4(Object* arg0) {
+void func_800FBAA4_2046A4(unkObjectStruct* arg0) {
     switch (D_800FE4B4) {
     case 0:
         if (func_80072718() == 0) {
@@ -474,7 +474,7 @@ void func_800FBF30_204B30(void) {
 }
 
 
-void func_800FBF74_204B74(Object* arg0) {
+void func_800FBF74_204B74(unkObjectStruct* arg0) {
     f32 temp_f20;
     f32 temp_f22;
     f32 var_f2;
@@ -544,8 +544,8 @@ f32 func_800FD9BC_2065BC(u16 arg0, f32* arg1) {
     return var_f20 / 2.0f;
 }
 
-u16 func_800FDAC4_2066C4(Object* arg0, Object** arg1, f32* arg2) {
-    Object* temp_v1;
+u16 func_800FDAC4_2066C4(unkObjectStruct* arg0, unkObjectStruct** arg1, f32* arg2) {
+    unkObjectStruct* temp_v1;
     f32 temp_f12;
     f32 temp_f2;
     u16 i;
@@ -591,9 +591,9 @@ f32 func_800FDB84_206784(f32 arg0, f32 arg1) {
 }
 
 
-Object* func_800FDCAC_2068AC(Object* arg0, f32* arg1) {
-    Object* temp_s0;
-    Object* var_s3;
+unkObjectStruct* func_800FDCAC_2068AC(unkObjectStruct* arg0, f32* arg1) {
+    unkObjectStruct* temp_s0;
+    unkObjectStruct* var_s3;
     f32 temp_f0;
     f32 temp_f0_2;
     f32 temp_f12;
@@ -629,12 +629,12 @@ Object* func_800FDCAC_2068AC(Object* arg0, f32* arg1) {
     return var_s3;
 }
 
-s32 func_800FDDC0_2069C0(Object* arg0) {
+s32 func_800FDDC0_2069C0(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp_s0;
     unkGlobalStruct_00* temp_s1;
     unk_Struct01* temp_s3;
-    Object* temp_v0;
-    Object* temp_v1;
+    unkObjectStruct* temp_v0;
+    unkObjectStruct* temp_v1;
     s32 i;
 
 

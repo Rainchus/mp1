@@ -33,7 +33,7 @@ INCLUDE_ASM(s32, "ovl_09_PipeMaze/113DC0", func_800F6744_113F24);
 
 INCLUDE_ASM(s32, "ovl_09_PipeMaze/113DC0", func_800F68BC_11409C);
 
-void func_800F6A38_114218(Object* arg0) {
+void func_800F6A38_114218(unkObjectStruct* arg0) {
     arg0->func_ptr = &func_800F9134_116914;
     arg0->unk_18= arg0->unk_1C = arg0->unk_20 = 0;
     arg0->unk_40->unk_00.unsigned16[0] = func_800174C0(0x1B0000, 0x299);
@@ -50,7 +50,7 @@ void func_800F6A38_114218(Object* arg0) {
 
 INCLUDE_ASM(s32, "ovl_09_PipeMaze/113DC0", func_800F6B04_1142E4);
 
-void func_800F6C34_114414(Object* arg0) {
+void func_800F6C34_114414(unkObjectStruct* arg0) {
     u16 temp_v0;
     f32 temp_f0 = 0;
     f32 temp_f2 = 800.0f;
@@ -84,7 +84,7 @@ void func_800F6C34_114414(Object* arg0) {
 INCLUDE_ASM(s32, "ovl_09_PipeMaze/113DC0", func_800F6DD8_1145B8);
 
 void func_800F7100_1148E0(void) {
-    Object* temp_v0;
+    unkObjectStruct* temp_v0;
 
     D_800EE984 = 0;
     D_800F9B80 = func_8006B8A4(1, 0x289, 0x289, 0x289, 1);

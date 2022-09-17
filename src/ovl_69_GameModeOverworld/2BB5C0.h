@@ -24,7 +24,7 @@ extern s8 D_800FA203;
 extern u8 D_800FA204;
 extern s8 D_800FA205;
 
-void func_800F8AB8_2BDA98(Object*);
+void func_800F8AB8_2BDA98(unkObjectStruct*);
 void func_800F6968_2BB948(void);
-void func_800F884C_2BD82C(Object*);
+void func_800F884C_2BD82C(unkObjectStruct*);
 void func_800F8B38_2BDB18(void);

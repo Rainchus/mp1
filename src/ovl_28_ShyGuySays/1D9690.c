@@ -37,7 +37,7 @@ void func_800F65E0_1D9690(void) {
     PlaySound(0x1A5);
 }
 
-void func_800F67F8_1D98A8(Object* arg0) {
+void func_800F67F8_1D98A8(unkObjectStruct* arg0) {
     arg0->func_ptr = &func_800F6930_1D99E0;
     func_800F736C_1DA41C();
     func_800F8068_1DB118();
@@ -57,7 +57,7 @@ void func_800F67F8_1D98A8(Object* arg0) {
     }
 }
 
-void func_800F6930_1D99E0(Object* arg0) {
+void func_800F6930_1D99E0(unkObjectStruct* arg0) {
     func_800F6F98_1DA048(arg0);
     func_800F72A4_1DA354();
     switch (D_800FD5C4) {
@@ -93,7 +93,7 @@ void func_800F69F8_1D9AA8(void) {
 INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F6A38_1D9AE8);
 //https://decomp.me/scratch/iuV5i
 
-void func_800F6E50_1D9F00(Object* arg0) {
+void func_800F6E50_1D9F00(unkObjectStruct* arg0) {
     unkStruct_ShyGuySays_01* temp_v1_2;
 
     func_800F6F98_1DA048(arg0);
@@ -129,7 +129,7 @@ void func_800F6E50_1D9F00(Object* arg0) {
     }
 }
 
-void func_800F6F98_1DA048(Object* arg0) {
+void func_800F6F98_1DA048(unkObjectStruct* arg0) {
     if (D_800F5144 == 1) {
         arg0->func_ptr = &func_800F69F8_1D9AA8;
     }
@@ -145,7 +145,7 @@ void func_800F6FC0_1DA070(void) {
     D_800EE98C = 1069.0f;
 }
 
-void func_800F702C_1DA0DC(Object* arg0, f32 arg1) {
+void func_800F702C_1DA0DC(unkObjectStruct* arg0, f32 arg1) {
     s16 temp_s0 = (D_800F2AF8[0]->unk_4C << 8) | D_800F2AF8[0]->unk_4D;
 
     if (arg1 == 0.0) {
@@ -278,7 +278,7 @@ INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F82B0_1DB360);
 INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F8818_1DB8C8);
 
 INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F8D58_1DBE08);
-// void func_800F8D58_1DBE08(Object* arg0) { //matches but needs rodata support
+// void func_800F8D58_1DBE08(unkObjectStruct* arg0) { //matches but needs rodata support
 //     unkStruct_ShyGuySays_01* temp_s1;
 //     s32 phi_a0;
 //     s16 phi_s0;
@@ -445,7 +445,7 @@ INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800FB520_1DE5D0);
 
 INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800FB6E0_1DE790);
 
-void func_800FB840_1DE8F0(Object* arg0) {
+void func_800FB840_1DE8F0(unkObjectStruct* arg0) {
     u16 phi_v0;
     s32 phi_s3, phi_s4;
     f32 temp_f20;

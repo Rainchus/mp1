@@ -84,7 +84,7 @@ INCLUDE_ASM(s32, "ovl_01_ChanceTime/D51E0", func_800F87CC_D73CC);
 
 INCLUDE_ASM(s32, "ovl_01_ChanceTime/D51E0", func_800F8A6C_D766C);
 
-void func_800F988C_D848C(Object* arg0) {
+void func_800F988C_D848C(unkObjectStruct* arg0) {
     func_800264F8(arg0->unk_3C, arg0->unk_44, (func_80088060(arg0->unk_18 * D_80101478) / 2.0f) + 0.5f, D_80101464, D_80101470, 0);
     arg0->unk_18 += 20.0f;
     if (arg0->unk_18 >= 360.0f) {
@@ -102,7 +102,7 @@ void func_800F9948_D8548(s32 arg0) {
     func_8005D8B8(D_80101284, 0xA0);
 }
 
-void func_800F99D8_D85D8(Object* arg0) {
+void func_800F99D8_D85D8(unkObjectStruct* arg0) {
     f32 temp_f20 = D_80101214.x;
     f32 temp_f24 = D_80101214.y;
     f32 temp_f22 = D_80101214.z;
@@ -223,7 +223,7 @@ void func_800FE97C_DD57C(s32 arg0) {
 }
 
 
-void func_800FE9D8_DD5D8(Object* arg0) {
+void func_800FE9D8_DD5D8(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp_s1;
 
     arg0->unk_40->unk_00.unsigned16[0] = func_80023FC8(D_80101760);

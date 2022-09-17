@@ -32,19 +32,19 @@ INCLUDE_ASM(s32, "3E560", func_8003E58C);
 
 INCLUDE_ASM(s32, "3E560", func_8003E5E0);
 
-void func_8003E610(unk_Struct03* arg0) {
+void func_8003E610(Object* arg0) {
     func_800258EC(*arg0->unk_3C->unk_40, 4, 4);
     if (arg0->unk_40 != NULL) {
         func_800258EC(*arg0->unk_40->unk_40, 4, 4);
     }
 }
 
-void func_8003E664(unk_Struct03* arg0) {
+void func_8003E664(Object* arg0) {
     func_8003E610(arg0);
     arg0->unk_0A &= ~8;
 }
 
-INCLUDE_ASM(s32, "3E560", func_8003E694);
+INCLUDE_ASM(s32, "3E560", DestroyObject);
 
 INCLUDE_ASM(s32, "3E560", func_8003E7E4);
 

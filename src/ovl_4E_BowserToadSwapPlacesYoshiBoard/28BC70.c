@@ -1,14 +1,14 @@
 #include "common.h"
 #include "28BC70.h"
 
-unk_Struct03* D_800F7840_28CED0 = NULL;
-unk_Struct03* D_800F7844_28CED4 = NULL;
-unk_Struct03* D_800F7848_28CED8 = NULL;
-unk_Struct03* D_800F784C_28CEDC = NULL;
+Object* D_800F7840_28CED0 = NULL;
+Object* D_800F7844_28CED4 = NULL;
+Object* D_800F7848_28CED8 = NULL;
+Object* D_800F784C_28CEDC = NULL;
 s32 D_800F7850_28CEE0 = -1;
-Object* D_800F7854_28CEE4 = NULL;
-unk_Struct03* D_800F7858_28CEE8 = NULL;
-Object* D_800F785C_28CEEC = NULL;
+unkObjectStruct* D_800F7854_28CEE4 = NULL;
+Object* D_800F7858_28CEE8 = NULL;
+unkObjectStruct* D_800F785C_28CEEC = NULL;
 
 Vec3f D_800F7860_28CEF0 = {0.0f, 0.0f, 1120.0f};
 Vec3f D_800F786C_28CEFC = {-250.0f, 0.0f, 80.0f};
@@ -41,12 +41,12 @@ void func_800F65E0_28BC70(void) {
     SetFadeInTypeAndTime(4, 0x10);
 }
 
-void func_800F66B4_28BD44(Object* arg0) {
+void func_800F66B4_28BD44(unkObjectStruct* arg0) {
     func_800264F8(*D_800F7848_28CED8->unk_3C->unk_40, D_800F7850_28CEE0, arg0->unk_18, "pukuSa-bmerge1", "pukuSa-bmerge2", 0);
 }
 
-void func_800F6708_28BD98(Object* arg0) {
-    unk_Struct03* temp_s0;
+void func_800F6708_28BD98(unkObjectStruct* arg0) {
+    Object* temp_s0;
 
     temp_s0 = D_800F7858_28CEE8;
     temp_s0->unk_18.x = func_80088060(arg0->unk_18 * (0.017453292519943295));
@@ -164,8 +164,8 @@ void func_800F67BC_28BE4C(void) {
     func_800726AC(0, 4);
     SleepProcess(6);
     func_8004A140();
-    func_8003E694(D_800F7844_28CED4);
-    func_8003E694(D_800F784C_28CEDC);
+    DestroyObject(D_800F7844_28CED4);
+    DestroyObject(D_800F784C_28CEDC);
     D_800F7844_28CED4 = NULL;
     D_800F784C_28CEDC = NULL;
     SleepProcess(5);
@@ -273,7 +273,7 @@ void func_800F7330_28C9C0(void) {
     }
 }
 
-void func_800F737C_28CA0C(Object* arg0) {
+void func_800F737C_28CA0C(unkObjectStruct* arg0) {
     if (D_800F5144 != 0) {
         func_800726AC(4, 16);
         arg0->func_ptr = &func_800F7330_28C9C0;
@@ -315,23 +315,23 @@ void func_800F73C0_28CA50(void) {
 
 void func_800F7680_28CD10(void) {
     if (D_800F7844_28CED4 != NULL) {
-        func_8003E694(D_800F7844_28CED4);
+        DestroyObject(D_800F7844_28CED4);
     }
     
     if (D_800F7848_28CED8 != NULL) {
-        func_8003E694(D_800F7848_28CED8);
+        DestroyObject(D_800F7848_28CED8);
     }
     
     if (D_800F7840_28CED0 != NULL) {
-        func_8003E694(D_800F7840_28CED0);
+        DestroyObject(D_800F7840_28CED0);
     }
     
     if (D_800F784C_28CEDC != NULL) {
-        func_8003E694(D_800F784C_28CEDC);
+        DestroyObject(D_800F784C_28CEDC);
     }
 
     if (D_800F7858_28CEE8 != NULL) {
-        func_8003E694(D_800F7858_28CEE8);
+        DestroyObject(D_800F7858_28CEE8);
     }
     
     if (D_800F7850_28CEE0 != -1) {

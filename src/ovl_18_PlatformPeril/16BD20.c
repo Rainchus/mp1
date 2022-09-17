@@ -27,7 +27,7 @@ void func_800F66E8_16BE28(void) {
     }
 }
 
-void func_800F6720_16BE60(Object* arg0) {
+void func_800F6720_16BE60(unkObjectStruct* arg0) {
     D_800FE2F8 = 0;
     D_800FCD90 = 0;
     func_800FC1DC_17191C();
@@ -131,7 +131,7 @@ INCLUDE_ASM(s32, "ovl_18_PlatformPeril/16BD20", func_800F8220_16D960);
 
 INCLUDE_ASM(s32, "ovl_18_PlatformPeril/16BD20", func_800F87A0_16DEE0);
 
-void func_800F8AE8_16E228(Object* arg0) {
+void func_800F8AE8_16E228(unkObjectStruct* arg0) {
     arg0->unk_1C = D_800FE1D8[arg0->unk_4C]->unk_1C + 50.0f;
     func_80025798(arg0->unk_40->unk_00.signed16[1], arg0->unk_18, D_800FE1D8[arg0->unk_4C]->unk_1C, arg0->unk_20);
     func_80025830(arg0->unk_40->unk_00.signed16[1], 0.7f, 0.7f, 0.7f);
@@ -164,7 +164,7 @@ void func_800F90C0_16E800(void) {
     D_800F3FB0[D_800F2BC0++] = func_8005D384(2, 9, 0x3C, 2, &func_800F96F0_16EE30);
 }
 
-void func_800F922C_16E96C(Object* arg0, s32 arg1, s32 arg2, u16 arg3, f32 arg4, f32 arg5, f32 arg6) {
+void func_800F922C_16E96C(unkObjectStruct* arg0, s32 arg1, s32 arg2, u16 arg3, f32 arg4, f32 arg5, f32 arg6) {
     unkGlobalStruct_00* temp_s0_2;
     s32 i;
     s32 temp = 0x699;
@@ -233,7 +233,7 @@ void func_800FAD30_170470(void) {
 }
 
 
-void func_800FAD64_1704A4(Object* arg0) {
+void func_800FAD64_1704A4(unkObjectStruct* arg0) {
     s32 temp_s0;
 
     arg0->func_ptr = NULL;

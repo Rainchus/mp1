@@ -46,7 +46,7 @@ void func_800F67B0_2D4A00(void) {
 
 INCLUDE_ASM(s32, "ovl_6C_MushroomShop/2D4830", func_800F688C_2D4ADC);
 
-void func_800F6B68_2D4DB8(Object* arg0) {
+void func_800F6B68_2D4DB8(unkObjectStruct* arg0) {
     if (D_800F5144 != 0) {
         func_800601D4(0x1E);
         func_80072724(0xFF, 0xFF, 0xFF);
@@ -63,7 +63,7 @@ void func_800F6BC4_2D4E14(void) {
     }
 }
 
-void func_800F6C00_2D4E50(Object* arg0) {
+void func_800F6C00_2D4E50(unkObjectStruct* arg0) {
     arg0->unk_40->unk_00.unsigned16[0] = func_800174C0(0x90051, 0x2B9);
     func_80025EB4(arg0->unk_40->unk_00.unsigned16[0], 1, 1);
     arg0->func_ptr = &func_800F6B68_2D4DB8;

@@ -56,7 +56,7 @@ void func_800F6848_17E978(f32 arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 
     func_8001D494(0, 25.0f, D_800C3110->unk_44, D_800C3110->unk_48);
 }
 
-void func_800F690C_17EA3C(Object* arg0) {
+void func_800F690C_17EA3C(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp_s1;
 
     func_80017660(0, 0.0f, 0.0f, 320.0f, 240.0f);
@@ -74,7 +74,7 @@ void func_800F690C_17EA3C(Object* arg0) {
     arg0->func_ptr = &func_800FA2D8_182408;
 }
 
-void func_800F6A54_17EB84(Object* arg0) {
+void func_800F6A54_17EB84(unkObjectStruct* arg0) {
     arg0->unk_50 = func_80023684(0x2C, 0x7918);
     arg0->unk_40->unk_00.unsigned16[0] = LoadFormFile(0x380002, 0x48D);
     arg0->unk_40->unk_00.unsigned16[1] = LoadFormFile(0x380003, 0x48D);
@@ -93,19 +93,19 @@ INCLUDE_ASM(s32, "ovl_1B_HammerDrop/17E710", func_800F6F9C_17F0CC);
 
 INCLUDE_ASM(s32, "ovl_1B_HammerDrop/17E710", func_800F736C_17F49C);
 
-void func_800F7488_17F5B8(Object* arg0) {
+void func_800F7488_17F5B8(unkObjectStruct* arg0) {
     func_800F6AF8_17EC28(arg0, 0);
 }
 
-void func_800F74A4_17F5D4(Object* arg0) {
+void func_800F74A4_17F5D4(unkObjectStruct* arg0) {
     func_800F6AF8_17EC28(arg0, 1);
 }
 
-void func_800F74C0_17F5F0(Object* arg0) {
+void func_800F74C0_17F5F0(unkObjectStruct* arg0) {
     func_800F6AF8_17EC28(arg0, 2);
 }
 
-void func_800F74DC_17F60C(Object* arg0) {
+void func_800F74DC_17F60C(unkObjectStruct* arg0) {
     func_800F6AF8_17EC28(arg0, 3);
 }
 
@@ -114,11 +114,11 @@ INCLUDE_ASM(s32, "ovl_1B_HammerDrop/17E710", func_800F74F8_17F628);
 INCLUDE_ASM(s32, "ovl_1B_HammerDrop/17E710", func_800F77E4_17F914);
 
 #ifdef NON_MATCHING
-void func_800F7AD4_17FC04(Object* arg0) { //wtf
+void func_800F7AD4_17FC04(unkObjectStruct* arg0) { //wtf
     unkGlobalStruct_00* temp_s0 = arg0->unk_50;
     f32 temp_f22;
     f32 temp1;
-    Object* test2 = ((Object*)(temp_s0->unk_E4));
+    unkObjectStruct* test2 = ((unkObjectStruct*)(temp_s0->unk_E4));
 
     temp_f22 = arg0->unk_50->unk_3C;
 
@@ -133,7 +133,7 @@ void func_800F7AD4_17FC04(Object* arg0) { //wtf
 INCLUDE_ASM(s32, "ovl_1B_HammerDrop/17E710", func_800F7AD4_17FC04);
 #endif
 
-void func_800F7B6C_17FC9C(Object* arg0) {
+void func_800F7B6C_17FC9C(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp_a0;
     s32 tempVar = 0x8000;
 
@@ -142,7 +142,7 @@ void func_800F7B6C_17FC9C(Object* arg0) {
     D_800EDEB4[temp_a0->unk_56] |= tempVar;
 }
 
-void func_800F7BB4_17FCE4(Object* arg0) {
+void func_800F7BB4_17FCE4(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp_a0;
 
     temp_a0 = arg0->unk_50;
@@ -150,8 +150,8 @@ void func_800F7BB4_17FCE4(Object* arg0) {
     D_800EDEB4[temp_a0->unk_56] |= 0x2000;
 }
 
-s32 func_800F7BFC_17FD2C(Object* arg0, f32 arg1) {
-    Object* temp_v0;
+s32 func_800F7BFC_17FD2C(unkObjectStruct* arg0, f32 arg1) {
+    unkObjectStruct* temp_v0;
     f32 temp_f0, temp_f12, temp_f4, phi_f20;
     s32 phi_v0, phi_v1;
     s32 i;
