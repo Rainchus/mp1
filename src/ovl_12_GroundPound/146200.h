@@ -7,11 +7,20 @@ typedef struct unkStructGroundPound_00 {
 /* 0x08 */ u16 unk_0A;
 } unkStructGroundPound_00;
 
+s32 func_800184A8(unkGlobalStruct_00*, s32);
+void func_800F9870_149490(unkObjectStruct*);
+void func_800F9B18_149738(unkObjectStruct*);
+extern s16 D_800EDEB4[];
+extern u8 D_800F3843[];
+extern s16 D_800F5460[];
+extern s32 D_800FA2D0;
+extern s32 D_800FA2E0;
+
 void func_800F7FEC_147C0C(void);
 void func_800F9E80_149AA0(f32, f32, f32, f32, f32, f32, f32);
 void func_800F67E0_146400(unkObjectStruct* arg0);
 void func_800F6EE4_146B04(void);
-void func_800F8C20_148840(void);
+void func_800F8C20_148840(unkObjectStruct*);
 void func_800F6814_146434(void);
 void func_80079078(s16);
 void func_800F6924_146544(void);

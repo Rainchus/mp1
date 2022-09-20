@@ -108,7 +108,9 @@ typedef struct unkGlobalStruct_00 {
     /* 0xB0 */ u16 unk_B0;
     /* 0xB2 */ char unk_B2[1];
     /* 0xB3 */ s8 unk_B3;
-    /* 0xB4 */ char unk_B4[0x30];
+    /* 0xB4 */ char unk_B4[0x28];
+    /* 0xB8 */ s32 unk_DC;
+    /* 0xE0 */ s32 unk_E0;
     /* 0xE4 */ unk_Struct01* unk_E4;
 } unkGlobalStruct_00; /* size = 0xE8 */
 
@@ -232,7 +234,7 @@ typedef struct Object {
 } Object; // //sizeof 0xAC? (this and mpSource_object are the same struct)
 
 typedef struct playerMain {
-/* 0x00 */ char unk_00;
+/* 0x00 */ u8 unk_00;
 /* 0x01 */ u8 cpuDifficulty;
 /* 0x02 */ u8 cpuDifficultyCopy;
 /* 0x03 */ u8 flags; //including CPU flag

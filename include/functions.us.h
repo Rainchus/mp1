@@ -156,7 +156,7 @@ f32 func_8003D8CC(Vec3f*, Vec3f*);
 void ShowBasicSprite(s32);
 void func_80018D44(s32, s32);
 void func_80008FD0(unkObjectStruct*, f32);
-void func_8000979C(unkObjectStruct*, s32, s32, s32, s32, s32);
+void func_8000979C(unkObjectStruct*, s32, s32, u16, s32, s32);
 void func_8001874C(unkObjectStruct*, s32, s32, s32, s32);
 void func_800187D0(unkObjectStruct*, s32, s32, s32, s32);
 void func_800224A4(f32*, f32, f32, f32);
