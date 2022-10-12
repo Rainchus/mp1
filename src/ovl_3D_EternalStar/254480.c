@@ -221,7 +221,7 @@ void func_800F671C_25458C(void) {
     s32 i;
 
     for (i = 0; i < ARRAY_COUNT(D_800F8BD0_256A40); i++) {
-        if (IsBoardFeatureFlagSet(D_800F8BC0_256A30[i])) {
+        if (IsFlagSet(D_800F8BC0_256A30[i])) {
             SetSpaceType(D_800F8BD0_256A40[i], 6);
         } else {
             SetSpaceType(D_800F8BD0_256A40[i], 5);
@@ -237,7 +237,7 @@ s16 func_800F67AC_25461C(s16 arg0) {
         if (arg0 != D_800F8BD0_256A40[i]) {
             continue;
         } else {
-            if (IsBoardFeatureFlagSet(D_800F8BC0_256A30[i]) != 0) {
+            if (IsFlagSet(D_800F8BC0_256A30[i]) != 0) {
                 return 2;
             } else {
                 gameStatus->unk_1A = D_800F8BC0_256A30[i];
@@ -342,7 +342,7 @@ void func_800F6BD8_254A48(void) {
     
     func_800F6B58_2549C8(temp_s0);
     
-    if (IsBoardFeatureFlagSet(0x44) == 0) {
+    if (IsFlagSet(0x44) == 0) {
         var_a1 = 0x4EE;
     } else {
         var_a1 = 0x4F0;
@@ -355,7 +355,7 @@ void func_800F6BD8_254A48(void) {
     func_80071E80(temp_s0->unk_08, 1);
     func_8006EB40(temp_s0->unk_08);
     
-    if (IsBoardFeatureFlagSet(0x44) == 0) {
+    if (IsFlagSet(0x44) == 0) {
         var_a1_2 = 0x4EF;
     } else {
         var_a1_2 = 0x4F1;
@@ -419,7 +419,7 @@ void func_800F6E34_254CA4(void) {
         temp_s0->playerObj->unk_0A |= 2;
     }
 
-    if (IsBoardFeatureFlagSet(0x4E) != 0) {
+    if (IsFlagSet(0x4E) != 0) {
         ClearBoardFeatureFlag(0x4E);
         func_800F66C8_254538();
     }
@@ -428,7 +428,7 @@ void func_800F6E34_254CA4(void) {
     func_800F74D4_255344();
     func_800F719C_25500C();
 
-    if (IsBoardFeatureFlagSet(0xF) == 0) {
+    if (IsFlagSet(0xF) == 0) {
         func_800F732C_25519C();
     }
 }
@@ -443,20 +443,20 @@ void func_800F6F68_254DD8(void) {
     func_800F6E34_254CA4();
     EventTableHydrate(&D_800F905C_256ECC);
     
-    if (IsBoardFeatureFlagSet(0xF) == 0) {
+    if (IsFlagSet(0xF) == 0) {
         EventTableHydrate(&D_800F9164);
     }
     
     func_800584F0(0);
     
-    if (IsBoardFeatureFlagSet(0x4F) != 0) {
+    if (IsFlagSet(0x4F) != 0) {
         playerNoFeatureFlag = GetPlayerStruct(-1);
         ClearBoardFeatureFlag(0x4F);
         func_800A0D50(&playerNoFeatureFlag->playerObj->coords, &GetSpaceData(0x4E)->coords);
         func_800A0E80(&playerNoFeatureFlag->playerObj->unk_18, &GetSpaceData(2)->coords, &playerNoFeatureFlag->playerObj->coords);
     }
     
-    if (IsBoardFeatureFlagSet(0x50) != 0) {
+    if (IsFlagSet(0x50) != 0) {
         ClearBoardFeatureFlag(0x50);
         for (i = 0; i < 4; i++) {
             playerFeatureFlag = GetPlayerStruct(i);
@@ -501,7 +501,7 @@ void func_800F719C_25500C(void) {
 
     for (i = 0; i < ARRAY_COUNT(D_800F8C08_256A78); i++) {
         D_800F91C0[i] = NULL;
-        if (IsBoardFeatureFlagSet(D_800F8C08_256A78[i]) == 0) {
+        if (IsFlagSet(D_800F8C08_256A78[i]) == 0) {
             func_800F709C_254F0C(i);
         }
     }
@@ -578,7 +578,7 @@ void func_800F74D4_255344(void) {
     D_800F91E4 = 0;
     func_800F736C_2551DC();
     
-    if (IsBoardFeatureFlagSet(0x4F)) {
+    if (IsFlagSet(0x4F)) {
         func_800A0E80(&D_800F91E4->unk_18, &(GetSpaceData(0x4E)->coords), &D_800F91E4->coords);
         InitProcess(func_800F73F0_255260, 0x1005, 0, 0);
     }
@@ -638,7 +638,7 @@ s16 func_800F7730_2555A0(void) {
 
 s32 func_800F775C_2555CC(void) {
     if (D_800ED154.unk_00[0] != 0) {
-        if (!(IsBoardFeatureFlagSet(0x48))) {
+        if (!(IsFlagSet(0x48))) {
             return 0;
         }
     }
@@ -647,7 +647,7 @@ s32 func_800F775C_2555CC(void) {
 
 s32 func_800F7794_255604(void) {
     if (D_800ED154.unk_00[1] != 0) {
-        if (!(IsBoardFeatureFlagSet(0x4C))) {
+        if (!(IsFlagSet(0x4C))) {
             return 0;
         }
     }
@@ -658,12 +658,12 @@ s32 func_800F77CC_25563C(void) {
     if (D_800ED158[0] != 0) {
         switch (D_800ED158[13]) {
         case 0:
-            if (!(IsBoardFeatureFlagSet(0x46)) || !(IsBoardFeatureFlagSet(0x47))) {
+            if (!(IsFlagSet(0x46)) || !(IsFlagSet(0x47))) {
                 return 0;
             }
             break;
         case 1:
-            if (!(IsBoardFeatureFlagSet(0x49)) || !(IsBoardFeatureFlagSet(0x4A))) {
+            if (!(IsFlagSet(0x49)) || !(IsFlagSet(0x4A))) {
                 return 0;
             }
             break;
@@ -680,12 +680,12 @@ s32 func_800F784C_2556BC(void) {
         case 0:
                 return 2;
         case 1:
-            if (IsBoardFeatureFlagSet(0x46) == 0 || IsBoardFeatureFlagSet(0x47) == 0) {
+            if (IsFlagSet(0x46) == 0 || IsFlagSet(0x47) == 0) {
                 return 0;
             }
             break;
         case 2:
-            if (IsBoardFeatureFlagSet(0x46) == 0) {
+            if (IsFlagSet(0x46) == 0) {
                 return 0;
             }
         }
@@ -697,12 +697,12 @@ s32 func_800F78CC_25573C(void) {
     if (D_800ED154.unk_00[4] != 0) {
         switch (D_800ED154.unk_1C) {
         case 0:
-            if (IsBoardFeatureFlagSet(0x49) == 0 || IsBoardFeatureFlagSet(0x4A) == 0) {
+            if (IsFlagSet(0x49) == 0 || IsFlagSet(0x4A) == 0) {
                 return 0;
             }
             break;
         case 1:
-            if (IsBoardFeatureFlagSet(0x4B) == 0) {
+            if (IsFlagSet(0x4B) == 0) {
                 return 0;
             }
             break;
@@ -720,7 +720,7 @@ s32 func_800F7934_2557A4(void) {
         case 1:
             return 2;
         case 2:
-            if ( IsBoardFeatureFlagSet(0x49) == 0 || IsBoardFeatureFlagSet(0x4A) == 0) {
+            if ( IsFlagSet(0x49) == 0 || IsFlagSet(0x4A) == 0) {
                 return 0;
             }
         }
@@ -732,12 +732,12 @@ s32 func_800F79BC_25582C(void) {
     if (D_800ED154.unk_00[6] != 0) {
         switch (D_800ED154.unk_1C) {
         case 0:
-            if (IsBoardFeatureFlagSet(0x4B) == 0) {
+            if (IsFlagSet(0x4B) == 0) {
                 return 0;
             }
             break;
         case 2:
-            if (IsBoardFeatureFlagSet(0x4B) == 0) {
+            if (IsFlagSet(0x4B) == 0) {
                 return 0;
             }
             break;
@@ -762,12 +762,12 @@ s32 func_800F7A60_2558D0(void) {
             case 0:
                 return 2;
             case 1:
-                if (IsBoardFeatureFlagSet(0x46) == 0) {
+                if (IsFlagSet(0x46) == 0) {
                     return 0;
                 }
                 break;
             case 2:
-                if (IsBoardFeatureFlagSet(0x46) == 0 || IsBoardFeatureFlagSet(0x47) == 0) {
+                if (IsFlagSet(0x46) == 0 || IsFlagSet(0x47) == 0) {
                     return 0;
                 }
             break;
@@ -779,7 +779,7 @@ s32 func_800F7A60_2558D0(void) {
 s32 func_800F7AE8_255958(void) {
     if (D_800ED154.unk_00[9] != 0) {
         if (D_800ED154.unk_1C == 0) {
-            if (IsBoardFeatureFlagSet(0x46) == 0) {
+            if (IsFlagSet(0x46) == 0) {
                 return 0;
             }
         } else {

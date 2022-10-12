@@ -57,7 +57,7 @@ void func_800F65E0_191700(void) {
     D_800FCD1C = func_80039084(temp_s0_2);
     FreePerm(temp_s0_2);
     func_8007B168(&D_800FCC28, 1);
-    D_800FCD12 = IsBoardFeatureFlagSet(MINIGAME_ISLAND_ENDING);
+    D_800FCD12 = IsFlagSet(MINIGAME_ISLAND_ENDING);
     D_800FCFF0 = 0;
     SetFadeInTypeAndTime(0, 16);
 }

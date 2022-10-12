@@ -89,7 +89,7 @@ s32 func_800F6F48_2D5198(void) {
     s32 i;
     
     for (i = 0; i < 8; i++) {
-        if (IsBoardFeatureFlagSet(D_800F8A30[i]) == 0) {
+        if (IsFlagSet(D_800F8A30[i]) == 0) {
             return 1;
         }  
     }
@@ -101,7 +101,7 @@ s32 func_800F6FA8_2D51F8(void) {
     s32 i;
     
     for (i = 0; i < 6; i++) {
-        if (IsBoardFeatureFlagSet(D_800F8A30[i]) == 0) {
+        if (IsFlagSet(D_800F8A30[i]) == 0) {
             return 1;
         }  
     }
@@ -112,7 +112,7 @@ s32 func_800F7008_2D5258(s32 arg0) {
     if (D_800F8A50[arg0].unk_28 != NULL && D_800F8A50[arg0].unk_28() ) {
         return 0;
     }
-    return IsBoardFeatureFlagSet(D_800F8A50[arg0].unk_00) == 0;
+    return IsFlagSet(D_800F8A50[arg0].unk_00) == 0;
 }
 
 INCLUDE_ASM(s32, "ovl_6C_MushroomShop/2D4830", func_800F7088_2D52D8);

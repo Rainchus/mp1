@@ -83,7 +83,7 @@ void func_80052C44(s32 index, s16 a, s16 b, s16 c, u16 d) {
 void func_80052CCC(s32 index, u8 b) {
     playerMain* player = GetPlayerStruct(index);
     player->cpuDifficultyCopy = b;
-    if (!IsBoardFeatureFlagSet(44)) {
+    if (!IsFlagSet(44)) {
         player->cpuDifficulty = D_800C53E0[b];
     }
     else {

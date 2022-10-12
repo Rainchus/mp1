@@ -55,7 +55,7 @@ void func_800F689C_F6D6C(unkObjectStruct* arg0) {
     func_800F9618_F9AE8();
     func_800F9738_F9C08();
     func_800F915C_F962C();
-    if (IsBoardFeatureFlagSet(0x2B) != 0) {
+    if (IsFlagSet(0x2B) != 0) {
         D_800FF784 = 1;
     }
 }

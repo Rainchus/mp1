@@ -49,13 +49,13 @@ INCLUDE_ASM(s32, "ovl_69_GameModeOverworld/2BB5F0", func_800F6610_2BB5F0);
 //     D_800FA1FC = -1;
 //     D_800FA202 = 0;
 //     D_800FA200 = 0;
-//     if ((D_800ED144 >= 0x64) && (IsBoardFeatureFlagSet(3) == 0) && (IsBoardFeatureFlagSet(0x17) != 0)) {
+//     if ((D_800ED144 >= 0x64) && (IsFlagSet(3) == 0) && (IsFlagSet(0x17) != 0)) {
 //         SetBoardFeatureFlag(3);
 //         SetBoardFeatureFlag(4);
 //     }
-//     D_800FA203 = IsBoardFeatureFlagSet(3);
-//     D_800FA204 = IsBoardFeatureFlagSet(4);
-//     D_800FA205 = IsBoardFeatureFlagSet(0x18);
+//     D_800FA203 = IsFlagSet(3);
+//     D_800FA204 = IsFlagSet(4);
+//     D_800FA205 = IsFlagSet(0x18);
 //     if (D_800FA204 != 0) {
 //         D_800FA1E2 = 1;
 //     }
@@ -63,7 +63,7 @@ INCLUDE_ASM(s32, "ovl_69_GameModeOverworld/2BB5F0", func_800F6610_2BB5F0);
 //     ClearBoardFeatureFlag(0x29);
 //     ClearBoardFeatureFlag(0x2B);
 //     ClearBoardFeatureFlag(0x2C);
-//     if (IsBoardFeatureFlagSet(0x36) != 0) {
+//     if (IsFlagSet(0x36) != 0) {
 //         ClearBoardFeatureFlag(0x36);
 //         func_80070ED4();
 //         func_8005DFB8(1);

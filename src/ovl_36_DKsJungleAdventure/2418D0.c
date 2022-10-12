@@ -99,7 +99,7 @@ void func_800F6830_241AF0(void) { //ov054_func_800F6830
         SetBoardFeatureFlag(D_800F98F0[s1]);
     }
 
-    if (IsBoardFeatureFlagSet(0x44)) {
+    if (IsFlagSet(0x44)) {
         s0 = DK_STAR_COUNT;
     } else {
         s0 = ed5c0->chosenStarSpaceIndex;
@@ -134,7 +134,7 @@ s32 func_800F6958_241C18(s32 current_space_index) {
                 return 1;
             }
 
-            if (IsBoardFeatureFlagSet(68)) {
+            if (IsFlagSet(68)) {
                 current_space_index = DK_STAR_COUNT;
             }
             else {
@@ -252,7 +252,7 @@ void func_800F6CD8_241F98(void) {
     func_8004B5C4(3.0f);
     func_800F6C48_241F08(str);
 
-    if (ed5c0->chosenStarSpaceIndex == 0 && !IsBoardFeatureFlagSet(68)) {
+    if (ed5c0->chosenStarSpaceIndex == 0 && !IsFlagSet(68)) {
         string_id = 1256;
     } else {
         string_id = 1258;
@@ -281,7 +281,7 @@ void func_800F6CD8_241F98(void) {
 
     SleepProcess(30);
 
-    if (ed5c0->chosenStarSpaceIndex == 0 && !IsBoardFeatureFlagSet(68)) {
+    if (ed5c0->chosenStarSpaceIndex == 0 && !IsFlagSet(68)) {
         string_id = 1257;
     } else {
         string_id = 1259;
@@ -374,7 +374,7 @@ INCLUDE_ASM(s32, "ovl_36_DKsJungleAdventure/2418D0", func_800F7024_2422E4);
 //         player->playerObj->unk_0A |= 2;
 //     }
 
-//     if (IsBoardFeatureFlagSet(0x4e)) {
+//     if (IsFlagSet(0x4e)) {
 //         ClearBoardFeatureFlag(0x4e);
 //         ov054_func_800F67A4();
 //     }
@@ -384,15 +384,15 @@ INCLUDE_ASM(s32, "ovl_36_DKsJungleAdventure/2418D0", func_800F7024_2422E4);
 //     ov054_DrawThwompsOuter();
 //     ov054_Draw20CoinGateOuter();
 
-//     if (!IsBoardFeatureFlagSet(0xe)) {
+//     if (!IsFlagSet(0xe)) {
 //         ov054_DrawKoopaOuter();
 //     }
 
-//     if (!IsBoardFeatureFlagSet(0xf)) {
+//     if (!IsFlagSet(0xf)) {
 //         ov054_DrawBooOuter();
 //     }
 
-//     if (!IsBoardFeatureFlagSet(0xd)) {
+//     if (!IsFlagSet(0xd)) {
 //         ov054_DrawBowserOuter();
 //     }
 // }
@@ -407,15 +407,15 @@ INCLUDE_ASM(s32, "ovl_36_DKsJungleAdventure/2418D0", func_800F7190_242450);
 
 //     EventTableHydrate(main_event_table);
 
-//     if (!IsBoardFeatureFlagSet(0xe)) {
+//     if (!IsFlagSet(0xe)) {
 //         EventTableHydrate(koopa_event_table);
 //     }
 
-//     if (!IsBoardFeatureFlagSet(0xf)) {
+//     if (!IsFlagSet(0xf)) {
 //         EventTableHydrate(boo_event_table);
 //     }
 
-//     if (!IsBoardFeatureFlagSet(0xd)) {
+//     if (!IsFlagSet(0xd)) {
 //         EventTableHydrate(bowser_event_table);
 //     }
 

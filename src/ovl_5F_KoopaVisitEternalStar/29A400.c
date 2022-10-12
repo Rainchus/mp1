@@ -88,7 +88,7 @@ void func_800F6988_29A7A8(unkObjectStruct* arg0) {
 
 void func_800F69CC_29A7EC(void) {
     func_8003DAA8();
-    if (IsBoardFeatureFlagSet(0x2C) == 0) {
+    if (IsFlagSet(0x2C) == 0) {
         D_800F6D14 = CreateObject(8, NULL);
         func_8004F140(*D_800F6D14->unk_3C->unk_40);
     } else {
@@ -110,7 +110,7 @@ void func_800F69CC_29A7EC(void) {
 void func_800F6B3C_29A95C(void) {
     DestroyObject(D_800F6D14);
     DestroyObject(D_800F6D18);
-    if (IsBoardFeatureFlagSet(0x2C) == 0) {
+    if (IsFlagSet(0x2C) == 0) {
         func_8004F1D0();
     }
 }

@@ -216,7 +216,7 @@ void func_80059768(s16 index, s16 param_2) {
     ptr[1] = param_2;
 }
 
-s32 IsBoardFeatureFlagSet(s32 feature) {
+s32 IsFlagSet(s32 feature) {
     s32 a, b;
     s32 ret;
 
@@ -448,7 +448,7 @@ s32 func_80059B10(s32 arg0) {
             return 0;
         }
     } else {
-        return IsBoardFeatureFlagSet(arg0);
+        return IsFlagSet(arg0);
     }
 }
 
@@ -456,7 +456,7 @@ s32 func_80059B48(s32 arg0) {
     if (arg0 < 0) {
         return 1;
     } else {
-        return IsBoardFeatureFlagSet(arg0);
+        return IsFlagSet(arg0);
     }
 }
 

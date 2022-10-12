@@ -61,7 +61,7 @@ void func_800F65E0_1F0DA0(void) {
     filePtr = ReadMainFS(0x24);
     D_800FBB44_ovl2B = func_80039084(filePtr);
     FreePerm(filePtr);
-    D_800FBB50_ovl2B[3] = IsBoardFeatureFlagSet(0x2B);
+    D_800FBB50_ovl2B[3] = IsFlagSet(0x2B);
     SetFadeInTypeAndTime(0, 0x10);
     D_800FBB98_ovl2B = 0;
 }

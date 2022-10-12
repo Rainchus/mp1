@@ -114,7 +114,9 @@ segments:
       - [0x833C0, c]
       - [0x83490, bin]
       #- [0x83490, c] #has some code, weird to split?
-      #- [0x83960, c]
+      - [0x83960, c]
+      - [0x89E90, c] #
+      - [0x89EA0, c] # -O0?
       - [0xA3370, c] # -O0?
       - [0xA3600, c] # -O0?
       - [0xA3650, c] # -O0?
@@ -1388,6 +1390,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x2BF1A0, c]
+      - [0x2BF1D0, c]
   - type: bin
     start: 0x2CA400
   - type: code

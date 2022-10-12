@@ -11,7 +11,7 @@ void func_800F65E0_2D6FC0(void) {
     func_8004F8DC();
     D_800F8B90 = func_8004F954(0x26, 0x20);
     
-    if (IsBoardFeatureFlagSet(4) != 0) {
+    if (IsFlagSet(4) != 0) {
         D_800F89B8 = 1;
     }
     

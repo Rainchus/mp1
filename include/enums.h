@@ -15,6 +15,18 @@ enum ImgPack {
     MM_BOWSER = 0x120005
 };
 
+enum SpaceTypes {
+    NONE = 0,
+    BLUE = 1,
+    RED = 2,
+    MINIGAME = 3,
+    HAPPENING = 4,
+    STAR_SPACE = 5,
+    CHANCE_TIME = 6,
+    MUSHROOM = 8,
+    BOWSER = 9,
+};
+
 enum ModelIDs {
     M_MARIO = 0,
     M_LUIGI = 1,

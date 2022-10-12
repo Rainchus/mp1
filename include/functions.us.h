@@ -392,7 +392,7 @@ void func_80009E20(unkObjectStruct*);
 void func_800186E4(unkObjectStruct*, s32, s32);
 f32 func_800AEFD0(f32);
 u32 func_8005EB1C(void);
-s32 IsBoardFeatureFlagSet(s32);
+s32 IsFlagSet(s32);
 s16 func_8000C544(void);
 s32 func_80075FE0(void);
 s32 func_80072718(void);

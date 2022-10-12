@@ -52,7 +52,7 @@ void func_800F65E0_1FF1E0(void) {
     temp_s0 = ReadMainFS(38);
     D_800FE45A = func_80039084(temp_s0);
     FreePerm(temp_s0);
-    D_800FE458 = IsBoardFeatureFlagSet(43);
+    D_800FE458 = IsFlagSet(43);
     SetFadeInTypeAndTime(0, 16);
 }
 

@@ -52,7 +52,7 @@ void func_800F67F8_1D98A8(unkObjectStruct* arg0) {
     func_800F71F4_1DA2A4();
     D_800FD9A0 = 1;
     func_80060128(0x19);
-    if (IsBoardFeatureFlagSet(MINIGAME_ISLAND_ENDING) != 0) {
+    if (IsFlagSet(MINIGAME_ISLAND_ENDING) != 0) {
         D_800FDC1C = 1;
     }
 }

@@ -9,7 +9,7 @@ typedef s32 func_ptr(void);
 s16 GetCurrentPlayerIndex();                        /* extern */
 playerMain* GetPlayerStruct(s32);                           /* extern */
 s16 GetTurnsElapsed();                              /* extern */
-s32 IsBoardFeatureFlagSet(s32);                     /* extern */
+s32 IsFlagSet(s32);                     /* extern */
 s32 PlayerHasCoins(s32 playerIndex, u32 coinAmount);
 s16 RNGPercentChance(s8);                             /* extern */
 s32 func_8004FEBC(s16);                             /* extern */
@@ -50,7 +50,7 @@ s16 RunDecisionTree(DecisionTreeNonLeafNode* arg0) {
         case 2:                                         /* switch 1 */
             for (phi_s0 = 0; phi_s0 < 7; phi_s0++) {
                 if ((phi_s3 << phi_s0) & phi_s1->node_data) {
-                    if (!IsBoardFeatureFlagSet(tempArray[phi_s0])) {
+                    if (!IsFlagSet(tempArray[phi_s0])) {
                         break;
                     }
                 }
