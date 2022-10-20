@@ -154,7 +154,7 @@ void func_800F66BC_29808C(void) {
             var_s2 = 20;
         }
         
-        func_8008C490(&sp10, "%d", var_s2);
+        sprintf(&sp10, "%d", var_s2);
         func_8006DA5C(windowID, &sp10, 0);
         LoadStringIntoWindow(windowID, (void*)0x1FA, -1, -1);
         func_8006E070(windowID, 0);

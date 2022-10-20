@@ -31,4 +31,11 @@ INCLUDE_ASM(s32, "1A2A0", func_80019A78);
 
 INCLUDE_ASM(s32, "1A2A0", func_80019EDC);
 
-INCLUDE_ASM(s32, "1A2A0", func_8001A084);
+f32 func_800A1480(Vec3f*, Vec3f*);
+
+void func_8001A084(Vec3f* arg0, Vec3f* arg1, Vec3f* arg2) {
+    f32 temp_f20;
+
+    temp_f20 = func_800A1480(arg0, arg1);
+    func_800A0F00(arg2, temp_f20 / func_800A1480(arg0, arg0), arg0);
+}

@@ -102,7 +102,7 @@ void func_800F677C_2829BC(void) {
         var_s0 = gPlayers[D_800F8FF1].coinAmount;
     } else {
         windowID = CreateTextWindow(40, 60, 19, 3);
-        func_8008C490(&sp10, "%d", func_800F66FC_28293C());
+        sprintf(&sp10, "%d", func_800F66FC_28293C());
         func_8006DA5C(windowID, &sp10, 0);
         LoadStringIntoWindow(windowID, (void*)0xCC, -1, -1);
         func_8006E070(windowID, 0);
@@ -326,7 +326,7 @@ void func_800F7044_283284(void) {
             var_a2 = -var_a2;
         }
         
-        func_8008C490(&sp10, "%d", var_a2);
+        sprintf(&sp10, "%d", var_a2);
         func_8006DA5C(windowID, &sp10, 1);
         LoadStringIntoWindow(windowID, (void*)0xD7, -1, -1);
         func_8006E070(windowID, 0);
@@ -376,7 +376,7 @@ void func_800F7410_283650(void) {
     var_s2 = 0;
     if (D_800C597A == 0) {
         var_s1 = CreateTextWindow(40, 60, 19, 3);
-        func_8008C490(&sp10, "%d", func_800F66FC_28293C());
+        sprintf(&sp10, "%d", func_800F66FC_28293C());
         func_8006DA5C(var_s1, &sp10, 0);
         LoadStringIntoWindow(var_s1, (void*)0xDA, -1, -1);
         func_8006E070(var_s1, 0);
@@ -407,7 +407,7 @@ void func_800F7410_283650(void) {
     switch (var_s4) {
     case 4:
         var_s1 = CreateTextWindow(60, 60, 16, 3);
-        func_8008C490(&sp10, "%d", func_800F66FC_28293C());
+        sprintf(&sp10, "%d", func_800F66FC_28293C());
         func_8006DA5C(var_s1, &sp10, 0);
         LoadStringIntoWindow(var_s1, (void*)0xDB, -1, -1);
         func_8006E070(var_s1, 0);
@@ -418,7 +418,7 @@ void func_800F7410_283650(void) {
         break;
     case 3:
         var_s1 = CreateTextWindow(60, 60, 16, 4);
-        func_8008C490(&sp10, "%d", func_800F66FC_28293C());
+        sprintf(&sp10, "%d", func_800F66FC_28293C());
         func_8006DA5C(var_s1, &sp10, 0);
         for (i = 0, var_s2 = 1; i < 4; i++) {
             if (gPlayers[i].miniGameCoins == 0) {
@@ -434,7 +434,7 @@ void func_800F7410_283650(void) {
         break;
     case 2:
         var_s1 = CreateTextWindow(60, 60, 16, 4);
-        func_8008C490(&sp10, "%d", func_800F66FC_28293C());
+        sprintf(&sp10, "%d", func_800F66FC_28293C());
         func_8006DA5C(var_s1, &sp10, 0);
         for (i = 0, var_s2 = 1; i < 4; i++) {
             if (gPlayers[i].miniGameCoins == 0) {
@@ -450,7 +450,7 @@ void func_800F7410_283650(void) {
         break;
     case 1:
         var_s1 = CreateTextWindow(80, 60, 14, 4);
-        func_8008C490(&sp10, "%d", func_800F66FC_28293C());
+        sprintf(&sp10, "%d", func_800F66FC_28293C());
         func_8006DA5C(var_s1, &sp10, 0);
         i = 0;
         var_s2 = 1;
@@ -473,7 +473,7 @@ void func_800F7410_283650(void) {
         } else {
             var_s2 = func_800F66FC_28293C();
         }
-        func_8008C490(&sp10, "%d", var_s2);
+        sprintf(&sp10, "%d", var_s2);
         func_8006DA5C(var_s1, &sp10, 0);
         LoadStringIntoWindow(var_s1, (void*)0xDF, -1, -1);
         func_8006E070(var_s1, 0);
@@ -553,7 +553,7 @@ void func_800F7BFC_283E3C(void) {
 
     if (D_800C597A == 0) {
         temp_s1 = CreateTextWindow(40, 60, 17, 3);
-        func_8008C490(&sp10, "%d", func_800F66FC_28293C());
+        sprintf(&sp10, "%d", func_800F66FC_28293C());
         func_8006DA5C(temp_s1, &sp10, 0);
         LoadStringIntoWindow(temp_s1, (void*)0xE1, -1, -1);
         func_8006E070(temp_s1, 0);
@@ -575,7 +575,7 @@ void func_800F7BFC_283E3C(void) {
     }
     if (gPlayers[D_800F8FF1].miniGameCoins < 0) {
         temp_s1 = CreateTextWindow(60, 60, 16, 3);
-        func_8008C490(&sp10, "%d", func_800F66FC_28293C());
+        sprintf(&sp10, "%d", func_800F66FC_28293C());
         func_8006DA5C(temp_s1, &sp10, 0);
         LoadStringIntoWindow(temp_s1, (void*)0xE2, -1, -1);
         func_8006E070(temp_s1, 0);
@@ -585,7 +585,7 @@ void func_800F7BFC_283E3C(void) {
         HideTextWindow(temp_s1);
     } else if (gPlayers[D_800F8FF1].miniGameCoins > 0) {
         temp_s1 = CreateTextWindow(60, 60, 16, 3);
-        func_8008C490(&sp10, "%d", func_800F66FC_28293C());
+        sprintf(&sp10, "%d", func_800F66FC_28293C());
         func_8006DA5C(temp_s1, &sp10, 0);
         LoadStringIntoWindow(temp_s1, (void*)0xE3, -1, -1);
         func_8006E070(temp_s1, 0);
@@ -595,7 +595,7 @@ void func_800F7BFC_283E3C(void) {
         HideTextWindow(temp_s1);
     } else {
         temp_s1 = CreateTextWindow(60, 60, 16, 3);
-        func_8008C490(&sp10, "%d", func_800F66FC_28293C());
+        sprintf(&sp10, "%d", func_800F66FC_28293C());
         func_8006DA5C(temp_s1, &sp10, 0);
         LoadStringIntoWindow(temp_s1, (void*)0xE4, -1, -1);
         func_8006E070(temp_s1, 0);
@@ -669,7 +669,7 @@ void func_800F80EC_28432C(void) {
 
     if (D_800C597A == 0) {
         var_s1 = CreateTextWindow(40, 60, 16, 3);
-        func_8008C490(&sp10, "%d", func_800F66FC_28293C());
+        sprintf(&sp10, "%d", func_800F66FC_28293C());
         func_8006DA5C(var_s1, &sp10, 0);
         LoadStringIntoWindow(var_s1, (void*)0xE6, -1, -1);
         func_8006E070(var_s1, 0);
@@ -700,7 +700,7 @@ void func_800F80EC_28432C(void) {
     
     if (i != 4) {
         var_s1 = CreateTextWindow(60, 60, 16, 4);
-        func_8008C490(&sp10, "%d", func_800F66FC_28293C());
+        sprintf(&sp10, "%d", func_800F66FC_28293C());
         func_8006DA5C(var_s1, &sp10, 0);
 
         for (i = 0, var_s2 = 1; i < 4; i++) {
@@ -717,7 +717,7 @@ void func_800F80EC_28432C(void) {
         HideTextWindow(var_s1);
     } else {
         var_s1 = CreateTextWindow(60, 60, 16, 3);
-        func_8008C490(&sp10, "%d", func_800F66FC_28293C());
+        sprintf(&sp10, "%d", func_800F66FC_28293C());
         func_8006DA5C(var_s1, &sp10, 0);
         LoadStringIntoWindow(var_s1, (void*)0xE8, -1, -1);
         func_8006E070(var_s1, 0);

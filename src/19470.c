@@ -20,11 +20,22 @@ INCLUDE_ASM(s32, "19470", func_80018AFC);
 
 INCLUDE_ASM(s32, "19470", func_80018B2C);
 
-INCLUDE_ASM(s32, "19470", ShowBasicSprite);
+void ShowBasicSprite(s32 arg0) {
+    func_80067480(D_800ED60C[arg0 & 0xFFFF].unk_04, 0, 0x8000);
+        //[arg0 & 0xFFFF] required to match for other calls to this function
+        //perhaps an implicit declaration
+}
 
 INCLUDE_ASM(s32, "19470", func_80018C90);
 
-INCLUDE_ASM(s32, "19470", SetBasicSpritePos);
+void SetBasicSpritePos(s32 arg0, s16 arg1, s16 arg2) {
+    unkSpriteStruct* spriteInstance = &D_800ED60C[arg0 & 0xFFFF];
+        //[arg0 & 0xFFFF] required to match for other calls to this function
+        //perhaps an implicit declaration
+
+    spriteInstance->unk_0A = arg1;
+    spriteInstance->unk_0C = arg2;
+}
 
 INCLUDE_ASM(s32, "19470", func_80018CF8);
 
@@ -42,7 +53,11 @@ INCLUDE_ASM(s32, "19470", func_80018E98);
 
 INCLUDE_ASM(s32, "19470", func_80018ED8);
 
-INCLUDE_ASM(s32, "19470", SetBasicSpriteSize);
+void SetBasicSpriteSize(u16 arg0, f32 arg1, f32 arg2) {
+    unkSpriteStruct* spriteInstance = &D_800ED60C[arg0];
+    
+    func_80067354(spriteInstance->unk_04, 0, arg1, arg2);
+}
 
 INCLUDE_ASM(s32, "19470", func_80018F68);
 

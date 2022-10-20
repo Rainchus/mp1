@@ -70,7 +70,7 @@ void func_800F750C_3023EC(void) { //TODO: fix call to func_8006DA5C
     func_8006EB40(D_800F8FBC);
     func_8006EB80();
     func_8006DA5C(D_800F8FBC, (void*)((D_800F7DB8[D_800F8FB8].unk_00) >> 16), 0);
-    func_8008C490(buffer, &D_800F8F78);
+    sprintf(buffer, &D_800F8F78);
     func_8007149C(D_800F8FC0, buffer);
     LoadStringIntoWindow(D_800F8FBC, D_800F8FC0, -1, -1);
     while (1) {

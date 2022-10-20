@@ -37,8 +37,8 @@ void func_800F673C_29A55C(void) {
     SleepProcess(0x1A);
     if (D_800ED192.amountOfTimesStartPassed % 10 == 0) {
         temp_s0 = CreateTextWindow(0x32, 0x32, 0xF, 4);
-        func_8008C490(buffer1, &D_800F6D00, D_800ED192.amountOfTimesStartPassed);
-        func_8008C490(buffer2, &D_800F6D00, D_800F6C60[D_800F6D12]);
+        sprintf(buffer1, &D_800F6D00, D_800ED192.amountOfTimesStartPassed);
+        sprintf(buffer2, &D_800F6D00, D_800F6C60[D_800F6D12]);
         func_8006DA5C(temp_s0, buffer1, 0);
         func_8006DA5C(temp_s0, buffer2, 1);
         LoadStringIntoWindow(temp_s0, (void*)0x17A, -1, -1);

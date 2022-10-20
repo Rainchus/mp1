@@ -161,6 +161,10 @@ build/src/B1DC0.c.o: OPTFLAGS = -O0
 build/src/B1FD0.c.o: OPTFLAGS = -O0
 build/src/B22E0.c.o: OPTFLAGS = -O0
 build/src/B2310.c.o: OPTFLAGS = -O0
+build/src/89EA0.c.o: OPTFLAGS = -O0
+build/src/A2080.c.o: OPTFLAGS = -O0
+build/src/A21C0.c.o: OPTFLAGS = -O0
+build/src/A3370.c.o: OPTFLAGS = -O0
 
 # Compile .c files with kmc gcc (use strip to fix objects so that they can be linked with modern gnu ld) 
 $(BUILD_DIR)/src/%.c.o: src/%.c

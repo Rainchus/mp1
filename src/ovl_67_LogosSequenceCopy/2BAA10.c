@@ -7,7 +7,7 @@ void func_800F6610_2BAA10(unkLogoStruct* arg0, s16 arg1, s16 arg2, s16 arg3, u16
     u8 temp_s0;
 
     temp_s6 = ReadMainFS(0x110005);
-    func_8008C490(&D_800F5038, &D_800F6F80, arg2);
+    sprintf(&D_800F5038, &D_800F6F80, arg2);
 
     for (i = 0; i < 2; i++) {
         temp_s0 = D_800F5038[i];

@@ -13,6 +13,11 @@ typedef struct Vec2s {
                s16 y;
 } Vec2s;
 
+typedef struct Vec2w {
+               s32 x;
+               s32 y;
+} Vec2w;
+
 typedef struct Vec3f {
                f32 x;
                f32 y;
@@ -267,10 +272,22 @@ typedef struct playerMain {
 } playerMain; //sizeof 0x30
 //P1 800F32B0, P2 800F32E0, P3 800F3310, P4 800F3340
 
+//sprite related
 typedef struct unk_800ECDE0 {
 /* 0x00 */ s16 unk_00;
 /* 0x02 */ s16 unk_02;
-/* 0x04 */ char unk_04[0x20];
+/* 0x04 */ s16 unk_04;
+/* 0x06 */ s16 unk_06;
+/* 0x08 */ s32 unk_08;
+/* 0x0C */ s16 unk_0C;
+/* 0x0E */ s16 unk_0E;
+/* 0x10 */ f32 unk_10;
+/* 0x14 */ f32 unk_14;
+/* 0x18 */ s32 unk_18;
+/* 0x1C */ s16 unk_1C;
+/* 0x1E */ s16 unk_1E;
+/* 0x20 */ s16 unk_20;
+/* 0x22 */ s16 pad;
 } unk_800ECDE0;
 
 typedef struct viewAngle {
@@ -541,5 +558,22 @@ typedef struct DecisionTreeNonLeafNode {
     u32 node_data;
     u32 next_grouper_ptr;
 } DecisionTreeNonLeafNode;
+
+typedef struct file_1ACF0_struct {
+/* 0x00 */ Addr* unk_00;
+/* 0x04 */ Addr* unk_04;
+/* 0x08 */ char unk_08[0x14];
+/* 0x1C */ s32 unk_1C;
+/* 0x20 */ s32 unk_20;
+/* 0x24 */ Addr* unk_24;
+/* 0x28 */ Addr* unk_28;
+/* 0x2C */ char unk_2C[0x14];
+/* 0x40 */ s32 unk_40;
+/* 0x44 */ s32 unk_44;
+/* 0x48 */ s32 unk_48;
+/* 0x4C */ s32 unk_4C;
+/* 0x50 */ s32 unk_50;
+/* 0x54 */ s32 unk_54;
+} file_1ACF0_struct;
 
 #endif

@@ -222,7 +222,7 @@ void func_80059348(s16);
 s32 func_8005DF44(s32, s32, s32);
 void func_8004F504(void*);
 void func_800503B0(s32, s32);
-void func_8008C490(); //sprintf, variadic args
+void sprintf(); //sprintf, variadic args
 void func_8004F2AC(void);
 void func_80054868(s32);
 void func_80055A34(s32);

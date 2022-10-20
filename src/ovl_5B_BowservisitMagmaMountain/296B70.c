@@ -125,7 +125,7 @@ void func_800F66C4_296C54(void) { //fix me: remove gotos
         } else {
             var_s2 = gPlayers[D_800F7650].coinAmount;
         }
-        func_8008C490(&sp10, "%d", var_s2);
+        sprintf(&sp10, "%d", var_s2);
         func_8006DA5C(windowID, &sp10, 0);
         LoadStringIntoWindow(windowID, (void* )0x1E6, -1, -1);
         func_8006E070(windowID, 0);
@@ -195,7 +195,7 @@ void func_800F66C4_296C54(void) { //fix me: remove gotos
                 var_s2 = gPlayers[D_800F7650].coinAmount;
             }
 
-            func_8008C490(&sp10, "%d", var_s2);
+            sprintf(&sp10, "%d", var_s2);
             func_8006DA5C(windowID, &sp10, 0);
             LoadStringIntoWindow(windowID, (void* )0x1E9, -1, -1);
             func_8006E070(windowID, 0);

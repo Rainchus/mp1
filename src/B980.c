@@ -1,5 +1,13 @@
 #include "common.h"
 
+s32 func_8000B13C(void);
+extern file_1ACF0_struct D_800C18A0;
+s32 func_8000B210(void);
+void func_80088620(void*, void*, s32);
+extern s32 D_800CD9C8;
+extern s32 D_800CDA90;
+extern s8 D_800ECB2C;
+
 INCLUDE_ASM(s32, "B980", func_8000AD80);
 
 INCLUDE_ASM(s32, "B980", func_8000ADFC);
@@ -14,13 +22,29 @@ INCLUDE_ASM(s32, "B980", func_8000AFF8);
 
 INCLUDE_ASM(s32, "B980", func_8000B000);
 
-INCLUDE_ASM(s32, "B980", func_8000B00C);
+s32 func_8000B00C(s32 arg0, s32 arg1, s32 arg2, s32 arg3) {
+    D_800C18A0.unk_48 = arg0;
+    D_800C18A0.unk_4C = arg1;
+    D_800C18A0.unk_50 = 1;
+    D_800C18A0.unk_00 = arg2;
+    D_800C18A0.unk_04 = arg3;
+    return func_8000B13C();
+}
 
 INCLUDE_ASM(s32, "B980", func_8000B044);
 
 INCLUDE_ASM(s32, "B980", func_8000B0C0);
 
-INCLUDE_ASM(s32, "B980", func_8000B13C);
+s32 func_8000B13C(void) {
+    func_80088620(&D_800CDA90, &D_800CD9C8, 50);
+    D_800ECB2C = 0;
+    if (D_800C18A0.unk_00 != 0) {
+        if (D_800C18A0.unk_04 != 0) {
+            return func_8000B210();
+        }
+    }
+    return 1;
+}
 
 INCLUDE_ASM(s32, "B980", func_8000B198);
 
