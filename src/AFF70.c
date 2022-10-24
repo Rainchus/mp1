@@ -12,7 +12,7 @@ f64 func_800B1740(f64);
 extern f64 D_800C7E10[];
 extern f64 D_800C7ED0;
 extern f64 D_800C7EE0[];
-extern f64 D_800C8330[];
+extern f64 D_800C8330_C8F30[];
 f64 func_800AF370(f64 arg0) {
     f64 sp10;
     f64 sp14;
@@ -50,7 +50,7 @@ f64 func_800AF370(f64 arg0) {
 
     
     for (sp34 = 1, sp30 = 1; sp30 < 100; sp34++, sp30++) {
-        sp14 = sp14 * sp24 * D_800C8330[sp30];
+        sp14 = sp14 * sp24 * D_800C8330_C8F30[sp30];
         if ((sp14 >= -D_800C7ED0) && (sp14 <= D_800C7ED0)) {
             break;
         }

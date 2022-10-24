@@ -24,7 +24,9 @@ INCLUDE_ASM(s32, "1DE40", func_8001D8A0);
 
 INCLUDE_ASM(s32, "1DE40", func_8001D8D4);
 
-INCLUDE_ASM(s32, "1DE40", func_8001D904);
+void func_8001D904(s16 arg0, s32 arg1) {
+    D_800C3110[arg0].unkF4 = arg1;
+}
 
 void guLookAtF(f32 mf[4][4], f32 xEye, f32 yEye, f32 zEye, f32 xAt, f32 yAt, f32 zAt, f32 xUp, f32 yUp, f32 zUp);
 

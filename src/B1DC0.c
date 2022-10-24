@@ -2,7 +2,7 @@
 
 extern f64 D_800C7EB0;
 extern f64 D_800C7ED0;
-extern f64 D_800C8330[];
+extern f64 D_800C8330_C8F30[];
 extern f64 D_800CCE10;
 extern f64 D_800CCE18;
 extern f64 D_800CCE20;
@@ -37,7 +37,7 @@ f64 func_800B11C0(f64 arg0) {
     sp18 = D_800CCE38;
 
     for (; sp2C < 100; sp2C++) {
-        sp18 = sp18 * (arg0 * D_800C8330[sp2C]);
+        sp18 = sp18 * (arg0 * D_800C8330_C8F30[sp2C]);
         sp20 += sp18;
         if (sp18 <= sp10) {
             break;

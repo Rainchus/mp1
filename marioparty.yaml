@@ -199,6 +199,11 @@ segments:
       - [0xC25A0, data, 180C0]
   - type: bin
     start: 0xC3DE0
+  # - type: code
+  #   start: 0xC8F30
+  #   vram: 0x800C8330
+  #   subsegments:
+  #     - [0xC8F30, data, 180C0]
 
   # - type: code
   #   start: 0xCBC60
@@ -878,6 +883,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x24FA80, c]
+      - [0x24FAB0, c]
   - type: bin
     start: 0x251400
   - type: code

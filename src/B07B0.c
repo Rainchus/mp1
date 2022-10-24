@@ -5,7 +5,7 @@ f64 func_800B1740(f64);
 extern f64 D_800C7E60[];
 extern f64 D_800C7ED0;
 extern f64 D_800C7EE0[];
-extern f64 D_800C8330[];
+extern f64 D_800C8330_C8F30[];
 
 // INCLUDE_ASM(s32, "B07B0", func_800AFBB0);
 // Needs rodata
@@ -58,7 +58,7 @@ f64 func_800AFBB0(f64 arg0) {
     sp10 = sp28 = func_800B1740(D_800CCD08 - (sp20 * sp20));
 
     for (sp4C = 1, sp50 = 2; sp4C < 100; sp50++, sp4C++) {
-        sp18 = sp18 * sp38 * D_800C8330[sp4C];
+        sp18 = sp18 * sp38 * D_800C8330_C8F30[sp4C];
         
         if ((-D_800C7ED0 <= sp18) && (sp18 <= D_800C7ED0)) {
             break;

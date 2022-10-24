@@ -7,6 +7,36 @@ void func_80088620(void*, void*, s32);
 extern s32 D_800CD9C8;
 extern s32 D_800CDA90;
 extern s8 D_800ECB2C;
+void func_800130A4(Addr*);
+void func_8008A500(s32);
+void func_8008A7D0(s32);
+extern s32 D_800C1870;
+extern Addr D_800C1874;
+extern s32 D_800CDAD4;
+extern s32 D_800CDAEC;
+extern s32 D_800CEA8C;
+extern s32 D_800CEAA0;
+extern s32 D_800CDACC;
+
+
+//FXDO related
+typedef struct FXDO_Unk {
+/* 0x00 */ char unk_00[4];
+/* 0x04 */ s32 unk_04;
+} FXDO_Unk; //unk size
+
+extern FXDO_Unk* D_800CDAC8;
+extern s32 D_800C1870;
+
+typedef struct FXD0_Unk2 {
+    void* FXD0_header;
+    void* unk_04;
+    s32 unk_08;
+} FXD0_Unk2;
+
+extern FXD0_Unk2 D_800CDAA8;
+s32 func_8000AFF8(s32, s32, s32);
+s32 func_800899B0(s32, s32, FXD0_Unk2*, s32, s32);
 
 INCLUDE_ASM(s32, "B980", func_8000AD80);
 
@@ -16,13 +46,24 @@ INCLUDE_ASM(s32, "B980", func_8000AE20);
 
 INCLUDE_ASM(s32, "B980", func_8000AE50);
 
-INCLUDE_ASM(s32, "B980", func_8000AFA0);
+s32 func_8000AFA0(s32 arg0) {
+    s32 temp_v0 = func_800899B0(0, 0, &D_800CDAA8, 1, arg0);
 
-INCLUDE_ASM(s32, "B980", func_8000AFF8);
+    if (temp_v0 == 0) {
+        func_8000AFF8(0, 0, 1);
+    }
+    return temp_v0;
+}
 
-INCLUDE_ASM(s32, "B980", func_8000B000);
+s32 func_8000AFF8(s32 arg0, s32 arg1, s32 arg2) {
+    return 0;
+}
 
-s32 func_8000B00C(s32 arg0, s32 arg1, s32 arg2, s32 arg3) {
+void func_8000B000(s32 arg0) {
+    D_800CDACC = arg0;
+}
+
+s32 func_8000B00C(s32 arg0, s32 arg1, Addr* arg2, Addr* arg3) {
     D_800C18A0.unk_48 = arg0;
     D_800C18A0.unk_4C = arg1;
     D_800C18A0.unk_50 = 1;
@@ -46,17 +87,44 @@ s32 func_8000B13C(void) {
     return 1;
 }
 
-INCLUDE_ASM(s32, "B980", func_8000B198);
+s32 func_8000B198(void) {
+    if (D_800CDAEC == 0) {
+        if (D_800CEAA0 == 0) {
+            if (D_800C1870 & 0x8000) {
+                func_8008A500(D_800CDAD4);
+                func_8008A7D0(D_800CEA8C);
+                func_800130A4(&D_800C1874);
+                D_800C1870 = 0;
+                return 0;
+            }
+        } else {
+            return 1;
+        }
+        return 0;
+    }
+    return 1;
+}
 
 INCLUDE_ASM(s32, "B980", func_8000B210);
 
-INCLUDE_ASM(s32, "B980", func_8000B2BC);
+Addr* func_8000B2BC(void) {
+    return &D_800C1874;
+}
 
-INCLUDE_ASM(s32, "B980", func_8000B2C8);
+s32 func_8000B2C8(void) {
+    if (D_800C1870 & 0x8000) {
+        return D_800CDAC8->unk_04;
+    }
+    return 0;
+}
 
-INCLUDE_ASM(s32, "B980", func_8000B2F0);
+s32 func_8000B2F0(void) {
+    return 0x610032;
+}
 
-INCLUDE_ASM(s32, "B980", func_8000B2FC);
+s32 func_8000B2FC(void) {
+    return D_800CDAA8.unk_08 - (D_800CDAA8.unk_04 - D_800CDAA8.FXD0_header);
+}
 
 INCLUDE_ASM(s32, "B980", func_8000B31C);
 

@@ -113,25 +113,20 @@ INCLUDE_ASM(s32, "ovl_1B_HammerDrop/17E710", func_800F74F8_17F628);
 
 INCLUDE_ASM(s32, "ovl_1B_HammerDrop/17E710", func_800F77E4_17F914);
 
-#ifdef NON_MATCHING
-void func_800F7AD4_17FC04(unkObjectStruct* arg0) { //wtf
-    unkGlobalStruct_00* temp_s0 = arg0->unk_50;
+void func_800F7AD4_17FC04(unkObjectStruct *arg0) {
+    unkGlobalStruct_00 *temp_s0 = arg0->unk_50;
+    unk_Struct01 *test2 = (unkObjectStruct *) temp_s0->unk_E4;
     f32 temp_f22;
-    f32 temp1;
-    unkObjectStruct* test2 = ((unkObjectStruct*)(temp_s0->unk_E4));
+    f32 temp;
 
-    temp_f22 = arg0->unk_50->unk_3C;
-
-    temp_s0 = (test2->unk_50);
-    
+    temp_f22 = temp_s0->unk_3C;
+    (void) test2->unk_50;
+    if (test2->unk_50 && temp_s0->unk_E4) {}
     GetRandomByte();
-    temp1 = 70.0f;
-    D_800ECE14[temp_s0->unk_56] = func_800AEAC0(temp_f22) * temp1;
-    D_800F3843[temp_s0->unk_56] = func_800AEFD0(temp_f22) * -temp1;
+    temp = 70.0f;
+    D_800ECE14[temp_s0->unk_56] = func_800AEAC0(temp_f22) * temp;
+    D_800F3843[temp_s0->unk_56] = func_800AEFD0(temp_f22) * -temp;
 }
-#else
-INCLUDE_ASM(s32, "ovl_1B_HammerDrop/17E710", func_800F7AD4_17FC04);
-#endif
 
 void func_800F7B6C_17FC9C(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp_a0;

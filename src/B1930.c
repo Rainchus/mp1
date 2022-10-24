@@ -1,7 +1,7 @@
 #include "common.h"
 
 extern f64 D_800C7ED0;
-extern f64 D_800C8330[];
+extern f64 D_800C8330_C8F30[];
 
 // Needs rodata
 extern f64 D_800CCDC0;
@@ -45,7 +45,7 @@ f64 func_800B0D30(f64 arg0) {
 
     for (;sp48 < 100; sp48 += 2) {
         sp18 *= sp40;
-        sp28 = D_800C8330[sp48] * sp18;
+        sp28 = D_800C8330_C8F30[sp48] * sp18;
         sp30 += sp28;
 
         if ((-D_800C7ED0 <= sp28) && (sp28 <= D_800C7ED0)) {
