@@ -120,22 +120,23 @@ void func_800F7F90_133950(unkObjectStruct* arg0) {
     func_8009ECB0(&D_800F2B7C[arg0->unk_40->unk_00.signed16[0]].unk7C, 0.0f, temp_s1->unk_3C, 0.0f);
 }
 
+INCLUDE_ASM(s32, "ovl_0F_WhackAPlant/131FA0", func_800F8098_133A58);
 
-void func_800F8098_133A58(unkObjectStruct* arg0) {
-    u16 temp = (++D_800FB61E);
-    if (temp < 0x5A) {
-        arg0->unk_1C += -2.7777777f;
-    }
+// void func_800F8098_133A58(unkObjectStruct* arg0) {
+//     u16 temp = (++D_800FB61E);
+//     if (temp < 0x5A) {
+//         arg0->unk_1C += -2.7777777f;
+//     }
     
-    if (D_800FB620 != 0) {
-        u16 temp2 = (--D_800FB620); 
-        if (!temp2) {
-            func_80060540(0x24B, 0);
-        }
-    }
+//     if (D_800FB620 != 0) {
+//         u16 temp2 = (--D_800FB620); 
+//         if (!temp2) {
+//             func_80060540(0x24B, 0);
+//         }
+//     }
     
-    func_80017DB0(arg0);
-}
+//     func_80017DB0(arg0);
+// }
 
 INCLUDE_ASM(s32, "ovl_0F_WhackAPlant/131FA0", func_800F8134_133AF4);
 

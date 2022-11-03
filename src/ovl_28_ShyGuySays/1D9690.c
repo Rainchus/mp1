@@ -93,41 +93,43 @@ void func_800F69F8_1D9AA8(void) {
 INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F6A38_1D9AE8);
 //https://decomp.me/scratch/iuV5i
 
-void func_800F6E50_1D9F00(unkObjectStruct* arg0) {
-    unkStruct_ShyGuySays_01* temp_v1_2;
 
-    func_800F6F98_1DA048(arg0);
-    func_800F72A4_1DA354();
-    switch (D_800FD5CE) {
-    case 0:
-        func_80075CCC(2);
-        temp_v1_2 = &D_800FD9C0[D_800FDC1E];
-        if ((temp_v1_2->unk_00 != 0) && (temp_v1_2->unk_04 != 0x200)) {
-            gPlayers[D_800FDC1E].miniGameCoins += 10;
-        }
-        D_800FD5CE++;
-        return;
-    case 1:
-        if (func_80075FE0() != 2) {
-            return;
-        }
-        D_800FD5CE++;
-        return;
-    case 2:
-        if (func_80076174() == 0) {
-            func_800726AC(0, 20);
-            func_80060398(40);
-            D_800FD5CE++;
-            return;
-        }
-        return;
-    default:
-        if (func_80072718() == 0) {
-            arg0->func_ptr = &func_800F69F8_1D9AA8;
-        }
-        break;
-    }
-}
+INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F6E50_1D9F00);
+// void func_800F6E50_1D9F00(unkObjectStruct* arg0) {
+//     unkStruct_ShyGuySays_01* temp_v1_2;
+
+//     func_800F6F98_1DA048(arg0);
+//     func_800F72A4_1DA354();
+//     switch (D_800FD5CE) {
+//     case 0:
+//         func_80075CCC(2);
+//         temp_v1_2 = &D_800FD9C0[D_800FDC1E];
+//         if ((temp_v1_2->unk_00 != 0) && (temp_v1_2->unk_04 != 0x200)) {
+//             gPlayers[D_800FDC1E].miniGameCoins += 10;
+//         }
+//         D_800FD5CE++;
+//         return;
+//     case 1:
+//         if (func_80075FE0() != 2) {
+//             return;
+//         }
+//         D_800FD5CE++;
+//         return;
+//     case 2:
+//         if (func_80076174() == 0) {
+//             func_800726AC(0, 20);
+//             func_80060398(40);
+//             D_800FD5CE++;
+//             return;
+//         }
+//         return;
+//     default:
+//         if (func_80072718() == 0) {
+//             arg0->func_ptr = &func_800F69F8_1D9AA8;
+//         }
+//         break;
+//     }
+// }
 
 void func_800F6F98_1DA048(unkObjectStruct* arg0) {
     if (D_800F5144 == 1) {

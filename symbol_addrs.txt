@@ -123,4 +123,3 @@ CreateObject = 0x8003DBE0;
 DestroyObject = 0x8003E694;
 _Printf = 0x80095470;
 sprintf = 0x8008C490;
-D_800C8330_C8F30 = 0x800C8330;

@@ -54,7 +54,7 @@ extern unkStruct_ShyGuySays_05* D_800FDC64;
 //extern unkStructShyGuySays_02* D_800F2B7C;
 extern unkStruct_ShyGuySays_01 D_800FD9CE[];
 extern u16 D_800F5144;
-extern s16 D_800FD5CE;
+// extern s16 D_800FD5CE;
 extern unkStructShyGuySays_03 D_800FDCE8[];
 extern f64 D_800FD710;
 extern f64 D_800FD718;
