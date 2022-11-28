@@ -104,7 +104,7 @@ typedef struct unkGlobalStruct_00 {
     } unk_40;
     /* 0x44 */ char unk_44[0xC];
     /* 0x50 */ f32 unk_50;
-    /* 0x54 */ char unk_54[2];
+    /* 0x54 */ u8 unk_54[2];
     /* 0x56 */ s8 unk_56;
     /* 0x57 */ s8 unk_57;
     /* 0x58 */ s8 unk_58;
@@ -591,8 +591,14 @@ typedef struct TextWindow {
 
 typedef struct DecisionTreeNonLeafNode {
     u32 type;
-    u32 node_data;
-    u32 next_grouper_ptr;
+    union {
+        void (*func) ();
+        u32 unsigned32;
+    } node_data1;
+    union {
+        u32 unsigned32;
+        s32 *next_grouper_ptr;
+    } node_data2;
 } DecisionTreeNonLeafNode;
 
 typedef struct file_1ACF0_struct {
