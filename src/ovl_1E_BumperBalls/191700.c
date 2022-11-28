@@ -212,7 +212,7 @@ s32 func_800FA36C_19548C(unkObjectStruct* arg0) { //slightly jank match
 INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800FA3A0_1954C0);
 
 void func_800FA510_195630(unkObjectStruct* arg0) {
-    switch ((u16)arg0->unk_50->unk_40) {
+    switch ((u16)arg0->unk_50->unk_40.signed32) {
     case 1:
         func_800FA5A4_1956C4();
         return;

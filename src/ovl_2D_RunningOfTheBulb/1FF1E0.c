@@ -649,7 +649,7 @@ s32 func_800FDDC0_2069C0(unkObjectStruct* arg0) {
                 temp_s3 = temp_s0->unk_E4;
                 if (!(temp_s3->unk0 & 0x30)) {
                     temp_v1->func_ptr = &func_800F8EA0_201AA0;
-                    temp_s0->unk_40 = 0;
+                    temp_s0->unk_40.signed32 = 0;
                     temp_v0 = D_800FE460[i];
                     temp_s0->unk_3C = func_800B0CD8(0.0f - temp_v0->unk_18, -2235.0f - temp_v0->unk_20);
                     func_80009E20(D_800FE460[i]);

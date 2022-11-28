@@ -98,7 +98,10 @@ typedef struct unkGlobalStruct_00 {
     /* 0x34 */ f32 unk_34;
     /* 0x38 */ f32 unk_38;
     /* 0x3C */ f32 unk_3C;
-    /* 0x40 */ s32 unk_40;
+    /* 0x40 */ union {
+        f32 float32;
+        s32 signed32;
+    } unk_40;
     /* 0x44 */ char unk_44[0xC];
     /* 0x50 */ f32 unk_50;
     /* 0x54 */ char unk_54[2];
@@ -114,7 +117,9 @@ typedef struct unkGlobalStruct_00 {
     /* 0xB0 */ u16 unk_B0;
     /* 0xB2 */ char unk_B2[1];
     /* 0xB3 */ s8 unk_B3;
-    /* 0xB4 */ char unk_B4[0x28];
+    /* 0xB4 */ char unk_B4[0x08];
+    /* 0xBC */ f32 unk_BC;
+    /* 0xC0 */ char unk_C0[0x1C];
     /* 0xB8 */ s32 unk_DC;
     /* 0xE0 */ s32 unk_E0;
     /* 0xE4 */ unk_Struct01* unk_E4;
