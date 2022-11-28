@@ -30,13 +30,11 @@ void func_800F65E0_1837D0(void) {
 
 void func_800F66F8_1838E8(void) {
     s16 temp_v0;
-    u8 temp_s1;
 
     func_800178A0(1);
     temp_v0 = func_800178E8();
-    temp_s1 = temp_v0 & 0xFF;
-    func_80017660(temp_s1, 0.0f, 0.0f, 320.0f, 240.0f);
-    func_800176C4(temp_s1, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
+    func_80017660(temp_v0, 0.0f, 0.0f, 320.0f, 240.0f);
+    func_800176C4(temp_v0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
     func_8001D494(temp_v0, 30.0f, 80.0f, 8000.0f);
 }
 
