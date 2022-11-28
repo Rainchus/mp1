@@ -15,7 +15,7 @@ void func_800F692C_25733C(void);
 void func_800F6E20_257830(void);
 void func_800F77B4_2581C4(void);
 void func_800F83D4_258DE4(void);
-extern event_table_entry D_800F87A8;
+extern EventTableEntry D_800F87A8;
 
 extern s16 D_800F88A0;
 extern s8 D_800F384E;

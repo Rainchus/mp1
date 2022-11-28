@@ -229,7 +229,7 @@ void func_80055A34(s32);
 void func_8003C314(s8 a, void* ptr, s32 c, s32 d);
 void func_8003E174(Object* ptr);
 void func_800584F0(s32 unk);
-void EventTableHydrate(struct event_table_entry *table);
+void EventTableHydrate(EventTableEntry *table);
 void InitCameras(s32 count);
 void SetPlayerOntoChain(s16 player, s16 chain_index, s16 space_index);
 void func_80056AF4(void);

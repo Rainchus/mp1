@@ -1,16 +1,16 @@
 #include "common.h"
 #include "eternalStar.h"
 
-typedef struct EventTableEntry_ovl3D {
-    s16 unk_00;
-    s16 unk_02;
-    void* func;
-} EventTableEntry_ovl3D;
+// typedef struct EventListEntry {
+//     s16 unk_00;
+//     s16 unk_02;
+//     void* func;
+// } EventListEntry;
 
-typedef struct EventTable_ovl3D {
-    s16 spaceID;
-    EventTableEntry_ovl3D* unkData;
-} EventTable_ovl3D;
+// typedef struct EventTableEntry {
+//     s16 spaceID;
+//     EventListEntry* unkData;
+// } EventTableEntry;
 
 f32 D_800F8BB0_256A20[] = {0.0f, 0.0f, 320.0f, 240.0f};
 s16 D_800F8BC0_256A30[] = {0x0046, 0x0047, 0x0048, 0x0049, 0x004A, 0x004B, 0x004C};
@@ -59,18 +59,18 @@ s16 D_800F8ED0_256D40[] = {0x0013, 0x0013, 0x0013, 0x0000};
 s16* D_800F8ED8_256D48[] = {D_800F8E78_256CE8, D_800F8E80_256CF0, D_800F8E88_256CF8, D_800F8E90_256D00, D_800F8E98_256D08, D_800F8EA0_256D10, D_800F8EA8_256D18, D_800F8EB0_256D20, D_800F8EB8_256D28, D_800F8EC0_256D30, D_800F8EC8_256D38, D_800F8ED0_256D40};
 s16 D_800F8F08_256D78[] = {0x0042, 0x004D, 0x0044, 0x0045, 0x0049, 0x004A, 0x0062, 0x0063, 0x005E, 0x005F, 0x0060, 0x004B};
 
-EventTableEntry_ovl3D D_800F8F20_256D90[] = {
+EventListEntry D_800F8F20_256D90[] = {
     {1, 2, func_800F8130_255FA0},
     {0, 0, 0}
 };
 
-EventTableEntry_ovl3D D_800F8F30_256DA0[] = {
+EventListEntry D_800F8F30_256DA0[] = {
     {1, 2, func_800F8240_2560B0},
     {2, 2, func_800F8298_256108},
     {0, 0, 0}
 };
 
-EventTableEntry_ovl3D D_800F8F48_256DB8[] = {
+EventListEntry D_800F8F48_256DB8[] = {
     {3, 1, func_800F8514_256384},
     {4, 2, func_800F8588_2563F8},
     {0, 0, 0}
@@ -79,7 +79,7 @@ EventTableEntry_ovl3D D_800F8F48_256DB8[] = {
 s16 D_800F8F60_256DD0[] = {0x0027, 0x003E, -1, 0};
 EventTableUnkStruct D_800F8F68_256DD8 = {D_800F8F60_256DD0, D_800F8DDC_256C4C, 0x0001, 0x0000};
 
-EventTableEntry_ovl3D D_800F8F74_256DE4[] = {
+EventListEntry D_800F8F74_256DE4[] = {
     {1, 2, func_800F88EC_25675C},
     {0, 0, 0}
 };
@@ -87,7 +87,7 @@ EventTableEntry_ovl3D D_800F8F74_256DE4[] = {
 s16 D_800F8F84_256DF4[] = {0x0029, 0x0026, -1, 0};
 EventTableUnkStruct D_800F8F8C_256DFC = {D_800F8F84_256DF4, D_800F8DF4_256C64, 3, 4};
 
-EventTableEntry_ovl3D D_800F8F98_256E08[] = {
+EventListEntry D_800F8F98_256E08[] = {
     {1, 2, func_800F8914_256784},
     {0, 0, 0}
 };
@@ -96,7 +96,7 @@ s16 D_800F8FA8_256E18[] = {0x0049, 0x0036, -1, 0};
 EventTableUnkStruct D_800F8FB0_256E20 = {D_800F8FA8_256E18, D_800F8E18_256C88, 0x0009, 0x0008};
 
 
-EventTableEntry_ovl3D D_800F8FBC_256E2C[] = {
+EventListEntry D_800F8FBC_256E2C[] = {
     {1, 2, func_800F893C_2567AC},
     {0, 0, 0}
 };
@@ -104,7 +104,7 @@ EventTableEntry_ovl3D D_800F8FBC_256E2C[] = {
 s16 D_800F8FCC_256E3C[] = {0x0063, 0x001F, -1, 0};
 EventTableUnkStruct D_800F8FD4_256E44 = {D_800F8FCC_256E3C, D_800F8E30_256CA0, 0x000C, 0x000B};
 
-EventTableEntry_ovl3D D_800F8FE0_256E50[] = {
+EventListEntry D_800F8FE0_256E50[] = {
     {1, 2, func_800F8964_2567D4},
     {0, 0, 0}
 };
@@ -112,33 +112,33 @@ EventTableEntry_ovl3D D_800F8FE0_256E50[] = {
 s16 D_800F8FF0_256E60[] = {16, 15, -1, 0};
 EventTableUnkStruct D_800F8FF8_256E68 = {D_800F8FF0_256E60, D_800F8E54_256CC4, 0x000F, 0x000E};
 
-EventTableEntry_ovl3D D_800F9004_256E74[] = {
+EventListEntry D_800F9004_256E74[] = {
     {1, 2, func_800F898C_2567FC},
     {0, 0, 0}
 };
 
-EventTableEntry_ovl3D D_800F9014_256E84[] = {
+EventListEntry D_800F9014_256E84[] = {
     {1, 1, func_800F89B4_256824},
     {0, 0, 0}
 };
 
-EventTableEntry_ovl3D D_800F9024_256E94[] = {
+EventListEntry D_800F9024_256E94[] = {
     {1, 1, func_800F89D8_256848},
     {0, 0, 0}
 };
 
-EventTableEntry_ovl3D D_800F9034_256EA4[] = {
+EventListEntry D_800F9034_256EA4[] = {
     {1, 1, func_800F89FC_25686C},
     {0, 0, 0}
 };
 
-EventTableEntry_ovl3D D_800F9044_256EB4[] = {
+EventListEntry D_800F9044_256EB4[] = {
     {1, 1, func_800F8A30_2568A0},
     {3, 1, func_800F8A94_256904},
     {0, 0, 0}
 };
 
-EventTable_ovl3D D_800F905C_256ECC[] = {
+EventTableEntry D_800F905C_256ECC[] = {
     {0x0055, D_800F9044_256EB4},
     {0x0054, D_800F9044_256EB4},
     {0x0053, D_800F9044_256EB4},
@@ -434,7 +434,7 @@ void func_800F6F68_254DD8(void) {
     func_80060128(0xF);
     InitCameras(2);
     func_800F6E34_254CA4();
-    EventTableHydrate(&D_800F905C_256ECC);
+    EventTableHydrate(D_800F905C_256ECC);
     
     if (IsFlagSet(0xF) == 0) {
         EventTableHydrate(&D_800F9164);

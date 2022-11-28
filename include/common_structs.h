@@ -371,7 +371,7 @@ typedef struct EventListEntry {
 
 typedef struct EventTableEntry {
     s16 space_index;
-    struct EventListEntry* event_list;
+    EventListEntry* event_list;
 } EventTableEntry;
 
 typedef struct SpaceData {
@@ -389,17 +389,6 @@ typedef struct ChainData {
     u16 len;
     s16* space_indices;
 } ChainData;
-
-typedef struct event_list_entry {
-    s16 activation_type;
-    s16 execution_type;
-    void (*event_fn)();
-} event_list_entry;
-
-typedef struct event_table_entry {
-    s16 space_index;
-    struct event_list_entry* event_list;
-} event_table_entry;
 
 
 typedef struct mpSource_object_indirect2 {

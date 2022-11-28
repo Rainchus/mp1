@@ -51,10 +51,10 @@ extern struct D_800F9948_tuple D_800F9948[];
 extern s16 D_800ED154[];
 extern s16 D_800ED172;
 
-extern event_table_entry main_event_table[]; //800FA0CC
-extern event_table_entry koopa_event_table[]; //800FA1FC
-extern event_table_entry boo_event_table[]; //800FA20C
-extern event_table_entry bowser_event_table[]; //800FA224
+extern EventTableEntry main_event_table[]; //800FA0CC
+extern EventTableEntry koopa_event_table[]; //800FA1FC
+extern EventTableEntry boo_event_table[]; //800FA20C
+extern EventTableEntry bowser_event_table[]; //800FA224
 
 // board_overlay_entrypoint D_800F9890[] = {
 //     {0, &func_800F6F0C_2421CC },
