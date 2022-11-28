@@ -1,16 +1,6 @@
 #include "common.h"
 #include "eternalStar.h"
 
-// typedef struct EventListEntry {
-//     s16 unk_00;
-//     s16 unk_02;
-//     void* func;
-// } EventListEntry;
-
-// typedef struct EventTableEntry {
-//     s16 spaceID;
-//     EventListEntry* unkData;
-// } EventTableEntry;
 
 f32 D_800F8BB0_256A20[] = {0.0f, 0.0f, 320.0f, 240.0f};
 s16 D_800F8BC0_256A30[] = {0x0046, 0x0047, 0x0048, 0x0049, 0x004A, 0x004B, 0x004C};
