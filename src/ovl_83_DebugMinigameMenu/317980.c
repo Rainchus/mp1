@@ -38,7 +38,12 @@ INCLUDE_ASM(s32, "ovl_83_DebugMinigameMenu/317980", func_800F944C_31A7EC);
 
 INCLUDE_ASM(s32, "ovl_83_DebugMinigameMenu/317980", func_800F94C8_31A868);
 
-INCLUDE_ASM(s32, "ovl_83_DebugMinigameMenu/317980", func_800F95F8_31A998);
+void func_800F95F8_31A998(u16 arg0, u16 arg1, s32 arg2, u16 arg3, u16 arg4) {
+    D_800ECB24 = arg4;
+    func_800622BC(arg0 + 1, arg1 + 1, arg2);
+    D_800ECB24 = arg3;
+    func_800622BC(arg0, arg1, arg2);
+}
 
 INCLUDE_ASM(s32, "ovl_83_DebugMinigameMenu/317980", func_800F9678_31AA18);
 
@@ -46,4 +51,23 @@ INCLUDE_ASM(s32, "ovl_83_DebugMinigameMenu/317980", func_800F96DC_31AA7C);
 
 INCLUDE_ASM(s32, "ovl_83_DebugMinigameMenu/317980", func_800F9744_31AAE4);
 
-INCLUDE_ASM(s32, "ovl_83_DebugMinigameMenu/317980", func_800F9810_31ABB0);
+void func_800F9810_31ABB0(void) {
+    u8 sp10[4];
+    s32 randByte;
+    s32 i;
+
+    for (i = 0; i < 4; i++) {
+        sp10[i] = 0;
+    }
+
+    for (i = 0; i < 4; i++) {
+        while (1) {
+            randByte = GetRandomByte() & 3;
+            if (!(sp10[randByte] == 1)) {
+                break;
+            }
+        }
+        sp10[randByte] = 1;
+        D_800FAC60[i].flags = randByte;
+    }
+}
