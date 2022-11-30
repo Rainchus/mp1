@@ -18,6 +18,7 @@ extern s32 D_800F3FF0;
 extern s16 D_800C4C30[7];
 
 //RunDecisionTree
+//https://decomp.me/scratch/hUXdw
 s16 RunDecisionTree(DecisionTreeNonLeafNode* arg0) {
     s32 temp_s0;
     DecisionTreeNonLeafNode* temp_v0_2;

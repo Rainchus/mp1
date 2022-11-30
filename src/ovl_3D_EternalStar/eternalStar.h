@@ -45,6 +45,13 @@ typedef struct {
     /* 0x2 */ s16 unk2;
 } my_struct; // size 0x4
 
+typedef struct EventTableUnkStruct {
+    s16* spaceIDs;
+    DecisionTreeNonLeafNode* decisionTree;
+    s16 unk_08;
+    s16 unk_0A;
+} EventTableUnkStruct;
+
 // extern my_struct D_800F8C18[]; // tbd how big it is :)
 
 // extern s16* D_800F8ED8[];
@@ -74,8 +81,8 @@ extern Vec3f D_800F9198;
 extern Vec3f D_800F91A4;
 extern Vec3f D_800F91B0;
 extern f32 D_800F91B4;
-extern event_table_entry D_800F905C;
-extern event_table_entry D_800F9164;
+extern EventTableEntry D_800F905C;
+extern EventTableEntry D_800F9164;
 extern s16 D_800F8BF8[];
 extern Object* D_800F91BC;
 extern Object* D_800F91C0[];
@@ -119,7 +126,7 @@ void func_800F6BD8_254A48(void);
 void func_800F6E34_254CA4(void);
 s16 func_800F6610_254480(void);
 s16 func_800F67AC_25461C(s16);
-void func_800F87E4_256654(ProcessHeader*);
+void func_800F87E4_256654(EventTableUnkStruct*);
 void func_800F7C70_255AE0(void);
 void func_800F7D20_255B90(void);
 void func_800F7F7C_255DEC(void);

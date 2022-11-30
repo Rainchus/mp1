@@ -104,7 +104,7 @@ typedef struct unkGlobalStruct_00 {
     } unk_40;
     /* 0x44 */ char unk_44[0xC];
     /* 0x50 */ f32 unk_50;
-    /* 0x54 */ char unk_54[2];
+    /* 0x54 */ u8 unk_54[2];
     /* 0x56 */ s8 unk_56;
     /* 0x57 */ s8 unk_57;
     /* 0x58 */ s8 unk_58;
@@ -371,7 +371,7 @@ typedef struct EventListEntry {
 
 typedef struct EventTableEntry {
     s16 space_index;
-    struct EventListEntry* event_list;
+    EventListEntry* event_list;
 } EventTableEntry;
 
 typedef struct SpaceData {
@@ -389,17 +389,6 @@ typedef struct ChainData {
     u16 len;
     s16* space_indices;
 } ChainData;
-
-typedef struct event_list_entry {
-    s16 activation_type;
-    s16 execution_type;
-    void (*event_fn)();
-} event_list_entry;
-
-typedef struct event_table_entry {
-    s16 space_index;
-    struct event_list_entry* event_list;
-} event_table_entry;
 
 
 typedef struct mpSource_object_indirect2 {
@@ -591,8 +580,14 @@ typedef struct TextWindow {
 
 typedef struct DecisionTreeNonLeafNode {
     u32 type;
-    u32 node_data;
-    u32 next_grouper_ptr;
+    union {
+        void (*func) ();
+        u32 unsigned32;
+    } node_data1;
+    union {
+        u32 unsigned32;
+        s32 *next_grouper_ptr;
+    } node_data2;
 } DecisionTreeNonLeafNode;
 
 typedef struct file_1ACF0_struct {
