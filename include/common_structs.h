@@ -179,6 +179,8 @@ typedef struct unkObjectStruct2 {
 /* 0x4C */ u8  unk_4E;
 /* 0x4C */ u8  unk_4F;
 /* 0x50 */ volatile s32 unk_50;
+/* 0x54 */ char unk_54[0x90];
+/* 0xE4 */ unkObjectStruct* unk_E4;
 } unkObjectStruct2; //sizeof 0x54
 
 typedef struct jump_buf
