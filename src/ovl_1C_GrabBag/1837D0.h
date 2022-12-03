@@ -1,8 +1,8 @@
 #ifndef _1837D0_H_
 #define _1837D0_H_
 
-unkObjectStruct* D_800EDE70[6];   // Array of unkObjectStruct pointers?
-u16 D_800EE984;                   // Offst into D_800EDE70 array.
+extern unkObjectStruct* D_800EDE70[6];   // Array of unkObjectStruct pointers?
+extern u16 D_800EE984;                   // Offset into D_800EDE70 array.
 void func_800F6C98_183E88(void);
 void func_800F66F8_1838E8(void);
 void func_800F67BC_1839AC(void);
