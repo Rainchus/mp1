@@ -115,6 +115,7 @@ segments:
       - [0x83490, bin]
       #- [0x83490, c] #has some code, weird to split?
       - [0x83960, c]
+      - [0x89E30, c, "../src/lib/2.0I/os/virtualtophysical"]
       - [0x89E90, c] #
       - [0x89EA0, c] # -O0?
       - [0xA2080, c] # -O0?
