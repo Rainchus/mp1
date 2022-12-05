@@ -371,6 +371,8 @@ INCLUDE_ASM(s32, "89EA0", __osPopThread);
 
 INCLUDE_ASM(s32, "89EA0", __osDispatchThread);
 
+INCLUDE_ASM(s32, "89EA0", __osCleanupThread);
+
 
 INCLUDE_ASM(s32, "89EA0", osGetMemSize);
 

@@ -118,7 +118,7 @@ INCLUDE_ASM(s32, "83960", func_80088490);
 
 INCLUDE_ASM(s32, "83960", func_80088530);
 
-INCLUDE_ASM(s32, "83960", func_80088540);
+INCLUDE_ASM(s32, "83960", __osSetCompare);
 
 INCLUDE_ASM(s32, "83960", func_80088550);
 
@@ -127,35 +127,3 @@ INCLUDE_ASM(s32, "83960", func_80088560);
 INCLUDE_ASM(s32, "83960", func_80088570);
 
 INCLUDE_ASM(s32, "83960", func_800885F0);
-
-INCLUDE_ASM(s32, "83960", func_80088620);
-
-INCLUDE_ASM(s32, "83960", osCreateThread);
-
-INCLUDE_ASM(s32, "83960", func_80088720);
-
-INCLUDE_ASM(s32, "83960", func_800887F0);
-
-INCLUDE_ASM(s32, "83960", func_80088810);
-
-INCLUDE_ASM(s32, "83960", func_800888A0);
-
-INCLUDE_ASM(s32, "83960", OSRecvMsg);
-
-INCLUDE_ASM(s32, "83960", osSendMsg);
-
-INCLUDE_ASM(s32, "83960", func_80088C40); // osSetThreadPri
-
-INCLUDE_ASM(s32, "83960", osStartThread);
-
-INCLUDE_ASM(s32, "83960", func_80088E30); // osStopThread
-
-INCLUDE_ASM(s32, "83960", func_80088EF0); // __osDequeueThread
-
-INCLUDE_ASM(s32, "83960", func_80088F30); // __osTimerServicesInit
-
-INCLUDE_ASM(s32, "83960", func_80088F84); // __osTimerInterrupt
-
-INCLUDE_ASM(s32, "83960", func_800890C0); // __osSetTimerIntr
-
-INCLUDE_ASM(s32, "83960", func_80089120); // __osInsertTimer

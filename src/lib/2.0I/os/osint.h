@@ -7,37 +7,37 @@
 //     OSMesgQueue *messageQueue;
 //     OSMesg message;
 // } __OSEventState;
-// extern struct __osThreadTail
-// {
-//     OSThread *next;
-//     OSPri priority;
-// } __osThreadTail;
+extern struct __osThreadTail
+{
+    OSThread *next;
+    OSPri priority;
+} __osThreadTail;
 
 // //maybe should be in exceptasm.h?
-// extern void __osEnqueueAndYield(OSThread **);
-// extern void __osDequeueThread(OSThread **, OSThread *);
-// extern void __osEnqueueThread(OSThread **, OSThread *);
-// extern OSThread *__osPopThread(OSThread **);
-// extern void __osDispatchThread(void);
-// extern void __osCleanupThread(void);
+extern void __osEnqueueAndYield(OSThread **);
+extern void __osDequeueThread(OSThread **, OSThread *);
+extern void __osEnqueueThread(OSThread **, OSThread *);
+extern OSThread *__osPopThread(OSThread **);
+extern void __osDispatchThread(void);
+extern void __osCleanupThread(void);
 
-// extern void __osSetTimerIntr(OSTime);
-// extern OSTime __osInsertTimer(OSTimer *);
-// extern void __osTimerInterrupt(void);
+extern void __osSetTimerIntr(OSTime);
+extern OSTime __osInsertTimer(OSTimer *);
+extern void __osTimerInterrupt(void);
 extern u32 __osProbeTLB(void *);
 // extern int     __osSpDeviceBusy(void);
 
-// extern OSThread *__osRunningThread;
-// extern OSThread *__osActiveQueue;
+extern OSThread *__osRunningThread;
+extern OSThread *__osActiveQueue;
 // extern OSThread *__osFaultedThread;
-// extern OSThread *__osRunQueue;
+extern OSThread *__osRunQueue;
 
-// extern OSTimer *__osTimerList;
-// extern OSTimer __osBaseTimer;
-// extern OSTime __osCurrentTime;
-// extern u32 __osBaseCounter;
-// extern u32 __osViIntrCount;
-// extern u32 __osTimerCounter;
+extern OSTimer *__osTimerList;
+extern OSTimer __osBaseTimer;
+extern OSTime __osCurrentTime;
+extern u32 __osBaseCounter;
+extern u32 __osViIntrCount;
+extern u32 __osTimerCounter;
 // extern u32 __osShutdown;
 
 // extern __OSEventState __osEventStateTab[OS_NUM_EVENTS];

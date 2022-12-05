@@ -52,20 +52,20 @@ void func_800F6BA0_2BAFA0(void) {
     unkLogoStruct sp10; //could be incorrect
     s32 sp20;
 
-    func_80088620(&D_800F7980, &D_800F7998, 1);
+    osCreateMesgQueue(&D_800F7980, &D_800F7998, 1);
     func_800639F8(&sp10, &D_800F7980, 2);
-    OSRecvMsg(&D_800F7980, &sp20, 1);
+    osRecvMesg(&D_800F7980, &sp20, 1);
     if (sp20 == 2) {
         func_8007FEA4();
     }
     func_80063A5C(&sp10);
-    func_80088720(0);
+    osDestroyThread(NULL);
 }
 
 INCLUDE_ASM(s32, "ovl_67_LogosSequenceCopy/2BAA10", func_800F6C1C_2BB01C); //https://decomp.me/scratch/rZb4x
 
 void func_800F6C6C_2BB06C(void) {
-    osSendMsg(&D_800F7980, 0, 1);
+    osSendMesg(&D_800F7980, 0, 1);
 }
 
 s32 func_800F6C94_2BB094(s32 arg0, s32 arg1, s32 arg2) {
@@ -73,7 +73,7 @@ s32 func_800F6C94_2BB094(s32 arg0, s32 arg1, s32 arg2) {
     s32 sp38;
 
     func_800819F0(&sp18, 0, arg1, arg0, arg2, &D_800F6F90);
-    OSRecvMsg(&D_800F6F90, &sp38, 1);
+    osRecvMesg(&D_800F6F90, &sp38, 1);
     return sp38;
 }
 

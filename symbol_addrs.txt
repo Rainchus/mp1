@@ -120,12 +120,19 @@ _Printf = 0x80095470;
 sprintf = 0x8008C490;
 
 osInitialize = 0x80093240;
+osDestroyThread = 0x80088720;
 osCreateThread = 0x80088650;
 osStartThread = 0x80088D10;
-OSRecvMsg = 0x800889E0;
-osSendMsg = 0x80088B10;
+osStopThread = 0x80088E30;
+osSetThreadPri = 0x80088C40;
+osGetThreadPri = 0x800887F0;
+osCreateMesgQueue = 0x80088620; 
+osRecvMesg = 0x800889E0;
+osSendMesg = 0x80088B10;
+osJamMesg = 0x800888A0;
 osGetMemSize = 0x800931A0;
 osGetCount = 0x80093780;
+osGetTime = 0x80088810;
 osVirtualToPhysical = 0x80089230;
 
 __osProbeTLB = 0x800937A0;
@@ -136,3 +143,22 @@ __osEnqueueAndYield = 0x80092EAC;
 __osEnqueueThread = 0x80092FB4;
 __osPopThread = 0x80092FFC;
 __osDispatchThread = 0x8009300C;
+__osCleanupThread = 0x80093188;
+__osDequeueThread = 0x80088EF0;
+__osRunningThread = 0x800C64B0;
+__osThreadTail = 0x800C64A0;
+__osActiveQueue = 0x800C64AC;
+__osRunQueue = 0x800C64A8;
+
+__osTimerServicesInit = 0x80088F30;
+__osTimerInterrupt = 0x80088F84;
+__osSetTimerIntr = 0x800890C0;
+__osInsertTimer = 0x80089120;
+__osViIntrCount = 0x800ED608;
+__osTimerCounter = 0x800F37EC;
+
+__osTimerList = 0x800C64C0;
+__osCurrentTime = 0x800F0A30;
+__osBaseCounter = 0x800ECB18;
+
+__osSetCompare = 0x80088540;

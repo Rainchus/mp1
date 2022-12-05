@@ -3,7 +3,7 @@
 s32 func_8000B13C(void);
 extern file_1ACF0_struct D_800C18A0;
 s32 func_8000B210(void);
-void func_80088620(void*, void*, s32);
+void osCreateMesgQueue(void*, void*, s32);
 extern s32 D_800CD9C8;
 extern s32 D_800CDA90;
 extern s8 D_800ECB2C;
@@ -77,7 +77,7 @@ INCLUDE_ASM(s32, "B980", func_8000B044);
 INCLUDE_ASM(s32, "B980", func_8000B0C0);
 
 s32 func_8000B13C(void) {
-    func_80088620(&D_800CDA90, &D_800CD9C8, 50);
+    osCreateMesgQueue(&D_800CDA90, &D_800CD9C8, 50);
     D_800ECB2C = 0;
     if (D_800C18A0.unk_00 != 0) {
         if (D_800C18A0.unk_04 != 0) {

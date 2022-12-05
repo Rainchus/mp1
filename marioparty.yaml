@@ -115,6 +115,19 @@ segments:
       - [0x83490, bin]
       #- [0x83490, c] #has some code, weird to split?
       - [0x83960, c]
+      - [0x89220, c, "../src/lib/2.0I/os/createmesgqueue"]
+      - [0x89250, c, "../src/lib/2.0I/os/createthread"]
+      - [0x89320, c, "../src/lib/2.0I/os/destroythread"]
+      - [0x893F0, c, "../src/lib/2.0I/os/getthreadpri"]
+      - [0x89410, c, "../src/lib/2.0I/os/gettime"]
+      - [0x894A0, c, "../src/lib/2.0I/os/jammesg"]
+      - [0x895E0, c, "../src/lib/2.0I/os/recvmsg"]
+      - [0x89710, c, "../src/lib/2.0I/os/sendmsg"]
+      - [0x89840, c, "../src/lib/2.0I/os/setthreadpri"]
+      - [0x89910, c, "../src/lib/2.0I/os/startthread"]
+      - [0x89A30, c, "../src/lib/2.0I/os/stopthread"]
+      - [0x89AF0, c, "../src/lib/2.0I/os/thread"]
+      - [0x89B30, c, "../src/lib/2.0I/os/timerintr"]
       - [0x89E30, c, "../src/lib/2.0I/os/virtualtophysical"]
       - [0x89E90, c] #
       - [0x89EA0, c] # -O0?
