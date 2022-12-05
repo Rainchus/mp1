@@ -148,9 +148,9 @@ void func_800F66B4_289C74(void) {
         for(i = 0; i < 0x15F; i += 5) {
             
             temp_s0_2 = D_800F74FC;
-                //temp_s0_2->coords.x = D_800F752C.x + (func_80088060((i * 5) * 0.017453292519943295) * var_f24) ;
+                //temp_s0_2->coords.x = D_800F752C.x + (__sinf((i * 5) * 0.017453292519943295) * var_f24) ;
             new_var3 = &D_800F752C.x;
-            temp_s0_2->coords.x = (*new_var3) + (func_80088060((i * 5) * 0.017453292519943295) * var_f24);
+            temp_s0_2->coords.x = (*new_var3) + (__sinf((i * 5) * 0.017453292519943295) * var_f24);
             
             temp_s0_2 = D_800F74FC;
             temp_s0_2->coords.y = D_800F752C.y + 200.0f + (i / 2);
@@ -158,7 +158,7 @@ void func_800F66B4_289C74(void) {
             temp_s0_2->coords.z = D_800F752C.z + (func_800855C0((i * 5) * 0.017453292519943295) * var_f24);
             temp_s0_2 = D_800F74FC;
             
-            temp_s0_2->unk_18.x = func_80088060(var_f22 * 0.017453292519943295);
+            temp_s0_2->unk_18.x = __sinf(var_f22 * 0.017453292519943295);
             temp_s0_2 = D_800F74FC;
             
             temp_s0_2->unk_18.z = func_800855C0(var_f22 * 0.017453292519943295);
@@ -202,7 +202,7 @@ void func_800F66B4_289C74(void) {
             temp_s0_2->coords.y = D_800F752C.y + 200.0f + (i / 2);
             temp_s0_2->coords.z = D_800F752C.z;
             var_f22 += 10.0f;
-            temp_s0_2->unk_18.x = func_80088060(var_f22 * 0.017453292519943295);
+            temp_s0_2->unk_18.x = __sinf(var_f22 * 0.017453292519943295);
             temp_s0_2 = D_800F74FC;
             temp_s0_2->unk_18.z = func_800855C0(var_f22 * 0.017453292519943295);
             SleepVProcess();

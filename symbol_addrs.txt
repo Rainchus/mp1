@@ -134,6 +134,8 @@ osGetMemSize = 0x800931A0;
 osGetCount = 0x80093780;
 osGetTime = 0x80088810;
 osVirtualToPhysical = 0x80089230;
+osWritebackDCache = 0x80088570;
+osWritebackDCacheAll = 0x800885F0;
 
 __osProbeTLB = 0x800937A0;
 __osDisableInt = 0x80093520;
@@ -161,4 +163,34 @@ __osTimerList = 0x800C64C0;
 __osCurrentTime = 0x800F0A30;
 __osBaseCounter = 0x800ECB18;
 
+osInvalDCache = 0x80088300;
+osInvalICache = 0x800883B0;
+osSetIntMask = 0x80088490;
+
+__osSetCause = 0x80088530;
 __osSetCompare = 0x80088540;
+__osSetCount = 0x80088550;
+__osSetSR = 0x80088560;
+
+guRandom = 0x800882D0;
+xseed = 0x800C6490;
+guTranslateF = 0x80088200;
+guTranslate = 0x80088254;
+guMtxF2L = 0x80086E70;
+guMtxL2F = 0x80086F08;
+guMtxIdentF = 0x80086FB0;
+
+guMtxCatL = 0x80087280;
+guMtxXFML = 0x800872F4;
+guOrthoF = 0x80087380;
+guOrtho = 0x800874B0;
+guPerspectiveF = 0x80087600;
+guPerspective = 0x800877B0;
+guRotateF = 0x80087980;
+guRotate = 0x80087ADC;
+guRotateRPYF = 0x80087C60;
+guRotateRPY = 0x80087DE8;
+guScaleF = 0x80087F80;
+guScale = 0x80087FE0;
+
+__sinf = 0x80088060;

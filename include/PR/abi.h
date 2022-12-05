@@ -405,7 +405,3 @@ typedef short ENVMIX_STATE[40];
 #endif /* _LANGUAGE_C */
 
 #endif /* !_ABI_H_ */
-
-
-
-

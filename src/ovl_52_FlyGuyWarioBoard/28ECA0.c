@@ -34,7 +34,7 @@ INCLUDE_ASM(s32, "ovl_52_FlyGuyWarioBoard/28ECA0", func_800F7070_28F730);
 void func_800F72DC_28F99C(unkObjectStruct* arg0) {
     Object* temp_s0 = D_800F8234;
 
-    temp_s0->unk_30 = ((func_80088060((arg0->unk_28 * D_800F8210)) * arg0->unk_4C) + arg0->unk_1C);
+    temp_s0->unk_30 = ((__sinf((arg0->unk_28 * D_800F8210)) * arg0->unk_4C) + arg0->unk_1C);
     arg0->unk_28 += 10.0f;
     if (arg0->unk_28 >= 360.0f) {
         arg0->unk_28 -= 360.0f;
@@ -44,7 +44,7 @@ void func_800F72DC_28F99C(unkObjectStruct* arg0) {
 void func_800F7384_28FA44(unkObjectStruct* arg0) {
     Object* temp_s0 = D_800F8070;
 
-    temp_s0->unk_30 = ((func_80088060((arg0->unk_28 * D_800F8218)) * arg0->unk_4C) + arg0->unk_1C);
+    temp_s0->unk_30 = ((__sinf((arg0->unk_28 * D_800F8218)) * arg0->unk_4C) + arg0->unk_1C);
     arg0->unk_28 += 10.0f;
     if (arg0->unk_28 >= 360.0f) {
         arg0->unk_28 -= 360.0f;

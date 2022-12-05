@@ -264,4 +264,3 @@ void guSprite2DInit(uSprite *SpritePointer,
 		    int SourceImageOffsetT);
 
 #endif /* !_GU_H_ */
-

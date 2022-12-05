@@ -100,12 +100,12 @@ void func_800F66BC_29808C(void) {
             temp_s0_4 = D_800F7060_298A30;
             temp_s0_4->coords.y = D_800F707C_298A4C.y + 200.0f + (f32) (var_s1_3 / 2);
             temp_f20 = var_s1_3 * 5 * 0.017453292519943295;
-            temp_s0_4->coords.x = (func_80088060(temp_f20) * var_f22) + D_800F707C_298A4C.x;
+            temp_s0_4->coords.x = (__sinf(temp_f20) * var_f22) + D_800F707C_298A4C.x;
             temp_s0_4 = D_800F7060_298A30;
             temp_s0_4->coords.z = (func_800855C0(temp_f20) * var_f22) + D_800F707C_298A4C.z;
             temp_s0_4 = D_800F7060_298A30;
             temp_f20_2 = var_f24 * 0.017453292519943295;
-            temp_s0_4->unk_18.x = func_80088060(temp_f20_2);
+            temp_s0_4->unk_18.x = __sinf(temp_f20_2);
             temp_s0_4 = D_800F7060_298A30;
             temp_s0_4->unk_18.z = func_800855C0(temp_f20_2);
             SleepVProcess();

@@ -316,7 +316,7 @@ void func_8006E070(s16, s32);
 u16 func_800174F4(s32, s32);
 void func_8001775C(unkObjectStruct*, s32, s32);
 void func_800264F8(s16, s16, f32, char*, char*, s32);
-f32 func_80088060(f32);
+f32 __sinf(f32);
 void func_8001D420(s32, void*, void*, void*);
 void func_8001D57C(s32);
 f32 func_800B1750(f32);
