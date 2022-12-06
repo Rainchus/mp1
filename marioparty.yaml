@@ -115,6 +115,17 @@ segments:
       - [0x83490, bin]
       #- [0x83490, c] #has some code, weird to split?
       - [0x83960, c]
+      - [0x86310, c, "../src/lib/2.0I/gu/lookat"]
+      - [0x86A20, c, "../src/lib/2.0I/gu/lookatref"]
+      - [0x87010, c, "../src/lib/2.0I/gu/lookathil"]
+      - [0x87A70, c, "../src/lib/2.0I/gu/mtxutil"]
+      - [0x87CF0, c, "../src/lib/2.0I/gu/mtxcatf"]
+      - [0x87E80, c, "../src/lib/2.0I/gu/mtxcatl"]
+      - [0x87F80, c, "../src/lib/2.0I/gu/ortho"]
+      - [0x88200, c, "../src/lib/2.0I/gu/perspective"]
+      - [0x88580, c, "../src/lib/2.0I/gu/rotate"]
+      - [0x88860, c, "../src/lib/2.0I/gu/rotateRPY"]
+      - [0x88B80, c, "../src/lib/2.0I/gu/scale"]
       - [0x88C60, c, "../src/lib/2.0I/gu/sinf"]
       - [0x88E00, c, "../src/lib/2.0I/gu/translate"]
       - [0x88ED0, c, "../src/lib/2.0I/gu/random"]
@@ -219,11 +230,22 @@ segments:
       - [0xB2360, bin]
       - [0xC25A0, data, 180C0]
       - [0xC3DE0, bin]
+
   #    - [0xC58D0, data, minigamelist]
   #    - [0xC5940, bin]
   #    - [0xC8F30, data, 180C0]
   #    - [0xCBC60, .rodata, 4D770]
   #    - [0xCBC90, bin]
+
+  # 2.0I N64 lib .data sections
+      - [0xC7070, .data, "../src/lib/2.0I/gu/rotate"]
+      - [0xC7080, .data, "../src/lib/2.0I/gu/rotateRPY"]
+      - [0xC7090, bin]
+  # 2.0I N64 lib .rodata sections
+      - [0xCCF30, .rodata, "../src/lib/2.0I/gu/lookat"]
+      - [0xCCF50, .rodata, "../src/lib/2.0I/gu/lookatref"]
+      - [0xCCF60, .rodata, "../src/lib/2.0I/gu/lookathil"]
+      - [0xCCF90, .rodata, "../src/lib/2.0I/gu/perspective"]
       - [0xCCFD0, .rodata, "../src/lib/2.0I/gu/sinf"]
   - type: bin
     start: 0xCD030

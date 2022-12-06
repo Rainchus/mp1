@@ -71,7 +71,7 @@ void func_800F8F78_2B9E38(unkObjectStruct* arg0) {
     Object* temp_s0;
 
     temp_s0 = D_800F9604;
-    temp_s0->unk_30 = __sinf(arg0->unk_28 * D_800F95C8)* 20.0f + 150.0f;
+    temp_s0->unk_30 = sinf(arg0->unk_28 * D_800F95C8)* 20.0f + 150.0f;
     arg0->unk_28 += 2.0f;
     if (arg0->unk_28 >= 360.0f) {
         arg0->unk_28 -=  360.0f;

@@ -251,7 +251,7 @@ void func_8004F044(Object* arg0) {
 void func_8004F084(unkObjectStruct* arg0) {
     f32 temp_f0;
 
-    func_800264F8(arg0->unk_3C, arg0->unk_44, (__sinf((f32) (arg0->unk_18 * D_800CB128)) / 2.0f) + 0.5f, D_800CB110, D_800CB11C, 0);
+    func_800264F8(arg0->unk_3C, arg0->unk_44, (sinf((f32) (arg0->unk_18 * D_800CB128)) / 2.0f) + 0.5f, D_800CB110, D_800CB11C, 0);
     arg0->unk_18 += 20.0f;
     if (arg0->unk_18 >= 360.0f) {
         arg0->unk_18 -= 360.0f;

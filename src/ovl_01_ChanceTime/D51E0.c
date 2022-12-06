@@ -85,7 +85,7 @@ INCLUDE_ASM(s32, "ovl_01_ChanceTime/D51E0", func_800F87CC_D73CC);
 INCLUDE_ASM(s32, "ovl_01_ChanceTime/D51E0", func_800F8A6C_D766C);
 
 void func_800F988C_D848C(unkObjectStruct* arg0) {
-    func_800264F8(arg0->unk_3C, arg0->unk_44, (__sinf(arg0->unk_18 * D_80101478) / 2.0f) + 0.5f, D_80101464, D_80101470, 0);
+    func_800264F8(arg0->unk_3C, arg0->unk_44, (sinf(arg0->unk_18 * D_80101478) / 2.0f) + 0.5f, D_80101464, D_80101470, 0);
     arg0->unk_18 += 20.0f;
     if (arg0->unk_18 >= 360.0f) {
         arg0->unk_18 -= 360.0f;
