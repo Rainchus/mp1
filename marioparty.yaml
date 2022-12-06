@@ -115,6 +115,7 @@ segments:
       - [0x83490, bin]
       #- [0x83490, c] #has some code, weird to split?
       - [0x83960, c]
+      - [0x861C0, c, "../src/lib/2.0I/gu/cosf"]
       - [0x86310, c, "../src/lib/2.0I/gu/lookat"]
       - [0x86A20, c, "../src/lib/2.0I/gu/lookatref"]
       - [0x87010, c, "../src/lib/2.0I/gu/lookathil"]
@@ -242,6 +243,7 @@ segments:
       - [0xC7080, .data, "../src/lib/2.0I/gu/rotateRPY"]
       - [0xC7090, bin]
   # 2.0I N64 lib .rodata sections
+      - [0xCCED0, .rodata, "../src/lib/2.0I/gu/cosf"]
       - [0xCCF30, .rodata, "../src/lib/2.0I/gu/lookat"]
       - [0xCCF50, .rodata, "../src/lib/2.0I/gu/lookatref"]
       - [0xCCF60, .rodata, "../src/lib/2.0I/gu/lookathil"]
