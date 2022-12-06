@@ -194,3 +194,4 @@ guScaleF = 0x80087F80;
 guScale = 0x80087FE0;
 
 __sinf = 0x80088060;
+__libm_qnan_f = 0x800CC6B0;

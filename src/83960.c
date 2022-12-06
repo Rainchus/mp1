@@ -101,5 +101,3 @@ INCLUDE_ASM(s32, "83960", guRotateRPY);
 INCLUDE_ASM(s32, "83960", guScaleF);
 
 INCLUDE_ASM(s32, "83960", guScale);
-
-INCLUDE_ASM(s32, "83960", __sinf);

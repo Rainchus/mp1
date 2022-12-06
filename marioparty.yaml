@@ -115,6 +115,7 @@ segments:
       - [0x83490, bin]
       #- [0x83490, c] #has some code, weird to split?
       - [0x83960, c]
+      - [0x88C60, c, "../src/lib/2.0I/gu/sinf"]
       - [0x88E00, c, "../src/lib/2.0I/gu/translate"]
       - [0x88ED0, c, "../src/lib/2.0I/gu/random"]
       - [0x88F00, hasm, "lib/2.0I/os/invaldcache"]
@@ -215,28 +216,17 @@ segments:
       - [0xB2310, c] # -O0
       - [0xB2340, c] # sqrtd
       - [0xB2350, c] # sqrtf
-  - type: bin
-    start: 0xB2360
-  - type: code
-    start: 0xC25A0
-    vram: 0x800C19A0
-    subsegments:
+      - [0xB2360, bin]
       - [0xC25A0, data, 180C0]
+      - [0xC3DE0, bin]
+  #    - [0xC58D0, data, minigamelist]
+  #    - [0xC5940, bin]
+  #    - [0xC8F30, data, 180C0]
+  #    - [0xCBC60, .rodata, 4D770]
+  #    - [0xCBC90, bin]
+      - [0xCCFD0, .rodata, "../src/lib/2.0I/gu/sinf"]
   - type: bin
-    start: 0xC3DE0
-  # - type: code
-  #   start: 0xC8F30
-  #   vram: 0x800C8330
-  #   subsegments:
-  #     - [0xC8F30, data, 180C0]
-
-  # - type: code
-  #   start: 0xCBC60
-  #   vram: 0x800CB060
-  #   subsegments:
-  #     - [0xCBC60, .rodata, 4D770]
-  - type: bin
-    start: 0xCBC90
+    start: 0xCD030
   - type: code
     start: 0xCDA50
     vram: 0x800F65E0

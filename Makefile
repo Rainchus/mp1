@@ -133,6 +133,8 @@ test: $(ROM)
 
 # Flags for individual files. TODO: move these to a common directory and make this a directory thing instead
 build/src/lib/%.c.o: OPTFLAGS = -O3
+build/src/lib/%.c.o: CFLAGS = -G0 -mips3 -mgp32 -mfp32 -D_LANGUAGE_C
+
 build/src/ABCD0.c.o: OPTFLAGS = -O0
 build/src/ACA90.c.o: OPTFLAGS = -O0
 build/src/ACCB0.c.o: OPTFLAGS = -O0
