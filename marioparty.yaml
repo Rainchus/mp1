@@ -143,7 +143,9 @@ segments:
       - [0x89B30, c, "../src/lib/2.0I/os/timerintr"]
       - [0x89E30, c, "../src/lib/2.0I/os/virtualtophysical"]
       - [0x89E90, c] #
-      - [0x89EA0, c] # -O0?
+      - [0x89EA0, c, "../src/lib/2.0I/audio/bnkf"] # -O0
+      - [0x8A170, c, "../src/lib/2.0I/audio/event"] # -O0
+      - [0x8A4C0, c] # -O0?
       - [0xA2080, c] # -O0?
       - [0xA21C0, c] # -O0?
       - [0xA29F0, c] # -O0?

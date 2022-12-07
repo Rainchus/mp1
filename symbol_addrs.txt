@@ -202,6 +202,16 @@ guRotateRPY = 0x80087DE8;
 guScaleF = 0x80087F80;
 guScale = 0x80087FE0;
 
+alSeqFileNew = 0x800892A0;
+alBnkfNew = 0x800892E0;
+alEvtqNew = 0x80089570;
+alEvtqNextEvent = 0x800895EC;
+alEvtqPostEvent = 0x80089684;
+alEvtqFlushType = 0x80089808;
+alLink = 0x8008991C;
+alUnlink = 0x8008993C;
+alCopy = 0x80089A00;
+
 sinf = 0x80088060;
 cosf = 0x800855C0;
 __libm_qnan_f = 0x800CC6B0;

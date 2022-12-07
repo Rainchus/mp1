@@ -942,7 +942,3 @@ void alParseAbiCL(Acmd *cmdList, u32 nbytes);
 #endif
 
 #endif /* !__LIB_AUDIO__ */
-
-
-
-
