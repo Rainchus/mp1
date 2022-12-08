@@ -263,11 +263,22 @@ alSynSetPitch = 0x8008B010;
 alSynSetVol = 0x8008B0A0;
 alCents2Ratio = 0x8008B160;
 
+osAiGetLength = 0x8008B1C0;
+osAiSetNextBuffer = 0x8008B1D0;
+osSpTaskLoad = 0x8008B270;
+osSpTaskStartGo = 0x8008B47C;
+
 alSynNew = 0x8008F1F0;
 
 __allocParam = 0x8008F66C;
 _freePVoice = 0x8008F704;
 _timeToSamples = 0x8008F78C;
+
+__osAiDeviceBusy = 0x800950A0;
+__osSpDeviceBusy = 0x800950C0;
+__osSpSetStatus = 0x800950F0;
+__osSpSetPc = 0x80095100;
+__osSpRawStartDma = 0x80091FC0;
 
 sinf = 0x80088060;
 cosf = 0x800855C0;

@@ -25,7 +25,7 @@ extern void __osSetTimerIntr(OSTime);
 extern OSTime __osInsertTimer(OSTimer *);
 extern void __osTimerInterrupt(void);
 extern u32 __osProbeTLB(void *);
-// extern int     __osSpDeviceBusy(void);
+extern int     __osSpDeviceBusy(void);
 
 extern OSThread *__osRunningThread;
 extern OSThread *__osActiveQueue;
@@ -46,6 +46,6 @@ extern u32 __osTimerCounter;
 // //not sure if this should be here
 // extern s32 osViClock;
 // extern void __osTimerServicesInit(void);
-// extern s32 __osAiDeviceBusy(void);
+extern s32 __osAiDeviceBusy(void);
 // extern int __osDpDeviceBusy(void);
 #endif

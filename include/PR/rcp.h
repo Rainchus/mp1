@@ -879,5 +879,3 @@ The Indy development board use cartridge domain 1:
 #endif
 
 #endif  /* _RCP_H_ */
-
-

@@ -187,7 +187,11 @@ segments:
       - [0x8BC10, c, "../src/lib/2.0I/audio/synsetpitch"] # -O0
       - [0x8BCA0, c, "../src/lib/2.0I/audio/synsetvol"] # -O0
       - [0x8BD60, c, "../src/lib/2.0I/audio/cents2ratio"] # -O0
-      - [0x8BDC0, c] # -O0?
+      - [0x8BDC0, c, "../src/lib/2.0I/io/aigetlen"] # -O0
+      - [0x8BDD0, c, "../src/lib/2.0I/io/aisetnextbuf"] # -O0
+      # - [0x8BE70, c, "../src/lib/2.0I/io/sptask"] # -O0
+      # - [0x8C0B0, c] # -O0?
+      - [0x8BE70, c] # -O0?
       - [0xA2080, c] # -O0?
       - [0xA21C0, c] # -O0?
       - [0xA29F0, c] # -O0?
@@ -278,7 +282,8 @@ segments:
       - [0xC7080, .data, "../src/lib/2.0I/gu/rotateRPY"]
       - [0xC7090, bin]
       - [0xC70D0, .data, "../src/lib/2.0I/audio/sl"]
-      - [0xC70E0, bin]
+      - [0xC70E0, .data, "../src/lib/2.0I/io/aisetnextbuf"]
+      - [0xC70F0, bin]
   # 2.0I N64 lib .rodata sections
       - [0xCCED0, .rodata, "../src/lib/2.0I/gu/cosf"]
       - [0xCCF30, .rodata, "../src/lib/2.0I/gu/lookat"]
@@ -288,8 +293,18 @@ segments:
       - [0xCCFD0, .rodata, "../src/lib/2.0I/gu/sinf"]
       - [0xCD030, bin] # __osRcpImTable
       - [0xCD0B0, .rodata, "../src/lib/2.0I/audio/cseq"]
-  - type: bin
-    start: 0xCD110
+      - [0xCD110, bin] # END
+    # 2.0I N64 lib .bss sections
+      # - start: 0xCD110
+      #   name: "../src/lib/2.0I/io/sptask"
+      #   type: bss
+      #   vram: 0x800EA180
+  # - name: main_bss
+  #   type: code
+  #   start: 0xCDA50
+  #   vram: 0x800EA180
+  #   subsegments:
+  #     - [0xCDA50, .bss, "../src/lib/2.0I/io/sptask"]
   - type: code
     start: 0xCDA50
     vram: 0x800F65E0
