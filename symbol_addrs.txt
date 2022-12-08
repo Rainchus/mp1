@@ -208,9 +208,37 @@ alEvtqNew = 0x80089570;
 alEvtqNextEvent = 0x800895EC;
 alEvtqPostEvent = 0x80089684;
 alEvtqFlushType = 0x80089808;
+
+alGlobals = 0x800C64D0;
+alInit = 0x800898C0;
+alClose = 0x800898EC;
 alLink = 0x8008991C;
 alUnlink = 0x8008993C;
+alHeapInit = 0x80089970;
+alHeapDBAlloc = 0x800899B0;
 alCopy = 0x80089A00;
+alCSeqNew = 0x80089A40;
+alCSeqNextEvent = 0x80089B4C;
+__alCSeqNextDelta = 0x80089C40;
+
+alSeqpDelete = 0x8008A500;
+alSeqpGetChlFXMix = 0x8008A520;
+alSeqpGetChlPan = 0x8008A540;
+alSeqpGetChlVol = 0x8008A560;
+alSeqpGetChlProgram = 0x8008A580;
+alCSPGetTempo = 0x8008A600;
+alSeqpGetState = 0x8008A630;
+alSeqpPlay = 0x8008A640;
+alSeqpSetBank = 0x8008A670;
+alSeqpSetChlFXMix = 0x8008A6A0;
+alSeqpSetSeq = 0x8008A6F0;
+alSeqpSetTempo = 0x8008A720;
+alSeqpSetVol = 0x8008A770;
+alSeqpStop = 0x8008A7A0;
+
+alSynNew = 0x8008F1F0;
+alSynDelete = 0x8008AB70;
+alSynRemovePlayer = 0x8008ABD0;
 
 sinf = 0x80088060;
 cosf = 0x800855C0;

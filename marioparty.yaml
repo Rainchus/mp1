@@ -145,7 +145,26 @@ segments:
       - [0x89E90, c] #
       - [0x89EA0, c, "../src/lib/2.0I/audio/bnkf"] # -O0
       - [0x8A170, c, "../src/lib/2.0I/audio/event"] # -O0
-      - [0x8A4C0, c] # -O0?
+      - [0x8A4C0, c, "../src/lib/2.0I/audio/sl"] # -O0
+      - [0x8A570, c, "../src/lib/2.0I/audio/heapinit"] # -O0
+      - [0x8A5B0, c, "../src/lib/2.0I/audio/heapalloc"] # -O0
+      - [0x8A600, c, "../src/lib/2.0I/audio/copy"] # -O0
+      - [0x8A640, c, "../src/lib/2.0I/audio/cseq"] # -O0
+      - [0x8B100, c, "../src/lib/2.0I/audio/seqpdelete"] # -O0
+      - [0x8B120, c, "../src/lib/2.0I/audio/seqpgetfxmix"] # -O0
+      - [0x8B140, c, "../src/lib/2.0I/audio/seqpgetpan"] # -O0
+      - [0x8B160, c, "../src/lib/2.0I/audio/seqpgetchlvol"] # -O0
+      - [0x8B180, c, "../src/lib/2.0I/audio/seqpgetprogram"] # -O0
+      - [0x8B200, c, "../src/lib/2.0I/audio/cspgettempo"] # -O0
+      - [0x8B230, c, "../src/lib/2.0I/audio/seqpgetstate"] # -O0
+      - [0x8B240, c, "../src/lib/2.0I/audio/seqpplay"] # -O0
+      - [0x8B270, c, "../src/lib/2.0I/audio/seqpsetbank"] # -O0
+      - [0x8B2A0, c, "../src/lib/2.0I/audio/seqpsetfxmix"] # -O0
+      - [0x8B2F0, c, "../src/lib/2.0I/audio/seqpsetseq"] # -O0
+      - [0x8B320, c, "../src/lib/2.0I/audio/seqpsettempo"] # -O0
+      - [0x8B370, c, "../src/lib/2.0I/audio/seqpsetvol"] # -O0
+      - [0x8B3A0, c, "../src/lib/2.0I/audio/seqpstop"] # -O0
+      - [0x8B3D0, c] # -O0?
       - [0xA2080, c] # -O0?
       - [0xA21C0, c] # -O0?
       - [0xA29F0, c] # -O0?
@@ -222,6 +241,8 @@ segments:
       - [0xB2360, bin]
       - [0xC25A0, data, 180C0]
       - [0xC3DE0, bin]
+      - [0xC58D0, data, minigamelist]
+      - [0xC5940, bin]
 
   #    - [0xC58D0, data, minigamelist]
   #    - [0xC5940, bin]
@@ -233,6 +254,8 @@ segments:
       - [0xC7070, .data, "../src/lib/2.0I/gu/rotate"]
       - [0xC7080, .data, "../src/lib/2.0I/gu/rotateRPY"]
       - [0xC7090, bin]
+      - [0xC70D0, .data, "../src/lib/2.0I/audio/sl"]
+      - [0xC70E0, bin]
   # 2.0I N64 lib .rodata sections
       - [0xCCED0, .rodata, "../src/lib/2.0I/gu/cosf"]
       - [0xCCF30, .rodata, "../src/lib/2.0I/gu/lookat"]
@@ -240,8 +263,10 @@ segments:
       - [0xCCF60, .rodata, "../src/lib/2.0I/gu/lookathil"]
       - [0xCCF90, .rodata, "../src/lib/2.0I/gu/perspective"]
       - [0xCCFD0, .rodata, "../src/lib/2.0I/gu/sinf"]
+      - [0xCD030, bin] # __osRcpImTable
+      - [0xCD0B0, .rodata, "../src/lib/2.0I/audio/cseq"]
   - type: bin
-    start: 0xCD030
+    start: 0xCD110
   - type: code
     start: 0xCDA50
     vram: 0x800F65E0
