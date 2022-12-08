@@ -180,7 +180,14 @@ segments:
       - [0x8B770, c, "../src/lib/2.0I/audio/syndelete"] # -O0
       - [0x8B780, c, "../src/lib/2.0I/audio/synaddplayer"] # -O0
       - [0x8B7D0, c, "../src/lib/2.0I/audio/synremoveplayer"] # -O0
-      - [0x8B870, c] # -O0?
+      - [0x8B870, c, "../src/lib/2.0I/audio/synfreevoice"] # -O0
+      - [0x8B910, c, "../src/lib/2.0I/audio/synallocvoice"] # -O0
+      - [0x8BAF0, c, "../src/lib/2.0I/audio/synstopvoice"] # -O0
+      - [0x8BB70, c, "../src/lib/2.0I/audio/synstartvoice"] # -O0
+      - [0x8BC10, c, "../src/lib/2.0I/audio/synsetpitch"] # -O0
+      - [0x8BCA0, c, "../src/lib/2.0I/audio/synsetvol"] # -O0
+      - [0x8BD60, c, "../src/lib/2.0I/audio/cents2ratio"] # -O0
+      - [0x8BDC0, c] # -O0?
       - [0xA2080, c] # -O0?
       - [0xA21C0, c] # -O0?
       - [0xA29F0, c] # -O0?

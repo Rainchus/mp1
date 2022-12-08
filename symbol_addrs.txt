@@ -254,7 +254,20 @@ alSynDelete = 0x8008AB70;
 alSynAddPlayer = 0x8008AB80;
 alSynRemovePlayer = 0x8008ABD0;
 
+alSynFreeVoice = 0x8008AC70;
+alSynAllocVoice = 0x8008AD10;
+_allocatePVoice = 0x8008AE38;
+alSynStopVoice = 0x8008AEF0;
+alSynStartVoice = 0x8008AF70;
+alSynSetPitch = 0x8008B010;
+alSynSetVol = 0x8008B0A0;
+alCents2Ratio = 0x8008B160;
+
 alSynNew = 0x8008F1F0;
+
+__allocParam = 0x8008F66C;
+_freePVoice = 0x8008F704;
+_timeToSamples = 0x8008F78C;
 
 sinf = 0x80088060;
 cosf = 0x800855C0;
