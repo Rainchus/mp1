@@ -9,7 +9,7 @@ extern s32 D_800CDA90;
 extern s8 D_800ECB2C;
 void func_800130A4(Addr*);
 void alSeqpDelete(s32);
-void func_8008A7D0(s32);
+void alSndpDelete(s32);
 extern s32 D_800C1870;
 extern Addr D_800C1874;
 extern s32 D_800CDAD4;
@@ -92,7 +92,7 @@ s32 func_8000B198(void) {
         if (D_800CEAA0 == 0) {
             if (D_800C1870 & 0x8000) {
                 alSeqpDelete(D_800CDAD4);
-                func_8008A7D0(D_800CEA8C);
+                alSndpDelete(D_800CEA8C);
                 func_800130A4(&D_800C1874);
                 D_800C1870 = 0;
                 return 0;

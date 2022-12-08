@@ -142,7 +142,7 @@ segments:
       - [0x89AF0, c, "../src/lib/2.0I/os/thread"]
       - [0x89B30, c, "../src/lib/2.0I/os/timerintr"]
       - [0x89E30, c, "../src/lib/2.0I/os/virtualtophysical"]
-      - [0x89E90, c] #
+      - [0x89E90, c] # Empty?
       - [0x89EA0, c, "../src/lib/2.0I/audio/bnkf"] # -O0
       - [0x8A170, c, "../src/lib/2.0I/audio/event"] # -O0
       - [0x8A4C0, c, "../src/lib/2.0I/audio/sl"] # -O0
@@ -164,7 +164,23 @@ segments:
       - [0x8B320, c, "../src/lib/2.0I/audio/seqpsettempo"] # -O0
       - [0x8B370, c, "../src/lib/2.0I/audio/seqpsetvol"] # -O0
       - [0x8B3A0, c, "../src/lib/2.0I/audio/seqpstop"] # -O0
-      - [0x8B3D0, c] # -O0?
+      - [0x8B3D0, c, "../src/lib/2.0I/audio/sndpdelete"] # -O0
+      - [0x8B400, c, "../src/lib/2.0I/audio/sndpallocate"] # -O0
+      - [0x8B4C0, c, "../src/lib/2.0I/audio/sndpdeallocate"] # -O0
+      - [0x8B510, c, "../src/lib/2.0I/audio/sndpsetsound"] # -O0
+      - [0x8B520, c, "../src/lib/2.0I/audio/sndpplay"] # -O0
+      - [0x8B580, c, "../src/lib/2.0I/audio/sndpgetsound"] # -O0
+      - [0x8B590, c, "../src/lib/2.0I/audio/sndpstop"] # -O0
+      - [0x8B5E0, c, "../src/lib/2.0I/audio/sndpgetstate"] # -O0
+      - [0x8B600, c, "../src/lib/2.0I/audio/sndpsetpitch"] # -O0
+      - [0x8B650, c, "../src/lib/2.0I/audio/sndpsetpriority"] # -O0
+      - [0x8B680, c, "../src/lib/2.0I/audio/sndpsetvol"] # -O0
+      - [0x8B6D0, c, "../src/lib/2.0I/audio/sndpsetpan"] # -O0
+      - [0x8B720, c, "../src/lib/2.0I/audio/sndpsetfxmix"] # -O0
+      - [0x8B770, c, "../src/lib/2.0I/audio/syndelete"] # -O0
+      - [0x8B780, c, "../src/lib/2.0I/audio/synaddplayer"] # -O0
+      - [0x8B7D0, c, "../src/lib/2.0I/audio/synremoveplayer"] # -O0
+      - [0x8B870, c] # -O0?
       - [0xA2080, c] # -O0?
       - [0xA21C0, c] # -O0?
       - [0xA29F0, c] # -O0?

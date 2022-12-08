@@ -236,9 +236,25 @@ alSeqpSetTempo = 0x8008A720;
 alSeqpSetVol = 0x8008A770;
 alSeqpStop = 0x8008A7A0;
 
-alSynNew = 0x8008F1F0;
+
+alSndpDelete = 0x8008A7D0;
+alSndpAllocate = 0x8008A800;
+alSndpDeallocate = 0x8008A8C0;
+alSndpSetSound = 0x8008A910;
+alSndpPlay = 0x8008A920;
+alSndpGetSound = 0x8008A980;
+alSndpStop = 0x8008A990;
+alSndpGetState = 0x8008A9E0;
+alSndpSetPitch = 0x8008AA00;
+alSndpSetPriority = 0x8008AA50;
+alSndpSetVol = 0x8008AA80;
+alSndpSetPan = 0x8008AAD0;
+alSndpSetFXMix = 0x8008AB20;
 alSynDelete = 0x8008AB70;
+alSynAddPlayer = 0x8008AB80;
 alSynRemovePlayer = 0x8008ABD0;
+
+alSynNew = 0x8008F1F0;
 
 sinf = 0x80088060;
 cosf = 0x800855C0;
