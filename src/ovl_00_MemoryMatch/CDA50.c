@@ -127,7 +127,7 @@ void func_800F7318_CE788(unkObjectStruct* arg0) {
 
 void func_800F7350_CE7C0(void) {
     D_800C3110->unk_40 = 45.0f;
-    func_8008B6A0(0);
+    osViBlack(NULL);
     func_80060198();
     func_800F94E0_D0950();
     func_800F830C_CF77C();

@@ -401,7 +401,7 @@ void func_800601D4(s32);
 void func_800790C0(void);
 s32 func_8005DFB8(s32);
 void func_80060198(void);
-void func_8008B6A0(s32);
+void osViBlack(s32);
 void func_80060398(s32);
 void func_80075CCC(s32, ...);
 u16 ReadImgPackand(s32, s32, s32);

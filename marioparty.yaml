@@ -190,7 +190,16 @@ segments:
       - [0x8BDC0, c, "../src/lib/2.0I/io/aigetlen"] # -O0
       - [0x8BDD0, c, "../src/lib/2.0I/io/aisetnextbuf"] # -O0
       - [0x8BE70, c, "../src/lib/2.0I/io/sptask"] # -O0
-      - [0x8C0B0, c] # -O0?
+      - [0x8C0B0, c, "../src/lib/2.0I/io/sptaskyield"] # -O0
+      - [0x8C0D0, c, "../src/lib/2.0I/io/sptaskyielded"] # -O0
+      - [0x8C120, c, "../src/lib/2.0I/io/vigetcurrframebuf"] # -O0
+      - [0x8C160, c, "../src/lib/2.0I/io/vigetnextframebuf"] # -O0
+      - [0x8C1A0, c, "../src/lib/2.0I/io/visetevent"] # -O0
+      - [0x8C200, c, "../src/lib/2.0I/io/visetmode"] # -O0
+      - [0x8C250, c, "../src/lib/2.0I/io/viswapbuf"] # -O0
+      - [0x8C2A0, c, "../src/lib/2.0I/io/viblack"] # -O0
+      - [0x8C300, c, "../src/lib/2.0I/io/controller"] # -O0
+      - [0x8C610, c] # -O0?
       - [0xA2080, c] # -O0?
       - [0xA21C0, c] # -O0?
       - [0xA29F0, c] # -O0?
@@ -276,7 +285,8 @@ segments:
       - [0xC7090, bin] # TODO: Figure this out 
       - [0xC70D0, .data, "../src/lib/2.0I/audio/sl"]
       - [0xC70E0, .data, "../src/lib/2.0I/io/aisetnextbuf"]
-      - [0xC70F0, bin] # TODO: Figure this out 
+      - [0xC70F0, .data, "../src/lib/2.0I/io/controller"]
+      - [0xC7100, bin] # TODO: Figure this out 
   
   # 2.0I N64 lib .rodata sections
       #    - [0xCBC60, .rodata, 4D770]
@@ -293,6 +303,7 @@ segments:
     # 2.0I N64 lib .bss sections
       - [0xCDA50, .bss, "../src/padding/bss_padding_1d330"] # TODO: Figure this out
       - [0xCDA50, .bss, "../src/lib/2.0I/io/sptask"]
+      - [0xCDA50, .bss, "../src/lib/2.0I/io/controller"]
   - type: code
     start: 0xCDA50
     vram: 0x800F65E0
