@@ -100,6 +100,7 @@ segments:
       - [0x6D4E0, c]
       - [0x72D90, c]
       - [0x7C9F0, c]
+      # - [0x7CB80, c, "../src/lib/2.0I/audio/synsetpan"]
       - [0x7CC80, c]
       - [0x7CD60, c]
       - [0x80770, bin, "libleo"]
@@ -207,7 +208,11 @@ segments:
       - [0x8CB50, c, "../src/lib/2.0I/io/piacs"] # -O0
       - [0x8CC40, hasm, "lib/2.0I/libc/bcopy"]
       - [0x8CF60, hasm, "lib/2.0I/libc/bzero"]
-      - [0x8D000, c] # -O0?
+      - [0x8D000, c, "../src/lib/2.0I/libc/string"] # -O0
+      - [0x8D090, c, "../src/lib/2.0I/libc/sprintf"] # -O0
+      - [0x8D120, c, "../src/lib/2.0I/libc/syncprintf"] # -O0
+      - [0x8D150, c, "../src/lib/2.0I/audio/csplayer"] # -O0
+      - [0x8E3B0, c] # -O0?
       - [0xA2080, c] # -O0?
       - [0xA21C0, c] # -O0?
       - [0xA29F0, c] # -O0?
@@ -307,7 +312,8 @@ segments:
       - [0xCCFD0, .rodata, "../src/lib/2.0I/gu/sinf"]
       - [0xCD030, bin] # __osRcpImTable
       - [0xCD0B0, .rodata, "../src/lib/2.0I/audio/cseq"]
-      - [0xCD110, bin] # TODO: Figure this out 
+      - [0xCD110, .rodata, "../src/lib/2.0I/audio/csplayer"]
+      - [0xCD1C0, bin] # TODO: Figure this out 
 
     # 2.0I N64 lib .bss sections
       - [0xCDA50, .bss, "../src/padding/bss_padding_1d330"] # TODO: Figure this out

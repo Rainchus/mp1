@@ -1,7 +1,5 @@
 /*====================================================================
- * seqpdelete.c
- *
- * Synopsis:
+ * synsetpan.c
  *
  * Copyright 1995, Silicon Graphics, Inc.
  * All Rights Reserved.
@@ -20,16 +18,33 @@
  * Copyright Laws of the United States.
  *====================================================================*/
 
-#include <libaudio.h>
-#include <assert.h>
+#include "synthInternals.h"
+#include <os_internal.h>
+#include <ultraerror.h>
 
-
-void alSeqpDelete(ALSeqPlayer *seqp)
+void alSynSetPan(ALSynth *synth, ALVoice *v, u8 pan)
 {
-    /* sct 1/4/96 - If the sequence player isn't stopped, then you may end
-       up with stuck notes.  Application should check state before calling
-       this routine to be sure. */
-    assert(seqp->state == AL_STOPPED);
+    ALParam  *update;
+    ALFilter *f;
 
-    alSynRemovePlayer(seqp->drvr, &seqp->node);
+    if (v->pvoice) {
+
+        /*
+         * get new update struct from the free list
+         */
+        update = __allocParam();
+        ALFailIf(update == 0, ERR_ALSYN_NO_UPDATE);
+
+        /*
+         * set offset and pan data
+         */
+        update->delta  = synth->paramSamples + v->pvoice->offset;
+        update->type   = AL_FILTER_SET_PAN;
+        update->data.i = pan;
+        update->next   = 0;
+
+        f = v->pvoice->channelKnob;
+        (*f->setParam)(f, AL_FILTER_ADD_UPDATE, update);        
+    }
 }
+
