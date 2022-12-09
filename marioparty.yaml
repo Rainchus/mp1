@@ -189,9 +189,8 @@ segments:
       - [0x8BD60, c, "../src/lib/2.0I/audio/cents2ratio"] # -O0
       - [0x8BDC0, c, "../src/lib/2.0I/io/aigetlen"] # -O0
       - [0x8BDD0, c, "../src/lib/2.0I/io/aisetnextbuf"] # -O0
-      # - [0x8BE70, c, "../src/lib/2.0I/io/sptask"] # -O0
-      # - [0x8C0B0, c] # -O0?
-      - [0x8BE70, c] # -O0?
+      - [0x8BE70, c, "../src/lib/2.0I/io/sptask"] # -O0
+      - [0x8C0B0, c] # -O0?
       - [0xA2080, c] # -O0?
       - [0xA21C0, c] # -O0?
       - [0xA29F0, c] # -O0?
@@ -271,20 +270,16 @@ segments:
       - [0xC58D0, data, minigamelist]
       - [0xC5940, bin]
 
-  #    - [0xC58D0, data, minigamelist]
-  #    - [0xC5940, bin]
-  #    - [0xC8F30, data, 180C0]
-  #    - [0xCBC60, .rodata, 4D770]
-  #    - [0xCBC90, bin]
-
   # 2.0I N64 lib .data sections
       - [0xC7070, .data, "../src/lib/2.0I/gu/rotate"]
       - [0xC7080, .data, "../src/lib/2.0I/gu/rotateRPY"]
-      - [0xC7090, bin]
+      - [0xC7090, bin] # TODO: Figure this out 
       - [0xC70D0, .data, "../src/lib/2.0I/audio/sl"]
       - [0xC70E0, .data, "../src/lib/2.0I/io/aisetnextbuf"]
-      - [0xC70F0, bin]
+      - [0xC70F0, bin] # TODO: Figure this out 
+  
   # 2.0I N64 lib .rodata sections
+      #    - [0xCBC60, .rodata, 4D770]
       - [0xCCED0, .rodata, "../src/lib/2.0I/gu/cosf"]
       - [0xCCF30, .rodata, "../src/lib/2.0I/gu/lookat"]
       - [0xCCF50, .rodata, "../src/lib/2.0I/gu/lookatref"]
@@ -293,18 +288,11 @@ segments:
       - [0xCCFD0, .rodata, "../src/lib/2.0I/gu/sinf"]
       - [0xCD030, bin] # __osRcpImTable
       - [0xCD0B0, .rodata, "../src/lib/2.0I/audio/cseq"]
-      - [0xCD110, bin] # END
+      - [0xCD110, bin] # TODO: Figure this out 
+
     # 2.0I N64 lib .bss sections
-      # - start: 0xCD110
-      #   name: "../src/lib/2.0I/io/sptask"
-      #   type: bss
-      #   vram: 0x800EA180
-  # - name: main_bss
-  #   type: code
-  #   start: 0xCDA50
-  #   vram: 0x800EA180
-  #   subsegments:
-  #     - [0xCDA50, .bss, "../src/lib/2.0I/io/sptask"]
+      - [0xCDA50, .bss, "../src/padding/bss_padding_1d330"] # TODO: Figure this out
+      - [0xCDA50, .bss, "../src/lib/2.0I/io/sptask"]
   - type: code
     start: 0xCDA50
     vram: 0x800F65E0

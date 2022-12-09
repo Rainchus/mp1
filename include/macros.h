@@ -23,4 +23,6 @@ obj->coords.z = vec3f.z;
 
 #define ARRAY_COUNT(arr) (s32)(sizeof(arr) / sizeof(arr[0]))
 
+#define ALIGNED(x) __attribute__((aligned(x)))
+
 #endif
