@@ -27,7 +27,7 @@ s32 func_80061784(s16* arg0) {
     s16 temp_a2;
     s32 ret;
 
-    if (func_8008BA70(&D_800EE960, &sp10) != 0) {
+    if (osPfsIsPlug(&D_800EE960, &sp10) != 0) {
         sp10 = 0;
     }
     

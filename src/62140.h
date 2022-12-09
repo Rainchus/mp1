@@ -52,7 +52,7 @@ void func_800642FC(Vec3s*, void*, void*, s32); //maybe incorrect
 void func_800618A4(unk62140* arg0);
 s32 func_80061714(void);
 s32 func_80061784(s16* arg0);
-s32 func_8008BA70(s32*, u8*);
+s32 osPfsIsPlug(s32*, u8*);
 s32 func_80091230(s32*, unk62140*, s16);
 void func_80091120(unk62140*, void*);
 s32 func_80091500(unk62140*, void*, void*);

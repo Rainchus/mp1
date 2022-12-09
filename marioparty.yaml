@@ -199,7 +199,15 @@ segments:
       - [0x8C250, c, "../src/lib/2.0I/io/viswapbuf"] # -O0
       - [0x8C2A0, c, "../src/lib/2.0I/io/viblack"] # -O0
       - [0x8C300, c, "../src/lib/2.0I/io/controller"] # -O0
-      - [0x8C610, c] # -O0?
+      - [0x8C610, c, "../src/lib/2.0I/io/contsetch"] # -O0
+      - [0x8C670, c, "../src/lib/2.0I/io/pfsisplug"] # -O0
+      - [0x8C950, c, "../src/lib/2.0I/io/conteeplongwrite"] # -O0
+      - [0x8CA40, c, "../src/lib/2.0I/io/conteeplongread"] # -O0
+      - [0x8CAB0, c, "../src/lib/2.0I/io/epidma"] # -O0
+      - [0x8CB50, c, "../src/lib/2.0I/io/piacs"] # -O0
+      - [0x8CC40, hasm, "lib/2.0I/libc/bcopy"]
+      - [0x8CF60, hasm, "lib/2.0I/libc/bzero"]
+      - [0x8D000, c] # -O0?
       - [0xA2080, c] # -O0?
       - [0xA21C0, c] # -O0?
       - [0xA29F0, c] # -O0?
@@ -286,7 +294,8 @@ segments:
       - [0xC70D0, .data, "../src/lib/2.0I/audio/sl"]
       - [0xC70E0, .data, "../src/lib/2.0I/io/aisetnextbuf"]
       - [0xC70F0, .data, "../src/lib/2.0I/io/controller"]
-      - [0xC7100, bin] # TODO: Figure this out 
+      - [0xC7100, .data, "../src/lib/2.0I/io/piacs"]
+      - [0xC7110, bin] # TODO: Figure this out 
   
   # 2.0I N64 lib .rodata sections
       #    - [0xCBC60, .rodata, 4D770]
@@ -304,6 +313,10 @@ segments:
       - [0xCDA50, .bss, "../src/padding/bss_padding_1d330"] # TODO: Figure this out
       - [0xCDA50, .bss, "../src/lib/2.0I/io/sptask"]
       - [0xCDA50, .bss, "../src/lib/2.0I/io/controller"]
+      - [0xCDA50, .bss, "../src/lib/2.0I/io/piacs"]
+      #- [0xCDA50, .bss, "../src/padding/bss_padding_b2b0"] # TODO: Figure this out
+      #- [0xCDA50, .bss, "../src/lib/2.0I/io/pfsisplug"]
+
   - type: code
     start: 0xCDA50
     vram: 0x800F65E0

@@ -278,15 +278,28 @@ osViBlack = 0x8008B6A0;
 osContInit = 0x8008B700;
 __osContGetInitData = 0x8008B89C;
 __osPackRequestData = 0x8008B950;
+osContSetCh = 0x8008BA10;
+osPfsIsPlug = 0x8008BA70;
+osEepromLongWrite = 0x8008BD50;
+osEepromLongRead = 0x8008BE40;
+osEPiStartDma = 0x8008BEB0;
+__osPiCreateAccessQueue = 0x8008BF50;
+__osPiGetAccess = 0x8008BFA4;
+__osPiRelAccess = 0x8008C010;
 
 alSynNew = 0x8008F1F0;
-osSetTimer = 0x80093920;
-__osSiRawStartDma = 0x80091F10;
-__osSiCreateAccessQueue = 0x80095250;
-
 __allocParam = 0x8008F66C;
 _freePVoice = 0x8008F704;
 _timeToSamples = 0x8008F78C;
+osEepromRead = 0x8008FB50;
+osEepromWrite = 0x8008FD70;
+
+osSetTimer = 0x80093920;
+__osSiRawStartDma = 0x80091F10;
+__osSiCreateAccessQueue = 0x80095250;
+__osSiGetAccess = 0x800952A4;
+ __osSiRelAccess = 0x80095310;
+osPiGetCmdQueue = 0x80095340;
 
 __osAiDeviceBusy = 0x800950A0;
 __osSpDeviceBusy = 0x800950C0;
@@ -294,13 +307,18 @@ __osSpSetStatus = 0x800950F0;
 __osSpGetStatus = 0x800950E0;
 __osSpSetPc = 0x80095100;
 __osSpRawStartDma = 0x80091FC0;
+__osPiDevMgr = 0x800C6520;
 __osViCurr = 0x800C77B0;
 __osViNext = 0x800C77B4;
 __osMaxControllers = 0x800F09F8;
 __osContPifRam = 0x800ED3F0;
 __osContLastCmd = 0x800F3742;
+__osEepromTimer = 0x800F4000;
 __osEepromTimerQ = 0x800F64C8;
 __osEepromTimerMsg = 0x800F3754;
+__osPfsPifRam = 0x800F5470;
+__osPiAccessQueue = 0x800F2CC0;
+__osPiAccessQueueEnabled = 0x800C6500;
 
 sinf = 0x80088060;
 cosf = 0x800855C0;
