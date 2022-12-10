@@ -23,6 +23,9 @@
 #include <ultraerror.h>
 #include <os_internal.h>
 
+
+extern u8 D_800ECB2C; // TODO: Set up static global;
+
 void alSynStartVoiceParams(ALSynth *s, ALVoice *v, ALWaveTable *w,
                            f32 pitch, s16 vol, ALPan pan, u8 fxmix,
                            ALMicroTime t)
@@ -37,8 +40,8 @@ void alSynStartVoiceParams(ALSynth *s, ALVoice *v, ALWaveTable *w,
         update = (ALStartParamAlt *)__allocParam();
         ALFailIf(update == 0, ERR_ALSYN_NO_UPDATE);
 
-	if (fxmix > 127)
-            fxmix = 127;
+	    if ((s8) fxmix < 0)
+            fxmix = -fxmix;
         
         /*
          * set offset and fxmix data
@@ -48,7 +51,12 @@ void alSynStartVoiceParams(ALSynth *s, ALVoice *v, ALWaveTable *w,
         update->type   = AL_FILTER_START_VOICE_ALT;
 
         update->unity  = v->unityPitch;
-        update->pan    = pan;
+        /* MONO PATCH */
+        if (D_800ECB2C & 1 & 0xFF) {
+            update->pan = 0x40;
+        } else {
+            update->pan = pan;
+        }
         update->volume = vol;
         update->fxMix  = fxmix;
         update->pitch  = pitch;

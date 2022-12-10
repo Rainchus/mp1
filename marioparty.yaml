@@ -99,8 +99,8 @@ segments:
       - [0x6C470, c]
       - [0x6D4E0, c]
       - [0x72D90, c]
-      - [0x7C9F0, c]
-      # - [0x7CB80, c, "../src/lib/2.0I/audio/synsetpan"]
+      - [0x7C9F0, c, "../src/lib/2.0I/audio/synstartvoiceparam"]
+      - [0x7CB80, c, "../src/lib/2.0I/audio/synsetpan"]
       - [0x7CC80, c]
       - [0x7CD60, c]
       - [0x80770, bin, "libleo"]
@@ -144,74 +144,74 @@ segments:
       - [0x89B30, c, "../src/lib/2.0I/os/timerintr"]
       - [0x89E30, c, "../src/lib/2.0I/os/virtualtophysical"]
       - [0x89E90, c] # Empty?
-      - [0x89EA0, c, "../src/lib/2.0I/audio/bnkf"] # -O0
-      - [0x8A170, c, "../src/lib/2.0I/audio/event"] # -O0
-      - [0x8A4C0, c, "../src/lib/2.0I/audio/sl"] # -O0
-      - [0x8A570, c, "../src/lib/2.0I/audio/heapinit"] # -O0
-      - [0x8A5B0, c, "../src/lib/2.0I/audio/heapalloc"] # -O0
-      - [0x8A600, c, "../src/lib/2.0I/audio/copy"] # -O0
-      - [0x8A640, c, "../src/lib/2.0I/audio/cseq"] # -O0
-      - [0x8B100, c, "../src/lib/2.0I/audio/seqpdelete"] # -O0
-      - [0x8B120, c, "../src/lib/2.0I/audio/seqpgetfxmix"] # -O0
-      - [0x8B140, c, "../src/lib/2.0I/audio/seqpgetpan"] # -O0
-      - [0x8B160, c, "../src/lib/2.0I/audio/seqpgetchlvol"] # -O0
-      - [0x8B180, c, "../src/lib/2.0I/audio/seqpgetprogram"] # -O0
-      - [0x8B200, c, "../src/lib/2.0I/audio/cspgettempo"] # -O0
-      - [0x8B230, c, "../src/lib/2.0I/audio/seqpgetstate"] # -O0
-      - [0x8B240, c, "../src/lib/2.0I/audio/seqpplay"] # -O0
-      - [0x8B270, c, "../src/lib/2.0I/audio/seqpsetbank"] # -O0
-      - [0x8B2A0, c, "../src/lib/2.0I/audio/seqpsetfxmix"] # -O0
-      - [0x8B2F0, c, "../src/lib/2.0I/audio/seqpsetseq"] # -O0
-      - [0x8B320, c, "../src/lib/2.0I/audio/seqpsettempo"] # -O0
-      - [0x8B370, c, "../src/lib/2.0I/audio/seqpsetvol"] # -O0
-      - [0x8B3A0, c, "../src/lib/2.0I/audio/seqpstop"] # -O0
-      - [0x8B3D0, c, "../src/lib/2.0I/audio/sndpdelete"] # -O0
-      - [0x8B400, c, "../src/lib/2.0I/audio/sndpallocate"] # -O0
-      - [0x8B4C0, c, "../src/lib/2.0I/audio/sndpdeallocate"] # -O0
-      - [0x8B510, c, "../src/lib/2.0I/audio/sndpsetsound"] # -O0
-      - [0x8B520, c, "../src/lib/2.0I/audio/sndpplay"] # -O0
-      - [0x8B580, c, "../src/lib/2.0I/audio/sndpgetsound"] # -O0
-      - [0x8B590, c, "../src/lib/2.0I/audio/sndpstop"] # -O0
-      - [0x8B5E0, c, "../src/lib/2.0I/audio/sndpgetstate"] # -O0
-      - [0x8B600, c, "../src/lib/2.0I/audio/sndpsetpitch"] # -O0
-      - [0x8B650, c, "../src/lib/2.0I/audio/sndpsetpriority"] # -O0
-      - [0x8B680, c, "../src/lib/2.0I/audio/sndpsetvol"] # -O0
-      - [0x8B6D0, c, "../src/lib/2.0I/audio/sndpsetpan"] # -O0
-      - [0x8B720, c, "../src/lib/2.0I/audio/sndpsetfxmix"] # -O0
-      - [0x8B770, c, "../src/lib/2.0I/audio/syndelete"] # -O0
-      - [0x8B780, c, "../src/lib/2.0I/audio/synaddplayer"] # -O0
-      - [0x8B7D0, c, "../src/lib/2.0I/audio/synremoveplayer"] # -O0
-      - [0x8B870, c, "../src/lib/2.0I/audio/synfreevoice"] # -O0
-      - [0x8B910, c, "../src/lib/2.0I/audio/synallocvoice"] # -O0
-      - [0x8BAF0, c, "../src/lib/2.0I/audio/synstopvoice"] # -O0
-      - [0x8BB70, c, "../src/lib/2.0I/audio/synstartvoice"] # -O0
-      - [0x8BC10, c, "../src/lib/2.0I/audio/synsetpitch"] # -O0
-      - [0x8BCA0, c, "../src/lib/2.0I/audio/synsetvol"] # -O0
-      - [0x8BD60, c, "../src/lib/2.0I/audio/cents2ratio"] # -O0
-      - [0x8BDC0, c, "../src/lib/2.0I/io/aigetlen"] # -O0
-      - [0x8BDD0, c, "../src/lib/2.0I/io/aisetnextbuf"] # -O0
-      - [0x8BE70, c, "../src/lib/2.0I/io/sptask"] # -O0
-      - [0x8C0B0, c, "../src/lib/2.0I/io/sptaskyield"] # -O0
-      - [0x8C0D0, c, "../src/lib/2.0I/io/sptaskyielded"] # -O0
-      - [0x8C120, c, "../src/lib/2.0I/io/vigetcurrframebuf"] # -O0
-      - [0x8C160, c, "../src/lib/2.0I/io/vigetnextframebuf"] # -O0
-      - [0x8C1A0, c, "../src/lib/2.0I/io/visetevent"] # -O0
-      - [0x8C200, c, "../src/lib/2.0I/io/visetmode"] # -O0
-      - [0x8C250, c, "../src/lib/2.0I/io/viswapbuf"] # -O0
-      - [0x8C2A0, c, "../src/lib/2.0I/io/viblack"] # -O0
-      - [0x8C300, c, "../src/lib/2.0I/io/controller"] # -O0
-      - [0x8C610, c, "../src/lib/2.0I/io/contsetch"] # -O0
-      - [0x8C670, c, "../src/lib/2.0I/io/pfsisplug"] # -O0
-      - [0x8C950, c, "../src/lib/2.0I/io/conteeplongwrite"] # -O0
-      - [0x8CA40, c, "../src/lib/2.0I/io/conteeplongread"] # -O0
-      - [0x8CAB0, c, "../src/lib/2.0I/io/epidma"] # -O0
-      - [0x8CB50, c, "../src/lib/2.0I/io/piacs"] # -O0
+      - [0x89EA0, c, "../src/lib/2.0I/audio/bnkf"]
+      - [0x8A170, c, "../src/lib/2.0I/audio/event"]
+      - [0x8A4C0, c, "../src/lib/2.0I/audio/sl"]
+      - [0x8A570, c, "../src/lib/2.0I/audio/heapinit"]
+      - [0x8A5B0, c, "../src/lib/2.0I/audio/heapalloc"]
+      - [0x8A600, c, "../src/lib/2.0I/audio/copy"]
+      - [0x8A640, c, "../src/lib/2.0I/audio/cseq"]
+      - [0x8B100, c, "../src/lib/2.0I/audio/seqpdelete"]
+      - [0x8B120, c, "../src/lib/2.0I/audio/seqpgetfxmix"]
+      - [0x8B140, c, "../src/lib/2.0I/audio/seqpgetpan"]
+      - [0x8B160, c, "../src/lib/2.0I/audio/seqpgetchlvol"]
+      - [0x8B180, c, "../src/lib/2.0I/audio/seqpgetprogram"]
+      - [0x8B200, c, "../src/lib/2.0I/audio/cspgettempo"]
+      - [0x8B230, c, "../src/lib/2.0I/audio/seqpgetstate"]
+      - [0x8B240, c, "../src/lib/2.0I/audio/seqpplay"]
+      - [0x8B270, c, "../src/lib/2.0I/audio/seqpsetbank"]
+      - [0x8B2A0, c, "../src/lib/2.0I/audio/seqpsetfxmix"]
+      - [0x8B2F0, c, "../src/lib/2.0I/audio/seqpsetseq"]
+      - [0x8B320, c, "../src/lib/2.0I/audio/seqpsettempo"]
+      - [0x8B370, c, "../src/lib/2.0I/audio/seqpsetvol"]
+      - [0x8B3A0, c, "../src/lib/2.0I/audio/seqpstop"]
+      - [0x8B3D0, c, "../src/lib/2.0I/audio/sndpdelete"]
+      - [0x8B400, c, "../src/lib/2.0I/audio/sndpallocate"]
+      - [0x8B4C0, c, "../src/lib/2.0I/audio/sndpdeallocate"]
+      - [0x8B510, c, "../src/lib/2.0I/audio/sndpsetsound"]
+      - [0x8B520, c, "../src/lib/2.0I/audio/sndpplay"]
+      - [0x8B580, c, "../src/lib/2.0I/audio/sndpgetsound"]
+      - [0x8B590, c, "../src/lib/2.0I/audio/sndpstop"]
+      - [0x8B5E0, c, "../src/lib/2.0I/audio/sndpgetstate"]
+      - [0x8B600, c, "../src/lib/2.0I/audio/sndpsetpitch"]
+      - [0x8B650, c, "../src/lib/2.0I/audio/sndpsetpriority"]
+      - [0x8B680, c, "../src/lib/2.0I/audio/sndpsetvol"]
+      - [0x8B6D0, c, "../src/lib/2.0I/audio/sndpsetpan"]
+      - [0x8B720, c, "../src/lib/2.0I/audio/sndpsetfxmix"]
+      - [0x8B770, c, "../src/lib/2.0I/audio/syndelete"]
+      - [0x8B780, c, "../src/lib/2.0I/audio/synaddplayer"]
+      - [0x8B7D0, c, "../src/lib/2.0I/audio/synremoveplayer"]
+      - [0x8B870, c, "../src/lib/2.0I/audio/synfreevoice"]
+      - [0x8B910, c, "../src/lib/2.0I/audio/synallocvoice"]
+      - [0x8BAF0, c, "../src/lib/2.0I/audio/synstopvoice"]
+      - [0x8BB70, c, "../src/lib/2.0I/audio/synstartvoice"]
+      - [0x8BC10, c, "../src/lib/2.0I/audio/synsetpitch"]
+      - [0x8BCA0, c, "../src/lib/2.0I/audio/synsetvol"]
+      - [0x8BD60, c, "../src/lib/2.0I/audio/cents2ratio"]
+      - [0x8BDC0, c, "../src/lib/2.0I/io/aigetlen"]
+      - [0x8BDD0, c, "../src/lib/2.0I/io/aisetnextbuf"]
+      - [0x8BE70, c, "../src/lib/2.0I/io/sptask"]
+      - [0x8C0B0, c, "../src/lib/2.0I/io/sptaskyield"]
+      - [0x8C0D0, c, "../src/lib/2.0I/io/sptaskyielded"]
+      - [0x8C120, c, "../src/lib/2.0I/io/vigetcurrframebuf"]
+      - [0x8C160, c, "../src/lib/2.0I/io/vigetnextframebuf"]
+      - [0x8C1A0, c, "../src/lib/2.0I/io/visetevent"]
+      - [0x8C200, c, "../src/lib/2.0I/io/visetmode"]
+      - [0x8C250, c, "../src/lib/2.0I/io/viswapbuf"]
+      - [0x8C2A0, c, "../src/lib/2.0I/io/viblack"]
+      - [0x8C300, c, "../src/lib/2.0I/io/controller"]
+      - [0x8C610, c, "../src/lib/2.0I/io/contsetch"]
+      - [0x8C670, c, "../src/lib/2.0I/io/pfsisplug"]
+      - [0x8C950, c, "../src/lib/2.0I/io/conteeplongwrite"]
+      - [0x8CA40, c, "../src/lib/2.0I/io/conteeplongread"]
+      - [0x8CAB0, c, "../src/lib/2.0I/io/epidma"]
+      - [0x8CB50, c, "../src/lib/2.0I/io/piacs"]
       - [0x8CC40, hasm, "lib/2.0I/libc/bcopy"]
       - [0x8CF60, hasm, "lib/2.0I/libc/bzero"]
-      - [0x8D000, c, "../src/lib/2.0I/libc/string"] # -O0
-      - [0x8D090, c, "../src/lib/2.0I/libc/sprintf"] # -O0
-      - [0x8D120, c, "../src/lib/2.0I/libc/syncprintf"] # -O0
-      - [0x8D150, c, "../src/lib/2.0I/audio/csplayer"] # -O0
+      - [0x8D000, c, "../src/lib/2.0I/libc/string"]
+      - [0x8D090, c, "../src/lib/2.0I/libc/sprintf"]
+      - [0x8D120, c, "../src/lib/2.0I/libc/syncprintf"]
+      - [0x8D150, c, "../src/lib/2.0I/audio/csplayer"]
       - [0x8E3B0, c] # -O0?
       - [0xA2080, c] # -O0?
       - [0xA21C0, c] # -O0?
