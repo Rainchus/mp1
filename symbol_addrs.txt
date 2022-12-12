@@ -119,6 +119,8 @@ DestroyObject = 0x8003E694;
 _Printf = 0x80095470;
 sprintf = 0x8008C490;
 
+HuRomDmaCodeRead = 0x80062088;
+
 osInitialize = 0x80093240;
 osDestroyThread = 0x80088720;
 osCreateThread = 0x80088650;
