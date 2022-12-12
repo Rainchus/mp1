@@ -44,7 +44,7 @@ void func_80014220() {
     }
 }
 
-INCLUDE_ASM(s32, "14E20", func_8001429C);
+INCLUDE_ASM(s32, "../src/engine/data", func_8001429C);
 
 // 16 byte portion of a directory or file table, which is initially read from ROM.
 typedef struct mainfsTableHeader {
@@ -203,7 +203,7 @@ void func_80014750(void *file) {
     }
 }
 
-INCLUDE_ASM(s32, "14E20", func_80014770);
+INCLUDE_ASM(s32, "../src/engine/data", func_80014770);
 // void func_80014770(s32 arg0, s32 arg1) {
 //     mainfsTableHeader* test;
 //     s32* sp10;
@@ -252,8 +252,8 @@ void func_800148BC(void *param_1) {
     FreePerm(param_1);
 }
 
-INCLUDE_ASM(s32, "14E20", func_800148EC);
+INCLUDE_ASM(s32, "../src/engine/data", func_800148EC);
 
-INCLUDE_ASM(s32, "14E20", func_80014998);
+INCLUDE_ASM(s32, "../src/engine/data", func_80014998);
 
-INCLUDE_ASM(s32, "14E20", func_80014A14);
+INCLUDE_ASM(s32, "../src/engine/data", func_80014A14);

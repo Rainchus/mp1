@@ -31,7 +31,7 @@ void func_80017150(DecodeStruct* decode) { //DecodeNone
     }
 }
 
-INCLUDE_ASM(s32, "17D50", func_800171EC);
+INCLUDE_ASM(s32, "../src/engine/decode", func_800171EC);
 
 void DecodeFile(void* src, void* dest, s32 len, s32 decode_type) {
     DecodeStruct decode_struct;
