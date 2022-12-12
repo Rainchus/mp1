@@ -92,14 +92,14 @@ void func_800F66C4_296C54(void) { //fix me: remove gotos
                 temp_s0_4 = D_800F7590;
                 temp_s0_4->coords.y = D_800F75B8_297B48.y + 200.0f + (f32) (var_s1_3 / 2);
                 temp_f20 = var_s1_3 * 5 * 0.017453292519943295;
-                temp_s0_4->coords.x = (func_80088060(temp_f20) * var_f22) + D_800F75B8_297B48.x;
+                temp_s0_4->coords.x = (sinf(temp_f20) * var_f22) + D_800F75B8_297B48.x;
                 temp_s0_4 = D_800F7590;
-                temp_s0_4->coords.z = (func_800855C0(temp_f20) * var_f22) + D_800F75B8_297B48.z;
+                temp_s0_4->coords.z = (cosf(temp_f20) * var_f22) + D_800F75B8_297B48.z;
                 temp_s0_4 = D_800F7590;
                 temp_f20_2 = var_f24 * 0.017453292519943295;
-                temp_s0_4->unk_18.x = func_80088060(temp_f20_2);
+                temp_s0_4->unk_18.x = sinf(temp_f20_2);
                 temp_s0_4 = D_800F7590;
-                temp_s0_4->unk_18.z = func_800855C0(temp_f20_2);
+                temp_s0_4->unk_18.z = cosf(temp_f20_2);
                 SleepVProcess();
                 if (var_s1_3 == 0x4B) {
                     func_8003E81C(D_800F7658, 0, 0);
@@ -260,9 +260,9 @@ void func_800F7120_2976B0(void) {
     D_800F7654->xScale = D_800F7654->yScale = D_800F7654->zScale = 1.5f;
     func_80025F60(*D_800F7654->unk_3C->unk_40, 0);
     temp_s0 = D_800F7654;
-    temp_s0->unk_18.x = func_80088060(0.10471976f);
+    temp_s0->unk_18.x = sinf(0.10471976f);
     temp_s0_2 = D_800F7654;
-    temp_s0_2->unk_18.z = func_800855C0(0.10471976f);
+    temp_s0_2->unk_18.z = cosf(0.10471976f);
     D_800F7658 = CreateObject(6U, &D_800F75C4_297B54);
     func_80025B34(*D_800F7658->unk_3C->unk_40);
     D_800F7658->coords.x = D_800F75A0_297B30.x;

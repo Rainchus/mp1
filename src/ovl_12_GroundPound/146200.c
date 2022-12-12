@@ -366,7 +366,7 @@ s32 func_800F9F18_149B38(u32 seed) {
     
     if (seed == 0) {
         seed = GetRandomByte();
-        seed = (seed ^ func_80093780()) ^ 0xD826BC89;
+        seed = (seed ^ osGetCount()) ^ 0xD826BC89;
     }
     
     high = seed / 127773;

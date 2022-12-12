@@ -28,7 +28,7 @@ void func_8001D904(s16 arg0, s32 arg1) {
     D_800C3110[arg0].unkF4 = arg1;
 }
 
-void guLookAtF(f32 mf[4][4], f32 xEye, f32 yEye, f32 zEye, f32 xAt, f32 yAt, f32 zAt, f32 xUp, f32 yUp, f32 zUp);
+void HuGuLookAtF(f32 mf[4][4], f32 xEye, f32 yEye, f32 zEye, f32 xAt, f32 yAt, f32 zAt, f32 xUp, f32 yUp, f32 zUp);
 
 void Convert3DTo2D(s16 index, Vec3f* arg1, Vec2f* arg2) {
     Matrix4f sp28;
@@ -41,7 +41,7 @@ void Convert3DTo2D(s16 index, Vec3f* arg1, Vec2f* arg2) {
     unk_Struct00 *temp_s0;
     
     temp_s0 = &D_800C3110[index];
-    guLookAtF(sp28, temp_s0->pos.x, temp_s0->pos.y, temp_s0->pos.z, temp_s0->unkC, temp_s0->unk10, temp_s0->unk14, temp_s0->unk18, temp_s0->unk1C, temp_s0->unk20);
+    HuGuLookAtF(sp28, temp_s0->pos.x, temp_s0->pos.y, temp_s0->pos.z, temp_s0->unkC, temp_s0->unk10, temp_s0->unk14, temp_s0->unk18, temp_s0->unk1C, temp_s0->unk20);
     temp_f30 = arg1->x;
     temp_f28 = arg1->y;
     temp_f2 = arg1->z;

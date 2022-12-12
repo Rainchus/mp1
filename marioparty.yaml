@@ -42,10 +42,10 @@ segments:
       - [0x99E0, c]
       - [0xB980, c]
       - [0x138F0, c]
-      - [0x14370, c]
-      - [0x14E20, c]
+      - [0x14370, c, "../src/engine/pad"]
+      - [0x14E20, c, "../src/engine/data"] # and input
       - [0x156F0, c]
-      - [0x17D50, c]
+      - [0x17D50, c, "../src/engine/decode"]
       - [0x180C0, c]
       - [0x19470, c]
       - [0x19E70, c]
@@ -56,7 +56,7 @@ segments:
       - [0x1EA70, c]
       - [0x22F90, c]
       - [0x23C40, c]
-      - [0x241F0, c]
+      - [0x241F0, c, "../src/engine/mallocblock"]
       - [0x24740, c]
       - [0x29C90, c]
       - [0x2C0C0, c]
@@ -64,7 +64,7 @@ segments:
       - [0x388E0, c]
       - [0x3AC60, c]
       - [0x3BF30, c]
-      - [0x3C280, c]
+      - [0x3C280, c, "../src/engine/memory"] # mallocperm, malloctemp, ...?
       - [0x3CED0, c]
       - [0x3DEB0, c]
       - [0x3E560, c]
@@ -91,32 +91,128 @@ segments:
       - [0x5CDB0, c]
       - [0x61B70, c]
       - [0x62140, c]
-      - [0x643C0, c]
-      - [0x64B40, c]
+      - [0x643C0, c, "../src/engine/nnsched"]
+      - [0x64B40, c, "../src/engine/siman"]
       - [0x64FD0, c]
       - [0x65770, c]
       - [0x69010, c]
       - [0x6C470, c]
       - [0x6D4E0, c]
       - [0x72D90, c]
-      - [0x7C9F0, c]
-      - [0x7CC80, c]
+      - [0x7C9F0, c, "../src/lib/2.0I/audio/synstartvoiceparam"] # -O0
+      - [0x7CB80, c, "../src/lib/2.0I/audio/synsetpan"] # -O0
+      - [0x7CC80, hasm, "lib/sys/setjmp"] # and longjmp
       - [0x7CD60, c]
-      - [0x80770, c]
-      - [0x80BE0, c]
-      - [0x821F0, c]
-      - [0x82440, c]
-      - [0x82590, c]
-      - [0x82680, c]
-      - [0x828C0, c]
-      - [0x82AF0, c]
-      - [0x83260, c]
-      - [0x833C0, c]
-      - [0x83490, bin]
-      #- [0x83490, c] #has some code, weird to split?
-      - [0x83960, c]
-      - [0x89E90, c] #
-      - [0x89EA0, c] # -O0?
+      - [0x80770, bin, "libleo"]
+      - [0x861B0, hasm, "lib/2.0I/gu/sqrtf"]
+      - [0x861C0, c, "../src/lib/2.0I/gu/cosf"]
+      - [0x86310, c, "../src/lib/2.0I/gu/lookat"]
+      - [0x86A20, c, "../src/lib/2.0I/gu/lookatref"]
+      - [0x87010, c, "../src/lib/2.0I/gu/lookathil"]
+      - [0x87A70, c, "../src/lib/2.0I/gu/mtxutil"]
+      - [0x87CF0, c, "../src/lib/2.0I/gu/mtxcatf"]
+      - [0x87E80, c, "../src/lib/2.0I/gu/mtxcatl"]
+      - [0x87F80, c, "../src/lib/2.0I/gu/ortho"]
+      - [0x88200, c, "../src/lib/2.0I/gu/perspective"]
+      - [0x88580, c, "../src/lib/2.0I/gu/rotate"]
+      - [0x88860, c, "../src/lib/2.0I/gu/rotateRPY"]
+      - [0x88B80, c, "../src/lib/2.0I/gu/scale"]
+      - [0x88C60, c, "../src/lib/2.0I/gu/sinf"]
+      - [0x88E00, c, "../src/lib/2.0I/gu/translate"]
+      - [0x88ED0, c, "../src/lib/2.0I/gu/random"]
+      - [0x88F00, hasm, "lib/2.0I/os/invaldcache"]
+      - [0x88FB0, hasm, "lib/2.0I/os/invalicache"]
+      - [0x89090, hasm, "lib/2.0I/os/setintmask"]
+      - [0x89130, hasm, "lib/2.0I/os/setcause"]
+      - [0x89140, hasm, "lib/2.0I/os/setcompare"]
+      - [0x89150, hasm, "lib/2.0I/os/setcount"]
+      - [0x89160, hasm, "lib/2.0I/os/setsr"]
+      - [0x89170, hasm, "lib/2.0I/os/osWritebackDCache"]
+      - [0x891F0, hasm, "lib/2.0I/os/writebackdcacheall"]
+      - [0x89220, c, "../src/lib/2.0I/os/createmesgqueue"]
+      - [0x89250, c, "../src/lib/2.0I/os/createthread"]
+      - [0x89320, c, "../src/lib/2.0I/os/destroythread"]
+      - [0x893F0, c, "../src/lib/2.0I/os/getthreadpri"]
+      - [0x89410, c, "../src/lib/2.0I/os/gettime"]
+      - [0x894A0, c, "../src/lib/2.0I/os/jammesg"]
+      - [0x895E0, c, "../src/lib/2.0I/os/recvmesg"]
+      - [0x89710, c, "../src/lib/2.0I/os/sendmesg"]
+      - [0x89840, c, "../src/lib/2.0I/os/setthreadpri"]
+      - [0x89910, c, "../src/lib/2.0I/os/startthread"]
+      - [0x89A30, c, "../src/lib/2.0I/os/stopthread"]
+      - [0x89AF0, c, "../src/lib/2.0I/os/thread"]
+      - [0x89B30, c, "../src/lib/2.0I/os/timerintr"]
+      - [0x89E30, c, "../src/lib/2.0I/os/virtualtophysical"]
+      - [0x89E90, c] # Empty?
+      - [0x89EA0, c, "../src/lib/2.0I/audio/bnkf"]
+      - [0x8A170, c, "../src/lib/2.0I/audio/event"]
+      - [0x8A4C0, c, "../src/lib/2.0I/audio/sl"]
+      - [0x8A570, c, "../src/lib/2.0I/audio/heapinit"]
+      - [0x8A5B0, c, "../src/lib/2.0I/audio/heapalloc"]
+      - [0x8A600, c, "../src/lib/2.0I/audio/copy"]
+      - [0x8A640, c, "../src/lib/2.0I/audio/cseq"]
+      - [0x8B100, c, "../src/lib/2.0I/audio/seqpdelete"]
+      - [0x8B120, c, "../src/lib/2.0I/audio/seqpgetfxmix"]
+      - [0x8B140, c, "../src/lib/2.0I/audio/seqpgetpan"]
+      - [0x8B160, c, "../src/lib/2.0I/audio/seqpgetchlvol"]
+      - [0x8B180, c, "../src/lib/2.0I/audio/seqpgetprogram"]
+      - [0x8B200, c, "../src/lib/2.0I/audio/cspgettempo"]
+      - [0x8B230, c, "../src/lib/2.0I/audio/seqpgetstate"]
+      - [0x8B240, c, "../src/lib/2.0I/audio/seqpplay"]
+      - [0x8B270, c, "../src/lib/2.0I/audio/seqpsetbank"]
+      - [0x8B2A0, c, "../src/lib/2.0I/audio/seqpsetfxmix"]
+      - [0x8B2F0, c, "../src/lib/2.0I/audio/seqpsetseq"]
+      - [0x8B320, c, "../src/lib/2.0I/audio/seqpsettempo"]
+      - [0x8B370, c, "../src/lib/2.0I/audio/seqpsetvol"]
+      - [0x8B3A0, c, "../src/lib/2.0I/audio/seqpstop"]
+      - [0x8B3D0, c, "../src/lib/2.0I/audio/sndpdelete"]
+      - [0x8B400, c, "../src/lib/2.0I/audio/sndpallocate"]
+      - [0x8B4C0, c, "../src/lib/2.0I/audio/sndpdeallocate"]
+      - [0x8B510, c, "../src/lib/2.0I/audio/sndpsetsound"]
+      - [0x8B520, c, "../src/lib/2.0I/audio/sndpplay"]
+      - [0x8B580, c, "../src/lib/2.0I/audio/sndpgetsound"]
+      - [0x8B590, c, "../src/lib/2.0I/audio/sndpstop"]
+      - [0x8B5E0, c, "../src/lib/2.0I/audio/sndpgetstate"]
+      - [0x8B600, c, "../src/lib/2.0I/audio/sndpsetpitch"]
+      - [0x8B650, c, "../src/lib/2.0I/audio/sndpsetpriority"]
+      - [0x8B680, c, "../src/lib/2.0I/audio/sndpsetvol"]
+      - [0x8B6D0, c, "../src/lib/2.0I/audio/sndpsetpan"]
+      - [0x8B720, c, "../src/lib/2.0I/audio/sndpsetfxmix"]
+      - [0x8B770, c, "../src/lib/2.0I/audio/syndelete"]
+      - [0x8B780, c, "../src/lib/2.0I/audio/synaddplayer"]
+      - [0x8B7D0, c, "../src/lib/2.0I/audio/synremoveplayer"]
+      - [0x8B870, c, "../src/lib/2.0I/audio/synfreevoice"]
+      - [0x8B910, c, "../src/lib/2.0I/audio/synallocvoice"]
+      - [0x8BAF0, c, "../src/lib/2.0I/audio/synstopvoice"]
+      - [0x8BB70, c, "../src/lib/2.0I/audio/synstartvoice"]
+      - [0x8BC10, c, "../src/lib/2.0I/audio/synsetpitch"]
+      - [0x8BCA0, c, "../src/lib/2.0I/audio/synsetvol"]
+      - [0x8BD60, c, "../src/lib/2.0I/audio/cents2ratio"]
+      - [0x8BDC0, c, "../src/lib/2.0I/io/aigetlen"]
+      - [0x8BDD0, c, "../src/lib/2.0I/io/aisetnextbuf"]
+      - [0x8BE70, c, "../src/lib/2.0I/io/sptask"]
+      - [0x8C0B0, c, "../src/lib/2.0I/io/sptaskyield"]
+      - [0x8C0D0, c, "../src/lib/2.0I/io/sptaskyielded"]
+      - [0x8C120, c, "../src/lib/2.0I/io/vigetcurrframebuf"]
+      - [0x8C160, c, "../src/lib/2.0I/io/vigetnextframebuf"]
+      - [0x8C1A0, c, "../src/lib/2.0I/io/visetevent"]
+      - [0x8C200, c, "../src/lib/2.0I/io/visetmode"]
+      - [0x8C250, c, "../src/lib/2.0I/io/viswapbuf"]
+      - [0x8C2A0, c, "../src/lib/2.0I/io/viblack"]
+      - [0x8C300, c, "../src/lib/2.0I/io/controller"]
+      - [0x8C610, c, "../src/lib/2.0I/io/contsetch"]
+      - [0x8C670, c, "../src/lib/2.0I/io/pfsisplug"]
+      - [0x8C950, c, "../src/lib/2.0I/io/conteeplongwrite"]
+      - [0x8CA40, c, "../src/lib/2.0I/io/conteeplongread"]
+      - [0x8CAB0, c, "../src/lib/2.0I/io/epidma"]
+      - [0x8CB50, c, "../src/lib/2.0I/io/piacs"]
+      - [0x8CC40, hasm, "lib/2.0I/libc/bcopy"]
+      - [0x8CF60, hasm, "lib/2.0I/libc/bzero"]
+      - [0x8D000, c, "../src/lib/2.0I/libc/string"]
+      - [0x8D090, c, "../src/lib/2.0I/libc/sprintf"]
+      - [0x8D120, c, "../src/lib/2.0I/libc/syncprintf"]
+      - [0x8D150, c, "../src/lib/2.0I/audio/csplayer"]
+      - [0x8E3B0, c] # -O0?
       - [0xA2080, c] # -O0?
       - [0xA21C0, c] # -O0?
       - [0xA29F0, c] # -O0?
@@ -190,28 +286,43 @@ segments:
       - [0xB2310, c] # -O0
       - [0xB2340, c] # sqrtd
       - [0xB2350, c] # sqrtf
-  - type: bin
-    start: 0xB2360
-  - type: code
-    start: 0xC25A0
-    vram: 0x800C19A0
-    subsegments:
+      - [0xB2360, bin]
       - [0xC25A0, data, 180C0]
-  - type: bin
-    start: 0xC3DE0
-  # - type: code
-  #   start: 0xC8F30
-  #   vram: 0x800C8330
-  #   subsegments:
-  #     - [0xC8F30, data, 180C0]
+      - [0xC3DE0, bin]
+      - [0xC58D0, data, minigamelist]
+      - [0xC5940, bin]
 
-  # - type: code
-  #   start: 0xCBC60
-  #   vram: 0x800CB060
-  #   subsegments:
-  #     - [0xCBC60, .rodata, 4D770]
-  - type: bin
-    start: 0xCBC90
+  # 2.0I N64 lib .data sections
+      - [0xC7070, .data, "../src/lib/2.0I/gu/rotate"]
+      - [0xC7080, .data, "../src/lib/2.0I/gu/rotateRPY"]
+      - [0xC7090, bin] # TODO: Figure this out 
+      - [0xC70D0, .data, "../src/lib/2.0I/audio/sl"]
+      - [0xC70E0, .data, "../src/lib/2.0I/io/aisetnextbuf"]
+      - [0xC70F0, .data, "../src/lib/2.0I/io/controller"]
+      - [0xC7100, .data, "../src/lib/2.0I/io/piacs"]
+      - [0xC7110, bin] # TODO: Figure this out 
+  
+  # 2.0I N64 lib .rodata sections
+      #    - [0xCBC60, .rodata, 4D770]
+      - [0xCCED0, .rodata, "../src/lib/2.0I/gu/cosf"]
+      - [0xCCF30, .rodata, "../src/lib/2.0I/gu/lookat"]
+      - [0xCCF50, .rodata, "../src/lib/2.0I/gu/lookatref"]
+      - [0xCCF60, .rodata, "../src/lib/2.0I/gu/lookathil"]
+      - [0xCCF90, .rodata, "../src/lib/2.0I/gu/perspective"]
+      - [0xCCFD0, .rodata, "../src/lib/2.0I/gu/sinf"]
+      - [0xCD030, bin] # __osRcpImTable
+      - [0xCD0B0, .rodata, "../src/lib/2.0I/audio/cseq"]
+      - [0xCD110, .rodata, "../src/lib/2.0I/audio/csplayer"]
+      - [0xCD1C0, bin] # TODO: Figure this out 
+
+    # 2.0I N64 lib .bss sections
+      - [0xCDA50, .bss, "../src/padding/bss_padding_1d330"] # TODO: Figure this out
+      - [0xCDA50, .bss, "../src/lib/2.0I/io/sptask"]
+      - [0xCDA50, .bss, "../src/lib/2.0I/io/controller"]
+      - [0xCDA50, .bss, "../src/lib/2.0I/io/piacs"]
+      #- [0xCDA50, .bss, "../src/padding/bss_padding_b2b0"] # TODO: Figure this out
+      #- [0xCDA50, .bss, "../src/lib/2.0I/io/pfsisplug"]
+
   - type: code
     start: 0xCDA50
     vram: 0x800F65E0

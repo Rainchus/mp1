@@ -25,7 +25,7 @@ void func_800F6814_146434(void);
 void func_80079078(s16);
 void func_800F6924_146544(void);
 void func_800F6B0C_14672C(void);
-s32 func_80093780(void);
+s32 osGetCount(void);
 
 extern f64 D_800FA250;
 extern f32 D_800FA2E8;

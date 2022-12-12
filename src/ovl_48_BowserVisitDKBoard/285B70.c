@@ -149,9 +149,9 @@ void func_800F6C14_2861A4(unkObjectStruct* arg0) {
     Object* temp_s0_3;
 
     temp_s0 = D_800F7178_ovl48;
-    temp_s0->unk_18.x = func_80088060(arg0->unk_24 * 0.017453292519943295);
+    temp_s0->unk_18.x = sinf(arg0->unk_24 * 0.017453292519943295);
     temp_s0_2 = D_800F7178_ovl48;
-    temp_s0_2->unk_18.z = func_800855C0(arg0->unk_24 * 0.017453292519943295);
+    temp_s0_2->unk_18.z = cosf(arg0->unk_24 * 0.017453292519943295);
     if ((arg0->unk_4C == 0) || !(arg0->unk_24 < -310.0f)) {
         arg0->unk_24 = arg0->unk_24 - 5.0f;
         if (arg0->unk_24 <= -360.0f) {
@@ -159,7 +159,7 @@ void func_800F6C14_2861A4(unkObjectStruct* arg0) {
         }
     } else {
         temp_s0_3 = D_800F7178_ovl48;
-        temp_s0_3->unk_30 = ((func_80088060(arg0->unk_28 * 0.017453292519943295)) * 4.0f) + D_800F70CC_28665C[1].y;
+        temp_s0_3->unk_30 = ((sinf(arg0->unk_28 * 0.017453292519943295)) * 4.0f) + D_800F70CC_28665C[1].y;
         arg0->unk_28 = arg0->unk_28 + 5.0f;
         if (arg0->unk_28 >= 360.0f) {
             arg0->unk_28 -= 360.0f;

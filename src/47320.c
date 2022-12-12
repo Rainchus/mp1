@@ -41,7 +41,7 @@ void func_80046828(unkObjectStruct* arg0) {
     switch (arg0->unk_4C) {
     case 0:
         arg0->unk_24 =  arg0->unk_24 + 30.0f;
-        arg0->unk_30 = func_80088060(arg0->unk_24 * D_800CAFF0) * 0.5f + 1.0f;
+        arg0->unk_30 = sinf(arg0->unk_24 * D_800CAFF0) * 0.5f + 1.0f;
         
         for (i = 1; (((D_800D6658 + 1) / 10) + 1) >= i; i++) {
             func_80067354(D_800D65FC[D_800D6654], i, arg0->unk_30, arg0->unk_30);
@@ -89,7 +89,7 @@ void func_800471FC(void) {
 }
 
 void func_8004720C(unkObjectStruct* arg0) {
-    arg0->unk_1C = 74.0f - (func_80088060((f32) ((f64) arg0->unk_28 * D_800CB008)) * 5.0f);
+    arg0->unk_1C = 74.0f - (sinf((f32) ((f64) arg0->unk_28 * D_800CB008)) * 5.0f);
     arg0->unk_28 += 8.0f;
     
     if (arg0->unk_28 >= 360.0f) {

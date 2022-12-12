@@ -84,11 +84,11 @@ ENDLINE := \n'
 ### Compiler Options ###
 
 ASFLAGS        := -G 0 -I include -mips3 -mabi=32
-CFLAGS         := -G0 -mips3 -mgp32 -mfp32 -Wa,--vr4300mul-off
-CPPFLAGS       := -I include -I $(BUILD_DIR)/include -I src -DF3DEX_GBI_2
+CFLAGS         := -G0 -mips3 -mgp32 -mfp32 -Wa,--vr4300mul-off -D_LANGUAGE_C 
+CPPFLAGS       := -I include -I include/PR -I include/gcc -I $(BUILD_DIR)/include -I src -DF3DEX_GBI_2
 LDFLAGS        := -T symbol_addrs.txt -T undefined_syms.txt -T undefined_funcs.txt -T undefined_funcs_auto.txt -T undefined_syms_auto.txt -T $(LD_SCRIPT) -Map $(LD_MAP) --no-check-sections
 CHECK_WARNINGS := -Wall -Wextra -Wno-format-security -Wno-unused-parameter -Wno-unused-variable -Wno-pointer-to-int-cast -Wno-int-to-pointer-cast -m32
-CFLAGS_CHECK   := -fsyntax-only -fsigned-char -nostdinc -fno-builtin -D CC_CHECK -std=gnu90 $(CHECK_WARNINGS)
+CFLAGS_CHECK   := -fsyntax-only -fsigned-char -nostdinc -fno-builtin -D CC_CHECK -D _LANGUAGE_C -std=gnu90 $(CHECK_WARNINGS)
 
 ifneq ($(CHECK),1)
 CFLAGS_CHECK += -w
@@ -132,6 +132,14 @@ test: $(ROM)
 	$(V)$(EMULATOR) $<
 
 # Flags for individual files. TODO: move these to a common directory and make this a directory thing instead
+build/src/lib/%.c.o: OPTFLAGS = -O3 -funsigned-char
+build/src/lib/%.c.o: CFLAGS = -G0 -mips3 -mgp32 -mfp32 -D_MIPS_SZLONG=32 -D_LANGUAGE_C -DF3DEX_GBI
+build/src/lib/%.c.o: CPPFLAGS = -I include -I include/PR -I include/gcc -I $(BUILD_DIR)/include -I src -DNDEBUG -D_MIPS_SZLONG=32 -DF3DEX_GBI_2
+
+# Special flags since these functions have a mono sound patch.
+build/src/lib/2.0I/audio/synsetpan.c.o: OPTFLAGS = -O0
+build/src/lib/2.0I/audio/synstartvoiceparam.c.o: OPTFLAGS = -O0
+
 build/src/ABCD0.c.o: OPTFLAGS = -O0
 build/src/ACA90.c.o: OPTFLAGS = -O0
 build/src/ACCB0.c.o: OPTFLAGS = -O0

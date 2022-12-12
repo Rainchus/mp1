@@ -49,9 +49,9 @@ void func_800F6708_28BD98(unkObjectStruct* arg0) {
     Object* temp_s0;
 
     temp_s0 = D_800F7858_28CEE8;
-    temp_s0->unk_18.x = func_80088060(arg0->unk_18 * (0.017453292519943295));
+    temp_s0->unk_18.x = sinf(arg0->unk_18 * (0.017453292519943295));
     temp_s0 = D_800F7858_28CEE8;
-    temp_s0->unk_18.z = func_800855C0(arg0->unk_18 * (0.017453292519943295));
+    temp_s0->unk_18.z = cosf(arg0->unk_18 * (0.017453292519943295));
     arg0->unk_18 += 5.0f;
     if (arg0->unk_18 >= 360.0f) {
         arg0->unk_18 -= 360.0f;
@@ -82,7 +82,7 @@ void func_800F67BC_28BE4C(void) {
     
     for (i = 0; i < 0x37; i++) {
         temp_s0 = D_800F7848_28CED8->unk_3C;
-        temp_s0->unk_24 = -func_80088060( ((i * 6) + 0x1E) * (0.017453292519943295)) * 30.0f;
+        temp_s0->unk_24 = -sinf( ((i * 6) + 0x1E) * (0.017453292519943295)) * 30.0f;
         if (i == 10) {
             func_8004EE14(0, &D_800F7878_28CF08, 0x14, D_800F7840_28CED0);
         }
@@ -109,9 +109,9 @@ void func_800F67BC_28BE4C(void) {
     
     for (i = 0, var_s2 = 0; i < 3;) { //strange for loop that only increments if i is 0?
         temp_s0_2 = D_800F7848_28CED8->unk_3C;
-        temp_s0_2->unk_24 = -func_80088060((var_s2 * (0.017453292519943295))) * 20.0f;
+        temp_s0_2->unk_24 = -sinf((var_s2 * (0.017453292519943295))) * 20.0f;
         temp_s0 = D_800F7840_28CED0->unk_3C;
-        temp_s0->unk_24 = -func_80088060((var_s2 * (0.017453292519943295))) * 20.0f;
+        temp_s0->unk_24 = -sinf((var_s2 * (0.017453292519943295))) * 20.0f;
         
         if (func_8004F018(D_800F7848_28CED8) == 0) {
             if (i != 2) {

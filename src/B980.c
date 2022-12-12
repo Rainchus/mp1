@@ -3,13 +3,13 @@
 s32 func_8000B13C(void);
 extern file_1ACF0_struct D_800C18A0;
 s32 func_8000B210(void);
-void func_80088620(void*, void*, s32);
+void osCreateMesgQueue(void*, void*, s32);
 extern s32 D_800CD9C8;
 extern s32 D_800CDA90;
 extern s8 D_800ECB2C;
 void func_800130A4(Addr*);
-void func_8008A500(s32);
-void func_8008A7D0(s32);
+void alSeqpDelete(s32);
+void alSndpDelete(s32);
 extern s32 D_800C1870;
 extern Addr D_800C1874;
 extern s32 D_800CDAD4;
@@ -36,7 +36,7 @@ typedef struct FXD0_Unk2 {
 
 extern FXD0_Unk2 D_800CDAA8;
 s32 func_8000AFF8(s32, s32, s32);
-s32 func_800899B0(s32, s32, FXD0_Unk2*, s32, s32);
+s32 alHeapDBAlloc(s32, s32, FXD0_Unk2*, s32, s32);
 
 INCLUDE_ASM(s32, "B980", func_8000AD80);
 
@@ -47,7 +47,7 @@ INCLUDE_ASM(s32, "B980", func_8000AE20);
 INCLUDE_ASM(s32, "B980", func_8000AE50);
 
 s32 func_8000AFA0(s32 arg0) {
-    s32 temp_v0 = func_800899B0(0, 0, &D_800CDAA8, 1, arg0);
+    s32 temp_v0 = alHeapDBAlloc(0, 0, &D_800CDAA8, 1, arg0);
 
     if (temp_v0 == 0) {
         func_8000AFF8(0, 0, 1);
@@ -77,7 +77,7 @@ INCLUDE_ASM(s32, "B980", func_8000B044);
 INCLUDE_ASM(s32, "B980", func_8000B0C0);
 
 s32 func_8000B13C(void) {
-    func_80088620(&D_800CDA90, &D_800CD9C8, 50);
+    osCreateMesgQueue(&D_800CDA90, &D_800CD9C8, 50);
     D_800ECB2C = 0;
     if (D_800C18A0.unk_00 != 0) {
         if (D_800C18A0.unk_04 != 0) {
@@ -91,8 +91,8 @@ s32 func_8000B198(void) {
     if (D_800CDAEC == 0) {
         if (D_800CEAA0 == 0) {
             if (D_800C1870 & 0x8000) {
-                func_8008A500(D_800CDAD4);
-                func_8008A7D0(D_800CEA8C);
+                alSeqpDelete(D_800CDAD4);
+                alSndpDelete(D_800CEA8C);
                 func_800130A4(&D_800C1874);
                 D_800C1870 = 0;
                 return 0;
