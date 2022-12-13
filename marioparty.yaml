@@ -51,8 +51,8 @@ segments:
       - [0x19470, c, "../src/engine/esprite"]
       - [0x19E70, c]
       - [0x1A2A0, c]
-      - [0x1ACF0, c]
-      - [0x1B200, c]
+      - [0x1ACF0, c, "../src/engine/gameman"]
+      - [0x1B200, c] # graphics
       - [0x1DE40, c]
       - [0x1EA70, c]
       - [0x22F90, c]
