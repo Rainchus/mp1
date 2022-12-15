@@ -7,7 +7,7 @@ options:
   compiler: GCC
   find_file_boundaries: True
   header_encoding: ASCII
-  # platform: n64
+  platform: n64
   symbol_name_format: $VRAM_$ROM
   undefined_funcs_auto_path: undefined_funcs_auto.txt
   undefined_syms_auto_path: undefined_syms_auto.txt
@@ -23,6 +23,7 @@ options:
   # extensions_path: tools/splat_ext
   # auto_all_sections: True
   asm_inc_header: "\t.set noat\n\t.set noreorder\n"
+  migrate_rodata_to_functions: False
 segments:
   - name: header
     type: header
@@ -1794,4 +1795,4 @@ segments:
     start: 0xFE2310
   - type: bin
     start: 0xFE24BC
-  - [0x1CED490]
+  - [0x2000000]
