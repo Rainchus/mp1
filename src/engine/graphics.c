@@ -52,11 +52,8 @@ extern s16 gSwapChainMesgTotal;
 extern OSMesgQueue gMesgQueue;
 extern void* gMesgQueueInitMesg;
 
-/* NEW */
 extern u32 D_800F383C; // Unk
 extern OSMesgQueue D_800ED3C8; // Another system's message queue
-/* NEW */
-
 
 /* Initialize Graphics SwapChain */
 void func_8001A600(void **arg1, s32 arg2, s32 arg3, u64 **arg4, s32 *arg5) {
