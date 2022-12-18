@@ -1,4 +1,4 @@
-#include "common.h"
+#include "process.h"
 #include "282820.h"
 
 void func_800F677C_2829BC(void);

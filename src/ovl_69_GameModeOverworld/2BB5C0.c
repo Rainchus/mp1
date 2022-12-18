@@ -1,4 +1,3 @@
-#include "common.h"
 #include "2BB5C0.h"
 
 void func_800F6610_2BB5F0(void);

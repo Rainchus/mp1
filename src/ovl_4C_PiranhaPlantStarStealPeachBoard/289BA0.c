@@ -1,4 +1,4 @@
-#include "common.h"
+#include "process.h"
 #include "289BA0.h"
 
 //800F7500 - 800F7514 are bss vars

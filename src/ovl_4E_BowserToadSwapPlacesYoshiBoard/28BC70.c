@@ -1,4 +1,4 @@
-#include "common.h"
+#include "process.h"
 #include "28BC70.h"
 
 Object* D_800F7840_28CED0 = NULL;

@@ -1,4 +1,4 @@
-#include "common.h"
+#include "process.h"
 #include "28E030.h"
 
 Vec3f D_800F6B20 = {-80.0f, 0.0f, 1310.0f};

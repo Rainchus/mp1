@@ -1,4 +1,4 @@
-#include "common.h"
+#include "process.h"
 #include "firstMap.h"
 
 void func_800F6610_257020(void) {

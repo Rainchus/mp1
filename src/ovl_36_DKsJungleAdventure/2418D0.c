@@ -1,4 +1,4 @@
-#include "common.h"
+#include "process.h"
 #include "dkJungleAdventure.h"
 
 // bss

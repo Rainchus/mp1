@@ -1,4 +1,3 @@
-#include "common.h"
 #include "eternalStar.h"
 
 static board_overlay_entrypoint D_800F8B80[] = {

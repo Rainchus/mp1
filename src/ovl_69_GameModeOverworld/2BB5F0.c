@@ -1,4 +1,4 @@
-#include "common.h"
+#include "process.h"
 #include "2BB5C0.h"
 
 void func_80025F10(s16, s32);

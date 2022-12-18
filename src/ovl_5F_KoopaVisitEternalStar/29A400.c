@@ -1,4 +1,4 @@
-#include "common.h"
+#include "process.h"
 #include "29A400.h"
 
 void func_8004DBD4(s32, u8);

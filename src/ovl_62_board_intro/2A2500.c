@@ -1,4 +1,4 @@
-#include "common.h"
+#include "process.h"
 #include "2A2500.h"
 
 void func_800F65E0_2A2500(void) {
