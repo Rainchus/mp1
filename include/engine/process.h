@@ -2,7 +2,7 @@
 #define __PROCESS_H
 
 #include "common.h"
-
+#include "PR/os.h"
 
 void WakeupProcess(Process* process);
 Process* CreateProcess(process_func func, u16 priority, s32 stack_size, s32 extra_data_size);

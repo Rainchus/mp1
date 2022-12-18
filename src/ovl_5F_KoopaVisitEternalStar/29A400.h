@@ -20,7 +20,7 @@ extern void* D_800F6CDC[]; //probably Object array
 extern Object* D_800F6D14;
 extern Object* D_800F6D18;
 extern u8 D_800F6C60[];
-extern char D_800F6D00[]; //is just "%d" in ascii
+extern const char D_800F6D00[]; //is just "%d" in ascii
 extern u8 D_800F6D11; //player index
 extern u8 D_800F6D12; //bonus to give
 extern Object* D_800F6D18;

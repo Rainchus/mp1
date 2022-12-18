@@ -1,4 +1,5 @@
 #include "common.h"
+#include "PR/os.h"
 
 #define HEAP_CONSTANT 0xA5
 #define MIN_ALLOC_SIZE 16

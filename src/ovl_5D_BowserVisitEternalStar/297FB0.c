@@ -50,7 +50,7 @@ void func_800F65E0_297FB0(void) {
 }
 
 void func_800F66BC_29808C(void) {
-    s32 sp10;
+    char sp10;
     f32 temp_f20;
     f32 temp_f20_2;
     f32 var_f22;

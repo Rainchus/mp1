@@ -217,7 +217,6 @@ void func_80059348(s16);
 s32 func_8005DF44(s32, s32, s32);
 void func_8004F504(void*);
 void func_800503B0(s32, s32);
-void sprintf(); //sprintf, variadic args
 void func_8004F2AC(void);
 void func_80054868(s32);
 void func_80055A34(s32);
@@ -269,9 +268,7 @@ void SleepVProcess(void);
 void func_8003E8B8(Object* ptr, s16 a, s16 b, s16 c, u16 d);
 void DecodeFile(void* src, void* dest, s32 len, s32 decode_type);
 void* MallocTemp(u32 size);
-void bcopy(void*, void*, int);
-s32 bcmp(void*, void*, int);
-void bzero(void*, s32);
+
 void func_80061FE8(u8*, void*, s32);
 void func_80021B14(s16, u8, s32);
 void func_800421E0(void);
@@ -390,7 +387,6 @@ void func_800601D4(s32);
 void func_800790C0(void);
 s32 func_8005DFB8(s32);
 void func_80060198(void);
-void osViBlack(s32);
 void func_80060398(s32);
 void func_80075CCC(s32, ...);
 u16 ReadImgPackand(s32, s32, s32);

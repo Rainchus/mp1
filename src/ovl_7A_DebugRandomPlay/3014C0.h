@@ -19,7 +19,7 @@ void func_800F7360_302240(u8);
 extern unkStruct2 D_800F7DB0[];
 
 extern unkStruct2 D_800F7DB8[];
-extern s8 D_800F8F78;
+extern const char D_800F8F78[];
 extern u8 D_800F8FB8;  //random minigame id
 extern s16 D_800F8FBC;
 extern u8 D_800F8FC0[];

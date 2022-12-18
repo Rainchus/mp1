@@ -1,3 +1,4 @@
+#include "PR/os.h"
 #include "common.h"
 
 //typing issues all over 2BAA10.c where this header file is included
@@ -20,14 +21,10 @@ char unk_00[0x20];
 
 void func_800F6AD4_2BAED4(void);
 void func_800F6E10_2BB210(void);
-void osSendMesg(void*, s32, s32);
-extern s32 D_800F7980;
-void func_800819F0(someStruct*, s32, s32, s32, s32, void*);
-void osRecvMesg(void*, s32*, s32);
-extern s32 D_800F6F90;
+void func_800819F0(someStruct*, s32, s32, s32, s32, OSMesgQueue*);
+
 s32 LeoDriveExist(s32, s32, s32*, s32);
 s32 func_800827C0(void);
-u32 osGetMemSize(void); //getMemSize
 void func_800F6778_2BAB78(void);
 extern s32 LeoDriveExistBool;
 extern s32 D_800ECDE8;
@@ -35,10 +32,10 @@ extern s32 D_800F6F70;
 void func_800639F8(void*, void*, s32);
 void func_80063A5C(void*);
 void func_8007FEA4(void);
-void osCreateMesgQueue(void*, void*, s32);
-void osDestroyThread(s32);
-extern s32 D_800F7980;
-extern s32 D_800F7998;
 
-extern u8 D_800F5038[];
-extern s32 D_800F6F80;
+
+extern char D_800F5038[];
+extern const char D_800F6F80[];
+extern OSMesgQueue D_800F7980;
+extern OSMesgQueue D_800F6F90;
+extern OSMesg D_800F7998;

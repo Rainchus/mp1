@@ -1,4 +1,4 @@
-#include "common.h"
+#include "PR/os.h"
 #include "316440.h"
 
 void func_800F65E0_316440(void) {
