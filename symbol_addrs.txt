@@ -17,14 +17,6 @@ MallocTemp = 0x8003B774;
 DirectionPrompt = 0x8003C14C;
 RunDecisionTree = 0x8003E9B0;
 ShowPlayerCoinChange = 0x80045778;
-GetSpaceData = 0x8004C1EC;
-GetAbsSpaceIndexFromChainSpaceIndex = 0x8004C204;
-GetChainLength = 0x8004C230;
-GetChainSpaceIndexFromAbsSpaceIndex = 0x8004C24C;
-SetSpaceType = 0x8004C48C;
-EventTableHydrate = 0x8004C900;
-SetCurrentSpaceIndex = 0x8004CB2C;
-GetCurrentSpaceIndex = 0x8004CB38;
 SwapPlayerLocationData = 0x8004CE70;
 SetPlayerLandedSpaceType = 0x8004CEF4;
 GetSumOfPlayerStars = 0x8004CF70;
@@ -116,6 +108,17 @@ HidePlayerHUDVisibility = 0x800547F8;
 InitObjSystem = 0x8005CF30;
 CreateObject = 0x8003DBE0;
 DestroyObject = 0x8003E694;
+
+ExecuteEventForSpace = 0x8004C968;
+GetSpaceData = 0x8004C1EC;
+GetAbsSpaceIndexFromChainSpaceIndex = 0x8004C204;
+GetChainLength = 0x8004C230;
+GetChainSpaceIndexFromAbsSpaceIndex = 0x8004C24C;
+SetSpaceType = 0x8004C48C;
+EventTableHydrate = 0x8004C900;
+SetCurrentSpaceIndex = 0x8004CB2C;
+GetCurrentSpaceIndex = 0x8004CB38;
+
 _Printf = 0x80095470;
 sprintf = 0x8008C490;
 

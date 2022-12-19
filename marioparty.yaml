@@ -80,6 +80,7 @@ segments:
       - [0x46AE0, c]
       - [0x47320, c]
       - [0x48D90, c]
+      - [0x4C460, c, "spaces"]
       - [0x4D770, c, 4D770] # [0xCBC60, .rodata, 4D770]
       - [0x4E530, c]
       - [0x51200, c]

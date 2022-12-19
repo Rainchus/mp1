@@ -1,6 +1,6 @@
 #include "common.h"
 #include "process.h"
-
+#include "spaces.h"
 //start of rodata 800F8B80
 //bss 800F9160 - 800F91B0
 
