@@ -286,7 +286,7 @@ void func_800F6AA0_254910(ProcessHeader* arg0) {
         DestroyObject(arg0->prev);
         EndProcess(arg0->process);
         func_80072080(arg0->unk_08);
-        func_8003B798(arg0);
+        FreeTemp(arg0);
     }
 }
 

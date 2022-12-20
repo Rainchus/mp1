@@ -212,7 +212,7 @@ void func_800F6DD8_2577E8(ovl_3E_HeapStruct* arg0) {
     func_80067704(arg0->unk4);
     func_80067704(arg0->unk6);
     func_80064D38(arg0->unk0);
-    func_8003B798((ProcessHeader*)arg0); //fake, fix later
+    FreeTemp(arg0);
 }
 
 

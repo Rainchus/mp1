@@ -365,11 +365,6 @@ typedef struct GameStatus {
 /* 0x1C */ s16 unk_1C;
 } GameStatus;
 
-typedef struct ChainData {
-    u16 len;
-    s16* space_indices;
-} ChainData;
-
 typedef struct mpSource_object_indirect2 {
     s16 unk0;
 } mpSource_object_indirect2;

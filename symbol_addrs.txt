@@ -14,6 +14,7 @@ MallocPerm = 0x8003B6A4;
 FreePerm = 0x8003B6C8;
 MakeTempHeap = 0x8003B750;
 MallocTemp = 0x8003B774;
+FreeTemp = 0x8003B798;
 DirectionPrompt = 0x8003C14C;
 RunDecisionTree = 0x8003E9B0;
 ShowPlayerCoinChange = 0x80045778;
@@ -109,6 +110,7 @@ InitObjSystem = 0x8005CF30;
 CreateObject = 0x8003DBE0;
 DestroyObject = 0x8003E694;
 
+SetSpaceEventList = 0x8004C860;
 ExecuteEventForSpace = 0x8004C968;
 GetSpaceData = 0x8004C1EC;
 GetAbsSpaceIndexFromChainSpaceIndex = 0x8004C204;
@@ -118,6 +120,9 @@ SetSpaceType = 0x8004C48C;
 EventTableHydrate = 0x8004C900;
 SetCurrentSpaceIndex = 0x8004CB2C;
 GetCurrentSpaceIndex = 0x8004CB38;
+GetRandomChanceSpace = 0x8004CB44;
+GetRandomSpaceOfType = 0x8004C3B8;
+GetRandomSpaceOfTypeInChain = 0x8004C2CC;
 
 _Printf = 0x80095470;
 sprintf = 0x8008C490;
