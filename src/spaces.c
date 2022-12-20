@@ -60,9 +60,9 @@ void func_8004B9D4(s16 arg0) {
 INCLUDE_ASM(s32, "spaces", func_8004BA04);
 
 /* Get pointer to space data section */
-u16 *func_8004BDEC(u8 *arr, s32 index) {
-    u16* pOffset = (u16*) &arr[index];
-    return (u16*) &arr[*pOffset];
+u16 *func_8004BDEC(u8 *byteSteam, s32 metaDataOffset) {
+    u16* pDataOffset = (u16*) &byteSteam[metaDataOffset];
+    return (u16*) &byteSteam[*pDataOffset];
 }
 
 /* Init board temps */
