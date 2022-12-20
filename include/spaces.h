@@ -73,4 +73,10 @@ extern s16 D_800ED5E0; // currSpaceIndex
 
 extern u16 D_800F3290; // UNK
 
+extern s16 D_800D8140; // UNK
+extern u32 D_800C4FD4[10];
+extern u32 D_800C4FFC[10];
+extern u32 D_800C5024[10];
+extern void *D_800D8118[10];
+
 #endif

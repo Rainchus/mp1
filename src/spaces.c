@@ -1,22 +1,74 @@
 #include "spaces.h"
 
-INCLUDE_ASM(s32, "spaces", func_8004B860);
+/* Set D_800D8118 with 10 "things" based on arg0. */
+void func_8004B860(s16 arg0) {
+    int i;
+    u32 *ptr;
 
-INCLUDE_ASM(s32, "spaces", func_8004B92C);
+    D_800D8140 = arg0;
+    switch (arg0) {
+        case 0:
+            ptr = D_800C4FD4;
+            break;
+        case 1:
+            ptr = D_800C4FFC;
+            break;
+        default:
+            ptr = D_800C5024;
+            break;
+    }
 
-INCLUDE_ASM(s32, "spaces", func_8004B994);
+    for (i = 0; i < 10; i++) {
+        if (ptr[i] != 0) {
+            D_800D8118[i] = ReadMainFS(ptr[i]);
+        }
+        else {
+            D_800D8118[i] = NULL;
+        }
+    }
+}
 
-INCLUDE_ASM(s32, "spaces", func_8004B9B8);
+/* Free D_800D8118. */
+void func_8004B92C() {
+    s32 i;
+    for (i = 0; i < 10; i++) {
+        if (D_800D8118[i] != NULL) {
+            FreeMainFS(D_800D8118[i]);
+        }
+        D_800D8118[i] = NULL;
+    }
+}
 
-INCLUDE_ASM(s32, "spaces", func_8004B9D4);
+/* Set board as 0? */
+void func_8004B994() {
+    func_8004B860(0);
+    D_800C4FD0 = NULL;
+}
 
+/* Wrapper for func_8004B92C? */
+void func_8004B9B8() {
+    func_8004B92C();
+}
+
+/* Free and then set D_800D8118 */
+void func_8004B9D4(s16 arg0) {
+    func_8004B92C();
+    func_8004B860(arg0);
+}
+
+/* Rendering */
 INCLUDE_ASM(s32, "spaces", func_8004BA04);
 
-INCLUDE_ASM(s32, "spaces", func_8004BDEC);
+/* Wierd */
+u8 *func_8004BDEC(u8 *arr, s32 index) {
+    u16 offset = *((u16 *)(arr + index));
+    return arr + offset;
+}
 
+/* Init board temps */
 INCLUDE_ASM(s32, "spaces", func_8004BDFC);
 
-// Free board temps
+/* Free board temps */
 void func_80028E8C(s16, void*); // Unk
 void func_8004C100() {
    s32 i;
