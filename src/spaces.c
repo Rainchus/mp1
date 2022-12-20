@@ -57,19 +57,95 @@ void func_8004B9D4(s16 arg0) {
 }
 
 /* Rendering */
+void func_8004BA04(void **displayList, void *param_2, u8 param_3);
 INCLUDE_ASM(s32, "spaces", func_8004BA04);
 
 /* Get pointer to space data section */
-u16 *func_8004BDEC(u8 *byteSteam, s32 metaDataOffset) {
+u8 *func_8004BDEC(u8 *byteSteam, s32 metaDataOffset) {
     u16* pDataOffset = (u16*) &byteSteam[metaDataOffset];
-    return (u16*) &byteSteam[*pDataOffset];
+    return &byteSteam[*pDataOffset];
 }
 
-/* Init board temps */
-INCLUDE_ASM(s32, "spaces", func_8004BDFC);
+void func_80028E8C(s16, void*); // Unk
+/* Load Board Related Data From File */
+s32 func_8004BDFC(s16 dir, s16 file) {
+    //struct board_def *boarddef;
+    u16* pDataStream;
+    SpaceData *pSpaceData;
+    ChainData *pChainData;
+    u8* chainOffsets;
+    s16* chainValues;
+    s32 i, j;
+
+    D_800C4FD0 = ReadMainFS((dir << 16) | file);
+    if (D_800C4FD0 != NULL) {
+        /* Reset special space event lists */
+        D_800D8144 = NULL;
+        D_800D8148 = NULL;
+        D_800D814C = NULL;
+        D_800D8150 = NULL;
+        pDataStream = (u16*) D_800C4FD0;
+        D_800D8100 = *pDataStream++;
+        D_800D8102 = *pDataStream++;
+        D_800D8104 = *pDataStream++;
+
+        /* Load space data */
+        D_800D8108 = (SpaceData*) MallocTemp(D_800D8100 * sizeof(SpaceData));
+        pDataStream = (u16*) func_8004BDEC(D_800C4FD0, 6);
+        for (i = 0, pSpaceData = D_800D8108; i < D_800D8100; i++, pSpaceData++) {
+            Vec3f *pos;
+            pSpaceData->unk0 = 1;
+            pSpaceData->unk2 = *pDataStream++;
+            pSpaceData->spaceType = *pDataStream++;
+            pos = (Vec3f*) pDataStream;
+            pSpaceData->coords.x = pos->x * 5.0f;
+            pSpaceData->coords.y = pos->y * 5.0f;
+            pSpaceData->coords.z = pos->z * 5.0f;
+            pDataStream = (u16*) (++pos);
+            pSpaceData->sx = 1.0f;
+            pSpaceData->sy = 1.0f;
+            pSpaceData->sz = 1.0f;
+            pSpaceData->eventList = NULL;
+        }
+
+        /* Load chain data 1 */
+        D_800D810C = (ChainData*) MallocTemp(D_800D8102 * sizeof(ChainData));
+        chainOffsets = func_8004BDEC(D_800C4FD0, 8);
+        for (i = 0, pChainData = D_800D810C; i < D_800D8102; i++, pChainData++) {
+            pDataStream = (u16*) func_8004BDEC(chainOffsets, i * 2);
+            pChainData->len = *pDataStream;
+            pDataStream++;
+
+            pChainData->spaceIndices = (s16*)MallocTemp( (s16) pChainData->len * sizeof(s16));
+            chainValues = pChainData->spaceIndices;
+            for(j = 0; j < (s16) pChainData->len; j++) {
+                *chainValues++ = *pDataStream++;
+            }
+        }
+
+        /* Load chain data 2 */
+        D_800D8110 = (ChainData*) MallocTemp(D_800D8104  * sizeof(ChainData));
+        chainOffsets = func_8004BDEC(D_800C4FD0, 10);
+        for (i = 0, pChainData = D_800D8110; i < D_800D8104; i++, pChainData++) {
+            pDataStream = (u16*) func_8004BDEC(chainOffsets, i * 2);
+            pChainData->len = *pDataStream;
+            pDataStream++;
+
+            pChainData->spaceIndices = (s16*)MallocTemp( (s16)pChainData->len * sizeof(s16));
+            chainValues = pChainData->spaceIndices;
+            for(j = 0; j < (s16) pChainData->len; j++) {
+                *chainValues++ = *pDataStream++;
+            }
+        }
+
+        FreeMainFS(D_800C4FD0);
+        func_80028E8C(1, func_8004BA04);
+        D_800F3290 = 1;
+    }
+    return 0;
+}
 
 /* Free board temps */
-void func_80028E8C(s16, void*); // Unk
 void func_8004C100() {
    s32 i;
    ChainData *chainData;

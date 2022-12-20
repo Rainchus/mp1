@@ -51,7 +51,7 @@ SpaceData* GetSpaceData(s16 spaceID);
 void SetCurrentSpaceIndex(s16 spaceIndex);
 s16 GetCurrentSpaceIndex();
 
-extern u16 *D_800C4FD0; // File/Board?
+extern u8 *D_800C4FD0; // Board data stream
 
 extern u16 D_800D8100; // Total spaces in board
 extern u8 D_800C51B0[]; // Space type mapping?
