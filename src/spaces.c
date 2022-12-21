@@ -373,26 +373,27 @@ void func_8004C81C(s16 spaceIndex) {
    process->user_data = (void *)(s32)spaceIndex;
 }
 
-/* Set space's event list.*/
-void SetSpaceEventList(s16 spaceIndex, EventListEntry *eventList) {
-   switch (spaceIndex) {
-      case -2:
+void SetSpaceEventList(s16 index, EventListEntry *eventList) {
+   /* Event index. */
+   switch (index) {
+      case EVENT_INDEX_NEWTURN:
          D_800D8144 = eventList;
          return;
-      case -3:
+      case EVENT_INDEX_UNUSED:
          D_800D8148 = eventList;
          return;
-      case -4:
+      case EVENT_INDEX_PLAYERTURN:
          D_800D814C = eventList;
          return;
-      case -5:
+      case EVENT_INDEX_PLAYERDICE:
          D_800D8150 = eventList;
          return;
     }
 
     {
+      /* Default is event from space index. */
       SpaceData *space;
-      space = GetSpaceData(spaceIndex);
+      space = GetSpaceData(index);
       space->eventList = eventList;
     }
 }
@@ -404,32 +405,34 @@ void EventTableHydrate(EventTableEntry *table) {
    }
 }
 
-s32 ExecuteEventForSpace(s16 spaceIndex, s16 activationType) {
+s32 ExecuteEventForSpace(s16 index, s16 activationType) {
    EventListEntry *eventList;
    s16 currSpaceIndex;
    s32 ret;
 
-   switch (spaceIndex) {
-      case -2:
+   /* Event index. */
+   switch (index) {
+      case EVENT_INDEX_NEWTURN:
          eventList = D_800D8144;
          break;
-      case -3:
+      case EVENT_INDEX_UNUSED:
          eventList = D_800D8148;
          break;
-      case -4:
+      case EVENT_INDEX_PLAYERTURN:
          eventList = D_800D814C;
          break;
-      case -5:
+      case EVENT_INDEX_PLAYERDICE:
          eventList = D_800D8150;
          break;
       default:
-         eventList = GetSpaceData(spaceIndex)->eventList;
+         /* Default is event from space index. */
+         eventList = GetSpaceData(index)->eventList;
          break;
    }
 
    ret = 0;
    currSpaceIndex = GetCurrentSpaceIndex();
-   SetCurrentSpaceIndex(spaceIndex);
+   SetCurrentSpaceIndex(index);
 
    if (eventList != NULL) {
       while (eventList->activationType != 0) {

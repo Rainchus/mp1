@@ -3,11 +3,11 @@
 
 #include "common.h"
 
-#define SPACE_INDEX_NFIVE     -5
-#define SPACE_INDEX_NFOUR     -4
-#define SPACE_INDEX_NTHREE    -3
-#define SPACE_INDEX_NTWO      -2
-#define SPACE_INDEX_INVALID   -1
+#define EVENT_INDEX_PLAYERDICE   -5
+#define EVENT_INDEX_PLAYERTURN   -4
+#define EVENT_INDEX_UNUSED       -3
+#define EVENT_INDEX_NEWTURN      -2
+#define SPACE_INDEX_INVALID      -1
 
 #define SPACE_TYPE_INVISIBLE   0
 #define SPACE_TYPE_BLUE        1
@@ -53,7 +53,6 @@ s16 GetCurrentSpaceIndex();
 
 extern u8 *D_800C4FD0; // Board data stream
 
-extern u16 D_800D8100; // Total spaces in board
 extern u8 D_800C51B0[]; // Space type mapping?
 
 extern EventListEntry *D_800D8144; // -2
@@ -61,6 +60,7 @@ extern EventListEntry *D_800D8148; // -3
 extern EventListEntry *D_800D814C; // -4
 extern EventListEntry *D_800D8150; // -5
 
+extern u16 D_800D8100; // Total spaces in board
 extern u16 D_800D8102; // Size of D_800D810C
 extern u16 D_800D8104; // Size of D_800D8110
 
