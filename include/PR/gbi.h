@@ -1834,7 +1834,7 @@ typedef union {
         (unsigned int) (dat)						\
 }
 
-#ifdef	F3DEX_GBI_2x
+#ifdef	F3DEX_GBI_2 // F3DEX_GBI_2x
 #define gMoveWd(pkt, index, offset, data)				\
 	gDma1p((pkt), G_MOVEWORD, data, offset, index)
 #define gsMoveWd(    index, offset, data)				\
