@@ -1,4 +1,4 @@
-#include "common.h"
+#include "process.h"
 #include "2908F0.h"
 
 Vec3f D_800F6F70_291280 = {-115.0f, 0.0f, 1120.0f};
@@ -55,8 +55,8 @@ void func_800F66BC_2909CC(void) {
         HideTextWindow(temp_s1);
     } else if (gPlayers[D_800F7050].coinAmount < 20) {
         temp_s1 = CreateTextWindow(60, 40, 17, 4);
-        sprintf(&sp18, "%d", gPlayers[D_800F7050].coinAmount);
-        func_8006DA5C(temp_s1, &sp18, 0);
+        sprintf(sp18, "%d", gPlayers[D_800F7050].coinAmount);
+        func_8006DA5C(temp_s1, sp18, 0);
         LoadStringIntoWindow(temp_s1, (void* )0x1D0, -1, -1);
         func_8006E070(temp_s1, 0);
         ShowTextWindow(temp_s1);

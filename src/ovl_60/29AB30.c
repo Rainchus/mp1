@@ -1,4 +1,4 @@
-#include "common.h"
+#include "process.h"
 #include "29AB30.h"
 
 static s32 D_800F6E7C[];

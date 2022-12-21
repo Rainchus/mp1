@@ -94,6 +94,7 @@ segments:
       - [0x5CDB0, c]
       - [0x61B70, c]
       - [0x62140, c]
+      - [0x63C60, c, "../src/engine/process"]
       - [0x643C0, c, "../src/engine/nnsched"]
       - [0x64B40, c, "../src/engine/siman"]
       - [0x64FD0, c]

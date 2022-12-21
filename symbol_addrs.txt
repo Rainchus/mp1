@@ -313,6 +313,7 @@ _timeToSamples = 0x8008F78C;
 osEepromRead = 0x8008FB50;
 osEepromWrite = 0x8008FD70;
 
+osSetEventMesg = 0x800935B0;
 osSetTimer = 0x80093920;
 __osSiRawStartDma = 0x80091F10;
 __osSiCreateAccessQueue = 0x80095250;

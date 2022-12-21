@@ -1,4 +1,4 @@
-#include "common.h"
+#include "PR/os.h"
 #include "3014C0.h"
 
 INCLUDE_ASM(s32, "ovl_7A_DebugRandomPlay/3014C0", func_800F65E0_3014C0);
@@ -65,13 +65,13 @@ void func_800F7468_302348(void) {
 }
 
 void func_800F750C_3023EC(void) { //TODO: fix call to func_8006DA5C
-    u8 buffer[0x200];
+    char buffer[0x200];
 
     func_8006EB40(D_800F8FBC);
     func_8006EB80();
     func_8006DA5C(D_800F8FBC, (void*)((D_800F7DB8[D_800F8FB8].unk_00) >> 16), 0);
-    sprintf(buffer, &D_800F8F78);
-    func_8007149C(D_800F8FC0, buffer);
+    sprintf(buffer, D_800F8F78);
+    func_8007149C(D_800F8FC0, (u8*) buffer);
     LoadStringIntoWindow(D_800F8FBC, D_800F8FC0, -1, -1);
     while (1) {
         if (func_8006FCC0(D_800F8FBC) != 0) {

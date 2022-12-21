@@ -1,4 +1,5 @@
 #include "common.h"
+#include "process.h"
 
 void func_800F66B4_28E704(void);
 void func_800F69D8_28EA28(s32);

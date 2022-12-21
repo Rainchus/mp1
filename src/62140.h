@@ -59,9 +59,9 @@ s32 func_80091500(unk62140*, void*, void*);
 void func_80091A40(unk62140*);
 void func_80090F90(unk62140*, s32, void*);
 
-extern s16 D_800EE310;
-extern unk62140_3 D_800F09E4;
-extern s32 D_800EE960;
 extern box D_800ED448[];
+extern s16 D_800EE310;
+extern s32 D_800EE960;
+extern unk62140_3 D_800F09E4;
 extern u16 D_800F64E4;
 extern unk62140 D_800D90D0[];

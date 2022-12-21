@@ -1,4 +1,4 @@
-#include "common.h"
+#include "process.h"
 #include "295E40.h"
 
 typedef struct unkStruct_ovl5A_0 {

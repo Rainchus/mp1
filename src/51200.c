@@ -1,4 +1,4 @@
-#include "common.h"
+#include "process.h"
 #include "51200.h"
 
 INCLUDE_ASM(s32, "51200", func_80050600);

@@ -1,4 +1,5 @@
 #include "common.h"
+#include "process.h"
 
 void func_800F6EEC_2988BC(void);
 void func_800F7030_298A00(void);
@@ -49,7 +50,7 @@ void func_800F65E0_297FB0(void) {
 }
 
 void func_800F66BC_29808C(void) {
-    s32 sp10;
+    char sp10;
     f32 temp_f20;
     f32 temp_f20_2;
     f32 var_f22;

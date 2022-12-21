@@ -1,5 +1,7 @@
 #include "common.h"
+#include "process.h"
 #include "5CDB0.h"
+
 
 INCLUDE_ASM(s32, "5CDB0", func_8005C1B0);
 

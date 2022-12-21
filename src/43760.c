@@ -1,4 +1,5 @@
 #include "common.h"
+#include "process.h"
 #include "43760.h"
 
 void func_80042B60(void) {

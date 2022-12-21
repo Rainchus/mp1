@@ -1,4 +1,4 @@
-#include "common.h"
+#include "process.h"
 #include "282820.h"
 
 void func_800F677C_2829BC(void);
@@ -87,7 +87,7 @@ void func_800F6744_282984(void) {
 }
 
 void func_800F677C_2829BC(void) {
-    s32 sp10;
+    char sp10;
     s32 windowID;
     s32 var_s0;
 
@@ -279,7 +279,7 @@ void func_800F6AF8_282D38(void) {
 }
 
 void func_800F7044_283284(void) {
-    s32 sp10;
+    char sp10;
     s32 windowID;
     s32 var_a2;
     s32 var_s0_2;
@@ -365,7 +365,7 @@ void func_800F7044_283284(void) {
 }
 
 void func_800F7410_283650(void) {
-    s32 sp10;
+    char sp10;
     s32 var_a1_2;
     s32 var_s2;
     s32 var_s1;
@@ -545,7 +545,7 @@ void func_800F7410_283650(void) {
 }
 
 void func_800F7BFC_283E3C(void) {
-    s32 sp10;
+    char sp10;
     s32 var_a1_2;
     s32 temp_s1;
     s32 tempVar;
@@ -660,7 +660,7 @@ void func_800F7BFC_283E3C(void) {
 }
 
 void func_800F80EC_28432C(void) {
-    s32 sp10;
+    char sp10;
     s32 var_a1_2;
     s32 var_s1;
     s32 var_s2;

@@ -1,4 +1,4 @@
-#include "common.h"
+#include "process.h"
 #include "296B70.h"
 
 Object* D_800F7590_297B20 = NULL;
@@ -38,7 +38,7 @@ void func_800F65E0_296B70(void) {
 }
 
 void func_800F66C4_296C54(void) { //fix me: remove gotos
-    s32 sp10;
+    char sp10;
     f32 temp_f20;
     f32 temp_f20_2;
     f32 var_f22;

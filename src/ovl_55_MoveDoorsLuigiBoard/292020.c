@@ -1,4 +1,4 @@
-#include "common.h"
+#include "process.h"
 #include "292020.h"
 
 void func_800F65E0_292020(void) {

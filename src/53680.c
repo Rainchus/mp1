@@ -1,4 +1,5 @@
 #include "common.h"
+#include "process.h"
 
 extern u8 D_800C53E0[]; // { 0, 1, 2 }
 extern u8 D_800C53E4[]; // { 1, 2, 3 }

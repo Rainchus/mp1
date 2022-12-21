@@ -162,7 +162,7 @@ INCLUDE_ASM(s32, "8E3B0", __osDisableInt);
 
 INCLUDE_ASM(s32, "8E3B0", __osRestoreInt);
 
-INCLUDE_ASM(s32, "8E3B0", func_800935B0);
+INCLUDE_ASM(s32, "8E3B0", osSetEventMesg);
 
 INCLUDE_ASM(s32, "8E3B0", func_80093660);
 

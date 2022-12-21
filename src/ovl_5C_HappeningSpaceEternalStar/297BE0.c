@@ -1,4 +1,5 @@
 #include "common.h"
+#include "process.h"
 
 void func_8004DBD4(s32, u8); //defined differently between some files?
 void func_800F66B4_297CB4(void);

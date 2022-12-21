@@ -1,4 +1,5 @@
 #include "common.h"
+#include "process.h"
 
 typedef struct unkProcessUserDataStruct {
     Vec3f unk_00;
