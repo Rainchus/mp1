@@ -1,4 +1,4 @@
-#include "common.h"
+#include "spaces.h"
 
 INCLUDE_ASM(s32, "57330", func_80056730);
 

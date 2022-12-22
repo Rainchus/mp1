@@ -933,7 +933,7 @@ void func_800F8240_2560B0(void) {
     SleepProcess(30);
     SetBoardFeatureFlag(0x4F);
     func_800587BC(0x5D, 0, 3, 1);
-    func_8004CB20(1);
+    SetEventReturnFlag(1);
     EndProcess(NULL);
 }
 
@@ -1005,7 +1005,7 @@ void func_800F8298_256108(void) {
 void func_800F8514_256384(void) {
     SetBoardFeatureFlag(0x50);
     func_800587EC(0x5C, 0, 4);
-    func_8004CB20(1);
+    SetEventReturnFlag(1);
     SetPlayerOntoChain(0, 0x12, 1);
     SetPlayerOntoChain(1, 0x12, 1);
     SetPlayerOntoChain(2, 0x12, 1);

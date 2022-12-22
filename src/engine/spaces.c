@@ -1,12 +1,13 @@
+#include "process.h"
 #include "spaces.h"
 
-/* Set D_800D8118 with 10 "things" based on arg0. */
-void func_8004B860(s16 arg0) {
+
+void LoadSpaceTextures(s16 type) {
     int i;
     u32 *ptr;
 
-    D_800D8140 = arg0;
-    switch (arg0) {
+    D_800D8140 = type;
+    switch (type) {
         case 0:
             ptr = D_800C4FD4;
             break;
@@ -18,7 +19,7 @@ void func_8004B860(s16 arg0) {
             break;
     }
 
-    for (i = 0; i < 10; i++) {
+    for (i = 0; i < SPACE_TYPE_TOTAL; i++) {
         if (ptr[i] != 0) {
             D_800D8118[i] = ReadMainFS(ptr[i]);
         }
@@ -29,9 +30,9 @@ void func_8004B860(s16 arg0) {
 }
 
 /* Free D_800D8118. */
-void func_8004B92C() {
+void FreeSpaceTextures() {
     s32 i;
-    for (i = 0; i < 10; i++) {
+    for (i = 0; i < SPACE_TYPE_TOTAL; i++) {
         if (D_800D8118[i] != NULL) {
             FreeMainFS(D_800D8118[i]);
         }
@@ -40,35 +41,35 @@ void func_8004B92C() {
 }
 
 /* Set board as 0? */
-void func_8004B994() {
-    func_8004B860(0);
+void LoadInitialSpaceTextures() {
+    LoadSpaceTextures(0);
     D_800C4FD0 = NULL;
 }
 
-/* Wrapper for func_8004B92C? */
-void func_8004B9B8() {
-    func_8004B92C();
+void FreeSpaceTexturesWrapper() {
+    FreeSpaceTextures();
 }
 
 /* Free and then set D_800D8118 */
-void func_8004B9D4(s16 arg0) {
-    func_8004B92C();
-    func_8004B860(arg0);
+void ChangeSpaceTextures(s16 type) {
+    FreeSpaceTextures();
+    LoadSpaceTextures(type);
 }
 
 /* Rendering */
-void func_8004BA04(void **displayList, void *param_2, u8 param_3);
-INCLUDE_ASM(s32, "spaces", func_8004BA04);
+// TODO: https://decomp.me/scratch/Ccp3B ~90%
+void RenderSpaces(void **displayList, void *param_2, u8 param_3);
+INCLUDE_ASM(s32, "../src/engine/spaces", RenderSpaces);
 
 /* Get pointer to space data section */
-u8 *func_8004BDEC(u8 *byteSteam, s32 metaDataOffset) {
+u8 *GetSpaceDataStream(u8 *byteSteam, s32 metaDataOffset) {
     u16* pDataOffset = (u16*) &byteSteam[metaDataOffset];
     return &byteSteam[*pDataOffset];
 }
 
 void func_80028E8C(s16, void*); // Unk
 /* Load Board Related Data From File */
-s32 func_8004BDFC(s16 dir, s16 file) {
+s32 LoadBoardSpaces(s16 dir, s16 file) {
     //struct board_def *boarddef;
     u16* pDataStream;
     SpaceData *pSpaceData;
@@ -91,7 +92,7 @@ s32 func_8004BDFC(s16 dir, s16 file) {
 
         /* Load space data */
         D_800D8108 = (SpaceData*) MallocTemp(D_800D8100 * sizeof(SpaceData));
-        pDataStream = (u16*) func_8004BDEC(D_800C4FD0, 6);
+        pDataStream = (u16*) GetSpaceDataStream(D_800C4FD0, 6);
         for (i = 0, pSpaceData = D_800D8108; i < D_800D8100; i++, pSpaceData++) {
             Vec3f *pos;
             pSpaceData->unk0 = 1;
@@ -110,9 +111,9 @@ s32 func_8004BDFC(s16 dir, s16 file) {
 
         /* Load chain data 1 */
         D_800D810C = (ChainData*) MallocTemp(D_800D8102 * sizeof(ChainData));
-        chainOffsets = func_8004BDEC(D_800C4FD0, 8);
+        chainOffsets = GetSpaceDataStream(D_800C4FD0, 8);
         for (i = 0, pChainData = D_800D810C; i < D_800D8102; i++, pChainData++) {
-            pDataStream = (u16*) func_8004BDEC(chainOffsets, i * 2);
+            pDataStream = (u16*) GetSpaceDataStream(chainOffsets, i * 2);
             pChainData->len = *pDataStream;
             pDataStream++;
 
@@ -125,9 +126,9 @@ s32 func_8004BDFC(s16 dir, s16 file) {
 
         /* Load chain data 2 */
         D_800D8110 = (ChainData*) MallocTemp(D_800D8104  * sizeof(ChainData));
-        chainOffsets = func_8004BDEC(D_800C4FD0, 10);
+        chainOffsets = GetSpaceDataStream(D_800C4FD0, 10);
         for (i = 0, pChainData = D_800D8110; i < D_800D8104; i++, pChainData++) {
-            pDataStream = (u16*) func_8004BDEC(chainOffsets, i * 2);
+            pDataStream = (u16*) GetSpaceDataStream(chainOffsets, i * 2);
             pChainData->len = *pDataStream;
             pDataStream++;
 
@@ -139,14 +140,14 @@ s32 func_8004BDFC(s16 dir, s16 file) {
         }
 
         FreeMainFS(D_800C4FD0);
-        func_80028E8C(1, func_8004BA04);
+        func_80028E8C(1, RenderSpaces);
         D_800F3290 = 1;
     }
     return 0;
 }
 
 /* Free board temps */
-void func_8004C100() {
+void FreeBoardSpaces() {
    s32 i;
    ChainData *chainData;
 
@@ -255,7 +256,7 @@ void SetSpaceType(s16 spaceIndex, u8 spaceType) {
 }
 
 /* Change spaces of old type to new type on a given chain */
-void func_8004C4BC(u16 chainIndex, u16 oldType, u8 newType) {
+void SetSpaceTypeInChain(u16 chainIndex, u16 oldType, u8 newType) {
     s32 chainLen;
     s16 absIndex;
     SpaceData *space;
@@ -272,7 +273,7 @@ void func_8004C4BC(u16 chainIndex, u16 oldType, u8 newType) {
 }
 
 /* Space process */
-void func_8004C558() {
+void SpaceStepAnim() {
    Process *process;
    SpaceData *space;
    f32 fval;
@@ -299,14 +300,14 @@ void func_8004C558() {
 }
 
 /* Init Space Process. */
-void func_8004C61C(s16 spaceIndex) {
+void SetSpaceStepAnim(s16 spaceIndex) {
    Process *process;
-   process = InitProcess(func_8004C558, 0xEF00, 0, 0);
+   process = InitProcess(SpaceStepAnim, 0xEF00, 0, 0);
    process->user_data = (void *)(s32)spaceIndex;
 }
 
 /* Space process */
-void func_8004C660() {
+void SpaceDisappearAnim() {
    Process *process;
    SpaceData *space;
    f32 fval;
@@ -333,14 +334,14 @@ void func_8004C660() {
 }
 
 /* Init Space Process. */
-void func_8004C71C(s16 spaceIndex) {
+void SetSpaceDisappearAnim(s16 spaceIndex) {
    Process *process;
-   process = InitProcess(func_8004C660, 0xEF00, 0, 0);
+   process = InitProcess(SpaceDisappearAnim, 0xEF00, 0, 0);
    process->user_data = (void *)(s32)spaceIndex;
 }
 
 /* Space process */
-void func_8004C760() {
+void SpaceSpawnAnim() {
    Process *process;
    SpaceData *space;
    f32 fval;
@@ -367,9 +368,9 @@ void func_8004C760() {
 }
 
 /* Init Space process. */
-void func_8004C81C(s16 spaceIndex) {
+void SetSpaceSpawnAnim(s16 spaceIndex) {
    Process *process;
-   process = InitProcess(func_8004C760, 0xEF00, 0, 0);
+   process = InitProcess(SpaceSpawnAnim, 0xEF00, 0, 0);
    process->user_data = (void *)(s32)spaceIndex;
 }
 
@@ -463,8 +464,8 @@ s32 ExecuteEventForSpace(s16 index, s16 activationType) {
 }
 
 /* Set space event global return flags. */
-void func_8004CB20(s32 unk) {
-    D_800D8154 = unk;
+void SetEventReturnFlag(s32 flags) {
+    D_800D8154 = flags;
 }
 
 void SetCurrentSpaceIndex(s16 spaceIndex) {
