@@ -191,7 +191,7 @@ void func_800F922C_16E96C(unkObjectStruct* arg0, s32 arg1, s32 arg2, u16 arg3, f
     arg0->unk_30 = 1.0f;
     arg0->unk_34 = 1.0f;
     arg0->unk_38 = 1.0f;
-    func_800224A4((&D_800F2B7C[arg0->unk_40->unk_00.signed16[0]].unk7C), 0, 180.0f, 0);
+    func_800224A4(D_800F2B7C[arg0->unk_40->unk_00.signed16[0]].unk7C, 0, 180.0f, 0);
     func_80025830(arg0->unk_40->unk_00.unsigned16[1], arg0->unk_30, arg0->unk_34, arg0->unk_38);
     func_800257E4(arg0->unk_40->unk_00.unsigned16[1], arg0->unk_24, arg0->unk_28, arg0->unk_2C);
     func_80025798(arg0->unk_40->unk_00.unsigned16[1], arg0->unk_18, 1.0f, arg0->unk_20);

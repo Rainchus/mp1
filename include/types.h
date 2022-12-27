@@ -1,7 +1,7 @@
 #ifndef _TYPES_H_
 #define _TYPES_H_
 
-#include "ultratypes.h"
+#include "PR/ultratypes.h"
 
 
 typedef f32 Matrix4f[4][4];
