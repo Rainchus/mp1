@@ -1,4 +1,5 @@
 #include "common.h"
+#include "spaces.h"
 
 void func_800F6B0C_25751C(void);
 void func_800F66FC_25710C(void);

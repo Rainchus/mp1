@@ -366,34 +366,6 @@ typedef struct GameStatus {
 /* 0x1C */ s16 unk_1C;
 } GameStatus;
 
-typedef struct EventListEntry {
-    s16 activation_type;
-    s16 execution_type;
-    void (*event_fn)();
-} EventListEntry;
-
-typedef struct EventTableEntry {
-    s16 space_index;
-    EventListEntry* event_list;
-} EventTableEntry;
-
-typedef struct SpaceData {
-/* 0x00 */ s8 unk_00;
-/* 0x01 */ u8 space_type; // enum board_space_type
-/* 0x02 */ s16 unk_02;
-/* 0x04 */ Vec3f coords;
-/* 0x10 */ f32 sx;
-/* 0x14 */ f32 sy;
-/* 0x18*/  f32 sz;
-/* 0x1C */ EventListEntry* event_list;
-} SpaceData;
-
-typedef struct ChainData {
-    u16 len;
-    s16* space_indices;
-} ChainData;
-
-
 typedef struct mpSource_object_indirect2 {
     s16 unk0;
 } mpSource_object_indirect2;

@@ -16,7 +16,7 @@ INCLUDE_ASM(s32, "../src/engine/memory", MakeTempHeap);
 
 INCLUDE_ASM(s32, "../src/engine/memory", MallocTemp);
 
-INCLUDE_ASM(s32, "../src/engine/memory", func_8003B798);
+INCLUDE_ASM(s32, "../src/engine/memory", FreeTemp);
 
 INCLUDE_ASM(s32, "../src/engine/memory", func_8003B7B4);
 

@@ -212,7 +212,7 @@ void func_800F6DD8_2577E8(ovl_3E_HeapStruct* arg0) {
     func_80067704(arg0->unk4);
     func_80067704(arg0->unk6);
     func_80064D38(arg0->unk0);
-    func_8003B798((ProcessHeader*)arg0); //fake, fix later
+    FreeTemp(arg0);
 }
 
 
@@ -316,10 +316,10 @@ void func_800F73A0_257DB0(void) {
     playerMain* player = GetPlayerStruct(CURRENT_PLAYER);
     SpaceData* space = GetSpaceData(GetAbsSpaceIndexFromChainSpaceIndex(player->curChainIndex, player->curSpaceIndex));
 
-    SetPlayerLandedSpaceType(-1, space->space_type);
+    SetPlayerLandedSpaceType(-1, space->spaceType);
     func_800546B4(D_800ED5DC, player->turn_status);
 
-    switch (space->space_type) {
+    switch (space->spaceType) {
     case 1:
         ShowPlayerCoinChange(gameStatus->unk_1C, 3);
         func_80055960(gameStatus->unk_1C, 3);
