@@ -8,7 +8,7 @@ extern f32 D_800C3294;
 extern f32 D_800C3298;
 
 /* Translate Matrix. */
-void func_80022390(Mat4 mtx, f32 x, f32 y, f32 z) {
+void MtxTranslate(Mat4 mtx, f32 x, f32 y, f32 z) {
      mtx[3][0] = (x * mtx[0][0]) + (y * mtx[1][0]) + (z * mtx[2][0]) + mtx[3][0];
      mtx[3][1] = (x * mtx[0][1]) + (y * mtx[1][1]) + (z * mtx[2][1]) + mtx[3][1];
      mtx[3][2] = (x * mtx[0][2]) + (y * mtx[1][2]) + (z * mtx[2][2]) + mtx[3][2];
@@ -16,7 +16,7 @@ void func_80022390(Mat4 mtx, f32 x, f32 y, f32 z) {
 }
 
 /* Scale Matrix */
-void func_80022450(Mat4 mtx, f32 sx, f32 sy, f32 sz) {
+void MtxScale(Mat4 mtx, f32 sx, f32 sy, f32 sz) {
     s32 i;
     for (i = 0; i < 3; i++) {
         mtx[0][i] *= sx;
@@ -27,7 +27,7 @@ void func_80022450(Mat4 mtx, f32 sx, f32 sy, f32 sz) {
 
 /* Rotate Matrix. */
 extern void func_800AF2E0(f32, f32*, f32*);  // Get sin and cos of angle
-void func_800224A4(Mat4 mtx, f32 angle1, f32 angle2, f32 angle3) {    
+void MtxRotate(Mat4 mtx, f32 angle1, f32 angle2, f32 angle3) {    
     Mat3 rot;
     f32 sx, cx;
     f32 sy, cy;
@@ -91,7 +91,7 @@ void func_800224A4(Mat4 mtx, f32 angle1, f32 angle2, f32 angle3) {
 }
 
 /* Multiply 2 Matrices */
-void func_800227C4(Mat4 a, Mat4 b, Mat4 c) {
+void MtxMult(Mat4 a, Mat4 b, Mat4 c) {
     s32 i;
     f32 temp;
     f32  a0,  a1,  a2,  a3;
@@ -115,7 +115,7 @@ void func_800227C4(Mat4 a, Mat4 b, Mat4 c) {
 }  
 
 /* Calculate Inverse Matrix */
-s16 func_8002292C(Mat4 a, Mat4 b) {
+s16 MtxInv(Mat4 a, Mat4 b) {
     u32 success;
     f32 d0, d1, d2;
     f32 det;
@@ -150,10 +150,10 @@ s16 func_8002292C(Mat4 a, Mat4 b) {
 }
 
 /* Reset Pose */
-u32 func_80022AD0(Mat4 a, Mat4 b) {
+u32 MtxReset(Mat4 a, Mat4 b) {
     Mat4 invA;
     u32 success;
-    if (func_8002292C(a, invA)) {
+    if (MtxInv(a, invA)) {
         guMtxCatF(invA, a, b);
         success = TRUE;
     } else {
@@ -164,7 +164,7 @@ u32 func_80022AD0(Mat4 a, Mat4 b) {
 }
 
 /* Rotate X-Axis */
-void func_80022B30(Mat4 mtx, f32 angle) {
+void MtxRotateX(Mat4 mtx, f32 angle) {
     s32 i;
     f32 s, c;
     f32 vec[4];
@@ -184,7 +184,7 @@ void func_80022B30(Mat4 mtx, f32 angle) {
 }
 
 /* Rotate Y-Axis */
-void func_80022C00(Mat4 mtx, f32 angle) {
+void MtxRotateY(Mat4 mtx, f32 angle) {
     s32 i;
     f32 s, c;
     f32 vec[4];
@@ -204,7 +204,7 @@ void func_80022C00(Mat4 mtx, f32 angle) {
 }
 
 /* Rotate Z-Axis */
-void func_80022CCC(Mat4 mtx, f32 angle) {
+void MtxRotateZ(Mat4 mtx, f32 angle) {
     s32 i;
     f32 s, c;
     f32 vec[4];
