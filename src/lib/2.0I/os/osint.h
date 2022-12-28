@@ -44,8 +44,8 @@ extern u32 __osTimerCounter;
 
 
 // //not sure if this should be here
-// extern s32 osViClock;
-// extern void __osTimerServicesInit(void);
+extern s32 osViClock;
+extern void __osTimerServicesInit(void);
 extern s32 __osAiDeviceBusy(void);
 // extern int __osDpDeviceBusy(void);
 #endif

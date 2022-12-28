@@ -1,4 +1,6 @@
+#include "PR/os.h"
 #include "common.h"
+
 
 INCLUDE_ASM(s32, "../src/engine/pad", func_80013770);
 

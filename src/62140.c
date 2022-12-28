@@ -33,7 +33,7 @@ s32 func_80061784(s16* arg0) {
     temp_a2 = *arg0;
     
     if ((sp10 >> temp_a2) & 1) {
-        ret = func_80091230(&D_800EE960, &D_800D90D0[temp_a2], temp_a2);
+        ret = osPfsInitPak(&D_800EE960, &D_800D90D0[temp_a2], temp_a2);
     } else {
         ret = 1;
     }
@@ -46,7 +46,7 @@ void func_80061808(s16 arg0) {
 }
 
 void func_80061838(s16* arg0) {
-    func_80091A40(&D_800D90D0[*arg0]);
+    osPfsRepairId(&D_800D90D0[*arg0]);
 }
 
 
@@ -55,11 +55,11 @@ void func_80061874(s16 arg0) {
     func_800642FC(&sp10, func_80061838, &arg0, 2);
 }
 
-void func_800618A4(unk62140* arg0) {
-    arg0->unk_08 = 0;
-    arg0->unk_04 = 0;
-    if (func_80091500(&D_800D90D0[arg0->unk_00], &arg0->unk_04, &arg0->unk_08) == 0) {
-        func_80091120(&D_800D90D0[arg0->unk_00], &arg0->unk_0C);
+void func_800618A4(OSPfs* arg0) { // TODO: fix argument
+    arg0->channel = 0;
+    arg0->queue = NULL;
+    if (osPfsNumFiles(&D_800D90D0[((s16*)arg0)[0]], (s32*) &arg0->queue, (s32*) &arg0->channel) == 0) {
+        osPfsFreeBlocks(&D_800D90D0[((s16*)arg0)[0]], (void*) arg0->id);
     }
 }
 
@@ -75,10 +75,11 @@ s32 func_80061930(s16 arg0, s32* arg1, s32* arg2, s32* arg3) {
     return sp10.z;
 }
 
-void func_800619A0(unk62140* arg0) {
-    func_80090F90(&D_800D90D0[arg0->unk_00], arg0->unk_04, &arg0->unk_08);
+void func_800619A0(OSPfs* arg0) { // TODO: fix argument
+    u32 i = arg0->status;
+    osPfsFileState(&D_800D90D0[((s16*)arg0)[0]], (s32) arg0->queue, (OSPfsState *) &arg0->channel);
 }
-
+ 
 INCLUDE_ASM(s32, "62140", func_800619E8);
 
 INCLUDE_ASM(s32, "62140", func_80061A3C);

@@ -217,7 +217,41 @@ segments:
       - [0x8D090, c, "../src/lib/2.0I/libc/sprintf"]
       - [0x8D120, c, "../src/lib/2.0I/libc/syncprintf"]
       - [0x8D150, c, "../src/lib/2.0I/audio/csplayer"]
-      - [0x8E3B0, c] # -O0?
+      - [0x8E3B0, c, "../src/lib/2.0I/audio/seqplayer"]
+      - [0x8FD50, c, "../src/lib/2.0I/audio/synsetfxmix"]
+      - [0x8FDF0, c, "../src/lib/2.0I/audio/synthesizer"]
+      - [0x90430, c, "../src/lib/2.0I/io/aisetfreq"]
+      - [0x90550, c, "../src/lib/2.0I/io/cartrominit"] # TODO: Fix common (__CartRomHandle)
+      - [0x906D0, c, "../src/lib/2.0I/io/conteepprobe"]
+      - [0x90750, c, "../src/lib/2.0I/io/conteepread"] # TODO: Fix common (__osEepPifRam)
+      - [0x90970, c, "../src/lib/2.0I/io/conteepwrite"]
+      - [0x90D20, c, "../src/lib/2.0I/io/contreaddata"]
+      - [0x90F00, c, "../src/lib/2.0I/io/epirawdma"]
+      - [0x910F0, c, "../src/lib/2.0I/io/epiread"]
+      - [0x91150, c, "../src/lib/2.0I/io/epiwrite"]
+      - [0x911B0, c, "../src/lib/2.0I/io/motor"]
+      - [0x91540, c, "../src/lib/2.0I/io/pfsallocatefile"]
+      - [0x91970, c, "../src/lib/2.0I/io/pfsdeletefile"]
+      - [0x91B90, c, "../src/lib/2.0I/io/pfsfilestate"]
+      - [0x91D20, c, "../src/lib/2.0I/io/pfsfreeblocks"]
+      - [0x91E30, c, "../src/lib/2.0I/io/pfsinitpak"]
+      - [0x92100, c, "../src/lib/2.0I/io/pfsnumfiles"]
+      - [0x92200, c, "../src/lib/2.0I/io/pfsreadwritefile"]
+      - [0x92640, c, "../src/lib/2.0I/io/pfsrepairid"]
+      - [0x926A0, c, "../src/lib/2.0I/io/pfssearchfile"]
+      - [0x92840, c, "../src/lib/2.0I/io/pfsselectbank"]
+      - [0x928B0, c, "../src/lib/2.0I/io/pimgr"] # TODO: Fix common
+      - [0x92A40, c, "../src/lib/2.0I/io/pirawdma"]
+      - [0x92B10, c, "../src/lib/2.0I/io/sirawdma"]
+      - [0x92BC0, c, "../src/lib/2.0I/io/sprawdma"]
+      - [0x92C50, c, "../src/lib/2.0I/io/vimgr"] # TODO: Fix common
+      - [0x92F90, c, "../src/lib/2.0I/io/visetspecial"]
+      - [0x93100, c, "../src/lib/2.0I/io/viswapcontext"]
+      - [0x93410, c, "../src/lib/2.0I/os/afterprenmi"]
+      - [0x93430, hasm, "lib/2.0I/os/exceptasm"]
+      - [0x93DA0, c, "../src/lib/2.0I/os/getmemsize"]
+      # - [0x93E40, c, "../src/lib/2.0I/os/initialize"] 0x94120
+      - [0x93E40, c] # -O0?
       - [0xA2080, c] # -O0?
       - [0xA21C0, c] # -O0?
       - [0xA29F0, c] # -O0?
@@ -305,7 +339,10 @@ segments:
       - [0xC70E0, .data, "../src/lib/2.0I/io/aisetnextbuf"]
       - [0xC70F0, .data, "../src/lib/2.0I/io/controller"]
       - [0xC7100, .data, "../src/lib/2.0I/io/piacs"]
-      - [0xC7110, bin] # TODO: Figure this out 
+      - [0xC7110, .data, "../src/lib/2.0I/io/cartrominit"]
+      - [0xC7120, .data, "../src/lib/2.0I/io/pimgr"]
+      - [0xC7150, .data, "../src/lib/2.0I/io/vimgr"]
+      - [0xC7170, bin] # TODO: Figure this out 
   
   # 2.0I N64 lib .rodata sections
       #    - [0xCBC60, .rodata, 4D770]
@@ -318,14 +355,21 @@ segments:
       - [0xCD030, bin] # __osRcpImTable
       - [0xCD0B0, .rodata, "../src/lib/2.0I/audio/cseq"]
       - [0xCD110, .rodata, "../src/lib/2.0I/audio/csplayer"]
-      - [0xCD1C0, bin] # TODO: Figure this out 
+      - [0xCD210, .rodata, "../src/lib/2.0I/audio/seqplayer"]
+      - [0xCD230, .rodata, "../src/lib/2.0I/audio/synthesizer"]
+      - [0xCD240, .rodata, "../src/lib/2.0I/io/aisetfreq"]
+      - [0xCD250, .rodata, "../src/lib/2.0I/io/viswapcontext"]
+      - [0xCD260, bin] # TODO: Figure this out 
 
     # 2.0I N64 lib .bss sections
       - [0xCDA50, .bss, "../src/padding/bss_padding_1d330"] # TODO: Figure this out
       - [0xCDA50, .bss, "../src/lib/2.0I/io/sptask"]
       - [0xCDA50, .bss, "../src/lib/2.0I/io/controller"]
       - [0xCDA50, .bss, "../src/lib/2.0I/io/piacs"]
-      #- [0xCDA50, .bss, "../src/padding/bss_padding_b2b0"] # TODO: Figure this out
+      - [0xCDA50, .bss, "../src/lib/2.0I/io/motor"]
+      - [0xCDA50, .bss, "../src/lib/2.0I/io/pimgr"]
+      - [0xCDA50, .bss, "../src/lib/2.0I/io/vimgr"]
+      #- [0xCDA50, .bss, "../src/padding/bss_padding_b2b0"] # TODO: Figure this out (padding betwen bss and common?)
       #- [0xCDA50, .bss, "../src/lib/2.0I/io/pfsisplug"]
 
   - type: code
