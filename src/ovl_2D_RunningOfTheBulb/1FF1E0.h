@@ -41,9 +41,9 @@ extern s16 D_800FE4A4;
 extern f32 D_800FE364[][2];
 extern u16 D_800FE3A0;
 extern unkfloatStruct D_800EE738;
-extern s32 D_800FE484; //unknown type
-extern s32 D_800FE4B8; //unknown type
-extern s32 D_800FE468_ovl2D; //unknown type
+extern Vec3f D_800FE484;
+extern Vec3f D_800FE4B8;
+extern Vec3f D_800FE468_ovl2D;
 extern s16 D_800F3778;
 extern s16 D_800FE458;
 extern s16 D_800FE45A;

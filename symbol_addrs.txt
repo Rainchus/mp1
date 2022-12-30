@@ -110,6 +110,8 @@ InitObjSystem = 0x8005CF30;
 CreateObject = 0x8003DBE0;
 DestroyObject = 0x8003E694;
 
+HuMemAlloc = 0x80023668;
+
 LoadSpaceTextures = 0x8004B860;
 FreeSpaceTextures = 0x8004B92C;
 LoadInitialSpaceTextures = 0x8004B994;

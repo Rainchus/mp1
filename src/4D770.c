@@ -153,11 +153,11 @@ s16 GetTurnsElapsed(void) {
 }
 
 s32 func_8004D02C(s16 arg0, f32 arg1) {
-    unkGlobalStruct sp10;
+    Vec3f sp10;
 
-    sp10.unk_00 = D_800ECE14[arg0];
-    sp10.unk_04 = 0;
-    sp10.unk_08 = D_800F3843[arg0];
+    sp10.x = D_800ECE14[arg0];
+    sp10.y = 0.0f;
+    sp10.z = D_800F3843[arg0];
     
     if ((arg1 <= func_800A1200(&sp10))) {
         return 1;

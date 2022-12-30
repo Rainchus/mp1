@@ -288,8 +288,8 @@ void func_800F6FC4_2579D4(void) {
     }
 }
 
-void func_800F7090_257AA0(void) {
-    func_8005884C();
+void func_800F7090_257AA0(Vec3f* coords) {
+    func_8005884C(coords);
 }
 
 void func_800F70AC_257ABC(void) {
@@ -464,7 +464,7 @@ s32 func_800F81F8_258C08(s32 arg0) {
 }
 
 void func_800F83D4_258DE4(void) {
-    u8 sp10;
+    Vec2f coords;
     s32 playerIndex;
     s32 i;
 
@@ -482,8 +482,8 @@ void func_800F83D4_258DE4(void) {
         for (i = 0; i < 4; i++) {
             if (D_800EC6EA[i] & 0x1000) {
                 func_80041F84(playerIndex);
-                func_8004B6D8(&sp10);
-                func_8004B61C(&sp10);
+                func_8004B6D8(&coords);
+                func_8004B61C(&coords);
                 D_800ECC22 = 1;
                 func_8005FD7C();
                 D_800F384E = 1;
