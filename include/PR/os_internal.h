@@ -48,7 +48,7 @@ extern u32              __osSetFpcCsr(u32);
 extern u32              __osGetFpcCsr(void);
 
 /* Routine for HW interrupt "handler" */
-extern void		__osSetHWIntrRoutine(OSHWIntr, s32 (*handler)(void));
+extern void		__osSetHWIntrRoutine(OSHWIntr, s32 (*handler)(void), void *stackEnd);
 
 /* Routine for global interrupt mask */
 extern void		__osSetGlobalIntMask(OSHWIntr);

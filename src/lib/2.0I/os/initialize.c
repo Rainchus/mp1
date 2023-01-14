@@ -23,14 +23,14 @@ u32 __OSGlobalIntMask = OS_IM_ALL;
 u32 __osFinalrom;
 
 extern void __osSetWatchLo(u32);
-void __createSpeedParam(void);
+void __createSpeedParam();
 
 void __osInitialize_common() {
     u32 pifdata;
     __osFinalrom = TRUE;
     __osSetSR(__osGetSR() | SR_CU1);    //enable fpu
     __osSetFpcCsr(FPCSR_FS | FPCSR_EV); //flush denorm to zero, enable invalid operation
-    __osSetWatchLo(0x4900000);
+    // __osSetWatchLo(0x4900000);
 
     while (__osSiRawReadIo(PIF_RAM_END - 3, &pifdata)) { //last byte of joychannel ram
         ;
@@ -73,7 +73,7 @@ void __osInitialize_common() {
     IO_WRITE(AI_BITRATE_REG, AI_MAX_BIT_RATE - 1);
 }
 
-void __createSpeedParam(void) {
+void __createSpeedParam() {
     __Dom1SpeedParam.type = DEVICE_TYPE_INIT;
     __Dom1SpeedParam.latency = IO_READ(PI_BSD_DOM1_LAT_REG);
     __Dom1SpeedParam.pulse = IO_READ(PI_BSD_DOM1_PWD_REG);

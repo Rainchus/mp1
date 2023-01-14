@@ -313,6 +313,11 @@ alSynSetPan = 0x8007BF80;
 alCents2Ratio = 0x8008B160;
 alCSPNew = 0x8008C550;
 
+alAdpcmPull = 0x800939C0;
+alAuxBusPull = 0x800944D0;
+alMainBusPull = 0x800945E0;
+alResamplePull = 0x80094750;
+
 osAiSetFrequency = 0x8008F830;
 osAiGetLength = 0x8008B1C0;
 osAiSetNextBuffer = 0x8008B1D0;
@@ -428,6 +433,20 @@ __osDevMgrMain = 0x80098F90;
 __osPiRawStartDma = 0x80091E40;
 osAfterPreNMI = 0x80092810;
 
+__osGetCause = 0x80093770;
+__osGetSR = 0x80093790;
+__osSetFpcCsr = 0x80093860;
+__osSiRawReadIo = 0x80099F60;
+__osSiRawWriteIo = 0x80099FB0;
+__osExceptionPreamble = 0x80092830;
+osUnmapTLBAll = 0x80093870;
+osMapTLBRdb = 0x800938C0;
+osResetType = 0x8000030C;
+osAppNMIBuffer = 0x8000031C;
+osTvType = 0x80000300;
+
+__udivdi3 = 0x8009BE10;
+
 sinf = 0x80088060;
 cosf = 0x800855C0;
 __libm_qnan_f = 0x800CC6B0;
@@ -450,3 +469,8 @@ __osPiDevMgr2 = 0x800C6528;
 __Dom2SpeedParam = 0x800ED4B8;
 __Dom1SpeedParam = 0x800F3108;
 __additional_scanline = 0x800C656C;
+__osShutdown = 0x800C772C;
+__OSGlobalIntMask = 0x800C7730;
+__osFinalrom = 0x800F5458;
+__osEventStateTab = 0x800F5280;
+__osHwIntTable = 0x800C76F0;

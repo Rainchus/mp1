@@ -2,11 +2,11 @@
 #define _OSINT_H
 #include "PR/os_internal.h"
 
-// typedef struct __OSEventState
-// {
-//     OSMesgQueue *messageQueue;
-//     OSMesg message;
-// } __OSEventState;
+typedef struct __OSEventState
+{
+    OSMesgQueue *messageQueue;
+    OSMesg message;
+} __OSEventState;
 extern struct __osThreadTail
 {
     OSThread *next;
@@ -29,7 +29,7 @@ extern int     __osSpDeviceBusy(void);
 
 extern OSThread *__osRunningThread;
 extern OSThread *__osActiveQueue;
-// extern OSThread *__osFaultedThread;
+extern OSThread *__osFaultedThread;
 extern OSThread *__osRunQueue;
 
 extern OSTimer *__osTimerList;
@@ -38,9 +38,9 @@ extern OSTime __osCurrentTime;
 extern u32 __osBaseCounter;
 extern u32 __osViIntrCount;
 extern u32 __osTimerCounter;
-// extern u32 __osShutdown;
+extern u32 __osShutdown;
 
-// extern __OSEventState __osEventStateTab[OS_NUM_EVENTS];
+extern __OSEventState __osEventStateTab[OS_NUM_EVENTS];
 
 
 // //not sure if this should be here

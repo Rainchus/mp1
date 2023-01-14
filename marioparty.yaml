@@ -250,8 +250,25 @@ segments:
       - [0x93410, c, "../src/lib/2.0I/os/afterprenmi"]
       - [0x93430, hasm, "lib/2.0I/os/exceptasm"]
       - [0x93DA0, c, "../src/lib/2.0I/os/getmemsize"]
-      # - [0x93E40, c, "../src/lib/2.0I/os/initialize"] 0x94120
-      - [0x93E40, c] # -O0?
+      - [0x93E40, c, "../src/lib/2.0I/os/initialize"]
+      - [0x94120, hasm, "lib/2.0I/os/interrupt"]
+      - [0x941B0, c, "../src/lib/2.0I/os/seteventmesg"]
+      - [0x94260, c, "../src/lib/2.0I/os/sethwinterrupt"]
+      - [0x942C0, hasm, "lib/2.0I/mgu/guNormalize"]
+      - [0x94370, hasm, "lib/2.0I/os/getcause"]
+      - [0x94380, hasm, "lib/2.0I/os/getcount"]
+      - [0x94390, hasm, "lib/2.0I/os/getsr"]
+      - [0x943A0, hasm, "lib/2.0I/os/probetlb"]
+      - [0x94460, hasm, "lib/2.0I/os/setfpccsr"]
+      - [0x94470, hasm, "lib/2.0I/os/unmaptlball"]
+      - [0x944C0, hasm, "lib/2.0I/os/osmaptlbrdb"]
+      - [0x94520, c, "../src/lib/2.0I/os/settimer"]
+      - [0x945C0, c, "../src/lib/2.0I/audio/load"]
+      - [0x950D0, c, "../src/lib/2.0I/audio/auxbus"]
+      - [0x951E0, c, "../src/lib/2.0I/audio/mainbus"]
+      - [0x95350, c, "../src/lib/2.0I/audio/resample"]
+      - [0x95600, c, "../src/lib/2.0I/audio/seq"]
+      - [0x95BF0, c] # -O0?
       - [0xA2080, c] # -O0?
       - [0xA21C0, c] # -O0?
       - [0xA29F0, c] # -O0?
@@ -343,7 +360,10 @@ segments:
       - [0xC7120, .data, "../src/lib/2.0I/io/pimgr"]
       - [0xC7150, .data, "../src/lib/2.0I/io/vimgr"]
       - [0xC7170, bin] # TODO: Figure this out 
-  
+      - [0xC8320, .data, "../src/lib/2.0I/os/initialize"]
+      - [0xC8340, .data, "../src/lib/2.0I/os/seteventmesg"]
+      - [0xC8350, bin] # TODO: Figure this out 
+
   # 2.0I N64 lib .rodata sections
       #    - [0xCBC60, .rodata, 4D770]
       - [0xCCED0, .rodata, "../src/lib/2.0I/gu/cosf"]
@@ -360,6 +380,9 @@ segments:
       - [0xCD240, .rodata, "../src/lib/2.0I/io/aisetfreq"]
       - [0xCD250, .rodata, "../src/lib/2.0I/io/viswapcontext"]
       - [0xCD260, bin] # TODO: Figure this out 
+      - [0xCD2C0, .rodata, "../src/lib/2.0I/audio/resample"]
+      - [0xCD2F0, .rodata, "../src/lib/2.0I/audio/seq"]
+      - [0xCD320, bin] # TODO: Figure this out 
 
     # 2.0I N64 lib .bss sections
       - [0xCDA50, .bss, "../src/padding/bss_padding_1d330"] # TODO: Figure this out
