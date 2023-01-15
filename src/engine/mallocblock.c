@@ -1,11 +1,11 @@
-#include "common.h"
+#include "mallocblock.h"
 
-void func_800236A4(s32, s32);
+void* func_800236A4(s32, s32);
 
 INCLUDE_ASM(s32, "../src/engine/mallocblock", func_800235F0);
 
-void func_80023668(s32 arg0) {
-    func_800236A4(arg0, 0);
+void* HuMemAlloc(s32 size) {
+    return func_800236A4(size, 0);
 }
 
 INCLUDE_ASM(s32, "../src/engine/mallocblock", func_80023684);

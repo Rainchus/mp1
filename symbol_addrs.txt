@@ -110,6 +110,7 @@ InitObjSystem = 0x8005CF30;
 CreateObject = 0x8003DBE0;
 DestroyObject = 0x8003E694;
 
+HuMemAlloc = 0x80023668;
 MtxTranslate = 0x80022390;
 MtxScale = 0x80022450;
 MtxRotate = 0x800224A4;
