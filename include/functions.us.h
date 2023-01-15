@@ -3,6 +3,7 @@
 
 #include "types.h"
 #include "common_structs.h"
+#include "math.h"
 
 void func_8006EEB8(s16, u8, u8, s16, s16);
 void func_8006F3BC(s16, s16, s16, s32, s32);
@@ -156,7 +157,6 @@ void func_80008FD0(unkObjectStruct*, f32);
 void func_8000979C(unkObjectStruct*, s32, s32, u16, s32, s32);
 void func_8001874C(unkObjectStruct*, s32, s32, s32, s32);
 void func_800187D0(unkObjectStruct*, s32, s32, s32, s32);
-void func_800224A4(f32*, f32, f32, f32);
 void func_80009618(s32);
 void func_8002456C(s16);
 void func_800211BC(s16, u8);

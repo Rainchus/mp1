@@ -2,6 +2,7 @@
 #define _COMMON_STRUCTS_
 
 #include "types.h"
+#include "math.h"
 
 typedef struct Vec2f {
                f32 x;
@@ -477,8 +478,8 @@ typedef struct unk_ovl_2D_struct { //actually global??
     /* 0x54 */ char unk_54[0x18];
     /* 0x6C */ s32 unk_6C;
     /* 0x70 */ char pad70[0xC];
-    /* 0x7C */ f32 unk7C;
-    /* 0x7C */ char pad7C[0x40];
+    /* 0x7C */ Mat4 unk7C; // Transformation Matrix
+    /* 0x7C */ char padBC[0x4];
 } unk_ovl_2D_struct;
 
 typedef struct SubTextWindow {

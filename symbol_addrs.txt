@@ -110,6 +110,16 @@ InitObjSystem = 0x8005CF30;
 CreateObject = 0x8003DBE0;
 DestroyObject = 0x8003E694;
 
+MtxTranslate = 0x80022390;
+MtxScale = 0x80022450;
+MtxRotate = 0x800224A4;
+MtxMult = 0x800227C4;
+MtxInv = 0x8002292C;
+MtxReset = 0x80022AD0;
+MtxRotateX = 0x80022B30;
+MtxRotateY = 0x80022C00;
+MtxRotateZ = 0x80022CCC;
+
 LoadSpaceTextures = 0x8004B860;
 FreeSpaceTextures = 0x8004B92C;
 LoadInitialSpaceTextures = 0x8004B994;
