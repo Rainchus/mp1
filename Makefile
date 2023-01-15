@@ -140,6 +140,8 @@ build/src/lib/%.c.o: CPPFLAGS = -I include -I include/PR -I include/gcc -I $(BUI
 build/src/lib/2.0I/audio/synsetpan.c.o: OPTFLAGS = -O0
 build/src/lib/2.0I/audio/synstartvoiceparam.c.o: OPTFLAGS = -O0
 
+build/src/engine/math.c.o: CFLAGS = -G0 -mips3 -mgp32 -mfp32 -D_LANGUAGE_C
+
 # mul nops included in the 48D90.c (Maybe only one func uses --vr4300mul-off)
 build/src/48D90.c.o: CFLAGS = -G0 -mips3 -mgp32 -mfp32 -D_LANGUAGE_C
 
