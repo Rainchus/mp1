@@ -1,4 +1,5 @@
-#include "common.h"
+#include "data.h"
+
 
 extern u16 D_800EC6EA[4];
 extern u16 D_800EDEB4[4];
@@ -46,18 +47,6 @@ void func_80014220() {
 
 INCLUDE_ASM(s32, "../src/engine/data", func_8001429C);
 
-// 16 byte portion of a directory or file table, which is initially read from ROM.
-typedef struct mainfsTableHeader {
-    s32 count;
-    s32 offsets[3]; // Enough to pad to size 16
-} mainfsTableHeader;
-
-typedef struct mainfsEntryInfo {
-    u8 *file_bytes;
-    s32 size;
-    s32 compression_type;
-} mainfsEntryInfo;
-
 extern void *D_800D12F0; // FS ROM location
 extern u32 D_800D12F4; // Directory count
 extern s32 *D_800D12F8; // Directory offset table pointer.
@@ -66,23 +55,23 @@ extern void *D_800D12FC; // FS ROM location (copy)
 extern u32 D_800D1300; // Directory count (copy)
 extern s32 *D_800D1304; // Directory offset table pointer (copy)
 
-extern struct mainfsTableHeader D_800D1310;
+extern HuArchive D_800D1310;
 
 extern void *func_80014678(s32, s32);
 extern void *func_800146D4(s32, s32);
 extern void func_80014770(s32, s32);
-extern void func_80014504(s32 type, s32 index, mainfsEntryInfo* info);
+extern void func_80014504(s32 type, s32 index, HuFileInfo* info);
 
 // Initialize file system from ROM.
 void func_80014460(void* fs_rom_loc) {
     s32 dir_table_size;
-    mainfsTableHeader* mainfs_table_header;
+    HuArchive* archiveHeader;
 
     D_800D12F0 = fs_rom_loc;
-    mainfs_table_header = &D_800D1310;
-    func_80061FE8(fs_rom_loc, mainfs_table_header, 16); // ExecRomCopy
-    D_800D12F4 = mainfs_table_header->count;
-    dir_table_size = mainfs_table_header->count * 4;
+    archiveHeader = &D_800D1310;
+    func_80061FE8(fs_rom_loc, archiveHeader, 16); // ExecRomCopy
+    D_800D12F4 = archiveHeader->count;
+    dir_table_size = archiveHeader->count * 4;
     D_800D12F8 = (s32 *)MallocPerm(dir_table_size);
     func_80061FE8(fs_rom_loc + 4, D_800D12F8, dir_table_size);
     D_800D12FC = D_800D12F0;
@@ -90,24 +79,24 @@ void func_80014460(void* fs_rom_loc) {
     D_800D1304 = D_800D12F8;
 }
 
-void func_80014504(s32 type, s32 index, mainfsEntryInfo* info) {
-    mainfsTableHeader* mainfs_table_header;
+void func_80014504(s32 type, s32 index, HuFileInfo* info) {
+    HuArchive* archiveHeader;
 
-    mainfs_table_header = &D_800D1310;
+    archiveHeader = &D_800D1310;
 
     switch (type) {
         case 0x2F:
-            info->file_bytes = (u8 *)D_800D12F0 + D_800D12F8[index];
+            info->bytes = (u8 *)D_800D12F0 + D_800D12F8[index];
             break;
         case 0x2E:
-            info->file_bytes = (u8 *)D_800D12FC + D_800D1304[index];
+            info->bytes = (u8 *)D_800D12FC + D_800D1304[index];
             break;
     }
 
-    func_80061FE8(info->file_bytes, mainfs_table_header, 16); // ExecRomCopy
-    info->file_bytes += 8;
-    info->size = mainfs_table_header->count;
-    info->compression_type = mainfs_table_header->offsets[0];
+    func_80061FE8(info->bytes, archiveHeader, 16); // ExecRomCopy
+    info->bytes += 8;
+    info->size = archiveHeader->count;
+    info->compType = archiveHeader->offsets[0];
 }
 
 /*
@@ -158,13 +147,13 @@ void* func_80014614(s32 dirAndFile) {
  * Read file, allocate space in perm heap, decode it.
 */
 void *func_80014678(s32 type, s32 index) {
-    mainfsEntryInfo info;
+    HuFileInfo info;
     void* ret;
 
     func_80014504(type, index, &info);
     ret = MallocPerm((info.size + 1) & -2);
     if (ret != NULL) {
-        DecodeFile(info.file_bytes, ret, info.size, info.compression_type);
+        DecodeFile(info.bytes, ret, info.size, info.compType);
     }
     return ret;
 }
@@ -173,13 +162,13 @@ void *func_80014678(s32 type, s32 index) {
  * Read file, allocate space in temp heap, decode it.
 */
 void* func_800146D4(s32 type, s32 index) {
-    mainfsEntryInfo info;
+    HuFileInfo info;
     void* ret;
 
     func_80014504(type, index, &info);
     ret = MallocTemp((info.size + 1) & -2);
     if (ret != NULL) {
-        DecodeFile(info.file_bytes, ret, info.size, info.compression_type);
+        DecodeFile(info.bytes, ret, info.size, info.compType);
     }
     return ret;
 }
@@ -229,7 +218,7 @@ INCLUDE_ASM(s32, "../src/engine/data", func_80014770);
 // }
 
 void* func_80014828(s32 arg0, s32 arg1) {
-    mainfsEntryInfo sp10;
+    HuFileInfo sp10;
     unkMallocPermStruct* temp_s0;
 
     temp_s0 = MallocPerm(sizeof(unkMallocPermStruct));
@@ -238,11 +227,11 @@ void* func_80014828(s32 arg0, s32 arg1) {
     } else {
         func_80014504(arg0, arg1, &sp10);
         temp_s0->unk4 = sp10.size;
-        temp_s0->unk0 = (u16)sp10.compression_type;
+        temp_s0->unk0 = (u16)sp10.compType;
         temp_s0->unk8 = MallocPerm(0x400);
         temp_s0->unkC = 1;
         temp_s0->unkE = 0;
-        temp_s0->unk10 = temp_s0->unk14 = sp10.file_bytes;
+        temp_s0->unk10 = temp_s0->unk14 = sp10.bytes;
         return temp_s0;
     }
 }

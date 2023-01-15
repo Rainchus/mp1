@@ -14,6 +14,10 @@ typedef struct Vec2s {
                s16 y;
 } Vec2s;
 
+typedef struct {
+    u16 x, y;
+} Vec2hu;
+
 typedef struct Vec2w {
                s32 x;
                s32 y;
@@ -448,12 +452,6 @@ typedef struct unkStructTest {
 /* 0x1C */ s16 unk_1A;
 /* 0x1E */ s16 unk_1C;
 } unkStructTest;
-
-typedef struct unkGlobalStruct {
-    f32 unk_00;
-    s32 unk_04;
-    f32 unk_08;
-} unkGlobalStruct;
 
 typedef struct unk_Struct02 {
     char unk_00[0x0A];
