@@ -112,7 +112,16 @@ INCLUDE_ASM(s32, "ovl_61_OpeningScene/29B410", func_800FB91C_2A074C);
 
 INCLUDE_ASM(s32, "ovl_61_OpeningScene/29B410", func_800FB97C_2A07AC);
 
-INCLUDE_ASM(s32, "ovl_61_OpeningScene/29B410", func_800FBAC0_2A08F0);
+s32 func_800FC394_2A11C4(s32);
+void func_8004B1B8(void);
+
+s32 func_800FBAC0_2A08F0(void) {
+    func_800178A0(1);
+    func_800FC394_2A11C4(0);
+    LoadBackgroundData(&D_FE2310);
+    func_8004B1B8();
+    return 1;
+}
 
 INCLUDE_ASM(s32, "ovl_61_OpeningScene/29B410", func_800FBAFC_2A092C);
 
@@ -186,4 +195,8 @@ INCLUDE_ASM(s32, "ovl_61_OpeningScene/29B410", func_800FCE9C_2A1CCC);
 
 INCLUDE_ASM(s32, "ovl_61_OpeningScene/29B410", func_800FCECC_2A1CFC);
 
-INCLUDE_ASM(s32, "ovl_61_OpeningScene/29B410", func_800FCEE8_2A1D18);
+extern f32 D_800FD794;
+
+void func_800FCEE8_2A1D18(f32 arg0) {
+    D_800FD794 = arg0;
+}
