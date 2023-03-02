@@ -1,5 +1,6 @@
 #include "common.h"
 #include "29B410.h"
+#include "process.h"
 
 void func_800F65E0_29B410(void) {
     Vec3s sp18;
@@ -194,7 +195,6 @@ INCLUDE_ASM(s32, "ovl_61_OpeningScene/29B410", func_800FC6BC_2A14EC);
 
 INCLUDE_ASM(s32, "ovl_61_OpeningScene/29B410", func_800FC724_2A1554);
 
-extern void SleepProcess();                                  /* extern */
 extern s32 func_800FC724_2A1554(void);                           /* extern */
 
 void func_800FC758_2A1588(void) {
