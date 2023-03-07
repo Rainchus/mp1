@@ -1,5 +1,6 @@
 #include "common.h"
 #include "29B410.h"
+#include "process.h"
 
 void func_800F65E0_29B410(void) {
     Vec3s sp18;
@@ -99,7 +100,14 @@ INCLUDE_ASM(s32, "ovl_61_OpeningScene/29B410", func_800FB670_2A04A0);
 
 INCLUDE_ASM(s32, "ovl_61_OpeningScene/29B410", func_800FB79C_2A05CC);
 
-INCLUDE_ASM(s32, "ovl_61_OpeningScene/29B410", func_800FB7F8_2A0628);
+extern Vec3f D_800FD6F4;
+
+void func_800FB7F8_2A0628(f32 x, f32 y, f32 z) {
+    D_800FD6F4.x = x;
+    D_800FD6F4.y = y;
+    D_800FD6F4.z = z;
+}
+
 
 INCLUDE_ASM(s32, "ovl_61_OpeningScene/29B410", func_800FB810_2A0640);
 
@@ -129,13 +137,25 @@ INCLUDE_ASM(s32, "ovl_61_OpeningScene/29B410", func_800FBB94_2A09C4);
 
 INCLUDE_ASM(s32, "ovl_61_OpeningScene/29B410", func_800FBC9C_2A0ACC);
 
-INCLUDE_ASM(s32, "ovl_61_OpeningScene/29B410", func_800FBCC0_2A0AF0);
+Object* func_800FBCC0_2A0AF0(s32 arg0, void* arg1) {
+    Object* temp_v0;
+
+    temp_v0 = CreateObject(arg0, arg1);
+    func_80025F60(*temp_v0->unk_3C->unk_40, 0x800);
+    func_80025F60(*temp_v0->unk_40->unk_40, 0x400);
+    return temp_v0;
+}
+
 
 INCLUDE_ASM(s32, "ovl_61_OpeningScene/29B410", func_800FBD14_2A0B44);
 
 INCLUDE_ASM(s32, "ovl_61_OpeningScene/29B410", func_800FBD48_2A0B78);
 
-INCLUDE_ASM(s32, "ovl_61_OpeningScene/29B410", func_800FBD7C_2A0BAC);
+s32 func_8004E184(void);                                  /* extern */
+
+void func_800FBD7C_2A0BAC(void) {
+    func_8004E184();
+}
 
 INCLUDE_ASM(s32, "ovl_61_OpeningScene/29B410", func_800FBD98_2A0BC8);
 
@@ -175,7 +195,13 @@ INCLUDE_ASM(s32, "ovl_61_OpeningScene/29B410", func_800FC6BC_2A14EC);
 
 INCLUDE_ASM(s32, "ovl_61_OpeningScene/29B410", func_800FC724_2A1554);
 
-INCLUDE_ASM(s32, "ovl_61_OpeningScene/29B410", func_800FC758_2A1588);
+extern s32 func_800FC724_2A1554(void);                           /* extern */
+
+void func_800FC758_2A1588(void) {
+    func_800FC724_2A1554();
+    SleepProcess(2);
+}
+
 
 INCLUDE_ASM(s32, "ovl_61_OpeningScene/29B410", func_800FC77C_2A15AC);
 
