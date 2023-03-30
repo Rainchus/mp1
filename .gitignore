@@ -6,6 +6,8 @@ build/
 assets/
 marioparty.ld
 ctx.c
+build.ninja
+.ninja_log
 .vscode/configurationCache.log
 .vscode/dryrun.log
 .vscode/targets.log
