@@ -18,6 +18,17 @@ else:
         MAKE = 'gmake'
         CPPFLAGS += '-xc++'
 
+# fix patch applied by mod_configure if it exist
+# open the file for reading
+with open('src/engine/gameman.c', 'r') as f:
+    filedata = f.read()
+
+# replace the string 'cPerFrameFunction' with 'SleepVProcess'
+newdata = filedata.replace('cPerFrameFunction', 'SleepVProcess')
+
+# open the file for writing and write the updated content
+with open('src/engine/gameman.c', 'w') as f:
+    f.write(newdata)
 
 with open('build.ninja', 'w') as f:
     f.write(f'DETECTED_OS = {DETECTED_OS}\n')
@@ -143,6 +154,8 @@ with open('build.ninja', 'a') as outfile:
     # Write the rules for the .s files
     for s_file in s_files:
         if "asm/nonmatchings" in s_file:
+            continue
+        if "src/mod" in os.path.relpath(s_file):
             continue
         outfile.write("build build/" + os.path.splitext(s_file)[0] + ".s.o: " + "s_file " + s_file + "\n")
 

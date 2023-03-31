@@ -5,7 +5,14 @@
             "name": "mp1",
             "compilerPath": "/usr/bin/gcc",
             "compilerArgs": [
-                "-m32"
+                "-m32",
+                "-I.",
+                "-I include",
+                "-I include/PR",
+                "-I include/engine",
+                "-I include/gcc",
+                "-I build/include",
+                "-I src"
             ],
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
@@ -16,7 +23,8 @@
             },
             "includePath": [
                 "${workspaceFolder}/include",
-                "${workspaceFolder}/src"
+                "${workspaceFolder}/src",
+                "/usr/include/x86_64-linux-gnu"
             ],
             "defines": [
                 "F3DEX_GBI_2",

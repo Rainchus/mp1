@@ -4,6 +4,7 @@ undefined_syms_auto.txt
 asm/
 build/
 assets/
+mod/
 marioparty.ld
 ctx.c
 build.ninja

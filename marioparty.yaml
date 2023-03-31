@@ -1943,4 +1943,5 @@ segments:
     start: 0xFE2310
   - type: bin
     start: 0xFE24BC
+  - [0x1CED490, bin, romPadding]
   - [0x2000000]
