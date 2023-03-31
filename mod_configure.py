@@ -98,21 +98,21 @@ with open('asm/nonmatchings/59E80/func_8005B6D0.s', 'r') as file:
     # Read the contents of the file
     lines = file.readlines()
 
-# Replace lines 10 through 26 with the new text
-lines[10:22] = [
-    '/* 6BA94 80090694 */  lui $a0, %hi(mod_ROM_START)\n',
-    '/* 6BA98 80090698 */  addiu $a0, $a0, %lo(mod_ROM_START)\n',
-    '/* 6BA9C 8009069C */  lui $a1, %hi(mod_VRAM)\n',
-    '/* 6BAA0 800906A0 */  addiu $a0, $a0, %lo(mod_VRAM)\n',
-    '/* 6BAA4 800906A4 */  lui $a2, %hi(mod_ROM_END)\n',
-    '/* 6BAA8 800906A8 */  addiu $a2, $a2, %lo(mod_ROM_END)\n',
-    '/* 6BAAC 800906AC */  lui $a3, %hi(mod_ROM_START)\n',
-    '/* 6BAB0 800906B0 */  addiu $a3, $a3, %lo(mod_ROM_START)\n',
-    '/* 6BAB4 800906B4 */  subu $a2, $a2, $a3\n',
-    '/* 6BAB8 800906B8 */  jal HuRomDmaCodeRead\n',
-    '/* 6BABC 800906BC */  nop\n',
-    '/* 6BAC0 800906C0 */  J mod_boot_func\n',
-    '/* 6BAC4 800906C4 */  nop\n'
+# Replace lines 9 through 23 with the new text
+lines[9:23] = [
+    '/* 5C2E8 8005B6E8 */  lui $a0, %hi(mod_ROM_START)\n',
+    '/* 5C2EC 8005B6EC */  addiu $a0, $a0, %lo(mod_ROM_START)\n',
+    '/* 5C2F0 8005B6F0 */  lui $a1, %hi(mod_VRAM)\n',
+    '/* 5C2F4 8005B6F4 */  addiu $a0, $a0, %lo(mod_VRAM)\n',
+    '/* 5C2F8 8005B6F8 */  lui $a2, %hi(mod_ROM_END)\n',
+    '/* 5C2FC 8005B6FC */  addiu $a2, $a2, %lo(mod_ROM_END)\n',
+    '/* 5C300 8005B700 */  lui $a3, %hi(mod_ROM_START)\n',
+    '/* 5C304 8005B704 */  addiu $a3, $a3, %lo(mod_ROM_START)\n',
+    '/* 5C308 8005B708 */  subu $a2, $a2, $a3\n',
+    '/* 5C30C 8005B70C */  jal HuRomDmaCodeRead\n',
+    '/* 5C310 8005B710 */  nop\n',
+    '/* 5C314 8005B714 */  J mod_boot_func\n',
+    '/* 5C318 8005B718 */  nop\n'
 ]
 
 # Open the file for writing
@@ -141,9 +141,7 @@ with open(filepath, "w") as f:
 
 file_path = "src/mod/mod_boot_func_hook.s"
 
-if os.path.exists(file_path):
-    print(f"{file_path} exists.")
-else:
+if not os.path.exists(file_path):
     with open(file_path, "w") as f:
         f.write("""\
 	.include "macro.inc"
@@ -178,9 +176,7 @@ nop
 
 file_path = "src/mod/mod_main.c"
 
-if os.path.exists(file_path):
-    print(f"{file_path} exists.")
-else:
+if not os.path.exists(file_path):
     with open(file_path, "w") as f:
         f.write("""\
 #include "common.h"
@@ -193,6 +189,7 @@ void cPerFrameFunction(void) {
     SleepVProcess(); //restore from hook
 }
 """)
+
 
 
 filename = 'marioparty.ld'
@@ -208,79 +205,62 @@ line_number = line_number + 1
 with open(filename, 'r') as file:
     lines = file.readlines()
 
-
 lines.insert(line_number, "\n\t__romPos = 0x2000000;\n")
-lines.insert(line_number + 1, "\tmod_ROM_START = __romPos;\n")
-lines.insert(line_number + 2, "\tmod_VRAM = ADDR(.mod);\n")
-lines.insert(line_number + 3, "\t.mod 0x80400000 : AT(mod_ROM_START) SUBALIGN(16)\n")
-lines.insert(line_number + 4, "\t{\n")
-lines.insert(line_number + 5, "\t\tmod_TEXT_START = .;\n")
-line_number += 6
-
-for index, line in enumerate(lines):
-    if 'romPadding_VRAM_END' in line:
-        for filename_c in os.listdir(mod_directory):
-            if filename_c.endswith('.c'):
-                lines.insert(line_number, f"\t\tbuild/{mod_directory}/{filename_c}.o(.text);\n")
-                line_number += 1
-            elif filename_c.endswith('.s'):
-                lines.insert(line_number, f"\t\tbuild/{mod_directory}/{filename_c}.o(.text);\n")
-                line_number += 1
-        break
-
-
-
-lines.insert(line_number, "\t\tmod_RODATA_START = .;\n")
 line_number += 1
 
-for index, line in enumerate(lines):
-    if 'romPadding_VRAM_END' in line:
-        for filename_c in os.listdir(mod_directory):
-            if filename_c.endswith('.c'):
-                lines.insert(line_number, f"\t\tbuild/{mod_directory}/{filename_c}.o(.rodata);\n")
-                line_number += 1
-            elif filename_c.endswith('.s'):
-                lines.insert(line_number, f"\t\tbuild/{mod_directory}/{filename_c}.o(.rodata);\n")
-                line_number += 1
-        break
+main_dir = "src/mod/"
+previous_vram_end = "0x80400000"
 
+###
+def insert_section(lines, line_number, mod_directory, section_name):
+    for filename_c in os.listdir(mod_directory):
+        if filename_c.endswith(('.c', '.s')):
+            lines.insert(line_number, f"\t\tbuild/{mod_directory}/{filename_c}.o({section_name});\n")
+            line_number += 1
+    return line_number
 
+for root, dirs, files in os.walk(main_dir):
+    prefix = root.replace(main_dir, "").replace("/", "_")
+    if prefix:
+        prefix += "_"
+    else:
+        prefix = "mod_"
 
-lines.insert(line_number, "\t\tmod_DATA_START = .;\n")
-line_number += 1        
+    lines.insert(line_number, f"\t{prefix}ROM_START = __romPos;\n")
+    lines.insert(line_number + 1, f"\t{prefix}VRAM = ADDR(.{prefix.rstrip('_')});\n")
+    vram_address = previous_vram_end if prefix != "mod_" else "0x80400000"
+    lines.insert(line_number + 2, f"\t.{prefix.rstrip('_')} {vram_address} : AT({prefix}ROM_START) SUBALIGN(16)\n")
+    lines.insert(line_number + 3, "\t{\n")
+    line_number += 4
 
-for index, line in enumerate(lines):
-    if 'romPadding_VRAM_END' in line:
-        for filename_c in os.listdir(mod_directory):
-            if filename_c.endswith('.c'):
-                lines.insert(line_number, f"\t\tbuild/{mod_directory}/{filename_c}.o(.data);\n")
-                line_number += 1
-            elif filename_c.endswith('.s'):
-                lines.insert(line_number, f"\t\tbuild/{mod_directory}/{filename_c}.o(.data);\n")
-                line_number += 1
-        break
+    lines.insert(line_number, f"\t\t{prefix}TEXT_START = .;\n")
+    line_number += 1
+    line_number = insert_section(lines, line_number, root.rstrip('/'), ".text")
 
+    lines.insert(line_number, f"\t\t{prefix}RODATA_START = .;\n")
+    line_number += 1
+    line_number = insert_section(lines, line_number, root.rstrip('/'), ".rodata")
 
+    lines.insert(line_number, f"\t\t{prefix}DATA_START = .;\n")
+    line_number += 1
+    line_number = insert_section(lines, line_number, root.rstrip('/'), ".data")
 
-lines.insert(line_number, "\t\tmod_BSS_START = .;\n")
-line_number += 1
+    lines.insert(line_number, f"\t\t{prefix}BSS_START = .;\n")
+    line_number += 1
+    line_number = insert_section(lines, line_number, root.rstrip('/'), ".bss")
 
-for index, line in enumerate(lines):
-    if 'romPadding_VRAM_END' in line:
-        for filename_c in os.listdir(mod_directory):
-            if filename_c.endswith('.c'):
-                lines.insert(line_number, f"\t\tbuild/{mod_directory}/{filename_c}.o(.bss);\n")
-                line_number += 1
-            elif filename_c.endswith('.s'):
-                lines.insert(line_number, f"\t\tbuild/{mod_directory}/{filename_c}.o(.bss);\n")
-                line_number += 1
-        break
+    lines.insert(line_number, "\t}\n")
+    lines.insert(line_number + 1, f"\t__romPos += SIZEOF(.{prefix.rstrip('_')});\n")
+    lines.insert(line_number + 2, f"\t{prefix}ROM_END = __romPos;\n")
+    lines.insert(line_number + 3, f"\t{prefix}VRAM_END = .;\n")
+    line_number += 4
 
-lines.insert(line_number, "\t}\n")
-lines.insert(line_number + 1, "\t__romPos += SIZEOF(.mod);\n")
-lines.insert(line_number + 2, "\tmod_ROM_END = __romPos;\n")
-lines.insert(line_number + 3, "\tmod_VRAM_END = .;\n")
-line_number += 4
+    previous_vram_end = f"{prefix}VRAM_END"
+
+###
+
+with open(filename, 'w') as file:
+    file.writelines(lines)
 
 with open(filename, 'w') as file:
     file.writelines(lines)
