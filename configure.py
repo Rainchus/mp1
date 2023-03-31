@@ -4,6 +4,8 @@ import subprocess
 dir_path = 'src/'
 asm_path = 'asm/'
 assets_path = 'assets/'
+optO0_files = ['synsetpan.c', 'synstartvoiceparam.c', 'ABCD0.c', 'ACA90.c', 'ACCB0.c', 'ACF80.c', 'AD380.c', 'AD740.c', 'ADA70.c', 'ADBD0.c', 'ADF70.c', 'AE150.c', 'AE630.c', 'AE820.c', 'AED10.c', 'AEF30.c', 'AF450.c', 'AF6C0.c', 'AF960.c', 'AFBD0.c', 'AFE60.c', 'AFF70.c', 'B07B0.c', 'B0BA0.c', 'B0FC0.c', 'B1930.c', 'B1B60.c', 'B1DC0.c', 'B1FD0.c', 'B22E0.c', 'B2310.c', '89EA0.c', 'A2080.c', 'A21C0.c', 'A3370.c']
+misc_files = ["48D90.c", "math.c"]
 
 if os.name == 'nt':
     DETECTED_OS = 'windows'
@@ -31,7 +33,7 @@ header = (
     'LD_MAP = $BUILD_PATH/marioparty.map\n'
     'ASFLAGS = -G 0 -I include -mips3 -mabi=32\n'
     'CFLAGS = -G0 -mips3 -mgp32 -mfp32 -Wa,--vr4300mul-off -D_LANGUAGE_C\n'
-    'CPPFLAGS = -I. -I include -I include/PR -I include/engine -I include/gcc -I build/include -I src -DF3DEX_GBI_2\n'
+    'CPPFLAGS = -I. -I include -I include/PR -I include/engine -I include/gcc -I build/include -I src -DF3DEX_GBI_2 -DNDEBUG\n'
     'LDFLAGS = -T symbol_addrs.txt -T undefined_syms.txt -T undefined_funcs.txt -T undefined_funcs_auto.txt -T undefined_syms_auto.txt -T $LD_SCRIPT -Map $LD_MAP --no-check-sections\n'
     'CHECK_WARNINGS = -Wall -Wextra -Wno-format-security -Wno-unused-parameter -Wno-sign-compare -Wno-unused-variable -Wno-pointer-to-int-cast -Wno-int-to-pointer-cast -m32\n'
     'CFLAGS_CHECK = -fsyntax-only -fsigned-char -nostdinc -fno-builtin -D CC_CHECK -D _LANGUAGE_C -std=gnu90 $CHECK_WARNINGS\n'
@@ -41,6 +43,18 @@ header = (
     'STRIP = mips-linux-gnu-strip\n'
     'OPTFLAGS = -O1\n'
     'MAKE_EXPECTED = tools/make_expected.py\n'
+    '\n'
+
+    'rule misc_cc\n'
+    '  command = (export COMPILER_PATH=tools/gcc_2.7.2/$DETECTED_OS && $CC $OPTFLAGS -G0 -mips3 -mgp32 -mfp32 -D_LANGUAGE_C $CPPFLAGS -c -o $out $in) && ($STRIP $out -N dummy-symbol-name)\n'
+    '\n'
+
+    'rule lib_cc\n'
+    '  command = (export COMPILER_PATH=tools/gcc_2.7.2/$DETECTED_OS && $CC -O3 -funsigned-char -G0 -mips3 -mgp32 -mfp32 -D_MIPS_SZLONG=32 -D_LANGUAGE_C -DF3DEX_GBI -I include -I include/PR -I include/gcc -I build/include -I src -DNDEBUG -D_MIPS_SZLONG=32 -DF3DEX_GBI_2 -c -o $out $in) && ($STRIP $out -N dummy-symbol-name)\n'
+    '\n'
+
+    'rule O0_cc\n'
+    '  command = (export COMPILER_PATH=tools/gcc_2.7.2/$DETECTED_OS && $CC -O0 $CFLAGS $CPPFLAGS -c -o $out $in) && ($STRIP $out -N dummy-symbol-name)\n'
     '\n'
 
     'rule main_cc\n'
@@ -115,7 +129,14 @@ with open('build.ninja', 'a') as outfile:
             folder_name = os.path.basename(os.path.dirname(c_file))
             if folder_name == "mod":
                 continue # skip over the file
-            outfile.write("build build/" + os.path.splitext(c_file)[0] + ".c.o: " + "main_cc " + c_file + "\n")
+            if os.path.basename(c_file) in misc_files:
+                outfile.write("build build/" + os.path.splitext(c_file)[0] + ".c.o: " + "misc_cc " + c_file + "\n")
+            elif os.path.basename(c_file) in optO0_files:
+                outfile.write("build build/" + os.path.splitext(c_file)[0] + ".c.o: " + "O0_cc " + c_file + "\n")
+            elif "src/lib" in os.path.relpath(c_file):
+                outfile.write("build build/" + os.path.splitext(c_file)[0] + ".c.o: " + "lib_cc " + c_file + "\n")
+            else:
+                outfile.write("build build/" + os.path.splitext(c_file)[0] + ".c.o: " + "main_cc " + c_file + "\n")
 
 
 
