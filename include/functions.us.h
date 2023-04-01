@@ -211,7 +211,7 @@ void func_80027C1C(s16, f32, f32, s32, s32);
 void func_8005AF60(void);
 void func_80026B8C(s16, f32, f32, s32);
 void func_80059348(s16);
-s32 func_8005DF44(s32, s32, s32);
+s32 func_8005DF44(s32, s32, u16);
 void func_8004F504(void*);
 void func_800503B0(s32, s32);
 void func_8004F2AC(void);
