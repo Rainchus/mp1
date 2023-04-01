@@ -22,7 +22,7 @@ options:
   build_path: build
   # extensions_path: tools/splat_ext
   # auto_all_sections: True
-  asm_inc_header: "\t.set noat\n\t.set noreorder\n"
+  asm_inc_header: "\t.include \"macro.inc\"\n\t.set noat\n\t.set noreorder\n"
   migrate_rodata_to_functions: False
 segments:
   - name: header
@@ -421,6 +421,7 @@ segments:
       - [0xB2350, c] # sqrtf
       - [0xB2360, bin]
       - [0xC25A0, data, 180C0]
+      - [0xC2870, data, overlay_table]
       - [0xC3DE0, bin]
       - [0xC58D0, data, minigamelist]
       - [0xC5940, bin]
@@ -1782,6 +1783,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x2FA120, c]
+      - [0x2FA150, c]
   - type: bin
     start: 0x2FA760
   - type: code
@@ -1793,6 +1795,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x2FA8A0, c]
+      - [0x2FA8D0, c]
   - type: bin
     start: 0x2FAC80
   - type: code
@@ -1943,4 +1946,5 @@ segments:
     start: 0xFE2310
   - type: bin
     start: 0xFE24BC
+  - [0x1CED490, bin, romPadding]
   - [0x2000000]

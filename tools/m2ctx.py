@@ -15,6 +15,7 @@ CPP_FLAGS = [
     "-Iinclude",
     "-Isrc",
     "-Ibuild/include",
+    "-Iinclude/engine",
     "-D_LANGUAGE_C",
     "-DF3DEX_GBI_2",
     "-D_MIPS_SZLONG=32",

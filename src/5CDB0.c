@@ -205,7 +205,23 @@ void func_8005DEB0(void) {
     }
 }
 
-INCLUDE_ASM(s32, "5CDB0", func_8005DF44); //https://decomp.me/scratch/wKEAC
+s32 func_8005DF44(s32 arg0, s32 arg1, u16 arg2) {
+    unkStructTest2* temp_v0_2;
+    s16 temp = arg1;
+    s32 ret = 0;
+
+    if (D_800C597E < 8) {
+        temp_v0_2 = &D_800F37F8[++D_800C597E];
+        temp_v0_2->unk_00 = arg0;
+        temp_v0_2->unk_04 = arg1;
+        temp_v0_2->unk_06 = arg2;
+        func_8005E044(arg0, temp, arg2);
+        ret = 1;
+    } else {
+        ret = 0;
+    }
+    return ret;
+}
 
 s32 func_8005DFB8(s32 arg0) {
     s32 ret;
