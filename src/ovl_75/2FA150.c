@@ -13,6 +13,7 @@ Vec3f vec1;
 Vec3f vec2;
 } unkUserData;
 
+extern s16 D_800ED154;
 void func_8005B860(s32);
 void func_800F67BC_2FA2FC(void);
 void func_800F682C_2FA36C(void);
@@ -203,6 +204,6 @@ void func_800F6BA4_2FA6E4(void) {
         func_8005CD7C(4, 5, 1, 1);
         func_80058910(-1, 0);
     }
-    
+
     EndProcess(NULL);
 }

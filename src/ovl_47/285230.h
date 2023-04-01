@@ -12,5 +12,5 @@ extern Vec3f D_800F6EFC;
 extern Vec3f D_800F6F08;
 extern Object* D_800F6F24;
 extern Object* D_800F6F28;
-
+extern s32 D_800F6EE0;
 
