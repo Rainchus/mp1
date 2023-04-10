@@ -75,33 +75,3 @@ INCLUDE_ASM(s32, "ovl_20_KnockBlockTower/19FEE0", func_800F8F28_1A2828);
 INCLUDE_ASM(s32, "ovl_20_KnockBlockTower/19FEE0", func_800F8FE8_1A28E8);
 
 INCLUDE_ASM(s32, "ovl_20_KnockBlockTower/19FEE0", func_800F9020_1A2920);
-
-INCLUDE_ASM(s32, "ovl_20_KnockBlockTower/19FEE0", func_800F9540_1A2E40);
-
-INCLUDE_ASM(s32, "ovl_20_KnockBlockTower/19FEE0", func_800F9BD0_1A34D0);
-
-INCLUDE_ASM(s32, "ovl_20_KnockBlockTower/19FEE0", func_800F9C98_1A3598);
-
-INCLUDE_ASM(s32, "ovl_20_KnockBlockTower/19FEE0", func_800F9D3C_1A363C);
-
-INCLUDE_ASM(s32, "ovl_20_KnockBlockTower/19FEE0", func_800F9EA0_1A37A0);
-
-INCLUDE_ASM(s32, "ovl_20_KnockBlockTower/19FEE0", func_800FA010_1A3910);
-
-INCLUDE_ASM(s32, "ovl_20_KnockBlockTower/19FEE0", func_800FA0C4_1A39C4);
-
-INCLUDE_ASM(s32, "ovl_20_KnockBlockTower/19FEE0", func_800FA560_1A3E60);
-
-INCLUDE_ASM(s32, "ovl_20_KnockBlockTower/19FEE0", func_800FA5F4_1A3EF4);
-
-INCLUDE_ASM(s32, "ovl_20_KnockBlockTower/19FEE0", func_800FA92C_1A422C);
-
-INCLUDE_ASM(s32, "ovl_20_KnockBlockTower/19FEE0", func_800FA9B0_1A42B0);
-
-INCLUDE_ASM(s32, "ovl_20_KnockBlockTower/19FEE0", func_800FB13C_1A4A3C);
-
-INCLUDE_ASM(s32, "ovl_20_KnockBlockTower/19FEE0", func_800FB20C_1A4B0C);
-
-INCLUDE_ASM(s32, "ovl_20_KnockBlockTower/19FEE0", func_800FB250_1A4B50);
-
-INCLUDE_ASM(s32, "ovl_20_KnockBlockTower/19FEE0", func_800FB2B4_1A4BB4);

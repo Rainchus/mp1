@@ -1,5 +1,4 @@
-#include "common.h"
-#include "1F62C0.h"
+#include "KeyPaWay.h"
 
 void func_800FE230_1FDF10(f32 arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, f32 arg7) {
     func_800178A0(1);

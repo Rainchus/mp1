@@ -303,6 +303,7 @@ segments:
       - [0x9C440, c]
       - [0x9C560, c]
       - [0x9C630, hasm] #something jank here with this file and following 2 files
+      - [0x9C8A0, hasm]
       - [0x9CA10, hasm]
       - [0x9CA30, hasm]
       - [0x9CB90, c]
@@ -348,7 +349,19 @@ segments:
       - [0xA1E50, c]
       - [0xA2080, c] # -O0?
       - [0xA21C0, c] # -O0?
+      - [0xA2260, c] # -O0?
+      - [0xA23A0, c] # -O0?
+      - [0xA24F0, c] # -O0?
+      - [0xA27D0, c] # -O0?
       - [0xA29F0, c] # -O0?
+      - [0xA2A40, c] # -O0?
+      - [0xA2A90, c] # -O0?
+      - [0xA2AF0, c] # -O0?
+      - [0xA2E80, c] # -O0?
+      - [0xA2EE0, c] # -O0?
+      - [0xA30C0, c] # -O0?
+      - [0xA3110, c] # -O0?
+      - [0xA3320, c] # -O0?
       - [0xA3370, c] # -O0?
       - [0xA3600, c] # -O0?
       - [0xA3650, c] # -O0?
@@ -513,6 +526,8 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0xE02F0, c]
+      - [0xE13F0, c]
+      - [0xE5DA0, c]
       # - [0xE7E10, data, E02F0]
       # - [0xE8B18, rodata, E02F0]
       - [0xE7E10, bin]
@@ -526,6 +541,7 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0xE8F60, c]
+      - [0xEB0E0, c]
       - [0xEE3F0, data]
       - [0xEE7E0, rodata]
   - type: code
@@ -538,6 +554,8 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0xEE9A0, c]
+      - [0xF2800, c]
+      - [0xF4420, c]
       - [0xF6750, data]
       - [0xF6830, rodata]
   - type: code
@@ -550,6 +568,7 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0xF6AB0, c]
+      - [0xFD460, c]
       - [0xFF0E0, data, F6AB0]
   - type: code
     start: 0xFF570
@@ -561,6 +580,8 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0xFF570, c]
+      - [0x103D80, c]
+      - [0x105EA0, c]
   - type: bin
     start: 0x10BA80
   - type: code
@@ -573,6 +594,8 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x10CD10, c]
+      - [0x10CF70, c]
+      - [0x10F6D0, c]
   - type: bin
     start: 0x110460
   - type: code
@@ -585,6 +608,9 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x110F90, c]
+      - [0x111890, c]
+      - [0x1127C0, c]
+      - [0x113730, c]
   - type: bin
     start: 0x113B20
   - type: code
@@ -609,6 +635,7 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x117210, c]
+      - [0x11BFE0, c]
   - type: bin
     start: 0x11C2A0
   - type: code
@@ -621,6 +648,7 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x11C810, c]
+      - [0x11F890, c]
   - type: bin
     start: 0x1216F0
   - type: code
@@ -633,6 +661,7 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x1217D0, c]
+      - [0x122BA0, c]
       - [0x1240D0, c]
   - type: bin
     start: 0x124FD0
@@ -671,6 +700,7 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x131FA0, c]
+      - [0x136C10, c]
   - type: bin
     start: 0x136F40
   - type: code
@@ -695,6 +725,7 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x13EFB0, c]
+      - [0x142EA0, c]
   - type: bin
     start: 0x145CA0
   - type: code
@@ -707,6 +738,8 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x146200, c]
+      - [0x146B60, c]
+      - [0x148840, c]
   - type: bin
     start: 0x149C40
   - type: code
@@ -731,6 +764,7 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x14E940, c]
+      - [0x150E30, c]
   - type: bin
     start: 0x152B20
   - type: code
@@ -743,6 +777,7 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x152BE0, c]
+      - [0x15AC50, c]
   - type: bin
     start: 0x15E120
   - type: code
@@ -767,6 +802,8 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x166220, c]
+      - [0x166D50, c]
+      - [0x168CA0, c]
   - type: bin
     start: 0x16BC00
   - type: code
@@ -779,6 +816,9 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x16BD20, c]
+      - [0x16C6A0, c]
+      - [0x170470, c]
+      - [0x172490, c]
   - type: bin
     start: 0x1724D0
   - type: code
@@ -791,6 +831,7 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x1738E0, c]
+      - [0x176130, c]
   - type: bin
     start: 0x177C30
   - type: code
@@ -803,6 +844,7 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x1784E0, c]
+      - [0x17BDC0, c]
   - type: bin
     start: 0x17E600
   - type: code
@@ -827,6 +869,8 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x1837D0, c]
+      - [0x184450, c]
+      - [0x184870, c]
   - type: bin
     start: 0x188280
   - type: code
@@ -851,6 +895,7 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x191700, c]
+      - [0x196300, c]
   - type: bin
     start: 0x197C50
   - type: code
@@ -863,6 +908,9 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x197E20, c]
+      - [0x19A360, c]
+      - [0x19ACC0, c]
+      - [0x19D510, c]
   - type: bin
     start: 0x19FAF0
   - type: code
@@ -875,6 +923,8 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x19FEE0, c]
+      - [0x1A2E40, c]
+      - [0x1A42B0, c]
   - type: bin
     start: 0x1A4E00
   - type: code
@@ -899,6 +949,8 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x1AA2A0, c]
+      - [0x1AF980, c]
+      - [0x1B02A0, c]
   - type: bin
     start: 0x1B3730
   - type: code
@@ -911,6 +963,8 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x1B3E00, c]
+      - [0x1B9050, c]
+      - [0x1BAA60, c]
   - type: bin
     start: 0x1BCD20
   - type: code
@@ -947,6 +1001,8 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x1CCCF0, c]
+      - [0x1CD680, c]
+      - [0x1D3040, c]
   - type: bin
     start: 0x1D3300
   - type: code
@@ -959,6 +1015,7 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x1D3990, c]
+      - [0x1D6E30, c]
   - type: bin
     start: 0x1D93B0
   - type: code
@@ -983,6 +1040,7 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x1E0A30, c]
+      - [0x1E4480, c]
   - type: bin
     start: 0x1E8DD0
   - type: code
@@ -1007,6 +1065,7 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x1F0DA0, c]
+      - [0x1F5700, c]
     #  - [0x1F60F0, rodata, 1F0DA0] #800FB930
   - type: bin
     start: 0x1F60F0
@@ -1059,6 +1118,7 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x20F570, c]
+      - [0x216140, c]
   - type: bin
     start: 0x218330
   - type: code
@@ -1071,6 +1131,7 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x218510, c]
+      - [0x21FAD0, c]
   - type: bin
     start: 0x221890
   - type: code
@@ -1083,6 +1144,7 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x222320, c]
+      - [0x225DF0, c]
   - type: bin
     start: 0x22BF30
   - type: code
@@ -1095,6 +1157,9 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x22C9E0, c]
+      - [0x22D5F0, c]
+      - [0x231180, c]
+      - [0x231D40, c]
   - type: bin
     start: 0x233EE0
   - type: code
@@ -1107,6 +1172,7 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x2341E0, c]
+      - [0x234F80, c]
   - type: bin
     start: 0x23BDF0
   - type: code
@@ -1119,6 +1185,7 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x23CF40, c]
+      - [0x240010, c]
   - type: bin
     start: 0x241460
   - type: code
@@ -1170,6 +1237,7 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x246DF0, c]
+      - [0x246E20, c]
   - type: bin
     start: 0x248820
   - type: code
@@ -1182,6 +1250,7 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x248F00, c]
+      - [0x248F30, c]
   - type: bin
     start: 0x24C0D0
   - type: code
@@ -1194,6 +1263,7 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x24C390, c]
+      - [0x24C3C0, c]
   - type: bin
     start: 0x24F280
   - type: code
@@ -1219,6 +1289,7 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x2518D0, c]
+      - [0x251900, c]
   - type: bin
     start: 0x253A50
   - type: code
@@ -1699,6 +1770,7 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x2A9970, c]
+      - [0x2A9CA0, c]
   - type: bin
     start: 0x2B0670
   - type: code
@@ -1735,6 +1807,7 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x2BA4C0, c]
+      - [0x2BA4F0, c]
   - type: bin
     start: 0x2BA9B0
   - type: code
@@ -1846,6 +1919,9 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x2DB2A0, c]
+      - [0x2DB2D0, c]
+      - [0x2DF200, c]
+      - [0x2E8220, c]
   - type: bin
     start: 0x2F3190
   - type: code
@@ -1870,6 +1946,7 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x2F6FB0, c]
+      - [0x2F6FE0, c]
   - type: bin
     start: 0x2F7060
   - type: code
@@ -1882,6 +1959,7 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x2F7080, c]
+      - [0x2F70B0, c]
   - type: bin
     start: 0x2F8B50
   - type: code
@@ -1894,6 +1972,7 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x2F9040, c]
+      - [0x2F9070, c]
   - type: bin
     start: 0x2F95F0
   - type: code
@@ -1993,6 +2072,8 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x303E70, c]
+      - [0x306290, c]
+      - [0x306BA0, c]
   - type: bin
     start: 0x308890
   - type: code

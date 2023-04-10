@@ -1,4 +1,3 @@
-#include "common.h"
 #include "ChanceTime.h"
 
 void func_800FC390_DAF90(void) {

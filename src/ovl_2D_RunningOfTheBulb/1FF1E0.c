@@ -1,5 +1,4 @@
-#include "common.h"
-#include "1FF1E0.h"
+#include "RunningOfTheBulb.h"
 
 void func_800F65E0_1FF1E0(void) {
     void* temp_s0;

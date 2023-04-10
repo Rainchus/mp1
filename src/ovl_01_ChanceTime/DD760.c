@@ -1,4 +1,3 @@
-#include "common.h"
 #include "ChanceTime.h"
 
 void func_8004DBD4(s16, s8);

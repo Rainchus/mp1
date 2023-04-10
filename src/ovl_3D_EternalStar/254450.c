@@ -1,4 +1,4 @@
-#include "eternalStar.h"
+#include "EternalStar.h"
 
 static board_overlay_entrypoint D_800F8B80[] = {
     {0, &func_800F6D30_254BA0},

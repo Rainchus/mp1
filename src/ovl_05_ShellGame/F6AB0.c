@@ -68,7 +68,7 @@ void func_800F68E8_F6DB8(unkObjectStruct* arg0) {
     
     if (D_800FEC16_FF0E6 == 1) {
         if (D_800ED430 == D_800FEC16_FF0E6) {
-            if ((func_800F8154_F8624() << 0x10) == 0) {
+            if ((func_800F8154_F8624()) == 0) {
                 if (D_800F3FB0->unk_1C == 0.0f) {
                     D_800FF10C = 0;
                     D_800FFA3C = 0;
@@ -277,38 +277,3 @@ INCLUDE_ASM(s32, "ovl_05_ShellGame/F6AB0", func_800FC77C_FCC4C);
 INCLUDE_ASM(s32, "ovl_05_ShellGame/F6AB0", func_800FC7B0_FCC80);
 
 INCLUDE_ASM(s32, "ovl_05_ShellGame/F6AB0", func_800FC800_FCCD0);
-
-INCLUDE_ASM(s32, "ovl_05_ShellGame/F6AB0", func_800FCF90_FD460);
-
-INCLUDE_ASM(s32, "ovl_05_ShellGame/F6AB0", func_800FD448_FD918);
-
-INCLUDE_ASM(s32, "ovl_05_ShellGame/F6AB0", func_800FD538_FDA08);
-
-INCLUDE_ASM(s32, "ovl_05_ShellGame/F6AB0", func_800FD808_FDCD8);
-
-INCLUDE_ASM(s32, "ovl_05_ShellGame/F6AB0", func_800FDD94_FE264);
-
-INCLUDE_ASM(s32, "ovl_05_ShellGame/F6AB0", func_800FDE08_FE2D8);
-
-INCLUDE_ASM(s32, "ovl_05_ShellGame/F6AB0", func_800FDE50_FE320);
-
-INCLUDE_ASM(s32, "ovl_05_ShellGame/F6AB0", func_800FDF28_FE3F8);
-
-INCLUDE_ASM(s32, "ovl_05_ShellGame/F6AB0", func_800FE010_FE4E0);
-
-INCLUDE_ASM(s32, "ovl_05_ShellGame/F6AB0", func_800FE07C_FE54C);
-
-INCLUDE_ASM(s32, "ovl_05_ShellGame/F6AB0", func_800FE46C_FE93C);
-
-INCLUDE_ASM(s32, "ovl_05_ShellGame/F6AB0", func_800FE5BC_FEA8C);
-
-INCLUDE_ASM(s32, "ovl_05_ShellGame/F6AB0", func_800FE6BC_FEB8C);
-
-void func_800FE7AC_FEC7C(void) {
-}
-
-INCLUDE_ASM(s32, "ovl_05_ShellGame/F6AB0", func_800FE7B4_FEC84);
-
-INCLUDE_ASM(s32, "ovl_05_ShellGame/F6AB0", func_800FE87C_FED4C);
-
-INCLUDE_ASM(s32, "ovl_05_ShellGame/F6AB0", func_800FEB40_FF010);

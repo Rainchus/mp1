@@ -1,4 +1,4 @@
-#include "eternalStar.h"
+#include "EternalStar.h"
 
 
 Vec4f D_800F8BB0_256A20 = {0.0f, 0.0f, 320.0f, 240.0f};

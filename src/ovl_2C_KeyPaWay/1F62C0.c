@@ -1,5 +1,4 @@
-#include "common.h"
-#include "1F62C0.h"
+#include "KeyPaWay.h"
 
 void func_800F65E0_1F62C0(void) {
     void* temp_s0;

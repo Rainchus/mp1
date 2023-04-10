@@ -17,13 +17,14 @@
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "${workspaceFolder}/include",
-                    "${workspaceFolder}/src"
+                    "${workspaceFolder}/include/**",
+                    "${workspaceFolder}/src/**",
+                    "${workspaceFolder}/src/ovl_1E_BumperBalls"
                 ]
             },
             "includePath": [
-                "${workspaceFolder}/include",
-                "${workspaceFolder}/src",
+                "${workspaceFolder}/include/**",
+                "${workspaceFolder}/src/**",
                 "/usr/include/x86_64-linux-gnu"
             ],
             "defines": [

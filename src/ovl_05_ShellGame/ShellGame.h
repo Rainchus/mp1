@@ -15,7 +15,7 @@ extern void* D_800FF718[];
 void func_800F6A98_F6F68(unkObjectStruct*);
 void func_800F76C4_F7B94(void);
 void func_800F7BDC_F80AC(void);
-s32 func_800F8154_F8624(void);
+s16 func_800F8154_F8624(void);
 void func_800F85B4_F8A84(void);
 void func_800F8CF8_F91C8(void);
 extern unkObjectStruct* D_800F3FB0;

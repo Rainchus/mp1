@@ -1,5 +1,4 @@
-#include "common.h"
-#include "207040.h"
+#include "HotRopeJump.h"
 
 INCLUDE_ASM(s32, "ovl_2E_HotRopeJump/207040", func_800F65E0_207040);
 

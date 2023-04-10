@@ -1,5 +1,4 @@
-#include "common.h"
-#include "12BC20.h"
+#include "FaceLift.h"
 
 INCLUDE_ASM(s32, "ovl_0E_FaceLift/12BC20", func_800F65E0_12BC20);
 

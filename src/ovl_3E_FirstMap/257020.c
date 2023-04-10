@@ -1,5 +1,5 @@
 #include "process.h"
-#include "firstMap.h"
+#include "FirstMap.h"
 
 void func_800F6610_257020(void) {
     D_800ED5C2 = 8;

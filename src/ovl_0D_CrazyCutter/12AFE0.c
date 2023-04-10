@@ -1,5 +1,4 @@
-#include "common.h"
-#include "1250D0.h"
+#include "CrazyCutter.h"
 
 INCLUDE_ASM(s32, "ovl_0D_CrazyCutter/12AFE0", func_800FC4F0_12AFE0);
 

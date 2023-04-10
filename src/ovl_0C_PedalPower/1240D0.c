@@ -1,5 +1,4 @@
-#include "common.h"
-#include "1217D0.h"
+#include "PedalPower.h"
 
 INCLUDE_ASM(s32, "ovl_0C_PedalPower/1240D0", func_800F8EE0_1240D0);
 

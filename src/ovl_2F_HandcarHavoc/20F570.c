@@ -1,5 +1,4 @@
-#include "common.h"
-#include "20F570.h"
+#include "HandcarHavoc.h"
 
 INCLUDE_ASM(s32, "ovl_2F_HandcarHavoc/20F570", func_800F65E0_20F570);
 
@@ -152,33 +151,3 @@ INCLUDE_ASM(s32, "ovl_2F_HandcarHavoc/20F570", func_800FCE3C_215DCC);
 INCLUDE_ASM(s32, "ovl_2F_HandcarHavoc/20F570", func_800FCFB4_215F44);
 
 INCLUDE_ASM(s32, "ovl_2F_HandcarHavoc/20F570", func_800FCFFC_215F8C);
-
-INCLUDE_ASM(s32, "ovl_2F_HandcarHavoc/20F570", func_800FD1B0_216140);
-
-INCLUDE_ASM(s32, "ovl_2F_HandcarHavoc/20F570", func_800FD1E8_216178);
-
-INCLUDE_ASM(s32, "ovl_2F_HandcarHavoc/20F570", func_800FD204_216194);
-
-INCLUDE_ASM(s32, "ovl_2F_HandcarHavoc/20F570", func_800FD464_2163F4);
-
-INCLUDE_ASM(s32, "ovl_2F_HandcarHavoc/20F570", func_800FD59C_21652C);
-
-INCLUDE_ASM(s32, "ovl_2F_HandcarHavoc/20F570", func_800FD888_216818);
-
-INCLUDE_ASM(s32, "ovl_2F_HandcarHavoc/20F570", func_800FDBC8_216B58);
-
-INCLUDE_ASM(s32, "ovl_2F_HandcarHavoc/20F570", func_800FDCEC_216C7C);
-
-INCLUDE_ASM(s32, "ovl_2F_HandcarHavoc/20F570", func_800FDE28_216DB8);
-
-INCLUDE_ASM(s32, "ovl_2F_HandcarHavoc/20F570", func_800FDEC0_216E50);
-
-INCLUDE_ASM(s32, "ovl_2F_HandcarHavoc/20F570", func_800FE004_216F94);
-
-INCLUDE_ASM(s32, "ovl_2F_HandcarHavoc/20F570", func_800FE8D4_217864);
-
-INCLUDE_ASM(s32, "ovl_2F_HandcarHavoc/20F570", func_800FEB4C_217ADC);
-
-INCLUDE_ASM(s32, "ovl_2F_HandcarHavoc/20F570", func_800FECF4_217C84);
-
-INCLUDE_ASM(s32, "ovl_2F_HandcarHavoc/20F570", func_800FF0AC_21803C);

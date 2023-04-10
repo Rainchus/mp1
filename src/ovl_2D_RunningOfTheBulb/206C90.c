@@ -1,5 +1,4 @@
-#include "common.h"
-#include "1FF1E0.h"
+#include "RunningOfTheBulb.h"
 
 void func_800FE090_206C90(f32 arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, f32 arg7) {
     func_800178A0(1);

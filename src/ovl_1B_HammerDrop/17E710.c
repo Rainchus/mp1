@@ -1,5 +1,4 @@
-#include "common.h"
-#include "17E710.h"
+#include "HammerDrop.h"
 
 void func_800F65E0_17E710(void) {
     func_800F67BC_17E8EC();

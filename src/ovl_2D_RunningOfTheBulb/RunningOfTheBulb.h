@@ -1,7 +1,5 @@
 #include "common.h"
 
-
-
 typedef struct unkfloatStruct {
     f32 unk0;
     f32 unk4;

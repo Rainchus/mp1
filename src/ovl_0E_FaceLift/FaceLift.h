@@ -1,3 +1,5 @@
+#include "common.h"
+
 typedef struct unk_FaceLift_00 {
 /* 0x00 */ f32 unk_00;
 /* 0x04 */ char unk_04[0x24];

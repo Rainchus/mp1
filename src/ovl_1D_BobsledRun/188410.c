@@ -1,5 +1,4 @@
-#include "common.h"
-#include "188410.h"
+#include "BobsledRun.h"
 
 void func_800F65E0_188410(void) {
     unkObjectStruct* Obj;

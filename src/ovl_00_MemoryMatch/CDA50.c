@@ -1,5 +1,5 @@
 #include "PR/os.h"
-#include "CDA50.h"
+#include "MemoryMatch.h"
 
 #ifdef NON_MATCHING
 void func_800F65E0_CDA50(void) { //needs rodata support

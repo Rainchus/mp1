@@ -57,21 +57,3 @@ INCLUDE_ASM(s32, "ovl_34_BumperBallMaze/23CF40", func_800F943C_23FD9C);
 INCLUDE_ASM(s32, "ovl_34_BumperBallMaze/23CF40", func_800F94A0_23FE00);
 
 INCLUDE_ASM(s32, "ovl_34_BumperBallMaze/23CF40", func_800F9610_23FF70);
-
-INCLUDE_ASM(s32, "ovl_34_BumperBallMaze/23CF40", func_800F96B0_240010);
-
-INCLUDE_ASM(s32, "ovl_34_BumperBallMaze/23CF40", func_800F9768_2400C8);
-
-INCLUDE_ASM(s32, "ovl_34_BumperBallMaze/23CF40", func_800F97B4_240114);
-
-INCLUDE_ASM(s32, "ovl_34_BumperBallMaze/23CF40", func_800F9890_2401F0);
-
-INCLUDE_ASM(s32, "ovl_34_BumperBallMaze/23CF40", func_800F993C_24029C);
-
-INCLUDE_ASM(s32, "ovl_34_BumperBallMaze/23CF40", func_800F9974_2402D4);
-
-INCLUDE_ASM(s32, "ovl_34_BumperBallMaze/23CF40", func_800F9990_2402F0);
-
-INCLUDE_ASM(s32, "ovl_34_BumperBallMaze/23CF40", func_800FA010_240970);
-
-INCLUDE_ASM(s32, "ovl_34_BumperBallMaze/23CF40", func_800FA620_240F80);

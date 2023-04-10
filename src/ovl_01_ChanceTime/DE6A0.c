@@ -1,4 +1,3 @@
-#include "common.h"
 #include "ChanceTime.h"
 
 INCLUDE_ASM(s32, "ovl_01_ChanceTime/DE6A0", func_800FFAA0_DE6A0);
