@@ -23,7 +23,7 @@ options:
   # extensions_path: tools/splat_ext
   # auto_all_sections: True
   asm_inc_header: "\t.include \"macro.inc\"\n\t.set noat\n\t.set noreorder\n"
-  migrate_rodata_to_functions: False
+  migrate_rodata_to_functions: True
 segments:
   - name: header
     type: header
@@ -303,8 +303,8 @@ segments:
       - [0x9C440, c]
       - [0x9C560, c]
       - [0x9C630, hasm] #something jank here with this file and following 2 files
-      # - [0x9C8A0, c]
-      # - [0x9CA10, c]
+      - [0x9CA10, hasm]
+      - [0x9CA30, hasm]
       - [0x9CB90, c]
       - [0x9CC90, c]
       - [0x9CCA0, c]
@@ -526,8 +526,8 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0xE8F60, c]
-      - [0xEE3F0, data, E8F60]
-      - [0xEE7E0, rodata, E8F60]
+      - [0xEE3F0, data]
+      - [0xEE7E0, rodata]
   - type: code
     start: 0xEE9A0
     vram: 0x800F65E0
@@ -538,7 +538,8 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0xEE9A0, c]
-      - [0xF6750, data, EE9A0]
+      - [0xF6750, data]
+      - [0xF6830, rodata]
   - type: code
     start: 0xF6AB0
     vram: 0x800F65E0
@@ -1280,6 +1281,14 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x25FC70, c]
+      - [0x2603D0, c]
+      - [0x262590, c]
+      - [0x2643A0, c]
+      - [0x266C80, c]
+      - [0x26BA10, c]
+      - [0x26E620, c]
+      - [0x2721F0, c]
+      - [0x275330, c]
   - type: bin
     start: 0x277320
   - type: code
@@ -1669,8 +1678,16 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x2A2500, c]
+      - [0x2A51E0, c]
+      - [0x2A5420, c]
+      - [0x2A5840, c]
+      - [0x2A5E50, c]
+      - [0x2A6500, c]
+      - [0x2A6EA0, c]
+      - [0x2A74F0, c]
+      - [0x2A76E0, c]
       - [0x2A8C50, data, 2A2500]
-      - [0x2A98B0, rodata, 2A2500]
+      # - [0x2A98B0, rodata, 2A2500]
       # - [0x2A8C50, bin]
   - type: code
     start: 0x2A9970
