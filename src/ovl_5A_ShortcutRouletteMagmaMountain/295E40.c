@@ -71,7 +71,7 @@ s32 func_800F66D8_295F38(s32 arg0) {
     return func_8006FCF0(arg0, 0, 1);
 }
 
-void func_800F6898_2960F8(void) { //fix me: remove goto
+void func_800F6898_2960F8(void) {
     s32 windowID;
     s32 temp_s0_2;
     s32 var_s1;
@@ -122,23 +122,14 @@ void func_800F6898_2960F8(void) { //fix me: remove goto
         temp_s2 = 0;
         windowID = 0;
         
-        //very hard block of code to match. cant seem to remove the goto
-        do {
+        while (var_s1 != 2) {
             switch (var_s1) {
             case 0:
-                if ((gPlayers[D_800F7310].unk_06 & 1)) {
-                    if(temp_s2 >= 0xF) {
-                        goto label;
-                    }
-                    break;
-                } else if (!(D_800F5460[gPlayers[D_800F7310].flags] & 0x8000)) {
-                    break;
-                } else {
-                    label:
+                if (((gPlayers[D_800F7310].unk_06 & 1) && (temp_s2 >= 0xF)) || (!(gPlayers[D_800F7310].unk_06 & 1) && (D_800F5460[gPlayers[D_800F7310].flags] & 0x8000))) {
                     var_s1 = 1;
+                    func_8003E81C(D_800F7314, 2, 0);
+                    func_8004F40C(D_800F7314, 1, 2);
                 }
-                func_8003E81C(D_800F7314, 2, 0);
-                func_8004F40C(D_800F7314, 1, 2);   
                 break;
             case 1:
                 if (++windowID == 5) {
@@ -149,10 +140,11 @@ void func_800F6898_2960F8(void) { //fix me: remove goto
             }
             temp_s2++;
             SleepVProcess();
-        } while (var_s1 != 2);
+        }
 
         SleepProcess(0x28);
         D_800ED154.unk_02 = func_80041604(D_800F7310);
+
         if (!(D_800ED154.unk_02)) {
             windowID = CreateTextWindow(0x5A, 0x3C, 0xD, 3);
             LoadStringIntoWindow(windowID, (void* )0x1F5, -1, -1);

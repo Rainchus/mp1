@@ -5,6 +5,7 @@ asm/
 build/
 assets/
 mod/
+expected/
 marioparty.ld
 ctx.c
 build.ninja
