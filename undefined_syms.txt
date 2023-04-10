@@ -150,3 +150,5 @@ gSwapChainMesgTotal = 0x800ED3C2;
 
 gMesgQueue = 0x800D5FB0;
 gMesgQueueInitMesg = 0x800D5FC8;
+D_800FDA60_ovl62 = 0x800FDA60;
+D_800FD59C_ovl62 = 0x800FD59C;

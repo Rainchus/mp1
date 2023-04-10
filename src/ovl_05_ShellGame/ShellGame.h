@@ -1,7 +1,7 @@
 #include "common.h"
 
 extern f64 D_800FED30;
-extern f64 D_800FED38;
+extern f64 D_800FED38_FF208;
 extern f64 D_800FECE0;
 extern f64 D_800FECE8;
 extern Vec3f D_800FF0A0;
@@ -19,8 +19,6 @@ s32 func_800F8154_F8624(void);
 void func_800F85B4_F8A84(void);
 void func_800F8CF8_F91C8(void);
 extern unkObjectStruct* D_800F3FB0;
-extern s16 D_800FEC14;
-extern s16 D_800FEC16;
 extern unkObjectStruct* D_800FF0F8;
 extern s32 D_800FF10C;
 extern s16 D_800FF780;
@@ -41,8 +39,8 @@ void func_800F828C_F875C(void);
 void func_800F87CC_F8C9C(void);
 void func_800F689C_F6D6C(unkObjectStruct*);
 extern s16 D_800EE984;
-extern s16 D_800FEC14;
-extern s16 D_800FEC16;
+extern s16 D_800FEC14_FF0E4;
+extern s16 D_800FEC16_FF0E6;
 extern s16 D_800FEC18;
 extern s32 D_800FEC1C;
 extern char D_800FEC60[];

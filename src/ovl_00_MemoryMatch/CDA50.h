@@ -133,7 +133,7 @@ extern unkObjectStruct* D_800FE2F4;
 
 //likely rodata
 extern f64 D_800FD900;
-extern f64 D_800FDA58;
-extern f64 D_800FDA60;
-extern f64 D_800FDA68;
-extern f64 D_800FDA70;
+extern f64 D_800FDA58_D4EC8;
+extern f64 D_800FDA60_D4ED0;
+extern f64 D_800FDA68_D4ED8;
+extern f64 D_800FDA70_D4EE0;

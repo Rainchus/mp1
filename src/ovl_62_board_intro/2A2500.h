@@ -9,7 +9,7 @@ s32 func_800F684C_2A276C(void);
 void func_800F8FEC_2A4F0C(void);
 extern u8 D_801102B0;
 extern s32 D_800FCD2C[];
-extern s16 D_800FDA60[];
+extern s16 D_800FDA60_ovl62[];
 
 typedef struct testing {
     s16 unk0;
@@ -18,5 +18,5 @@ typedef struct testing {
 
 s32 func_8004F628(s32, s32, s16, s16);
 extern testing D_800FD554[];
-extern s32 D_800FD59C[2];
+extern s32 D_800FD59C_ovl62[2];
 extern u8 D_801102B0;

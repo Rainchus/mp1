@@ -19,7 +19,7 @@ extern s16 D_800C597A;
 extern playerMain gPlayers[4];
 extern u8 D_800ED5C3;
 extern s16 D_800FE150;
-extern u8 D_800FD86E;
+extern u8 D_800FD86E_D4CDE;
 extern s16 D_800FE30E;
 extern s16 D_800FD878;
 extern s16 D_800FE30C;

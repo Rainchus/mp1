@@ -14,7 +14,7 @@ void func_800F81F8_D6DF8(s32);
 void func_800F988C_D848C(unkObjectStruct*);
 void func_800F9948_D8548(s32);
 void func_800F8A6C_D766C(void);
-s32 func_800FEC4C_DD84C(s32, f32, unkObjectStruct*);
+s16 func_800FEC4C_DD84C(s32, f32, unkObjectStruct*);
 void func_800FE97C_DD57C(s32 arg0);
 void func_800FF6D0_DE2D0(unkObjectStruct*);
 void func_800FFAA0_DE6A0(void);

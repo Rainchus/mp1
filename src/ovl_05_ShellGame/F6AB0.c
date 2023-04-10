@@ -35,10 +35,10 @@ void func_800F65E0_F6AB0(void) {
     D_800FF9EC = 0;
     D_800FFA3C = 0;
     D_800FF10C = 0x14A;
-    D_800FEC14 = 1;
+    D_800FEC14_FF0E4 = 1;
     D_800FF780 = 0;
     D_800FF782 = 0;
-    D_800FEC16 = 0;
+    D_800FEC16_FF0E6 = 0;
     D_800FEC18 = 0;
     D_800FEC1C = 0;
     D_800FF784 = 0;
@@ -66,14 +66,14 @@ void func_800F68E8_F6DB8(unkObjectStruct* arg0) {
     func_800F7BDC_F80AC();
     func_800F6A98_F6F68(arg0);
     
-    if (D_800FEC16 == 1) {
-        if (D_800ED430 == D_800FEC16) {
+    if (D_800FEC16_FF0E6 == 1) {
+        if (D_800ED430 == D_800FEC16_FF0E6) {
             if ((func_800F8154_F8624() << 0x10) == 0) {
                 if (D_800F3FB0->unk_1C == 0.0f) {
                     D_800FF10C = 0;
                     D_800FFA3C = 0;
-                    D_800FEC16 = 0;
-                    D_800FEC14 = 0;
+                    D_800FEC16_FF0E6 = 0;
+                    D_800FEC14_FF0E4 = 0;
                     if (D_800FF784 == 0) {
                         D_800FF0F8->func_ptr = &func_800F6AC0_F6F90;
                     } else {
@@ -172,7 +172,7 @@ f32 func_800F7398_F7868(f32 arg0, f32 arg1) {
     } else {
         temp_f2_2 = (f64) var_f4;
         if (temp_f2_2 < 0.0) {
-            var_f4 = temp_f2_2 + D_800FED38;
+            var_f4 = temp_f2_2 + D_800FED38_FF208;
         }        
     }
     return var_f4;

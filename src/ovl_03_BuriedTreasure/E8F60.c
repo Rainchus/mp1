@@ -90,12 +90,12 @@ void func_800FB920_EE2A0(void) {
 }
 
 u16 func_800FB928_EE2A8(u16 arg0) { //shared overlay func
-    D_800FBE54 = (u32) ((D_800FBE54 * 0x19971204) + 0x19760831) >> 0x10;
+    D_800FBE54_EE7D4 = (u32) ((D_800FBE54_EE7D4 * 0x19971204) + 0x19760831) >> 0x10;
 
     if (arg0 == 0) {
-        return D_800FBE54;
+        return D_800FBE54_EE7D4;
     } else {
-        return (D_800FBE54 % arg0);
+        return (D_800FBE54_EE7D4 % arg0);
     }
 }
 

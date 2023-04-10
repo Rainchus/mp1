@@ -1,5 +1,5 @@
 #include "common.h"
-#include "D51E0.h"
+#include "ChanceTime.h"
 
 INCLUDE_ASM(s32, "ovl_01_ChanceTime/D51E0", func_800F65E0_D51E0);
 
@@ -196,53 +196,3 @@ INCLUDE_ASM(s32, "ovl_01_ChanceTime/D51E0", func_800FB950_DA550);
 INCLUDE_ASM(s32, "ovl_01_ChanceTime/D51E0", func_800FBBC4_DA7C4);
 
 INCLUDE_ASM(s32, "ovl_01_ChanceTime/D51E0", func_800FC1C8_DADC8);
-
-void func_800FC390_DAF90(void) {
-    D_80101760 = func_800174F4(0x130001, 0x289);
-    func_800258EC(D_80101760, 4, 4);
-}
-
-INCLUDE_ASM(s32, "ovl_01_ChanceTime/D51E0", func_800FC3D0_DAFD0);
-
-INCLUDE_ASM(s32, "ovl_01_ChanceTime/D51E0", func_800FCC18_DB818);
-
-INCLUDE_ASM(s32, "ovl_01_ChanceTime/D51E0", func_800FD0AC_DBCAC);
-
-INCLUDE_ASM(s32, "ovl_01_ChanceTime/D51E0", func_800FD7DC_DC3DC);
-
-INCLUDE_ASM(s32, "ovl_01_ChanceTime/D51E0", func_800FDDD4_DC9D4);
-
-INCLUDE_ASM(s32, "ovl_01_ChanceTime/D51E0", func_800FE554_DD154);
-
-void func_800FE97C_DD57C(s32 arg0) {
-    if (((func_800FEC4C_DD84C(arg0, 80.0f, D_800F3FB0) << 0x10) != 0) && (D_8010131A == 0)) {
-        D_8010131A = 1;
-    }
-    D_801012B4 = 1;
-    D_801012E1 = 0;
-}
-
-
-void func_800FE9D8_DD5D8(unkObjectStruct* arg0) {
-    unkGlobalStruct_00* temp_s1;
-
-    arg0->unk_40->unk_00.unsigned16[0] = func_80023FC8(D_80101760);
-    func_800258EC(arg0->unk_40->unk_00.unsigned16[0], 4, 4);
-    arg0->unk_40->unk_00.unsigned16[1] = func_800174F4(0x130002, 0x699);
-    arg0->unk_18 = 140.0f;
-    arg0->unk_1C = 230.0f;
-    arg0->unk_20 = 1400.0f;
-    arg0->unk_30 = arg0->unk_34 = arg0->unk_38 = 1.5f;
-    arg0->unk_24 = arg0->unk_28 = arg0->unk_2C = 0.0f;
-    func_80025798(arg0->unk_40->unk_00.unsigned16[1], arg0->unk_18, arg0->unk_1C, arg0->unk_20);
-    func_80025830(arg0->unk_40->unk_00.unsigned16[1], 0.8f, 0.8f, 0.8f);
-    func_800257E4(arg0->unk_40->unk_00.unsigned16[1], 0.0f, 0.0f, 0.0f);
-    temp_s1 = func_80023684(44, 0x7918);
-    arg0->unk_50 = temp_s1;
-    func_8009B770(temp_s1, 0, 44);
-    temp_s1->unk_04.b[0] = 1;
-    temp_s1->unk_04.b[1] = 3;
-    temp_s1->unk_28 = func_80023684(60, 0x7918);
-    func_8009B770(temp_s1->unk_28, 0, 60);
-    arg0->func_ptr = &func_800FE97C_DD57C;
-}

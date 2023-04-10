@@ -28,7 +28,7 @@ void func_800F6660_2A2580(s32 arg0, s32 arg1) {
 INCLUDE_ASM(s32, "ovl_62_board_intro/2A2500", func_800F66E8_2A2608);
 
 void func_800F677C_2A269C(unkObjectStruct* arg0) {
-    func_80066DC4(D_800FDA60[2], arg0->unk_4C, arg0->unk_4D, (arg0->unk_4E * 5) - 0x50);
+    func_80066DC4(D_800FDA60_ovl62[2], arg0->unk_4C, arg0->unk_4D, (arg0->unk_4E * 5) - 0x50);
     arg0->unk_4E += 2;
     if (arg0->unk_4E >= 33) {
         D_800FCD2C[arg0->unk_4C] = 0;
@@ -37,7 +37,7 @@ void func_800F677C_2A269C(unkObjectStruct* arg0) {
 }
 
 s32 func_800F67F8_2A2718(s32 arg0) {
-    return func_8004F628(D_800FD59C[(D_801102B0 * 2) + arg0], 0xA, D_800FD554[(D_801102B0 * 2) + arg0].unk0, D_800FD554[(D_801102B0 * 2) + arg0].unk2);
+    return func_8004F628(D_800FD59C_ovl62[(D_801102B0 * 2) + arg0], 0xA, D_800FD554[(D_801102B0 * 2) + arg0].unk0, D_800FD554[(D_801102B0 * 2) + arg0].unk2);
 }
 
 s32 func_800F684C_2A276C(void) {

@@ -90,7 +90,7 @@ void func_800F71C4_CE634(unkObjectStruct* arg0) {
     }
     
     if (D_800FE30E < 2) {
-        if (D_800FD86E++ >= 0x1F) {
+        if (D_800FD86E_D4CDE++ >= 0x1F) {
             D_800FE2C2 = 2;
             D_800ED430 = 0;
             D_800FDE2C = 0;
@@ -191,11 +191,11 @@ void func_800F7B6C_CEFDC(u16 arg0) {
 f32 func_800F7B90_CF000(f32 arg0, f32 arg1) {
     f32 phi_f4 = func_800B0CD8(arg0, arg1);
 
-    if (D_800FDA58 < phi_f4) {
-        phi_f4 -= D_800FDA58;  
+    if (D_800FDA58_D4EC8 < phi_f4) {
+        phi_f4 -= D_800FDA58_D4EC8;  
     } else {
         if (phi_f4 < 0.0) {
-            phi_f4 += D_800FDA60;
+            phi_f4 += D_800FDA60_D4ED0;
         }
     }
     return phi_f4;
@@ -229,7 +229,7 @@ void func_800F7C70_CF0E0(f32 arg0) { //uses rodata
     D_800F6524.y = D_800FDDC0.y + (arg0 * (D_800FDDCC.y - D_800FDDC0.y));
     D_800F6524.z = D_800FDDC0.z + (arg0 * (D_800FDDCC.z - D_800FDDC0.z));
     //D_800EE98C = (1416.3999999999999 - (arg0 * 840.0));
-    D_800EE98C = (D_800FDA70 - (arg0 * D_800FDA68));
+    D_800EE98C = (D_800FDA70_D4EE0 - (arg0 * D_800FDA68_D4ED8));
 }
 
 INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800F7D74_CF1E4);
@@ -534,31 +534,3 @@ void func_800FB1B0_D2620(void) {
 }
 
 INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800FB1B8_D2628);
-
-INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800FB360_D27D0);
-
-INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800FB558_D29C8);
-
-INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800FB570_D29E0);
-
-INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800FB588_D29F8);
-
-INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800FB778_D2BE8);
-
-INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800FB888_D2CF8);
-
-INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800FB9FC_D2E6C);
-
-INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800FBC34_D30A4);
-
-INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800FBF24_D3394);
-
-INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800FC5A4_D3A14);
-
-INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800FC8A0_D3D10);
-
-INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800FC9E4_D3E54);
-
-INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800FCD58_D41C8);
-
-INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800FD6A0_D4B10);

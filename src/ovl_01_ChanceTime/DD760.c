@@ -1,5 +1,5 @@
 #include "common.h"
-#include "D51E0.h"
+#include "ChanceTime.h"
 
 void func_8004DBD4(s16, s8);
 

@@ -1,5 +1,5 @@
 #include "common.h"
-#include "D51E0.h"
+#include "ChanceTime.h"
 
 void func_800FF6D0_DE2D0(unkObjectStruct* arg0) {
     if (D_80101360 == 0) {
