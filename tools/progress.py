@@ -99,6 +99,7 @@ def main(args):
             "color": color.hex,
         }))
     else:
+        print (f" Matching Size:{matching_size}\n Nonmatching Size:{nonmatching_size}\n Calculated Size:{matching_size + nonmatching_size}\n Total Size:{total_size}\n")
         if matching_size + nonmatching_size != total_size:
             print("Warning: category/total size mismatch!\n")
         print(f"{len(matching_funcs)} matched functions / {len(all_funcs)} total ({funcs_matching_ratio:.2f}%)")

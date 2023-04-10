@@ -469,6 +469,8 @@ sprintf = 0x8008C490;
 proutSprintf = 0x8008C4E8;
 osSyncPrintf = 0x8008C520;
 
+overlay_table = 0x800C1C74;
+
 aisetfreq_rodata_0000 = 0x800CC640;
 osViClock = 0x800C7728;
 __CartRomHandle = 0x800F2A80;

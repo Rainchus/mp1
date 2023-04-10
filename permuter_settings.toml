@@ -1,5 +1,6 @@
-compiler_command = "tools/gcc_2.7.2/linux/gcc -w -Ibuild/include -Iinclude -Isrc -Iassets/us -D_LANGUAGE_C -D_FINALROM -DVERSION=us -DF3DEX_GBI_2 -D_MIPS_SZLONG=32 -nostdinc -c -O1 -G0 -mips3 -mgp32 -mfp32 -fno-common -B tools/gcc_2.7.2/linux/  -Wuninitialized -Wmissing-braces -Wimplicit -Wredundant-decls -Wstrict-prototypes -DPERMUTER"
+compiler_command = "tools/gcc_2.7.2/linux/gcc -w -I. -I include -I include/PR -I include/engine -I include/gcc -D_LANGUAGE_C -D_FINALROM -DVERSION=us -DF3DEX_GBI_2 -D_MIPS_SZLONG=32 -nostdinc -c -O1 -G0 -mips3 -mgp32 -mfp32 -fno-common -B tools/gcc_2.7.2/linux/  -Wuninitialized -Wmissing-braces -Wimplicit -Wredundant-decls -Wstrict-prototypes -DPERMUTER"
 assembler_command = "mips-linux-gnu-as -EB -march=vr4300 -mtune=vr4300 -Iinclude -G 0 -I include -mips3 -mabi=32"
+compiler_type = "gcc"
 
 [preserve_macros]
 "gs?[DS]P.*" = "void"

@@ -26,6 +26,6 @@ void func_800F8608_284848(void);
 void func_800F8C6C_284EAC(void);
 void func_800F8DF4_285034(void);
 void func_800F8C20_284E60(unkObjectStruct*);
-void func_8004DBD4(s32, u8); //for some reason defined differently between files
+void func_8004DBD4(s32, u8);
 void func_800F8B1C_284D5C(void);
 

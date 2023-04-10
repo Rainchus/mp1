@@ -20,15 +20,15 @@ else:
 
 # fix patch applied by mod_configure if it exist
 # open the file for reading
-with open('src/engine/gameman.c', 'r') as f:
-    filedata = f.read()
+# with open('src/engine/gameman.c', 'r') as f:
+#     filedata = f.read()
 
-# replace the string 'cPerFrameFunction' with 'SleepVProcess'
-newdata = filedata.replace('cPerFrameFunction', 'SleepVProcess')
+# # replace the string 'cPerFrameFunction' with 'SleepVProcess'
+# newdata = filedata.replace('cPerFrameFunction', 'SleepVProcess')
 
-# open the file for writing and write the updated content
-with open('src/engine/gameman.c', 'w') as f:
-    f.write(newdata)
+# # open the file for writing and write the updated content
+# with open('src/engine/gameman.c', 'w') as f:
+#     f.write(newdata)
 
 with open('build.ninja', 'w') as f:
     f.write(f'DETECTED_OS = {DETECTED_OS}\n')
@@ -46,7 +46,7 @@ header = (
     'CFLAGS = -G0 -mips3 -mgp32 -mfp32 -Wa,--vr4300mul-off -D_LANGUAGE_C\n'
     'CPPFLAGS = -I. -I include -I include/PR -I include/engine -I include/gcc -I build/include -I src -DF3DEX_GBI_2 -DNDEBUG\n'
     'LDFLAGS = -T symbol_addrs.txt -T undefined_syms.txt -T undefined_funcs.txt -T undefined_funcs_auto.txt -T undefined_syms_auto.txt -T $LD_SCRIPT -Map $LD_MAP --no-check-sections\n'
-    'CHECK_WARNINGS = -Wall -Wextra -Wno-format-security -Wno-unused-parameter -Wno-sign-compare -Wno-unused-variable -Wno-pointer-to-int-cast -Wno-int-to-pointer-cast -m32\n'
+    'CHECK_WARNINGS = -Wall -Wextra -Wunused-but-set-variable -Wno-format-security -Wno-unused-parameter -Wno-sign-compare -Wno-unused-variable -Wno-pointer-to-int-cast -Wno-int-to-pointer-cast -m32\n'
     'CFLAGS_CHECK = -fsyntax-only -fsigned-char -nostdinc -fno-builtin -D CC_CHECK -D _LANGUAGE_C -std=gnu90 $CHECK_WARNINGS\n'
     'AS = mips-linux-gnu-as\n'
     'LD = mips-linux-gnu-ld\n'

@@ -80,7 +80,7 @@ void func_8004E0E8(s32);
 Process* func_80041C04(s16);
 void SetPlayerLandedSpaceType(s16, u8);
 void ShowPlayerCoinChange(s32, s32);
-void func_800415CC(s16, s16);
+void func_800415CC(s16, s32);
 Process* func_800419D8(s16);
 Process* func_80048000(s32);
 void func_8005884C(Vec3f*);

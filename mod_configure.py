@@ -36,7 +36,7 @@ header = (
     'CFLAGS = -G0 -mips3 -mgp32 -mfp32 -Wa,--vr4300mul-off -D_LANGUAGE_C\n'
     'CPPFLAGS = -I. -I include -I include/PR -I include/engine -I include/gcc -I build/include -I src -DF3DEX_GBI_2 -DNDEBUG\n'
     'LDFLAGS = -T symbol_addrs.txt -T undefined_syms.txt -T undefined_funcs.txt -T undefined_funcs_auto.txt -T undefined_syms_auto.txt -T $LD_SCRIPT -Map $LD_MAP --no-check-sections\n'
-    'CHECK_WARNINGS = -Wall -Wextra -Wno-format-security -Wno-unused-parameter -Wno-sign-compare -Wno-unused-variable -Wno-pointer-to-int-cast -Wno-int-to-pointer-cast -m32\n'
+    'CHECK_WARNINGS = -Wall -Wextra -Wunused-but-set-variable -Wno-format-security -Wno-unused-parameter -Wno-sign-compare -Wno-unused-variable -Wno-pointer-to-int-cast -Wno-int-to-pointer-cast -m32\n'
     'CFLAGS_CHECK = -fsyntax-only -fsigned-char -nostdinc -fno-builtin -D CC_CHECK -D _LANGUAGE_C -std=gnu90 $CHECK_WARNINGS\n'
     'AS = mips-linux-gnu-as\n'
     'LD = mips-linux-gnu-ld\n'
@@ -121,23 +121,23 @@ with open('asm/nonmatchings/59E80/func_8005B6D0.s', 'w') as file:
     file.writelines(lines)
 
 
-# define the path to the file we want to modify
-filepath = "src/engine/gameman.c"
+# # define the path to the file we want to modify
+# filepath = "src/engine/gameman.c"
 
-# read in the contents of the file
-with open(filepath, "r") as f:
-    filedata = f.read()
+# # read in the contents of the file
+# with open(filepath, "r") as f:
+#     filedata = f.read()
 
-# define the text we want to search for and replace
-old_text = "void func_8001A454(void) {\n    while (1) {\n        SleepVProcess();"
-new_text = "void func_8001A454(void) {\n    while (1) {\n        cPerFrameFunction();"
+# # define the text we want to search for and replace
+# old_text = "void func_8001A454(void) {\n    while (1) {\n        SleepVProcess();"
+# new_text = "void func_8001A454(void) {\n    while (1) {\n        cPerFrameFunction();"
 
-# do the replacement
-filedata = filedata.replace(old_text, new_text)
+# # do the replacement
+# filedata = filedata.replace(old_text, new_text)
 
-# write the modified contents back to the file
-with open(filepath, "w") as f:
-    f.write(filedata)
+# # write the modified contents back to the file
+# with open(filepath, "w") as f:
+#     f.write(filedata)
 
 file_path = "src/mod/mod_boot_func_hook.s"
 
@@ -174,21 +174,21 @@ J 0x8005B730
 nop
 """)
 
-file_path = "src/mod/mod_main.c"
+# file_path = "src/mod/mod_main.c"
 
-if not os.path.exists(file_path):
-    with open(file_path, "w") as f:
-        f.write("""\
-#include "common.h"
+# if not os.path.exists(file_path):
+#     with open(file_path, "w") as f:
+#         f.write("""\
+# #include "common.h"
 
-void cBootFunction(void) {
-    //
-}
+# void cBootFunction(void) {
+#     //
+# }
 
-void cPerFrameFunction(void) {
-    SleepVProcess(); //restore from hook
-}
-""")
+# void cPerFrameFunction(void) {
+#     SleepVProcess(); //restore from hook
+# }
+# """)
 
 
 

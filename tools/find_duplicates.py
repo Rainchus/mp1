@@ -11,12 +11,12 @@ import sys
 
 script_dir = os.path.dirname(os.path.realpath(__file__))
 root_dir = script_dir + "/../"
-asm_dir = root_dir + "asm/"
+asm_dir = root_dir + "asm/nonmatchings/"
 build_dir = root_dir + "build/"
 
 
 def read_rom():
-    with open(root_dir + "/baserom.us.z64", "rb") as f:
+    with open(root_dir + "baserom.us.z64", "rb") as f:
         return f.read()
 
 
@@ -204,11 +204,6 @@ def all_matches(all_funcs_flag):
 
         i += 1
         print("File matching progress: {:%}".format(i / (len(s_files) - iter_limit)), end='\r')
-
-        # symbol doesn't exists? 
-        if file not in map_offsets:
-            to_match_files.remove(file)
-            continue
 
         if get_symbol_length(file) < 16:
             to_match_files.remove(file)

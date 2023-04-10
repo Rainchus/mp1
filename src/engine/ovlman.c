@@ -3,7 +3,7 @@
 
 /* TODO: set .data here. */
 // u8 D_800C1C70;
-// OverlayInfo D_800C1C74[];
+// OverlayInfo overlay_table[];
 // Vec4f D_800C2F94[];
 // Vec3f D_800C2F04[];
 // Vec3f D_800C2F4C[];
@@ -44,12 +44,12 @@ void LoadOverlay(s32 overlayIndex) {
     u8 *bss_end;
     u8 *temp;
 
-    rom_start = D_800C1C74[overlayIndex].rom_start;
-    rom_end = D_800C1C74[overlayIndex].rom_end;
-    bss_start = D_800C1C74[overlayIndex].bss_start;
-    bss_end = D_800C1C74[overlayIndex].bss_end;
+    rom_start = overlay_table[overlayIndex].rom_start;
+    rom_end = overlay_table[overlayIndex].rom_end;
+    bss_start = overlay_table[overlayIndex].bss_start;
+    bss_end = overlay_table[overlayIndex].bss_end;
 
-    HuRomDmaCodeRead(rom_start, D_800C1C74[overlayIndex].ram_start, rom_end - rom_start);
+    HuRomDmaCodeRead(rom_start, overlay_table[overlayIndex].ram_start, rom_end - rom_start);
 
     temp = bss_start;
     while (bss_start < bss_end) {

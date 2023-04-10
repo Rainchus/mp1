@@ -15,7 +15,7 @@ typedef struct OverlayInfo {
 
 
 extern u8 D_800C1C70;
-extern OverlayInfo D_800C1C74[];
+extern OverlayInfo overlay_table[];
 extern Vec4f D_800C2F94[];
 extern Vec3f D_800C2F04[];
 extern Vec3f D_800C2F4C[];

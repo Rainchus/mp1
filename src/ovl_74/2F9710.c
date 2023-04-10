@@ -13,6 +13,7 @@ Vec3f vec1;
 Vec3f vec2;
 } unkUserData;
 
+void func_8005B860(s32);
 extern testStruct2 D_800F6F00[];
 void func_8005C3FC(s32, s32);
 void func_8005CC3C(void);
