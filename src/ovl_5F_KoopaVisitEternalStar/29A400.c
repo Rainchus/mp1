@@ -1,6 +1,47 @@
 #include "process.h"
 #include "29A400.h"
 
+u8 D_800F6C60_29AA80[] = {10, 20, 30, 40, 50};
+s32 D_800F6C68_29AA88[] = {
+    2, 9, 20, 29, 41, 49, 58, 71, 71, 101, 71
+};
+
+Vec3f D_800F6C94_29AAB4 = {-80.0f, 0.0f, 1310.0f};
+Vec3f D_800F6CA0_29AAC0 = {80.0f, 0.0f, 1520.0f};
+
+s32 D_800F6CAC_29AACC[] = {
+    0x00000001, 0x00010039,
+};
+
+s32 D_800F6CB4_29AAD4[] = {
+    0x00000001, 0x00020039
+};
+
+s32 D_800F6CBC_29AADC[] = {
+    0x00000001, 0x00060039
+};
+
+s32 D_800F6CC4_29AAE4[] = {
+    0x00000001, 0x00030039,
+};
+
+s32 D_800F6CCC_29AAEC[] = {
+    0x00000001, 0x00040039
+};
+
+s32 D_800F6CD4_29AAF4[] = {
+    0x00000001, 0x00050039
+};
+
+s32* D_800F6CDC_29AAFC[] = {
+    D_800F6CAC_29AACC,
+    D_800F6CB4_29AAD4,
+    D_800F6CBC_29AADC,
+    D_800F6CC4_29AAE4,
+    D_800F6CCC_29AAEC,
+    D_800F6CD4_29AAF4
+};
+
 void func_8004DBD4(s32, u8);
 
 void func_800F65E0_29A400(void) {
@@ -37,8 +78,8 @@ void func_800F673C_29A55C(void) {
     SleepProcess(0x1A);
     if (D_800ED192.amountOfTimesStartPassed % 10 == 0) {
         temp_s0 = CreateTextWindow(0x32, 0x32, 0xF, 4);
-        sprintf(buffer1, D_800F6D00, D_800ED192.amountOfTimesStartPassed);
-        sprintf(buffer2, D_800F6D00, D_800F6C60[D_800F6D12]);
+        sprintf(buffer1, "%d", D_800ED192.amountOfTimesStartPassed);
+        sprintf(buffer2, "%d", D_800F6C60_29AA80[D_800F6D12]);
         func_8006DA5C(temp_s0, buffer1, 0);
         func_8006DA5C(temp_s0, buffer2, 1);
         LoadStringIntoWindow(temp_s0, (void*)0x17A, -1, -1);
@@ -60,7 +101,7 @@ void func_800F673C_29A55C(void) {
     func_8004CCD0(&D_800F6D18->coords, &D_800F32A0->coords, &D_800F6D18->unk_18);
     func_8004F4D4(D_800F6D18, 0, 0);
     func_80060468(0x451, gPlayers[D_800F6D11].characterID);
-    func_80055960(D_800F6D11, D_800F6C60[D_800F6D12]);
+    func_80055960(D_800F6D11, D_800F6C60_29AA80[D_800F6D12]);
     SleepProcess(0x28);
     D_800F5144 = 1;
     
@@ -95,13 +136,13 @@ void func_800F69CC_29A7EC(void) {
         D_800F6D14 = CreateObject(0x83, NULL);
     }
 
-    D_800F6D14->coords.x = D_800F6C94.x;
-    D_800F6D14->coords.y = D_800F6C94.y;
-    D_800F6D14->coords.z = D_800F6C94.z;
-    D_800F6D18 = CreateObject(func_80052F04(D_800F6D11) & 0xFF, D_800F6CDC[gPlayers[D_800F6D11].characterID]);
-    D_800F6D18->coords.x = D_800F6CA0.x;
-    D_800F6D18->coords.y = D_800F6CA0.y;
-    D_800F6D18->coords.z = D_800F6CA0.z;
+    D_800F6D14->coords.x = D_800F6C94_29AAB4.x;
+    D_800F6D14->coords.y = D_800F6C94_29AAB4.y;
+    D_800F6D14->coords.z = D_800F6C94_29AAB4.z;
+    D_800F6D18 = CreateObject(func_80052F04(D_800F6D11), D_800F6CDC_29AAFC[gPlayers[D_800F6D11].characterID]);
+    D_800F6D18->coords.x = D_800F6CA0_29AAC0.x;
+    D_800F6D18->coords.y = D_800F6CA0_29AAC0.y;
+    D_800F6D18->coords.z = D_800F6CA0_29AAC0.z;
     func_80021B14(*D_800F6D18->unk_3C->unk_40, gPlayers[D_800F6D11].characterID, 0x80);
     func_8004CCD0(&D_800F6D14->coords, &D_800F6D18->coords, &D_800F6D14->unk_18);
     func_8004CCD0(&D_800F6D18->coords, &D_800F6D14->coords, &D_800F6D18->unk_18);
@@ -120,7 +161,7 @@ void func_800F6B80_29A9A0(void) {
     func_80017660(0, 0.0f, 0.0f, 320.0f, 240.0f);
     func_800176C4(0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
     LoadBackgroundData(&D_FE2310);
-    LoadBackgroundIndex(D_800F6C68[D_800F6D10]);
+    LoadBackgroundIndex(D_800F6C68_29AA88[D_800F6D10]);
 }
 
 void func_800F6C34_29AA54(void) {

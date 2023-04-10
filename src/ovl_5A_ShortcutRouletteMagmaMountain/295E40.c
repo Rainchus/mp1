@@ -99,6 +99,7 @@ void func_800F6898_2960F8(void) {
     
     temp_s0_2 = func_800F66D8_295F38(windowID);
     HideTextWindow(windowID);
+    
     if (temp_s0_2 == 0) {
         func_80055960(D_800F7310, -0xA);
         SleepProcess(0x1E);

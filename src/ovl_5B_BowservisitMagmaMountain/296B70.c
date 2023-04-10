@@ -17,8 +17,6 @@ s32 D_800F7608_297B98[] = {0x00000002, 0x0004000A, 0x0004003E};
 s32 D_800F7614_297BA4[] = {0x00000002, 0x0005000A, 0x0005003E};
 s32* D_800F7620_297BB0[] = {D_800F75D8_297B68, D_800F75E4_297B74, D_800F75F0_297B80, D_800F75FC_297B8C, D_800F7608_297B98, D_800F7614_297BA4};
 
-//
-
 void func_800F65E0_296B70(void) {
     D_800F7650 = D_800ED5DD;
     InitObjSystem(0x32, 0x32);
@@ -78,27 +76,27 @@ void func_800F66C4_296C54(void) { //fix me: remove gotos
         func_800503B0(D_800F7650, 6);
         func_80060618(0x44A, D_800F7650);
         PlaySound(0x79);
-        D_800F7590 = CreateObject(0x25, 0);
-        D_800F7590->coords.x = D_800F75B8_297B48.x;
-        D_800F7590->coords.y = D_800F75B8_297B48.y + 200.0f;
-        D_800F7590->coords.z = D_800F75B8_297B48.z;
-        tempStruct04 = D_800F7590->unk_3C;
+        D_800F7590_297B20 = CreateObject(0x25, 0);
+        D_800F7590_297B20->coords.x = D_800F75B8_297B48.x;
+        D_800F7590_297B20->coords.y = D_800F75B8_297B48.y + 200.0f;
+        D_800F7590_297B20->coords.z = D_800F75B8_297B48.z;
+        tempStruct04 = D_800F7590_297B20->unk_3C;
         tempStruct04->unk_24 = 90.0f;
-        D_800F7590->xScale = D_800F7590->yScale = D_800F7590->zScale = 0.5f;
-        D_800F759C_297B2C = func_80042728(D_800F7590, 0);
+        D_800F7590_297B20->xScale = D_800F7590_297B20->yScale = D_800F7590_297B20->zScale = 0.5f;
+        D_800F759C_297B2C = func_80042728(D_800F7590_297B20, 0);
             var_f24 = 0.0f;
             var_f22 = 7.0f;
             do {
-                temp_s0_4 = D_800F7590;
+                temp_s0_4 = D_800F7590_297B20;
                 temp_s0_4->coords.y = D_800F75B8_297B48.y + 200.0f + (f32) (var_s1_3 / 2);
                 temp_f20 = var_s1_3 * 5 * 0.017453292519943295;
                 temp_s0_4->coords.x = (sinf(temp_f20) * var_f22) + D_800F75B8_297B48.x;
-                temp_s0_4 = D_800F7590;
+                temp_s0_4 = D_800F7590_297B20;
                 temp_s0_4->coords.z = (cosf(temp_f20) * var_f22) + D_800F75B8_297B48.z;
-                temp_s0_4 = D_800F7590;
+                temp_s0_4 = D_800F7590_297B20;
                 temp_f20_2 = var_f24 * 0.017453292519943295;
                 temp_s0_4->unk_18.x = sinf(temp_f20_2);
-                temp_s0_4 = D_800F7590;
+                temp_s0_4 = D_800F7590_297B20;
                 temp_s0_4->unk_18.z = cosf(temp_f20_2);
                 SleepVProcess();
                 if (var_s1_3 == 0x4B) {
@@ -112,8 +110,8 @@ void func_800F66C4_296C54(void) { //fix me: remove gotos
                 var_f24 += 10.0f;
                 var_f22 += 0.0f;
             } while (var_s1_3 < 0x15F);
-            DestroyObject(D_800F7590);
-            D_800F7590 = NULL;
+            DestroyObject(D_800F7590_297B20);
+            D_800F7590_297B20 = NULL;
             func_800427D4(D_800F759C_297B2C);
             D_800F759C_297B2C = NULL;
     }
@@ -159,25 +157,17 @@ void func_800F66C4_296C54(void) { //fix me: remove gotos
         temp_s2 = 0;
         tempVar2 = 0;
         tempVar = 0;
-        do {
+        while (tempVar != 2) {
             switch (tempVar) {
             case 0:
-                if ((gPlayers[D_800F7650].unk_06 & 1)) {
-                    if(temp_s2 >= 0xF) {
-                        goto label;
-                    }
-                    break;
-                } else if (!(D_800F5460[gPlayers[D_800F7650].flags] & 0x8000)) {
-                    break;
-                } else {
-                    label:
+                if (((gPlayers[D_800F7650].unk_06 & 1) && (temp_s2 >= 0xF)) || (!(gPlayers[D_800F7650].unk_06 & 1) && (D_800F5460[gPlayers[D_800F7650].flags] & 0x8000))) {
                     tempVar = 1;
+                    func_8004F4D4(D_800F7658, 1, 0);
+                    func_8004F40C(D_800F7658, 3, 2); 
                 }
-                func_8004F4D4(D_800F7658, 1, 0);
-                func_8004F40C(D_800F7658, 3, 2);   
                 break;
             case 1:
-                if (++tempVar2 == 0x14) {
+                if (++tempVar2 == 20) {
                     tempVar = 2;
                     func_800413B0(D_800F7650);
                 }
@@ -185,8 +175,10 @@ void func_800F66C4_296C54(void) { //fix me: remove gotos
             }
             temp_s2++;
             SleepVProcess();
-        } while (tempVar != 2);
+        }
+
         SleepProcess(0x1E);
+
         if (func_80041624(D_800F7650) == 0) {
             windowID = CreateTextWindow(0x46, 0x41, 0xE, 2);
             if (!(gPlayers[D_800F7650].coinAmount < 0x14)) {
@@ -289,8 +281,8 @@ void func_800F7404_297994(void) {
     DestroyObject(D_800F7658);
     DestroyObject(D_800F765C);
     
-    if (D_800F7590 != NULL) {
-        DestroyObject(D_800F7590);
+    if (D_800F7590_297B20 != NULL) {
+        DestroyObject(D_800F7590_297B20);
     }
 
     if (D_800F759C_297B2C != NULL) {
