@@ -204,30 +204,26 @@ void func_80014750(void *file) {
 
 void func_80014770(u32 arg0, u32 arg1) {
     HuArchive* test;
-    u8* sp10; //rom addr point to directory
+    HuFileInfo sp10; //rom addr point to directory
     s32 tableSize;
     s32 dir;
     
-    sp10 = D_800D12F0 + D_800D12F8[arg1];
-    if (D_800D12FC != sp10) {
+    sp10.bytes = D_800D12F0 + D_800D12F8[arg1];
+    if (D_800D12FC != sp10.bytes) {
         if (D_800D12FC != D_800D12F0) {
             FreePerm(D_800D1304);
         }
         
-        D_800D12FC = *(&sp10);
+        D_800D12FC = sp10.bytes;
         test = &D_800D1310;
         
-        func_80061FE8(sp10, test, 0x10);
+        func_80061FE8(sp10.bytes, test, 0x10);
         dir = test->dir;
-        if (1) {
-            s32 pad[2];
-            D_800D1300 = dir;
-        }
         
         D_800D1300 = dir;
         tableSize = dir * 4;
         D_800D1304 = MallocPerm(tableSize);
-        func_80061FE8(&sp10[4], D_800D1304, tableSize);
+        func_80061FE8(sp10.bytes + 4, D_800D1304, tableSize);
     }
 }
 

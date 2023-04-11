@@ -62,6 +62,10 @@ header = (
     '  command = (export COMPILER_PATH=tools/gcc_2.7.2/$DETECTED_OS && $CC -O0 $CFLAGS $CPPFLAGS -c -o $out $in) && ($STRIP $out -N dummy-symbol-name)\n'
     '\n'
 
+    'rule O2_cc\n'
+    '  command = (export COMPILER_PATH=tools/gcc_2.7.2/$DETECTED_OS && $CC -O2 $CFLAGS $CPPFLAGS -c -o $out $in) && ($STRIP $out -N dummy-symbol-name)\n'
+    '\n'
+
     'rule main_cc\n'
     '  command = (export COMPILER_PATH=tools/gcc_2.7.2/$DETECTED_OS && $CC $OPTFLAGS $CFLAGS $CPPFLAGS -c -o $out $in) && ($STRIP $out -N dummy-symbol-name)\n'
     '\n'
@@ -319,6 +323,8 @@ with open('build.ninja', 'a') as outfile:
                 outfile.write("build build/" + os.path.splitext(c_file)[0] + ".c.o: " + "O0_cc " + c_file + "\n")
             elif "src/lib" in os.path.relpath(c_file):
                 outfile.write("build build/" + os.path.splitext(c_file)[0] + ".c.o: " + "lib_cc " + c_file + "\n")
+            elif os.path.basename(c_file) == "95F40.c":
+                outfile.write("build build/" + os.path.splitext(c_file)[0] + ".c.o: " + "O2_cc " + c_file + "\n")
             else:
                 outfile.write("build build/" + os.path.splitext(c_file)[0] + ".c.o: " + "main_cc " + c_file + "\n")
 

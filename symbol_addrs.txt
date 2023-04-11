@@ -44,7 +44,6 @@ ClearBoardFeatureFlag = 0x8005982C;
 MakeHeap = 0x80059880;
 Malloc = 0x800598A0;
 Free = 0x8005992C;
-Align16 = 0x80059B00;
 sqrtf = 0x800855B0;
 bzero = 0x8008C360;
 bcopy = 0x8008C040;
@@ -158,7 +157,7 @@ sprintf = 0x8008C490;
 
 HuRomDmaCodeRead = 0x80062088;
 
-osInitialize = 0x80093240;
+__osInitialize_common = 0x80093240;
 osDestroyThread = 0x80088720;
 osCreateThread = 0x80088650;
 osStartThread = 0x80088D10;
@@ -399,7 +398,6 @@ __osSpSetStatus = 0x800950F0;
 __osSpGetStatus = 0x800950E0;
 __osSpSetPc = 0x80095100;
 __osSpRawStartDma = 0x80091FC0;
-__osPiDevMgr = 0x800C6520;
 __osViCurr = 0x800C77B0;
 __osViNext = 0x800C77B4;
 __osMaxControllers = 0x800F09F8;
@@ -469,7 +467,7 @@ sprintf = 0x8008C490;
 proutSprintf = 0x8008C4E8;
 osSyncPrintf = 0x8008C520;
 
-overlay_table = 0x800C1C74;
+overlay_table = 0x800C1C74; //size:0x1290
 
 aisetfreq_rodata_0000 = 0x800CC640;
 osViClock = 0x800C7728;
@@ -477,10 +475,7 @@ __CartRomHandle = 0x800F2A80;
 __osCurrentHandle = 0x800C6540;
 __osPiTable = 0x800C653C;
 __osEepPifRam = 0x800F2BE0;
-__osPiDevMgr = 0x800C6520;
-__osPiDevMgr2 = 0x800C6528;
-__Dom2SpeedParam = 0x800ED4B8;
-__Dom1SpeedParam = 0x800F3108;
+__osPiDevMgr = 0x800C6520; // size:0x1C
 __additional_scanline = 0x800C656C;
 __osShutdown = 0x800C772C;
 __OSGlobalIntMask = 0x800C7730;

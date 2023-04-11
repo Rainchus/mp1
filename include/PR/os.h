@@ -978,7 +978,7 @@ extern void     bzero(void *, int);
 
 /* Miscellaneous operations */
 
-extern void		osInitialize(void);
+extern void		__osInitialize_common(void);
 extern u32		osGetCount(void);
 extern void		osExit(void);
 extern u32 		osGetMemSize(void);

@@ -152,3 +152,6 @@ gMesgQueue = 0x800D5FB0;
 gMesgQueueInitMesg = 0x800D5FC8;
 D_800FDA60_ovl62 = 0x800FDA60;
 D_800FD59C_ovl62 = 0x800FD59C;
+
+__Dom2SpeedParam = 0x800ED4B8;
+__Dom1SpeedParam = 0x800F3108;

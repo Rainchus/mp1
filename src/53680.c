@@ -67,7 +67,7 @@ u32 PlayerHasCoins(s32 index, s32 count) {
 /*
  * Updates the given player's current animation.
 */
-void func_80052BE8(s32 index, s16 animation, s32 unk) {
+void SetPlayerAnimation(s32 index, s16 animation, s32 unk) {
     playerMain* player = GetPlayerStruct(index);
     if (player == GetPlayerStruct(-1)) {
         func_8003E81C(player->playerObj, animation, unk);

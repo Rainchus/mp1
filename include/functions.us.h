@@ -172,7 +172,7 @@ s32 func_8003C218(s16, void*);
 void func_800587EC(s32, s32, s32);
 void func_8003D514(Vec3f*, f32);
 Process* func_8004D3F4(Vec3f*, Vec3f*, Vec3f*, s32);
-void SetPlayerAnimation(s32, s32, s32);
+void SetPlayerAnimation(s32 index, s16 animation, s32 unk);
 void func_8004CB20(s32);
 void func_800587BC(s32, s32, s32, s32);
 void SetNextChainAndSpace(s16, s16, s16);

@@ -244,7 +244,7 @@ s32 IsFlagSet(s32 feature) {
     return ret & (1 << b);
 }
 
-void SetBoardFeaturefeature(s32 feature) {
+void SetBoardFeatureFlag(s32 feature) {
     s32 temp;
     s32 a;
     s32 b;
@@ -437,7 +437,7 @@ u32 GetUsedMemoryBlockCount(HeapNode* heap) {
     return count_free;
 }
 
-s32 Align16(s32 arg0) {
+s32 GetMemoryAllocSize(s32 arg0) {
     return (arg0 + 0x1F) & ~0xF;
 }
 
