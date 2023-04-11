@@ -10,6 +10,16 @@ extern u16 D_800F3396[4];
 extern u8 *D_800F3843;
 extern u16 D_800F544C[4];
 
+typedef struct mainfsTableHeader {
+    s32 dir;
+    s32 offsets[3];
+} mainfsTableHeader;
+typedef struct mainfsEntryInfo {
+    u8 *file_bytes;
+    s32 size;
+    s32 compression_type;
+} mainfsEntryInfo;
+
 typedef struct unkMallocPermStruct {
     u16 unk0;
     u16 unk2;
@@ -59,7 +69,7 @@ extern HuArchive D_800D1310;
 
 extern void *func_80014678(s32, s32);
 extern void *func_800146D4(s32, s32);
-extern void func_80014770(s32, s32);
+extern void func_80014770(u32, u32);
 extern void func_80014504(s32 type, s32 index, HuFileInfo* info);
 
 // Initialize file system from ROM.
@@ -70,8 +80,8 @@ void func_80014460(void* fs_rom_loc) {
     D_800D12F0 = fs_rom_loc;
     archiveHeader = &D_800D1310;
     func_80061FE8(fs_rom_loc, archiveHeader, 16); // ExecRomCopy
-    D_800D12F4 = archiveHeader->count;
-    dir_table_size = archiveHeader->count * 4;
+    D_800D12F4 = archiveHeader->dir;
+    dir_table_size = archiveHeader->dir * 4;
     D_800D12F8 = (s32 *)MallocPerm(dir_table_size);
     func_80061FE8(fs_rom_loc + 4, D_800D12F8, dir_table_size);
     D_800D12FC = D_800D12F0;
@@ -95,7 +105,7 @@ void func_80014504(s32 type, s32 index, HuFileInfo* info) {
 
     func_80061FE8(info->bytes, archiveHeader, 16); // ExecRomCopy
     info->bytes += 8;
-    info->size = archiveHeader->count;
+    info->size = archiveHeader->dir;
     info->compType = archiveHeader->offsets[0];
 }
 
@@ -192,30 +202,34 @@ void func_80014750(void *file) {
     }
 }
 
-INCLUDE_ASM(s32, "../src/engine/data", func_80014770);
-// void func_80014770(s32 arg0, s32 arg1) {
-//     mainfsTableHeader* test;
-//     s32* sp10;
-//     u8 **new_var;
-//     s32 tableSize;
-//     s32 count;
+void func_80014770(u32 arg0, u32 arg1) {
+    HuArchive* test;
+    u8* sp10; //rom addr point to directory
+    s32 tableSize;
+    s32 dir;
     
-//     sp10 = D_800D12F0 + ((0, D_800D12F8[arg1]));
-//     if (D_800D12FC != sp10) {
-//         if (D_800D12FC != D_800D12F0) {
-//           FreePerm(D_800D1304);
-//         }
-//         new_var = &sp10;
-//         D_800D12FC = *new_var;
-//         test = &D_800D1300;
-//         func_80061FE8(sp10, test, 0x10);
-//         count = test->count;
-//         D_800D1300 = count;
-//         tableSize = count * 4;
-//         D_800D1304 = MallocPerm(tableSize);
-//         func_80061FE8(&sp10[1], D_800D1304, tableSize);
-//     }
-// }
+    sp10 = D_800D12F0 + D_800D12F8[arg1];
+    if (D_800D12FC != sp10) {
+        if (D_800D12FC != D_800D12F0) {
+            FreePerm(D_800D1304);
+        }
+        
+        D_800D12FC = *(&sp10);
+        test = &D_800D1310;
+        
+        func_80061FE8(sp10, test, 0x10);
+        dir = test->dir;
+        if (1) {
+            s32 pad[2];
+            D_800D1300 = dir;
+        }
+        
+        D_800D1300 = dir;
+        tableSize = dir * 4;
+        D_800D1304 = MallocPerm(tableSize);
+        func_80061FE8(&sp10[4], D_800D1304, tableSize);
+    }
+}
 
 void* func_80014828(s32 arg0, s32 arg1) {
     HuFileInfo sp10;

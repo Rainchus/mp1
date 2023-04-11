@@ -4,7 +4,7 @@
 #include "common.h"
 
 typedef struct {
-    s32 count;
+    s32 dir;
     s32 offsets[3]; // Enough to pad to size 16
 } HuArchive;
 
