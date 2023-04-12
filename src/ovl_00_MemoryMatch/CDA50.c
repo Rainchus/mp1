@@ -232,7 +232,16 @@ void func_800F7C70_CF0E0(f32 arg0) { //uses rodata
     D_800EE98C = (D_800FDA70_D4EE0 - (arg0 * D_800FDA68_D4ED8));
 }
 
-INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800F7D74_CF1E4);
+void func_800F7D74_CF1E4(void) {
+    s16 i = 0;
+
+    do {
+        D_800FE158[i].unk0 = -1;
+        D_800FE158[i].unk2 = -1;
+
+        i = i + 1;
+    } while (i < 10);
+}
 
 void func_800F7DC0_CF230(s16 arg0, s16 arg1) {
     s16 i;
