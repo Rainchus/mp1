@@ -455,6 +455,17 @@ segments:
       - [0xC8340, .data, "../src/lib/2.0I/os/seteventmesg"]
       - [0xC8350, bin] # TODO: Figure this out 
 
+      - [0xCB6C0, .rodata, 3F5B0]
+      - [0xCB7D0, bin]
+      - [0xCBD80, .rodata, 51200] #800CB180
+      #- [0xCBDC0, .rodata, 54120] #800CB1C0
+      - [0xCBDC0, bin] #800CB1C0
+      - [0xCBEB0, .rodata, 57330] #800CB2B0
+      - [0xCBFB0, bin]
+      #- [0xCBFB0, .rodata, 59510] #800CB3B0
+      
+      
+
   # 2.0I N64 lib .rodata sections
       #    - [0xCBC60, .rodata, 4D770]
       - [0xCCED0, .rodata, "../src/lib/2.0I/gu/cosf"]

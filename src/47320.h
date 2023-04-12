@@ -18,7 +18,7 @@ s32 unk8;
 s32 unkC;
 } unkUserData;
 
-extern s32 D_800C4ED0[];
+extern char* D_800C4ED0[];
 extern s8 D_800C4EEC[];
 extern s16 D_800D64A4[];
 extern s32 D_800D64FC;

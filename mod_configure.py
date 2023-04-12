@@ -5,7 +5,7 @@ import fileinput
 dir_path = 'src/'
 asm_path = 'asm/'
 assets_path = 'assets/'
-optO0_files = ['synsetpan.c', 'synstartvoiceparam.c', 'ABCD0.c', 'ACA90.c', 'ACCB0.c', 'ACF80.c', 'AD380.c', 'AD740.c', 'ADA70.c', 'ADBD0.c', 'ADF70.c', 'AE150.c', 'AE630.c', 'AE820.c', 'AED10.c', 'AEF30.c', 'AF450.c', 'AF6C0.c', 'AF960.c', 'AFBD0.c', 'AFE60.c', 'AFF70.c', 'B07B0.c', 'B0BA0.c', 'B0FC0.c', 'B1930.c', 'B1B60.c', 'B1DC0.c', 'B1FD0.c', 'B22E0.c', 'B2310.c', '89EA0.c', 'A2080.c', 'A21C0.c', 'A3370.c']
+optO0_files = ['synsetpan.c', 'synstartvoiceparam.c', 'A27D0.c', 'ABCD0.c', 'ACA90.c', 'ACCB0.c', 'ACF80.c', 'AD380.c', 'AD740.c', 'ADA70.c', 'ADBD0.c', 'ADF70.c', 'AE150.c', 'AE630.c', 'AE820.c', 'AED10.c', 'AEF30.c', 'AF450.c', 'AF6C0.c', 'AF960.c', 'AFBD0.c', 'AFE60.c', 'AFF70.c', 'B07B0.c', 'B0BA0.c', 'B0FC0.c', 'B1930.c', 'B1B60.c', 'B1DC0.c', 'B1FD0.c', 'B22E0.c', 'B2310.c', '89EA0.c', 'A2080.c', 'A21C0.c', 'A3370.c']
 misc_files = ["48D90.c", "math.c"]
 
 if os.name == 'nt':
@@ -218,6 +218,8 @@ previous_vram_end = "0x80400000"
 ###
 def insert_section(lines, line_number, mod_directory, section_name):
     for filename_c in os.listdir(mod_directory):
+        if filename_c == "mod_overlay_table.data.s":
+            continue  # skip this file
         if filename_c.endswith(('.c', '.s')):
             lines.insert(line_number, f"\t\tbuild/{mod_directory}/{filename_c}.o({section_name});\n")
             line_number += 1
@@ -286,10 +288,10 @@ for root, dirs, files in os.walk(asm_path):
         if file.endswith('.s'):
             s_files.append(os.path.join(root, file))
 
-mod_s_files = []
+#append mod_s_files to s_files
 for root, dirs, files in os.walk(mod_directory):
     for file in files:
-        if file.endswith('.s'):
+        if file.endswith('.s') and "mod_overlay_table.data" not in file:
             s_files.append(os.path.join(root, file))
 
 bin_files = []
@@ -300,8 +302,8 @@ for root, dirs, files in os.walk(assets_path):
 
 # Combine the lists and change file extensions
 o_files = []
-for file in c_files + s_files + bin_files + mod_s_files:
-    if 'asm/nonmatchings/' not in file:
+for file in c_files + s_files + bin_files:
+    if 'asm/nonmatchings/' not in file and "mod_overlay_table.data" not in file:
         o_files.append("build/" + append_extension(file))
 
 with open('build.ninja', 'a') as f:
@@ -331,10 +333,16 @@ with open('build.ninja', 'a') as outfile:
 
 
     # Write the rules for the .s files
+    #searches src/mod/ for mod_overlay_table.data.s. if it exist, replace overlay_table.data.s
     for s_file in s_files:
         if "asm/nonmatchings" in s_file:
             continue
-        outfile.write("build build/" + os.path.splitext(s_file)[0] + ".s.o: " + "s_file " + s_file + "\n")
+        elif "mod_overlay_table.data" in s_file:
+            continue
+        elif "overlay_table.data" in s_file:
+            outfile.write("build build/asm/data/overlay_table.data.s.o: " + "s_file " + "src/mod/mod_overlay_table.data.s" + "\n")
+        else:
+            outfile.write("build build/" + os.path.splitext(s_file)[0] + ".s.o: " + "s_file " + s_file + "\n")
 
     # Write the rules for the .bin files
     for bin_file in bin_files:

@@ -1089,9 +1089,11 @@ void func_800F87E4_256654(EventTableUnkStruct* arg0) {
     
     if (PlayerIsCPU(-1) != 0) {
         tempVar = RunDecisionTree(arg0->decisionTree);
+
         for (i = 0; i < tempVar; i++) {
             func_8003BE84(temp_s2, -2);
         }
+        
         func_8003BE84(temp_s2, -4);
     }
     

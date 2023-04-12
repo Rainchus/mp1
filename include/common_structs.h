@@ -555,11 +555,11 @@ typedef struct DecisionTreeNonLeafNode {
     u32 type;
     union {
         void (*func) ();
-        u32 unsigned32;
+        u32 data;
     } node_data1;
     union {
-        u32 unsigned32;
-        s32 *next_grouper_ptr;
+        u32 data;
+        s32 *node_data;
     } node_data2;
 } DecisionTreeNonLeafNode;
 

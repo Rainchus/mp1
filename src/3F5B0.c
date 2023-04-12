@@ -4,7 +4,6 @@ void func_800622BC(u16, u16, s32);
 extern s32 D_800ECB24;
 
 
-#ifdef NON_MATCHING
 typedef s32 func_ptr(void);
 s16 GetCurrentPlayerIndex();                        /* extern */
 playerMain* GetPlayerStruct(s32);                           /* extern */
@@ -17,17 +16,15 @@ extern s16 D_800ED154[32]; //board ram
 extern s32 D_800F3FF0;
 extern s16 D_800C4C30[7];
 
-//RunDecisionTree
-//https://decomp.me/scratch/hUXdw
-s16 RunDecisionTree(DecisionTreeNonLeafNode* arg0) {
-    s32 temp_s0;
-    DecisionTreeNonLeafNode* temp_v0_2;
-    s32 temp_v1_2;
-    s16 temp_a1;
-    u32 temp_a0;
-    u32 temp_v0;
-    u8 temp_v1;
-    
+s16 RunDecisionTree(DecisionTreeNonLeafNode* currentNode) {
+    s32 loopIndex;
+    DecisionTreeNonLeafNode* tempNode;
+    s32 tempVal1;
+    s16 tempVal2;
+    u32 tempVal3;
+    u32 tempVal4;
+    u8 tempVal5;
+
     s32 phi_v0;
     s32 phi_s0;
     s32 phi_s0_2;
@@ -35,133 +32,110 @@ s16 RunDecisionTree(DecisionTreeNonLeafNode* arg0) {
     s32 phi_a0;
     s32 phi_a1;
 
-    DecisionTreeNonLeafNode* phi_s1 = arg0;
-    s32 phi_s3 = 1;
-    s16* tempArray = D_800C4C30;
-    s16* phi_s2 = D_800ED154;
-    
-    while (1) {
-        startLoop:
+    DecisionTreeNonLeafNode* phi_s1 = currentNode;
+    s32 bitMask = 1;
+    s16* boardFeatureArray = D_800C4C30;
+    s16* playerDataArray = D_800ED154;
+
+    for (;;phi_s1++) {
         switch ((phi_s1->type >> 24)) {
-        case 1:                                         /* switch 1 */
-            if (PlayerHasCoins(-1, phi_s1->node_data) != 0) {
-                goto afterLoop;
+        case 1:
+            if (PlayerHasCoins(-1, phi_s1->node_data1.data) != 0) {
+                break;
             }
-            break;
-        case 2:                                         /* switch 1 */
-            for (phi_s0 = 0; phi_s0 < 7; phi_s0++) {
-                if ((phi_s3 << phi_s0) & phi_s1->node_data) {
-                    if (!IsFlagSet(tempArray[phi_s0])) {
+            continue;
+        case 2:
+            for (loopIndex = 0; loopIndex < 7; loopIndex++) {
+                if ((bitMask << loopIndex) & phi_s1->node_data1.data) {
+                    if (!IsFlagSet(boardFeatureArray[loopIndex])) {
                         break;
                     }
                 }
             }
-            if (phi_s0 == 7) {
-                break;
-            }
-            goto afterLoop;
-
-            
-        case 3:                                         /* switch 1 */
-            if (((phi_s3 << (D_800F3FF0 - 1)) & phi_s1->node_data)) {
-                goto afterLoop;
+            if (loopIndex == 7) {
+                continue;
             }
             break;
-        case 4:                                         /* switch 1 */
-            temp_v0 = phi_s1->node_data;
-            temp_v1_2 = (temp_v0 >> 0x14);
-            temp_a1 = phi_s1->node_data;
-            
-            temp_a0 = (temp_v0 >> 0x10) & 0xF;
-            
-            temp_v1_2 &= 0xF;
 
-
-            switch (temp_a0) {                          /* switch 2 */
-            case 0:                                     /* switch 2 */
-                if (phi_s2[temp_v1_2] == temp_a1) {
-                    goto afterLoop;
-                }
+        case 3:
+            if (((bitMask << (D_800F3FF0 - 1)) & phi_s1->node_data1.data)) {
                 break;
-            case 1:                                     /* switch 2 */
-                if (phi_s2[temp_v1_2] != temp_a1) {
-                    goto afterLoop;
-                }
-                break;
-            case 2:                                     /* switch 2 */
-                if ((phi_s2[temp_v1_2] < temp_a1)) {
-                    goto afterLoop;
-                }
-                break;
-            case 3:                                     /* switch 2 */
-                if ((phi_s2[temp_v1_2] <= temp_a1)) {
-                    goto afterLoop;
-                }
-                break;
-            case 4:                                     /* switch 2 */
-                if ((phi_s2[temp_v1_2] > temp_a1)) {
-                    goto afterLoop;
-                }
-                break;
-            case 5:                                     /* switch 2 */
-                if ((phi_s2[temp_v1_2] >= temp_a1)) {
-                    goto afterLoop;
-                }
-                break;
-            default:
-                goto afterLoop;
             }
-            //end of switch 2
+            continue;
+        case 4:
+            tempVal4 = phi_s1->node_data1.data;
+            tempVal1 = (tempVal4 >> 0x14);
+            tempVal2 = phi_s1->node_data1.data;
+            tempVal3 = (tempVal4 >> 0x10) & 0xF;
+            tempVal1 &= 0xF;
 
-            break;
-        case 5:                                         /* switch 1 */
-            if (((phi_s3 << func_8004FEBC(GetCurrentPlayerIndex())) & phi_s1->node_data)) {
-                goto afterLoop;
+            switch (tempVal3) {
+            case 0:
+                if (playerDataArray[tempVal1] == tempVal2) {
+                    break;
+                }
+                continue;
+            case 1:
+                if (playerDataArray[tempVal1] != tempVal2) {
+                    break;
+                }
+                continue;
+            case 2:
+                if ((playerDataArray[tempVal1] < tempVal2)) {
+                    break;
+                }
+                continue;
+            case 3:
+                if ((playerDataArray[tempVal1] <= tempVal2)) {
+                    break;
+                }
+                continue;
+            case 4:
+                if ((playerDataArray[tempVal1] > tempVal2)) {
+                    break;
+                }
+                continue;
+            case 5:
+                if ((playerDataArray[tempVal1] < tempVal2)) {
+                    continue;
+                }
+                break;
             }
             break;
-        case 6:                                         /* switch 1 */
-            if (((func_ptr*)phi_s1->node_data)() != 0) {
-                goto afterLoop;
-            }
-            break;
-        case 7:                                         /* switch 1 */
-            if ((u32) GetTurnsElapsed() < (u32) phi_s1->node_data) {
+        case 5:
+            if (((bitMask << func_8004FEBC(GetCurrentPlayerIndex())) & phi_s1->node_data1.data)) {
                 break;
             }
-
-            goto afterLoop;
+            continue;
+        case 6:
+            if (((func_ptr*)phi_s1->node_data1.data)() != 0) {
+                break;
+            }
+            continue;
+        case 7:
+            if ((u32) GetTurnsElapsed() < (u32) phi_s1->node_data1.data) {
+                continue;
+            }
         case 0:
-        default:
-            afterLoop:
-            if ((s32)phi_s1->next_grouper_ptr >= 0) {
-                goto afterLoop2;
-            }
-            phi_s1 = (DecisionTreeNonLeafNode*)phi_s1->next_grouper_ptr - 1;
-            goto addC;
+            break;
         }
-        phi_s1++;
+        if ((s32)phi_s1->node_data2.data < 0) {
+            phi_s1 = (DecisionTreeNonLeafNode*)phi_s1->node_data2.data - 1;
+        } else {
+            if (GetPlayerStruct(-1)->cpuDifficultyCopy == 0) {
+                phi_a0 = phi_s1->node_data2.data & 0xFF;
+            } else {
+                phi_a0 = (phi_s1->node_data2.data >> 8);
+            }
+            if (RNGPercentChance(phi_a0) != 0) {
+                tempVal2 = (phi_s1->node_data2.data >> 16) & 1;
+            } else {
+                tempVal2 = ((phi_s1->node_data2.data >> 16) ^ 1) & 1;
+            }
+            return tempVal2;
+        }
     }
-afterLoop2:
-
-    if (GetPlayerStruct(-1)->cpuDifficultyCopy == 0) {
-        phi_a0 = phi_s1->next_grouper_ptr & 0xFF;
-    } else {
-        phi_a0 = (phi_s1->next_grouper_ptr >> 8);
-    }
-
-    if (RNGPercentChance(phi_a0) != 0) {
-        temp_a1 = (phi_s1->next_grouper_ptr >> 16) & 1;
-    } else {
-        temp_a1 = ((phi_s1->next_grouper_ptr >> 16) ^ 1) & 1;
-    }
-    return temp_a1;
-addC:
-    phi_s1++;
-    goto startLoop;
 }
-#else
-INCLUDE_ASM(s32, "3F5B0", RunDecisionTree);
-#endif
 
 void func_8003ECB0(u16 arg0, u16 arg1, s32 arg2, u8 arg3, u8 arg4) {
     D_800ECB24 = arg4;

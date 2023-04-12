@@ -9,15 +9,10 @@ void func_80050A7C(unk_Struct02* arg0) {
     func_80053454(arg0);
 }
 
-extern s16 D_800C52F8;
-extern s32 D_800C52FC;
-extern u16 D_800F5460[];
-
-#ifdef NON_EQUIVALENT
 s32 func_80050A98(s32 arg0) {
     s32 var_s0;
     s32 temp_s1;
-    s32 temp_s3;
+    unk_Struct02* temp_s3;
     s32 temp_s4;
     s32 temp_s5;
     u16* temp_s0;
@@ -28,21 +23,22 @@ s32 func_80050A98(s32 arg0) {
     temp_s3 = func_8005077C(0);
     SleepVProcess();
     temp_s0 = &D_800F5460[arg0];
+
     while (1) {
         SleepVProcess();
-        if (D_800C52F8 == 0 || (*temp_s0 & 2)) {
-            if (func_8003EE58(temp_s1) != 0) {
+        if (D_800C52F8 != 0) {
+            if ((*temp_s0 & 2) != 0) {
+            var_s0 = 3;
+            break;
+            }
+        } else  {
+             if (func_8003EE58(temp_s1) != 0) {
                 PlaySound(0x466);
                 D_800C52F8 = 1;
                 continue;
-            }
-        } else {
-            var_s0 = 3;
-            break;
+            }  
         }
-        
-        
-        
+
         if (*temp_s0 & 0x8000) {
             var_s0 = 4;
             break;
@@ -51,15 +47,13 @@ s32 func_80050A98(s32 arg0) {
             break;
         }
     }
+
     func_80050A7C(temp_s3);
     func_80045E6C(temp_s5);
     func_80045E6C(temp_s4);
     func_8003EE3C(temp_s1);
     return var_s0;
 }
-#else
-INCLUDE_ASM(s32, "51200", func_80050A98);
-#endif
 
 INCLUDE_ASM(s32, "51200", func_80050BE0);
 
@@ -88,7 +82,17 @@ void func_80050D68(void) {
     }
 }
 
-INCLUDE_ASM(s32, "51200", func_80050E10);
+Process* func_80050E10(s16 arg0, s32 arg1) {
+    Process* process;
+    unkMallocStruct* processUserData;
+
+    process = InitProcess(func_80050D68, 0x1005, 0, 0x40);
+    processUserData = Malloc(process->heap, sizeof(unkMallocStruct));
+    process->user_data = processUserData;
+    processUserData->unk0 = arg1;
+    processUserData->unk4 = arg0;
+    return process;
+}
 
 INCLUDE_ASM(s32, "51200", func_80050E7C);
 
