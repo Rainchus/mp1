@@ -81,3 +81,7 @@ typedef struct unkStruct4 {
 
 extern unkStruct4 D_800D83A8[4];
 extern s32 D_800D84D0[];
+extern s16 D_800D85D4;
+extern s16 D_800D8654;
+extern s16 D_800F329A;
+extern s16 D_800F3750;

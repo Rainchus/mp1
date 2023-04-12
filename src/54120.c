@@ -56,6 +56,55 @@ INCLUDE_ASM(s32, "54120", func_8005546C);
 INCLUDE_ASM(s32, "54120", func_80055544);
 
 INCLUDE_ASM(s32, "54120", func_800555D0);
+// void func_800555D0(unkObjectStruct* arg0) {
+//     s32 var_s1 = 0;
+//     f32 new_var;
+    
+//     if (arg0->unk_34 <= 0.0f) {
+//         new_var = 0.0f;
+//         while (1) {
+//             if (arg0->unk_18 > new_var) {
+//                 AdjustPlayerCoins(arg0->unk_4C, 1);
+//                 if (((arg0->unk_4F != 0) & (var_s1 == 0)) && (arg0->unk_38 >= 3.0f)) {
+//                     PlaySound(0x43);
+//                     var_s1 = 1;
+//                     arg0->unk_38 -= 3.0f;
+//                 }
+                
+//                 arg0->unk_18 -= 1.0f;
+
+//             } else {
+//                 AdjustPlayerCoins(arg0->unk_4C, -1);
+//                 arg0->unk_18 += 1.0f;
+                
+//                 if (arg0->unk_4F != 0) {
+//                     if ((var_s1 == 0) && (arg0->unk_38 >= 3.0f)) {
+//                         PlaySound(0x57);
+//                         var_s1 = 1;
+//                         arg0->unk_38 -= 3.0f;
+//                     }
+//                     if (arg0->unk_18 == new_var || gPlayers[arg0->unk_4C].coinAmount == 0) {
+//                         PlaySound(0x58);
+//                     }
+//                 }                
+//             }
+            
+//             if (arg0->unk_18 == new_var || gPlayers[arg0->unk_4C].coinAmount == 0) {
+//                 D_800D84D0[arg0->unk_4C] = 0;
+//                 func_8005D718(arg0);
+//                 return;
+//             }
+            
+//             arg0->unk_34 += arg0->unk_30;
+            
+//             if (!(arg0->unk_34 <= new_var)) {
+//                 break;
+//             }
+//         }            
+//     }
+//     arg0->unk_34 = arg0->unk_34 - 1.0f;
+//     arg0->unk_38 = arg0->unk_38 + 2.0f;
+// }
 
 INCLUDE_ASM(s32, "54120", func_80055810);
 
@@ -139,7 +188,34 @@ void func_80055B80(void) {
     func_80054868(0x17);
 }
 
-INCLUDE_ASM(s32, "54120", func_80055B9C);
+void func_80055B9C(void) {
+    s32 i;
+
+    while (1) {
+        if ((D_800F329A == -1) || (D_800F3750 == -1)) {
+            func_800674BC(D_800D85D4, 0, 0x8000);
+            func_800674BC(D_800D85D4, 1, 0x8000);
+            
+            for (i = 0; i < 5; i++) {
+                func_800674BC(D_800D85EC.unk_00, i + 1, 0x8000);
+            }
+            
+            func_800674BC(D_800D8654, 1, 0x8000);
+        } else {
+            func_80067480(D_800D85D4, 0, 0x8000);
+            func_80067480(D_800D85D4, 1, 0x8000);
+            for (i = 0; i < 5; i++) {
+                func_80067480(D_800D85EC.unk_00, i + 1, 0x8000);
+            }
+            func_80067480(D_800D8654, 1, 0x8000);
+            func_800672B0(D_800D85D4, 0, 1);
+            func_800672DC(D_800D85D4, 0, (u16) D_800F329A, 0);
+            func_800672B0(D_800D85D4, 1, 1);
+            func_800672DC(D_800D85D4, 1, (u16) D_800F3750, 0);
+        }
+        SleepVProcess();        
+    }
+}
 
 void func_80055D28(void) {
     s32 lives;
