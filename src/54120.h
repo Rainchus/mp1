@@ -73,11 +73,16 @@ extern s16 D_800D84A8;
 extern s16 D_800D84AA;
 //D_800D83A8
 typedef struct unkStruct4 {
-    char unk_04[4];
-    u8 unk_05;
-    u8 unk_06;
-    char unk_07[0x3A];
-} unkStruct4;
+    /* 0x00 */ char pad0[4];
+    /* 0x04 */ u8 unk_04;
+    /* 0x05 */ u8 unk_05;
+    /* 0x06 */ s16 unk_06;                            /* inferred */
+    /* 0x08 */ char pad8[2];                     /* maybe part of unk6[0x13]? */
+    /* 0x0A */ s16 unk_0A;
+    /* 0x0C */ char unk_0C[0x20];
+    /* 0x2C */ void* unk2C;                         /* inferred */
+    /* 0x30 */ char pad30[0x10];                    /* maybe part of unk2C[5]? */
+} unkStruct4;  
 
 extern unkStruct4 D_800D83A8[4];
 extern s32 D_800D84D0[];
@@ -85,3 +90,5 @@ extern s16 D_800D85D4;
 extern s16 D_800D8654;
 extern s16 D_800F329A;
 extern s16 D_800F3750;
+extern f32 D_800C5654[];
+void func_8005528C(unkObjectStruct* arg0);
