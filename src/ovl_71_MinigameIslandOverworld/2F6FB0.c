@@ -1,3 +1,7 @@
 #include "common.h"
 
-INCLUDE_ASM(s32, "ovl_71_MinigameIslandOverworld/2F6FB0", func_800F65E0_2F6FB0);
+extern board_overlay_entrypoint D_800F6690;
+
+void func_800F65E0_2F6FB0(void) {
+    ExecBoardScene(&D_800F6690, D_800C597A);
+}

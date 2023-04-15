@@ -1,5 +1,18 @@
 #include "common.h"
 
-INCLUDE_ASM(const s32, "ovl_71_MinigameIslandOverworld/2F6FE0", func_800F6610_2F6FE0);
+void func_8005C208(void);
+void func_8005C2B0(void);
+extern s16 D_800ED5C2;
 
-INCLUDE_ASM(const s32, "ovl_71_MinigameIslandOverworld/2F6FE0", func_800F6668_2F7038);
+void func_800F6610_2F6FE0(void) {
+    D_800ED5C2 = 0xA;
+    InitObjSystem(0xA, 0);
+    func_8005C208();
+    func_8005E044(0x71, 1, 0x92);
+    func_8005E36C(0, 0x71, 1, 0x92);
+}
+
+void func_800F6668_2F7038(void) {
+    InitObjSystem(0xA, 0);
+    func_8005C2B0();
+}
