@@ -114,7 +114,6 @@ all: $(ROM)
 
 clean:
 	$(V)rm -rf build
-	$(V)rm -rf asm
 
 distclean: clean
 	$(V)rm -rf asm

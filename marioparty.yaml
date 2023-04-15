@@ -433,6 +433,8 @@ segments:
       - [0xB2340, c] # sqrtd
       - [0xB2350, c] # sqrtf
       - [0xB2360, bin]
+      - [0xB8730, bin, "../rsp/aspMain.s"]
+      - [0xB9550, bin]
       - [0xC25A0, data, 180C0]
       - [0xC2870, data, overlay_table]
       - [0xC3DE0, bin]
@@ -454,6 +456,9 @@ segments:
       - [0xC8320, .data, "../src/lib/2.0I/os/initialize"]
       - [0xC8340, .data, "../src/lib/2.0I/os/seteventmesg"]
       - [0xC8350, bin] # TODO: Figure this out 
+
+      - [0xCA7B0, bin, "../rsp/aspMain_data.s"]
+      - [0xCAA70, bin]
 
       - [0xCB6C0, .rodata, 3F5B0]
       - [0xCB7D0, bin]
@@ -2188,5 +2193,25 @@ segments:
     start: 0xFE2310
   - type: bin
     start: 0xFE24BC
+
+    # Audio Data
+  - {type: bin, start: 0x1539e40, name: "../assets/audio/soundbank1.bnk"} # Instrument meta files
+  - {type: bin, start: 0x1563b68, name: "../assets/audio/wavetable1.tbl"} # raw/vadpcm audio wave data
+  - {type: bin, start: 0x17473b0, name: "../assets/audio/sequencebnk1.tbl"} # sbk file containing seq files below
+  # - {type: bin, start: 0x17473b0, name: "../assets/midi/twobeeps.seq"} # Test Sound: Two sinusoid wave beeps at different tones.
+  # - type: bin
+  #   start: 0x1747420
+  # - {type: bin, start: 0x174CF30, name: "../assets/midi/tropical.seq"} # Yoshi Board BGM
+  # - type: bin
+  #   start: 0x174ED10
+  # - {type: bin, start: 0x1751958, name: "../assets/midi/rainbow.seq"} # Mario Board BGM
+  # - type: bin
+  #   start: 0x1753118
+  - {type: bin, start: 0x1778c70, name: "../assets/audio/soundbank2.bnk"} # Instrument meta files
+  - {type: bin, start: 0x1782660, name: "../assets/audio/wavetable2.tbl"} # raw/vadpcm audio wave data
+  - {type: bin, start: 0x1820d60, name: "../assets/audio/sequencebnk2.tbl"} # sbk file containing seq files below
+
+  - type: bin
+    start: 0x1832AE0
   - [0x1CED490, bin, romPadding]
   - [0x2000000]
