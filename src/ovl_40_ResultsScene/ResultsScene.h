@@ -1,4 +1,5 @@
 #include "common.h"
+#include "os.h"
 
 void func_8004F548(void);
 void func_800532E0(void);
@@ -30,3 +31,17 @@ extern void* D_800FC790;
 extern s16 D_800ED144;
 extern char D_800FC364[];
 extern s16 D_800FC45E;
+void func_8004B7F8(s32);
+extern s16 D_800ED5C2;
+extern s32 D_800FC09C_25F96C[];
+void func_800FBF10_25F7E0(void);
+
+extern Object* D_800FC3A0;
+extern Object* D_800FC3A8[0x14];
+extern Object* D_800FC3F8[7];
+extern Process* D_800FC418[2];
+extern s32 D_800FC458[2];
+extern s32 D_800FC470[1];
+extern s32 D_800FC4A8;
+extern s32 D_800FC510;
+void func_800FB71C_25EFEC(unkObjectStruct*);

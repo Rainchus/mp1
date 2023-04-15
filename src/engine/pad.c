@@ -31,11 +31,11 @@ s32 func_80013770(u16* arg0) {
 }
 
 s16 func_800138DC(s16 arg0, s32 arg1) {
-    u8 sp10[0x10];
+    Vec3s sp10;
     s16 sp20;
 
     sp20 = arg0;
-    func_800642FC(&sp10, &func_80013770, &sp20, 1);
+    func_800642FC(&sp10, (void*)func_80013770, (void*)&sp20, 1);
     D_800D12CC = 0;
     if (arg1 & 1) {
         func_80014174();

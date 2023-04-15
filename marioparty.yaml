@@ -1344,8 +1344,8 @@ segments:
   - type: code
     start: 0x259EB0
     vram: 0x800F65E0
-    dir: ovl_40_ResultsEternalStar
-    name: ResultsEternalStar
+    dir: ovl_40_ResultsScene
+    name: ResultsScene
     overlay: True
     exclusive_ram_id: minigame
     symbol_name_format: $VRAM_$ROM

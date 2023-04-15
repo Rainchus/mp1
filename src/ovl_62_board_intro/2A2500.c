@@ -1,5 +1,6 @@
 #include "common.h"
 #include "2A2500.h"
+#include "process.h"
 
 void func_800F65E0_2A2500(void) {
     D_801102B0 = D_800ED5C3;

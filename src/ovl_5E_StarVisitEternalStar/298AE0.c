@@ -1,5 +1,13 @@
-#include "common.h"
 #include "298AE0.h"
+
+void func_80040780(u8);
+void func_800415B0(u8, s32);
+s8 func_800415E8(u8);
+s32 func_8004D8A4(void);
+void func_8004DBD4(s32, u8);
+void func_80055994(u8, s32);
+extern s32 D_800F3FF0;
+extern u16 D_800F5460[];
 
 Object* D_800F7DC0_29A2C0 = 0;
 Object* D_800F7DC4_29A2C4 = 0;
@@ -142,17 +150,6 @@ s32 func_800F66D8_298BD8(s32 arg0) {
     }
     return func_8006FCF0(arg0, 0, 1);
 }
-
-void SleepProcess(s32);
-void func_80040780(u8);
-void func_800415B0(u8, s32);
-s8 func_800415E8(u8);
-s32 func_8004D8A4(void);
-void func_8004DBD4(s32, u8);
-void func_80055994(u8, s32);
-extern s32 D_800F3FF0;
-extern u16 D_800F5460[];
-
 
 void func_800F6898_298D98(void) {
     Object* Obj;

@@ -1,5 +1,5 @@
 #include "common.h"
-
+#include "process.h"
 
 
 typedef struct unk_ovl_5E {
@@ -27,11 +27,9 @@ extern unk_ovl_5E D_800F7ED0;
 extern u8 D_800F7F00;
 extern Object* D_800F7DC0;
 extern Object* D_800F7DC4;
-void SleepProcess(s32);
 void func_8004DBD4(s32, u8);
 s32 func_800F66D8_298BD8(s32);
 void func_800F6898_298D98(void);
-void SleepProcess(s32);
 void func_80040780(u8);
 void func_800415B0(u8, s32);
 s8 func_800415E8(u8);
