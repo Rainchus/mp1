@@ -25,9 +25,8 @@ extern s16 D_800ED154;
 
 void func_800F6610_2FA8D0(void) {
     testStruct2* temp = D_800F69E0;
-    s32 i;
 
-    for (i = 0; temp->unk_00 >= 0; temp++) {
+    for (; temp->unk_00 >= 0; temp++) {
         if (func_8005CE48(temp->unk_02) != 0) {
             SetSpaceType(temp->unk_00, 1);
         }

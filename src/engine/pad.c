@@ -72,7 +72,7 @@ s32 func_80013974(s32 arg0) {
 void func_80013A74(void) {
     osRecvMesg(&D_800D12D0, NULL, 1);
     if (D_800D12B0 < 8) {
-        func_800642FC(&D_800D1230[D_800D12B4], func_80013974, 0, 0);
+        func_800642FC((Vec3s*) &D_800D1230[D_800D12B4], func_80013974, 0, 0);
     }
     osSendMesg(&D_800D12D0, NULL, 1);
 }
@@ -213,7 +213,7 @@ void func_80014174(void) {
     if (D_800D12CC != 0) {
         func_800141C4();
     }
-    func_8006407C(&D_800D12C0, 0, func_80014158);
+    func_8006407C((functionListEntry*) &D_800D12C0, 0, func_80014158);
     D_800D12CC = 1;
 }
 
