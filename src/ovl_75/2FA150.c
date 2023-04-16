@@ -32,9 +32,8 @@ void func_8005BD10(s32);
 
 void func_800F6610_2FA150(void) {
     testStruct2* temp = &D_800F6C40;
-    s32 i;
 
-    for (i = 0; temp->unk_00 >= 0; temp++) {
+    for (; temp->unk_00 >= 0; temp++) {
         if (func_8005CE48(temp->unk_02) != 0) {
             SetSpaceType(temp->unk_00, 1);
         }

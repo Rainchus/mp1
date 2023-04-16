@@ -6,6 +6,7 @@ build/
 assets/
 mod/
 expected/
+rsp/
 marioparty.ld
 ctx.c
 build.ninja

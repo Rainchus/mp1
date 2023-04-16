@@ -100,6 +100,7 @@ void func_80055544(s32 arg0) {
     }
 }
 
+extern void AdjustPlayerCoins(s32, s32); // TODO: Possibly same file, if not add header to 53680.c
 void func_800555D0(unkObjectStruct* arg0) {
     u32 var_s1 = 0;
 
@@ -299,9 +300,9 @@ void func_80055EE8(void) {
     void* file;
     s32 i;
 
-    func_80076740(D_800D85D8, &D_800CB298, 0, -1, -1);
+    func_80076740(D_800D85D8, (char*) &D_800CB298, 0, -1, -1);
     func_80066DC4(D_800D85EC.unk_00, 0, 0xA0, 0x18);
-    func_80076740(D_800D85EC.unk_54, &D_800CB2A0, 0, -1, -1);
+    func_80076740(D_800D85EC.unk_54, (char*) &D_800CB2A0, 0, -1, -1);
     func_80066DC4(D_800D85EC.unk_68, 0, 0xA0, 0x28);
     file = ReadMainFS(0x7C);
     D_800D85D6 = func_800678A4(file);
