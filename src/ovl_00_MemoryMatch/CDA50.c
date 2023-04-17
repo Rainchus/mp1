@@ -522,7 +522,7 @@ INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800FA1E4_D1654);
 INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800FA400_D1870);
 
 void func_800FAAC4_D1F34(unkObjectStruct* arg0) {
-    if ( *(s32*)(&arg0->unk_50->unk_59[3]) & 0x6324) {
+    if ( arg0->unk_50->unk_5C & 0x6324) {
         func_80005A28(arg0);
         return;
     }
