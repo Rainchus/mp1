@@ -2,7 +2,18 @@
 
 INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F65E0_1784E0);
 
-INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F6CA8_178BA8);
+void func_800F6CA8_178BA8(void) {
+    u16 t = D_800F5144;
+    t = t ^ 1;
+    t = t < 1;
+    if (t == 0) {
+        return;
+    }
+
+    func_800601D4(0x28);
+    func_8002890C(0, 0, 0);
+    func_8005DFB8(1);
+}
 
 INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F6CF4_178BF4);
 
