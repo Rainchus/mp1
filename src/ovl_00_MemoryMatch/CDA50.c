@@ -544,7 +544,16 @@ INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800FAB80_D1FF0);
 
 INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800FAD18_D2188);
 
+#ifdef NON_MATCHING
+void func_800FAD94_D2204(unkObjectStruct* arg0, s16 arg1) {
+    if (D_800FE190 != arg1) {
+        func_800184BC(arg0, arg1 & 0xFFFF);
+    }
+    D_800FE190 = arg1;
+}
+#else
 INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800FAD94_D2204);
+#endif
 
 INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800FADDC_D224C);
 
