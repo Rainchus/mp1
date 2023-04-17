@@ -236,17 +236,17 @@ void func_800F7D74_CF1E4(void) {
     s16 i;
 
     for (i = 0; i < 10; i++) {
-        D_800FE158[i].unk0 = -1;
-        D_800FE158[i].unk2 = -1;
+        D_800FE158[i][0] = -1;
+        D_800FE158[i][1] = -1;
     }
 }
 
 void func_800F7DC0_CF230(s16 arg0, s16 arg1) {
     s16 i;
     for (i = 0; i < 0x0A; i++) {
-        if (D_800FE158[i].unk0 == -1) {
-            D_800FE158[i].unk0 = arg0;
-            D_800FE158[i].unk2 = arg1;
+        if (D_800FE158[i][0] == -1) {
+            D_800FE158[i][0] = arg0;
+            D_800FE158[i][1] = arg1;
             return;
         }
     }
