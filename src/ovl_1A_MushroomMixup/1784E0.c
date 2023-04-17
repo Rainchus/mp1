@@ -61,6 +61,12 @@ INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F9548_17B448);
 
 INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F9890_17B790);
 
+void func_800F9CF0_17BBF0();
+
 INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F9CF0_17BBF0);
 
-INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F9E9C_17BD9C);
+void func_800F9E9C_17BD9C(unkObjectStruct* arg0) {
+    arg0->unk_4C = 0;
+    arg0->unk_4D = 0;
+    arg0->func_ptr = &func_800F9CF0_17BBF0;
+}
