@@ -86,7 +86,9 @@ void func_800F70C4_178FC4(void) {
 
 INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F70F0_178FF0);
 
-INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F7188_179088);
+void func_800F7188_179088(s16 arg0) {
+    PlaySound((s32) arg0);
+}
 
 INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F71A8_1790A8);
 
