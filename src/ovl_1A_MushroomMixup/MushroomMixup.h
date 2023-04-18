@@ -10,3 +10,5 @@ extern f32 D_800FC988;
 
 extern s32 D_800FC8AC;
 extern s32 D_800FC8AE;
+
+extern s32 D_800FC98C;

@@ -92,13 +92,47 @@ void func_800F7188_179088(s16 arg0) {
 
 INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F71A8_1790A8);
 
+#ifdef NON_EQUIVALENT
+s32 func_800F7574_179474(void) {
+    s32 mushroomFlags;
+    s32 index;
+    s32 loop;
+
+    index = 0; // goes from 0 -> 6
+    mushroomFlags = (s32) D_800FC98C >> index;
+    loop = mushroomFlags >> index;
+loop_1:
+    if (loop & 1) {
+        index += 1;
+        // mushroomFlags = (s32) D_800FC98C >> index;
+        mushroomFlags = mushroomFlags >> index;
+        if (index >= NUM_OF_MUSHROOMS) {
+            return TRUE;
+        }
+        goto loop_1;
+    }
+    return FALSE;
+}
+#else
 INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F7574_179474);
+#endif
 
 INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F75B0_1794B0);
 
 INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F7FCC_179ECC);
 
-INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F8260_17A160);
+s32 func_800F8260_17A160(unkObjectStruct* arg0) {
+    s32 var_a1;
+
+    var_a1 = 0;
+    if ((arg0->unk_1C < 50.0f) && (arg0->unk_4E != 1)) {
+        arg0->unk_4E = 1U;
+    }
+    if (arg0->unk_4E != 0) {
+        var_a1 = 1;
+    }
+    return var_a1 & 0xFF;
+}
 
 INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F82AC_17A1AC);
 
