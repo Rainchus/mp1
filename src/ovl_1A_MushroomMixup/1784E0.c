@@ -64,13 +64,11 @@ INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F9890_17B790);
 void func_800F9CF0_17BBF0(unkObjectStruct* arg0) {
     u8 temp_v0;
     u8 temp_v0_2;
-    u8 temp_v1;
 
-    temp_v1 = arg0->unk_4C;
-    switch (temp_v1) {                              /* irregular */
+    switch (arg0->unk_4C) {
     case 0:
         temp_v0 = arg0->unk_4D;
-        arg0->unk_4D = (u8) (temp_v0 + 1);
+        arg0->unk_4D = temp_v0 + 1;
         if (temp_v0 >= 0x2EU) {
             arg0->unk_4C = 1U;
             arg0->unk_4D = 0U;
@@ -85,7 +83,7 @@ void func_800F9CF0_17BBF0(unkObjectStruct* arg0) {
         return;
     case 1:
         temp_v0_2 = arg0->unk_4D;
-        arg0->unk_4D = (u8) (temp_v0_2 + 1);
+        arg0->unk_4D = temp_v0_2 + 1;
         if (temp_v0_2 < 0x1EU) {
             D_800EE98C += 36.666668f;
             D_800F6524.x += 2.0f;
