@@ -1,4 +1,4 @@
-#include "common.h"
+#include "MushroomMixup.h"
 
 INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F65E0_1784E0);
 
@@ -51,7 +51,18 @@ INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F88AC_17A7AC);
 
 INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F8A58_17A958);
 
-INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F9364_17B264);
+void func_800F9364_17B264(unkObjectStruct* arg0) {
+    if (D_800FC994 != 0) {
+        D_800F6524.x += D_800FC89C;
+        D_800F6524.y += D_800FC99C;
+        D_800F6524.z += D_800FC998;
+        D_800EE98C += D_800FC988;
+        D_800FC994 -= 1;
+    }
+    else {
+        arg0->func_ptr = NULL;
+    }
+}
 
 INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F93F0_17B2F0);
 
