@@ -1,5 +1,7 @@
 #include "common.h"
 
+#define NUM_OF_MUSHROOMS 7
+
 extern u16 D_800FC994;
 extern f32 D_800FC89C;
 extern f32 D_800FC99C;
