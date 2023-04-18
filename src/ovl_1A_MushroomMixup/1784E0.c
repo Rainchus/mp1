@@ -14,7 +14,55 @@ void func_800F6CA8_178BA8(void) {
     }
 }
 
-INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F6CF4_178BF4);
+// INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F6CF4_178BF4);
+void func_800F6CF4_178BF4(void) {
+    s16 loopInteriorIteration;
+    s16 loopIteration;
+    s16 var_v1;
+    s32 randomByte;
+    s32 arrayOrStructIndex;
+    s32 conditionLessThanFour;
+
+    for (loopIteration = 0; loopIteration < 4; loopIteration++) {
+        randomByte = (s32) (GetRandomByte() & 0xFF) % (s32) (4 - loopIteration);
+        loopInteriorIteration = 0;
+loop_2:
+        var_v1 = loopIteration;
+
+        // run when not first loop
+        if (loopIteration != 0) {
+            arrayOrStructIndex = var_v1 * 2;
+loop_4:
+            if (*(&D_800FC8AC + arrayOrStructIndex) != loopInteriorIteration) {
+                var_v1 -= 1;
+                arrayOrStructIndex = var_v1 * 2;
+                if (var_v1 != 0) {
+                    goto loop_4;
+                }
+            }
+            if (var_v1 == 0) {
+                goto block_7;
+            }
+            goto block_9;
+        }
+        
+block_7:
+        conditionLessThanFour = loopInteriorIteration < 4;
+        if (randomByte != 0) { // loop condition???
+            randomByte -= 1;
+block_9:
+            loopInteriorIteration += 1;
+            conditionLessThanFour = loopInteriorIteration < 4;
+            if (conditionLessThanFour != FALSE) {
+                goto loop_2;
+            }
+        }
+        if (conditionLessThanFour == FALSE) {
+            loopInteriorIteration = loopIteration;
+        }
+        *(&D_800FC8AE + (loopIteration * 2)) = loopInteriorIteration;
+    }
+}
 
 INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F6DF4_178CF4);
 
