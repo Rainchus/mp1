@@ -92,20 +92,17 @@ void func_800F7188_179088(s16 arg0) {
 
 INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F71A8_1790A8);
 
-#ifdef NON_EQUIVALENT
 s32 func_800F7574_179474(void) {
-    s32 mushroomFlags;
     s32 index;
-    s32 loop;
+    s32 flags;
 
     index = 0; // goes from 0 -> 6
-    mushroomFlags = (s32) D_800FC98C >> index;
-    loop = mushroomFlags >> index;
+
+    // check if all flags are 1(?)
+    flags = (s32) D_800FC98C; // is D_800FC98C a 1-byte array of length 6?
 loop_1:
-    if (loop & 1) {
+    if ((flags >> index) & 1) {
         index += 1;
-        // mushroomFlags = (s32) D_800FC98C >> index;
-        mushroomFlags = mushroomFlags >> index;
         if (index >= NUM_OF_MUSHROOMS) {
             return TRUE;
         }
@@ -113,9 +110,6 @@ loop_1:
     }
     return FALSE;
 }
-#else
-INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F7574_179474);
-#endif
 
 INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F75B0_1794B0);
 
