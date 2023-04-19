@@ -27,7 +27,6 @@ void func_80061264(s16 arg0) {
     func_800611A4(&D_800D8AA8, arg0);
 }
 
-
 s16 func_8006128C(s32 arg0, s32 arg1, s32 arg2) {
     s16 temp_s0;
     OSIntMask temp_s3;
@@ -50,7 +49,7 @@ void func_80061354(void) {
     OSIntMask temp_v0;
 
     D_800D8AB0 = 0;
-    temp_v0 = osSetIntMask(OS_IM_NONE);
+    temp_v0 = osSetIntMask(1U);
     D_800D8AA8 = D_800D8C58;
     osSetIntMask(temp_v0);
 }
@@ -64,13 +63,9 @@ void func_800613A0(void) {
 }
 
 void func_800613E8(void) {
-    s32 temp;
-    s32 temp2;
+    u64 temp;
     D_800D8B88 = 0;
-    temp2 = D_800D8C58;
-    temp = D_800D8C5C;
-    D_800D8B80 = temp2;
-    D_800D8B84 = temp;
+    D_800D8B80 = D_800D8C58;
 }
 
 void func_80061414(void) {
@@ -95,4 +90,3 @@ void func_80061424(void) {
     gSPEndDisplayList(gfx++);
     osJamMesg(&D_800ED3C8, &D_800D8C88, 0);
 }
-
