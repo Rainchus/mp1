@@ -9,10 +9,16 @@ void func_80061094(void) {
     } 
 }
 
-INCLUDE_ASM(s32, "61B70", func_800610DC);
+s16 func_800610DC(unk_Struct_func_800611A4* arg0, s32 arg1, s32 arg2, u32 arg3) {
+    if (arg0->unk_08 >= 10) {
+        return -1;
+    }
+    arg0->unk_38[arg0->unk_08] = osGetTime();
+    arg0->unk_10[arg0->unk_08] = (GPACK_RGBA5551(arg1, arg2, arg3, 1) << 16) | GPACK_RGBA5551(arg1, arg2, arg3, 1);
+    return arg0->unk_08++;
+}
 
 u64 func_800611A4(unk_Struct_func_800611A4* arg0, s16 arg1) {
-
     if (arg1 >= 0) {
         arg0->unk_88[arg1] = osGetTime();
     }
@@ -63,7 +69,6 @@ void func_800613A0(void) {
 }
 
 void func_800613E8(void) {
-    u64 temp;
     D_800D8B88 = 0;
     D_800D8B80 = D_800D8C58;
 }

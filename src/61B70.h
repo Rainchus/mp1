@@ -3,17 +3,13 @@
 #include "PR/mbi.h"
 #include "PR/os.h"
 
-typedef struct unk_Struct_D_800D8AA8 {
-    OSTime unk_00;
-    s32 unk_08;
-    s32 unk_0C;
-    s32 unk_10;
-} unk_Struct_D_800D8AA8;
-
 typedef struct unk_Struct_func_800611A4 {
-    char unk_00[0x38];
-    u64 unk_38[0x50 / 8];
-    u64 unk_88[0x50 / 8];
+    OSTime unk_00;
+    s16 unk_08;
+    char unk_0A[6];
+    s32 unk_10[10];
+    u64 unk_38[10];
+    u64 unk_88[10];
 } unk_Struct_func_800611A4;
 
 extern Gfx* D_800D89D0;
