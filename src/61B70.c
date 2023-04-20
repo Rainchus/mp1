@@ -3,7 +3,7 @@
 INCLUDE_ASM(s32, "61B70", func_80060F70);
 
 void func_80061094(void) {
-    D_800D8C58 = osGetTime();
+    D_800D8C58.unk_00 = osGetTime();
     while (!osRecvMesg(&D_800D8C60, NULL, 0)) {
 
     } 
@@ -53,10 +53,10 @@ void func_80061304(s16 arg0) {
 
 void func_80061354(void) {
     OSIntMask temp_v0;
-
-    D_800D8AB0 = 0;
+    
+    do { D_800D8AA8.unk_08 = 0; } while (0); // @TODO: Weird compiler shenanigans
     temp_v0 = osSetIntMask(1U);
-    D_800D8AA8 = D_800D8C58;
+    D_800D8AA8.unk_00 = D_800D8C58.unk_00;
     osSetIntMask(temp_v0);
 }
 
@@ -69,14 +69,14 @@ void func_800613A0(void) {
 }
 
 void func_800613E8(void) {
-    D_800D8B88 = 0;
-    D_800D8B80 = D_800D8C58;
+    do { D_800D8B80.unk_08 = 0; } while (0); // @TODO: Weird compiler shenanigans
+    D_800D8B80.unk_00 = D_800D8C58.unk_00;
 }
 
 void func_80061414(void) {
 }
 
-Gfx* func_8006141C(s32* arg0, Gfx* arg1, s32 arg2) {
+Gfx* func_8006141C(void * arg0, Gfx* arg1, s32 arg2) {
     return arg1;
 }
 
