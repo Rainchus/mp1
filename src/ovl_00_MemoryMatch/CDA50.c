@@ -232,14 +232,21 @@ void func_800F7C70_CF0E0(f32 arg0) { //uses rodata
     D_800EE98C = (D_800FDA70_D4EE0 - (arg0 * D_800FDA68_D4ED8));
 }
 
-INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800F7D74_CF1E4);
+void func_800F7D74_CF1E4(void) {
+    s16 i;
+
+    for (i = 0; i < 10; i++) {
+        D_800FE158[i][0] = -1;
+        D_800FE158[i][1] = -1;
+    }
+}
 
 void func_800F7DC0_CF230(s16 arg0, s16 arg1) {
     s16 i;
     for (i = 0; i < 0x0A; i++) {
-        if (D_800FE158[i].unk0 == -1) {
-            D_800FE158[i].unk0 = arg0;
-            D_800FE158[i].unk2 = arg1;
+        if (D_800FE158[i][0] == -1) {
+            D_800FE158[i][0] = arg0;
+            D_800FE158[i][1] = arg1;
             return;
         }
     }
@@ -514,13 +521,39 @@ INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800FA1E4_D1654);
 
 INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800FA400_D1870);
 
-INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800FAAC4_D1F34);
+void func_800FAAC4_D1F34(unkObjectStruct* arg0) {
+    if ( arg0->unk_50->unk_5C & 0x6324) {
+        func_80005A28(arg0);
+        return;
+    }
+    func_800FADDC_D224C(arg0);
+    func_80025798((s16) arg0->unk_40->unk_00.unsigned16[1], arg0->unk_18, arg0->unk_1C, arg0->unk_20);
+    if (D_800FE2C2 == 5) {
+        if (D_800FE30E < 8) {
+            func_800FAD94_D2204(arg0, 0x24);
+        } else {
+            func_800FAD94_D2204(arg0, 0x26);
+        }
+    } else {
+        func_800184BC(arg0, 0);
+    }
+    func_80017DB0(arg0);
+}
 
 INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800FAB80_D1FF0);
 
 INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800FAD18_D2188);
 
+#ifdef NON_MATCHING
+void func_800FAD94_D2204(unkObjectStruct* arg0, s16 arg1) {
+    if (D_800FE190 != arg1) {
+        func_800184BC(arg0, arg1 & 0xFFFF);
+    }
+    D_800FE190 = arg1;
+}
+#else
 INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800FAD94_D2204);
+#endif
 
 INCLUDE_ASM(s32, "ovl_00_MemoryMatch/CDA50", func_800FADDC_D224C);
 
