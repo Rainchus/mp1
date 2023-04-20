@@ -11,5 +11,5 @@ board_overlay_entrypoint D_800F6F10_3127C0[] = {
 
 
 void func_800F65E0_311E90(void) {
-    ExecBoardScene(&D_800F6F10_3127C0, D_800C597A);
+    ExecBoardScene(D_800F6F10_3127C0, D_800C597A);
 }
