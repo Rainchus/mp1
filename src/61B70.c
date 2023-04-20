@@ -1,4 +1,7 @@
 #include "common.h"
+#include "PR/os.h"
+#include "PR/gbi.h"
+#include "PR/abi.h"
 
 INCLUDE_ASM(s32, "61B70", func_80060F70);
 
