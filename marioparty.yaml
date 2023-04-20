@@ -433,7 +433,7 @@ segments:
       - [0xB2340, c] # sqrtd
       - [0xB2350, c] # sqrtf
       - [0xB2360, bin]
-      - [0xB8730, bin, "../rsp/aspMain.s"]
+      - [0xB8730, bin, "aspMain"]
       - [0xB9550, bin]
       - [0xC25A0, data, 180C0]
       - [0xC2870, data, overlay_table]
@@ -457,7 +457,7 @@ segments:
       - [0xC8340, .data, "../src/lib/2.0I/os/seteventmesg"]
       - [0xC8350, bin] # TODO: Figure this out 
 
-      - [0xCA7B0, bin, "../rsp/aspMain_data.s"]
+      - [0xCA7B0, bin, "aspMain_data"]
       - [0xCAA70, bin]
 
       - [0xCB6C0, .rodata, 3F5B0]
