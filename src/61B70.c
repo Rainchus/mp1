@@ -9,7 +9,7 @@ void func_80061094(void) {
     } 
 }
 
-s16 func_800610DC(unk_Struct_func_800611A4* arg0, s32 arg1, s32 arg2, u32 arg3) {
+s16 func_800610DC(unk_Struct_func_800611A4* arg0, u8 arg1, u8 arg2, u8 arg3) {
     if (arg0->unk_08 >= 10) {
         return -1;
     }
@@ -25,20 +25,20 @@ u64 func_800611A4(unk_Struct_func_800611A4* arg0, s16 arg1) {
     return arg0->unk_88[arg1] - arg0->unk_38[arg1];
 }
 
-s16 func_80061228(s32 arg0, s32 arg1, s32 arg2) {
-    return func_800610DC(&D_800D8AA8, arg0 & 0xFF, arg1 & 0xFF, arg2 & 0xFF);
+s16 func_80061228(u8 arg0, u8 arg1, u8 arg2) {
+    return func_800610DC(&D_800D8AA8, arg0, arg1, arg2);
 }
 
 void func_80061264(s16 arg0) {
     func_800611A4(&D_800D8AA8, arg0);
 }
 
-s16 func_8006128C(s32 arg0, s32 arg1, s32 arg2) {
+s16 func_8006128C(u8 arg0, u8 arg1, u8 arg2) {
     s16 temp_s0;
     OSIntMask temp_s3;
 
     temp_s3 = osSetIntMask(OS_IM_NONE);
-    temp_s0 = func_800610DC(&D_800D8B80, arg0 & 0xFF, arg1 & 0xFF, arg2 & 0xFF);
+    temp_s0 = func_800610DC(&D_800D8B80, arg0, arg1, arg2);
     osSetIntMask(temp_s3);
     return temp_s0;
 }
@@ -52,11 +52,13 @@ void func_80061304(s16 arg0) {
 }
 
 void func_80061354(void) {
-    OSIntMask temp_v0;
+    unk_Struct_func_800611A4* temp = &D_800D8AA8;
+    unk_Struct_func_800611A4* temp2 = &D_800D8C58;
+    u32 temp_v0;
     
-    do { D_800D8AA8.unk_08 = 0; } while (0); // @TODO: Weird compiler shenanigans
+    temp->unk_08 = 0;
     temp_v0 = osSetIntMask(1U);
-    D_800D8AA8.unk_00 = D_800D8C58.unk_00;
+    temp->unk_00 = temp2->unk_00;
     osSetIntMask(temp_v0);
 }
 
@@ -64,13 +66,16 @@ void func_800613A0(void) {
     OSIntMask temp_s0;
 
     temp_s0 = osSetIntMask(OS_IM_NONE);
-    bcopy(&D_800D8AA8, &D_800D89D0, 0xD8);
+    bcopy(&D_800D8AA8, &D_800D89D0, sizeof(unk_Struct_func_800611A4));
     osSetIntMask(temp_s0);
 }
 
 void func_800613E8(void) {
-    do { D_800D8B80.unk_08 = 0; } while (0); // @TODO: Weird compiler shenanigans
-    D_800D8B80.unk_00 = D_800D8C58.unk_00;
+    unk_Struct_func_800611A4* temp = &D_800D8B80;
+    unk_Struct_func_800611A4* temp2 = &D_800D8C58;
+    
+    temp->unk_08 = 0;
+    temp->unk_00 = temp2->unk_00;
 }
 
 void func_80061414(void) {

@@ -6,7 +6,8 @@
 typedef struct unk_Struct_func_800611A4 {
     OSTime unk_00;
     s16 unk_08;
-    char unk_0A[6];
+    Vec2s unk_0A;
+    char unk_0E[2]; // likely padding or Vec3s unk_0A;
     s32 unk_10[10];
     u64 unk_38[10];
     u64 unk_88[10];
