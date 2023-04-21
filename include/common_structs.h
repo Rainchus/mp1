@@ -126,7 +126,7 @@ typedef struct unkGlobalStruct_00 {
     /* 0xB4 */ char unk_B4[0x08];
     /* 0xBC */ f32 unk_BC;
     /* 0xC0 */ char unk_C0[0x1C];
-    /* 0xB8 */ s32 unk_DC;
+    /* 0xDC */ s32 unk_DC;
     /* 0xE0 */ s32 unk_E0;
     /* 0xE4 */ unk_Struct01* unk_E4;
 } unkGlobalStruct_00; /* size = 0xE8 */
