@@ -115,17 +115,17 @@ INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F75B0_1794B0);
 
 INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F7FCC_179ECC);
 
-s32 func_800F8260_17A160(unkObjectStruct* arg0) {
+u8 func_800F8260_17A160(unkObjectStruct* arg0) {
     s32 var_a1;
 
     var_a1 = 0;
     if ((arg0->unk_1C < 50.0f) && (arg0->unk_4E != 1)) {
-        arg0->unk_4E = 1U;
+        arg0->unk_4E = 1;
     }
     if (arg0->unk_4E != 0) {
         var_a1 = 1;
     }
-    return var_a1 & 0xFF;
+    return var_a1;
 }
 
 INCLUDE_ASM(s32, "ovl_1A_MushroomMixup/1784E0", func_800F82AC_17A1AC);
@@ -183,9 +183,9 @@ void func_800F9CF0_17BBF0(unkObjectStruct* arg0) {
     case 0:
         temp_v0 = arg0->unk_4D;
         arg0->unk_4D = temp_v0 + 1;
-        if (temp_v0 >= 0x2EU) {
-            arg0->unk_4C = 1U;
-            arg0->unk_4D = 0U;
+        if (temp_v0 >= 0x2E) {
+            arg0->unk_4C = 1;
+            arg0->unk_4D = 0;
         }
         D_800EE98C = 2766.0f;
         D_800F33EC.y = 309.0f;
@@ -198,12 +198,12 @@ void func_800F9CF0_17BBF0(unkObjectStruct* arg0) {
     case 1:
         temp_v0_2 = arg0->unk_4D;
         arg0->unk_4D = temp_v0_2 + 1;
-        if (temp_v0_2 < 0x1EU) {
+        if (temp_v0_2 < 0x1E) {
             D_800EE98C += 36.666668f;
             D_800F6524.x += 2.0f;
             return;
         }
-        arg0->unk_4C = 2U;
+        arg0->unk_4C = 2;
     case 2:
         D_800EE98C = 3866.0f;
         D_800F33EC.y = 309.0f;
