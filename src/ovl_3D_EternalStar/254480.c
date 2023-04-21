@@ -160,7 +160,10 @@ EventTableEntry D_800F905C_256ECC[] = {
     {0x002C, D_800F9024_256E94},
     {0x002E, D_800F9024_256E94},
     {0x0057, D_800F8F30_256DA0},
-    {0xFFFF, 0x00000000},
+    {0xFFFF, 0x00000000}
+};
+
+EventTableEntry D_800F9164_256FD4[] = {
     {0x0056, D_800F9034_256EA4},
     {0xFFFF, 0x00000000},
     {0x0000, 0x00000000}
@@ -426,7 +429,7 @@ void func_800F6F68_254DD8(void) {
     EventTableHydrate(D_800F905C_256ECC);
     
     if (IsFlagSet(0xF) == 0) {
-        EventTableHydrate(&D_800F9164);
+        EventTableHydrate(D_800F9164_256FD4);
     }
     
     func_800584F0(0);
