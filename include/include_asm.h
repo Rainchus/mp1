@@ -31,7 +31,7 @@
         ".section .text" \
     )
 #endif
-__asm__(".include \"include/labels.inc\"\n");
+// __asm__(".include \"include/labels.inc\"\n");
 #else
 #ifndef INCLUDE_ASM
 #define INCLUDE_ASM(FOLDER, NAME)
