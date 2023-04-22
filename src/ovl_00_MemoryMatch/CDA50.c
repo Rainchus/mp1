@@ -30,6 +30,8 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD89C_D4D0C);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD8A0_D4D10);
 
+INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD8A4_D4D14);
+
 INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD8A8_D4D18);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD8B0_D4D20);

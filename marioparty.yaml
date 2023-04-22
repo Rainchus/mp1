@@ -447,4 +447,7 @@ segments:
       - [0xD27D0, c]
       - [0xD4C50, .rodata, CDA50] #800FD7E0
       - [0xD5090, .rodata, D27D0]
-  - [0xD51E0]
+  - type: bin
+    start: 0xD51E0
+  - [0xD51E0, bin, romPadding]
+  - [0x2000000]
