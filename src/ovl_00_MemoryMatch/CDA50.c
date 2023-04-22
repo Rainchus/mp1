@@ -1,5 +1,47 @@
 #include "common.h"
 
+INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD7E0_D4C50);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD7E4_D4C54);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD7F0_D4C60);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD7F4_D4C64);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD7F8_D4C68);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD85C_D4CCC);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD870_D4CE0);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD874_D4CE4);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD878_D4CE8);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD87C_D4CEC);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD880_D4CF0);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD884_D4CF4);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD888_D4CF8);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD89C_D4D0C);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD8A0_D4D10);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD8A8_D4D18);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD8B0_D4D20);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD8C0_D4D30);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD8D0_D4D40);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD8DC_D4D4C);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD8EC_D4D5C);
+
 INCLUDE_ASM("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", func_800F65E0_CDA50);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", func_800F6858_CDCC8);
@@ -13,6 +55,10 @@ INCLUDE_ASM("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", func_800F71C4_CE634);
 INCLUDE_ASM("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", func_800F7318_CE788);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", func_800F7350_CE7C0);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD9D0_D4E40);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD9DC_D4E4C);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", func_800F73A4_CE814);
 
@@ -39,6 +85,8 @@ INCLUDE_ASM("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", func_800F7DC0_CF230);
 INCLUDE_ASM("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", func_800F7E20_CF290);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", func_800F7EDC_CF34C);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FDA78_D4EE8);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", func_800F8130_CF5A0);
 
@@ -96,36 +144,6 @@ INCLUDE_ASM("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", func_800F9C50_D10C0);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", func_800FA1E4_D1654);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD7E0_D4C50);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD7E4_D4C54);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD7F0_D4C60);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD7F4_D4C64);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD7F8_D4C68);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD85C_D4CCC);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD870_D4CE0);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD874_D4CE4);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD878_D4CE8);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD87C_D4CEC);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD880_D4CF0);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD884_D4CF4);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD888_D4CF8);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD89C_D4D0C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD8A0_D4D10);
-
 INCLUDE_ASM("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", func_800FA400_D1870);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", func_800FAAC4_D1F34);
@@ -148,5 +166,3 @@ void func_800FB1B0_D2620(void) {
 }
 
 INCLUDE_ASM("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", func_800FB1B8_D2628);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD8A8_D4D18);

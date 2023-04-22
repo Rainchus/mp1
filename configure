@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+if [[ ! -f "baserom.us.z64" ]]; then
+    echo "Error: baserom.us.z64 not found in current directory"
+    exit 1
+fi
+
+expected_hash="1159bd56730094bfc71be30113e1cfc8bacf34f3"
+actual_hash=$(sha1sum baserom.us.z64 | awk '{ print $1 }')
+
+if [[ "$actual_hash" != "$expected_hash" ]]; then
+    echo "Error: baserom.us.z64 has an invalid SHA1 hash"
+    exit 1
+fi
+
+if [[ "$1" == "--mod" ]]; then
+    if [[ ! -d src/mod ]]; then
+        mkdir -p src/mod
+    fi
+    gcc tools/n64crc/n64crc.c -o tools/n64crc/n64crc.exe
+    python3 tools/splat/split.py marioparty.yaml
+    python3 mod_configure.py "$@"
+    
+else
+    python3 tools/splat/split.py marioparty.yaml
+    python3 configure.py "$@"
+fi
