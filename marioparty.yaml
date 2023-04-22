@@ -22,6 +22,7 @@ options:
   build_path: build
   # extensions_path: tools/splat_ext
   # auto_all_sections: True
+  use_legacy_include_asm: False
   asm_inc_header: "\t.include \"macro.inc\"\n\t.set noat\n\t.set noreorder\n"
   migrate_rodata_to_functions: True
 segments:
@@ -432,7 +433,18 @@ segments:
       - [0xB2310, c] # -O0
       - [0xB2340, c] # sqrtd
       - [0xB2350, c] # sqrtf
-  - type: bin
-    start: 0xB2360
-  - [0xB2360, bin, romPadding]
-  - [0x2000000]
+  - [0xB2360, bin]
+  - type: code
+    start: 0xCDA50
+    vram: 0x800F65E0
+    dir: ovl_00_MemoryMatch
+    name: MemoryMatch
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0xCDA50, c]
+      - [0xD27D0, c]
+      - [0xD4C50, .rodata, CDA50] #800FD7E0
+      - [0xD4D20, .data, CDA50] #800FD7E0
+  - [0xD51E0]

@@ -1,3 +1,3 @@
 #include "common.h"
 
-INCLUDE_ASM(const s32, "ACF80", func_800AC380);
+INCLUDE_ASM("asm/nonmatchings/ACF80", func_800AC380);

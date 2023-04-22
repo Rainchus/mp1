@@ -1,3 +1,3 @@
 #include "common.h"
 
-INCLUDE_ASM(const s32, "ADA70", func_800ACE70);
+INCLUDE_ASM("asm/nonmatchings/ADA70", func_800ACE70);

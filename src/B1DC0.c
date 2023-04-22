@@ -1,3 +1,3 @@
 #include "common.h"
 
-INCLUDE_ASM(const s32, "B1DC0", func_800B11C0);
+INCLUDE_ASM("asm/nonmatchings/B1DC0", func_800B11C0);
