@@ -527,6 +527,128 @@ segments:
   #     - [0xFD460, c]
   #     - [0xFF0E0, .rodata, FD460]
   #     - [0xFF160, .rodata, F6AB0]
+  # - type: code
+  #   start: 0x23CF40
+  #   vram: 0x800F65E0
+  #   dir: ovl_34_BumperBallMaze
+  #   name: BumperBallMaze
+  #   overlay: True
+  #   exclusive_ram_id: minigame
+  #   symbol_name_format: $VRAM_$ROM
+  #   subalign: 8
+  #   subsegments:
+  #     - [0x23CF40, c]
+  #     - [0x240010, c]
+  #     - [0x241460, .rodata, 23CF40]
+  #     - [0x2416D0, .rodata, 240010]
+  - type: code
+    start: 0x241740
+    vram: 0x800F65E0
+    dir: ovl_35
+    name: name_35
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x241740, c]
+      - [0x241770, c]
+      - [0x241880, .rodata, 241740]
+  - type: code
+    start: 0x2418A0
+    vram: 0x800F65E0
+    dir: ovl_36_DKsJungleAdventure
+    name: DKsJungleAdventure
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subalign: 8
+    subsegments:
+      - [0x2418A0, c]
+      - [0x2418D0, c]
+      - [0x244B50, .rodata, 2418A0]
+      - [0x244B88, .rodata, 2418D0]
+  - type: code
+    start: 0x2455C0
+    vram: 0x800F65E0
+    dir: ovl_37_PeachsBirthdayCake
+    name: PeachsBirthdayCake
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subalign: 8
+    subsegments:
+      - [0x2455C0, c]
+      - [0x2455F0, c]
+      - [0x246A60, .rodata, 2455C0]
+      - [0x246A98, .rodata, 2455F0]
+  - type: code
+    start: 0x246DF0
+    vram: 0x800F65E0
+    dir: ovl_38_YoshisTropicalIsland
+    name: YoshisTropicalIsland
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subalign: 8
+    subsegments:
+      - [0x246DF0, c]
+      - [0x246E20, c]
+      - [0x248820, .rodata, 246DF0]
+      - [0x248858, .rodata, 246E20]
+  - type: code
+    start: 0x248F00
+    vram: 0x800F65E0
+    dir: ovl_39_WariosBattleCanyon
+    name: WariosBattleCanyon
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subalign: 8
+    subsegments:
+      - [0x248F00, c]
+      - [0x248F30, c]
+      - [0x24C0D0, .rodata, 248F00]
+      - [0x24C108, .rodata, 248F30]
+  - type: code
+    start: 0x24C390
+    vram: 0x800F65E0
+    dir: ovl_3A_LuigisEngineRoom
+    name: LuigisEngineRoom
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subalign: 8
+    subsegments:
+      - [0x24C390, c]
+      - [0x24C3C0, c]
+      - [0x24F280, .rodata, 24C390]
+      - [0x24F2B8, .rodata, 24C3C0]
+  - type: code
+    start: 0x24FA80
+    vram: 0x800F65E0
+    dir: ovl_3B_MariosRainbowCastle
+    name: MariosRainbowCastle
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subalign: 8
+    subsegments:
+      - [0x24FA80, c]
+      - [0x24FAB0, c]
+      - [0x251400, .rodata, 24FA80]
+      - [0x251438, .rodata, 24FAB0]
+  - type: code
+    start: 0x2518D0
+    vram: 0x800F65E0
+    dir: ovl_3C_BowsersMagmaMountain
+    name: BowsersMagmaMountain
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x2518D0, c]
+      - [0x251900, c]
+      - [0x253A50, .rodata, 2518D0]
   - type: code
     start: 0x254450
     vram: 0x800F65E0
