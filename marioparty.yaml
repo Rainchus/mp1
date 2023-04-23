@@ -757,7 +757,40 @@ segments:
     subsegments:
       - [0x280C80, c]
       - [0x281BA0, .rodata, 280C80]
-  - type: bin
+  - type: code
     start: 0x281D40
+    vram: 0x800F65E0
+    dir: ovl_45_UnknownBowserScene0
+    name: UnknownBowserScene0
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x281D40, c]
+      - [0x2826F0, .rodata, 281D40]
+  - type: code
+    start: 0x282820
+    vram: 0x800F65E0
+    dir: ovl_46_BowserSpaceEvent
+    name: BowserSpaceEvent
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x282820, c]
+      - [0x285110, .rodata, 282820] #800F8ED0
+  - type: code
+    start: 0x285230
+    vram: 0x800F65E0
+    dir: ovl_47
+    name: name_47
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x285230, c]
+      - [0x285B30, .rodata, 285230]
+  - type: bin
+    start: 0x285B70
   - [0x1CED490, bin, romPadding]
   - [0x2000000]
