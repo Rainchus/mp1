@@ -953,7 +953,106 @@ segments:
     subsegments:
       - [0x2908F0, c]
       - [0x291280, .rodata, 2908F0] #800F6F70
-  - type: bin
+  - type: code
     start: 0x291360
+    vram: 0x800F65E0
+    dir: ovl_54_BowserVisitLuigiBoard
+    name: BowserVisitLuigiBoard
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x291360, c]
+      - [0x291F10, .rodata, 291360]
+  - type: code
+    start: 0x292020
+    vram: 0x800F65E0
+    dir: ovl_55_MoveDoorsLuigiBoard
+    name: MoveDoorsLuigiBoard
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x292020, c]
+      - [0x293160, .rodata, 292020]
+  - type: code
+    start: 0x293260
+    vram: 0x800F65E0
+    dir: ovl_56_BowserToadSwapPlacesMarioBoard
+    name: BowserToadSwapPlacesMarioBoard
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x293260, c]
+      - [0x293A30, .rodata, 293260] #800F6DB0
+  - type: code
+    start: 0x293A70
+    vram: 0x800F65E0
+    dir: ovl_57_BowserVisitMarioBoard
+    name: name_57
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x293A70, c]
+      - [0x295350, .rodata, 293A70]
+  - type: code
+    start: 0x295450
+    vram: 0x800F65E0
+    dir: ovl_59_BowserVisitMagmaMountain
+    name: BowserVisitMagmaMountain
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x295450, c]
+      - [0x295D40, .rodata, 295450]
+  - type: code
+    start: 0x295E40
+    vram: 0x800F65E0
+    dir: ovl_5A_ShortcutRouletteMagmaMountain
+    name: ShortcutRouletteMagmaMountain
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x295E40, c]
+      - [0x296A60, .rodata, 295E40]
+  - type: code
+    start: 0x296B70
+    vram: 0x800F65E0
+    dir: ovl_5B_BowservisitMagmaMountain
+    name: BowservisitMagmaMountain
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x296B70, c]
+      - [0x297B20, .rodata, 296B70] #800F7590
+  - type: code
+    start: 0x297BE0
+    vram: 0x800F65E0
+    dir: ovl_5C_HappeningSpaceEternalStar
+    name: HappeningSpaceEternalStar
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x297BE0, c]
+      - [0x297F90, .rodata, 297BE0]
+  - type: code
+    start: 0x297FB0
+    vram: 0x800F65E0
+    dir: ovl_5D_BowserVisitEternalStar
+    name: BowserVisitEternalStar
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x297FB0, c]
+      - [0x298A30, .rodata, 297FB0]
+  - type: bin
+    start: 0x298AE0
   - [0x1CED490, bin, romPadding]
   - [0x2000000]
