@@ -624,7 +624,18 @@ segments:
     subsegments:
       - [0x27CB30, c]
       - [0x2809F0, .rodata, 27CB30]
-  - type: bin
+  - type: code
     start: 0x280C80
+    vram: 0x800F65E0
+    dir: ovl_44_UnknownStarPurchaseScene0
+    name: UnknownStarPurchaseScene0
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x280C80, c]
+      - [0x281BA0, .rodata, 280C80]
+  - type: bin
+    start: 0x281D40
   - [0x1CED490, bin, romPadding]
   - [0x2000000]
