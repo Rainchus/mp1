@@ -28,3 +28,8 @@ D_800F809C_29075C = 0x800F809C; // rom:0x29075C force_not_migration:True type:f3
 D_800F6EF4_295D64 = 0x800F6EF4; // rom:0x295D64 type:s32
 
 D_800F7228_296A88 = 0x800F7228; // rom:0x296A88 type:s32
+
+D_800F6CAC_29AACC = 0x800F6CAC; // rom:0x29AACC type:s32
+
+D_800F6D50_29B2A0 = 0x800F6D50; // rom:0x29B2A0 force_not_migration:True type:f32
+D_800F6D54_29B2A4 = 0x800F6D54; // rom:0x29B2A4 force_not_migration:True type:f32

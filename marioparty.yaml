@@ -1052,7 +1052,40 @@ segments:
     subsegments:
       - [0x297FB0, c]
       - [0x298A30, .rodata, 297FB0]
-  - type: bin
+  - type: code
     start: 0x298AE0
+    vram: 0x800F65E0
+    dir: ovl_5E_StarVisitEternalStar
+    name: StarVisitEternalStar
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x298AE0, c]
+      - [0x29A2C0, .rodata, 298AE0]
+  - type: code
+    start: 0x29A400
+    vram: 0x800F65E0
+    dir: ovl_5F_KoopaVisitEternalStar
+    name: KoopaVisitEternalStar
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x29A400, c]
+      - [0x29AA80, .rodata, 29A400]
+  - type: code
+    start: 0x29AB30
+    vram: 0x800F65E0
+    dir: ovl_60
+    name: name_60
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+    - [0x29AB30, c]
+    - [0x29B280, .rodata, 29AB30]
+  - type: bin
+    start: 0x29B410
   - [0x1CED490, bin, romPadding]
   - [0x2000000]
