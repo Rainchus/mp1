@@ -12,3 +12,5 @@ D_800FA564_280AB4 = 0x800FA564; // rom:0x280AB4 type:s32
 D_800F7590_281C30 = 0x800F7590; // rom:0x281C30 force_not_migration:True type:f32
 
 D_800F6EF0_285B40 = 0x800F6EF0; // rom:0x285B40 type:f32
+
+D_800F70C8_28665C = 0x800F70CC; // rom:0x28665C type:s32
