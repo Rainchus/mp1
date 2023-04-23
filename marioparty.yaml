@@ -790,7 +790,18 @@ segments:
     subsegments:
       - [0x285230, c]
       - [0x285B30, .rodata, 285230]
-  - type: bin
+  - type: code
     start: 0x285B70
+    vram: 0x800F65E0
+    dir: ovl_48_BowserVisitDKBoard
+    name: BowserVisitDKBoard
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x285B70, c]
+      - [0x286650, .rodata, 285B70] #800F70C0
+  - type: bin
+    start: 0x286700
   - [0x1CED490, bin, romPadding]
   - [0x2000000]
