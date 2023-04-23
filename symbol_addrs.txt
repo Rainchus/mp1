@@ -33,3 +33,27 @@ D_800F6CAC_29AACC = 0x800F6CAC; // rom:0x29AACC type:s32
 
 D_800F6D50_29B2A0 = 0x800F6D50; // rom:0x29B2A0 force_not_migration:True type:f32
 D_800F6D54_29B2A4 = 0x800F6D54; // rom:0x29B2A4 force_not_migration:True type:f32
+
+D_8010DDF8_277488 = 0x8010DDF8; // rom:0x277488 force_not_migration:True type:s32
+D_8010EE40_2784D0 = 0x8010EE40; // rom:0x2784D0 force_not_migration:True type:s32
+D_8010DE4C_2774DC = 0x8010DE4C; // rom:0x2774DC force_not_migration:True type:s32
+D_8010DE50_2774E0 = 0x8010DE50; // rom:0x2774E0 force_not_migration:True type:s32
+D_8010DE54_2774E4 = 0x8010DE54; // rom:0x2774E4 force_not_migration:True type:s32
+D_8010F5A8_278C38 = 0x8010F5A8; // rom:0x278C38 force_not_migration:True type:s32
+
+D_8010DE70_277500 = 0x8010DE70; // rom:0x277500 force_not_migration:True type:s32
+D_8010DE88_277518 = 0x8010DE88; // rom:0x277518 force_not_migration:True type:s32
+D_8010DF48_2775D8 = 0x8010DF48; // rom:0x2775D8 force_not_migration:True type:s32
+D_8010E1E8_277878 = 0x8010E1E8; // rom:0x277878 force_not_migration:True type:s32
+D_8010F448_278AD8 = 0x8010F448; // rom:0x278AD8 force_not_migration:True type:s32
+
+D_8010E098_277728 = 0x8010E098; // rom:0x277728 force_not_migration:True type:s32
+D_8010E098_27772C = 0x8010E09C; // rom:0x27772C force_not_migration:True type:s32
+D_8010E098_277730 = 0x8010E0A0; // rom:0x277730 force_not_migration:True type:s32
+
+D_8010E7D0_277E60 = 0x8010E7D0; // rom:0x277E60 force_not_migration:True type:s32
+D_8010EE70_278500 = 0x8010EE70; // rom:0x278500 force_not_migration:True type:s32
+
+D_8010F770_278E00 = 0x8010F770; // rom:0x278E00 force_not_migration:True type:s32
+D_8010F774_278E04 = 0x8010F774; // rom:0x278E04 force_not_migration:True type:s32
+

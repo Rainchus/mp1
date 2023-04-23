@@ -727,33 +727,35 @@ segments:
     subsegments:
       - [0x259EB0, c]
       - [0x25F920, .rodata, 259EB0] #800FC050
-  # - type: code
-  #   start: 0x25FC70
-  #   vram: 0x800F65E0
-  #   dir: ovl_41_YoshisTropicalIslandEndingScene
-  #   name: YoshisTropicalIslandEndingScene
-  #   overlay: True
-  #   exclusive_ram_id: minigame
-  #   symbol_name_format: $VRAM_$ROM
-  #   subalign: 8
-  #   subsegments:
-  #     - [0x25FC70, c]
-  #     - [0x2603D0, c]
-  #     - [0x262590, c]
-  #     - [0x2643A0, c]
-  #     - [0x266C80, c]
-  #     - [0x26BA10, c]
-  #     - [0x26E620, c]
-  #     - [0x2721F0, c]
-  #     - [0x275330, c]
-  #     - [0x277320, .rodata, 25FC70]
-  #     - [0x277508, .rodata, 2603D0]
-  #     - [0x278580, .rodata, 262590]
-  #     - [0x2785A0, .rodata, 2643A0]
-  #     - [0x2787D8, .rodata, 266C80]
-
-  - type: bin
+  - type: code
     start: 0x25FC70
+    vram: 0x800F65E0
+    dir: ovl_41_YoshisTropicalIslandEndingScene
+    name: YoshisTropicalIslandEndingScene
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subalign: 8
+    subsegments:
+      - [0x25FC70, c]
+      - [0x277320, .rodata, 25FC70]
+      # - [0x262590, c]
+      # - [0x2643A0, c]
+      # - [0x266C80, c]
+      # - [0x26BA10, c]
+      # - [0x26E620, c]
+      # - [0x2721F0, c]
+      # - [0x275330, c]
+      # - [0x277320, .rodata, 25FC70]
+      # - [0x277488, .rodata, 2603D0]
+      # - [0x278500, .rodata, 26E620]
+      # - [0x278520, .rodata, ]
+      # - [0x278580, .rodata, 262590]
+      # - [0x2785A0, .rodata, 2643A0]
+      # - [0x2787D8, .rodata, 266C80]
+
+  # - type: bin
+  #   start: 0x25FC70
   - type: code
     start: 0x278ED0
     vram: 0x800F65E0
