@@ -6,3 +6,5 @@ D_800FE460_F6820 = 0x800FE460; // rom:0xF6820 force_not_migration:True type:f32
 D_800F9F1C_27C80C = 0x800F9F1C; // rom:0x27C80C force_not_migration:True type:f32
 
 D_800FA0B0_27C9A0 = 0x800FA0B0; // rom:0x27C9A0 type:s32
+D_800FA4F0_280A40 = 0x800FA4F0; // rom:0x280A40 force_not_migration:True type:f32
+D_800FA564_280AB4 = 0x800FA564; //rom:0x280AB4 type:s32
