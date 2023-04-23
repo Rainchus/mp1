@@ -602,5 +602,18 @@ segments:
 
   - type: bin
     start: 0x25FC70
+  - type: code
+    start: 0x278ED0
+    vram: 0x800F65E0
+    dir: ovl_42_UnknownEndGameBonuses0
+    name: UnknownEndGameBonuses0
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x278ED0, c]
+      - [0x27C7C0, .rodata, 278ED0] #800F9ED0
+  - type: bin
+    start: 0x27CB30
   - [0x1CED490, bin, romPadding]
   - [0x2000000]
