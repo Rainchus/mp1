@@ -1,1 +1,4 @@
 D_800FD8A4_D4D14 = 0x800FD8A4; // rom:0xD4D14 force_not_migration:True type:f32
+D_800FECC0_E89D0 = 0x800FECC0; // rom:0xE89D0 force_not_migration:True type:f32
+
+D_800FE460_F6820 = 0x800FE460; // rom:0xF6820 force_not_migration:True type:f32
