@@ -494,6 +494,8 @@ segments:
       - [0xEB0E0, c]
       - [0xEE3F0, .rodata, E8F60] #800FBA70
       - [0xEE8B0, .rodata, EB0E0] #800FBF30
+  - type: bin
+    start: 0xEE9A0
   # - type: code
   #   start: 0xEE9A0
   #   vram: 0x800F65E0
@@ -509,9 +511,96 @@ segments:
   #     - [0xF6750, .rodata, EE9A0] #800FE390
   #     - [0xF6A40, .rodata, F2800]
   #     - [0xF6A90, .rodata, F4420]
+  # - type: bin
+  #   start: 0xF6AB0
+  # - type: code
+  #   start: 0xF6AB0
+  #   vram: 0x800F65E0
+  #   dir: ovl_05_ShellGame
+  #   name: ShellGame
+  #   overlay: True
+  #   exclusive_ram_id: minigame
+  #   symbol_name_format: $VRAM_$ROM
+  #   subalign: 8
+  #   subsegments:
+  #     - [0xF6AB0, c]
+  #     - [0xFD460, c]
+  #     - [0xFF0E0, .rodata, FD460]
+  #     - [0xFF160, .rodata, F6AB0]
+  - type: code
+    start: 0x254450
+    vram: 0x800F65E0
+    dir: ovl_3D_EternalStar
+    name: EternalStar
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x254450, c]
+      - [0x254480, c]
+      - [0x2569F0, .rodata, 254450]
+      - [0x256A20, .rodata, 254480]
+  - type: code
+    start: 0x256FF0
+    vram: 0x800F65E0
+    dir: ovl_3E_FirstMap
+    name: FirstMap
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x256FF0, c]
+      - [0x257020, c]
+      - [0x259140, .rodata, 256FF0]
+      - [0x259220, .rodata, 257020]
+  - type: code
+    start: 0x2592A0
+    vram: 0x800F65E0
+    dir: ovl_3F_Last5Turns
+    name: Last5Turns
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x2592A0, c]
+      - [0x259DD0, .rodata, 2592A0] #800F7110
+  - type: code
+    start: 0x259EB0
+    vram: 0x800F65E0
+    dir: ovl_40_ResultsScene
+    name: ResultsScene
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x259EB0, c]
+      - [0x25F920, .rodata, 259EB0] #800FC050
+  # - type: code
+  #   start: 0x25FC70
+  #   vram: 0x800F65E0
+  #   dir: ovl_41_YoshisTropicalIslandEndingScene
+  #   name: YoshisTropicalIslandEndingScene
+  #   overlay: True
+  #   exclusive_ram_id: minigame
+  #   symbol_name_format: $VRAM_$ROM
+  #   subalign: 8
+  #   subsegments:
+  #     - [0x25FC70, c]
+  #     - [0x2603D0, c]
+  #     - [0x262590, c]
+  #     - [0x2643A0, c]
+  #     - [0x266C80, c]
+  #     - [0x26BA10, c]
+  #     - [0x26E620, c]
+  #     - [0x2721F0, c]
+  #     - [0x275330, c]
+  #     - [0x277320, .rodata, 25FC70]
+  #     - [0x277508, .rodata, 2603D0]
+  #     - [0x278580, .rodata, 262590]
+  #     - [0x2785A0, .rodata, 2643A0]
+  #     - [0x2787D8, .rodata, 266C80]
+
   - type: bin
-    start: 0xEE9A0
-  - type: bin
-    start: 0x1832AE0
+    start: 0x25FC70
   - [0x1CED490, bin, romPadding]
   - [0x2000000]
