@@ -528,6 +528,36 @@ segments:
   #     - [0xFF0E0, .rodata, FD460]
   #     - [0xFF160, .rodata, F6AB0]
   # - type: code
+  #   start: 0x22C9E0
+  #   vram: 0x800F65E0
+  #   dir: ovl_32_TugOWar
+  #   name: TugOWar
+  #   overlay: True
+  #   exclusive_ram_id: minigame
+  #   symbol_name_format: $VRAM_$ROM
+  #   subsegments:
+  #     - [0x22C9E0, c]
+  #     - [0x22D5F0, c]
+  #     - [0x231180, c]
+  #     - [0x231D40, c]
+  #     - [0x233EE0, .rodata, 22C9E0]
+  #     - [0x233FB0, .rodata, 22D5F0]
+  #     - [0x234190, .rodata, 231180]
+  #     - [0x2341B0, .rodata, 231D40]
+  # - type: code
+  #   start: 0x2341E0
+  #   vram: 0x800F65E0
+  #   dir: ovl_33_PaddleBattle
+  #   name: PaddleBattle
+  #   overlay: True
+  #   exclusive_ram_id: minigame
+  #   symbol_name_format: $VRAM_$ROM
+  #   subsegments:
+  #     - [0x2341E0, c]
+  #     - [0x234F80, c]
+  #     - [0x23BDF0, .rodata, 2341E0]
+  #     - [0x23CA40, .rodata, 234F80]
+  # - type: code
   #   start: 0x23CF40
   #   vram: 0x800F65E0
   #   dir: ovl_34_BumperBallMaze
@@ -540,7 +570,7 @@ segments:
   #     - [0x23CF40, c]
   #     - [0x240010, c]
   #     - [0x241460, .rodata, 23CF40]
-  #     - [0x2416D0, .rodata, 240010]
+  #     - [0x241620, .rodata, 240010]
   - type: code
     start: 0x241740
     vram: 0x800F65E0
@@ -812,7 +842,118 @@ segments:
     subsegments:
       - [0x286700, c]
       - [0x2871F0, .rodata, 286700] #800F70D0
-  - type: bin
+  - type: code
     start: 0x2872A0
+    vram: 0x800F65E0
+    dir: ovl_4A_GoombaCoinStealPeachBoard
+    name: GoombaCoinStealPeachBoard
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x2872A0, c]
+      - [0x2887A0, .rodata, 2872A0]
+  - type: code
+    start: 0x2888A0
+    vram: 0x800F65E0
+    dir: ovl_4B_FlowerLotteryPeachBoard
+    name: FlowerLotteryPeachBoard
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x2888A0, c]
+      - [0x289A80, .rodata, 2888A0]
+  - type: code
+    start: 0x289BA0
+    vram: 0x800F65E0
+    dir: ovl_4C_PiranhaPlantStarStealPeachBoard
+    name: PiranhaPlantStarStealPeachBoard
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x289BA0, c]
+      - [0x28AAC0, c]
+      - [0x28AAD0, .rodata, 289BA0] #800F74F0
+  - type: code
+    start: 0x28ABA0
+    vram: 0x800F65E0
+    dir: ovl_4D_ThowmpTollYoshiBoard
+    name: ThowmpTollYoshiBoard
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x28ABA0, c]
+      - [0x28BBE0, .rodata, 28ABA0]
+  - type: code
+    start: 0x28BC70
+    vram: 0x800F65E0
+    dir: ovl_4E_BowserToadSwapPlacesYoshiBoard
+    name: BowserToadSwapPlacesYoshiBoard
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x28BC70, c]
+      - [0x28CED0, .rodata, 28BC70]
+  - type: code
+    start: 0x28CFF0
+    vram: 0x800F65E0
+    dir: ovl_4F_BowserVisitYoshiBoard
+    name: BowserVisitYoshiBoard
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x28CFF0, c]
+      - [0x28DF40, .rodata, 28CFF0]
+  - type: code
+    start: 0x28E030
+    vram: 0x800F65E0
+    dir: ovl_50_LoadCannonWarioBoard
+    name: LoadCannonWarioBoard
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x28E030, c]
+      - [0x28E570, .rodata, 28E030] #800F6B20
+  - type: code
+    start: 0x28E630
+    vram: 0x800F65E0
+    dir: ovl_51_ChangeCannonTargetWarioBoard
+    name: ChangeCannonTargetWarioBoard
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x28E630, c]
+      - [0x28EC50, .rodata, 28E630]
+  - type: code
+    start: 0x28ECA0
+    vram: 0x800F65E0
+    dir: ovl_52_FlyGuyWarioBoard
+    name: FlyGuyWarioBoard
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x28ECA0, c]
+      - [0x290730, .rodata, 28ECA0]
+  - type: code
+    start: 0x2908F0
+    vram: 0x800F65E0
+    dir: ovl_53_BowserVisitWarioBoard
+    name: BowserVisitWarioBoard
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x2908F0, c]
+      - [0x291280, .rodata, 2908F0] #800F6F70
+  - type: bin
+    start: 0x291360
   - [0x1CED490, bin, romPadding]
   - [0x2000000]
