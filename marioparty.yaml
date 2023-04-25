@@ -465,22 +465,24 @@ segments:
       - [0xDFDF0, .rodata, D51E0] #801011F0
       - [0xE0278, .rodata, DD760]
       - [0xE02B0, .rodata, DE6A0]
-  - type: code
+  - type: bin
     start: 0xE02F0
-    vram: 0x800F65E0
-    dir: ovl_02_SlotMachine
-    name: SlotMachine
-    overlay: True
-    exclusive_ram_id: minigame
-    symbol_name_format: $VRAM_$ROM
-    subalign: 8
-    subsegments:
-      - [0xE02F0, c]
-      - [0xE13F0, c]
-      - [0xE5DA0, c]
-      - [0xE7E10, .rodata, E02F0] #800FE100
-      - [0xE8B30, .rodata, E13F0]
-      - [0xE8E10, .rodata, E5DA0]
+  # - type: code
+  #   start: 0xE02F0
+  #   vram: 0x800F65E0
+  #   dir: ovl_02_SlotMachine
+  #   name: SlotMachine
+  #   overlay: True
+  #   exclusive_ram_id: minigame
+  #   symbol_name_format: $VRAM_$ROM
+  #   subalign: 8
+  #   subsegments:
+  #     - [0xE02F0, c]
+  #     - [0xE13F0, c]
+  #     - [0xE5DA0, c]
+  #     - [0xE7E10, .rodata, E02F0] #800FE100
+  #     - [0xE8B30, .rodata, E13F0]
+  #     - [0xE8E10, .rodata, E5DA0]
   - type: code
     start: 0xE8F60
     vram: 0x800F65E0
@@ -494,25 +496,25 @@ segments:
       - [0xEB0E0, c]
       - [0xEE3F0, .rodata, E8F60] #800FBA70
       - [0xEE8B0, .rodata, EB0E0] #800FBF30
-  - type: bin
-    start: 0xEE9A0
-  # - type: code
-  #   start: 0xEE9A0
-  #   vram: 0x800F65E0
-  #   dir: ovl_04_TreasureDivers
-  #   name: TreasureDivers
-  #   overlay: True
-  #   exclusive_ram_id: minigame
-  #   symbol_name_format: $VRAM_$ROM
-  #   subsegments:
-  #     - [0xEE9A0, c]
-  #     - [0xF2800, c]
-  #     - [0xF4420, c]
-  #     - [0xF6750, .rodata, EE9A0] #800FE390
-  #     - [0xF6A40, .rodata, F2800]
-  #     - [0xF6A90, .rodata, F4420]
   # - type: bin
-  #   start: 0xF6AB0
+  #   start: 0xEE9A0
+  - type: code
+    start: 0xEE9A0
+    vram: 0x800F65E0
+    dir: ovl_04_TreasureDivers
+    name: TreasureDivers
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0xEE9A0, c]
+      - [0xF2800, c]
+      - [0xF4420, c]
+      - [0xF6750, .rodata, EE9A0] #800FE390
+      - [0xF6A40, .rodata, F2800]
+      - [0xF6A90, .rodata, F4420]
+  - type: bin
+    start: 0xF6AB0
   # - type: code
   #   start: 0xF6AB0
   #   vram: 0x800F65E0
