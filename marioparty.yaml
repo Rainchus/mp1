@@ -529,6 +529,45 @@ segments:
   #     - [0xFD460, c]
   #     - [0xFF0E0, .rodata, FD460]
   #     - [0xFF160, .rodata, F6AB0]
+
+  - type: code
+    start: 0x12BC20
+    vram: 0x800F65E0
+    dir: ovl_0E_FaceLift
+    name: FaceLift
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x12BC20, c]
+      - [0x131A10, .rodata, 12BC20]
+  - type: code
+    start: 0x131FA0
+    vram: 0x800F65E0
+    dir: ovl_0F_WhackAPlant
+    name: WhackAPlant
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x131FA0, c]
+      - [0x136C10, c]
+      - [0x136F40, .rodata, 131FA0]
+  - type: bin
+    start: 0x137050
+  # - type: code
+  #   start: 0x137050
+  #   vram: 0x800F65E0
+  #   dir: ovl_10_BashNCash
+  #   name: BashNCash
+  #   overlay: True
+  #   exclusive_ram_id: minigame
+  #   symbol_name_format: $VRAM_$ROM
+  #   subsegments:
+  #     - [0x137050, c]
+  #     - [0x13EE10, .rodata, 137050]
+  - type: bin
+    start: 0x13EFB0
   # - type: code
   #   start: 0x22C9E0
   #   vram: 0x800F65E0
@@ -572,7 +611,8 @@ segments:
   #     - [0x23CF40, c]
   #     - [0x240010, c]
   #     - [0x241460, .rodata, 23CF40]
-  #     - [0x241620, .rodata, 240010]
+  #     - [0x241620, .data, 240010]
+  #     - [0x241720, .rodata, 240010]
   - type: code
     start: 0x241740
     vram: 0x800F65E0

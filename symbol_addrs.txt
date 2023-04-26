@@ -61,3 +61,9 @@ D_800FF180_E8E90 = 0x800FF180; // rom:0xE8E90 force_not_migration:True type:f64
 D_800FF188_E8E98 = 0x800FF188; // rom:0xE8E98 force_not_migration:True type:f64
 D_800FF190_E8EA0 = 0x800FF190; // rom:0xE8EA0 force_not_migration:True type:f64
 D_800FE3C4_F6784 = 0x800FE3C4; // rom:0xF6784 force_not_migration:True type:f32
+
+D_800FC550_131B90 = 0x800FC550; // rom:0x131B90 force_not_migration:True type:f32
+
+D_800FB724_1370E4 = 0x800FB724; // rom:0x1370E4 force_not_migration:True type:s32
+D_800FB728_1370E8 = 0x800FB728; // rom:0x1370E8 force_not_migration:True type:s32
+D_800FB72C_1370EC = 0x800FB72C; // rom:0x1370EC force_not_migration:True type:s32
