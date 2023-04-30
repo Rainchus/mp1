@@ -18,5 +18,5 @@ extern board_overlay_entrypoint D_800F7F60[];
 // };
 
 void func_800F65E0_24FA80(void) {
-    ExecBoardScene(&D_800F7F60, D_800C597A);
+    ExecBoardScene(D_800F7F60, D_800C597A);
 }

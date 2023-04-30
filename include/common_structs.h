@@ -113,7 +113,8 @@ typedef struct unkGlobalStruct_00 {
     /* 0x56 */ s8 unk_56;
     /* 0x57 */ s8 unk_57;
     /* 0x58 */ s8 unk_58;
-    /* 0x59 */ char unk_59[7];
+    /* 0x59 */ char unk_59[3];
+    /* 0x5C */ s32 unk_5C;
     /* 0x60 */ f32 unk_60;
     /* 0x64 */ f32 unk_64;
     /* 0x68 */ struct unkGlobalStruct_00* unk_68;
@@ -125,7 +126,7 @@ typedef struct unkGlobalStruct_00 {
     /* 0xB4 */ char unk_B4[0x08];
     /* 0xBC */ f32 unk_BC;
     /* 0xC0 */ char unk_C0[0x1C];
-    /* 0xB8 */ s32 unk_DC;
+    /* 0xDC */ s32 unk_DC;
     /* 0xE0 */ s32 unk_E0;
     /* 0xE4 */ unk_Struct01* unk_E4;
 } unkGlobalStruct_00; /* size = 0xE8 */
@@ -355,19 +356,24 @@ typedef struct HeapNode {
 
 typedef struct board_overlay_entrypoint {
     s16 index;
-    void* fn;
+    void (*fn)();
 } board_overlay_entrypoint;
 
 typedef struct GameStatus {
 /* 0x00 */ s16 unk_00;
 /* 0x02 */ s16 unk_02;
-/* 0x04 */ s8 unk_04[2];
+/* 0x04 */ s16 unk_04;
 /* 0x06 */ s16 maxTurns;
 /* 0x08 */ s16 currentTurn;
 /* 0x0A */ s16 chosenStarSpaceIndex;
 /* 0x0C */ s16 starSpaces[7];
 /* 0x1A */ s16 unk_1A;
 /* 0x1C */ s16 unk_1C;
+/* 0x1E */ s16 unk_1E;
+/* 0x20 */ char unk_20[2];
+/* 0x22 */ u8 unk_22;
+/* 0x22 */ u8 unk_23;
+/* 0x24 */ u8 unk_24;
 } GameStatus;
 
 typedef struct mpSource_object_indirect2 {

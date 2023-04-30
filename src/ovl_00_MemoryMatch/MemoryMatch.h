@@ -36,7 +36,7 @@ typedef struct unkStruct {
     s16 unk2;
 } unkStruct;
 
-extern unkStruct D_800FE158[];
+extern s16 D_800FE158[10][2];
 
 void func_800F6858_CDCC8(unkObjectStruct*);
 void func_800F796C_CEDDC(unkObjectStruct*);

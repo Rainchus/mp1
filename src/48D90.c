@@ -12,12 +12,48 @@ typedef struct {
     u8*        bytes;
 } unk20;
 
+typedef struct unkStruct19 {
+s32 unk0;
+s32 unk4;
+s32 unk8;
+s32 unkC;
+f32 unk_10;
+f32 unk_14;
+f32 unk_18;
+f32 unk_1C;
+f32 unk_20;
+f32 unk_24;
+f32 unk_28;
+f32 unk_2C;
+char unk_30[0x0C];
+} unkStruct19; //sizeof 0x3C
+
+typedef struct unkStruct17 {
+s32 unk_00;
+char unk_04[0x0C];
+} unkStruct17;
+
 extern s32 *D_800C4F74; // offsets
 extern u8* D_800D6728; // bytestream
 
-extern s32* D_800C4F78;
+extern unkStruct19* D_800C4F78;
 extern s8   D_800C4F7C;
-
+void func_80028E8C(s32, void*);
+void func_8004A7A4(void);
+void func_8004AFFC(void);
+void func_8004B7F8(s32);
+void func_8004ACEC(void);
+void func_8004A19C(s16, s16); 
+extern s32* D_800C4F70;
+extern s32* D_800C4F74;
+extern unkStruct19* D_800C4F78;
+extern s32 D_800D6720;
+extern s16 D_800D6730;
+extern s16 D_800D6732;
+extern s16 D_800D6734;
+extern s16 D_800D6736;
+extern s16 D_800D6738;
+extern s32 D_800F6598;
 extern f32 D_800D672C;
 extern s16 D_800D6730;
 extern s16 D_800D6732;
@@ -89,11 +125,45 @@ INCLUDE_ASM(s32, "48D90", LoadBackgroundData);
 
 INCLUDE_ASM(s32, "48D90", func_80049F0C);
 
-INCLUDE_ASM(s32, "48D90", LoadBackgroundIndex);
+//INCLUDE_ASM(s32, "48D90", LoadBackgroundIndex);
+
+void LoadBackgroundIndex(s32 arg0) {
+    unkStruct17* temp_v0;
+    s32 temp_s0;
+    
+    D_800F6598 = arg0;
+    D_800D6728 = (u8*)(D_800D6720 + D_800C4F70[arg0]);
+    temp_v0 = MallocTemp(sizeof(unkStruct17));
+    func_80061FE8(&D_800D6728[0], temp_v0, 0x10);
+    arg0 = temp_v0->unk_00;
+    FreeTemp(temp_v0);
+    temp_s0 = arg0 * 4;
+    D_800C4F74 = MallocTemp(temp_s0);
+    func_80061FE8(&D_800D6728[4], D_800C4F74, temp_s0);
+    D_800C4F78 = MallocTemp(sizeof(unkStruct19));
+    func_80061FE8(&D_800D6728[*D_800C4F74], D_800C4F78, 0x3C);
+    D_800C4F78->unk_18 = (f32) (D_800C4F78->unk_18 * 5.0f);
+    D_800C4F78->unk_1C = (f32) (D_800C4F78->unk_1C * 5.0f);
+    D_800C4F78->unk_20 = (f32) (D_800C4F78->unk_20 * 5.0f);
+    D_800C4F78->unk_24 = (f32) (D_800C4F78->unk_24 * 5.0f);
+    D_800C4F78->unk_28 = (f32) (D_800C4F78->unk_28 * 5.0f);
+    D_800C4F78->unk_2C = (f32) (D_800C4F78->unk_2C * 5.0f);
+    D_800D6734 = 0;
+    D_800D6732 = 0;
+    D_800D6736 = (D_800C4F78->unk0 * D_800C4F78->unk8) / 2;
+    D_800D6738 = (D_800C4F78->unk4 * D_800C4F78->unkC) / 2;
+    D_800D6730 = 1;
+    func_80028E8C(0, &func_8004ACEC);
+    func_8004A7A4();
+    func_8004A510();
+    func_8004AFFC();
+    func_8004B5C4(1.0f);
+    func_8004B7F8(0xFF);
+    func_8004B838(-1.0f);
+}
 
 INCLUDE_ASM(s32, "48D90", func_8004A140);
 
-void func_8004A19C(s16, s16); 
 INCLUDE_ASM(s32, "48D90", func_8004A19C);
 
 u16 func_8004A1B0(Vec2f* arg0, f32 arg1) {
@@ -281,7 +351,7 @@ void func_8004A7DC() {
 }
 
 u16 func_8004A814(s32 arg0, s32 arg1) {
-    return (D_800C4F78[3] - arg1 - 1) * D_800C4F78[2] + arg0 + 1;
+    return (D_800C4F78->unkC - arg1 - 1) * D_800C4F78->unk8 + arg0 + 1;
 }
 
 /* Get size of table */
@@ -339,8 +409,8 @@ void func_8004A950() {
         var_s1 = temp >> 6;
         for (j = 0; j < 6; var_s1++, j++) {
             if (((((u32) var_s1 >> 0x1F) | (var_s2 >> 0x1F)) != 0) ||
-                ((var_s1 < D_800C4F78[2]) == 0) ||
-                ((s32) var_s2 >= D_800C4F78[3])) {
+                ((var_s1 < D_800C4F78->unk8) == 0) ||
+                ((s32) var_s2 >= D_800C4F78->unkC)) {
                 D_800D6A60[j][i] = NULL;
             } else {
                 D_800D6A60[j][i] = func_8004A890(func_8004A814(var_s1, var_s2));      
@@ -361,7 +431,7 @@ void func_8004AFFC() {
     Process *temp_v0;
     f32 *pFloat = (f32*) D_800C4F78;
 
-    temp_f2 = (D_800C4F78[1] * D_800C4F78[3]) / 240.0f;
+    temp_f2 = (D_800C4F78->unk4 * D_800C4F78->unkC) / 240.0f;
     D_800D80B8 = temp_f2;
     D_800D80CC.x = pFloat[6];
     D_800D80CC.y = pFloat[7];
@@ -491,7 +561,7 @@ void func_8004B730(Vec3f* coords3D, Vec2f* offsetCoords2D) {
     offsetCoords2D->y = coords2D.y + offset.y;
 }
 
-void func_8004B7F8(s8 arg0) {
+void func_8004B7F8(s32 arg0) {
     D_800C4F7C = arg0;
 }
 
