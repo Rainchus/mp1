@@ -28,7 +28,7 @@ extern char D_800F8D10[];
 extern char D_800F8D18[];
 extern s16 D_800F8D70;
 extern Process* D_800F8D74;
-extern char D_800F8D78[];
+extern unkCommonStruct0 D_800F8D78[];
 extern s16 D_800F8D8C[];
 extern s16 D_800F8DE0;
 extern s16 D_800F8DE2;
