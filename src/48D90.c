@@ -121,7 +121,23 @@ INCLUDE_ASM(s32, "48D90", func_800499CC);
 
 INCLUDE_ASM(s32, "48D90", func_80049E60);
 
-INCLUDE_ASM(s32, "48D90", LoadBackgroundData);
+extern s32 D_800D6724;
+void LoadBackgroundData(Addr* arg0) {
+    s32 temp_s0;
+    s32* temp_v0;
+    s32* temp_v0_2;
+
+    D_800D6720 = arg0;
+    temp_v0 = MallocTemp(0x10);
+    func_80061FE8((u8*) arg0, temp_v0, 0x10);
+    D_800D6724 = *temp_v0;
+    FreeTemp(temp_v0);
+    temp_s0 = D_800D6724 * 4;
+    temp_v0_2 = MallocTemp(temp_s0);
+    D_800C4F70 = temp_v0_2;
+    func_80061FE8((u8*)arg0 + 4, temp_v0_2, temp_s0);
+    D_800D673C = MallocTemp(0x2C0);
+}
 
 INCLUDE_ASM(s32, "48D90", func_80049F0C);
 
