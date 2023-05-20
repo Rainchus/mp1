@@ -1,7 +1,7 @@
 #include "common.h"
 #include "esprite.h"
 
-INCLUDE_ASM(s32, "../src/engine/esprite", func_80018870);
+INCLUDE_ASM(s32, "engine/esprite", func_80018870);
 
 s32 InitSprite(s32 arg0) {
     s16 temp_s0;
@@ -14,11 +14,11 @@ s32 InitSprite(s32 arg0) {
     return temp_s0;
 }
 
-INCLUDE_ASM(s32, "../src/engine/esprite", func_8001897C);
+INCLUDE_ASM(s32, "engine/esprite", func_8001897C);
 
-INCLUDE_ASM(s32, "../src/engine/esprite", func_80018AFC);
+INCLUDE_ASM(s32, "engine/esprite", func_80018AFC);
 
-INCLUDE_ASM(s32, "../src/engine/esprite", func_80018B2C);
+INCLUDE_ASM(s32, "engine/esprite", func_80018B2C);
 
 void ShowBasicSprite(s32 arg0) {
     func_80067480(D_800ED60C[arg0 & 0xFFFF].unk_04, 0, 0x8000);
@@ -26,7 +26,7 @@ void ShowBasicSprite(s32 arg0) {
         //perhaps an implicit declaration
 }
 
-INCLUDE_ASM(s32, "../src/engine/esprite", func_80018C90);
+INCLUDE_ASM(s32, "engine/esprite", func_80018C90);
 
 void SetBasicSpritePos(s32 arg0, s16 arg1, s16 arg2) {
     unkSpriteStruct* spriteInstance = &D_800ED60C[arg0 & 0xFFFF];
@@ -37,21 +37,21 @@ void SetBasicSpritePos(s32 arg0, s16 arg1, s16 arg2) {
     spriteInstance->unk_0C = arg2;
 }
 
-INCLUDE_ASM(s32, "../src/engine/esprite", func_80018CF8);
+INCLUDE_ASM(s32, "engine/esprite", func_80018CF8);
 
-INCLUDE_ASM(s32, "../src/engine/esprite", func_80018D44);
+INCLUDE_ASM(s32, "engine/esprite", func_80018D44);
 
-INCLUDE_ASM(s32, "../src/engine/esprite", func_80018D84);
+INCLUDE_ASM(s32, "engine/esprite", func_80018D84);
 
-INCLUDE_ASM(s32, "../src/engine/esprite", func_80018DC4);
+INCLUDE_ASM(s32, "engine/esprite", func_80018DC4);
 
-INCLUDE_ASM(s32, "../src/engine/esprite", func_80018E0C);
+INCLUDE_ASM(s32, "engine/esprite", func_80018E0C);
 
-INCLUDE_ASM(s32, "../src/engine/esprite", func_80018E50);
+INCLUDE_ASM(s32, "engine/esprite", func_80018E50);
 
-INCLUDE_ASM(s32, "../src/engine/esprite", func_80018E98);
+INCLUDE_ASM(s32, "engine/esprite", func_80018E98);
 
-INCLUDE_ASM(s32, "../src/engine/esprite", func_80018ED8);
+INCLUDE_ASM(s32, "engine/esprite", func_80018ED8);
 
 void SetBasicSpriteSize(u16 arg0, f32 arg1, f32 arg2) {
     unkSpriteStruct* spriteInstance = &D_800ED60C[arg0];
@@ -59,12 +59,12 @@ void SetBasicSpriteSize(u16 arg0, f32 arg1, f32 arg2) {
     func_80067354(spriteInstance->unk_04, 0, arg1, arg2);
 }
 
-INCLUDE_ASM(s32, "../src/engine/esprite", func_80018F68);
+INCLUDE_ASM(s32, "engine/esprite", func_80018F68);
 
-INCLUDE_ASM(s32, "../src/engine/esprite", func_80018FBC);
+INCLUDE_ASM(s32, "engine/esprite", func_80018FBC);
 
-INCLUDE_ASM(s32, "../src/engine/esprite", func_80019000);
+INCLUDE_ASM(s32, "engine/esprite", func_80019000);
 
-INCLUDE_ASM(s32, "../src/engine/esprite", func_80019060);
+INCLUDE_ASM(s32, "engine/esprite", func_80019060);
 
-INCLUDE_ASM(s32, "../src/engine/esprite", func_800191F8);
+INCLUDE_ASM(s32, "engine/esprite", func_800191F8);

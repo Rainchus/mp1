@@ -18,7 +18,7 @@ void func_80017150(DecodeStruct* decode) { //DecodeNone
 
     while(decode->len) {
         if(decode->len < 1024) {
-            copy_len = (decode->len+1) & 0xFFFFFFFE;
+            copy_len = (decode->len+1) & ~1;
             decode->len = 0;
         } else {
             copy_len = 1024;
@@ -31,7 +31,7 @@ void func_80017150(DecodeStruct* decode) { //DecodeNone
     }
 }
 
-INCLUDE_ASM(s32, "../src/engine/decode", func_800171EC);
+INCLUDE_ASM(s32, "engine/decode", func_800171EC);
 
 void DecodeFile(void* src, void* dest, s32 len, s32 decode_type) {
     DecodeStruct decode_struct;

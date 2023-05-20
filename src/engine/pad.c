@@ -146,7 +146,7 @@ s16 func_80013B00(void) {
     return D_800D12B0;
 }
 #else
-INCLUDE_ASM(s32, "../src/engine/pad", func_80013B00);
+INCLUDE_ASM(s32, "engine/pad", func_80013B00);
 #endif
 
 #ifdef NON_MATCHING
@@ -201,7 +201,7 @@ s16 func_80013E84(void) {
     return var_s0;
 }
 #else
-INCLUDE_ASM(s32, "../src/engine/pad", func_80013E84);
+INCLUDE_ASM(s32, "engine/pad", func_80013E84);
 #endif
 
 void func_80014158(void) {

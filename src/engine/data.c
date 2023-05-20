@@ -55,7 +55,7 @@ void func_80014220() {
     }
 }
 
-INCLUDE_ASM(s32, "../src/engine/data", func_8001429C);
+INCLUDE_ASM(s32, "engine/data", func_8001429C);
 
 extern void *D_800D12F0; // FS ROM location
 extern u32 D_800D12F4; // Directory count
@@ -251,8 +251,8 @@ void func_800148BC(void *param_1) {
     FreePerm(param_1);
 }
 
-INCLUDE_ASM(s32, "../src/engine/data", func_800148EC);
+INCLUDE_ASM(s32, "engine/data", func_800148EC);
 
-INCLUDE_ASM(s32, "../src/engine/data", func_80014998);
+INCLUDE_ASM(s32, "engine/data", func_80014998);
 
-INCLUDE_ASM(s32, "../src/engine/data", func_80014A14);
+INCLUDE_ASM(s32, "engine/data", func_80014A14);

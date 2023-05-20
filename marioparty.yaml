@@ -22,7 +22,7 @@ options:
   build_path: build
   # extensions_path: tools/splat_ext
   # auto_all_sections: True
-  asm_inc_header: "\t.include \"include/macro.inc\"\n\t.set noat\n\t.set noreorder\n"
+  asm_inc_header: "\t.set noat\n\t.set noreorder\n"
   migrate_rodata_to_functions: True
 segments:
   - name: header
@@ -43,23 +43,23 @@ segments:
       - [0x99E0, c]
       - [0xB980, c]
       - [0x138F0, c]
-      - [0x14370, c, "../src/engine/pad"]
-      - [0x14E20, c, "../src/engine/data"] # and input
+      - [0x14370, c, "engine/pad"]
+      - [0x14E20, c, "engine/data"] # and input
       - [0x156F0, c]
-      - [0x17D50, c, "../src/engine/decode"]
-      - [0x180C0, c, "../src/engine/ovlman"]
+      - [0x17D50, c, "engine/decode"]
+      - [0x180C0, c, "engine/ovlman"]
       - [0x18650, c] # unique to mp1?
-      - [0x19470, c, "../src/engine/esprite"]
+      - [0x19470, c, "engine/esprite"]
       - [0x19E70, c]
       - [0x1A2A0, c]
-      - [0x1ACF0, c, "../src/engine/gameman"]
-      - [0x1B200, c, "../src/engine/graphics"]
+      - [0x1ACF0, c, "engine/gameman"]
+      - [0x1B200, c, "engine/graphics"]
       - [0x1B800, c]
       - [0x1DE40, c]
       - [0x1EA70, c]
-      - [0x22F90, c, "../src/engine/math"]
+      - [0x22F90, c, "engine/math"]
       - [0x23C40, c]
-      - [0x241F0, c, "../src/engine/mallocblock"]
+      - [0x241F0, c, "engine/mallocblock"]
       - [0x24740, c]
       - [0x29C90, c]
       - [0x2C0C0, c]
@@ -67,7 +67,7 @@ segments:
       - [0x388E0, c]
       - [0x3AC60, c]
       - [0x3BF30, c]
-      - [0x3C280, c, "../src/engine/memory"] # mallocperm, malloctemp, ...?
+      - [0x3C280, c, "engine/memory"] # mallocperm, malloctemp, ...?
       - [0x3CED0, c]
       - [0x3DEB0, c]
       - [0x3E560, c]
@@ -80,7 +80,7 @@ segments:
       - [0x46AE0, c]
       - [0x47320, c]
       - [0x48D90, c]
-      - [0x4C460, c, "../src/engine/spaces"]
+      - [0x4C460, c, "engine/spaces"]
       - [0x4D770, c, 4D770] # [0xCBC60, .rodata, 4D770]
       - [0x4E530, c]
       - [0x51200, c]
@@ -95,9 +95,9 @@ segments:
       - [0x5CDB0, c]
       - [0x61B70, c]
       - [0x62140, c]
-      - [0x63C60, c, "../src/engine/process"]
-      - [0x643C0, c, "../src/engine/nnsched"]
-      - [0x64B40, c, "../src/engine/siman"]
+      - [0x63C60, c, "engine/process"]
+      - [0x643C0, c, "engine/nnsched"]
+      - [0x64B40, c, "engine/siman"]
       - [0x64FD0, c]
       - [0x65770, c]
       - [0x69010, c]
