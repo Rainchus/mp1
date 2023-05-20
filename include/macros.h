@@ -28,4 +28,8 @@ obj->coords.z = vec3f.z;
 
 #define ALIGNED(x) __attribute__((aligned(x)))
 
+#define VIRTUAL_TO_PHYSICAL(addr) (u32)((u8*)(addr) - 0x80000000)
+
+#define INTEGER_LOG2(x) ((x) <= 2 ? 1 : (x) <= 4 ? 2 : (x) <= 8 ? 3 : (x) <= 16 ? 4 : (x) <= 32 ? 5 : (x) <= 64 ? 6 : (x) <= 128 ? 7 : 8)
+
 #endif

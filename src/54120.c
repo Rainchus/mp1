@@ -302,8 +302,8 @@ void func_80055EE8(void) {
 
     func_80076740(D_800D85D8, (char*) &D_800CB298, 0, -1, -1);
     func_80066DC4(D_800D85EC.unk_00, 0, 0xA0, 0x18);
-    func_80076740(D_800D85EC.unk_54, (char*) &D_800CB2A0, 0, -1, -1);
-    func_80066DC4(D_800D85EC.unk_68, 0, 0xA0, 0x28);
+    func_80076740(&D_800D85EC.unk_54, (char*) &D_800CB2A0, 0, -1, -1);
+    func_80066DC4(D_800D85EC.unk_54.unk_14[0], 0, 0xA0, 0x28);
     file = ReadMainFS(0x7C);
     D_800D85D6 = func_800678A4(file);
     FreeMainFS(file);
