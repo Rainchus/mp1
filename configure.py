@@ -5,6 +5,7 @@ dir_path = 'src/'
 asm_path = 'asm/'
 assets_path = 'assets/'
 optO0_files = ['synsetpan.c', 'synstartvoiceparam.c', 'A27D0.c', 'ABCD0.c', 'ACA90.c', 'ACCB0.c', 'ACF80.c', 'AD380.c', 'AD740.c', 'ADA70.c', 'ADBD0.c', 'ADF70.c', 'AE150.c', 'AE630.c', 'AE820.c', 'AED10.c', 'AEF30.c', 'AF450.c', 'AF6C0.c', 'AF960.c', 'AFBD0.c', 'AFE60.c', 'AFF70.c', 'B07B0.c', 'B0BA0.c', 'B0FC0.c', 'B1930.c', 'B1B60.c', 'B1DC0.c', 'B1FD0.c', 'B22E0.c', 'B2310.c', '89EA0.c', 'A2080.c', 'A21C0.c', 'A3370.c']
+optO3_files = ['7CD60.c']
 misc_files = ["48D90.c", "3AC60.c", "math.c"]
 
 if os.name == 'nt':
@@ -70,6 +71,10 @@ header = (
 
     'rule O2_cc\n'
     '  command = (export COMPILER_PATH=tools/gcc_2.7.2/$DETECTED_OS && $CC -O2 $CFLAGS $CPPFLAGS -c -o $out $in) && ($STRIP $out -N dummy-symbol-name)\n'
+    '\n'
+
+    'rule O3_cc\n'
+    '  command = (export COMPILER_PATH=tools/gcc_2.7.2/$DETECTED_OS && $CC -O3 $CFLAGS $CPPFLAGS -c -o $out $in) && ($STRIP $out -N dummy-symbol-name)\n'
     '\n'
 
     'rule main_cc\n'
@@ -148,6 +153,8 @@ with open('build.ninja', 'a') as outfile:
                 outfile.write("build build/" + os.path.splitext(c_file)[0] + ".c.o: " + "misc_cc " + c_file + "\n")
             elif os.path.basename(c_file) in optO0_files:
                 outfile.write("build build/" + os.path.splitext(c_file)[0] + ".c.o: " + "O0_cc " + c_file + "\n")
+            elif os.path.basename(c_file) in optO3_files:
+                outfile.write("build build/" + os.path.splitext(c_file)[0] + ".c.o: " + "O3_cc " + c_file + "\n")
             elif "src/lib" in os.path.relpath(c_file):
                 outfile.write("build build/" + os.path.splitext(c_file)[0] + ".c.o: " + "lib_cc " + c_file + "\n")
             elif os.path.basename(c_file) == "95F40.c":
