@@ -141,7 +141,8 @@ build/src/lib/2.0I/audio/synstartvoiceparam.c.o: OPTFLAGS = -O0
 
 build/src/engine/math.c.o: CFLAGS = -G0 -mips3 -mgp32 -mfp32 -D_LANGUAGE_C
 
-# mul nops included in the 48D90.c (Maybe only one func uses --vr4300mul-off)
+# mul nops included in the 3AC60.c and 48D90.c (Maybe only one func uses --vr4300mul-off)
+build/src/3AC60.c.o: CFLAGS = -G0 -mips3 -mgp32 -mfp32 -D_LANGUAGE_C
 build/src/48D90.c.o: CFLAGS = -G0 -mips3 -mgp32 -mfp32 -D_LANGUAGE_C
 
 build/src/ABCD0.c.o: OPTFLAGS = -O0

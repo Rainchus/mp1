@@ -189,6 +189,27 @@ typedef struct unkObjectStruct2 {
 /* 0xE4 */ unkObjectStruct* unk_E4;
 } unkObjectStruct2; //sizeof 0x54
 
+typedef struct unkCommonStruct0 {
+    /* 0x00 */ u8 unk_00;
+    /* 0x01 */ u8 unk_01;
+    /* 0x02 */ u8 unk_02;
+    /* 0x02 */ u8 unk_03;
+    /* 0x04 */ s16 unk_04;
+    /* 0x06 */ s16 unk_06;
+    /* 0x08 */ s16 unk_08;
+    /* 0x0A */ s16 unk_0A;
+    /* 0x0C */ s16 unk_0C;
+    /* 0x0E */ s16 unk_0E;
+    /* 0x10 */ void* unk_10;
+    /* 0x14 */ s16 unk_14[16];
+    /* 0x34 */ s16 unk_34[16];
+    /* 0x54 */ f32 unk_54;
+    /* 0x58 */ f32 unk_58;
+    /* 0x5C */ f32 unk_5C;
+    /* 0x60 */ f32 unk_60;
+    /* 0x64 */ f32 unk_64;
+} unkCommonStruct0; //sizeof 0x68
+
 typedef struct jump_buf
 {
     void *sp;
@@ -447,9 +468,14 @@ typedef struct mpSource_f2b7cstruct {
 } mpSource_f2b7cstruct;
 
 typedef struct camera {
-    Vec3f coords;
-    f32 unk_0C;
-} camera;
+    /* 0x00 */ Vec3f coords;
+    /* 0x0C */ f32 unk_0C;
+    /* 0x10 */ f32 unk_10;
+    /* 0x14 */ f32 unk_14;
+    /* 0x18 */ f32 unk_18;
+    /* 0x1C */ f32 unk_1C;
+    /* 0x20 */ f32 unk_20;
+} camera; //sizeof unknown
 
 typedef struct unkStructTest {
 /* 0x00 */ s16 unk_00[12];
@@ -554,7 +580,9 @@ typedef struct TextWindow {
 /* 0xEC */ f32 unk_EC;
 /* 0xF0 */ f32 unk_F0;
 /* 0xF4 */ SubTextWindow unk_F4[5]; //unknown size
-/* 0x144 */ char unk_154[0x138];
+/* 0x144 */ char unk_144[0x130];
+/* 0x274 */ s16 unk_274;
+/* 0x276 */ char unk_276[6];
 } TextWindow; //sizeof 0x27C
 
 typedef struct DecisionTreeNonLeafNode {

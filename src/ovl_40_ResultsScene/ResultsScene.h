@@ -42,6 +42,6 @@ extern Object* D_800FC3F8[7];
 extern Process* D_800FC418[2];
 extern s32 D_800FC458[2];
 extern s32 D_800FC470[1];
-extern s32 D_800FC4A8;
-extern s32 D_800FC510;
+extern unkCommonStruct0 D_800FC4A8[];
+extern unkCommonStruct0 D_800FC510[];
 void func_800FB71C_25EFEC(unkObjectStruct*);

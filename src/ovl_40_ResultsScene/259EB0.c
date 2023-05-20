@@ -161,8 +161,8 @@ void func_800FBDF0_25F6C0(void) {
         func_80067704(D_800FC470[i]);
     }
 
-    func_80077044(&D_800FC4A8);
-    func_80077044(&D_800FC510);
+    func_80077044(D_800FC4A8);
+    func_80077044(D_800FC510);
 }
 
 void func_800FBF10_25F7E0(void) {
