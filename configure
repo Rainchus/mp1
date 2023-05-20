@@ -19,9 +19,9 @@ if [[ "$1" == "--mod" ]]; then
     fi
     gcc tools/n64crc/n64crc.c -o tools/n64crc/n64crc.exe
     python3 tools/splat/split.py marioparty.yaml
-    python3 mod_configure.py "$@"
+    python3 tools/mod_configure.py "$@"
     
 else
     python3 tools/splat/split.py marioparty.yaml
-    python3 configure.py "$@"
+    python3 tools/configure.py "$@"
 fi

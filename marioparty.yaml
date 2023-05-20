@@ -22,7 +22,7 @@ options:
   build_path: build
   # extensions_path: tools/splat_ext
   # auto_all_sections: True
-  asm_inc_header: "\t.include \"macro.inc\"\n\t.set noat\n\t.set noreorder\n"
+  asm_inc_header: "\t.include \"include/macro.inc\"\n\t.set noat\n\t.set noreorder\n"
   migrate_rodata_to_functions: True
 segments:
   - name: header

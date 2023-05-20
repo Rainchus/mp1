@@ -130,32 +130,35 @@ ninja_file.rule('make_rom_z64',
                 deps = "gcc"
 )
 
-# Traverse each subdirectory recursively and find all C files
+
 def append_extension(filename, extension='.o'):
     return filename + extension
 
 def append_build_prefix(filename, prefix='build/'):
     return prefix + filename
 
+# Traverse each subdirectory recursively and find all c files
 c_files = []
 for root, dirs, files in os.walk(dir_path):
     for file in files:
         if file.endswith('.c'):
             c_files.append(os.path.join(root, file))
 
+# Traverse each subdirectory recursively and find all s files
 s_files = []
 for root, dirs, files in os.walk(asm_path):
     for file in files:
         if file.endswith('.s'):
             s_files.append(os.path.join(root, file))
 
+# Traverse each subdirectory recursively and find all bin files
 bin_files = []
 for root, dirs, files in os.walk(assets_path):
     for file in files:
         if file.endswith('.bin'):
             bin_files.append(os.path.join(root, file))
 
-# Combine the lists and change file extensions
+# Combine the lists and change file extensions to .o
 o_files = []
 for file in c_files + s_files + bin_files:
     if 'src/mod/' not in file and not file.startswith('src/mod/'):
