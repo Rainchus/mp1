@@ -124,23 +124,18 @@ ninja_file.rule('make_rom_bin',
 )
 
 ninja_file.rule('make_rom_z64',
-                command = "(cp $in $out) && (sha1sum -c marioparty.sha1)",
+                command = "(cp $in $out) && (sha1sum -c marioparty.sha1) && (python3 ./$MAKE_EXPECTED $out)",
                 description = "Creating rom z64...",
                 depfile = "$out.d",
                 deps = "gcc"
-)
-
-ninja_file.rule('make_expected_folder',
-                command = "(cp $in $out) && (sha1sum -c marioparty.sha1)",
-                description = "Making expected folder...",
 )
 
 # Traverse each subdirectory recursively and find all C files
 def append_extension(filename, extension='.o'):
     return filename + extension
 
-def append_prefix(filename, extension):
-    return extension + filename
+def append_build_prefix(filename, prefix='build/'):
+    return prefix + filename
 
 c_files = []
 for root, dirs, files in os.walk(dir_path):
@@ -165,24 +160,24 @@ o_files = []
 for file in c_files + s_files + bin_files:
     if 'src/mod/' not in file and not file.startswith('src/mod/'):
         if 'asm/nonmatchings/' not in file:
-            o_files.append("build/" + append_extension(file))
+            o_files.append(append_build_prefix(append_extension(file)))
 
 # Write the rules for .c files
 for c_file in c_files:
     if "src/mod" in os.path.relpath(c_file):
         continue
     if os.path.basename(c_file) in misc_files:
-        ninja_file.build("build/" + append_extension(c_file), "misc_cc", c_file)
+        ninja_file.build(append_build_prefix(append_extension(c_file)), "misc_cc", c_file)
     elif os.path.basename(c_file) in optO0_files:
-        ninja_file.build("build/" + append_extension(c_file), "O0_cc", c_file)
+        ninja_file.build(append_build_prefix(append_extension(c_file)), "O0_cc", c_file)
     elif os.path.basename(c_file) in optO3_files:
-        ninja_file.build("build/" + append_extension(c_file), "O3_cc", c_file)
+        ninja_file.build(append_build_prefix(append_extension(c_file)), "O3_cc", c_file)
     elif "src/lib" in os.path.relpath(c_file):
-        ninja_file.build("build/" + append_extension(c_file), "lib_cc", c_file)
+        ninja_file.build(append_build_prefix(append_extension(c_file)), "lib_cc", c_file)
     elif os.path.basename(c_file) in optO2_files:
-        ninja_file.build("build/" + append_extension(c_file), "O2_cc", c_file)
+        ninja_file.build(append_build_prefix(append_extension(c_file)), "O2_cc", c_file)
     else:
-        ninja_file.build("build/" + append_extension(c_file), "main_cc", c_file)
+        ninja_file.build(append_build_prefix(append_extension(c_file)), "main_cc", c_file)
 
 # Write the rules for .s files
 for s_file in s_files:
@@ -190,14 +185,13 @@ for s_file in s_files:
         continue
     if "src/mod" in os.path.relpath(s_file):
         continue
-    ninja_file.build("build/" + append_extension(s_file), "s_file", s_file)
+    ninja_file.build(append_build_prefix(append_extension(s_file)), "s_file", s_file)
 
 for bin_file in bin_files:
-    ninja_file.build("build/" + append_extension(bin_file), "bin_file", bin_file)
+    ninja_file.build(append_build_prefix(append_extension(bin_file)), "bin_file", bin_file)
 
 ninja_file.build("build/marioparty.elf", "make_elf ", o_files)
 ninja_file.build("build/marioparty.bin", "make_rom_bin ", "build/marioparty.elf")
 ninja_file.build("build/marioparty.z64", "make_rom_z64 ", "build/marioparty.bin")
-ninja_file.build("build/marioparty.ok", "make_expected_folder ", "build/marioparty.z64")
 print ("build.ninja generated")
 ninja_file.close()
