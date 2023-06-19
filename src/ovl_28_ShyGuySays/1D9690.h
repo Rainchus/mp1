@@ -52,18 +52,18 @@ typedef struct unkStruct_ShyGuySays_04 {
 
 extern unkStruct_ShyGuySays_05* D_800FDC64;
 //extern unkStructShyGuySays_02* D_800F2B7C;
-extern unkStruct_ShyGuySays_01 D_800FD9CE[];
+extern unkStruct_ShyGuySays_01 D_800FD9CE_ovl28_bss[];
 extern u16 D_800F5144;
 // extern s16 D_800FD5CE;
-extern unkStructShyGuySays_03 D_800FDCE8[];
-extern f64 D_800FD710;
-extern f64 D_800FD718;
-extern f64 D_800FD720;
-extern unkStruct_ShyGuySays_01 D_800FD9C0[];
-extern s32 D_800FDC4C;
+extern unkStructShyGuySays_03 D_800FDCE8_ovl28_bss[];
+extern f64 D_800FD710_1E07C0;
+extern f64 D_800FD718_1E07C8;
+extern f64 D_800FD720_1E07D0;
+extern unkStruct_ShyGuySays_01 D_800FD9C0_ovl28_bss[];
+extern s32 D_800FDC4C_ovl28_bss;
 extern f32 D_800FDC54;
 extern s16 D_800EE984;
-extern s32 D_800FD5F0;
+extern s32 D_800FD5F0_1E06A0;
 extern unkObjectStruct* D_800FD998;
 extern s32 D_800FD99C;
 extern s32 D_800FD9A0;
@@ -78,18 +78,18 @@ extern s32 D_800FD9A0;
 extern s16 D_800FDC1C;
 extern s16 D_800FDD10;
 extern u16 D_800F2BC0;
-extern u32 D_800FD5C0;
-extern f64 D_800FD630;
-extern f64 D_800FD638;
-extern f64 D_800FD640;
-extern f64 D_800FD648;
-extern f64 D_800FD650;
-extern Vec3f D_800FD980;
-extern Vec3f D_800FD98C;
+extern u32 D_800FD5C0_1E0670; //rng seed
+extern f64 D_800FD630_1E06E0;
+extern f64 D_800FD638_1E06E8;
+extern f64 D_800FD640_1E06F0;
+extern f64 D_800FD648_1E06F8;
+extern f64 D_800FD650_1E0700;
+extern Vec3f D_800FD980_ovl28_bss; //BSS
+extern Vec3f D_800FD98C_ovl28_bss; //BSS
 extern unkObjectStruct* D_800FDC20;
-extern u16 D_800FD5DC[2];
-extern f64 D_800FD818; //BSS
-extern f64 D_800FD820; //BSS
+extern u16 D_800FD5DC_1E068C[2];
+extern f64 D_800FD818_1E08C8;
+extern f64 D_800FD820_1E08D0;
 extern f64 func_800FD658_1C8F28; //BSS
 
 

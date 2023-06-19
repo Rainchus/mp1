@@ -1044,6 +1044,7 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x1D9690, c]
+      # - [0x1E0670, rodata, 1D9690]
   - type: bin
     start: 0x1E0670
   - type: code
