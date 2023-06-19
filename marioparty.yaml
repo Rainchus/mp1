@@ -465,24 +465,22 @@ segments:
       - [0xDFDF0, .rodata, D51E0] #801011F0
       - [0xE0278, .rodata, DD760]
       - [0xE02B0, .rodata, DE6A0]
-  - type: bin
+  - type: code
     start: 0xE02F0
-  # - type: code
-  #   start: 0xE02F0
-  #   vram: 0x800F65E0
-  #   dir: ovl_02_SlotMachine
-  #   name: SlotMachine
-  #   overlay: True
-  #   exclusive_ram_id: minigame
-  #   symbol_name_format: $VRAM_$ROM
-  #   subalign: 8
-  #   subsegments:
-  #     - [0xE02F0, c]
-  #     - [0xE13F0, c]
-  #     - [0xE5DA0, c]
-  #     - [0xE7E10, .rodata, E02F0] #800FE100
-  #     - [0xE8B30, .rodata, E13F0]
-  #     - [0xE8E10, .rodata, E5DA0]
+    vram: 0x800F65E0
+    dir: ovl_02_SlotMachine
+    name: SlotMachine
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subalign: 8
+    subsegments:
+      - [0xE02F0, c]
+      - [0xE13F0, c]
+      - [0xE5DA0, c]
+      - [0xE7E10, .rodata, E02F0] #800FE100
+      - [0xE8B30, .rodata, E13F0]
+      - [0xE8E10, .rodata, E5DA0]
   - type: code
     start: 0xE8F60
     vram: 0x800F65E0
@@ -496,8 +494,6 @@ segments:
       - [0xEB0E0, c]
       - [0xEE3F0, .rodata, E8F60] #800FBA70
       - [0xEE8B0, .rodata, EB0E0] #800FBF30
-  # - type: bin
-  #   start: 0xEE9A0
   - type: code
     start: 0xEE9A0
     vram: 0x800F65E0
@@ -553,19 +549,17 @@ segments:
       - [0x131FA0, c]
       - [0x136C10, c]
       - [0x136F40, .rodata, 131FA0]
-  - type: bin
+  - type: code
     start: 0x137050
-  # - type: code
-  #   start: 0x137050
-  #   vram: 0x800F65E0
-  #   dir: ovl_10_BashNCash
-  #   name: BashNCash
-  #   overlay: True
-  #   exclusive_ram_id: minigame
-  #   symbol_name_format: $VRAM_$ROM
-  #   subsegments:
-  #     - [0x137050, c]
-  #     - [0x13EE10, .rodata, 137050]
+    vram: 0x800F65E0
+    dir: ovl_10_BashNCash
+    name: BashNCash
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x137050, c]
+      - [0x13EE10, .rodata, 137050]
   - type: bin
     start: 0x13EFB0
   # - type: code

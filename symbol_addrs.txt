@@ -57,9 +57,6 @@ D_8010EE70_278500 = 0x8010EE70; // rom:0x278500 force_not_migration:True type:s3
 D_8010F770_278E00 = 0x8010F770; // rom:0x278E00 force_not_migration:True type:s32
 D_8010F774_278E04 = 0x8010F774; // rom:0x278E04 force_not_migration:True type:s32
 
-D_800FF180_E8E90 = 0x800FF180; // rom:0xE8E90 force_not_migration:True type:f64
-D_800FF188_E8E98 = 0x800FF188; // rom:0xE8E98 force_not_migration:True type:f64
-D_800FF190_E8EA0 = 0x800FF190; // rom:0xE8EA0 force_not_migration:True type:f64
 D_800FE3C4_F6784 = 0x800FE3C4; // rom:0xF6784 force_not_migration:True type:f32
 
 D_800FC550_131B90 = 0x800FC550; // rom:0x131B90 force_not_migration:True type:f32
