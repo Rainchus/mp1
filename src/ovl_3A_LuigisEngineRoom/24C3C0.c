@@ -126,42 +126,6 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_3A_LuigisEngineRoom/24C3C0", D_800F9998_24F
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_3A_LuigisEngineRoom/24C3C0", D_800F99B0_24F760);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_3A_LuigisEngineRoom/24C3C0", D_800F9A70_24F820);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_3A_LuigisEngineRoom/24C3C0", D_800F9A74_24F824);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_3A_LuigisEngineRoom/24C3C0", D_800F9A78_24F828);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_3A_LuigisEngineRoom/24C3C0", D_800F9A80_24F830);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_3A_LuigisEngineRoom/24C3C0", D_800F9A9C_24F84C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_3A_LuigisEngineRoom/24C3C0", D_800F9AA0_24F850);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_3A_LuigisEngineRoom/24C3C0", D_800F9AA4_24F854);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_3A_LuigisEngineRoom/24C3C0", D_800F9AA8_24F858);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_3A_LuigisEngineRoom/24C3C0", D_800F9AAC_24F85C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_3A_LuigisEngineRoom/24C3C0", D_800F9AB0_24F860);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_3A_LuigisEngineRoom/24C3C0", D_800F9AB4_24F864);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_3A_LuigisEngineRoom/24C3C0", D_800F9AB8_24F868);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_3A_LuigisEngineRoom/24C3C0", D_800F9ABC_24F86C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_3A_LuigisEngineRoom/24C3C0", D_800F9AC0_24F870);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_3A_LuigisEngineRoom/24C3C0", D_800F9AD0_24F880);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_3A_LuigisEngineRoom/24C3C0", D_800F9AD4_24F884);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_3A_LuigisEngineRoom/24C3C0", D_800F9AD8_24F888);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_3A_LuigisEngineRoom/24C3C0", D_800F9AE0_24F890);
-
 INCLUDE_RODATA("asm/nonmatchings/ovl_3A_LuigisEngineRoom/24C3C0", D_800F9B90_24F940);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_3A_LuigisEngineRoom/24C3C0", D_800F9C90_24FA40);

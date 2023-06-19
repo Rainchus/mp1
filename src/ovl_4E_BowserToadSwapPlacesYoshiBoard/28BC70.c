@@ -36,20 +36,6 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_4E_BowserToadSwapPlacesYoshiBoard/28BC70", 
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_4E_BowserToadSwapPlacesYoshiBoard/28BC70", D_800F78D8_28CF68);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_4E_BowserToadSwapPlacesYoshiBoard/28BC70", D_800F78E0_28CF70);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_4E_BowserToadSwapPlacesYoshiBoard/28BC70", D_800F78E4_28CF74);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_4E_BowserToadSwapPlacesYoshiBoard/28BC70", D_800F78E8_28CF78);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_4E_BowserToadSwapPlacesYoshiBoard/28BC70", D_800F78EC_28CF7C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_4E_BowserToadSwapPlacesYoshiBoard/28BC70", D_800F78F0_28CF80);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_4E_BowserToadSwapPlacesYoshiBoard/28BC70", D_800F78F4_28CF84);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_4E_BowserToadSwapPlacesYoshiBoard/28BC70", D_800F78F8_28CF88);
-
 INCLUDE_RODATA("asm/nonmatchings/ovl_4E_BowserToadSwapPlacesYoshiBoard/28BC70", D_800F7900_28CF90);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_4E_BowserToadSwapPlacesYoshiBoard/28BC70", func_800F66B4_28BD44);

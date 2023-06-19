@@ -20,20 +20,6 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_5B_BowservisitMagmaMountain/296B70", D_800F
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_5B_BowservisitMagmaMountain/296B70", D_800F75C4_297B54);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_5B_BowservisitMagmaMountain/296B70", D_800F75E0_297B70);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_5B_BowservisitMagmaMountain/296B70", D_800F75E4_297B74);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_5B_BowservisitMagmaMountain/296B70", D_800F7620_297BB0);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_5B_BowservisitMagmaMountain/296B70", D_800F7624_297BB4);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_5B_BowservisitMagmaMountain/296B70", D_800F7628_297BB8);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_5B_BowservisitMagmaMountain/296B70", D_800F762C_297BBC);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_5B_BowservisitMagmaMountain/296B70", D_800F7630_297BC0);
-
 INCLUDE_RODATA("asm/nonmatchings/ovl_5B_BowservisitMagmaMountain/296B70", D_800F7640_297BD0);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_5B_BowservisitMagmaMountain/296B70", func_800F66C4_296C54);

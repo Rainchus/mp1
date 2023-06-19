@@ -20,10 +20,6 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_42_UnknownEndGameBonuses0/278ED0", D_800F9F
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_42_UnknownEndGameBonuses0/278ED0", D_800F9F20_27C810);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_42_UnknownEndGameBonuses0/278ED0", D_800FA050_27C940);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_42_UnknownEndGameBonuses0/278ED0", D_800FA054_27C944);
-
 INCLUDE_RODATA("asm/nonmatchings/ovl_42_UnknownEndGameBonuses0/278ED0", D_800FA098_27C988);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_42_UnknownEndGameBonuses0/278ED0", D_800FA0A4_27C994);

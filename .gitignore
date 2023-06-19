@@ -11,6 +11,7 @@ marioparty.ld
 ctx.c
 build.ninja
 .ninja_log
+.ninja_deps
 .vscode/configurationCache.log
 .vscode/dryrun.log
 .vscode/targets.log

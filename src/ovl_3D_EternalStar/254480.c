@@ -207,11 +207,3 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_3D_EternalStar/254480", D_800F8FD4_256E44);
 INCLUDE_RODATA("asm/nonmatchings/ovl_3D_EternalStar/254480", D_800F8FF8_256E68);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_3D_EternalStar/254480", D_800F905C_256ECC);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_3D_EternalStar/254480", D_800F9160_256FD0);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_3D_EternalStar/254480", D_800F9164_256FD4);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_3D_EternalStar/254480", D_800F9168_256FD8);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_3D_EternalStar/254480", D_800F9170_256FE0);

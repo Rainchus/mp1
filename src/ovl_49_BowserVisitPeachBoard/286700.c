@@ -29,11 +29,3 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_49_BowserVisitPeachBoard/286700", D_800F70F
 INCLUDE_RODATA("asm/nonmatchings/ovl_49_BowserVisitPeachBoard/286700", D_800F7100_287220);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_49_BowserVisitPeachBoard/286700", D_800F7158_287278);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_49_BowserVisitPeachBoard/286700", D_800F7170_287290);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_49_BowserVisitPeachBoard/286700", D_800F7174_287294);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_49_BowserVisitPeachBoard/286700", D_800F7178_287298);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_49_BowserVisitPeachBoard/286700", D_800F717C_28729C);

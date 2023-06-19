@@ -4,14 +4,6 @@ INCLUDE_ASM("asm/nonmatchings/ovl_3E_FirstMap/256FF0", func_800F65E0_256FF0);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_3E_FirstMap/256FF0", D_800F8730_259140);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_3E_FirstMap/256FF0", D_800F8734_259144);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_3E_FirstMap/256FF0", D_800F8738_259148);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_3E_FirstMap/256FF0", D_800F873C_25914C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_3E_FirstMap/256FF0", D_800F8740_259150);
-
 INCLUDE_RODATA("asm/nonmatchings/ovl_3E_FirstMap/256FF0", D_800F8750_259160);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_3E_FirstMap/256FF0", D_800F8788_259198);

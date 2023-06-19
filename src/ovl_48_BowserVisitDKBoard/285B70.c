@@ -6,10 +6,6 @@ INCLUDE_ASM("asm/nonmatchings/ovl_48_BowserVisitDKBoard/285B70", func_800F66BC_2
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_48_BowserVisitDKBoard/285B70", D_800F70C0_286650);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_48_BowserVisitDKBoard/285B70", D_800F70C4_286654);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_48_BowserVisitDKBoard/285B70", D_800F70C8_286658);
-
 INCLUDE_RODATA("asm/nonmatchings/ovl_48_BowserVisitDKBoard/285B70", D_800F70C8_28665C);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_48_BowserVisitDKBoard/285B70", D_800F70D0_286660);

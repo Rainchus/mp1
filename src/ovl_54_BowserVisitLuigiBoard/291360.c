@@ -20,10 +20,6 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_54_BowserVisitLuigiBoard/291360", D_800F71C
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_54_BowserVisitLuigiBoard/291360", D_800F71D8_291F58);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_54_BowserVisitLuigiBoard/291360", D_800F71F0_291F70);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_54_BowserVisitLuigiBoard/291360", D_800F71F4_291F74);
-
 INCLUDE_RODATA("asm/nonmatchings/ovl_54_BowserVisitLuigiBoard/291360", D_800F7278_291FF8);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_54_BowserVisitLuigiBoard/291360", func_800F66C4_291444);

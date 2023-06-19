@@ -18,10 +18,6 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_4F_BowserVisitYoshiBoard/28CFF0", D_800F756
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_4F_BowserVisitYoshiBoard/28CFF0", D_800F75DC_28DFEC);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_4F_BowserVisitYoshiBoard/28CFF0", D_800F75E0_28DFF0);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_4F_BowserVisitYoshiBoard/28CFF0", D_800F75E4_28DFF4);
-
 INCLUDE_ASM("asm/nonmatchings/ovl_4F_BowserVisitYoshiBoard/28CFF0", func_800F66BC_28D0CC);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_4F_BowserVisitYoshiBoard/28CFF0", func_800F67F0_28D200);

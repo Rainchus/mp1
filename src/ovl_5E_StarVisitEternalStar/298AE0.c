@@ -26,26 +26,6 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_5E_StarVisitEternalStar/298AE0", D_800F7DEC
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_5E_StarVisitEternalStar/298AE0", D_800F7DF8_29A2F8);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_5E_StarVisitEternalStar/298AE0", D_800F7E10_29A310);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_5E_StarVisitEternalStar/298AE0", D_800F7E14_29A314);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_5E_StarVisitEternalStar/298AE0", D_800F7E18_29A318);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_5E_StarVisitEternalStar/298AE0", D_800F7E1C_29A31C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_5E_StarVisitEternalStar/298AE0", D_800F7E20_29A320);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_5E_StarVisitEternalStar/298AE0", D_800F7E24_29A324);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_5E_StarVisitEternalStar/298AE0", D_800F7E28_29A328);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_5E_StarVisitEternalStar/298AE0", D_800F7E60_29A360);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_5E_StarVisitEternalStar/298AE0", D_800F7E68_29A368);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_5E_StarVisitEternalStar/298AE0", D_800F7E78_29A378);
-
 INCLUDE_RODATA("asm/nonmatchings/ovl_5E_StarVisitEternalStar/298AE0", D_800F7EB4_29A3B4);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_5E_StarVisitEternalStar/298AE0", D_800F7ED0_29A3D0);

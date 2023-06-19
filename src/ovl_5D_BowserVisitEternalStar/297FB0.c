@@ -18,12 +18,6 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_5D_BowserVisitEternalStar/297FB0", D_800F70
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_5D_BowserVisitEternalStar/297FB0", D_800F7088_298A58);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_5D_BowserVisitEternalStar/297FB0", D_800F70C0_298A90);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_5D_BowserVisitEternalStar/297FB0", D_800F70C4_298A94);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_5D_BowserVisitEternalStar/297FB0", D_800F70C8_298A98);
-
 INCLUDE_RODATA("asm/nonmatchings/ovl_5D_BowserVisitEternalStar/297FB0", D_800F70E4_298AB4);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_5D_BowserVisitEternalStar/297FB0", func_800F66BC_29808C);

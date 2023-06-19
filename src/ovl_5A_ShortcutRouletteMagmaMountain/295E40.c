@@ -28,14 +28,6 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_5A_ShortcutRouletteMagmaMountain/295E40", D
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_5A_ShortcutRouletteMagmaMountain/295E40", D_800F7228_296A88);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_5A_ShortcutRouletteMagmaMountain/295E40", D_800F72A0_296B00);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_5A_ShortcutRouletteMagmaMountain/295E40", D_800F72A4_296B04);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_5A_ShortcutRouletteMagmaMountain/295E40", D_800F72A8_296B08);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_5A_ShortcutRouletteMagmaMountain/295E40", D_800F72AC_296B0C);
-
 INCLUDE_RODATA("asm/nonmatchings/ovl_5A_ShortcutRouletteMagmaMountain/295E40", D_800F72E8_296B48);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_5A_ShortcutRouletteMagmaMountain/295E40", D_800F7300_296B60);

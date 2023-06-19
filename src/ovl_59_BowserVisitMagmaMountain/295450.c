@@ -24,10 +24,4 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_59_BowserVisitMagmaMountain/295450", D_800F
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_59_BowserVisitMagmaMountain/295450", D_800F6EF4_295D64);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_59_BowserVisitMagmaMountain/295450", D_800F6F20_295D90);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_59_BowserVisitMagmaMountain/295450", D_800F6F24_295D94);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_59_BowserVisitMagmaMountain/295450", D_800F6F28_295D98);
-
 INCLUDE_RODATA("asm/nonmatchings/ovl_59_BowserVisitMagmaMountain/295450", D_800F6FB4_295E24);
