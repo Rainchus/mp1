@@ -1145,7 +1145,17 @@ segments:
     subsegments:
       - [0x2A2500, c]
       - [0x2A8C50, .rodata, 2A2500]
-  - type: bin
+  - type: code
     start: 0x2A9970
+    vram: 0x800F65E0
+    dir: ovl_63_StaffScene
+    name: StaffScene
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x2A9970, c]
+      - [0x2B0670, .rodata, 2A9970]
+  - type: bin
+    start: 0x2B1670
   - [0x1CED490, bin, romPadding]
   - [0x2000000]
