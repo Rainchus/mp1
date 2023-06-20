@@ -1134,7 +1134,18 @@ segments:
     subsegments:
     - [0x29B410, c]
     - [0x2A1D30, .rodata, 29B410]
-  - type: bin
+  - type: code
     start: 0x2A2500
+    vram: 0x800F65E0
+    dir: ovl_62_board_intro
+    name: BoardIntro
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x2A2500, c]
+      - [0x2A8C50, .rodata, 2A2500]
+  - type: bin
+    start: 0x2A9970
   - [0x1CED490, bin, romPadding]
   - [0x2000000]
