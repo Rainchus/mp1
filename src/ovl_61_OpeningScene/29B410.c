@@ -56,6 +56,8 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_61_OpeningScene/29B410", D_800FD340_2A2170)
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_61_OpeningScene/29B410", D_800FD344_2A2174);
 
+INCLUDE_RODATA("asm/nonmatchings/ovl_61_OpeningScene/29B410", D_800FD350_2A2180);
+
 INCLUDE_RODATA("asm/nonmatchings/ovl_61_OpeningScene/29B410", D_800FD434_2A2264);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_61_OpeningScene/29B410", D_800FD450_2A2280);
