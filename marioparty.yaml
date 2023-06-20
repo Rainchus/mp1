@@ -1123,7 +1123,18 @@ segments:
     subsegments:
     - [0x29AB30, c]
     - [0x29B280, .rodata, 29AB30]
-  - type: bin
+  - type: code
     start: 0x29B410
+    vram: 0x800F65E0
+    dir: ovl_61_OpeningScene
+    name: OpeningScene
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+    - [0x29B410, c]
+    - [0x2A1D30, .rodata, 29B410]
+  - type: bin
+    start: 0x2A2500
   - [0x1CED490, bin, romPadding]
   - [0x2000000]

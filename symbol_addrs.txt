@@ -65,4 +65,6 @@ D_800FB724_1370E4 = 0x800FB724; // rom:0x1370E4 force_not_migration:True type:s3
 D_800FB728_1370E8 = 0x800FB728; // rom:0x1370E8 force_not_migration:True type:s32
 D_800FB72C_1370EC = 0x800FB72C; // rom:0x1370EC force_not_migration:True type:s32
 
-D_800F70C0_286650 = 0x800F70C0; //rom:0x286650 type:f32
+D_800F70C0_286650 = 0x800F70C0; // rom:0x286650 type:f32
+
+D_800FD344_2A2174 = 0x800FD344; // rom:0x2A2174 force_not_migration:True type:Vec3f
