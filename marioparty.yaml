@@ -1155,7 +1155,27 @@ segments:
     subsegments:
       - [0x2A9970, c]
       - [0x2B0670, .rodata, 2A9970]
-  - type: bin
+  - type: code
     start: 0x2B1670
+    vram: 0x800F65E0
+    dir: ovl_64_ResultsEternalStar2
+    name: ResultsEternalStar2
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x2B1670, c]
+      - [0x2B7150, .rodata, 2B1670]
+  - type: code
+    start: 0x2B74A0
+    vram: 0x800F65E0
+    dir: ovl_65_UnknownBooStealScene
+    name: UnknownBooStealScene
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x2B74A0, c]
+      - [0x2BA290, .rodata, 2B74A0]
+  - type: bin
+    start: 0x2BA4C0
   - [0x1CED490, bin, romPadding]
   - [0x2000000]
