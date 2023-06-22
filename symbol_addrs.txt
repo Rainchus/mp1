@@ -90,6 +90,7 @@ D_800FDA0C_2B0D9C = 0x800FDA0C; // rom:0x2B0D9C type:s32
 D_800FE19C_2B152C = 0x800FE19C; // rom:0x2B152C type:s32
 D_800FE260_2B15F0 = 0x800FE260; // rom:0x2B15F0 type:s32
 
+// ovl_65_UnknownBooStealScene
 D_800F9464_2BA324 = 0x800F9464; // rom:0x2BA324 type:s32
 D_800F94C0_2BA380 = 0x800F94C0; // rom:0x2BA380 type:s32
 D_800F94D0_2BA390 = 0x800F94D0; // rom:0x2BA390 force_not_migration:True type:Vec3f
@@ -102,3 +103,15 @@ D_800F95A0_2BA460 = 0x800F95A0; // rom:0x2BA460 force_not_migration:True type:s3
 D_800F95A8_2BA468 = 0x800F95A8; // rom:0x2BA468 force_not_migration:True type:f64
 D_800F95B0_2BA470 = 0x800F95B0; // rom:0x2BA470 force_not_migration:True type:f64
 D_800F95B8_2BA478 = 0x800F95B8; // rom:0x2BA478 force_not_migration:True type:f64
+
+// ovl_69_GameModeOverworld 
+D_800F99CC_2BE9AC = 0x800F99CC; // rom:0x2BE9AC force_not_migration:True type:f32
+D_800F9A20_2BEA00 = 0x800F9A20; // rom:0x2BEA00 force_not_migration:True type:f32
+D_800F9A24_2BEA04 = 0x800F9A24; // rom:0x2BEA04 force_not_migration:True type:f32
+D_800FA170_2BF150 = 0x800FA170; // rom:0x2BF150 force_not_migration:True type:asciz
+
+// ovl_6A_AdventureModeSetup
+D_80101970_2CA530 = 0x80101970; // rom:0x2CA530 force_not_migration:True type:f32
+D_80101974_2CA534 = 0x80101974; // rom:0x2CA534 force_not_migration:True type:f32
+D_80101978_2CA538 = 0x80101978; // rom:0x2CA538 force_not_migration:True type:f32
+D_801019D0_2CA590 = 0x801019D0; // rom:0x2CA590 force_not_migration:True type:f32

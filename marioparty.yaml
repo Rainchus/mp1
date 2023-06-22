@@ -774,24 +774,23 @@ segments:
     subalign: 8
     subsegments:
       - [0x25FC70, c]
+      - [0x2603D0, c]
+      - [0x262590, c]
+      - [0x2643A0, c]
+      - [0x266C80, c]
+      - [0x26BA10, c]
+      - [0x26E620, c]
+      - [0x2721F0, c]
+      - [0x275330, c]
       - [0x277320, .rodata, 25FC70]
-      # - [0x262590, c]
-      # - [0x2643A0, c]
-      # - [0x266C80, c]
-      # - [0x26BA10, c]
-      # - [0x26E620, c]
-      # - [0x2721F0, c]
-      # - [0x275330, c]
-      # - [0x277320, .rodata, 25FC70]
-      # - [0x277488, .rodata, 2603D0]
-      # - [0x278500, .rodata, 26E620]
-      # - [0x278520, .rodata, ]
-      # - [0x278580, .rodata, 262590]
-      # - [0x2785A0, .rodata, 2643A0]
-      # - [0x2787D8, .rodata, 266C80]
-
-  # - type: bin
-  #   start: 0x25FC70
+      - [0x278520, .rodata, 2603D0]
+      - [0x278580, .rodata, 262590]
+      - [0x2786C0, .rodata, 2643A0]
+      - [0x2787D0, .rodata, 266C80]
+      - [0x278950, .rodata, 26BA10]
+      - [0x278A70, .rodata, 26E620]
+      - [0x278DC0, .rodata, 2721F0]
+      - [0x278E70, .rodata, 275330]
   - type: code
     start: 0x278ED0
     vram: 0x800F65E0
@@ -1144,7 +1143,22 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x2A2500, c]
+      - [0x2A51E0, c]
+      - [0x2A5420, c]
+      - [0x2A5840, c]
+      - [0x2A5E50, c]
+      - [0x2A6500, c]
+      - [0x2A6EA0, c]
+      - [0x2A74F0, c]
+      - [0x2A76E0, c]
       - [0x2A8C50, .rodata, 2A2500]
+      - [0x2A9920, .rodata, 2A51E0]
+      - [0x2A9920, .rodata, 2A5420]
+      - [0x2A9920, .rodata, 2A5840]
+      - [0x2A9930, .rodata, 2A5E50]
+      - [0x2A9930, .rodata, 2A6500]
+      - [0x2A9930, .rodata, 2A6EA0]
+      - [0x2A9960, .rodata, 2A76E0]
   - type: code
     start: 0x2A9970
     vram: 0x800F65E0
@@ -1154,7 +1168,9 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x2A9970, c]
+      - [0x2A9CA0, c]
       - [0x2B0670, .rodata, 2A9970]
+      - [0x2B0720, .rodata, 2A9CA0]
   - type: code
     start: 0x2B1670
     vram: 0x800F65E0
@@ -1175,7 +1191,65 @@ segments:
     subsegments:
       - [0x2B74A0, c]
       - [0x2BA290, .rodata, 2B74A0]
-  - type: bin
+  - type: code
     start: 0x2BA4C0
+    vram: 0x800F65E0
+    dir: ovl_66_LogosSequence
+    name: LogosSequence
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x2BA4C0, c]
+      - [0x2BA4F0, c]
+      - [0x2BA9B0, .rodata, 2BA4C0]
+  - type: code
+    start: 0x2BA9E0
+    vram: 0x800F65E0
+    dir: ovl_67_LogosSequenceCopy
+    name: LogosSequenceCopy
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x2BA9E0, c]
+      - [0x2BAA10, c]
+      - [0x2BB350, .rodata, 2BA9E0]
+      - [0x2BB380, .rodata, 2BAA10]
+  - type: code
+    start: 0x2BB390
+    vram: 0x800F65E0
+    dir: ovl_68_SaveDataCorrupted
+    name: SaveDataCorrupted
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x2BB390, c]
+      - [0x2BB3C0, c]
+      - [0x2BB5B0, .rodata, 2BB390]
+  - type: code
+    start: 0x2BB5C0
+    vram: 0x800F65E0
+    dir: ovl_69_GameModeOverworld
+    name: GameModeOverworld
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x2BB5C0, c]
+      - [0x2BB5F0, c]
+      - [0x2BE910, .rodata, 2BB5C0]
+      - [0x2BE9A0, .rodata, 2BB5F0]
+  - type: code
+    start: 0x2BF1A0
+    vram: 0x800F65E0
+    dir: ovl_6A_AdventureModeSetup
+    name: AdventureModeSetup
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x2BF1A0, c]
+      - [0x2BF1D0, c]
+      - [0x2CA400, .rodata, 2BF1A0]
+      - [0x2CA6B0, .rodata, 2BF1D0]
+  - type: bin
+    start: 0x2CAA00
   - [0x1CED490, bin, romPadding]
   - [0x2000000]
