@@ -52,9 +52,11 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_65_UnknownBooStealScene/2B74A0", D_800F94D0
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_65_UnknownBooStealScene/2B74A0", D_800F94DC_2BA39C);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_65_UnknownBooStealScene/2B74A0", D_800F94E8_2BA3A8);
+INCLUDE_RODATA("asm/nonmatchings/ovl_65_UnknownBooStealScene/2B74A0", D_800F94E0_2BA3A0);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_65_UnknownBooStealScene/2B74A0", D_800F94F4_2BA3B4);
+INCLUDE_RODATA("asm/nonmatchings/ovl_65_UnknownBooStealScene/2B74A0", D_800F94EC_2BA3AC);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_65_UnknownBooStealScene/2B74A0", D_800F94F0_2BA3B0);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_65_UnknownBooStealScene/2B74A0", D_800F9500_2BA3C0);
 
@@ -71,6 +73,8 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_65_UnknownBooStealScene/2B74A0", D_800F95A0
 INCLUDE_RODATA("asm/nonmatchings/ovl_65_UnknownBooStealScene/2B74A0", D_800F95A8_2BA468);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_65_UnknownBooStealScene/2B74A0", D_800F95B0_2BA470);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_65_UnknownBooStealScene/2B74A0", D_800F95B8_2BA478);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_65_UnknownBooStealScene/2B74A0", D_800F95C0_2BA480);
 
