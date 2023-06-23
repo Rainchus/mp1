@@ -82,14 +82,6 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_62_board_intro/2A2500", D_800FD45C_2A937C);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_62_board_intro/2A2500", D_800FD510_2A9430);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_62_board_intro/2A2500", D_800FD528_2A9448);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_62_board_intro/2A2500", D_800FD538_2A9458);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_62_board_intro/2A2500", D_800FD548_2A9468);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_62_board_intro/2A2500", D_800FD554_2A9474);
-
 INCLUDE_RODATA("asm/nonmatchings/ovl_62_board_intro/2A2500", D_800FD59C_2A94BC);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_62_board_intro/2A2500", D_800FD5E4_2A9504);
@@ -142,17 +134,9 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_62_board_intro/2A2500", D_800FD80C_2A972C);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_62_board_intro/2A2500", D_800FD818_2A9738);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_62_board_intro/2A2500", D_800FD830_2A9750);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_62_board_intro/2A2500", D_800FD850_2A9770);
-
 INCLUDE_RODATA("asm/nonmatchings/ovl_62_board_intro/2A2500", D_800FD85C_2A977C);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_62_board_intro/2A2500", D_800FD874_2A9794);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_62_board_intro/2A2500", D_800FD880_2A97A0);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_62_board_intro/2A2500", D_800FD88C_2A97AC);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_62_board_intro/2A2500", D_800FD898_2A97B8);
 

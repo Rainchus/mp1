@@ -20,8 +20,6 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_69_GameModeOverworld/2BB5F0", D_800F9A24_2B
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_69_GameModeOverworld/2BB5F0", D_800F9A2C_2BEA0C);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_69_GameModeOverworld/2BB5F0", D_800F9A30_2BEA10);
-
 INCLUDE_RODATA("asm/nonmatchings/ovl_69_GameModeOverworld/2BB5F0", D_800F9A94_2BEA74);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_69_GameModeOverworld/2BB5F0", D_800F9C30_2BEC10);
