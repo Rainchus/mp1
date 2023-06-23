@@ -225,4 +225,4 @@ void MtxRotateZ(Mat4 mtx, f32 angle) {
 
 /* Unrelated? Animation Code? */
 // https://decomp.me/scratch/OGGnF ~ 80%
-INCLUDE_ASM(s32, "../src/engine/math", func_80022D9C);
+INCLUDE_ASM(s32, "engine/math", func_80022D9C);

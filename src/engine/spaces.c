@@ -59,7 +59,7 @@ void ChangeSpaceTextures(s16 type) {
 /* Rendering */
 // TODO: https://decomp.me/scratch/Ccp3B ~90%
 void RenderSpaces(void **displayList, void *param_2, u8 param_3);
-INCLUDE_ASM(s32, "../src/engine/spaces", RenderSpaces);
+INCLUDE_ASM(s32, "engine/spaces", RenderSpaces);
 
 /* Get pointer to space data section */
 u8 *GetSpaceDataStream(u8 *byteSteam, s32 metaDataOffset) {

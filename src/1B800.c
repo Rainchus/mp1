@@ -28,7 +28,18 @@ INCLUDE_ASM(s32, "1B800", func_8001C9F4);
 
 INCLUDE_ASM(s32, "1B800", func_8001CBD8);
 
-INCLUDE_ASM(s32, "1B800", func_8001CD00);
+s16 func_8001CD00(u8* arg0) {
+    s16 var_a3;
+    s16 i;
+
+    var_a3 = 0;
+    for (i = 1; *arg0 != 0 && i < 24; i++) {
+        var_a3 += i * (*arg0);
+        arg0++;
+    }
+
+    return var_a3;
+}
 
 INCLUDE_ASM(s32, "1B800", func_8001CD60);
 

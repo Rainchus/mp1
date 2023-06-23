@@ -32,7 +32,7 @@ args = parser.parse_args()
 diff_count = args.count
 
 if args.make:
-    check_call(["make", "build/marioparty.z64"])
+    check_call(["make"])
 
 baseimg = f"baserom.us.z64"
 basemap = f"expected/build/marioparty.map"
@@ -50,9 +50,9 @@ if not os.path.isfile(myimg) or not os.path.isfile(mymap):
 mybin = open(myimg, "rb").read()
 basebin = open(baseimg, "rb").read()
 
-if len(mybin) != len(basebin):
-    print("Modified ROM has different size...")
-    exit(1)
+# if len(mybin) != len(basebin):
+#     print("Modified ROM has different size...")
+#     exit(1)
 
 if mybin == basebin:
     print("No differences!")
