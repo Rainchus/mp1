@@ -18,10 +18,6 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_0F_WhackAPlant/131FA0", D_800FB580_136F40);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_0F_WhackAPlant/131FA0", D_800FB584_136F44);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_0F_WhackAPlant/131FA0", D_800FB5C8_136F88);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_0F_WhackAPlant/131FA0", D_800FB5CC_136F8C);
-
 INCLUDE_RODATA("asm/nonmatchings/ovl_0F_WhackAPlant/131FA0", D_800FB608_136FC8);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_0F_WhackAPlant/131FA0", func_800F7570_132F30);
@@ -67,6 +63,10 @@ INCLUDE_ASM("asm/nonmatchings/ovl_0F_WhackAPlant/131FA0", func_800F9D38_1356F8);
 INCLUDE_ASM("asm/nonmatchings/ovl_0F_WhackAPlant/131FA0", func_800F9E44_135804);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_0F_WhackAPlant/131FA0", func_800FA078_135A38);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_0F_WhackAPlant/131FA0", D_800FB638_136FF8);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_0F_WhackAPlant/131FA0", jtbl_800FB648_137008);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_0F_WhackAPlant/131FA0", func_800FA1E0_135BA0);
 

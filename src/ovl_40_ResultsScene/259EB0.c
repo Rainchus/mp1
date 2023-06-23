@@ -88,6 +88,8 @@ INCLUDE_ASM("asm/nonmatchings/ovl_40_ResultsScene/259EB0", func_800F7C28_25B4F8)
 
 INCLUDE_ASM("asm/nonmatchings/ovl_40_ResultsScene/259EB0", func_800F7D94_25B664);
 
+INCLUDE_RODATA("asm/nonmatchings/ovl_40_ResultsScene/259EB0", jtbl_800FC320_25FBF0);
+
 INCLUDE_RODATA("asm/nonmatchings/ovl_40_ResultsScene/259EB0", D_800FC34C_25FC1C);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_40_ResultsScene/259EB0", D_800FC354_25FC24);

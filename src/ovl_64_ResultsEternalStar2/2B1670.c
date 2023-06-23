@@ -64,8 +64,6 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_64_ResultsEternalStar2/2B1670", D_800FC2E8_
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_64_ResultsEternalStar2/2B1670", D_800FC2F8_2B7388);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_64_ResultsEternalStar2/2B1670", D_800FC308_2B7398);
-
 INCLUDE_RODATA("asm/nonmatchings/ovl_64_ResultsEternalStar2/2B1670", D_800FC318_2B73A8);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_64_ResultsEternalStar2/2B1670", D_800FC338_2B73C8);
