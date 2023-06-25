@@ -190,6 +190,25 @@ D_800FDB9C_1660AC = 0x800FDB9C; // rom:0x1660AC force_not_migration:True type:f3
 D_800FDC54_166164 = 0x800FDC54; // rom:0x166164 force_not_migration:True type:asciz
 D_800FDC60_166170 = 0x800FDC60; // rom:0x166170 force_not_migration:True type:asciz
 
+// ovl_18_PlatformPeril
+D_800FCDA4_1724E4 = 0x800FCDA4; // rom:0x1724E4 force_not_migration:True type:s32
+D_800FD2C0_172A00 = 0x800FD2C0; // rom:0x172A00 force_not_migration:True type:s32
+D_800FD6F0_172E30 = 0x800FD6F0; // rom:0x172E30 force_not_migration:True type:f32
+D_800FD6F4_172E34 = 0x800FD6F4; // rom:0x172E34 force_not_migration:True type:f32
+D_800FD744_172E84 = 0x800FD744; // rom:0x172E84 force_not_migration:True type:s32
+D_800FD768_172EA8 = 0x800FD768; // rom:0x172EA8 force_not_migration:True type:s32
+D_800FD78C_172ECC = 0x800FD78C; // rom:0x172ECC force_not_migration:True type:s32
+D_800FDD78_1734B8 = 0x800FDD78; // rom:0x1734B8 force_not_migration:True type:f32
+
+// ovl_19_TeeteringTowers
+D_800FA964_177C64 = 0x800FA964; // rom:0x177C64 force_not_migration:True type:f32
+D_800FA968_177C68 = 0x800FA968; // rom:0x177C68 force_not_migration:True type:f32
+D_800FA9A0_177CA0 = 0x800FA9A0; // rom:0x177CA0 force_not_migration:True type:s32
+D_800FA9C4_177CC4 = 0x800FA9C4; // rom:0x177CC4 force_not_migration:True type:s32
+D_800FA9E8_177CE8 = 0x800FA9E8; // rom:0x177CE8 force_not_migration:True type:s32
+D_800FAA0C_177D0C = 0x800FAA0C; // rom:0x177D0C force_not_migration:True type:s32
+D_800FADD8_1780D8 = 0x800FADD8; // rom:0x1780D8 force_not_migration:True type:f32
+
 // ovl_32_TugOWar: NOT COMPLETE
 D_800FDB44_233F44 = 0x800FDB44; // rom:0x233F44 type:s32
 D_800FDB4C_233F4C = 0x800FDB4C; // rom:0x233F4C force_not_migration:True type:f64

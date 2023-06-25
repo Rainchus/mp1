@@ -734,8 +734,60 @@ segments:
     subsegments:
       - [0x15EAF0, c]
       - [0x165F10, .rodata, 15EAF0]
-  - type: bin
+  - type: code
     start: 0x166220
+    vram: 0x800F65E0
+    dir: ovl_17_BoxMountainMayhem
+    name: BoxMountainMayhem
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x166220, c]
+      - [0x166D50, c]
+      - [0x168CA0, c]
+      - [0x16BC00, .rodata, 166220]
+      - [0x16BD10, .rodata, 166D50]
+  - type: code
+    start: 0x16BD20
+    vram: 0x800F65E0
+    dir: ovl_18_PlatformPeril
+    name: PlatformPeril
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x16BD20, c]
+      - [0x16C6A0, c]
+      - [0x170470, c]
+      - [0x172490, c]
+      - [0x1724D0, .rodata, 16BD20]
+      - [0x173720, .rodata, 16C6A0]
+      - [0x173800, .rodata, 170470]
+  - type: code
+    start: 0x1738E0
+    vram: 0x800F65E0
+    dir: ovl_19_TeeteringTowers
+    name: TeeteringTowers
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x1738E0, c]
+      - [0x176130, c]
+      - [0x177C30, .rodata, 1738E0]
+  - type: code
+    start: 0x1784E0
+    vram: 0x800F65E0
+    dir: ovl_1A_MushroomMixup
+    name: MushroomMixup
+    overlay: True
+    exclusive_ram_id: minigame
+    subalign: 8
+    subsegments:
+      - [0x1784E0, c]
+      - [0x17BDC0, c]
+      - [0x17E600, .rodata, 1784E0]
+      - [0x17E6F8, .rodata, 17BDC0]
+  - type: bin
+    start: 0x17E710
   # - type: code
   #   start: 0x22C9E0
   #   vram: 0x800F65E0

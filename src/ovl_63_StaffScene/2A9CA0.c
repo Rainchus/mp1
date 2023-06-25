@@ -78,8 +78,6 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_63_StaffScene/2A9CA0", D_800FDA10_2B0DA0);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_63_StaffScene/2A9CA0", D_800FE19C_2B152C);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_63_StaffScene/2A9CA0", D_800FE1B0_2B1540);
-
 INCLUDE_RODATA("asm/nonmatchings/ovl_63_StaffScene/2A9CA0", D_800FE1C4_2B1554);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_63_StaffScene/2A9CA0", jtbl_800FE1E8_2B1578);
@@ -108,10 +106,6 @@ INCLUDE_ASM("asm/nonmatchings/ovl_63_StaffScene/2A9CA0", func_800FAA4C_2ADDDC);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_63_StaffScene/2A9CA0", func_800FAD30_2AE0C0);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_63_StaffScene/2A9CA0", jtbl_800FE230_2B15C0);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_63_StaffScene/2A9CA0", D_800FE250_2B15E0);
-
 INCLUDE_ASM("asm/nonmatchings/ovl_63_StaffScene/2A9CA0", func_800FB1A0_2AE530);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_63_StaffScene/2A9CA0", func_800FB5F0_2AE980);
@@ -121,12 +115,6 @@ INCLUDE_ASM("asm/nonmatchings/ovl_63_StaffScene/2A9CA0", func_800FB6A8_2AEA38);
 INCLUDE_ASM("asm/nonmatchings/ovl_63_StaffScene/2A9CA0", func_800FBB88_2AEF18);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_63_StaffScene/2A9CA0", func_800FBCF4_2AF084);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_63_StaffScene/2A9CA0", D_800FE260_2B15F0);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_63_StaffScene/2A9CA0", jtbl_800FE270_2B1600);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_63_StaffScene/2A9CA0", D_800FE290_2B1620);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_63_StaffScene/2A9CA0", func_800FBE80_2AF210);
 
@@ -143,6 +131,18 @@ INCLUDE_ASM("asm/nonmatchings/ovl_63_StaffScene/2A9CA0", func_800FC864_2AFBF4);
 INCLUDE_ASM("asm/nonmatchings/ovl_63_StaffScene/2A9CA0", func_800FC998_2AFD28);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_63_StaffScene/2A9CA0", func_800FCA8C_2AFE1C);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_63_StaffScene/2A9CA0", jtbl_800FE230_2B15C0);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_63_StaffScene/2A9CA0", D_800FE250_2B15E0);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_63_StaffScene/2A9CA0", D_800FE260_2B15F0);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_63_StaffScene/2A9CA0", jtbl_800FE270_2B1600);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_63_StaffScene/2A9CA0", D_800FE290_2B1620);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_63_StaffScene/2A9CA0", D_800FE298_2B1628);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_63_StaffScene/2A9CA0", D_800FE2A8_2B1638);
 

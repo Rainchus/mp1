@@ -16,17 +16,11 @@ INCLUDE_ASM("asm/nonmatchings/ovl_64_ResultsEternalStar2/2B1670", func_800F7D94_
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_64_ResultsEternalStar2/2B1670", D_800FC0C0_2B7150);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_64_ResultsEternalStar2/2B1670", D_800FC0C4_2B7154);
-
 INCLUDE_RODATA("asm/nonmatchings/ovl_64_ResultsEternalStar2/2B1670", D_800FC0D0_2B7160);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_64_ResultsEternalStar2/2B1670", D_800FC0DC_2B716C);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_64_ResultsEternalStar2/2B1670", D_800FC0E0_2B7170);
-
 INCLUDE_RODATA("asm/nonmatchings/ovl_64_ResultsEternalStar2/2B1670", D_800FC10C_2B719C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_64_ResultsEternalStar2/2B1670", D_800FC138_2B71C8);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_64_ResultsEternalStar2/2B1670", D_800FC150_2B71E0);
 
@@ -38,12 +32,6 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_64_ResultsEternalStar2/2B1670", D_800FC168_
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_64_ResultsEternalStar2/2B1670", D_800FC178_2B7208);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_64_ResultsEternalStar2/2B1670", D_800FC1A8_2B7238);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_64_ResultsEternalStar2/2B1670", D_800FC1AC_2B723C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_64_ResultsEternalStar2/2B1670", D_800FC1B0_2B7240);
-
 INCLUDE_RODATA("asm/nonmatchings/ovl_64_ResultsEternalStar2/2B1670", D_800FC1B8_2B7248);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_64_ResultsEternalStar2/2B1670", D_800FC1E4_2B7274);
@@ -53,8 +41,6 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_64_ResultsEternalStar2/2B1670", D_800FC210_
 INCLUDE_RODATA("asm/nonmatchings/ovl_64_ResultsEternalStar2/2B1670", D_800FC218_2B72A8);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_64_ResultsEternalStar2/2B1670", D_800FC224_2B72B4);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_64_ResultsEternalStar2/2B1670", D_800FC244_2B72D4);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_64_ResultsEternalStar2/2B1670", D_800FC25C_2B72EC);
 
