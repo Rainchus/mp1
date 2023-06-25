@@ -36,8 +36,6 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_65_UnknownBooStealScene/2B74A0", D_800F9460
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_65_UnknownBooStealScene/2B74A0", D_800F9464_2BA324);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_65_UnknownBooStealScene/2B74A0", D_800F9468_2BA328);
-
 INCLUDE_RODATA("asm/nonmatchings/ovl_65_UnknownBooStealScene/2B74A0", D_800F94C0_2BA380);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_65_UnknownBooStealScene/2B74A0", func_800F7B54_2B8A14);

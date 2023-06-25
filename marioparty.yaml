@@ -509,22 +509,127 @@ segments:
       - [0xF6750, .rodata, EE9A0] #800FE390
       - [0xF6A40, .rodata, F2800]
       - [0xF6A90, .rodata, F4420]
-  - type: bin
+  - type: code
     start: 0xF6AB0
-  # - type: code
-  #   start: 0xF6AB0
-  #   vram: 0x800F65E0
-  #   dir: ovl_05_ShellGame
-  #   name: ShellGame
-  #   overlay: True
-  #   exclusive_ram_id: minigame
-  #   symbol_name_format: $VRAM_$ROM
-  #   subalign: 8
-  #   subsegments:
-  #     - [0xF6AB0, c]
-  #     - [0xFD460, c]
-  #     - [0xFF0E0, .rodata, FD460]
-  #     - [0xFF160, .rodata, F6AB0]
+    vram: 0x800F65E0
+    dir: ovl_05_ShellGame
+    name: ShellGame
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subalign: 8
+    subsegments:
+      - [0xF6AB0, c]
+      - [0xFD460, c]
+      - [0xFF0E0, .rodata, F6AB0]
+      - [0xFF490, .rodata, FD460]
+  - type: code
+    start: 0xFF570
+    vram: 0x800F65E0
+    dir: ovl_06_UnusedMinigame0
+    name: UnusedMinigame0
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0xFF570, c]
+      - [0x103D80, c]
+      - [0x105EA0, c]
+      - [0x10BA80, .rodata, FF570]
+      - [0x10CA20, .rodata, 103D80]
+      - [0x10CAF0, .rodata, 105EA0]
+  - type: code
+    start: 0x10CD10
+    vram: 0x800F65E0
+    dir: ovl_07_HotBobOmb
+    name: HotBobOmb
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x10CD10, c]
+      - [0x10CF70, c]
+      - [0x10F6D0, c]
+      - [0x110460, .rodata, 10CD10]
+      - [0x110D40, .rodata, 10CF70]
+      - [0x110E70, .rodata, 10F6D0]
+  - type: code
+    start: 0x110F90
+    vram: 0x800F65E0
+    dir: ovl_08_UnusedMinigame1
+    name: UnusedMinigame1
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x110F90, c]
+      - [0x111890, c]
+      - [0x113730, c]
+      - [0x113B20, .rodata, 110F90]
+      - [0x113C90, .rodata, 111890]
+      - [0x113DA0, .rodata, 113730]
+  - type: code
+    start: 0x113DC0
+    vram: 0x800F65E0
+    dir: ovl_09_PipeMaze
+    name: PipeMaze
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x113DC0, c]
+      - [0x1170E0, .rodata, 113DC0]
+  - type: code
+    start: 0x117210
+    vram: 0x800F65E0
+    dir: ovl_0A_GhostGuess
+    name: GhostGuess
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x117210, c]
+      - [0x11BFE0, c]
+      - [0x11C2A0, .rodata, 117210]
+  - type: code
+    start: 0x11C810
+    vram: 0x800F65E0
+    dir: ovl_0B_MusicalMushroom
+    name: MusicalMushroom
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x11C810, c]
+      - [0x11F890, c]
+      - [0x1216F0, .rodata, 11C810]
+      - [0x1217B0, .rodata, 11F890]
+  - type: code
+    start: 0x1217D0
+    vram: 0x800F65E0
+    dir: ovl_0C_PedalPower
+    name: PedalPower
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x1217D0, c]
+      - [0x122BA0, c]
+      - [0x1240D0, c]
+      - [0x124FD0, .rodata, 1217D0]
+      - [0x125080, .rodata, 122BA0]
+  - type: code
+    start: 0x1250D0
+    vram: 0x800F65E0
+    dir: ovl_0D_CrazyCutter
+    name: CrazyCutter
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x1250D0, c]
+      - [0x12AFE0, c]
+      - [0x12B7E0, .rodata, 1250D0]
   - type: code
     start: 0x12BC20
     vram: 0x800F65E0
@@ -559,8 +664,78 @@ segments:
     subsegments:
       - [0x137050, c]
       - [0x13EE10, .rodata, 137050]
-  - type: bin
+  - type: code
     start: 0x13EFB0
+    vram: 0x800F65E0
+    dir: ovl_11_BowlOver
+    name: BowlOver
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x13EFB0, c]
+      - [0x142EA0, c]
+      - [0x145CA0, .rodata, 13EFB0]
+      - [0x146190, .rodata, 142EA0]
+  - type: code
+    start: 0x146200
+    vram: 0x800F65E0
+    dir: ovl_12_GroundPound
+    name: GroundPound
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x146200, c]
+      - [0x146B60, c]
+      - [0x148840, c]
+      - [0x149C40, .rodata, 146200]
+      - [0x149E60, .rodata, 146B60]
+      - [0x149E60, .rodata, 148840]
+  - type: code
+    start: 0x149E80
+    vram: 0x800F65E0
+    dir: ovl_13_BalloonBurst
+    name: BalloonBurst
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x149E80, c]
+      - [0x14E540, .rodata, 149E80]
+  - type: code
+    start: 0x14E940
+    vram: 0x800F65E0
+    dir: ovl_14_CoinBlockBlitz
+    name: CoinBlockBlitz
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x14E940, c]
+      - [0x150E30, c]
+      - [0x152B20, .rodata, 14E940]
+      - [0x152BD0, .rodata, 150E30]
+  - type: code
+    start: 0x152BE0
+    vram: 0x800F65E0
+    dir: ovl_15_CoinBlockBash
+    name: CoinBlockBash
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x152BE0, c]
+      - [0x15AC50, c]
+      - [0x15E120, .rodata, 152BE0]
+      - [0x15E9B0, .rodata, 15AC50]
+  - type: code
+    start: 0x15EAF0
+    vram: 0x800F65E0
+    dir: ovl_16_SkateBoardSkamper
+    name: SkateBoardSkamper
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x15EAF0, c]
+      - [0x165F10, .rodata, 15EAF0]
+  - type: bin
+    start: 0x166220
   # - type: code
   #   start: 0x22C9E0
   #   vram: 0x800F65E0

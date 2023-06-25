@@ -44,8 +44,6 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_70_TestingRoom/2F40C0", D_800F9490_2F6F70);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_70_TestingRoom/2F40C0", D_800F9494_2F6F74);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_70_TestingRoom/2F40C0", D_800F9498_2F6F78);
-
 INCLUDE_RODATA("asm/nonmatchings/ovl_70_TestingRoom/2F40C0", D_800F949C_2F6F7C);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_70_TestingRoom/2F40C0", D_800F94A0_2F6F80);
