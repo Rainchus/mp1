@@ -673,9 +673,69 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x13EFB0, c]
+      - [0x142EA0, c]
       - [0x145CA0, .rodata, 13EFB0]
-  - type: bin
+      - [0x146190, .rodata, 142EA0]
+  - type: code
     start: 0x146200
+    vram: 0x800F65E0
+    dir: ovl_12_GroundPound
+    name: GroundPound
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x146200, c]
+      - [0x146B60, c]
+      - [0x148840, c]
+      - [0x149C40, .rodata, 146200]
+      - [0x149E60, .rodata, 146B60]
+      - [0x149E60, .rodata, 148840]
+  - type: code
+    start: 0x149E80
+    vram: 0x800F65E0
+    dir: ovl_13_BalloonBurst
+    name: BalloonBurst
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x149E80, c]
+      - [0x14E540, .rodata, 149E80]
+  - type: code
+    start: 0x14E940
+    vram: 0x800F65E0
+    dir: ovl_14_CoinBlockBlitz
+    name: CoinBlockBlitz
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x14E940, c]
+      - [0x150E30, c]
+      - [0x152B20, .rodata, 14E940]
+      - [0x152BD0, .rodata, 150E30]
+  - type: code
+    start: 0x152BE0
+    vram: 0x800F65E0
+    dir: ovl_15_CoinBlockBash
+    name: CoinBlockBash
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x152BE0, c]
+      - [0x15AC50, c]
+      - [0x15E120, .rodata, 152BE0]
+      - [0x15E9B0, .rodata, 15AC50]
+  - type: code
+    start: 0x15EAF0
+    vram: 0x800F65E0
+    dir: ovl_16_SkateBoardSkamper
+    name: SkateBoardSkamper
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x15EAF0, c]
+      - [0x165F10, .rodata, 15EAF0]
+  - type: bin
+    start: 0x166220
   # - type: code
   #   start: 0x22C9E0
   #   vram: 0x800F65E0

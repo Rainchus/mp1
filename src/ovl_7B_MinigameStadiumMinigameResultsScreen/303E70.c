@@ -8,26 +8,6 @@ INCLUDE_ASM("asm/nonmatchings/ovl_7B_MinigameStadiumMinigameResultsScreen/303E70
 
 INCLUDE_ASM("asm/nonmatchings/ovl_7B_MinigameStadiumMinigameResultsScreen/303E70", func_800F6A3C_3042CC);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_7B_MinigameStadiumMinigameResultsScreen/303E70", D_800FB000_308890);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_7B_MinigameStadiumMinigameResultsScreen/303E70", D_800FB008_308898);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_7B_MinigameStadiumMinigameResultsScreen/303E70", D_800FB0BC_30894C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_7B_MinigameStadiumMinigameResultsScreen/303E70", D_800FB0D0_308960);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_7B_MinigameStadiumMinigameResultsScreen/303E70", D_800FB0E0_308970);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_7B_MinigameStadiumMinigameResultsScreen/303E70", D_800FB0F0_308980);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_7B_MinigameStadiumMinigameResultsScreen/303E70", D_800FB0FC_30898C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_7B_MinigameStadiumMinigameResultsScreen/303E70", D_800FB104_308994);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_7B_MinigameStadiumMinigameResultsScreen/303E70", D_800FB108_308998);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_7B_MinigameStadiumMinigameResultsScreen/303E70", D_800FB10C_30899C);
-
 INCLUDE_ASM("asm/nonmatchings/ovl_7B_MinigameStadiumMinigameResultsScreen/303E70", func_800F6AC8_304358);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_7B_MinigameStadiumMinigameResultsScreen/303E70", func_800F6B0C_30439C);
@@ -61,3 +41,21 @@ INCLUDE_ASM("asm/nonmatchings/ovl_7B_MinigameStadiumMinigameResultsScreen/303E70
 INCLUDE_ASM("asm/nonmatchings/ovl_7B_MinigameStadiumMinigameResultsScreen/303E70", func_800F81C0_305A50);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_7B_MinigameStadiumMinigameResultsScreen/303E70", func_800F8200_305A90);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_7B_MinigameStadiumMinigameResultsScreen/303E70", D_800FB000_308890);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_7B_MinigameStadiumMinigameResultsScreen/303E70", D_800FB008_308898);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_7B_MinigameStadiumMinigameResultsScreen/303E70", D_800FB0C0_308950);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_7B_MinigameStadiumMinigameResultsScreen/303E70", D_800FB0F0_308980);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_7B_MinigameStadiumMinigameResultsScreen/303E70", D_800FB0FC_30898C);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_7B_MinigameStadiumMinigameResultsScreen/303E70", D_800FB104_308994);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_7B_MinigameStadiumMinigameResultsScreen/303E70", D_800FB108_308998);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_7B_MinigameStadiumMinigameResultsScreen/303E70", D_800FB10C_30899C);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_7B_MinigameStadiumMinigameResultsScreen/303E70", jtbl_800FB110_3089A0);

@@ -140,6 +140,4 @@ INCLUDE_ASM("asm/nonmatchings/ovl_40_ResultsScene/259EB0", func_800FBF10_25F7E0)
 
 INCLUDE_ASM("asm/nonmatchings/ovl_40_ResultsScene/259EB0", func_800FC028_25F8F8);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_40_ResultsScene/259EB0", D_800FC388_25FC58);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_40_ResultsScene/259EB0", D_800FC398_25FC68);
+INCLUDE_RODATA("asm/nonmatchings/ovl_40_ResultsScene/259EB0", D_800FC378_25FC48);
