@@ -14,8 +14,6 @@ INCLUDE_ASM("asm/nonmatchings/ovl_62_board_intro/2A2500", func_800F684C_2A276C);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_62_board_intro/2A2500", D_800FCD30_2A8C50);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_62_board_intro/2A2500", D_800FCD70_2A8C90);
-
 INCLUDE_RODATA("asm/nonmatchings/ovl_62_board_intro/2A2500", D_800FCD74_2A8C94);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_62_board_intro/2A2500", D_800FCD78_2A8C98);

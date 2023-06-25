@@ -783,11 +783,69 @@ segments:
     subalign: 8
     subsegments:
       - [0x1784E0, c]
-      - [0x17BDC0, c]
       - [0x17E600, .rodata, 1784E0]
-      - [0x17E6F8, .rodata, 17BDC0]
-  - type: bin
+  - type: code
     start: 0x17E710
+    vram: 0x800F65E0
+    dir: ovl_1B_HammerDrop
+    name: HammerDrop
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x17E710, c]
+      - [0x1836C0, .rodata, 17E710]
+  - type: code
+    start: 0x1837D0
+    vram: 0x800F65E0
+    dir: ovl_1C_GrabBag
+    name: GrabBag
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x1837D0, c]
+      - [0x184450, c]
+      - [0x184870, c]
+      - [0x188280, .rodata, 1837D0]
+      - [0x1883A0, .rodata, 184870]
+  - type: code
+    start: 0x188410
+    vram: 0x800F65E0
+    dir: ovl_1D_BobsledRun
+    name: BobsledRun
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x188410, c]
+      - [0x1910D0, .rodata, 188410]
+  - type: code
+    start: 0x191700
+    vram: 0x800F65E0
+    dir: ovl_1E_BumperBalls
+    name: BumperBalls
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x191700, c]
+      - [0x196300, c]
+      - [0x197C50, .rodata, 191700]
+      - [0x197E10, .rodata, 196300]
+  - type: code
+    start: 0x197E20
+    vram: 0x800F65E0
+    dir: ovl_1F_TightropeTreachery
+    name: TightropeTreachery
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x197E20, c]
+      - [0x19A360, c]
+      - [0x19ACC0, c]
+      - [0x19D510, c]
+      - [0x19FAF0, .rodata, 197E20]
+      - [0x19FD70, .rodata, 19ACC0]
+      - [0x19FEB0, .rodata, 19D510]
+  - type: bin
+    start: 0x19FEE0
   # - type: code
   #   start: 0x22C9E0
   #   vram: 0x800F65E0

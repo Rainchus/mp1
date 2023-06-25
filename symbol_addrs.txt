@@ -209,6 +209,43 @@ D_800FA9E8_177CE8 = 0x800FA9E8; // rom:0x177CE8 force_not_migration:True type:s3
 D_800FAA0C_177D0C = 0x800FAA0C; // rom:0x177D0C force_not_migration:True type:s32
 D_800FADD8_1780D8 = 0x800FADD8; // rom:0x1780D8 force_not_migration:True type:f32
 
+// ovl_1B_HammerDrop
+D_800FB5A8_1836D8 = 0x800FB5A8; // rom:0x1836D8 force_not_migration:True type:f32
+
+// ovl_1D_BobsledRun
+D_800FF2B0_1910E0 = 0x800FF2B0; // rom:0x1910E0 force_not_migration:True type:f32
+D_800FF2B4_1910E4 = 0x800FF2B4; // rom:0x1910E4 force_not_migration:True type:f32
+D_800FF2B8_1910E8 = 0x800FF2B8; // rom:0x1910E8 force_not_migration:True type:f32
+D_800FF2BC_1910EC = 0x800FF2BC; // rom:0x1910EC force_not_migration:True type:f32
+D_800FF3B4_1911E4 = 0x800FF3B4; // rom:0x1911E4 force_not_migration:True type:f32
+D_800FF3B8_1911E8 = 0x800FF3B8; // rom:0x1911E8 force_not_migration:True type:f32
+D_800FF5C4_1913F4 = 0x800FF5C4; // rom:0x1913F4 force_not_migration:True type:f32
+D_800FF5C8_1913F8 = 0x800FF5C8; // rom:0x1913F8 force_not_migration:True type:f32
+D_800FF7EC_19161C = 0x800FF7EC; // rom:0x19161C force_not_migration:True type:f32
+D_800FF7F0_191620 = 0x800FF7F0; // rom:0x191620 force_not_migration:True type:f32
+
+// ovl_1E_BumperBalls
+D_800FCBC4_197CE4 = 0x800FCBC4; // rom:0x197CE4 force_not_migration:True type:f32
+D_800FCBC8_197CE8 = 0x800FCBC8; // rom:0x197CE8 force_not_migration:True type:f32
+D_800FCBCC_197CEC = 0x800FCBCC; // rom:0x197CEC force_not_migration:True type:f32
+D_800FCBD0_197CF0 = 0x800FCBD0; // rom:0x197CF0 force_not_migration:True type:f32
+D_800FCBD4_197CF4 = 0x800FCBD4; // rom:0x197CF4 force_not_migration:True type:f32
+D_800FCBD8_197CF8 = 0x800FCBD8; // rom:0x197CF8 force_not_migration:True type:f32
+D_800FCBDC_197CFC = 0x800FCBDC; // rom:0x197CFC force_not_migration:True type:f32
+
+// ovl_1F_TightropeTreachery
+D_800FE38C_19FBCC = 0x800FE38C; // rom:0x19FBCC force_not_migration:True type:f32
+D_800FE390_19FBD0 = 0x800FE390; // rom:0x19FBD0 force_not_migration:True type:f32
+D_800FE398_19FBD8 = 0x800FE398; // rom:0x19FBD8 force_not_migration:True type:f32
+D_800FE3B8_19FBF8 = 0x800FE3B8; // rom:0x19FBF8 force_not_migration:True type:s32
+D_800FE3BC_19FBFC = 0x800FE3BC; // rom:0x19FBFC force_not_migration:True type:s32
+D_800FE464_19FCA4 = 0x800FE464; // rom:0x19FCA4 force_not_migration:True type:f32
+D_800FE468_19FCA8 = 0x800FE468; // rom:0x19FCA8 force_not_migration:True type:f32
+D_800FE47C_19FCBC = 0x800FE47C; // rom:0x19FCBC force_not_migration:True type:f32
+D_800FE480_19FCC0 = 0x800FE480; // rom:0x19FCC0 force_not_migration:True type:f32
+D_800FE4D0_19FD10 = 0x800FE4D0; // rom:0x19FD10 force_not_migration:True type:f32
+D_800FE5E0_19FE20 = 0x800FE5E0; // rom:0x19FE20 force_not_migration:True type:f64
+
 // ovl_32_TugOWar: NOT COMPLETE
 D_800FDB44_233F44 = 0x800FDB44; // rom:0x233F44 type:s32
 D_800FDB4C_233F4C = 0x800FDB4C; // rom:0x233F4C force_not_migration:True type:f64
