@@ -4,8 +4,6 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_6B_MinigameHouse/2CAA00", D_800FFEC0_2D42E0
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_6B_MinigameHouse/2CAA00", D_800FFEFC_2D431C);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_6B_MinigameHouse/2CAA00", D_800FFF00_2D4320);
-
 INCLUDE_RODATA("asm/nonmatchings/ovl_6B_MinigameHouse/2CAA00", D_800FFF38_2D4358);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_6B_MinigameHouse/2CAA00", D_800FFFB0_2D43D0);

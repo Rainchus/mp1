@@ -1029,53 +1029,74 @@ segments:
       - [0x20F570, c]
       - [0x216140, c]
       - [0x218330, .rodata, 20F570]
-  - type: bin
+  - type: code
     start: 0x218510
-  # - type: code
-  #   start: 0x22C9E0
-  #   vram: 0x800F65E0
-  #   dir: ovl_32_TugOWar
-  #   name: TugOWar
-  #   overlay: True
-  #   exclusive_ram_id: minigame
-  #   symbol_name_format: $VRAM_$ROM
-  #   subsegments:
-      # - [0x22C9E0, c]
-      # - [0x22D5F0, c]
-      # - [0x231180, c]
-      # - [0x231D40, c]
-      # - [0x233EE0, .rodata, 22C9E0]
-      # - [0x233FB0, .rodata, 22D5F0]
-      # - [0x234190, .rodata, 231180]
-      # - [0x2341B0, .rodata, 231D40]
-  # - type: code
-  #   start: 0x2341E0
-  #   vram: 0x800F65E0
-  #   dir: ovl_33_PaddleBattle
-  #   name: PaddleBattle
-  #   overlay: True
-  #   exclusive_ram_id: minigame
-  #   symbol_name_format: $VRAM_$ROM
-  #   subsegments:
-  #     - [0x2341E0, c]
-  #     - [0x234F80, c]
-  #     - [0x23BDF0, .rodata, 2341E0]
-  #     - [0x23CA40, .rodata, 234F80]
-  # - type: code
-  #   start: 0x23CF40
-  #   vram: 0x800F65E0
-  #   dir: ovl_34_BumperBallMaze
-  #   name: BumperBallMaze
-  #   overlay: True
-  #   exclusive_ram_id: minigame
-  #   symbol_name_format: $VRAM_$ROM
-  #   subalign: 8
-  #   subsegments:
-  #     - [0x23CF40, c]
-  #     - [0x240010, c]
-  #     - [0x241460, .rodata, 23CF40]
-  #     - [0x241620, .data, 240010]
-  #     - [0x241720, .rodata, 240010]
+    vram: 0x800F65E0
+    dir: ovl_30_DeepSeaDivers
+    name: DeepSeaDivers
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x218510, c]
+      - [0x21FAD0, c]
+      - [0x221890, .rodata, 218510]
+      - [0x2221F0, .rodata, 21FAD0]
+  - type: code
+    start: 0x222320
+    vram: 0x800F65E0
+    dir: ovl_31_PiranhasPursuit
+    name: PiranhasPursuit
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x222320, c]
+      - [0x225DF0, c]
+      - [0x22BF30, .rodata, 222320]
+      - [0x22C480, .rodata, 225DF0]
+  - type: code
+    start: 0x22C9E0
+    vram: 0x800F65E0
+    dir: ovl_32_TugOWar
+    name: TugOWar
+    overlay: True
+    exclusive_ram_id: minigame
+    subalign: 8
+    subsegments:
+      - [0x22C9E0, c]
+      - [0x22D5F0, c]
+      - [0x231180, c]
+      - [0x231D40, c]
+      - [0x233EE0, .rodata, 22C9E0]
+      - [0x233F00, .rodata, 22D5F0]
+      - [0x234190, .rodata, 231180]
+      - [0x2341B0, .rodata, 231D40]
+  - type: code
+    start: 0x2341E0
+    vram: 0x800F65E0
+    dir: ovl_33_PaddleBattle
+    name: PaddleBattle
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x2341E0, c]
+      - [0x234F80, c]
+      - [0x23BDF0, .rodata, 2341E0]
+      - [0x23CA40, .rodata, 234F80]
+  - type: code
+    start: 0x23CF40
+    vram: 0x800F65E0
+    dir: ovl_34_BumperBallMaze
+    name: BumperBallMaze
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subalign: 8
+    subsegments:
+      - [0x23CF40, c]
+      - [0x240010, c]
+      - [0x241460, .rodata, 23CF40]
+      - [0x241720, .rodata, 240010]
   - type: code
     start: 0x241740
     vram: 0x800F65E0
@@ -2012,10 +2033,10 @@ segments:
   - type: bin
     start: 0xFE24BC
     # Audio Data
-  - {type: bin, start: 0x1539e40, name: "../assets/audio/soundbank1.bnk"} # Instrument meta files
-  - {type: bin, start: 0x1563b68, name: "../assets/audio/wavetable1.tbl"} # raw/vadpcm audio wave data
-  - {type: bin, start: 0x17473b0, name: "../assets/audio/sequencebnk1.tbl"} # sbk file containing seq files below
-  - {type: bin, start: 0x17473b0, name: "../assets/midi/twobeeps.seq"} # Test Sound: Two sinusoid wave beeps at different tones.
+  - {type: bin, start: 0x1539E40, name: "../assets/audio/soundbank1.bnk"} # Instrument meta files
+  - {type: bin, start: 0x1563B68, name: "../assets/audio/wavetable1.tbl"} # raw/vadpcm audio wave data
+  - {type: bin, start: 0x17473B0, name: "../assets/audio/sequencebnk1.tbl"} # sbk file containing seq files below
+  - {type: bin, start: 0x17473B0, name: "../assets/midi/twobeeps.seq"} # Test Sound: Two sinusoid wave beeps at different tones.
   - type: bin
     start: 0x1747420
   - {type: bin, start: 0x174CF30, name: "../assets/midi/tropical.seq"} # Yoshi Board BGM
