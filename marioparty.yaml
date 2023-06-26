@@ -734,53 +734,369 @@ segments:
     subsegments:
       - [0x15EAF0, c]
       - [0x165F10, .rodata, 15EAF0]
-  - type: bin
+  - type: code
     start: 0x166220
-  # - type: code
-  #   start: 0x22C9E0
-  #   vram: 0x800F65E0
-  #   dir: ovl_32_TugOWar
-  #   name: TugOWar
-  #   overlay: True
-  #   exclusive_ram_id: minigame
-  #   symbol_name_format: $VRAM_$ROM
-  #   subsegments:
-      # - [0x22C9E0, c]
-      # - [0x22D5F0, c]
-      # - [0x231180, c]
-      # - [0x231D40, c]
-      # - [0x233EE0, .rodata, 22C9E0]
-      # - [0x233FB0, .rodata, 22D5F0]
-      # - [0x234190, .rodata, 231180]
-      # - [0x2341B0, .rodata, 231D40]
-  # - type: code
-  #   start: 0x2341E0
-  #   vram: 0x800F65E0
-  #   dir: ovl_33_PaddleBattle
-  #   name: PaddleBattle
-  #   overlay: True
-  #   exclusive_ram_id: minigame
-  #   symbol_name_format: $VRAM_$ROM
-  #   subsegments:
-  #     - [0x2341E0, c]
-  #     - [0x234F80, c]
-  #     - [0x23BDF0, .rodata, 2341E0]
-  #     - [0x23CA40, .rodata, 234F80]
-  # - type: code
-  #   start: 0x23CF40
-  #   vram: 0x800F65E0
-  #   dir: ovl_34_BumperBallMaze
-  #   name: BumperBallMaze
-  #   overlay: True
-  #   exclusive_ram_id: minigame
-  #   symbol_name_format: $VRAM_$ROM
-  #   subalign: 8
-  #   subsegments:
-  #     - [0x23CF40, c]
-  #     - [0x240010, c]
-  #     - [0x241460, .rodata, 23CF40]
-  #     - [0x241620, .data, 240010]
-  #     - [0x241720, .rodata, 240010]
+    vram: 0x800F65E0
+    dir: ovl_17_BoxMountainMayhem
+    name: BoxMountainMayhem
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x166220, c]
+      - [0x166D50, c]
+      - [0x168CA0, c]
+      - [0x16BC00, .rodata, 166220]
+      - [0x16BD10, .rodata, 166D50]
+  - type: code
+    start: 0x16BD20
+    vram: 0x800F65E0
+    dir: ovl_18_PlatformPeril
+    name: PlatformPeril
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x16BD20, c]
+      - [0x16C6A0, c]
+      - [0x170470, c]
+      - [0x172490, c]
+      - [0x1724D0, .rodata, 16BD20]
+      - [0x173720, .rodata, 16C6A0]
+      - [0x173800, .rodata, 170470]
+  - type: code
+    start: 0x1738E0
+    vram: 0x800F65E0
+    dir: ovl_19_TeeteringTowers
+    name: TeeteringTowers
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x1738E0, c]
+      - [0x176130, c]
+      - [0x177C30, .rodata, 1738E0]
+  - type: code
+    start: 0x1784E0
+    vram: 0x800F65E0
+    dir: ovl_1A_MushroomMixup
+    name: MushroomMixup
+    overlay: True
+    exclusive_ram_id: minigame
+    subalign: 8
+    subsegments:
+      - [0x1784E0, c]
+      - [0x17E600, .rodata, 1784E0]
+  - type: code
+    start: 0x17E710
+    vram: 0x800F65E0
+    dir: ovl_1B_HammerDrop
+    name: HammerDrop
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x17E710, c]
+      - [0x1836C0, .rodata, 17E710]
+  - type: code
+    start: 0x1837D0
+    vram: 0x800F65E0
+    dir: ovl_1C_GrabBag
+    name: GrabBag
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x1837D0, c]
+      - [0x184450, c]
+      - [0x184870, c]
+      - [0x188280, .rodata, 1837D0]
+      - [0x1883A0, .rodata, 184870]
+  - type: code
+    start: 0x188410
+    vram: 0x800F65E0
+    dir: ovl_1D_BobsledRun
+    name: BobsledRun
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x188410, c]
+      - [0x1910D0, .rodata, 188410]
+  - type: code
+    start: 0x191700
+    vram: 0x800F65E0
+    dir: ovl_1E_BumperBalls
+    name: BumperBalls
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x191700, c]
+      - [0x196300, c]
+      - [0x197C50, .rodata, 191700]
+      - [0x197E10, .rodata, 196300]
+  - type: code
+    start: 0x197E20
+    vram: 0x800F65E0
+    dir: ovl_1F_TightropeTreachery
+    name: TightropeTreachery
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x197E20, c]
+      - [0x19A360, c]
+      - [0x19ACC0, c]
+      - [0x19D510, c]
+      - [0x19FAF0, .rodata, 197E20]
+      - [0x19FD70, .rodata, 19ACC0]
+      - [0x19FEB0, .rodata, 19D510]
+  - type: code
+    start: 0x19FEE0
+    vram: 0x800F65E0
+    dir: ovl_20_KnockBlockTower
+    name: KnockBlockTower
+    overlay: True
+    exclusive_ram_id: minigame
+    subalign: 8
+    subsegments:
+      - [0x19FEE0, c]
+      - [0x1A2E40, c]
+      - [0x1A42B0, c]
+      - [0x1A4E00, .rodata, 19FEE0]
+      - [0x1A4E98, .rodata, 1A2E40]
+  - type: code
+    start: 0x1A4EB0
+    vram: 0x800F65E0
+    dir: ovl_21_TipsyTourney
+    name: TipsyTourney
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x1A4EB0, c]
+      - [0x1AA080, .rodata, 1A4EB0]
+  - type: code
+    start: 0x1AA2A0
+    vram: 0x800F65E0
+    dir: ovl_22_BombsAway
+    name: BombsAway
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x1AA2A0, c]
+      - [0x1AF980, c]
+      - [0x1B02A0, c]
+      - [0x1B3730, .rodata, 1AA2A0]
+      - [0x1B3C00, .rodata, 1AF980]
+      - [0x1B3C70, .rodata, 1B02A0]
+  - type: code
+    start: 0x1B3E00
+    vram: 0x800F65E0
+    dir: ovl_23_CraneGame
+    name: CraneGame
+    overlay: True
+    exclusive_ram_id: minigame
+    subalign: 8
+    subsegments:
+      - [0x1B3E00, c]
+      - [0x1B9050, c]
+      - [0x1BAA60, c]
+      - [0x1BCD20, .rodata, 1B3E00]
+      - [0x1BD4F8, .rodata, 1B9050]
+      - [0x1BD570, .rodata, 1BAA60]
+  - type: code
+    start: 0x1BD640
+    vram: 0x800F65E0
+    dir: ovl_24_FlowerShower
+    name: FlowerShower
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x1BD640, c]
+      - [0x1C1D90, .rodata, 1BD640]
+  - type: code
+    start: 0x1C1EB0
+    vram: 0x800F65E0
+    dir: ovl_25_SlotCarDerby
+    name: SlotCarDerby
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x1C1EB0, c]
+      - [0x1CBB80, .rodata, 1C1EB0] 
+  - type: code
+    start: 0x1CCCF0
+    vram: 0x800F65E0
+    dir: ovl_26_MarioBandstand
+    name: MarioBandstand
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x1CCCF0, c]
+      - [0x1CD680, c]
+      - [0x1D3040, c]
+      - [0x1D3300, .rodata, 1CCCF0]
+      - [0x1D3900, .rodata, 1CD680]
+  - type: code
+    start: 0x1D3990
+    vram: 0x800F65E0
+    dir: ovl_27_DesertDash
+    name: DesertDash
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x1D3990, c]
+      - [0x1D6E30, c]
+      - [0x1D93B0, .rodata, 1D3990]
+      - [0x1D9600, .rodata, 1D6E30]
+  - type: code
+    start: 0x1D9690
+    vram: 0x800F65E0
+    dir: ovl_28_ShyGuySays
+    name: ShyGuySays
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x1D9690, c]
+      - [0x1E0670, .rodata, 1D9690]
+  - type: code
+    start: 0x1E0A30
+    vram: 0x800F65E0
+    dir: ovl_29_LimboDance
+    name: LimboDance
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x1E0A30, c]
+      - [0x1E4480, c]
+      - [0x1E8DD0, .rodata, 1E0A30]
+      - [0x1E9250, .rodata, 1E4480]
+  - type: code
+    start: 0x1E9440
+    vram: 0x800F65E0
+    dir: ovl_2A
+    name: name_2A
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x1E9440, c]
+      - [0x1F0BB0, .rodata, 1E9440]
+  - type: code
+    start: 0x1F0DA0
+    vram: 0x800F65E0
+    dir: ovl_2B_CastAways
+    name: CastAways
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x1F0DA0, c]
+      - [0x1F5700, c]
+      - [0x1F60F0, .rodata, 1F0DA0]
+  - type: code
+    start: 0x1F62C0
+    vram: 0x800F65E0
+    dir: ovl_2C_KeyPaWay
+    name: KeyPaWay
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x1F62C0, c]
+      - [0x1FDF10, c]
+      - [0x1FEF50, .rodata, 1F62C0]
+      - [0x1FF1D0, .rodata, 1FDF10]
+  - type: code
+    start: 0x1FF1E0
+    vram: 0x800F65E0
+    dir: ovl_2D_RunningOfTheBulb
+    name: RunningOfTheBulb
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x1FF1E0, c]
+      - [0x206C90, c]
+      - [0x206E40, .rodata, 1FF1E0]
+  - type: code
+    start: 0x207040
+    vram: 0x800F65E0
+    dir: ovl_2E_HotRopeJump
+    name: HotRopeJump
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x207040, c]
+      - [0x20EEB0, .rodata, 207040]
+  - type: code
+    start: 0x20F570
+    vram: 0x800F65E0
+    dir: ovl_2F_HandcarHavoc
+    name: HandcarHavoc
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x20F570, c]
+      - [0x216140, c]
+      - [0x218330, .rodata, 20F570]
+  - type: code
+    start: 0x218510
+    vram: 0x800F65E0
+    dir: ovl_30_DeepSeaDivers
+    name: DeepSeaDivers
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x218510, c]
+      - [0x21FAD0, c]
+      - [0x221890, .rodata, 218510]
+      - [0x2221F0, .rodata, 21FAD0]
+  - type: code
+    start: 0x222320
+    vram: 0x800F65E0
+    dir: ovl_31_PiranhasPursuit
+    name: PiranhasPursuit
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x222320, c]
+      - [0x225DF0, c]
+      - [0x22BF30, .rodata, 222320]
+      - [0x22C480, .rodata, 225DF0]
+  - type: code
+    start: 0x22C9E0
+    vram: 0x800F65E0
+    dir: ovl_32_TugOWar
+    name: TugOWar
+    overlay: True
+    exclusive_ram_id: minigame
+    subalign: 8
+    subsegments:
+      - [0x22C9E0, c]
+      - [0x22D5F0, c]
+      - [0x231180, c]
+      - [0x231D40, c]
+      - [0x233EE0, .rodata, 22C9E0]
+      - [0x233F00, .rodata, 22D5F0]
+      - [0x234190, .rodata, 231180]
+      - [0x2341B0, .rodata, 231D40]
+  - type: code
+    start: 0x2341E0
+    vram: 0x800F65E0
+    dir: ovl_33_PaddleBattle
+    name: PaddleBattle
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subsegments:
+      - [0x2341E0, c]
+      - [0x234F80, c]
+      - [0x23BDF0, .rodata, 2341E0]
+      - [0x23CA40, .rodata, 234F80]
+  - type: code
+    start: 0x23CF40
+    vram: 0x800F65E0
+    dir: ovl_34_BumperBallMaze
+    name: BumperBallMaze
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM
+    subalign: 8
+    subsegments:
+      - [0x23CF40, c]
+      - [0x240010, c]
+      - [0x241460, .rodata, 23CF40]
+      - [0x241720, .rodata, 240010]
   - type: code
     start: 0x241740
     vram: 0x800F65E0
@@ -1717,10 +2033,10 @@ segments:
   - type: bin
     start: 0xFE24BC
     # Audio Data
-  - {type: bin, start: 0x1539e40, name: "../assets/audio/soundbank1.bnk"} # Instrument meta files
-  - {type: bin, start: 0x1563b68, name: "../assets/audio/wavetable1.tbl"} # raw/vadpcm audio wave data
-  - {type: bin, start: 0x17473b0, name: "../assets/audio/sequencebnk1.tbl"} # sbk file containing seq files below
-  - {type: bin, start: 0x17473b0, name: "../assets/midi/twobeeps.seq"} # Test Sound: Two sinusoid wave beeps at different tones.
+  - {type: bin, start: 0x1539E40, name: "../assets/audio/soundbank1.bnk"} # Instrument meta files
+  - {type: bin, start: 0x1563B68, name: "../assets/audio/wavetable1.tbl"} # raw/vadpcm audio wave data
+  - {type: bin, start: 0x17473B0, name: "../assets/audio/sequencebnk1.tbl"} # sbk file containing seq files below
+  - {type: bin, start: 0x17473B0, name: "../assets/midi/twobeeps.seq"} # Test Sound: Two sinusoid wave beeps at different tones.
   - type: bin
     start: 0x1747420
   - {type: bin, start: 0x174CF30, name: "../assets/midi/tropical.seq"} # Yoshi Board BGM

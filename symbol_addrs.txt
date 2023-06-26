@@ -1,8 +1,11 @@
+// ovl_00_MemoryMatch
 D_800FD8A4_D4D14 = 0x800FD8A4; // rom:0xD4D14 force_not_migration:True type:f32
+
+// ovl_02_SlotMachine
 D_800FECC0_E89D0 = 0x800FECC0; // rom:0xE89D0 force_not_migration:True type:f32
 
+// ovl_04_TreasureDivers
 D_800FE3C4_F6784 = 0x800FE3C4; // rom:0xF6784 force_not_migration:True type:f32
-
 D_800FE460_F6820 = 0x800FE460; // rom:0xF6820 force_not_migration:True type:f32
 
 // ovl_05_ShellGame
@@ -190,80 +193,548 @@ D_800FDB9C_1660AC = 0x800FDB9C; // rom:0x1660AC force_not_migration:True type:f3
 D_800FDC54_166164 = 0x800FDC54; // rom:0x166164 force_not_migration:True type:asciz
 D_800FDC60_166170 = 0x800FDC60; // rom:0x166170 force_not_migration:True type:asciz
 
-// ovl_32_TugOWar: NOT COMPLETE
-D_800FDB44_233F44 = 0x800FDB44; // rom:0x233F44 type:s32
-D_800FDB4C_233F4C = 0x800FDB4C; // rom:0x233F4C force_not_migration:True type:f64
-D_800FDB9C_233F9C = 0x800FDB9C; // rom:0x233F9C force_not_migration:True type:s32
-D_800FDBE0_233FE0 = 0x800FDBE0; // rom:0x233FE0 force_not_migration:True type:f32
-D_800FDBE8_233FE8 = 0x800FDBE8; // rom:0x233FE8 force_not_migration:True type:s32
-D_800FDBF0_233FF0 = 0x800FDBE0; // rom:0x233FF0 force_not_migration:True type:s32
-D_800FDC18_234018 = 0x800FDC18; // rom:0x234018 force_not_migration:True type:f32
-D_800FDC1C_23401C = 0x800FDC1C; // rom:0x23401C force_not_migration:True type:f32
-D_800FDC30_234030 = 0x800FDC30; // rom:0x234030 force_not_migration:True type:s32
-D_800FDC40_234040 = 0x800FDC40; // rom:0x234040 force_not_migration:True type:f64
-D_800FDC70_234070 = 0x800FDC70; // rom:0x234070 force_not_migration:True type:f64
-D_800FDC78_234078 = 0x800FDC78; // rom:0x234078 type:f64
-D_800FDC80_234080 = 0x800FDC80; // rom:0x234080 force_not_migration:True type:f64
-D_800FDC88_234088 = 0x800FDC88; // rom:0x234088 type:f64
+// ovl_18_PlatformPeril
+D_800FCDA4_1724E4 = 0x800FCDA4; // rom:0x1724E4 force_not_migration:True type:s32
+D_800FD2C0_172A00 = 0x800FD2C0; // rom:0x172A00 force_not_migration:True type:s32
+D_800FD6F0_172E30 = 0x800FD6F0; // rom:0x172E30 force_not_migration:True type:f32
+D_800FD6F4_172E34 = 0x800FD6F4; // rom:0x172E34 force_not_migration:True type:f32
+D_800FD744_172E84 = 0x800FD744; // rom:0x172E84 force_not_migration:True type:s32
+D_800FD768_172EA8 = 0x800FD768; // rom:0x172EA8 force_not_migration:True type:s32
+D_800FD78C_172ECC = 0x800FD78C; // rom:0x172ECC force_not_migration:True type:s32
+D_800FDD78_1734B8 = 0x800FDD78; // rom:0x1734B8 force_not_migration:True type:f32
 
+// ovl_19_TeeteringTowers
+D_800FA964_177C64 = 0x800FA964; // rom:0x177C64 force_not_migration:True type:f32
+D_800FA968_177C68 = 0x800FA968; // rom:0x177C68 force_not_migration:True type:f32
+D_800FA9A0_177CA0 = 0x800FA9A0; // rom:0x177CA0 force_not_migration:True type:s32
+D_800FA9C4_177CC4 = 0x800FA9C4; // rom:0x177CC4 force_not_migration:True type:s32
+D_800FA9E8_177CE8 = 0x800FA9E8; // rom:0x177CE8 force_not_migration:True type:s32
+D_800FAA0C_177D0C = 0x800FAA0C; // rom:0x177D0C force_not_migration:True type:s32
+D_800FADD8_1780D8 = 0x800FADD8; // rom:0x1780D8 force_not_migration:True type:f32
+
+// ovl_1B_HammerDrop
+D_800FB5A8_1836D8 = 0x800FB5A8; // rom:0x1836D8 force_not_migration:True type:f32
+
+// ovl_1D_BobsledRun
+D_800FF2B0_1910E0 = 0x800FF2B0; // rom:0x1910E0 force_not_migration:True type:f32
+D_800FF2B4_1910E4 = 0x800FF2B4; // rom:0x1910E4 force_not_migration:True type:f32
+D_800FF2B8_1910E8 = 0x800FF2B8; // rom:0x1910E8 force_not_migration:True type:f32
+D_800FF2BC_1910EC = 0x800FF2BC; // rom:0x1910EC force_not_migration:True type:f32
+D_800FF3B4_1911E4 = 0x800FF3B4; // rom:0x1911E4 force_not_migration:True type:f32
+D_800FF3B8_1911E8 = 0x800FF3B8; // rom:0x1911E8 force_not_migration:True type:f32
+D_800FF5C4_1913F4 = 0x800FF5C4; // rom:0x1913F4 force_not_migration:True type:f32
+D_800FF5C8_1913F8 = 0x800FF5C8; // rom:0x1913F8 force_not_migration:True type:f32
+D_800FF7EC_19161C = 0x800FF7EC; // rom:0x19161C force_not_migration:True type:f32
+D_800FF7F0_191620 = 0x800FF7F0; // rom:0x191620 force_not_migration:True type:f32
+
+// ovl_1E_BumperBalls
+D_800FCBC4_197CE4 = 0x800FCBC4; // rom:0x197CE4 force_not_migration:True type:f32
+D_800FCBC8_197CE8 = 0x800FCBC8; // rom:0x197CE8 force_not_migration:True type:f32
+D_800FCBCC_197CEC = 0x800FCBCC; // rom:0x197CEC force_not_migration:True type:f32
+D_800FCBD0_197CF0 = 0x800FCBD0; // rom:0x197CF0 force_not_migration:True type:f32
+D_800FCBD4_197CF4 = 0x800FCBD4; // rom:0x197CF4 force_not_migration:True type:f32
+D_800FCBD8_197CF8 = 0x800FCBD8; // rom:0x197CF8 force_not_migration:True type:f32
+D_800FCBDC_197CFC = 0x800FCBDC; // rom:0x197CFC force_not_migration:True type:f32
+
+// ovl_1F_TightropeTreachery
+D_800FE38C_19FBCC = 0x800FE38C; // rom:0x19FBCC force_not_migration:True type:f32
+D_800FE390_19FBD0 = 0x800FE390; // rom:0x19FBD0 force_not_migration:True type:f32
+D_800FE398_19FBD8 = 0x800FE398; // rom:0x19FBD8 force_not_migration:True type:f32
+D_800FE3B8_19FBF8 = 0x800FE3B8; // rom:0x19FBF8 force_not_migration:True type:s32
+D_800FE3BC_19FBFC = 0x800FE3BC; // rom:0x19FBFC force_not_migration:True type:s32
+D_800FE464_19FCA4 = 0x800FE464; // rom:0x19FCA4 force_not_migration:True type:f32
+D_800FE468_19FCA8 = 0x800FE468; // rom:0x19FCA8 force_not_migration:True type:f32
+D_800FE47C_19FCBC = 0x800FE47C; // rom:0x19FCBC force_not_migration:True type:f32
+D_800FE480_19FCC0 = 0x800FE480; // rom:0x19FCC0 force_not_migration:True type:f32
+D_800FE4D0_19FD10 = 0x800FE4D0; // rom:0x19FD10 force_not_migration:True type:f32
+D_800FE5E0_19FE20 = 0x800FE5E0; // rom:0x19FE20 force_not_migration:True type:f64
+
+// ovl_21_TipsyTourney
+D_800FB884_1AA154 = 0x800FB884; // rom:0x1AA154 force_not_migration:True type:f32
+D_800FB908_1AA1D8 = 0x800FB908; // rom:0x1AA1D8 force_not_migration:True type:f32
+D_800FB948_1AA218 = 0x800FB948; // rom:0x1AA218 force_not_migration:True type:f32
+D_800FB94C_1AA21C = 0x800FB94C; // rom:0x1AA21C force_not_migration:True type:f32
+D_800FB950_1AA220 = 0x800FB950; // rom:0x1AA220 force_not_migration:True type:f32
+D_800FB954_1AA224 = 0x800FB954; // rom:0x1AA224 force_not_migration:True type:f32
+
+// ovl_22_BombsAway
+D_800FFAC8_1B3788 = 0x800FFAC8; // rom:0x1B3788 force_not_migration:True type:f32
+D_800FFAEC_1B37AC = 0x800FFAEC; // rom:0x1B37AC force_not_migration:True type:s32
+
+// ovl_23_CraneGame
+D_800FF5B0_1BCDD0 = 0x800FF5B0; // rom:0x1BCDD0 force_not_migration:True type:s32
+D_800FF8F8_1BD118 = 0x800FF8F8; // rom:0x1BD118 force_not_migration:True type:f32
+D_800FF8FC_1BD11C = 0x800FF8FC; // rom:0x1BD11C force_not_migration:True type:f32
+D_800FF91C_1BD13C = 0x800FF91C; // rom:0x1BD13C force_not_migration:True type:f32
+D_800FF920_1BD140 = 0x800FF920; // rom:0x1BD140 force_not_migration:True type:f32
+D_800FF924_1BD144 = 0x800FF924; // rom:0x1BD144 force_not_migration:True type:f32
+D_800FFA58_1BD278 = 0x800FFA58; // rom:0x1BD278 force_not_migration:True type:f64
+D_800FFA60_1BD280 = 0x800FFA60; // rom:0x1BD280 force_not_migration:True type:f64
+D_800FFA68_1BD288 = 0x800FFA68; // rom:0x1BD288 force_not_migration:True type:f64
+D_800FFA70_1BD290 = 0x800FFA70; // rom:0x1BD290 force_not_migration:True type:f64
+D_800FFA78_1BD298 = 0x800FFA78; // rom:0x1BD298 force_not_migration:True type:f64
+D_800FFA80_1BD2A0 = 0x800FFA80; // rom:0x1BD2A0 force_not_migration:True type:f64
+D_800FFA88_1BD2A8 = 0x800FFA88; // rom:0x1BD2A8 force_not_migration:True type:f64
+D_800FFA90_1BD2B0 = 0x800FFA90; // rom:0x1BD2B0 force_not_migration:True type:f64
+D_800FFA98_1BD2B8 = 0x800FFA98; // rom:0x1BD2B8 force_not_migration:True type:f64
+D_800FFAA0_1BD2C0 = 0x800FFAA0; // rom:0x1BD2C0 force_not_migration:True type:f64
+D_800FFAA8_1BD2C8 = 0x800FFAA8; // rom:0x1BD2C8 force_not_migration:True type:f64
+D_800FFAB0_1BD2D0 = 0x800FFAB0; // rom:0x1BD2D0 force_not_migration:True type:f64
+D_800FFAB8_1BD2D8 = 0x800FFAB8; // rom:0x1BD2D8 force_not_migration:True type:f64
+D_800FFAC0_1BD2E0 = 0x800FFAC0; // rom:0x1BD2E0 force_not_migration:True type:f64
+D_800FFAC8_1BD2E8 = 0x800FFAC8; // rom:0x1BD2E8 force_not_migration:True type:f64
+D_800FFAD0_1BD2F0 = 0x800FFAD0; // rom:0x1BD2F0 force_not_migration:True type:f64
+D_800FFAD8_1BD2F8 = 0x800FFAD8; // rom:0x1BD2F8 force_not_migration:True type:f64
+D_800FFAE0_1BD300 = 0x800FFAE0; // rom:0x1BD300 force_not_migration:True type:f64
+D_800FFAE8_1BD308 = 0x800FFAE8; // rom:0x1BD308 force_not_migration:True type:f64
+D_800FFAF0_1BD310 = 0x800FFAF0; // rom:0x1BD310 force_not_migration:True type:f64
+D_800FFAF8_1BD318 = 0x800FFAF8; // rom:0x1BD318 force_not_migration:True type:f64
+D_800FFB00_1BD320 = 0x800FFB00; // rom:0x1BD320 force_not_migration:True type:f64
+D_800FFB08_1BD328 = 0x800FFB08; // rom:0x1BD328 force_not_migration:True type:f64
+D_800FFB10_1BD330 = 0x800FFB10; // rom:0x1BD330 force_not_migration:True type:f64
+D_800FFB18_1BD338 = 0x800FFB18; // rom:0x1BD338 force_not_migration:True type:f64
+D_800FFB20_1BD340 = 0x800FFB20; // rom:0x1BD340 force_not_migration:True type:f64
+D_800FFB28_1BD348 = 0x800FFB28; // rom:0x1BD348 force_not_migration:True type:f64
+D_800FFB30_1BD350 = 0x800FFB30; // rom:0x1BD350 force_not_migration:True type:f64
+D_800FFB38_1BD358 = 0x800FFB38; // rom:0x1BD358 force_not_migration:True type:f64
+D_800FFB40_1BD360 = 0x800FFB40; // rom:0x1BD360 force_not_migration:True type:f64
+D_800FFB48_1BD368 = 0x800FFB48; // rom:0x1BD368 force_not_migration:True type:f64
+D_800FFB50_1BD370 = 0x800FFB50; // rom:0x1BD370 force_not_migration:True type:f64
+
+// ovl_24_FlowerShower
+D_800FAD6C_1C1DCC = 0x800FAD6C; // rom:0x1C1DCC force_not_migration:True type:f32
+D_800FAD70_1C1DD0 = 0x800FAD70; // rom:0x1C1DD0 force_not_migration:True type:f32
+D_800FAD74_1C1DD4 = 0x800FAD74; // rom:0x1C1DD4 force_not_migration:True type:f32
+
+// ovl_25_SlotCarDerby
+D_80100D04_1CC5D4 = 0x80100D04; // rom:0x1CC5D4 force_not_migration:True type:f32
+D_80100D08_1CC5D8 = 0x80100D08; // rom:0x1CC5D8 force_not_migration:True type:f32
+D_80100D0C_1CC5DC = 0x80100D0C; // rom:0x1CC5DC force_not_migration:True type:f32
+D_80100D10_1CC5E0 = 0x80100D10; // rom:0x1CC5E0 force_not_migration:True type:f32
+D_80100D14_1CC5E4 = 0x80100D14; // rom:0x1CC5E4 force_not_migration:True type:f32
+D_80100D18_1CC5E8 = 0x80100D18; // rom:0x1CC5E8 force_not_migration:True type:f32
+D_80100D1C_1CC5EC = 0x80100D1C; // rom:0x1CC5EC force_not_migration:True type:f32
+D_80100D20_1CC5F0 = 0x80100D20; // rom:0x1CC5F0 force_not_migration:True type:f32
+D_80100D94_1CC664 = 0x80100D94; // rom:0x1CC664 force_not_migration:True type:f32
+D_80100DAC_1CC67C = 0x80100DAC; // rom:0x1CC67C force_not_migration:True type:f32
+D_80100DFC_1CC6CC = 0x80100DFC; // rom:0x1CC6CC force_not_migration:True type:f32
+D_80100E00_1CC6D0 = 0x80100E00; // rom:0x1CC6D0 force_not_migration:True type:f32
+D_80100E04_1CC6D4 = 0x80100E04; // rom:0x1CC6D4 force_not_migration:True type:f32
+D_80100E08_1CC6D8 = 0x80100E08; // rom:0x1CC6D8 force_not_migration:True type:f32
+D_80100E94_1CC764 = 0x80100E94; // rom:0x1CC764 force_not_migration:True type:f32
+D_80100EC0_1CC790 = 0x80100EC0; // rom:0x1CC790 force_not_migration:True type:f32
+D_80100EC4_1CC794 = 0x80100EC4; // rom:0x1CC794 force_not_migration:True type:f32
+D_80100EC8_1CC798 = 0x80100EC8; // rom:0x1CC798 force_not_migration:True type:f32
+D_80100F00_1CC7D0 = 0x80100F00; // rom:0x1CC7D0 force_not_migration:True type:f32
+D_80100F04_1CC7D4 = 0x80100F04; // rom:0x1CC7D4 force_not_migration:True type:f32
+
+// ovl_26_MarioBandstand
+D_800FCC84_1D3394 = 0x800FCC84; // rom:0x1D3394 force_not_migration:True type:f32
+D_800FD168_1D3878 = 0x800FD168; // rom:0x1D3878 force_not_migration:True type:f32
+
+// ovl_27_DesesrtDash
+D_800FC100_1D94B0 = 0x800FC100; // rom:0x1D94B0 force_not_migration:True type:f64
+D_800FC108_1D94B8 = 0x800FC108; // rom:0x1D94B8 force_not_migration:True type:f64
+D_800FC110_1D94C0 = 0x800FC110; // rom:0x1D94C0 force_not_migration:True type:f64
+D_800FC118_1D94C8 = 0x800FC118; // rom:0x1D94C8 force_not_migration:True type:f64
+D_800FC120_1D94D0 = 0x800FC120; // rom:0x1D94D0 force_not_migration:True type:f64
+D_800FC128_1D94D8 = 0x800FC128; // rom:0x1D94D8 force_not_migration:True type:f64
+D_800FC130_1D94E0 = 0x800FC130; // rom:0x1D94E0 force_not_migration:True type:f64
+D_800FC138_1D94E8 = 0x800FC138; // rom:0x1D94E8 force_not_migration:True type:f64
+D_800FC140_1D94F0 = 0x800FC140; // rom:0x1D94F0 force_not_migration:True type:f64
+D_800FC148_1D94F8 = 0x800FC148; // rom:0x1D94F8 force_not_migration:True type:f64
+D_800FC150_1D9500 = 0x800FC150; // rom:0x1D9500 force_not_migration:True type:f64
+D_800FC158_1D9508 = 0x800FC158; // rom:0x1D9508 force_not_migration:True type:f64
+D_800FC160_1D9510 = 0x800FC160; // rom:0x1D9510 force_not_migration:True type:f64
+D_800FC168_1D9518 = 0x800FC168; // rom:0x1D9518 force_not_migration:True type:f64
+
+// ovl_28_ShyGuySays
+D_800FD5EC_1E069C = 0x800FD5EC; // rom:0x1E069C force_not_migration:True type:f32
+
+// ovl_29_LimboDance
+D_800FE9A8_1E8DF8 = 0x800FE9A8; // rom:0x1E8DF8 force_not_migration:True type:f32
+D_800FE9AC_1E8DFC = 0x800FE9AC; // rom:0x1E8DFC force_not_migration:True type:f32
+
+// ovl_2B_CastAways
+D_800FB968_1F6128 = 0x800FB968; // rom:0x1F6128 force_not_migration:True type:f32
+
+// ovl_2C_KeyPaWay
+D_800FF310_1FEFF0 = 0x800FF310; // rom:0x1FEFF0 force_not_migration:True type:f32
+D_800FF318_1FEFF8 = 0x800FF318; // rom:0x1FEFF8 force_not_migration:True type:f32
+D_800FF35C_1FF03C = 0x800FF35C; // rom:0x1FF03C force_not_migration:True type:f32
+D_800FF360_1FF040 = 0x800FF360; // rom:0x1FF040 force_not_migration:True type:f32
+D_800FF384_1FF064 = 0x800FF384; // rom:0x1FF064 force_not_migration:True type:f32
+D_800FF388_1FF068 = 0x800FF388; // rom:0x1FF068 force_not_migration:True type:f32
+D_800FF38C_1FF06C = 0x800FF38C; // rom:0x1FF06C force_not_migration:True type:f32
+D_800FF390_1FF070 = 0x800FF390; // rom:0x1FF070 force_not_migration:True type:f32
+D_800FF394_1FF074 = 0x800FF394; // rom:0x1FF074 force_not_migration:True type:f32
+D_800FF398_1FF078 = 0x800FF398; // rom:0x1FF078 force_not_migration:True type:f32
+D_800FF39C_1FF07C = 0x800FF39C; // rom:0x1FF07C force_not_migration:True type:f32
+
+// ovl_2D_RunningOfTheBulb
+D_800FE240_206E40 = 0x800FE240; // rom:0x206E40 force_not_migration:True type:f32
+D_800FE388_206F88 = 0x800FE388; // rom:0x206F88 force_not_migration:True type:f32
+D_800FE394_206F94 = 0x800FE394; // rom:0x206F94 force_not_migration:True type:f32
+D_800FE398_206F98 = 0x800FE398; // rom:0x206F98 force_not_migration:True type:f32
+
+// ovl_2E_HotRopeJump
+D_800FE4D0_20EF30 = 0x800FE4D0; // rom:0x20EF30 force_not_migration:True type:f32
+D_800FE898_20F2F8 = 0x800FE898; // rom:0x20F2F8 force_not_migration:True type:f64
+D_800FE8A0_20F300 = 0x800FE8A0; // rom:0x20F300 force_not_migration:True type:f64
+D_800FE8A8_20F308 = 0x800FE8A8; // rom:0x20F308 force_not_migration:True type:f64
+D_800FE8B0_20F310 = 0x800FE8B0; // rom:0x20F310 force_not_migration:True type:f64
+D_800FE8B8_20F318 = 0x800FE8B8; // rom:0x20F318 force_not_migration:True type:f64
+D_800FE8C0_20F320 = 0x800FE8C0; // rom:0x20F320 force_not_migration:True type:f64
+D_800FE8C8_20F328 = 0x800FE8C8; // rom:0x20F328 force_not_migration:True type:f64
+D_800FE8D0_20F330 = 0x800FE8D0; // rom:0x20F330 force_not_migration:True type:f64
+D_800FE8D8_20F338 = 0x800FE8D8; // rom:0x20F338 force_not_migration:True type:f64
+D_800FE8E0_20F340 = 0x800FE8E0; // rom:0x20F340 force_not_migration:True type:f64
+D_800FE8E8_20F348 = 0x800FE8E8; // rom:0x20F348 force_not_migration:True type:f64
+D_800FE8F0_20F350 = 0x800FE8F0; // rom:0x20F350 force_not_migration:True type:f64
+D_800FE8F8_20F358 = 0x800FE8F8; // rom:0x20F358 force_not_migration:True type:f64
+D_800FE900_20F360 = 0x800FE900; // rom:0x20F360 force_not_migration:True type:f64
+
+// ovl_2F_HandcarHavoc
+D_800FF3E4_218374 = 0x800FF3E4; // rom:0x218374 force_not_migration:True type:f32
+D_800FF3EC_21837C = 0x800FF3EC; // rom:0x21837C force_not_migration:True type:f32
+D_800FF404_218394 = 0x800FF404; // rom:0x218394 force_not_migration:True type:f32
+D_800FF408_218398 = 0x800FF408; // rom:0x218398 force_not_migration:True type:f32
+
+// ovl_30_DeepSeaDivers
+D_800FF974_2218A4 = 0x800FF974; // rom:0x2218A4 force_not_migration:True type:f32
+D_800FFF40_221E70 = 0x800FFF40; // rom:0x221E70 force_not_migration:True type:f64
+D_800FFF48_221E78 = 0x800FFF48; // rom:0x221E78 force_not_migration:True type:f64
+D_800FFF50_221E80 = 0x800FFF50; // rom:0x221E80 force_not_migration:True type:f64
+D_800FFF58_221E88 = 0x800FFF58; // rom:0x221E88 force_not_migration:True type:f64
+D_800FFF60_221E90 = 0x800FFF60; // rom:0x221E90 force_not_migration:True type:f64
+D_800FFF68_221E98 = 0x800FFF68; // rom:0x221E98 force_not_migration:True type:f64
+D_800FFF70_221EA0 = 0x800FFF70; // rom:0x221EA0 force_not_migration:True type:f64
+D_800FFF78_221EA8 = 0x800FFF78; // rom:0x221EA8 force_not_migration:True type:f64
+D_800FFF80_221EB0 = 0x800FFF80; // rom:0x221EB0 force_not_migration:True type:f64
+D_800FFF88_221EB8 = 0x800FFF88; // rom:0x221EB8 force_not_migration:True type:f64
+D_800FFF90_221EC0 = 0x800FFF90; // rom:0x221EC0 force_not_migration:True type:f64
+D_80100138_222068 = 0x80100138; // rom:0x222068 force_not_migration:True type:f64
+D_80100140_222070 = 0x80100140; // rom:0x222070 force_not_migration:True type:f64
+D_80100148_222078 = 0x80100148; // rom:0x222078 force_not_migration:True type:f64
+D_80100150_222080 = 0x80100150; // rom:0x222080 force_not_migration:True type:f64
+D_80100158_222088 = 0x80100158; // rom:0x222088 force_not_migration:True type:f64
+D_80100160_222090 = 0x80100160; // rom:0x222090 force_not_migration:True type:f64
+D_80100168_222098 = 0x80100168; // rom:0x222098 force_not_migration:True type:f64
+D_80100170_2220A0 = 0x80100170; // rom:0x2220A0 force_not_migration:True type:f64
+D_80100178_2220A8 = 0x80100178; // rom:0x2220A8 force_not_migration:True type:f64
+D_80100308_222238 = 0x80100308; // rom:0x222238 force_not_migration:True type:f64
+D_80100310_222240 = 0x80100310; // rom:0x222240 force_not_migration:True type:f64
+D_80100318_222248 = 0x80100318; // rom:0x222248 force_not_migration:True type:f64
+D_80100320_222250 = 0x80100320; // rom:0x222250 force_not_migration:True type:f64
+D_80100328_222258 = 0x80100328; // rom:0x222258 force_not_migration:True type:f64
+D_80100330_222260 = 0x80100330; // rom:0x222260 force_not_migration:True type:f64
+D_80100338_222268 = 0x80100338; // rom:0x222268 force_not_migration:True type:f64
+D_80100340_222270 = 0x80100340; // rom:0x222270 force_not_migration:True type:f64
+D_80100348_222278 = 0x80100348; // rom:0x222278 force_not_migration:True type:f64
+D_80100350_222280 = 0x80100350; // rom:0x222280 force_not_migration:True type:f64
+D_80100358_222288 = 0x80100358; // rom:0x222288 force_not_migration:True type:f64
+D_80100360_222290 = 0x80100360; // rom:0x222290 force_not_migration:True type:f64
+D_80100368_222298 = 0x80100368; // rom:0x222298 force_not_migration:True type:f64
+D_80100370_2222A0 = 0x80100370; // rom:0x2222A0 force_not_migration:True type:f64
+D_80100378_2222A8 = 0x80100378; // rom:0x2222A8 force_not_migration:True type:f64
+
+// ovl_31_PiranhaPursuit
+D_80100200_22BF40 = 0x80100200; // rom:0x22BF40 force_not_migration:True type:f32
+D_80100204_22BF44 = 0x80100204; // rom:0x22BF44 force_not_migration:True type:f32
+D_80100208_22BF48 = 0x80100208; // rom:0x22BF48 force_not_migration:True type:f32
+D_8010020C_22BF4C = 0x8010020C; // rom:0x22BF4C force_not_migration:True type:s32
+D_80100220_22BF60 = 0x80100220; // rom:0x22BF60 force_not_migration:True type:f32
+D_80100224_22BF64 = 0x80100224; // rom:0x22BF64 force_not_migration:True type:s32
+D_8010024C_22BF8C = 0x8010024C; // rom:0x22BF8C force_not_migration:True type:s32
+
+D_80100440_22C180 = 0x80100440; // rom:0x22C180 force_not_migration:True type:f64
+D_80100448_22C188 = 0x80100448; // rom:0x22C188 force_not_migration:True type:f64
+D_80100450_22C190 = 0x80100450; // rom:0x22C190 force_not_migration:True type:f64
+D_80100458_22C198 = 0x80100458; // rom:0x22C198 force_not_migration:True type:f64
+D_80100460_22C1A0 = 0x80100460; // rom:0x22C1A0 force_not_migration:True type:f64
+D_80100468_22C1A8 = 0x80100468; // rom:0x22C1A8 force_not_migration:True type:f64
+D_80100470_22C1B0 = 0x80100470; // rom:0x22C1B0 force_not_migration:True type:f64
+D_80100478_22C1B8 = 0x80100478; // rom:0x22C1B8 force_not_migration:True type:f64
+D_80100480_22C1C0 = 0x80100480; // rom:0x22C1C0 force_not_migration:True type:f64
+D_80100488_22C1C8 = 0x80100488; // rom:0x22C1C8 force_not_migration:True type:f64
+D_80100490_22C1D0 = 0x80100490; // rom:0x22C1D0 force_not_migration:True type:f64
+D_80100498_22C1D8 = 0x80100498; // rom:0x22C1D8 force_not_migration:True type:f64
+
+D_80100608_22C348 = 0x80100608; // rom:0x22C348 force_not_migration:True type:f64
+D_80100610_22C350 = 0x80100610; // rom:0x22C350 force_not_migration:True type:f64
+D_80100618_22C358 = 0x80100618; // rom:0x22C358 force_not_migration:True type:f64
+D_80100620_22C360 = 0x80100620; // rom:0x22C360 force_not_migration:True type:f64
+D_80100628_22C368 = 0x80100628; // rom:0x22C368 force_not_migration:True type:f64
+D_80100630_22C370 = 0x80100630; // rom:0x22C370 force_not_migration:True type:f64
+D_80100638_22C378 = 0x80100638; // rom:0x22C378 force_not_migration:True type:f64
+D_80100640_22C380 = 0x80100640; // rom:0x22C380 force_not_migration:True type:f64
+D_80100648_22C388 = 0x80100648; // rom:0x22C388 force_not_migration:True type:f64
+D_80100650_22C390 = 0x80100650; // rom:0x22C390 force_not_migration:True type:f64
+D_80100658_22C398 = 0x80100658; // rom:0x22C398 force_not_migration:True type:f64
+D_80100660_22C3A0 = 0x80100660; // rom:0x22C3A0 force_not_migration:True type:f64
+D_80100668_22C3A8 = 0x80100668; // rom:0x22C3A8 force_not_migration:True type:f64
+D_80100670_22C3B0 = 0x80100670; // rom:0x22C3B0 force_not_migration:True type:f64
+D_80100678_22C3B8 = 0x80100678; // rom:0x22C3B8 force_not_migration:True type:f64
+D_80100680_22C3C0 = 0x80100680; // rom:0x22C3C0 force_not_migration:True type:f64
+D_80100688_22C3C8 = 0x80100688; // rom:0x22C3C8 force_not_migration:True type:f64
+D_80100690_22C3D0 = 0x80100690; // rom:0x22C3D0 force_not_migration:True type:f64
+D_80100698_22C3D8 = 0x80100698; // rom:0x22C3D8 force_not_migration:True type:f64
+D_801006A0_22C3E0 = 0x801006A0; // rom:0x22C3E0 force_not_migration:True type:f64
+D_801006A8_22C3E8 = 0x801006A8; // rom:0x22C3E8 force_not_migration:True type:f64
+D_801006B0_22C3F0 = 0x801006B0; // rom:0x22C3F0 force_not_migration:True type:f64
+D_801006B8_22C3F8 = 0x801006B8; // rom:0x22C3F8 force_not_migration:True type:f64
+D_801006C0_22C400 = 0x801006C0; // rom:0x22C400 force_not_migration:True type:f64
+D_801006C8_22C408 = 0x801006C8; // rom:0x22C408 force_not_migration:True type:f64
+D_801006D0_22C410 = 0x801006D0; // rom:0x22C410 force_not_migration:True type:f64
+D_801006D8_22C418 = 0x801006D8; // rom:0x22C418 force_not_migration:True type:f64
+D_801006E0_22C420 = 0x801006E0; // rom:0x22C420 force_not_migration:True type:f64
+D_801006E8_22C428 = 0x801006E8; // rom:0x22C428 force_not_migration:True type:f64
+D_801006F0_22C430 = 0x801006F0; // rom:0x22C430 force_not_migration:True type:f64
+D_801006F8_22C438 = 0x801006F8; // rom:0x22C438 force_not_migration:True type:f64
+D_80100700_22C440 = 0x80100700; // rom:0x22C440 force_not_migration:True type:f64
+D_80100708_22C448 = 0x80100708; // rom:0x22C448 force_not_migration:True type:f64
+D_80100710_22C450 = 0x80100710; // rom:0x22C450 force_not_migration:True type:f64
+D_80100718_22C458 = 0x80100718; // rom:0x22C458 force_not_migration:True type:f64
+D_80100720_22C460 = 0x80100720; // rom:0x22C460 force_not_migration:True type:f64
+D_80100728_22C468 = 0x80100728; // rom:0x22C468 force_not_migration:True type:f64
+D_80100730_22C470 = 0x80100730; // rom:0x22C470 force_not_migration:True type:f64
+
+D_801007F8_22C538 = 0x801007F8; // rom:0x22C538 force_not_migration:True type:f64
+D_80100800_22C540 = 0x80100800; // rom:0x22C540 force_not_migration:True type:f64
+D_80100808_22C548 = 0x80100808; // rom:0x22C548 force_not_migration:True type:f64
+
+D_80100828_22C568 = 0x80100828; // rom:0x22C568 force_not_migration:True type:f64
+D_80100830_22C570 = 0x80100830; // rom:0x22C570 force_not_migration:True type:f64
+D_80100838_22C578 = 0x80100838; // rom:0x22C578 force_not_migration:True type:f64
+D_80100840_22C580 = 0x80100840; // rom:0x22C580 force_not_migration:True type:f64
+D_80100848_22C588 = 0x80100848; // rom:0x22C588 force_not_migration:True type:f64
+D_80100850_22C590 = 0x80100850; // rom:0x22C590 force_not_migration:True type:f64
+D_80100858_22C598 = 0x80100858; // rom:0x22C598 force_not_migration:True type:f64
+D_80100860_22C5A0 = 0x80100860; // rom:0x22C5A0 force_not_migration:True type:f64
+D_80100868_22C5A8 = 0x80100868; // rom:0x22C5A8 force_not_migration:True type:f64
+D_80100870_22C5B0 = 0x80100870; // rom:0x22C5B0 force_not_migration:True type:f64
+D_80100878_22C5B8 = 0x80100878; // rom:0x22C5B8 force_not_migration:True type:f64
+D_80100880_22C5C0 = 0x80100880; // rom:0x22C5C0 force_not_migration:True type:f64
+
+D_80100920_22C660 = 0x80100920; // rom:0x22C660 force_not_migration:True type:f64
+D_80100928_22C668 = 0x80100928; // rom:0x22C668 force_not_migration:True type:f64
+D_80100930_22C670 = 0x80100930; // rom:0x22C670 force_not_migration:True type:f64
+D_80100938_22C678 = 0x80100938; // rom:0x22C678 force_not_migration:True type:f64
+D_80100940_22C680 = 0x80100940; // rom:0x22C680 force_not_migration:True type:f64
+D_80100948_22C688 = 0x80100948; // rom:0x22C688 force_not_migration:True type:f64
+
+D_80100988_22C6C8 = 0x80100988; // rom:0x22C6C8 force_not_migration:True type:f64
+D_80100990_22C6D0 = 0x80100990; // rom:0x22C6D0 force_not_migration:True type:f64
+D_80100998_22C6D8 = 0x80100998; // rom:0x22C6D8 force_not_migration:True type:f64
+D_801009A0_22C6E0 = 0x801009A0; // rom:0x22C6E0 force_not_migration:True type:f64
+D_801009A8_22C6E8 = 0x801009A8; // rom:0x22C6E8 force_not_migration:True type:f64
+D_801009B0_22C6F0 = 0x801009B0; // rom:0x22C6F0 force_not_migration:True type:f64
+D_801009B8_22C6F8 = 0x801009B8; // rom:0x22C6F8 force_not_migration:True type:f64
+D_801009C0_22C700 = 0x801009C0; // rom:0x22C700 force_not_migration:True type:f64
+D_801009C8_22C708 = 0x801009C8; // rom:0x22C708 force_not_migration:True type:f64
+
+D_80100A48_22C788 = 0x80100A48; // rom:0x22C788 force_not_migration:True type:f64
+D_80100A50_22C790 = 0x80100A50; // rom:0x22C790 force_not_migration:True type:f64
+D_80100A58_22C798 = 0x80100A58; // rom:0x22C798 force_not_migration:True type:f64
+D_80100A60_22C7A0 = 0x80100A60; // rom:0x22C7A0 force_not_migration:True type:f64
+D_80100A68_22C7A8 = 0x80100A68; // rom:0x22C7A8 force_not_migration:True type:f64
+D_80100A70_22C7B0 = 0x80100A70; // rom:0x22C7B0 force_not_migration:True type:f64
+D_80100A78_22C7B8 = 0x80100A78; // rom:0x22C7B8 force_not_migration:True type:f64
+D_80100A80_22C7C0 = 0x80100A80; // rom:0x22C7C0 force_not_migration:True type:f64
+D_80100A88_22C7C8 = 0x80100A88; // rom:0x22C7C8 force_not_migration:True type:f64
+D_80100A90_22C7D0 = 0x80100A90; // rom:0x22C7D0 force_not_migration:True type:f64
+D_80100A98_22C7D8 = 0x80100A98; // rom:0x22C7D8 force_not_migration:True type:f64
+D_80100AA0_22C7E0 = 0x80100AA0; // rom:0x22C7E0 force_not_migration:True type:f64
+D_80100AA8_22C7E8 = 0x80100AA8; // rom:0x22C7E8 force_not_migration:True type:f64
+D_80100AB0_22C7F0 = 0x80100AB0; // rom:0x22C7F0 force_not_migration:True type:f64
+D_80100AB8_22C7F8 = 0x80100AB8; // rom:0x22C7F8 force_not_migration:True type:f64
+D_80100AC0_22C800 = 0x80100AC0; // rom:0x22C800 force_not_migration:True type:f64
+D_80100AC8_22C808 = 0x80100AC8; // rom:0x22C808 force_not_migration:True type:f64
+D_80100AD0_22C810 = 0x80100AD0; // rom:0x22C810 force_not_migration:True type:f64
+D_80100AD8_22C818 = 0x80100AD8; // rom:0x22C818 force_not_migration:True type:f64
+D_80100AE0_22C820 = 0x80100AE0; // rom:0x22C820 force_not_migration:True type:f64
+D_80100AE8_22C828 = 0x80100AE8; // rom:0x22C828 force_not_migration:True type:f64
+D_80100AF0_22C830 = 0x80100AF0; // rom:0x22C830 force_not_migration:True type:f64
+D_80100AF8_22C838 = 0x80100AF8; // rom:0x22C838 force_not_migration:True type:f64
+D_80100B00_22C840 = 0x80100B00; // rom:0x22C840 force_not_migration:True type:f64
+D_80100B08_22C848 = 0x80100B08; // rom:0x22C848 force_not_migration:True type:f64
+D_80100B10_22C850 = 0x80100B10; // rom:0x22C850 force_not_migration:True type:f64
+D_80100B18_22C858 = 0x80100B18; // rom:0x22C858 force_not_migration:True type:f64
+D_80100B20_22C860 = 0x80100B20; // rom:0x22C860 force_not_migration:True type:f64
+D_80100B28_22C868 = 0x80100B28; // rom:0x22C868 force_not_migration:True type:f64
+D_80100B30_22C870 = 0x80100B30; // rom:0x22C870 force_not_migration:True type:f64
+D_80100B38_22C878 = 0x80100B38; // rom:0x22C878 force_not_migration:True type:f64
+D_80100B40_22C880 = 0x80100B40; // rom:0x22C880 force_not_migration:True type:f64
+D_80100B48_22C888 = 0x80100B48; // rom:0x22C888 force_not_migration:True type:f64
+D_80100B50_22C890 = 0x80100B50; // rom:0x22C890 force_not_migration:True type:f64
+D_80100B58_22C898 = 0x80100B58; // rom:0x22C898 force_not_migration:True type:f64
+D_80100B60_22C8A0 = 0x80100B60; // rom:0x22C8A0 force_not_migration:True type:f64
+D_80100B68_22C8A8 = 0x80100B68; // rom:0x22C8A8 force_not_migration:True type:f64
+D_80100B70_22C8B0 = 0x80100B70; // rom:0x22C8B0 force_not_migration:True type:f64
+D_80100B78_22C8B8 = 0x80100B78; // rom:0x22C8B8 force_not_migration:True type:f64
+D_80100B80_22C8C0 = 0x80100B80; // rom:0x22C8C0 force_not_migration:True type:f64
+D_80100B88_22C8C8 = 0x80100B88; // rom:0x22C8C8 force_not_migration:True type:f64
+D_80100B90_22C8D0 = 0x80100B90; // rom:0x22C8D0 force_not_migration:True type:f64
+D_80100B98_22C8D8 = 0x80100B98; // rom:0x22C8D8 force_not_migration:True type:f64
+D_80100BA0_22C8E0 = 0x80100BA0; // rom:0x22C8E0 force_not_migration:True type:f64
+
+// ovl_32_TugOWar
+D_800FDB10_233F10 = 0x800FDB10; // rom:0x233F10 force_not_migration:True type:f32
+D_800FDB16_233F16 = 0x800FDB16; // rom:0x233F16 force_not_migration:True type:s8
+D_800FDB24_233F24 = 0x800FDB24; // rom:0x233F24 force_not_migration:True type:f32
+D_800FDB70_233F70 = 0x800FDB70; // rom:0x233F70 force_not_migration:True type:f32
+D_800FDB98_233F98 = 0x800FDB98; // rom:0x233F98 force_not_migration:True type:f32
+D_800FDBB4_233FB4 = 0x800FDBB4; // rom:0x233FB4 force_not_migration:True type:f32
+D_800FDC08_234008 = 0x800FDC08; // rom:0x234008 force_not_migration:True type:f32
+D_800FDC0C_23400C = 0x800FDC0C; // rom:0x23400C force_not_migration:True type:f32
+D_800FDC10_234010 = 0x800FDC10; // rom:0x234010 force_not_migration:True type:f32
+D_800FDC14_234014 = 0x800FDC14; // rom:0x234014 force_not_migration:True type:f32
+
+// ovl_33_PaddleBattle
+D_800FEA80_23C680 = 0x800FEA80; // rom:0x23C680 force_not_migration:True type:f32
+
+D_800FECBC_23C8BC = 0x800FECBC; // rom:0x23C8BC force_not_migration:True type:f32
+D_800FECC4_23C8C4 = 0x800FECC4; // rom:0x23C8C4 force_not_migration:True type:asciz
+D_800FECCC_23C8CC = 0x800FECCC; // rom:0x23C8CC force_not_migration:True type:asciz
+D_800FECD4_23C8D4 = 0x800FECD4; // rom:0x23C8D4 force_not_migration:True type:asciz
+D_800FECDC_23C8DC = 0x800FECDC; // rom:0x23C8DC force_not_migration:True type:asciz
+D_800FECE4_23C8E4 = 0x800FECE4; // rom:0x23C8E4 force_not_migration:True type:asciz
+D_800FECEC_23C8EC = 0x800FECEC; // rom:0x23C8EC force_not_migration:True type:asciz
+D_800FECF4_23C8F4 = 0x800FECF4; // rom:0x23C8F4 force_not_migration:True type:asciz
+D_800FECFC_23C8FC = 0x800FECFC; // rom:0x23C8FC force_not_migration:True type:asciz
+D_800FED04_23C904 = 0x800FED04; // rom:0x23C904 force_not_migration:True type:asciz
+D_800FED0C_23C90C = 0x800FED0C; // rom:0x23C90C force_not_migration:True type:asciz
+D_800FED14_23C914 = 0x800FED14; // rom:0x23C914 force_not_migration:True type:asciz
+D_800FED1C_23C91C = 0x800FED1C; // rom:0x23C91C force_not_migration:True type:asciz
+D_800FED24_23C924 = 0x800FED24; // rom:0x23C924 force_not_migration:True type:asciz
+D_800FED2C_23C92C = 0x800FED2C; // rom:0x23C92C force_not_migration:True type:asciz
+D_800FED34_23C934 = 0x800FED34; // rom:0x23C934 force_not_migration:True type:asciz
+D_800FED3C_23C93C = 0x800FED3C; // rom:0x23C93C force_not_migration:True type:asciz
+D_800FED44_23C944 = 0x800FED44; // rom:0x23C944 force_not_migration:True type:asciz
+D_800FED4C_23C94C = 0x800FED4C; // rom:0x23C94C force_not_migration:True type:asciz
+D_800FED54_23C954 = 0x800FED54; // rom:0x23C954 force_not_migration:True type:asciz
+D_800FED5C_23C95C = 0x800FED5C; // rom:0x23C95C force_not_migration:True type:asciz
+D_800FED64_23C964 = 0x800FED64; // rom:0x23C964 force_not_migration:True type:asciz
+
+D_800FEFE8_23CBE8 = 0x800FEFE8; // rom:0x23CBE8 force_not_migration:True type:f64
+D_800FEFF0_23CBF0 = 0x800FEFF0; // rom:0x23CBF0 force_not_migration:True type:f64
+D_800FEFF8_23CBF8 = 0x800FEFF8; // rom:0x23CBF8 force_not_migration:True type:f64
+D_800FF000_23CC00 = 0x800FF000; // rom:0x23CC00 force_not_migration:True type:f64
+D_800FF008_23CC08 = 0x800FF008; // rom:0x23CC08 force_not_migration:True type:f64
+D_800FF010_23CC10 = 0x800FF010; // rom:0x23CC10 force_not_migration:True type:f64
+D_800FF018_23CC18 = 0x800FF018; // rom:0x23CC18 force_not_migration:True type:f64
+D_800FF020_23CC20 = 0x800FF020; // rom:0x23CC20 force_not_migration:True type:f64
+
+D_800FF058_23CC58 = 0x800FF058; // rom:0x23CC58 force_not_migration:True type:f64
+D_800FF060_23CC60 = 0x800FF060; // rom:0x23CC60 force_not_migration:True type:f64
+D_800FF068_23CC68 = 0x800FF068; // rom:0x23CC68 force_not_migration:True type:f64
+D_800FF070_23CC70 = 0x800FF070; // rom:0x23CC70 force_not_migration:True type:f64
+D_800FF078_23CC78 = 0x800FF078; // rom:0x23CC78 force_not_migration:True type:f64
+D_800FF080_23CC80 = 0x800FF080; // rom:0x23CC80 force_not_migration:True type:f64
+D_800FF088_23CC88 = 0x800FF088; // rom:0x23CC88 force_not_migration:True type:f64
+D_800FF090_23CC90 = 0x800FF090; // rom:0x23CC90 force_not_migration:True type:f64
+D_800FF098_23CC98 = 0x800FF098; // rom:0x23CC98 force_not_migration:True type:f64
+D_800FF0A0_23CCA0 = 0x800FF0A0; // rom:0x23CCA0 force_not_migration:True type:f64
+D_800FF0A8_23CCA8 = 0x800FF0A8; // rom:0x23CCA8 force_not_migration:True type:f64
+
+D_800FF140_23CD40 = 0x800FF140; // rom:0x23CD40 force_not_migration:True type:f64
+D_800FF148_23CD48 = 0x800FF148; // rom:0x23CD48 force_not_migration:True type:f64
+D_800FF150_23CD50 = 0x800FF150; // rom:0x23CD50 force_not_migration:True type:f64
+
+D_800FF160_23CD60 = 0x800FF160; // rom:0x23CD60 force_not_migration:True type:s32
+
+D_800FF1E8_23CDE8 = 0x800FF1E8; // rom:0x23CDE8 force_not_migration:True type:f64
+D_800FF1F0_23CDF0 = 0x800FF1F0; // rom:0x23CDF0 force_not_migration:True type:f64
+D_800FF1F8_23CDF8 = 0x800FF1F8; // rom:0x23CDF8 force_not_migration:True type:f64
+D_800FF200_23CE00 = 0x800FF200; // rom:0x23CE00 force_not_migration:True type:f64
+D_800FF208_23CE08 = 0x800FF208; // rom:0x23CE08 force_not_migration:True type:f64
+D_800FF210_23CE10 = 0x800FF210; // rom:0x23CE10 force_not_migration:True type:f64
+D_800FF218_23CE18 = 0x800FF218; // rom:0x23CE18 force_not_migration:True type:f64
+D_800FF220_23CE20 = 0x800FF220; // rom:0x23CE20 force_not_migration:True type:f64
+D_800FF228_23CE28 = 0x800FF228; // rom:0x23CE28 force_not_migration:True type:f64
+D_800FF230_23CE30 = 0x800FF230; // rom:0x23CE30 force_not_migration:True type:f64
+D_800FF238_23CE38 = 0x800FF238; // rom:0x23CE38 force_not_migration:True type:f64
+
+// ovl_34_BumperBallMaze
+D_800FACC4_241624 = 0x800FACC4; // rom:0x241624 force_not_migration:True type:f32
+D_800FACC8_241628 = 0x800FACC8; // rom:0x241628 force_not_migration:True type:f32
+D_800FACCC_24162C = 0x800FACCC; // rom:0x24162C force_not_migration:True type:f32
+D_800FACD0_241630 = 0x800FACD0; // rom:0x241630 force_not_migration:True type:f32
+D_800FACD4_241634 = 0x800FACD4; // rom:0x241634 force_not_migration:True type:f32
+D_800FACD8_241638 = 0x800FACD8; // rom:0x241638 force_not_migration:True type:f32
+D_800FACDC_24163C = 0x800FACDC; // rom:0x24163C force_not_migration:True type:f32
+
+// ovl_41_YoshisTropicalIslandEndingScene
 D_8010DDF8_277488 = 0x8010DDF8; // rom:0x277488 force_not_migration:True type:s32
-D_8010EE40_2784D0 = 0x8010EE40; // rom:0x2784D0 force_not_migration:True type:s32
 D_8010DE4C_2774DC = 0x8010DE4C; // rom:0x2774DC force_not_migration:True type:s32
 D_8010DE50_2774E0 = 0x8010DE50; // rom:0x2774E0 force_not_migration:True type:s32
 D_8010DE54_2774E4 = 0x8010DE54; // rom:0x2774E4 force_not_migration:True type:s32
-D_8010F5A8_278C38 = 0x8010F5A8; // rom:0x278C38 force_not_migration:True type:s32
-
 D_8010DE70_277500 = 0x8010DE70; // rom:0x277500 force_not_migration:True type:s32
 D_8010DE88_277518 = 0x8010DE88; // rom:0x277518 force_not_migration:True type:s32
 D_8010DF48_2775D8 = 0x8010DF48; // rom:0x2775D8 force_not_migration:True type:s32
-D_8010E1E8_277878 = 0x8010E1E8; // rom:0x277878 force_not_migration:True type:s32
-D_8010F448_278AD8 = 0x8010F448; // rom:0x278AD8 force_not_migration:True type:s32
-
 D_8010E098_277728 = 0x8010E098; // rom:0x277728 force_not_migration:True type:s32
 D_8010E098_27772C = 0x8010E09C; // rom:0x27772C force_not_migration:True type:s32
 D_8010E098_277730 = 0x8010E0A0; // rom:0x277730 force_not_migration:True type:s32
-
+D_8010E1E8_277878 = 0x8010E1E8; // rom:0x277878 force_not_migration:True type:s32
 D_8010E7D0_277E60 = 0x8010E7D0; // rom:0x277E60 force_not_migration:True type:s32
+D_8010F448_278AD8 = 0x8010F448; // rom:0x278AD8 force_not_migration:True type:s32
+D_8010EE40_2784D0 = 0x8010EE40; // rom:0x2784D0 force_not_migration:True type:s32
 D_8010EE70_278500 = 0x8010EE70; // rom:0x278500 force_not_migration:True type:s32
-
+D_8010F5A8_278C38 = 0x8010F5A8; // rom:0x278C38 force_not_migration:True type:s32
 D_8010F770_278E00 = 0x8010F770; // rom:0x278E00 force_not_migration:True type:s32
 D_8010F774_278E04 = 0x8010F774; // rom:0x278E04 force_not_migration:True type:s32
 
+// ovl_42_UnknownEndGameBonuses0
 D_800F9F1C_27C80C = 0x800F9F1C; // rom:0x27C80C force_not_migration:True type:f32
-
 D_800FA0B0_27C9A0 = 0x800FA0B0; // rom:0x27C9A0 type:s32
-D_800FA4F0_280A40 = 0x800FA4F0; // rom:0x280A40 force_not_migration:True type:f32
 
+// ovl_43_UnknownEndGameBonuses1
+D_800FA4F0_280A40 = 0x800FA4F0; // rom:0x280A40 force_not_migration:True type:f32
 D_800FA564_280AB4 = 0x800FA564; // rom:0x280AB4 type:s32
+
+// ovl_44_UnknownStarPurchaseScene0
 D_800F7590_281C30 = 0x800F7590; // rom:0x281C30 force_not_migration:True type:f32
 
+// ovl_47
 D_800F6EF0_285B40 = 0x800F6EF0; // rom:0x285B40 type:f32
 
+// ovl_48_BowserVisitDKBoard
 D_800F70C0_286650 = 0x800F70C0; // rom:0x286650 type:f32
 D_800F70C8_28665C = 0x800F70CC; // rom:0x28665C type:s32
 
+// ovl_4B_FlowerLotteryPeachBoard
 D_800F77D8_289A98 = 0x800F77D8; // rom:0x289A98 force_not_migration:True type:f32
 
+// ovl_4D_ThowmpTollYoshiBoard
 D_800F7648_28BC08 = 0x800F7648; // rom:0x28BC08 force_not_migration:True type:s32
 
+// ovl_4F_BowserVisitYoshiBoard
 D_800F753C_28DF4C = 0x800F753C; // rom:0x28DF4C force_not_migration:True type:f32
 
+// ovl_50_LoadCannonWarioBoard
 D_800F6B50_28E5A0 = 0x800F6B50; // rom:0x28E5A0 force_not_migration:True type:f32
 
+// ovl_52_FlyGuyWarioBoard
 D_800F809C_29075C = 0x800F809C; // rom:0x29075C force_not_migration:True type:f32
 
+// ovl_59_BowserVisitMagmaMountain
 D_800F6EF4_295D64 = 0x800F6EF4; // rom:0x295D64 type:s32
 
+// ovl_5A_ShortcutRouletteMagmaMountain
 D_800F7228_296A88 = 0x800F7228; // rom:0x296A88 type:s32
 
+// ovl_5F_KoopaVisitEternalStar
 D_800F6CAC_29AACC = 0x800F6CAC; // rom:0x29AACC type:s32
 
+// ovl_60
 D_800F6D50_29B2A0 = 0x800F6D50; // rom:0x29B2A0 force_not_migration:True type:f32
 D_800F6D54_29B2A4 = 0x800F6D54; // rom:0x29B2A4 force_not_migration:True type:f32
 
+// ovl_61_OpeningScene
 D_800FD344_2A2174 = 0x800FD344; // rom:0x2A2174 force_not_migration:True type:Vec3f
 D_800FD350_2A2180 = 0x800FD350; // rom:0x2A2180 type:s32
 
+// ovl_62_board_intro
 D_800FCE24_2A8D44 = 0x800FCE24; // rom:0x2A8D44 type:s32
 D_800FCE28_2A8D48 = 0x800FCE28; // rom:0x2A8D48 type:s32
 D_800FCE90_2A8DB0 = 0x800FCE90; // rom:0x2A8DB0 type:s32
@@ -276,6 +747,7 @@ D_800FD898_2A97B8 = 0x800FD898; // rom:0x2A97B8 type:s32
 D_800FD8B0_2A97D0 = 0x800FD8B0; // rom:0x2A97D0 type:s32
 D_800FD8C8_2A97E8 = 0x800FD8C8; // rom:0x2A97E8 type:s32
 
+// ovl_63_StaffScene
 D_800FD364_2B06F4 = 0x800FD364; // rom:0x2B06F4 type:f64
 D_800FD9B4_2B0D44 = 0x800FD9B4; // rom:0x2B0D44 type:s32
 D_800FD9B8_2B0D48 = 0x800FD9B8; // rom:0x2B0D48 type:s32

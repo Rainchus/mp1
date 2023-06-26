@@ -21,5 +21,3 @@ INCLUDE_ASM("asm/nonmatchings/ovl_62_board_intro/2A76E0", func_800FC64C_2A856C);
 INCLUDE_ASM("asm/nonmatchings/ovl_62_board_intro/2A76E0", func_800FC67C_2A859C);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_62_board_intro/2A76E0", func_800FC768_2A8688);
-
-INCLUDE_ASM("asm/nonmatchings/ovl_62_board_intro/2A76E0", func_800FCD2C_2A8C4C);
