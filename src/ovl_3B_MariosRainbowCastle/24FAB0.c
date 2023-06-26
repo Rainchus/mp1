@@ -1,8 +1,6 @@
 #include "common.h"
 #include "process.h"
 
-void SleepProcess(s32);                                  /* extern */
-
 void func_800F6610_24FAB0(void) {
     Object* temp_v0;
     f32 var_f20;
