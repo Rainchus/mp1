@@ -844,8 +844,193 @@ segments:
       - [0x19FAF0, .rodata, 197E20]
       - [0x19FD70, .rodata, 19ACC0]
       - [0x19FEB0, .rodata, 19D510]
-  - type: bin
+  - type: code
     start: 0x19FEE0
+    vram: 0x800F65E0
+    dir: ovl_20_KnockBlockTower
+    name: KnockBlockTower
+    overlay: True
+    exclusive_ram_id: minigame
+    subalign: 8
+    subsegments:
+      - [0x19FEE0, c]
+      - [0x1A2E40, c]
+      - [0x1A42B0, c]
+      - [0x1A4E00, .rodata, 19FEE0]
+      - [0x1A4E98, .rodata, 1A2E40]
+  - type: code
+    start: 0x1A4EB0
+    vram: 0x800F65E0
+    dir: ovl_21_TipsyTourney
+    name: TipsyTourney
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x1A4EB0, c]
+      - [0x1AA080, .rodata, 1A4EB0]
+  - type: code
+    start: 0x1AA2A0
+    vram: 0x800F65E0
+    dir: ovl_22_BombsAway
+    name: BombsAway
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x1AA2A0, c]
+      - [0x1AF980, c]
+      - [0x1B02A0, c]
+      - [0x1B3730, .rodata, 1AA2A0]
+      - [0x1B3C00, .rodata, 1AF980]
+      - [0x1B3C70, .rodata, 1B02A0]
+  - type: code
+    start: 0x1B3E00
+    vram: 0x800F65E0
+    dir: ovl_23_CraneGame
+    name: CraneGame
+    overlay: True
+    exclusive_ram_id: minigame
+    subalign: 8
+    subsegments:
+      - [0x1B3E00, c]
+      - [0x1B9050, c]
+      - [0x1BAA60, c]
+      - [0x1BCD20, .rodata, 1B3E00]
+      - [0x1BD4F8, .rodata, 1B9050]
+      - [0x1BD570, .rodata, 1BAA60]
+  - type: code
+    start: 0x1BD640
+    vram: 0x800F65E0
+    dir: ovl_24_FlowerShower
+    name: FlowerShower
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x1BD640, c]
+      - [0x1C1D90, .rodata, 1BD640]
+  - type: code
+    start: 0x1C1EB0
+    vram: 0x800F65E0
+    dir: ovl_25_SlotCarDerby
+    name: SlotCarDerby
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x1C1EB0, c]
+      - [0x1CBB80, .rodata, 1C1EB0] 
+  - type: code
+    start: 0x1CCCF0
+    vram: 0x800F65E0
+    dir: ovl_26_MarioBandstand
+    name: MarioBandstand
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x1CCCF0, c]
+      - [0x1CD680, c]
+      - [0x1D3040, c]
+      - [0x1D3300, .rodata, 1CCCF0]
+      - [0x1D3900, .rodata, 1CD680]
+  - type: code
+    start: 0x1D3990
+    vram: 0x800F65E0
+    dir: ovl_27_DesertDash
+    name: DesertDash
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x1D3990, c]
+      - [0x1D6E30, c]
+      - [0x1D93B0, .rodata, 1D3990]
+      - [0x1D9600, .rodata, 1D6E30]
+  - type: code
+    start: 0x1D9690
+    vram: 0x800F65E0
+    dir: ovl_28_ShyGuySays
+    name: ShyGuySays
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x1D9690, c]
+      - [0x1E0670, .rodata, 1D9690]
+  - type: code
+    start: 0x1E0A30
+    vram: 0x800F65E0
+    dir: ovl_29_LimboDance
+    name: LimboDance
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x1E0A30, c]
+      - [0x1E4480, c]
+      - [0x1E8DD0, .rodata, 1E0A30]
+      - [0x1E9250, .rodata, 1E4480]
+  - type: code
+    start: 0x1E9440
+    vram: 0x800F65E0
+    dir: ovl_2A
+    name: name_2A
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x1E9440, c]
+      - [0x1F0BB0, .rodata, 1E9440]
+  - type: code
+    start: 0x1F0DA0
+    vram: 0x800F65E0
+    dir: ovl_2B_CastAways
+    name: CastAways
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x1F0DA0, c]
+      - [0x1F5700, c]
+      - [0x1F60F0, .rodata, 1F0DA0]
+  - type: code
+    start: 0x1F62C0
+    vram: 0x800F65E0
+    dir: ovl_2C_KeyPaWay
+    name: KeyPaWay
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x1F62C0, c]
+      - [0x1FDF10, c]
+      - [0x1FEF50, .rodata, 1F62C0]
+      - [0x1FF1D0, .rodata, 1FDF10]
+  - type: code
+    start: 0x1FF1E0
+    vram: 0x800F65E0
+    dir: ovl_2D_RunningOfTheBulb
+    name: RunningOfTheBulb
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x1FF1E0, c]
+      - [0x206C90, c]
+      - [0x206E40, .rodata, 1FF1E0]
+  - type: code
+    start: 0x207040
+    vram: 0x800F65E0
+    dir: ovl_2E_HotRopeJump
+    name: HotRopeJump
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x207040, c]
+      - [0x20EEB0, .rodata, 207040]
+  - type: code
+    start: 0x20F570
+    vram: 0x800F65E0
+    dir: ovl_2F_HandcarHavoc
+    name: HandcarHavoc
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x20F570, c]
+      - [0x216140, c]
+      - [0x218330, .rodata, 20F570]
+  - type: bin
+    start: 0x218510
   # - type: code
   #   start: 0x22C9E0
   #   vram: 0x800F65E0

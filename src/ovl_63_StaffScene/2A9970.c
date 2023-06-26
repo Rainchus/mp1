@@ -10,8 +10,6 @@ INCLUDE_ASM("asm/nonmatchings/ovl_63_StaffScene/2A9970", func_800F681C_2A9BAC);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_63_StaffScene/2A9970", D_800FD2E0_2B0670);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_63_StaffScene/2A9970", D_800FD2E4_2B0674);
-
 INCLUDE_RODATA("asm/nonmatchings/ovl_63_StaffScene/2A9970", D_800FD304_2B0694);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_63_StaffScene/2A9970", D_800FD308_2B0698);

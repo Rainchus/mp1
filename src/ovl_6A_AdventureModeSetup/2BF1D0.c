@@ -62,6 +62,8 @@ INCLUDE_ASM("asm/nonmatchings/ovl_6A_AdventureModeSetup/2BF1D0", func_800FC924_2
 
 INCLUDE_ASM("asm/nonmatchings/ovl_6A_AdventureModeSetup/2BF1D0", func_800FCA78_2C5638);
 
+INCLUDE_RODATA("asm/nonmatchings/ovl_6A_AdventureModeSetup/2BF1D0", D_80101C98_2CA858);
+
 INCLUDE_ASM("asm/nonmatchings/ovl_6A_AdventureModeSetup/2BF1D0", func_800FCAB8_2C5678);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_6A_AdventureModeSetup/2BF1D0", func_800FD3A4_2C5F64);
@@ -105,6 +107,8 @@ INCLUDE_ASM("asm/nonmatchings/ovl_6A_AdventureModeSetup/2BF1D0", func_80100564_2
 INCLUDE_ASM("asm/nonmatchings/ovl_6A_AdventureModeSetup/2BF1D0", func_80100744_2C9304);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_6A_AdventureModeSetup/2BF1D0", func_801008B4_2C9474);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_6A_AdventureModeSetup/2BF1D0", jtbl_80101DF0_2CA9B0);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_6A_AdventureModeSetup/2BF1D0", func_80100958_2C9518);
 
