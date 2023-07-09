@@ -67,9 +67,47 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_28_ShyGuySays/1D9690", D_800FD5FC_1E06AC);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_28_ShyGuySays/1D9690", func_800F6A38_1D9AE8);
 
-INCLUDE_ASM("asm/nonmatchings/ovl_28_ShyGuySays/1D9690", func_800F6E50_1D9F00);
+void func_800F6E50_1D9F00(unkObjectStruct* arg0) {
+    unkStruct_ShyGuySays_01* temp_v1_2;
 
-INCLUDE_ASM("asm/nonmatchings/ovl_28_ShyGuySays/1D9690", func_800F6F98_1DA048);
+    func_800F6F98_1DA048(arg0);
+    func_800F72A4_1DA354();
+    switch (D_800FD5CE_1E067E) {
+    case 0:
+        func_80075CCC(2);
+        temp_v1_2 = &D_800FD9C0[D_800FDC1E];
+        if ((temp_v1_2->unk_00 != 0) && (temp_v1_2->unk_04 != 0x200)) {
+            gPlayers[D_800FDC1E].miniGameCoins += 10;
+        }
+        D_800FD5CE_1E067E++;
+        return;
+    case 1:
+        if (func_80075FE0() != 2) {
+            return;
+        }
+        D_800FD5CE_1E067E++;
+        return;
+    case 2:
+        if (func_80076174() == 0) {
+            func_800726AC(0, 20);
+            func_80060398(40);
+            D_800FD5CE_1E067E++;
+            return;
+        }
+        return;
+    default:
+        if (func_80072718() == 0) {
+            arg0->func_ptr = &func_800F69F8_1D9AA8;
+        }
+        break;
+    }
+}
+
+void func_800F6F98_1DA048(unkObjectStruct* arg0) {
+    if (D_800F5144 == 1) {
+        arg0->func_ptr = &func_800F69F8_1D9AA8;
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/ovl_28_ShyGuySays/1D9690", func_800F6FC0_1DA070);
 
@@ -135,7 +173,96 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_28_ShyGuySays/1D9690", jtbl_800FD6E0_1E0790
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_28_ShyGuySays/1D9690", D_800FD6F8_1E07A8);
 
-INCLUDE_ASM("asm/nonmatchings/ovl_28_ShyGuySays/1D9690", func_800F8D58_1DBE08);
+void func_800F8D58_1DBE08(unkObjectStruct* arg0) { //matches but needs rodata support
+    unkStruct_ShyGuySays_01* temp_s1;
+    s32 phi_a0;
+    s16 phi_s0;
+
+    temp_s1 = &D_800FD9C0[arg0->unk_4C];
+    if (temp_s1->unk_8C == 0) {
+        temp_s1->unk_8C = 1;
+        temp_s1->unk_8A = 0;
+        phi_a0 = MIN(20, D_800FDC54);
+        temp_s1->unk_18 = temp_s1->unk_0A + func_800F740C_1DA4BC(phi_a0 + 5);
+    }
+    
+    switch ( func_800FD200_1E02B0() ) {
+    case 0:
+        break;
+    case 1:
+        if (D_800FDC4C < 3) {
+            return;
+        }
+        if (D_800FDC4C == 3 && func_800FD1D0_1E0280() < D_800FD710) {
+            return;
+        }
+        temp_s1->unk_8A++;
+        if (temp_s1->unk_8A < temp_s1->unk_18) {
+            return;
+        }
+        phi_s0 = 100 - (temp_s1->unk_0C * (D_800FD9A8 - 4));
+        phi_s0 &= (~phi_s0 >> 0x1F);
+        if (D_800FD9A8 < 5) {
+            phi_s0 = 100;
+        }
+        if (func_800F740C_1DA4BC(100) >= phi_s0) {
+            func_800F9118_1DC1C8(arg0, 1);
+            temp_s1->unk_04 = 1;
+            temp_s1->unk_8C = 0;
+        } else {                
+            func_800F9118_1DC1C8(arg0, 2);
+            temp_s1->unk_04 = 2;
+            temp_s1->unk_8C = 0;
+        }
+        break;
+    case 2:
+        if (D_800FDC4C < 3) {
+            return;
+        }
+        if (D_800FDC4C == 3 && func_800FD1D0_1E0280() < D_800FD718) {
+            return;
+        }
+        temp_s1->unk_8A++;
+        if (temp_s1->unk_8A < temp_s1->unk_18) {
+            return;
+        }
+        phi_s0 = 100 - (temp_s1->unk_0C * (D_800FD9A8 - 4));
+        phi_s0 &= (~phi_s0 >> 0x1F);
+        if ((s32) D_800FD9A8 < 5) {
+            phi_s0 = 100;
+        }
+        if (func_800F740C_1DA4BC(100) < phi_s0) {
+            func_800F9118_1DC1C8(arg0, 1);
+            temp_s1->unk_04 = 1;
+            temp_s1->unk_8C = 0;
+        } else {                
+            func_800F9118_1DC1C8(arg0, 2);
+            temp_s1->unk_04 = 2;
+            temp_s1->unk_8C = 0;
+        }
+        break;
+    case 3:
+        if (D_800FDC4C <= 0 || D_800FD99C < 0xA) {
+            return;
+        }
+        if ((temp_s1->unk_0A >= 4) && (func_800F740C_1DA4BC(0) & 3)) {
+            if ((func_800F740C_1DA4BC(0) & 1) != 0) {
+                func_800F9118_1DC1C8(arg0, 1);
+                temp_s1->unk_04 = 1;
+                temp_s1->unk_8C = 0;
+            } else {
+                func_800F9118_1DC1C8(arg0, 2);
+                temp_s1->unk_04 = 2;
+                temp_s1->unk_8C = 0;
+            }
+        }
+        break;
+    }
+
+    if (temp_s1->unk_18 >= D_800FDC54 + 4.0f) {
+        temp_s1->unk_18 = D_800FDC54 + 4.0f;
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/ovl_28_ShyGuySays/1D9690", func_800F9118_1DC1C8);
 

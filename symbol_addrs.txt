@@ -349,6 +349,13 @@ D_800FC160_1D9510 = 0x800FC160; // rom:0x1D9510 force_not_migration:True type:f6
 D_800FC168_1D9518 = 0x800FC168; // rom:0x1D9518 force_not_migration:True type:f64
 
 // ovl_28_ShyGuySays
+D_800FD6F8_1E07A8 = 0x800FD6F8; //rom:0x1E07A8 force_not_migration:True type:f64
+D_800FD700_1E07B0 = 0x1E07B0; //rom:0x1E07B0 force_not_migration:True type:f64
+D_800FD708_1E07B8 = 0x1E07B8; //rom:0x1E07B8 force_not_migration:True type:f64
+D_800FD710_1E07C0 = 0x1E07C0; //rom:0x1E07C0 force_not_migration:True type:f64
+D_800FD718_1E07C8 = 0x1E07C8; //rom:0x1E07C8 force_not_migration:True type:f64
+D_800FD5CC_1E067C = 0x800FD5CC; //rom:0x1E067C force_not_migration:True type:s16
+D_800FD5CE_1E067E = 0x800FD5CE; //rom:0x1E067E force_not_migration:True type:s16
 D_800FD5EC_1E069C = 0x800FD5EC; // rom:0x1E069C force_not_migration:True type:f32
 
 // ovl_29_LimboDance
