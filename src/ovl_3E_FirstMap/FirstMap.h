@@ -8,7 +8,7 @@ void func_800F6814_257224(void);
 void func_800F68C4_2572D4(void);
 void func_800F69B8_2573C8(void);
 void func_800F69FC_25740C(void);
-s32 func_800F81F8_258C08(s32);
+s16 func_800F81F8_258C08(s32);
 void func_800F676C_25717C(void);
 void func_800F67F4_257204(void);
 void func_800F68A4_2572B4(void);

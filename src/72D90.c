@@ -1,7 +1,5 @@
 #include "common.h"
 #include "mallocblock.h"
-#include "PR/gbi.h"
-#include "PR/mbi.h"
 #include "process.h"
 #include "stdarg.h"
 
@@ -35,7 +33,6 @@ u32 osVirtualToPhysical(void*);
 u32 strlen(const char*);
 void* func_80014614(s32);
 void func_80014750(void*);
-unkGlobalStruct_00* func_80023684(s32, s32);
 void func_800238F0(s32);
 s32 func_8002451C(s32, void (*)(Gfx**), s32);
 void func_8003A060(Gfx**, s32, s32, s32, s32, s32, s32, s32, s32, s32, s32, s32, s32, s32, s32, s32, s32);
@@ -462,10 +459,9 @@ s32 func_80073008(Gfx** arg0) {
     unk72D90Struct0* temp_v0;
 
     if (D_800F5024 == 0.0f) {
-        // Casts can be removed once func_80023684 is updated to return void*
-        temp_v0 = D_800ED438 = (unk72D90Struct0*) func_80023684(sizeof(unk72D90Struct0), 28000);
-        temp_v0->unk_00 = (Vtx*) func_80023684(6400, 28000);
-        temp_v0->unk_04 = (Gfx*) func_80023684(8000, 28000);
+        temp_v0 = D_800ED438 = func_80023684(sizeof(unk72D90Struct0), 28000);
+        temp_v0->unk_00 = func_80023684(400 * sizeof(Vtx), 28000);
+        temp_v0->unk_04 = func_80023684(1000 * sizeof(Gfx), 28000);
         func_80073100(temp_v0->unk_04, temp_v0->unk_00);
     }
 

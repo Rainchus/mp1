@@ -25,7 +25,7 @@ extern s32 D_800F2C28;
 extern s16 D_800F3778;
 
 
-s32 LoadFormBinary(void*, s32);
+s32 LoadFormBinary(void*, u32);
 extern u32 D_800C2FF4;
 extern u8 D_800C3000;
 void func_8001D8A0(s32, void*, s32*);

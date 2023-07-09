@@ -22,7 +22,7 @@ void func_8004CB70(s16 arg0, s16 arg1, Vec3f* arg2) {
     arg2->y = temp_v0->coords.y;
     arg2->z = temp_v0->coords.z;
     if (arg0 != -1) {
-        if ((PlayerIsCurrent(arg0) << 0x10) == 0) {
+        if (PlayerIsCurrent(arg0) == 0) {
             arg2->x = arg2->x + D_800C51C0[arg0].x;
             arg2->z = arg2->z + D_800C51C0[arg0].y;
         }

@@ -2,15 +2,6 @@
 
 // INCLUDE_ASM(s32, "AE150", func_800AD550);
 
-typedef long int Mtx_t[4][4];
-typedef union {
-    Mtx_t m;
-    // struct {
-    //     u16 intPart[4][4];
-    //     u16 fracPart[4][4];
-    // };
-    long long int force_structure_alignment;
-} Mtx;
 #define USHRT_MAX 0x10000
 #define USHRT_MINV (f32)(1.0 / 0x10000)
 #define PACK_MTX(mtx, i, j) (((((u16*)mtx)[4 * i + j] << 0x10) | ((u16*)mtx)[16 + 4 * i + j]) * USHRT_MINV)

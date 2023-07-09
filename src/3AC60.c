@@ -1,6 +1,4 @@
 #include "common.h"
-#include "PR/gbi.h"
-#include "PR/mbi.h"
 
 typedef struct unk3AC60Struct0 {
     /* 0x00 */ f32 unk_00;

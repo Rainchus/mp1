@@ -1,6 +1,6 @@
 #include "mallocblock.h"
 
-void func_800235F0(void* (*arg0)(s32), void (*arg1)(unkMallocBlockStruct*)) {
+void func_800235F0(void* (*arg0)(s32), void (*arg1)(void*)) {
     unkMallocBlockStruct* temp_v0;
 
     D_800F546C = arg0;
@@ -26,8 +26,7 @@ void* HuMemAlloc(s32 size) {
     return func_800236A4(size, 0);
 }
 
-// likely returns void*
-unkGlobalStruct_00* func_80023684(s32 size, s32 arg1) {
+void* func_80023684(s32 size, s16 arg1) {
     return func_800236A4(size, arg1);
 }
 
@@ -94,7 +93,7 @@ void func_800237BC(s16 arg0) {
                     var_a0 = temp_s0;
 
                     D_800ECB10--;
-                    if ((D_800ECB10 << 16) <= 0) {
+                    if (D_800ECB10 <= 0) {
                         break;
                     }
                 }

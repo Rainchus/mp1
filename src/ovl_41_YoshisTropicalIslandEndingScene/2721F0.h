@@ -1,6 +1,4 @@
 #include "common.h"
-#include "PR/gbi.h"
-#include "PR/mbi.h"
 
 typedef struct unkStruct6 {
     char unk_00[0x10];

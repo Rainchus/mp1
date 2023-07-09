@@ -113,7 +113,7 @@ u16 ReadImgPackand(s32 arg0, s32 arg1, s32 arg2) {
     return temp_s0;
 }
 
-s16 func_80017850(s32 arg0, s32 arg1, char* arg2) {
+s16 func_80017850(unk2C0C0StructC0* arg0, s32 arg1, char* arg2) {
     return func_80038A9C(arg0, ReadMainFS(arg1), 0, arg2);
 }
 

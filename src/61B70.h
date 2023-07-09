@@ -1,6 +1,4 @@
 #include "common.h"
-#include "PR/gbi.h"
-#include "PR/mbi.h"
 #include "PR/os.h"
 
 typedef struct unk_Struct_func_800611A4 {
