@@ -4,7 +4,7 @@ INCLUDE_ASM("asm/nonmatchings/72D90", func_80072190);
 
 INCLUDE_ASM("asm/nonmatchings/72D90", func_800721D8);
 
-INCLUDE_ASM("asm/nonmatchings/72D90", func_80072644);
+INCLUDE_ASM("asm/nonmatchings/72D90", SetFadeInTypeAndTime);
 
 INCLUDE_ASM("asm/nonmatchings/72D90", func_800726AC);
 

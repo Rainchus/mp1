@@ -48,7 +48,7 @@ INCLUDE_ASM("asm/nonmatchings/5CDB0", func_8005CE8C);
 
 INCLUDE_ASM("asm/nonmatchings/5CDB0", func_8005CEDC);
 
-INCLUDE_ASM("asm/nonmatchings/5CDB0", func_8005CF30);
+INCLUDE_ASM("asm/nonmatchings/5CDB0", InitObjSystem);
 
 INCLUDE_ASM("asm/nonmatchings/5CDB0", func_8005D184);
 
@@ -94,11 +94,11 @@ INCLUDE_ASM("asm/nonmatchings/5CDB0", func_8005DBE4);
 
 INCLUDE_ASM("asm/nonmatchings/5CDB0", func_8005DC18);
 
-INCLUDE_ASM("asm/nonmatchings/5CDB0", func_8005DC28);
+INCLUDE_ASM("asm/nonmatchings/5CDB0", InitProcess);
 
 INCLUDE_ASM("asm/nonmatchings/5CDB0", func_8005DCD8);
 
-INCLUDE_ASM("asm/nonmatchings/5CDB0", func_8005DD90);
+INCLUDE_ASM("asm/nonmatchings/5CDB0", EndProcess);
 
 INCLUDE_ASM("asm/nonmatchings/5CDB0", func_8005DDDC);
 
@@ -154,7 +154,7 @@ INCLUDE_ASM("asm/nonmatchings/5CDB0", func_80060268);
 
 INCLUDE_ASM("asm/nonmatchings/5CDB0", func_80060288);
 
-INCLUDE_ASM("asm/nonmatchings/5CDB0", func_800602AC);
+INCLUDE_ASM("asm/nonmatchings/5CDB0", PlaySound);
 
 INCLUDE_ASM("asm/nonmatchings/5CDB0", func_8006035C);
 

@@ -1,7 +1,7 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/libc/string", func_8008C400);
+INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/libc/string", strchr);
 
-INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/libc/string", func_8008C438);
+INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/libc/string", strlen);
 
-INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/libc/string", func_8008C45C);
+INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/libc/string", memcpy);

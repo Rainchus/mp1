@@ -8,7 +8,7 @@ INCLUDE_ASM("asm/nonmatchings/../src/engine/data", func_80014460);
 
 INCLUDE_ASM("asm/nonmatchings/../src/engine/data", func_80014504);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/data", func_800145B0);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/data", ReadMainFS);
 
 INCLUDE_ASM("asm/nonmatchings/../src/engine/data", func_80014614);
 
@@ -16,7 +16,7 @@ INCLUDE_ASM("asm/nonmatchings/../src/engine/data", func_80014678);
 
 INCLUDE_ASM("asm/nonmatchings/../src/engine/data", func_800146D4);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/data", func_80014730);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/data", FreeMainFS);
 
 INCLUDE_ASM("asm/nonmatchings/../src/engine/data", func_80014750);
 

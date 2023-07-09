@@ -1,6 +1,6 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/csplayer", func_8008C550);
+INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/csplayer", alCSPNew);
 
 INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/csplayer", func_8008C6C0);
 

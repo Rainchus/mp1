@@ -1,3 +1,3 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/io/epiread", func_800904F0);
+INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/io/epiread", osEPiReadIo);

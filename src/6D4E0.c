@@ -30,7 +30,7 @@ INCLUDE_ASM("asm/nonmatchings/6D4E0", func_8006D010);
 
 INCLUDE_ASM("asm/nonmatchings/6D4E0", func_8006D650);
 
-INCLUDE_ASM("asm/nonmatchings/6D4E0", func_8006D7D8);
+INCLUDE_ASM("asm/nonmatchings/6D4E0", LoadStringIntoWindow);
 
 INCLUDE_ASM("asm/nonmatchings/6D4E0", func_8006D93C);
 

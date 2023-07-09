@@ -1,20 +1,20 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/53680", func_80052A80);
+INCLUDE_ASM("asm/nonmatchings/53680", GetCurrentPlayerIndex);
 
-INCLUDE_ASM("asm/nonmatchings/53680", func_80052A8C);
+INCLUDE_ASM("asm/nonmatchings/53680", GetPlayerStruct);
 
-INCLUDE_ASM("asm/nonmatchings/53680", func_80052ACC);
+INCLUDE_ASM("asm/nonmatchings/53680", PlayerIsCurrent);
 
-INCLUDE_ASM("asm/nonmatchings/53680", func_80052AE8);
+INCLUDE_ASM("asm/nonmatchings/53680", PlayerStructIsCurrent);
 
-INCLUDE_ASM("asm/nonmatchings/53680", func_80052B20);
+INCLUDE_ASM("asm/nonmatchings/53680", PlayerIsCPU);
 
-INCLUDE_ASM("asm/nonmatchings/53680", func_80052B48);
+INCLUDE_ASM("asm/nonmatchings/53680", AdjustPlayerCoins);
 
-INCLUDE_ASM("asm/nonmatchings/53680", func_80052BB8);
+INCLUDE_ASM("asm/nonmatchings/53680", PlayerHasCoins);
 
-INCLUDE_ASM("asm/nonmatchings/53680", func_80052BE8);
+INCLUDE_ASM("asm/nonmatchings/53680", SetPlayerAnimation);
 
 INCLUDE_ASM("asm/nonmatchings/53680", func_80052C44);
 

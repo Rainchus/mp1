@@ -1,3 +1,3 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/os/gettime", func_80088810);
+INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/os/gettime", osGetTime);

@@ -12,32 +12,32 @@ INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/seqplayer", func_8008E0D8);
 
 INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/seqplayer", func_8008E900);
 
-INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/seqplayer", func_8008E96C);
+INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/seqplayer", __mapVoice);
 
-INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/seqplayer", func_8008E9BC);
+INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/seqplayer", __unmapVoice);
 
-INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/seqplayer", func_8008EA20);
+INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/seqplayer", __lookupVoice);
 
-INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/seqplayer", func_8008EA74);
+INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/seqplayer", __lookupSoundQuick);
 
-INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/seqplayer", func_8008EB48);
+INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/seqplayer", __vsVol);
 
-INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/seqplayer", func_8008EBB8);
+INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/seqplayer", __vsDelta);
 
-INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/seqplayer", func_8008EBD4);
+INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/seqplayer", __vsPan);
 
-INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/seqplayer", func_8008EC18);
+INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/seqplayer", __seqpReleaseVoice);
 
-INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/seqplayer", func_8008ED3C);
+INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/seqplayer", __voiceNeedsNoteKill);
 
-INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/seqplayer", func_8008EDEC);
+INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/seqplayer", __initFromBank);
 
-INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/seqplayer", func_8008EE98);
+INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/seqplayer", __setInstChanState);
 
 INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/seqplayer", func_8008EEEC);
 
-INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/seqplayer", func_8008EF6C);
+INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/seqplayer", __initChanState);
 
-INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/seqplayer", func_8008F020);
+INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/seqplayer", __seqpStopOsc);
 
 INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/seqplayer", func_8008F110);

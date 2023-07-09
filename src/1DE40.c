@@ -1,6 +1,6 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/1DE40", func_8001D240);
+INCLUDE_ASM("asm/nonmatchings/1DE40", InitCameras);
 
 INCLUDE_ASM("asm/nonmatchings/1DE40", func_8001D40C);
 
@@ -24,7 +24,7 @@ INCLUDE_ASM("asm/nonmatchings/1DE40", func_8001D8D4);
 
 INCLUDE_ASM("asm/nonmatchings/1DE40", func_8001D904);
 
-INCLUDE_ASM("asm/nonmatchings/1DE40", func_8001D934);
+INCLUDE_ASM("asm/nonmatchings/1DE40", Convert3DTo2D);
 
 INCLUDE_ASM("asm/nonmatchings/1DE40", func_8001DB2C);
 

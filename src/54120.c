@@ -32,7 +32,7 @@ INCLUDE_ASM("asm/nonmatchings/54120", func_80054744);
 
 INCLUDE_ASM("asm/nonmatchings/54120", func_80054758);
 
-INCLUDE_ASM("asm/nonmatchings/54120", func_800547F8);
+INCLUDE_ASM("asm/nonmatchings/54120", HidePlayerHUDVisibility);
 
 INCLUDE_ASM("asm/nonmatchings/54120", func_80054834);
 

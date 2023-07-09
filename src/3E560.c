@@ -16,7 +16,7 @@ INCLUDE_ASM("asm/nonmatchings/3E560", func_8003DADC);
 
 INCLUDE_ASM("asm/nonmatchings/3E560", func_8003DB1C);
 
-INCLUDE_ASM("asm/nonmatchings/3E560", func_8003DBE0);
+INCLUDE_ASM("asm/nonmatchings/3E560", CreateObject);
 
 INCLUDE_ASM("asm/nonmatchings/3E560", func_8003DE60);
 
@@ -36,7 +36,7 @@ INCLUDE_ASM("asm/nonmatchings/3E560", func_8003E610);
 
 INCLUDE_ASM("asm/nonmatchings/3E560", func_8003E664);
 
-INCLUDE_ASM("asm/nonmatchings/3E560", func_8003E694);
+INCLUDE_ASM("asm/nonmatchings/3E560", DestroyObject);
 
 INCLUDE_ASM("asm/nonmatchings/3E560", func_8003E7E4);
 

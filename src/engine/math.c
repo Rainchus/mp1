@@ -1,21 +1,21 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/math", func_80022390);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/math", MtxTranslate);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/math", func_80022450);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/math", MtxScale);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/math", func_800224A4);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/math", MtxRotate);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/math", func_800227C4);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/math", MtxMult);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/math", func_8002292C);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/math", MtxInv);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/math", func_80022AD0);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/math", MtxReset);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/math", func_80022B30);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/math", MtxRotateX);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/math", func_80022C00);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/math", MtxRotateY);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/math", func_80022CCC);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/math", MtxRotateZ);
 
 INCLUDE_ASM("asm/nonmatchings/../src/engine/math", func_80022D9C);

@@ -1,3 +1,3 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/sndpsetpitch", func_8008AA00);
+INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/sndpsetpitch", alSndpSetPitch);

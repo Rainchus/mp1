@@ -38,25 +38,25 @@ INCLUDE_ASM("asm/nonmatchings/59E80", func_800596DC);
 
 INCLUDE_ASM("asm/nonmatchings/59E80", func_80059768);
 
-INCLUDE_ASM("asm/nonmatchings/59E80", func_80059798);
+INCLUDE_ASM("asm/nonmatchings/59E80", IsFlagSet);
 
-INCLUDE_ASM("asm/nonmatchings/59E80", func_800597DC);
+INCLUDE_ASM("asm/nonmatchings/59E80", SetBoardFeatureFlag);
 
-INCLUDE_ASM("asm/nonmatchings/59E80", func_8005982C);
+INCLUDE_ASM("asm/nonmatchings/59E80", ClearBoardFeatureFlag);
 
-INCLUDE_ASM("asm/nonmatchings/59E80", func_80059880);
+INCLUDE_ASM("asm/nonmatchings/59E80", MakeHeap);
 
-INCLUDE_ASM("asm/nonmatchings/59E80", func_800598A0);
+INCLUDE_ASM("asm/nonmatchings/59E80", Malloc);
 
-INCLUDE_ASM("asm/nonmatchings/59E80", func_8005992C);
+INCLUDE_ASM("asm/nonmatchings/59E80", Free);
 
-INCLUDE_ASM("asm/nonmatchings/59E80", func_800599DC);
+INCLUDE_ASM("asm/nonmatchings/59E80", Realloc);
 
-INCLUDE_ASM("asm/nonmatchings/59E80", func_80059AA4);
+INCLUDE_ASM("asm/nonmatchings/59E80", GetAllocatedHeapSize);
 
-INCLUDE_ASM("asm/nonmatchings/59E80", func_80059AD8);
+INCLUDE_ASM("asm/nonmatchings/59E80", GetUsedMemoryBlockCount);
 
-INCLUDE_ASM("asm/nonmatchings/59E80", func_80059B00);
+INCLUDE_ASM("asm/nonmatchings/59E80", GetMemoryAllocSize);
 
 INCLUDE_ASM("asm/nonmatchings/59E80", func_80059B10);
 

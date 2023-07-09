@@ -1,3 +1,3 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/io/pfsfreeblocks", func_80091120);
+INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/io/pfsfreeblocks", osPfsFreeBlocks);

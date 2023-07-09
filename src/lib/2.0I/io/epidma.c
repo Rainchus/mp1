@@ -1,3 +1,3 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/io/epidma", func_8008BEB0);
+INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/io/epidma", osEPiStartDma);

@@ -1,47 +1,47 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/process", func_80063060);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/process", InitProcessSys);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/process", func_80063074);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/process", LinkProcess);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/process", func_80063108);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/process", UnlinkProcess);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/process", func_80063144);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/process", CreateProcess);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/process", func_80063270);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/process", LinkChildProcess);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/process", func_800632C4);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/process", UnlinkChildProcess);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/process", func_80063314);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/process", CreateChildProcess);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/process", func_80063358);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/process", WaitForChildProcess);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/process", func_800633A8);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/process", GetCurrentProcess);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/process", func_800633B4);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/process", GetChildProcess);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/process", func_800633D4);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/process", SetKillStatusProcess);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/process", func_80063418);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/process", KillProcess);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/process", func_8006344C);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/process", KillChildProcess);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/process", func_800634AC);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/process", TerminateProcess);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/process", func_80063514);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/process", ExitProcess);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/process", func_80063550);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/process", SleepProcess);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/process", func_800635B4);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/process", SleepVProcess);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/process", func_800635D0);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/process", WakeupProcess);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/process", func_800635D8);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/process", SetProcessDestructor);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/process", func_800635E0);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/process", SetCurrentProcessDestructor);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/process", func_80063610);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/process", CallProcess);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/process", func_8006376C);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/process", AllocProcessMemory);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/process", func_8006379C);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/process", FreeProcessMemory);

@@ -2,7 +2,7 @@
 
 INCLUDE_ASM("asm/nonmatchings/24740", func_80023B40);
 
-INCLUDE_ASM("asm/nonmatchings/24740", func_80023C14);
+INCLUDE_ASM("asm/nonmatchings/24740", LoadFormBinary);
 
 INCLUDE_ASM("asm/nonmatchings/24740", func_80023FC8);
 

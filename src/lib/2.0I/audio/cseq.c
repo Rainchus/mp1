@@ -1,10 +1,10 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/cseq", func_80089A40);
+INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/cseq", alCSeqNew);
 
-INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/cseq", func_80089B4C);
+INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/cseq", alCSeqNextEvent);
 
-INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/cseq", func_80089C40);
+INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/cseq", __alCSeqNextDelta);
 
 INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/cseq", func_80089CC0);
 

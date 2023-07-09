@@ -1,3 +1,3 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/sndpallocate", func_8008A800);
+INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/sndpallocate", alSndpAllocate);

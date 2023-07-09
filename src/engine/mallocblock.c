@@ -2,7 +2,7 @@
 
 INCLUDE_ASM("asm/nonmatchings/../src/engine/mallocblock", func_800235F0);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/mallocblock", func_80023668);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/mallocblock", HuMemAlloc);
 
 INCLUDE_ASM("asm/nonmatchings/../src/engine/mallocblock", func_80023684);
 

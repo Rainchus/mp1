@@ -1,3 +1,3 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/io/viblack", func_8008B6A0);
+INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/io/viblack", osViBlack);

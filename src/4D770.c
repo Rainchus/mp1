@@ -18,15 +18,15 @@ INCLUDE_ASM("asm/nonmatchings/4D770", func_8004CDA0);
 
 INCLUDE_ASM("asm/nonmatchings/4D770", func_8004CDCC);
 
-INCLUDE_ASM("asm/nonmatchings/4D770", func_8004CE70);
+INCLUDE_ASM("asm/nonmatchings/4D770", SwapPlayerLocationData);
 
-INCLUDE_ASM("asm/nonmatchings/4D770", func_8004CEF4);
+INCLUDE_ASM("asm/nonmatchings/4D770", SetPlayerLandedSpaceType);
 
-INCLUDE_ASM("asm/nonmatchings/4D770", func_8004CF70);
+INCLUDE_ASM("asm/nonmatchings/4D770", GetSumOfPlayerStars);
 
-INCLUDE_ASM("asm/nonmatchings/4D770", func_8004CFC0);
+INCLUDE_ASM("asm/nonmatchings/4D770", RNGPercentChance);
 
-INCLUDE_ASM("asm/nonmatchings/4D770", func_8004D008);
+INCLUDE_ASM("asm/nonmatchings/4D770", GetTurnsElapsed);
 
 INCLUDE_ASM("asm/nonmatchings/4D770", func_8004D02C);
 
@@ -50,8 +50,8 @@ INCLUDE_ASM("asm/nonmatchings/4D770", func_8004D648);
 
 INCLUDE_ASM("asm/nonmatchings/4D770", func_8004D6FC);
 
-INCLUDE_ASM("asm/nonmatchings/4D770", func_8004D7D8);
+INCLUDE_ASM("asm/nonmatchings/4D770", SetPlayerOntoChain);
 
-INCLUDE_ASM("asm/nonmatchings/4D770", func_8004D844);
+INCLUDE_ASM("asm/nonmatchings/4D770", SetNextChainAndSpace);
 
 INCLUDE_ASM("asm/nonmatchings/4D770", func_8004D8A4);

@@ -1,6 +1,41 @@
 #include "common.h"
+#include "1D9690.h"
 
-INCLUDE_ASM("asm/nonmatchings/ovl_28_ShyGuySays/1D9690", func_800F65E0_1D9690);
+void func_800F65E0_1D9690(void) {
+    u8 temp_s0;
+
+    func_80029090(50);
+    InitObjSystem(50, 0);
+    func_80060088();
+    func_8001DE70(64);
+    func_8005D8B8(func_8005D384(0x7FDA, 0, 0, -1, &func_8005EB1C), 0xA0);
+    func_800234B8(0U, 0xFF, 0xFF, 0xFF);
+    func_800234B8(1U, 0xFF, 0xFF, 0xFF);
+    func_80023504(1, -96.0f, 100.0f, 26.0f);
+    func_800178A0(1);
+    temp_s0 = func_800178E8();
+    func_80017660(temp_s0, 0.0f, 0.0f, 320.0f, 240.0f);
+    func_800176C4(temp_s0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
+    func_8001D494(0, 30.0f, 80.0f, 4000.0f);
+    func_800F6FC0_1DA070();
+    func_800F747C_1DA52C((GetRandomByte() << 8) | GetRandomByte());
+    D_800F2BC0 = 0;
+    D_800ED440 = 0;
+    D_800EE984 = 0;
+    D_800FD9A4 = 0;
+    D_800FD9A6 = 0;
+    D_800FD9A8 = 0;
+    D_800FD99C = 0;
+    D_800FD9A0 = 0;
+    D_800FDC1A = 0;
+    D_800FDC1C = 0;
+    D_800FDC1E = 0;
+    D_800FDD10 = 1;
+    D_800FDC20 = NULL;
+    D_800FD998 = func_8005D384(0x20, 0, 0, -1, &func_800F67F8_1D98A8);
+    func_8007B168(&D_800FD5F0_1E06A0, 1);
+    PlaySound(0x1A5);
+}
 
 INCLUDE_ASM("asm/nonmatchings/ovl_28_ShyGuySays/1D9690", func_800F67F8_1D98A8);
 

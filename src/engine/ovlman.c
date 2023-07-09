@@ -4,13 +4,13 @@ INCLUDE_ASM("asm/nonmatchings/../src/engine/ovlman", func_800174C0);
 
 INCLUDE_ASM("asm/nonmatchings/../src/engine/ovlman", func_800174F4);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/ovlman", func_80017528);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/ovlman", LoadFormFile);
 
 INCLUDE_ASM("asm/nonmatchings/../src/engine/ovlman", func_8001755C);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/ovlman", func_8001758C);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/ovlman", GetRandomByte);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/ovlman", func_800175C0);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/ovlman", LoadOverlay);
 
 INCLUDE_ASM("asm/nonmatchings/../src/engine/ovlman", func_80017660);
 
@@ -20,7 +20,7 @@ INCLUDE_ASM("asm/nonmatchings/../src/engine/ovlman", func_8001775C);
 
 INCLUDE_ASM("asm/nonmatchings/../src/engine/ovlman", func_800177B0);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/ovlman", func_800177F4);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/ovlman", ReadImgPackand);
 
 INCLUDE_ASM("asm/nonmatchings/../src/engine/ovlman", func_80017850);
 

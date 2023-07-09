@@ -1,10 +1,10 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/4E530", func_8004D930);
+INCLUDE_ASM("asm/nonmatchings/4E530", CreateTextWindow);
 
-INCLUDE_ASM("asm/nonmatchings/4E530", func_8004D9D8);
+INCLUDE_ASM("asm/nonmatchings/4E530", ShowTextWindow);
 
-INCLUDE_ASM("asm/nonmatchings/4E530", func_8004DAD0);
+INCLUDE_ASM("asm/nonmatchings/4E530", HideTextWindow);
 
 INCLUDE_ASM("asm/nonmatchings/4E530", func_8004DB9C);
 
@@ -14,7 +14,7 @@ INCLUDE_ASM("asm/nonmatchings/4E530", func_8004DBC8);
 
 INCLUDE_ASM("asm/nonmatchings/4E530", func_8004DBD4);
 
-INCLUDE_ASM("asm/nonmatchings/4E530", func_8004DE64);
+INCLUDE_ASM("asm/nonmatchings/4E530", WaitForTextConfirmation);
 
 INCLUDE_ASM("asm/nonmatchings/4E530", func_8004E0E8);
 

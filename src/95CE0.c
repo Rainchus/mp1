@@ -1,9 +1,9 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/95CE0", func_800950E0);
+INCLUDE_ASM("asm/nonmatchings/95CE0", __osSpGetStatus);
 
-INCLUDE_ASM("asm/nonmatchings/95CE0", func_800950F0);
+INCLUDE_ASM("asm/nonmatchings/95CE0", __osSpSetStatus);
 
-INCLUDE_ASM("asm/nonmatchings/95CE0", func_80095100);
+INCLUDE_ASM("asm/nonmatchings/95CE0", __osSpSetPc);
 
-INCLUDE_ASM("asm/nonmatchings/95CE0", func_80095130);
+INCLUDE_ASM("asm/nonmatchings/95CE0", __osViInit);

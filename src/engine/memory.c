@@ -1,10 +1,10 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/memory", func_8003B680);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/memory", MakePermHeap);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/memory", func_8003B6A4);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/memory", MallocPerm);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/memory", func_8003B6C8);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/memory", FreePerm);
 
 INCLUDE_ASM("asm/nonmatchings/../src/engine/memory", func_8003B6E4);
 
@@ -12,11 +12,11 @@ INCLUDE_ASM("asm/nonmatchings/../src/engine/memory", func_8003B710);
 
 INCLUDE_ASM("asm/nonmatchings/../src/engine/memory", func_8003B730);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/memory", func_8003B750);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/memory", MakeTempHeap);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/memory", func_8003B774);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/memory", MallocTemp);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/memory", func_8003B798);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/memory", FreeTemp);
 
 INCLUDE_ASM("asm/nonmatchings/../src/engine/memory", func_8003B7B4);
 
@@ -46,7 +46,7 @@ INCLUDE_ASM("asm/nonmatchings/../src/engine/memory", func_8003BEB4);
 
 INCLUDE_ASM("asm/nonmatchings/../src/engine/memory", func_8003C060);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/memory", func_8003C14C);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/memory", DirectionPrompt);
 
 INCLUDE_ASM("asm/nonmatchings/../src/engine/memory", func_8003C198);
 

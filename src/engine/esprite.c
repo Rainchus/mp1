@@ -2,7 +2,7 @@
 
 INCLUDE_ASM("asm/nonmatchings/../src/engine/esprite", func_80018870);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/esprite", func_80018910);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/esprite", InitSprite);
 
 INCLUDE_ASM("asm/nonmatchings/../src/engine/esprite", func_8001897C);
 
@@ -10,11 +10,11 @@ INCLUDE_ASM("asm/nonmatchings/../src/engine/esprite", func_80018AFC);
 
 INCLUDE_ASM("asm/nonmatchings/../src/engine/esprite", func_80018B2C);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/esprite", func_80018C50);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/esprite", ShowBasicSprite);
 
 INCLUDE_ASM("asm/nonmatchings/../src/engine/esprite", func_80018C90);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/esprite", func_80018CD0);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/esprite", SetBasicSpritePos);
 
 INCLUDE_ASM("asm/nonmatchings/../src/engine/esprite", func_80018CF8);
 
@@ -32,7 +32,7 @@ INCLUDE_ASM("asm/nonmatchings/../src/engine/esprite", func_80018E98);
 
 INCLUDE_ASM("asm/nonmatchings/../src/engine/esprite", func_80018ED8);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/esprite", func_80018F18);
+INCLUDE_ASM("asm/nonmatchings/../src/engine/esprite", SetBasicSpriteSize);
 
 INCLUDE_ASM("asm/nonmatchings/../src/engine/esprite", func_80018F68);
 

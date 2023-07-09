@@ -1,6 +1,6 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/3F5B0", func_8003E9B0);
+INCLUDE_ASM("asm/nonmatchings/3F5B0", RunDecisionTree);
 
 INCLUDE_ASM("asm/nonmatchings/3F5B0", func_8003ECB0);
 

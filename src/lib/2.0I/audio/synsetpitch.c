@@ -1,3 +1,3 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/synsetpitch", func_8008B010);
+INCLUDE_ASM("asm/nonmatchings/../src/lib/2.0I/audio/synsetpitch", alSynSetPitch);
