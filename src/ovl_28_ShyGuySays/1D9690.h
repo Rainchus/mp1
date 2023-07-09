@@ -50,6 +50,36 @@ typedef struct unkStruct_ShyGuySays_04 {
 /* 0x0C */ char unk_0C[0x184];
 } unkStruct_ShyGuySays_04;
 
+typedef struct unkShyGuySaysStruct {
+    /* 0x000 */ s16 unk0;
+    /* 0x004 */ s32 unk4;                           /* inferred */
+    /* 0x008 */ s16 unk8;                           /* inferred */
+    /* 0x00A */ s16 unkA;                           /* inferred */
+    /* 0x00C */ s16 unkC;                           /* inferred */
+    /* 0x00E */ s16 unkE;                           /* inferred */
+    /* 0x010 */ s32 unk10;                          /* inferred */
+    /* 0x014 */ s32 unk14;                          /* inferred */
+    /* 0x018 */ s32 unk18;                          /* inferred */
+    /* 0x01C */ char pad1C[0x10];                   /* maybe part of unk18[5]? */
+    /* 0x02C */ f32 unk2C;                          /* inferred */
+    /* 0x030 */ f32 unk30;                          /* inferred */
+    /* 0x034 */ f32 unk34;                          /* inferred */
+    /* 0x038 */ char pad38[0xC];                    /* maybe part of unk34[4]? */
+    /* 0x044 */ f32 unk44;                          /* inferred */
+    /* 0x048 */ f32 unk48;                          /* inferred */
+    /* 0x04C */ f32 unk4C;                          /* inferred */
+    /* 0x050 */ char pad50[0x30];                   /* maybe part of unk4C[0xD]? */
+    /* 0x080 */ s32 unk80;                          /* inferred */
+    /* 0x084 */ s32 unk84;                          /* inferred */
+    /* 0x088 */ u16 unk88;                          /* inferred */
+    /* 0x08A */ s16 unk8A;                          /* inferred */
+    /* 0x08C */ s16 unk8C;                          /* inferred */
+    /* 0x08E */ s16 unk8E;                          /* inferred */
+    /* 0x090 */ s16 unk90;                          /* inferred */
+    /* 0x092 */ s16 unk92;                          /* inferred */
+    /* 0x094 */ char pad94[0x70];                   /* maybe part of unk92[0x39]? */
+} unkShyGuySaysStruct;                                /* size = 0x104 */
+
 extern unkStruct_ShyGuySays_05* D_800FDC64;
 //extern unkStructShyGuySays_02* D_800F2B7C;
 extern unkStruct_ShyGuySays_01 D_800FD9CE[];

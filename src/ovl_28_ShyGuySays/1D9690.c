@@ -417,7 +417,54 @@ void func_800F9D14_1DCDC4(s16 arg0) {
     }
 }
 
-INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F9D80_1DCE30);
+void func_800F9D80_1DCE30(unkShyGuySaysStruct* arg0, u16 playerIndex) {
+    func_8009B770((unkGlobalStruct_00* ) arg0, 0, 0x94);
+    arg0->unk0 = 1;
+    arg0->unk4 = 0;
+    arg0->unk8 = -1;
+    arg0->unkA = -1;
+    arg0->unkC = 0;
+    arg0->unkE = 4;
+    arg0->unk10 = 1;
+    arg0->unk14 = 1;
+    arg0->unkA = (s16) (func_800F740C_1DA4BC(5U) + 1);
+    arg0->unk18 = (s32) (arg0->unkA + (func_800F740C_1DA4BC(0x19U) & 0xFFFF));
+    switch (playerIndex) {
+    case 0:
+        arg0->unk2C = -110.0f;
+        arg0->unk34 = 220.0f;
+        arg0->unk44 = -110.0f;
+        arg0->unk4C = 250.0f;
+        break;
+    case 1:
+        arg0->unk2C = -70.0f;
+        arg0->unk34 = 150.0f;
+        arg0->unk44 = -70.0f;
+        arg0->unk4C = 170.0f;
+        break;
+    case 2:
+        arg0->unk2C = 70.0f;
+        arg0->unk34 = 150.0f;
+        arg0->unk44 = 70.0f;
+        arg0->unk4C = 170.0f;
+        break;
+    case 3:
+        arg0->unk2C = 110.0f;
+        arg0->unk34 = 220.0f;
+        arg0->unk44 = 110.0f;
+        arg0->unk4C = 250.0f;
+    }
+    arg0->unk30 = 90.0f;
+    arg0->unk48 = 50.0f;
+    arg0->unk80 = (s32) (func_800F740C_1DA4BC(0x168U) & 0xFFFF);
+    arg0->unk84 = 0;
+    arg0->unk88 = func_800F740C_1DA4BC(0x168U);
+    arg0->unk8A = 0;
+    arg0->unk8C = 0;
+    arg0->unk8E = 0;
+    arg0->unk90 = 0;
+    arg0->unk92 = 0;
+}
 
 INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F9F60_1DD010);
 
