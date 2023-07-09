@@ -110,7 +110,7 @@ INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F74E8_192608);
 INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F7EC4_192FE4);
 
 void func_800F821C_19333C(unkObjectStruct* arg0) {
-    unkGlobalStruct_00* temp_s1 = arg0->unk_50;
+    UnkBumberBallsStruct* temp_s1 = arg0->unk_50;
     s32 temp_v1 = arg0->unk_10;
 
     if (temp_v1 != 0) {
@@ -123,7 +123,6 @@ void func_800F821C_19333C(unkObjectStruct* arg0) {
     if (temp_s1->unk_00 != 5) {
         func_8005D95C(arg0, arg0->unk_18, (2.0f * func_800AEAC0(temp_s1->unk_50)) + arg0->unk_1C, arg0->unk_20);
         temp_s1->unk_50 = temp_s1->unk_50 + 8.0f;
-        temp_s1->unk_50 = temp_s1->unk_50;
         
         if (temp_s1->unk_50 >= 360.0f) {
             temp_s1->unk_50 = temp_s1->unk_50 - 360.0f;
@@ -192,26 +191,20 @@ s32 func_800F9EE0_195000(void) {
 
 INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800F9F30_195050);
 
-s32 func_800FA36C_19548C(unkObjectStruct* arg0) { //slightly jank match
+s32 func_800FA36C_19548C(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp_v1 = arg0->unk_50;
-    s32 tempVar;
-    
-    if ((u32)(temp_v1->unk_00 - 3) <= 1U) {
+
+    if (temp_v1->unk_00 == 3 || temp_v1->unk_00 == 4 || temp_v1->unk_00 == 5) {
         return 1;
     } else {
-        if (temp_v1->unk_00 != 5) {
-            tempVar = 0;
-            return tempVar;
-        } else {
-            return 1;
-        }
+        return 0;
     }
 }
 
 INCLUDE_ASM(s32, "ovl_1E_BumperBalls/191700", func_800FA3A0_1954C0);
 
 void func_800FA510_195630(unkObjectStruct* arg0) {
-    switch ((u16)((unkGlobalStruct_00*) arg0->unk_50)->unk_40.signed32) {
+    switch (((UnkBumberBallsStruct*) arg0->unk_50)->unk_42) {
     case 1:
         func_800FA5A4_1956C4();
         return;

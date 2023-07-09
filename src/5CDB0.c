@@ -349,7 +349,24 @@ INCLUDE_ASM(s32, "5CDB0", func_80060440);
 
 INCLUDE_ASM(s32, "5CDB0", func_80060468);
 
-INCLUDE_ASM(s32, "5CDB0", func_80060540);
+s16 func_80060540(s16 arg0, s16 arg1) {
+    s16 temp_v0;
+
+    if (D_800C5976 == 0) {
+        return 0;
+    }
+
+    temp_v0 = func_80012C7C(arg0);
+
+    if (temp_v0 > 0) {
+        if (D_800D89B2[temp_v0] == -1) {
+            D_800D89B2[temp_v0] = func_80010ED4(arg0, arg1);
+        }
+        return D_800D89B2[temp_v0];
+    } else {
+        return func_80010ED4(arg0, arg1);
+    }
+}
 
 INCLUDE_ASM(s32, "5CDB0", func_80060618);
 
@@ -361,7 +378,9 @@ INCLUDE_ASM(s32, "5CDB0", func_80060758);
 
 INCLUDE_ASM(s32, "5CDB0", func_800607A8);
 
-INCLUDE_ASM(s32, "5CDB0", func_800607C4);
+void func_800607C4(s16 arg0, s16 arg1) {
+    func_8001249C(arg0, arg1);
+}
 
 INCLUDE_ASM(s32, "5CDB0", func_800607E8);
 

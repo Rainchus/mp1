@@ -92,7 +92,7 @@ s32 LoadFormBinary(u8* arg0, u32 arg1) {
     temp_s0->unk_48 = temp_s0->unk_0A = temp_s0->unk_50 =
         temp_s0->unk_54 = temp_s0->unk_0E = temp_s0->unk_5C =
         temp_s0->unk_60 = temp_s0->unk_16 = temp_s0->unk_68 = 0;
-    temp_s0->unk_4C.float32 = temp_s0->unk_58 = temp_s0->unk_64 = 1.0f;
+    temp_s0->unk_4C = temp_s0->unk_58 = temp_s0->unk_64 = 1.0f;
     temp_s0->unk_1A = temp_s0->unk_0C = temp_s0->unk_14 = -1;
     temp_s0->unk_24 = temp_s0->unk_28 = temp_s0->unk_2C = 0.0f;
     temp_s0->unk_30 = temp_s0->unk_34 = temp_s0->unk_38 = 0.0f;
@@ -161,7 +161,23 @@ INCLUDE_ASM(s32, "24740", func_80025B34);
 
 INCLUDE_ASM(s32, "24740", func_80025BB8);
 
-INCLUDE_ASM(s32, "24740", func_80025C20);
+void func_80025C20(s16 arg0, s16 arg1, s16 arg2, s16 arg3, s16 arg4) {
+    unk_ovl_2D_struct* temp_a0 = &D_800F2B7C[arg0];
+
+    if (temp_a0->unk_0C != -1) {
+        temp_a0->unk_08 = temp_a0->unk_0C;
+        temp_a0->unk_48 = temp_a0->unk_54;
+        temp_a0->unk_0A = temp_a0->unk_0E;
+        temp_a0->unk_50 = temp_a0->unk_5C;
+    }
+
+    temp_a0->unk_0C = arg1;
+    temp_a0->unk_54 = arg2;
+    temp_a0->unk_12 = 0;
+    temp_a0->unk_10 = arg3;
+    temp_a0->unk_0E = arg4;
+    temp_a0->unk_5C = 0.0f;
+}
 
 INCLUDE_ASM(s32, "24740", func_80025CA8);
 
