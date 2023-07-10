@@ -59,7 +59,7 @@ void func_800F7874_CECE4(unkObjectStruct*);
 void func_800F7E20_CF290(void);
 void func_800F8F58_D03C8(void);
 u16 func_800F901C_D048C(void);
-s32 func_800F9BC8_D1038(unkObjectStruct*);
+s16 func_800F9BC8_D1038(unkObjectStruct*);
 void func_800F830C_CF77C(void);
 void func_800F94E0_D0950(void);
 void func_800F89A8_CFE18(void);

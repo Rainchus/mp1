@@ -1,226 +1,12 @@
 #include "common.h"
 #include "engine/graphics.h"
 #include "mallocblock.h"
-#include "PR/gbi.h"
-#include "PR/mbi.h"
-
-typedef struct Color_RGB8 {
-    /* 0x00 */ u8 r;
-    /* 0x01 */ u8 g;
-    /* 0x02 */ u8 b;
-} Color_RGB8; //sizeof 3
 
 typedef struct unk2C0C0Struct10 {
     /* 0x00 */ Hilite unk_00;
     /* 0x10 */ char unk_10[0x30];
     /* 0x40 */ LookAt unk_40;
 } unk2C0C0Struct10; //sizeof 0x60
-
-typedef struct unk2C0C0Struct20 {
-    /* 0x00 */ u8 unk_00;
-    /* 0x01 */ char unk_01[3];
-    /* 0x04 */ s16 unk_04[2]; // unknown array size
-    /* 0x08 */ char unk_08[4];
-    /* 0x0C */ f32 unk_0C[1]; // unknown array size
-    /* 0x10 */ char unk_10[0xC];
-    /* 0x1C */ f32 unk_1C[1]; // unknown array size
-    /* 0x20 */ char unk_20[0xC];
-    /* 0x2C */ u8 unk_2C[4]; // unknown array size
-    /* 0x30 */ s16 unk_30;
-    /* 0x32 */ s16 unk_32;
-} unk2C0C0Struct20; //sizeof 0x34
-
-typedef struct unk2C0C0Struct30 {
-    /* 0x00 */ s16 unk_00;
-    /* 0x02 */ s16 unk_02;
-    /* 0x04 */ u16 unk_04;
-    /* 0x06 */ char unk_06[2];
-    /* 0x08 */ s16 unk_08;
-    /* 0x0A */ u16 unk_0A;
-    /* 0x0C */ u16 unk_0C;
-    /* 0x0E */ s16 unk_0E;
-    /* 0x10 */ u16 unk_10;
-    /* 0x12 */ s16 unk_12;
-    /* 0x14 */ u32 unk_14;
-    /* 0x18 */ char unk_18[0x18];
-    /* 0x30 */ u8 unk_30;
-    /* 0x31 */ char unk_31[3];
-    /* 0x34 */ unk2C0C0Struct20* unk_34;
-    /* 0x38 */ char unk_38[0x12];
-    /* 0x4A */ s16 unk_4A;
-    /* 0x4C */ s16 unk_4C;
-    /* 0x4E */ s16 unk_4E;
-    /* 0x50 */ s16 unk_50;
-    /* 0x52 */ s16 unk_52;
-    /* 0x54 */ s16 unk_54;
-    /* 0x56 */ char unk_56[2];
-    /* 0x58 */ struct unk2C0C0StructC0* unk_58;
-} unk2C0C0Struct30; //sizeof 0x5C
-
-typedef struct unk2C0C0Struct40 {
-    /* 0x00 */ s16 unk_00;
-    /* 0x02 */ s16 unk_02;
-    /* 0x04 */ s16 unk_04;
-    /* 0x02 */ char unk_06[2];
-    /* 0x08 */ f32 unk_08;
-    /* 0x0C */ f32 unk_0C;
-    /* 0x10 */ f32 unk_10;
-    /* 0x14 */ f32 unk_14;
-    /* 0x18 */ f32 unk_18;
-    /* 0x1C */ f32 unk_1C;
-    /* 0x20 */ f32 unk_20;
-    /* 0x24 */ f32 unk_24;
-    /* 0x28 */ f32 unk_28;
-    /* 0x2C */ f32 unk_2C;
-    /* 0x30 */ f32 unk_30;
-    /* 0x34 */ f32 unk_34;
-    /* 0x38 */ f32 unk_38;
-    /* 0x3C */ f32 unk_3C;
-    /* 0x40 */ f32 unk_40;
-    /* 0x44 */ char unk_44[4];
-    /* 0x48 */ struct unk2C0C0StructC0* unk_48;
-    /* 0x4C */ Matrix4f unk_4C;
-} unk2C0C0Struct40; //sizeof 0x8C
-
-typedef struct unk2C0C0Struct50 {
-    /* 0x00 */ s16 unk_00;
-    /* 0x02 */ char unk_02[2];
-    /* 0x04 */ s16* unk_04;
-    /* 0x08 */ f32 unk_08;
-    /* 0x0C */ f32 unk_0C;
-    /* 0x10 */ f32 unk_10;
-    /* 0x14 */ f32 unk_14;
-    /* 0x18 */ f32 unk_18;
-    /* 0x1C */ f32 unk_1C;
-    /* 0x20 */ f32 unk_20;
-    /* 0x24 */ f32 unk_24;
-    /* 0x28 */ f32 unk_28;
-    /* 0x2C */ char unk_2C[0xC];
-    /* 0x38 */ f32 unk_38;
-    /* 0x3C */ f32 unk_3C;
-    /* 0x40 */ f32 unk_40;
-    /* 0x44 */ f32 unk_44;
-    /* 0x48 */ f32 unk_48;
-    /* 0x4C */ f32 unk_4C;
-    /* 0x50 */ f32 unk_50;
-    /* 0x54 */ f32 unk_54;
-    /* 0x58 */ f32 unk_58;
-    /* 0x5C */ char unk_5C[4];
-    /* 0x60 */ struct unk2C0C0StructC0* unk_60;
-    /* 0x64 */ Matrix4f unk_64;
-} unk2C0C0Struct50; //sizeof 0xA4
-
-typedef struct unk2C0C0Struct60 {
-    /* 0x00 */ char unk_00[0x1A];
-    /* 0x1A */ s16 unk_1A;
-    /* 0x1C */ char unk_1C[8];
-    /* 0x2C */ s32 unk_24;
-} unk2C0C0Struct60; //sizeof unknown
-
-typedef struct unk2C0C0Struct70 {
-    /* 0x00 */ char unk_00[0x18];
-    /* 0x1A */ u8 unk_18;
-    /* 0x1B */ u8 unk_19;
-    /* 0x1A */ u8 unk_1A;
-    /* 0x1B */ u8 unk_1B;
-    /* 0x1C */ char unk_1C[8];
-    /* 0x24 */ s32 unk_24;
-    /* 0x28 */ char unk_28[4];
-    /* 0x2C */ unk2C0C0Struct60* unk_2C;
-} unk2C0C0Struct70; //sizeof unknown
-
-typedef struct unk2C0C0Struct80 {
-    /* 0x00 */ s8 unk_00;
-    /* 0x01 */ s8 unk_01;
-    /* 0x02 */ s8 unk_02;
-    /* 0x03 */ s8 unk_03;
-    /* 0x04 */ s8 unk_04;
-    /* 0x05 */ u8 unk_05;
-    /* 0x06 */ u8 unk_06;
-    /* 0x07 */ u8 unk_07;
-    /* 0x08 */ char unk_08;
-    /* 0x09 */ u8 unk_09;
-    /* 0x0A */ char unk_0A[2];
-    /* 0x0C */ unk2C0C0Struct70* unk_0C;
-} unk2C0C0Struct80 ; //sizeof 0x10
-
-typedef struct unk2C0C0Struct90 {
-    /* 0x00 */ char unk_00;
-    /* 0x01 */ u8 unk_01;
-    /* 0x02 */ u8 unk_02;
-    /* 0x03 */ u8 unk_03;
-    /* 0x04 */ char unk_04;
-    /* 0x05 */ Color_RGB8 unk_05;
-    /* 0x08 */ char unk_08;
-    /* 0x09 */ s8 unk_09;
-    /* 0x0A */ s8 unk_0A;
-    /* 0x0B */ s8 unk_0B;
-    /* 0x0C */ s8 unk_0C;
-    /* 0x0D */ char unk_0D;
-} unk2C0C0Struct90; //sizeof 0xE
-
-typedef struct unk2C0C0StructA0 {
-    /* 0x00 */ s16 unk_00;
-    /* 0x02 */ s16 unk_02;
-    /* 0x04 */ s16 unk_04;
-} unk2C0C0StructA0; //sizeof 6
-
-typedef struct unk2C0C0StructB0 {
-    /* 0x00 */ u8 unk_00;
-    /* 0x01 */ char unk_01;
-    /* 0x02 */ s16 unk_02[1]; // unknown array size
-    /* 0x04 */ char unk_04[8];
-    /* 0x08 */ f32 unk_0C;
-    /* 0x10 */ f32 unk_10;
-    /* 0x14 */ f32 unk_14;
-} unk2C0C0StructB0; //sizeof 0x18
-
-typedef struct unk2C0C0StructC0 {
-    /* 0x00 */ Gfx** unk_00;
-    /* 0x04 */ struct unk2C0C0StructE0* unk_04;
-    /* 0x08 */ struct unk2C0C0StructE0* unk_08[8];
-    /* 0x28 */ u8 unk_28;
-    /* 0x29 */ char unk_29;
-    /* 0x2A */ s8 unk_2A;
-    /* 0x2B */ s8 unk_2B;
-    /* 0x2C */ s8 unk_2C;
-    /* 0x2D */ s8 unk_2D;
-    /* 0x2E */ s8 unk_2E;
-    /* 0x2F */ s8 unk_2F;
-    /* 0x30 */ s8 unk_30;
-    /* 0x31 */ s8 unk_31;
-    /* 0x32 */ char unk_32[0x32];
-    /* 0x64 */ u8 unk_64;
-    /* 0x65 */ char unk_65[3];
-    /* 0x68 */ u16 unk_68;
-    /* 0x6A */ s16 unk_6A;
-    /* 0x6C */ s16 unk_6C;
-    /* 0x6E */ s16 unk_6E;
-    /* 0x70 */ s16 unk_70;
-    /* 0x72 */ u16 unk_72;
-    /* 0x74 */ s16 unk_74;
-    /* 0x76 */ char unk_76[2];
-    /* 0x78 */ unk2C0C0StructA0* unk_78;
-    /* 0x7C */ Color_RGB8* unk_7C;
-    /* 0x80 */ unk2C0C0Struct30* unk_80;
-    /* 0x84 */ s16 unk_84;
-    /* 0x86 */ char unk_86[2];
-    /* 0x88 */ unk2C0C0Struct40* unk_88;
-    /* 0x8C */ char unk_8C[0x14];
-    /* 0xA0 */ unk2C0C0Struct50* unk_A0;
-    /* 0xA4 */ unk2C0C0Struct80* unk_A4;
-    /* 0xA8 */ unk2C0C0Struct90* unk_A8;
-    /* 0xAC */ s32 unk_AC;
-    /* 0xB0 */ s32 unk_B0;
-    /* 0xB4 */ s32 unk_B4;
-    /* 0xB8 */ s32 unk_B8;
-    /* 0xBC */ unk2C0C0Struct70* unk_BC;
-    /* 0xC0 */ s32 unk_C0;
-    /* 0xC4 */ s32 unk_C4;
-    /* 0xC8 */ s32 unk_C8;
-    /* 0xCC */ s32 unk_CC;
-    /* 0xD0 */ unk2C0C0StructB0* unk_D0;
-} unk2C0C0StructC0; //sizeof unknown
 
 typedef struct unk2C0C0StructD0 {
     /* 0x00 */ s16 unk_00;
@@ -230,17 +16,6 @@ typedef struct unk2C0C0StructD0 {
     /* 0x0C */ unk2C0C0Struct90* unk_0C;
     /* 0x10 */ unk2C0C0Struct80* unk_10;
 } unk2C0C0StructD0; //sizeof 0x14
-
-typedef struct unk2C0C0StructE0 {
-    /* 0x00 */ s16 unk_00;
-    /* 0x02 */ s16 unk_02;
-    /* 0x04 */ s16 unk_04;
-    /* 0x06 */ char unk_06[2];
-    /* 0x08 */ s16 unk_08;
-    /* 0x0A */ s16 unk_0A;
-    /* 0x0C */ Color_RGB8 unk_0C;
-    /* 0x0F */ u8 unk_0F;
-} unk2C0C0StructE0; //sizeof 0x10
 
 typedef struct unk2C0C0StructF0 {
     /* 0x00 */ char unk_00[0x40];
@@ -326,7 +101,7 @@ extern u16 D_800EC6F2;
 extern u32 D_800EC6F4;
 extern s32 D_800ECB14;
 extern Light* D_800ECB28;
-extern s8 D_800ECB30;
+extern u8 D_800ECB30;
 extern u8 D_800ED0C8;
 extern s16 D_800ED0D0;
 extern unk2C0C0StructF0* D_800ED0D8[];
@@ -354,7 +129,7 @@ extern unk2C0C0Struct10* D_800F09FC;
 extern s64 D_800F0A60;
 extern u8 D_800F2CF9;
 extern s16 D_800F3100;
-extern s32 D_800F328C;
+extern u8* D_800F328C;
 extern s16 D_800F3292;
 extern s8 D_800F329C;
 extern s16 D_800F33D4;
@@ -396,7 +171,7 @@ extern unk2C0C0StructE0* D_800F6500[];
 extern s16 D_800F6538[];
 extern s16 D_800F65DA;
 
-void func_8002B4C0(void* (*arg0)(s32), void (*arg1)(unkMallocBlockStruct*), u16 arg2, u16 arg3, u16 arg4, u8 arg5) {
+void func_8002B4C0(void* (*arg0)(s32), void (*arg1)(void*), u16 arg2, u16 arg3, u16 arg4, u8 arg5) {
     s16 i;
 
     D_800F37DA = arg5;
@@ -502,8 +277,7 @@ void func_8002B890(unk2C0C0StructC0* arg0) {
     temp_s7 = D_800F50BC;
     temp_s6 = D_800EE992;
 
-    // Cast can be removed once func_80023684 is updated to return void*
-    arg0->unk_00 = (Gfx**) func_80023684(arg0->unk_6A * sizeof(Gfx*), D_800EE32E);
+    arg0->unk_00 = func_80023684(arg0->unk_6A * sizeof(Gfx*), D_800EE32E);
 
     D_800F50BC = HuMemAlloc(4096 * sizeof(unk2C0C0StructE0));
     if (D_800F50BC == NULL) {
@@ -529,7 +303,7 @@ void func_8002B890(unk2C0C0StructC0* arg0) {
         D_800EE732 = 0;
         D_800EE322 = 0;
         D_800F37B0 = D_800F0A60 = 0xFFFFFFFF;
-        D_800F328C = 0;
+        D_800F328C = NULL;
 
         func_80033FB0(&D_800F37DC, 1, 0);
 
@@ -558,16 +332,14 @@ void func_8002B890(unk2C0C0StructC0* arg0) {
         gSPEndDisplayList(D_800F37DC++);
 
         temp_s0_2 = (D_800F37DC - var_s4) * sizeof(Gfx);
-        // Cast can be removed once func_80023684 is updated to return void*
-        arg0->unk_00[i] = (Gfx*) func_80023684(temp_s0_2, D_800EE32E);
+        arg0->unk_00[i] = func_80023684(temp_s0_2, D_800EE32E);
         func_80023A38(var_s4, arg0->unk_00[i], temp_s0_2);
     }
 
     arg0->unk_72 = D_800EE992;
     arg0->unk_74 = D_800F546A;
 
-    // Cast can be removed once func_80023684 is updated to return void*
-    temp_v0 = (unk2C0C0StructE0*) func_80023684(D_800EE992 * sizeof(unk2C0C0StructE0), D_800EE32E);
+    temp_v0 = func_80023684(D_800EE992 * sizeof(unk2C0C0StructE0), D_800EE32E);
     func_80023A38(D_800F50BC, temp_v0, D_800EE992 * sizeof(unk2C0C0StructE0));
     arg0->unk_04 = temp_v0;
 
@@ -602,8 +374,7 @@ void func_8002BCD4(unk2C0C0StructC0* arg0) {
     }
 
     if (var_a3 && arg0->unk_D0 == NULL) {
-        // Cast can be removed once func_80023684 is updated to return void*
-        arg0->unk_D0 = (unk2C0C0StructB0*) func_80023684(var_a2 * sizeof(unk2C0C0StructB0), D_800EE32E);
+        arg0->unk_D0 = func_80023684(var_a2 * sizeof(unk2C0C0StructB0), D_800EE32E);
     }
 }
 
@@ -801,18 +572,18 @@ void func_8002C400(unk2C0C0StructC0* arg0, s16 arg1) {
         var_s3 = 1;
     } else {
         func_800A2A50(sp10);
-        if (temp_s1->unk_2C != 0.0f || temp_s1->unk_30 != 0.0f || temp_s1->unk_34 != 0.0f) {
-            MtxTranslate(sp10, temp_s1->unk_2C, temp_s1->unk_30, temp_s1->unk_34);
+        if (temp_s1->unk_2C.x != 0.0f || temp_s1->unk_2C.y != 0.0f || temp_s1->unk_2C.z != 0.0f) {
+            MtxTranslate(sp10, temp_s1->unk_2C.x, temp_s1->unk_2C.y, temp_s1->unk_2C.z);
             var_s3 = 1;
         }
-        if (temp_s1->unk_38 != 0.0f || temp_s1->unk_3C != 0.0f || temp_s1->unk_40 != 0.0f) {
-            MtxRotate(sp10, temp_s1->unk_38, temp_s1->unk_3C, temp_s1->unk_40);
+        if (temp_s1->unk_38.x != 0.0f || temp_s1->unk_38.y != 0.0f || temp_s1->unk_38.z != 0.0f) {
+            MtxRotate(sp10, temp_s1->unk_38.x, temp_s1->unk_38.y, temp_s1->unk_38.z);
             var_s3 = 1;
         }
-        if (temp_s1->unk_20 != 1.0f || temp_s1->unk_24 != 1.0f || temp_s1->unk_28 != 1.0f) {
-            MtxScale(sp10, temp_s1->unk_20, temp_s1->unk_24, temp_s1->unk_28);
+        if (temp_s1->unk_20.x != 1.0f || temp_s1->unk_20.y != 1.0f || temp_s1->unk_20.z != 1.0f) {
+            MtxScale(sp10, temp_s1->unk_20.x, temp_s1->unk_20.y, temp_s1->unk_20.z);
             func_800A2A50(sp50);
-            MtxScale(sp50, temp_s1->unk_20, temp_s1->unk_24, temp_s1->unk_28);
+            MtxScale(sp50, temp_s1->unk_20.x, temp_s1->unk_20.y, temp_s1->unk_20.z);
             D_800F5030++;
             MtxMult(sp50, D_800F3FE0[D_800F5030], D_800F3FE0[D_800F5030 + 1]);
             var_s5 = 1;
@@ -877,36 +648,36 @@ void func_8002C858(unk2C0C0StructC0* arg0, s32 arg1) {
 
     if (arg0->unk_AC == 0) {
         MtxMult(temp_s1->unk_64, D_800F54C0[0], sp10);
-        if (temp_s1->unk_20 != 1.0f || temp_s1->unk_24 != 1.0f || temp_s1->unk_28 != 1.0f) {
-            func_8009E7E0(sp50, temp_s1->unk_20, temp_s1->unk_24, temp_s1->unk_28);
+        if (temp_s1->unk_20.x != 1.0f || temp_s1->unk_20.y != 1.0f || temp_s1->unk_20.z != 1.0f) {
+            func_8009E7E0(sp50, temp_s1->unk_20.x, temp_s1->unk_20.y, temp_s1->unk_20.z);
             D_800F5030++;
             MtxMult(sp50, D_800F3FE0[D_800F5030], D_800F3FE0[D_800F5030 + 1]);
             var_s7 = 1;
         }
     } else {
-        if (temp_s1->unk_38 != 0.0f || temp_s1->unk_3C != 0.0f || temp_s1->unk_40 != 0.0f) {
+        if (temp_s1->unk_38.x != 0.0f || temp_s1->unk_38.y != 0.0f || temp_s1->unk_38.z != 0.0f) {
             if (var_s4 != 0) {
-                MtxTranslate(sp10, temp_s1->unk_38, temp_s1->unk_3C, temp_s1->unk_40);
+                MtxTranslate(sp10, temp_s1->unk_38.x, temp_s1->unk_38.y, temp_s1->unk_38.z);
             } else {
-                func_8009EA40(sp10, temp_s1->unk_38, temp_s1->unk_3C, temp_s1->unk_40);
+                func_8009EA40(sp10, temp_s1->unk_38.x, temp_s1->unk_38.y, temp_s1->unk_38.z);
             }
             var_s4 = 1;
         }
-        if (temp_s1->unk_44 != 0.0f || temp_s1->unk_48 != 0.0f || temp_s1->unk_4C != 0.0f) {
+        if (temp_s1->unk_44.x != 0.0f || temp_s1->unk_44.y != 0.0f || temp_s1->unk_44.z != 0.0f) {
             if (var_s4 != 0) {
-                MtxRotate(sp10, temp_s1->unk_44, temp_s1->unk_48, temp_s1->unk_4C);
+                MtxRotate(sp10, temp_s1->unk_44.x, temp_s1->unk_44.y, temp_s1->unk_44.z);
             } else {
-                func_8009ECB0(&sp10[0], temp_s1->unk_44, temp_s1->unk_48, temp_s1->unk_4C);
+                func_8009ECB0(&sp10[0], temp_s1->unk_44.x, temp_s1->unk_44.y, temp_s1->unk_44.z);
             }
             var_s4 = 1;
         }
-        if (temp_s1->unk_50 != 1.0f || temp_s1->unk_54 != 1.0f || temp_s1->unk_58 != 1.0f) {
+        if (temp_s1->unk_50.x != 1.0f || temp_s1->unk_50.y != 1.0f || temp_s1->unk_50.z != 1.0f) {
             if (var_s4 != 0) {
-                MtxScale(sp10, temp_s1->unk_50, temp_s1->unk_54, temp_s1->unk_58);
+                MtxScale(sp10, temp_s1->unk_50.x, temp_s1->unk_50.y, temp_s1->unk_50.z);
             } else {
-                func_8009E7E0(sp10, temp_s1->unk_50, temp_s1->unk_54, temp_s1->unk_58);
+                func_8009E7E0(sp10, temp_s1->unk_50.x, temp_s1->unk_50.y, temp_s1->unk_50.z);
             }
-            func_8009E7E0(sp50, temp_s1->unk_50, temp_s1->unk_54, temp_s1->unk_58);
+            func_8009E7E0(sp50, temp_s1->unk_50.x, temp_s1->unk_50.y, temp_s1->unk_50.z);
             D_800F5030++;
             MtxMult(sp50, D_800F3FE0[D_800F5030], D_800F3FE0[D_800F5030 + 1]);
             var_s7 = 1;
@@ -992,7 +763,7 @@ void func_8002CDEC(unk2C0C0StructC0* arg0, s16 arg1) {
         func_80039D10(arg0);
     }
 
-    if (temp_s0->unk_02 != -1 || (arg0->unk_B8 != 0 && arg0->unk_A8[temp_s0->unk_00].unk_0C & 4)) {
+    if (temp_s0->unk_02 != -1 || (arg0->unk_B8 != NULL && arg0->unk_A8[temp_s0->unk_00].unk_0C & 4)) {
         unk2C0C0Struct90* temp_a0 = &arg0->unk_A8[temp_s0->unk_00];
         gDPSetPrimColor(D_800F37DC++, 0, 0, temp_a0->unk_05.r, temp_a0->unk_05.g, temp_a0->unk_05.b, temp_s0->unk_02);
     }
@@ -1151,7 +922,7 @@ Gfx* func_8002D614(s16 arg0, Gfx* arg1, Gfx* arg2) {
         D_800F0A60 = 0xFFFFFFFF;
         D_800F37B0 = 0xFFFFFFFF;
         D_800F375C = 0xFFFFFFFF;
-        D_800F328C = 0;
+        D_800F328C = NULL;
 
         gSPNumLights(D_800F37DC++, D_800EE9A0[0]);
 
@@ -1384,7 +1155,7 @@ void func_8002E488(unk2C0C0StructC0* arg0, u32* arg1) {
     u16 var_s0;
     u16 var_s1;
     u16 var_s2;
-    s32 var_t0;
+    u8* var_t0;
     s32 var_a0;
     s16 i;
 
@@ -1524,7 +1295,7 @@ void func_8002E488(unk2C0C0StructC0* arg0, u32* arg1) {
             D_800F328C = temp_a3->unk_24;
 
             if (temp_s4->unk_03 != -1) {
-                var_t0 = temp_s4->unk_03 << 24;
+                var_t0 = (u8*) (temp_s4->unk_03 << 24);
                 *arg1 |= 0x40000;
             } else {
                 var_t0 = temp_a3->unk_24;
@@ -1884,7 +1655,7 @@ void func_80032C98(unk2C0C0StructC0* arg0, s16 arg1) {
         gDPSetRenderMode(D_800F37DC++, G_RM_ZB_OVL_SURF, G_RM_ZB_OVL_SURF2);
     }
 
-    D_800F328C = 0;
+    D_800F328C = NULL;
     D_800F0A60 = 0xFFFFFFFF;
     D_800F37B0 = 0xFFFFFFFF;
 }
@@ -1955,21 +1726,21 @@ void func_800339E0(unk2C0C0StructC0* arg0, s16 arg1) {
     func_800A2A50(sp10);
 
     if (arg0->unk_AC == 0) {
-        if (temp_s1->unk_08 != 0.0f || temp_s1->unk_0C != 0.0f || temp_s1->unk_10 != 0.0f) {
-            MtxTranslate(sp10, temp_s1->unk_08, temp_s1->unk_0C, temp_s1->unk_10);
+        if (temp_s1->unk_08.x != 0.0f || temp_s1->unk_08.y != 0.0f || temp_s1->unk_08.z != 0.0f) {
+            MtxTranslate(sp10, temp_s1->unk_08.x, temp_s1->unk_08.y, temp_s1->unk_08.z);
             var_s0 = 1;
         }
 
-        if (temp_s1->unk_14 != 0.0f || temp_s1->unk_18 != 0.0f || temp_s1->unk_1C != 0.0f) {
-            MtxRotate(sp10, temp_s1->unk_14, temp_s1->unk_18, temp_s1->unk_1C);
+        if (temp_s1->unk_14.x != 0.0f || temp_s1->unk_14.y != 0.0f || temp_s1->unk_14.z != 0.0f) {
+            MtxRotate(sp10, temp_s1->unk_14.x, temp_s1->unk_14.y, temp_s1->unk_14.z);
             var_s0 = 1;
         }
     }
 
-    if (temp_s1->unk_20 != 1.0f || temp_s1->unk_24 != 1.0f || temp_s1->unk_28 != 1.0f) {
-        MtxScale(sp10, temp_s1->unk_20, temp_s1->unk_24, temp_s1->unk_28);
+    if (temp_s1->unk_20.x != 1.0f || temp_s1->unk_20.y != 1.0f || temp_s1->unk_20.z != 1.0f) {
+        MtxScale(sp10, temp_s1->unk_20.x, temp_s1->unk_20.y, temp_s1->unk_20.z);
         func_800A2A50(sp50);
-        MtxScale(sp50, temp_s1->unk_20, temp_s1->unk_24, temp_s1->unk_28);
+        MtxScale(sp50, temp_s1->unk_20.x, temp_s1->unk_20.y, temp_s1->unk_20.z);
 
         D_800F5030++;
         MtxMult(sp50, D_800F3FE0[D_800F5030], D_800F3FE0[D_800F5030 + 1]);
@@ -2012,20 +1783,20 @@ void func_80033CBC(unk2C0C0StructC0* arg0, s16 arg1) {
 
     func_800A2A50(sp10);
 
-    if (temp_s1->unk_08 != 0.0f || temp_s1->unk_0C != 0.0f || temp_s1->unk_10 != 0.0f) {
-        MtxTranslate(sp10, temp_s1->unk_08, temp_s1->unk_0C, temp_s1->unk_10);
+    if (temp_s1->unk_08.x != 0.0f || temp_s1->unk_08.y != 0.0f || temp_s1->unk_08.z != 0.0f) {
+        MtxTranslate(sp10, temp_s1->unk_08.x, temp_s1->unk_08.y, temp_s1->unk_08.z);
         var_s2 = 1;
     }
 
-    if (temp_s1->unk_14 != 0.0f || temp_s1->unk_18 != 0.0f || temp_s1->unk_1C != 0.0f) {
-        MtxRotate(sp10, temp_s1->unk_14, temp_s1->unk_18, temp_s1->unk_1C);
+    if (temp_s1->unk_14.x != 0.0f || temp_s1->unk_14.y != 0.0f || temp_s1->unk_14.z != 0.0f) {
+        MtxRotate(sp10, temp_s1->unk_14.x, temp_s1->unk_14.y, temp_s1->unk_14.z);
         var_s2 = 1;
     }
 
-    if (temp_s1->unk_20 != 1.0f || temp_s1->unk_24 != 1.0f || temp_s1->unk_28 != 1.0f) {
-        MtxScale(sp10, temp_s1->unk_20, temp_s1->unk_24, temp_s1->unk_28);
+    if (temp_s1->unk_20.x != 1.0f || temp_s1->unk_20.y != 1.0f || temp_s1->unk_20.z != 1.0f) {
+        MtxScale(sp10, temp_s1->unk_20.x, temp_s1->unk_20.y, temp_s1->unk_20.z);
         func_800A2A50(sp50);
-        MtxScale(sp50, temp_s1->unk_20, temp_s1->unk_24, temp_s1->unk_28);
+        MtxScale(sp50, temp_s1->unk_20.x, temp_s1->unk_20.y, temp_s1->unk_20.z);
 
         D_800F5030++;
         MtxMult(sp50, D_800F3FE0[D_800F5030], D_800F3FE0[D_800F5030 + 1]);

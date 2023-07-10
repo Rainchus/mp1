@@ -427,7 +427,7 @@ void func_800F77A8_2581B8(s32 arg0) {
 
 INCLUDE_ASM(s32, "ovl_3E_FirstMap/257020", func_800F77B4_2581C4);
 
-s32 func_800F81F8_258C08(s32 arg0) {
+s16 func_800F81F8_258C08(s32 arg0) {
     s16 temp_s1;
     s16 temp_s1_2;
     void* temp_s0;
@@ -487,7 +487,7 @@ void func_800F83D4_258DE4(void) {
                 D_800ECC22 = 1;
                 func_8005FD7C();
                 D_800F384E = 1;
-                if ((func_800F81F8_258C08(i) << 0x10) != 0) {
+                if (func_800F81F8_258C08(i) != 0) {
                     func_800601D4(0x5A);
                     func_800726AC(0, 0x10);
                     SleepProcess(0x11);

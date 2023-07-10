@@ -104,7 +104,7 @@ void func_800F71C4_CE634(unkObjectStruct* arg0) {
             func_800601D4(0x28);
             return;
         }
-    } else if (((u16) D_800FE2C4 != 0) && ((func_800F9BC8_D1038(D_800F3FB0) << 0x10) != 0)) {
+    } else if (((u16) D_800FE2C4 != 0) && func_800F9BC8_D1038(D_800F3FB0) != 0) {
         D_800FE2C2 = 2;
         D_800ED430 = 0;
         D_800FDE2C = 0;

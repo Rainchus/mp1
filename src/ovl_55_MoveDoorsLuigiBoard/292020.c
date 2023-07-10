@@ -56,7 +56,7 @@ void func_800F7198_292BD8(void) {
     func_8006E070(temp_v0, 0);
     ShowTextWindow(temp_v0);
 
-    while ((func_8006FCC0(temp_v0) << 0x10) != 0) {
+    while (func_8006FCC0(temp_v0) != 0) {
         SleepVProcess();
     }
     
