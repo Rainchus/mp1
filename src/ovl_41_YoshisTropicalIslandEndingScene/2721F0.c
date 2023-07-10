@@ -1,25 +1,25 @@
 #include "2721F0.h"
 
 void func_80108B60_2721F0(unkObjectStruct* arg0) {
-    if ((gPlayers[arg0->unk_4C].playerObj->unk_34 <= 0.0f) && (gPlayers[arg0->unk_4C].playerObj->unk_30 <= 0.0f)) {
-        gPlayers[arg0->unk_4C].playerObj->unk_30 = 0.0f;
+    if ((gPlayers[arg0->unk_4C[0]].playerObj->unk_34 <= 0.0f) && (gPlayers[arg0->unk_4C[0]].playerObj->unk_30 <= 0.0f)) {
+        gPlayers[arg0->unk_4C[0]].playerObj->unk_30 = 0.0f;
         return;
     }
     
-    gPlayers[arg0->unk_4C].playerObj->unk_38 = -4.0f;
-    gPlayers[arg0->unk_4C].playerObj->unk_34 += gPlayers[arg0->unk_4C].playerObj->unk_38;
-    gPlayers[arg0->unk_4C].playerObj->unk_30 += gPlayers[arg0->unk_4C].playerObj->unk_34;
+    gPlayers[arg0->unk_4C[0]].playerObj->unk_38 = -4.0f;
+    gPlayers[arg0->unk_4C[0]].playerObj->unk_34 += gPlayers[arg0->unk_4C[0]].playerObj->unk_38;
+    gPlayers[arg0->unk_4C[0]].playerObj->unk_30 += gPlayers[arg0->unk_4C[0]].playerObj->unk_34;
 
-    if (gPlayers[arg0->unk_4C].playerObj->unk_30 < 0.0f) {
-        gPlayers[arg0->unk_4C].playerObj->unk_30 = 0.0f;
+    if (gPlayers[arg0->unk_4C[0]].playerObj->unk_30 < 0.0f) {
+        gPlayers[arg0->unk_4C[0]].playerObj->unk_30 = 0.0f;
     }
-    func_800A0D00(&gPlayers[arg0->unk_4C].playerObj->coords, gPlayers[arg0->unk_4C].playerObj->coords.x, gPlayers[arg0->unk_4C].playerObj->unk_30, gPlayers[arg0->unk_4C].playerObj->coords.z);
+    func_800A0D00(&gPlayers[arg0->unk_4C[0]].playerObj->coords, gPlayers[arg0->unk_4C[0]].playerObj->coords.x, gPlayers[arg0->unk_4C[0]].playerObj->unk_30, gPlayers[arg0->unk_4C[0]].playerObj->coords.z);
 }
 
 void func_80108CB8_272348(unkObjectStruct* arg0) {
-    gPlayers[arg0->unk_4C].playerObj->unk_30 = 0;
-    gPlayers[arg0->unk_4C].playerObj->unk_34 = 15.0f;
-    gPlayers[arg0->unk_4C].playerObj->unk_38 = -4.0f;
+    gPlayers[arg0->unk_4C[0]].playerObj->unk_30 = 0;
+    gPlayers[arg0->unk_4C[0]].playerObj->unk_34 = 15.0f;
+    gPlayers[arg0->unk_4C[0]].playerObj->unk_38 = -4.0f;
     arg0->func_ptr = &func_80108B60_2721F0;
 }
 
@@ -28,14 +28,14 @@ void func_80108D40_2723D0(unkObjectStruct* arg0) {
     Vec3f sp20;
     Vec3f* temp_s0;
 
-    temp_s0 = &D_80110340[arg0->unk_4D];
+    temp_s0 = &D_80110340[arg0->unk_4C[1]];
     func_800A0D00(&sp10, arg0->unk_30, arg0->unk_34, arg0->unk_38);
     func_800A0D00(&sp20, arg0->unk_24, arg0->unk_28, arg0->unk_2C);
     arg0->unk_18 = sp10.x * temp_s0->z + sp20.x;
     arg0->unk_20 = sp10.z * temp_s0->z + sp20.z;
     arg0->unk_1C = (((temp_s0->y * temp_s0->z) + sp10.y) * temp_s0->z) + sp20.y;
     if (arg0->unk_1C < temp_s0->x) {
-        arg0->unk_4C++;
+        arg0->unk_4C[0]++;
     }
 }
 
@@ -46,7 +46,7 @@ INCLUDE_ASM(const s32, "ovl_41_YoshisTropicalIslandEndingScene/2721F0", func_801
 INCLUDE_ASM(const s32, "ovl_41_YoshisTropicalIslandEndingScene/2721F0", func_8010903C_2726CC);
 
 void func_80109110_2727A0(unkObjectStruct *arg0) {
-    s32 temp_s1 = arg0->unk_4C;
+    s32 temp_s1 = arg0->unk_4C[0];
     f32 var_f20 = arg0->unk_24;
     f32 new_var;
     
@@ -64,7 +64,7 @@ unkObjectStruct* func_801091A4_272834(u8 arg0) {
     unkObjectStruct* temp_v0;
 
     temp_v0 = func_8005D384(0x600, 0, 0, -1, &func_80109110_2727A0);
-    temp_v0->unk_4C = arg0;
+    temp_v0->unk_4C[0] = arg0;
     func_8005D96C(temp_v0, 0.0f, 0.0f, 0.0f);
     return temp_v0;
 }
@@ -100,7 +100,7 @@ void func_8010AC24_2742B4(unkObjectStruct* arg0) {
     arg0->unk_18 = arg0->unk_1C = arg0->unk_20 = arg0->unk_24 =
         arg0->unk_28 = arg0->unk_2C = 0.0f;
     
-    arg0->unk_4C = 1;
+    arg0->unk_4C[0] = 1;
 }
 
 INCLUDE_ASM(const s32, "ovl_41_YoshisTropicalIslandEndingScene/2721F0", func_8010AC5C_2742EC);
@@ -108,7 +108,7 @@ INCLUDE_ASM(const s32, "ovl_41_YoshisTropicalIslandEndingScene/2721F0", func_801
 void func_8010AE08_274498(unkObjectStruct* arg0) {
     arg0->func_ptr = &func_8010AC5C_2742EC;
     arg0->unk_18 = arg0->unk_1C = arg0->unk_20 = arg0->unk_24 = arg0->unk_28 = arg0->unk_2C = 0.0f;
-    arg0->unk_4C = 1;
+    arg0->unk_4C[0] = 1;
 }
 
 void func_8010AE40_2744D0(unkObjectStruct* arg0) {

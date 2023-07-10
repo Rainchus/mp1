@@ -88,18 +88,18 @@ void func_800079A8(unkObjectStruct* arg0, f32 arg1, f32 arg2, f32 arg3) {
     temp_s0 = temp_s2->unk_20.b[3];
     func_8001E3B4(temp_s0);
     func_8001E268(temp_s0, 4, 4);
-    func_80025798(arg0->unk_40->unk_04.unsigned16[0], arg1, arg2, arg3);
+    func_80025798(arg0->unk_40[2], arg1, arg2, arg3);
     temp_s2->unk_40.float32 = D_800B8990;
     func_80009438();
 }
 
 void func_80007A50(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp_s1 = arg0->unk_50;
-    f32 var_f2 = func_80025E70(arg0->unk_40->unk_00.signed16[0]);
+    f32 var_f2 = func_80025E70(arg0->unk_40[0]);
     s32 var_v0, var_v1;
 
     if (var_f2 == -1.0f) {
-        var_f2 = func_80025D18(arg0->unk_40->unk_00.signed16[0]);
+        var_f2 = func_80025D18(arg0->unk_40[0]);
     }
     
     var_v0 = !(var_f2 >= 28.0f) ? 0 : 1;

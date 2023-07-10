@@ -148,7 +148,7 @@ void func_800F6FC0_1DA070(void) {
 }
 
 void func_800F702C_1DA0DC(unkObjectStruct* arg0, f32 arg1) {
-    s16 temp_s0 = (D_800F2AF8[0]->unk_4C << 8) | D_800F2AF8[0]->unk_4D;
+    s16 temp_s0 = (D_800F2AF8[0]->unk_4C[0] << 8) | D_800F2AF8[0]->unk_4C[1];
 
     if (arg1 == 0.0) {
         D_800FD980.x = arg0->unk_18;
@@ -502,8 +502,8 @@ void func_800FB840_1DE8F0(unkObjectStruct* arg0) {
     u16 i;
     u16* temp_a0;
     
-    sp10[0] = (arg0->unk_4C << 8) | arg0->unk_4D;
-    sp10[1] = (arg0->unk_4E << 8) | arg0->unk_4F;
+    sp10[0] = (arg0->unk_4C[0] << 8) | arg0->unk_4C[1];
+    sp10[1] = (arg0->unk_4C[2] << 8) | arg0->unk_4C[3];
     
     for (i = 0; i < ARRAY_COUNT(D_800FD5DC); i++) {
         phi_v0 = func_800F740C_1DA4BC(0);

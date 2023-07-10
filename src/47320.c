@@ -39,7 +39,7 @@ void func_80046828(unkObjectStruct* arg0) {
     Vec2s* temp;
     s32 i;
     
-    switch (arg0->unk_4C) {
+    switch (arg0->unk_4C[0]) {
     case 0:
         arg0->unk_24 =  arg0->unk_24 + 30.0f;
         arg0->unk_30 = sinf(arg0->unk_24 * D_800CAFF0) * 0.5f + 1.0f;
@@ -56,18 +56,18 @@ void func_80046828(unkObjectStruct* arg0) {
     case 1:
         
         for (i = 1; (((D_800D6658 + 1) / 10) + 1) >= i; i++) {
-            func_8006752C(D_800D65FC[D_800D6654], i, arg0->unk_4D);
+            func_8006752C(D_800D65FC[D_800D6654], i, arg0->unk_4C[1]);
         }
 
         for (i = 1; i < 5; i++) {
-            func_8006752C(D_800D652C[D_800D6650.x], i, arg0->unk_4D);
-            func_8006752C(D_800D6594[D_800D6650.y], i, arg0->unk_4D);            
+            func_8006752C(D_800D652C[D_800D6650.x], i, arg0->unk_4C[1]);
+            func_8006752C(D_800D6594[D_800D6650.y], i, arg0->unk_4C[1]);
         }
 
-        arg0->unk_4D -=  0xA;
+        arg0->unk_4C[1] -=  0xA;
         
-        if (arg0->unk_4D == 0) {
-            arg0->unk_4C = 2;
+        if (arg0->unk_4C[1] == 0) {
+            arg0->unk_4C[0] = 2;
             return;
         }
         break;
@@ -170,10 +170,10 @@ void func_80047694(s32 arg0) {
 
         temp_v0->unk_3C = 0;
         temp_v0->unk_2C = 0.001f;
-        temp_v0->unk_4C = 0;
-        temp_v0->unk_4D = 0x2D;
-        temp_v0->unk_4E = 0x2D;
-        temp_v0->unk_4F = 0;
+        temp_v0->unk_4C[0] = 0;
+        temp_v0->unk_4C[1] = 0x2D;
+        temp_v0->unk_4C[2] = 0x2D;
+        temp_v0->unk_4C[3] = 0;
         D_800D64FC = 0;
         D_800D6500 = 0x15;
         D_800D6510 = 0;
@@ -206,13 +206,13 @@ void func_800479B8(s32 arg0) {
     D_800D6508 = obj;
     obj->unk_30 = 0.0f;
     obj->unk_24 = 180.0f;
-    obj->unk_4E = 0x1E;
-    obj->unk_4C = 1;
-    obj->unk_4D = 0xC;
+    obj->unk_4C[2] = 0x1E;
+    obj->unk_4C[0] = 1;
+    obj->unk_4C[1] = 0xC;
     if (D_800D650C != NULL) {
-        obj->unk_4D = 0x18;
+        obj->unk_4C[1] = 0x18;
     }
-    obj->unk_4F = arg0;
+    obj->unk_4C[3] = arg0;
 }
 
 s32 func_80047B68(void) {

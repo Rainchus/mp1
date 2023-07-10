@@ -73,7 +73,51 @@ INCLUDE_ASM(s32, "5CDB0", InitObjSystem);
 
 INCLUDE_ASM(s32, "5CDB0", func_8005D184);
 
-INCLUDE_ASM(s32, "5CDB0", func_8005D384);
+unkObjectStruct* func_8005D384(s16 arg0, u16 arg1, u16 arg2, s16 arg3, void* arg4) {
+    unkObjectStruct* temp_s0;
+
+    if (D_800ED56C == D_800ED550) {
+        return NULL;
+    }
+
+    temp_s0 = &D_800C5984[D_800F65BA];
+    temp_s0->unk_02 = D_800F65BA;
+    temp_s0->unk_04 = arg0;
+    func_8005D5F4(temp_s0);
+
+    if (arg1 != 0) {
+        temp_s0->unk_40 = func_80023684(arg1 * sizeof(s16), 0x7918);
+        temp_s0->unk_3C = arg1;
+    } else {
+        temp_s0->unk_40 = NULL;
+        temp_s0->unk_3C = 0;
+    }
+
+    if (arg2 != 0) {
+        temp_s0->unk_48 = func_80023684(arg2 * sizeof(s16), 0x7918);
+        temp_s0->unk_44 = arg2;
+    } else {
+        temp_s0->unk_48 = NULL;
+        temp_s0->unk_44 = 0;
+    }
+
+    if (arg3 >= 0) {
+        func_8005DA64(arg3, temp_s0);
+    } else {
+        temp_s0->unk_0C = arg3;
+        temp_s0->unk_0E = 0;
+    }
+
+    temp_s0->unk_00 = 4;
+    temp_s0->unk_10 = 0;
+    temp_s0->func_ptr = arg4;
+    temp_s0->unk_4C[0] = temp_s0->unk_4C[1] = temp_s0->unk_4C[2] = temp_s0->unk_4C[3] = 0;
+
+    D_800F65BA = temp_s0->unk_0A;
+    D_800ED56C++;
+
+    return temp_s0;
+}
 
 INCLUDE_ASM(s32, "5CDB0", func_8005D4E0);
 

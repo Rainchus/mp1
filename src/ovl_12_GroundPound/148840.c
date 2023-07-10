@@ -63,11 +63,11 @@ void func_800F8C20_148840(unkObjectStruct* arg0) {
     arg0->unk_30 *= 1.3f;
     arg0->unk_34 *= 1.3f;
     arg0->unk_38 *= 1.3f;
-    arg0->unk_40->unk_04.unsigned16[1] = LoadFormFile(0x19, 0x68D);
-    arg0->unk_40->unk_08.unsigned16[0] = LoadFormFile(0x1A, 0x68D);
-    arg0->unk_40->unk_08.unsigned16[1] = LoadFormFile(0x1C, 0x68D);
-    arg0->unk_40->unk_0C.signed16[1] = LoadFormFile(0x1E, 0x68D);
-    arg0->unk_40->unk_10.signed16[0] = LoadFormFile(0x1D, 0x68D);
+    arg0->unk_40[3] = LoadFormFile(0x19, 0x68D);
+    arg0->unk_40[4] = LoadFormFile(0x1A, 0x68D);
+    arg0->unk_40[5] = LoadFormFile(0x1C, 0x68D);
+    arg0->unk_40[7] = LoadFormFile(0x1E, 0x68D);
+    arg0->unk_40[8] = LoadFormFile(0x1D, 0x68D);
     temp_s4 = arg0->unk_50;
     func_8005D95C(arg0, D_800FA36C.x, D_800FA36C.y, D_800FA36C.z);
     D_800B895C = 10.0f;

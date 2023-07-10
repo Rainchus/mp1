@@ -44,7 +44,7 @@ void func_800F65E0_188410(void) {
     func_8005D384(2, 10, 60, -1, &func_800FBCB8_18DAE8);
     func_8005D384(2, 10, 60, -1, &func_800FBD5C_18DB8C);
     Obj = func_8005D384(0x7FDA, 0, 0, -1, &func_800FC180_18DFB0);
-    Obj->unk_4C = 2;
+    Obj->unk_4C[0] = 2;
     func_8005D8B8(Obj, 0xA0);
     D_800B895C = 10.0f;
     D_800B8968 = 0.06f;
@@ -62,13 +62,13 @@ void func_800F65E0_188410(void) {
 INCLUDE_ASM(s32, "ovl_1D_BobsledRun/188410", func_800F6B60_188990);
 
 void* func_800F6D20_188B50(Object* arg0) {
-    unkGlobalStruct_00* temp_v1;
+    unkGlobalStruct_02* temp_v1;
     s32 i;
     
     if (arg0->unk_53 >= 0) {
         for (i = 0; i < D_800ED440; i++) {
             temp_v1 = (D_800F2AF8[i])->unk_50;
-            if (arg0->unk_53 == temp_v1->unk_04.b[1]) {
+            if (arg0->unk_53 == temp_v1->unk_05) {
                 return temp_v1;
             }
         }

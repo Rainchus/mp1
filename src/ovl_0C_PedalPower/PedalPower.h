@@ -1,5 +1,11 @@
 #include "common.h"
 
+typedef struct UnkPedalPowerStruct {
+    /* 0x00 */ char unk_00[0x22];
+    /* 0x22 */ u8 unk_22;
+    /* 0x23 */ char unk_23[0x49];
+} UnkPedalPowerStruct; //sizeof 0x6C
+
 void func_800F7DD4_122FC4(void);
 void func_800F6944_121B34(void);
 void func_800F6ED0_1220C0(void);

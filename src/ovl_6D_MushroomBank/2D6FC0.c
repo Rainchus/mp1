@@ -81,29 +81,29 @@ void func_800F7308_2D7CE8(unkObjectStruct* arg0) {
     unk_ovl_2D_struct* temp_s0;
     void* file;
 
-    arg0->unk_40->unk_00.unsigned16[0] = func_800174C0(0x90035, 0x2A9);
-    func_80025EB4(arg0->unk_40->unk_00.unsigned16[0], 1, 1);
-    temp_s0 = &D_800F2B7C[arg0->unk_40->unk_00.signed16[0]];
+    arg0->unk_40[0] = func_800174C0(0x90035, 0x2A9);
+    func_80025EB4(arg0->unk_40[0], 1, 1);
+    temp_s0 = &D_800F2B7C[arg0->unk_40[0]];
     file = ReadMainFS(0x90042);
     func_80038A9C(temp_s0->unk_6C, file, 0, D_800F8B58);
     FreeMainFS(file);
-    func_80025AD4(arg0->unk_40->unk_00.unsigned16[0]);
+    func_80025AD4(arg0->unk_40[0]);
     arg0->func_ptr = &func_800F722C_2D7C0C;
     if (D_800F89B8 != 0) {
-        arg0->unk_40->unk_00.unsigned16[1] = func_800174C0(0x9003A, 0x2B9);
-        func_80025798(arg0->unk_40->unk_00.unsigned16[1], 0.0f, 1.0f, 0.0f);
-        arg0->unk_40->unk_04.unsigned16[0] = func_800174C0(0x90039, 0x2B9);
-        func_80025798(arg0->unk_40->unk_04.unsigned16[0], 0.0f, 0.0f, -100.0f);
-        func_800257E4(arg0->unk_40->unk_04.unsigned16[0], 10.0f, 0.0f, 4.0f);
-        arg0->unk_40->unk_04.unsigned16[1] = func_800174C0(0x90037, 0x2B9);
-        func_80025798(arg0->unk_40->unk_04.unsigned16[1], 150.0f, 0.0f, 220.0f);
-        arg0->unk_40->unk_08.unsigned16[0] = func_800174C0(0x90038, 0x2B9);
-        func_80025798(arg0->unk_40->unk_08.unsigned16[0], -50.0f, 0.0f, 230.0f);
-        arg0->unk_40->unk_08.unsigned16[1] = func_800174C0(0x9003B, 0x2B9);
-        func_80025798(arg0->unk_40->unk_08.unsigned16[1], -70.0f, 0.0f, 200.0f);
-        func_800257E4(arg0->unk_40->unk_08.unsigned16[1], 0.0f, 90.0f, 0.0f);
-        arg0->unk_40->unk_0C.signed16[0] = func_800174C0(0x9003B, 0x2B9);
-        func_80025798(arg0->unk_40->unk_0C.signed16[0], -280.0f, 0.0f, 30.0f);
+        arg0->unk_40[1] = func_800174C0(0x9003A, 0x2B9);
+        func_80025798(arg0->unk_40[1], 0.0f, 1.0f, 0.0f);
+        arg0->unk_40[2] = func_800174C0(0x90039, 0x2B9);
+        func_80025798(arg0->unk_40[2], 0.0f, 0.0f, -100.0f);
+        func_800257E4(arg0->unk_40[2], 10.0f, 0.0f, 4.0f);
+        arg0->unk_40[3] = func_800174C0(0x90037, 0x2B9);
+        func_80025798(arg0->unk_40[3], 150.0f, 0.0f, 220.0f);
+        arg0->unk_40[4] = func_800174C0(0x90038, 0x2B9);
+        func_80025798(arg0->unk_40[4], -50.0f, 0.0f, 230.0f);
+        arg0->unk_40[5] = func_800174C0(0x9003B, 0x2B9);
+        func_80025798(arg0->unk_40[5], -70.0f, 0.0f, 200.0f);
+        func_800257E4(arg0->unk_40[5], 0.0f, 90.0f, 0.0f);
+        arg0->unk_40[6] = func_800174C0(0x9003B, 0x2B9);
+        func_80025798(arg0->unk_40[6], -280.0f, 0.0f, 30.0f);
     }
 }
 

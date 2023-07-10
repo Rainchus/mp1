@@ -64,8 +64,8 @@ void func_800F6BC4_2D4E14(void) {
 }
 
 void func_800F6C00_2D4E50(unkObjectStruct* arg0) {
-    arg0->unk_40->unk_00.unsigned16[0] = func_800174C0(0x90051, 0x2B9);
-    func_80025EB4(arg0->unk_40->unk_00.unsigned16[0], 1, 1);
+    arg0->unk_40[0] = func_800174C0(0x90051, 0x2B9);
+    func_80025EB4(arg0->unk_40[0], 1, 1);
     arg0->func_ptr = &func_800F6B68_2D4DB8;
 }
 

@@ -36,9 +36,9 @@ INCLUDE_ASM(const s32, "ovl_18_PlatformPeril/16C6A0", func_800F8220_16D960);
 INCLUDE_ASM(const s32, "ovl_18_PlatformPeril/16C6A0", func_800F87A0_16DEE0);
 
 void func_800F8AE8_16E228(unkObjectStruct* arg0) {
-    arg0->unk_1C = D_800FE1D8[arg0->unk_4C]->unk_1C + 50.0f;
-    func_80025798(arg0->unk_40->unk_00.signed16[1], arg0->unk_18, D_800FE1D8[arg0->unk_4C]->unk_1C, arg0->unk_20);
-    func_80025830(arg0->unk_40->unk_00.signed16[1], 0.7f, 0.7f, 0.7f);
+    arg0->unk_1C = D_800FE1D8[arg0->unk_4C[0]]->unk_1C + 50.0f;
+    func_80025798(arg0->unk_40[1], arg0->unk_18, D_800FE1D8[arg0->unk_4C[0]]->unk_1C, arg0->unk_20);
+    func_80025830(arg0->unk_40[1], 0.7f, 0.7f, 0.7f);
 }
 
 void func_800F8B7C_16E2BC(void) {
@@ -95,23 +95,23 @@ void func_800F922C_16E96C(unkObjectStruct* arg0, s32 arg1, s32 arg2, u16 arg3, f
     arg0->unk_30 = 1.0f;
     arg0->unk_34 = 1.0f;
     arg0->unk_38 = 1.0f;
-    MtxRotate(D_800F2B7C[arg0->unk_40->unk_00.signed16[0]].unk7C, 0, 180.0f, 0);
-    func_80025830(arg0->unk_40->unk_00.unsigned16[1], arg0->unk_30, arg0->unk_34, arg0->unk_38);
-    func_800257E4(arg0->unk_40->unk_00.unsigned16[1], arg0->unk_24, arg0->unk_28, arg0->unk_2C);
-    func_80025798(arg0->unk_40->unk_00.unsigned16[1], arg0->unk_18, 1.0f, arg0->unk_20);
-    func_80025798(arg0->unk_40->unk_00.unsigned16[0], arg0->unk_18, arg0->unk_1C, arg0->unk_20);
+    MtxRotate(D_800F2B7C[arg0->unk_40[0]].unk7C, 0, 180.0f, 0);
+    func_80025830(arg0->unk_40[1], arg0->unk_30, arg0->unk_34, arg0->unk_38);
+    func_800257E4(arg0->unk_40[1], arg0->unk_24, arg0->unk_28, arg0->unk_2C);
+    func_80025798(arg0->unk_40[1], arg0->unk_18, 1.0f, arg0->unk_20);
+    func_80025798(arg0->unk_40[0], arg0->unk_18, arg0->unk_1C, arg0->unk_20);
     temp_s0_2 = arg0->unk_50;
     func_80008FD0(arg0, 30.0f);
     arg0->func_ptr = &func_800F979C_16EEDC;
-    arg0->unk_4C = arg3;
+    arg0->unk_4C[0] = arg3;
     
     if (gPlayers[arg3].unk_06 & 1) { //checking if CPU?
-        arg0->unk_4D = 1;
+        arg0->unk_4C[1] = 1;
     } else {
-        arg0->unk_4D = 0;
+        arg0->unk_4C[1] = 0;
     }
     
-    arg0->unk_4E = 0;
+    arg0->unk_4C[2] = 0;
 
     for (i = 0; i < 4; i++) {
         D_800FE1B0[i][1] = 0;

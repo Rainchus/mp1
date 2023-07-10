@@ -93,36 +93,36 @@ void func_8004E248(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp_v1;
 
     temp_v1 = arg0->unk_50;
-    arg0->unk_4D--;
+    arg0->unk_4C[1]--;
     
     if (temp_v1 == NULL) {
-        if (arg0->unk_4D == 0) {
-            gPlayers[arg0->unk_4C].playerObj->coords.x = arg0->unk_18;
-            gPlayers[arg0->unk_4C].playerObj->coords.y = arg0->unk_1C;
-            gPlayers[arg0->unk_4C].playerObj->coords.z = arg0->unk_20;
+        if (arg0->unk_4C[1] == 0) {
+            gPlayers[arg0->unk_4C[0]].playerObj->coords.x = arg0->unk_18;
+            gPlayers[arg0->unk_4C[0]].playerObj->coords.y = arg0->unk_1C;
+            gPlayers[arg0->unk_4C[0]].playerObj->coords.z = arg0->unk_20;
             func_8005D718(arg0);
             return;
         }
-        temp_v0 = gPlayers[arg0->unk_4C].playerObj;
+        temp_v0 = gPlayers[arg0->unk_4C[0]].playerObj;
         temp_v0->coords.x = temp_v0->coords.x + arg0->unk_30;
-        temp_v0 = gPlayers[arg0->unk_4C].playerObj;
+        temp_v0 = gPlayers[arg0->unk_4C[0]].playerObj;
         temp_v0->coords.y = temp_v0->coords.y + arg0->unk_34;
-        temp_v0 = gPlayers[arg0->unk_4C].playerObj;
+        temp_v0 = gPlayers[arg0->unk_4C[0]].playerObj;
         temp_v0->coords.z = temp_v0->coords.z + arg0->unk_38;
         return;
     }
     
-    if (arg0->unk_4D == 0) {
-        temp_v1->unk_0C.float32 = arg0->unk_18;
-        temp_v1->unk_10.float32 = arg0->unk_1C;
+    if (arg0->unk_4C[1] == 0) {
+        temp_v1->unk_0C = arg0->unk_18;
+        temp_v1->unk_10 = arg0->unk_1C;
         temp_v1->unk_14 = arg0->unk_20;
         arg0->unk_50 = NULL;
         func_8005D718(arg0);
         return;
     }
     
-    temp_v1->unk_0C.float32 += arg0->unk_30;
-    temp_v1->unk_10.float32 += arg0->unk_34;
+    temp_v1->unk_0C += arg0->unk_30;
+    temp_v1->unk_10 += arg0->unk_34;
     temp_v1->unk_14 += arg0->unk_38;
 }
 
@@ -132,8 +132,8 @@ unkObjectStruct* func_8004E3E0(s32 arg0, Vec3f* arg1, s32 arg2, void* arg3) { //
     arg3 = (Object*)arg3;
 
     obj = func_8005D384(0x1000, 0, 0, -1, &func_8004E248);
-    obj->unk_4C = arg0;
-    obj->unk_4D = arg2;
+    obj->unk_4C[0] = arg0;
+    obj->unk_4C[1] = arg2;
     obj->unk_18 = arg1->x;
     obj->unk_1C = arg1->y;
     obj->unk_20 = arg1->z;
@@ -142,8 +142,8 @@ unkObjectStruct* func_8004E3E0(s32 arg0, Vec3f* arg1, s32 arg2, void* arg3) { //
         obj->unk_34 = (arg1->y - gPlayers[arg0].playerObj->coords.y) / arg2;
         obj->unk_38 = (arg1->z - gPlayers[arg0].playerObj->coords.z) / arg2;
     } else {
-        obj->unk_30 = (arg1->x - ((unkGlobalStruct_00*)arg3)->unk_0C.float32) / arg2;
-        obj->unk_34 = (arg1->y - ((unkGlobalStruct_00*)arg3)->unk_10.float32) / arg2;
+        obj->unk_30 = (arg1->x - ((unkGlobalStruct_00*)arg3)->unk_0C) / arg2;
+        obj->unk_34 = (arg1->y - ((unkGlobalStruct_00*)arg3)->unk_10) / arg2;
         obj->unk_38 = (arg1->z - ((unkGlobalStruct_00*)arg3)->unk_14) / arg2;
     }
     

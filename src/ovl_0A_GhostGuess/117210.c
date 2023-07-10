@@ -26,17 +26,17 @@ void func_800F6AAC_1176DC(void) {
 }
 
 void func_800F6AE0_117710(unkObjectStruct* arg0) {
-    unkGlobalStruct_00* temp_s0;
+    unkGlobalStruct_02* temp_s0;
 
     arg0->func_ptr = NULL;
     arg0->unk_18 = arg0->unk_1C = arg0->unk_20 = 0.0f;
     arg0->unk_30 = arg0->unk_34 = arg0->unk_38 = 5.0f;
-    arg0->unk_40->unk_00.unsigned16[0] = func_800174C0(0x1C0000, 0x2DD);
-    temp_s0 = func_80023684(44, 31000);
+    arg0->unk_40[0] = func_800174C0(0x1C0000, 0x2DD);
+    temp_s0 = func_80023684(sizeof(unkGlobalStruct_02), 31000);
     arg0->unk_50 = temp_s0;
-    func_8009B770(temp_s0, 0, 44);
-    temp_s0->unk_04.b[0] = 1;
-    temp_s0->unk_04.b[1] = 0;
+    func_8009B770(temp_s0, 0, sizeof(unkGlobalStruct_02));
+    temp_s0->unk_04 = 1;
+    temp_s0->unk_05 = 0;
     func_80009000(arg0, 4, 1.0f);
     func_80008FC4(arg0, 20.0f);
     func_80008FB8(arg0, 1.0f);
@@ -72,17 +72,17 @@ void func_800FB21C_11BE4C(void) {
 }
 
 void func_800FB224_11BE54(unkObjectStruct* arg0, u32 arg1) { //construct pointer into u8s in struct (why?)
-    arg0->unk_4C = arg1 >> 24;
-    arg0->unk_4D = arg1 >> 16;
-    arg0->unk_4E = arg1 >> 8;
-    arg0->unk_4F = arg1;
+    arg0->unk_4C[0] = arg1 >> 24;
+    arg0->unk_4C[1] = arg1 >> 16;
+    arg0->unk_4C[2] = arg1 >> 8;
+    arg0->unk_4C[3] = arg1;
 }
 
 s32 func_800FB244_11BE74(unkObjectStruct* arg0) { //deconstruct u8s in struct into a pointer (again why?)
-    return  (arg0->unk_4C << 24) |
-            (arg0->unk_4D << 16) |
-            (arg0->unk_4E << 8) |
-            arg0->unk_4F;
+    return  (arg0->unk_4C[0] << 24) |
+            (arg0->unk_4C[1] << 16) |
+            (arg0->unk_4C[2] << 8) |
+            arg0->unk_4C[3];
 }
 
 INCLUDE_ASM(s32, "ovl_0A_GhostGuess/117210", func_800FB270_11BEA0);

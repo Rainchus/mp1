@@ -36,8 +36,8 @@ INCLUDE_ASM(s32, "ovl_09_PipeMaze/113DC0", func_800F68BC_11409C);
 void func_800F6A38_114218(unkObjectStruct* arg0) {
     arg0->func_ptr = &func_800F9134_116914;
     arg0->unk_18= arg0->unk_1C = arg0->unk_20 = 0;
-    arg0->unk_40->unk_00.unsigned16[0] = func_800174C0(0x1B0000, 0x299);
-    func_80025798(arg0->unk_40->unk_00.unsigned16[0], arg0->unk_18, arg0->unk_1C, arg0->unk_20);
+    arg0->unk_40[0] = func_800174C0(0x1B0000, 0x299);
+    func_80025798(arg0->unk_40[0], arg0->unk_18, arg0->unk_1C, arg0->unk_20);
     D_800F6524.x = 0.0f;
     D_800F6524.y = 200.0f;
     D_800F6524.z = -200.0f;
@@ -74,8 +74,8 @@ void func_800F6C34_114414(unkObjectStruct* arg0) {
     arg0->unk_20 = -960.0f;
     arg0->func_ptr = NULL;
     temp_v0 = func_800174C0(0x1B0001, 0x289);
-    D_800F9B48[D_800F9908] = arg0->unk_40->unk_00.unsigned16[0] = temp_v0;
-    func_80025798(arg0->unk_40->unk_00.unsigned16[0], arg0->unk_18, arg0->unk_1C, arg0->unk_20);
+    D_800F9B48[D_800F9908] = arg0->unk_40[0] = temp_v0;
+    func_80025798(arg0->unk_40[0], arg0->unk_18, arg0->unk_1C, arg0->unk_20);
     func_80026040(D_800F9B48[D_800F9908]);
     func_80025B34(D_800F9B48[D_800F9908]);
     D_800F9908++;

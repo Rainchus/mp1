@@ -56,27 +56,27 @@ void func_800F6848_17E978(f32 arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 
 }
 
 void func_800F690C_17EA3C(unkObjectStruct* arg0) {
-    unkGlobalStruct_00* temp_s1;
+    unkGlobalStruct_02* temp_s1;
 
     func_80017660(0, 0.0f, 0.0f, 320.0f, 240.0f);
     func_800176C4(0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
-    temp_s1 = func_80023684(0x2C, 0x7918);
+    temp_s1 = func_80023684(sizeof(unkGlobalStruct_02), 0x7918);
     arg0->unk_50 = temp_s1;
-    arg0->unk_40->unk_00.unsigned16[0] = func_800174C0(0x330001, 0x69D);
-    arg0->unk_40->unk_00.unsigned16[1] = func_800174C0(0x170000, 0x699);
-    arg0->unk_40->unk_04.unsigned16[0] = func_800174C0(0x170006, 0x699);
+    arg0->unk_40[0] = func_800174C0(0x330001, 0x69D);
+    arg0->unk_40[1] = func_800174C0(0x170000, 0x699);
+    arg0->unk_40[2] = func_800174C0(0x170006, 0x699);
     func_800090B8(D_800ED440);
     D_800F2AF8[D_800ED440++] = arg0;
-    func_8009B770(arg0->unk_50, 0, 0x2C);
-    temp_s1->unk_04.b[0] = 1;
-    temp_s1->unk_04.b[1] = 0;
+    func_8009B770(arg0->unk_50, 0, sizeof(unkGlobalStruct_02));
+    temp_s1->unk_04 = 1;
+    temp_s1->unk_05 = 0;
     arg0->func_ptr = &func_800FA2D8_182408;
 }
 
 void func_800F6A54_17EB84(unkObjectStruct* arg0) {
-    arg0->unk_50 = func_80023684(0x2C, 0x7918);
-    arg0->unk_40->unk_00.unsigned16[0] = LoadFormFile(0x380002, 0x48D);
-    arg0->unk_40->unk_00.unsigned16[1] = LoadFormFile(0x380003, 0x48D);
+    arg0->unk_50 = func_80023684(sizeof(unkGlobalStruct_02), 0x7918);
+    arg0->unk_40[0] = LoadFormFile(0x380002, 0x48D);
+    arg0->unk_40[1] = LoadFormFile(0x380003, 0x48D);
     func_8005D95C(arg0, 0.0f, 1000.0f, 1000.0f);
     func_800FA2E0_182410();
     arg0->func_ptr = &func_800F6ADC_17EC0C;
@@ -152,7 +152,7 @@ s32 func_800F7BFC_17FD2C(unkObjectStruct* arg0, f32 arg1) {
 
     D_800FB6A0 = -1;
     phi_f20 = 50000.0f;
-    temp = arg0->unk_50->unk_E4;
+    temp = ((unkGlobalStruct_00*) arg0->unk_50)->unk_E4;
     
     for (i = 0; i < 4; i++) {
          if (i != temp->unk_24) {

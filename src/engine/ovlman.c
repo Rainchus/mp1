@@ -89,7 +89,7 @@ void func_8001775C(unkObjectStruct* arg0, u16 arg1, s32 arg2) {
 
     temp_v0 = func_8001755C(arg2);
     if (temp_v0 >= 0) {
-        arg0->unk_48->unk_00.signed16[arg1] = temp_v0;
+        arg0->unk_48[arg1] = temp_v0;
     }
 }
 

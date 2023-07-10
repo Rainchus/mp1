@@ -56,14 +56,14 @@ void func_800F6D54_132714(void) {
 INCLUDE_ASM(s32, "ovl_0F_WhackAPlant/131FA0", func_800F6DBC_13277C);
 
 void func_800F6FE4_1329A4(unkObjectStruct* arg0) {
-    unkGlobalStruct_00* temp_s0;
+    unkGlobalStruct_02* temp_s0;
     
     D_800F2AF8[D_800ED440++] = arg0;
-    temp_s0 = func_80023684(0x2C, 0x7918);
+    temp_s0 = func_80023684(sizeof(unkGlobalStruct_02), 0x7918);
     arg0->unk_50 = temp_s0;
-    func_8009B770(temp_s0, 0, 0x2C);
-    temp_s0->unk_04.b[0] = 1;
-    temp_s0->unk_04.b[1] = 1;
+    func_8009B770(temp_s0, 0, sizeof(unkGlobalStruct_02));
+    temp_s0->unk_04 = 1;
+    temp_s0->unk_05 = 1;
     func_80009058(arg0, 170.0f, 170.0f, -320.0f, -320.0f, 320.0f, 320.0f);
     func_80008FB8(arg0, 0.5f);
     arg0->func_ptr = NULL;
@@ -80,7 +80,7 @@ void func_800F7570_132F30(unkObjectStruct* arg0) {
     } else {
         D_800FB710[0] = 3;
         arg0->func_ptr = &func_800F7714_1330D4;
-        func_800258EC(D_800FB6F8->unk_40->unk_00.unsigned16[0], 0x1C00, 0x400);
+        func_800258EC(D_800FB6F8->unk_40[0], 0x1C00, 0x400);
         temp_s1->unk_3C = 0.0f;
     }
 
@@ -117,7 +117,7 @@ void func_800F7F90_133950(unkObjectStruct* arg0) {
         }
     }
     func_80017DB0(arg0);
-    func_8009ECB0(&D_800F2B7C[arg0->unk_40->unk_00.signed16[0]].unk7C, 0.0f, temp_s1->unk_3C, 0.0f);
+    func_8009ECB0(&D_800F2B7C[arg0->unk_40[0]].unk7C, 0.0f, temp_s1->unk_3C, 0.0f);
 }
 
 INCLUDE_ASM(s32, "ovl_0F_WhackAPlant/131FA0", func_800F8098_133A58);
@@ -170,10 +170,10 @@ void func_800F9D38_1356F8(unkObjectStruct* arg0) {
     SetBasicSpritePos(D_800FB6A4, 0x8E, 0x20);
     SetBasicSpritePos(D_800FB69E, 0xA2, 0x20);
     SetBasicSpritePos(D_800FB6A0, 0xAA, 0x20);
-    arg0->unk_4C = 0;
-    arg0->unk_4D = 0;
-    arg0->unk_4E = 0;
-    arg0->unk_4F = 0;
+    arg0->unk_4C[0] = 0;
+    arg0->unk_4C[1] = 0;
+    arg0->unk_4C[2] = 0;
+    arg0->unk_4C[3] = 0;
     arg0->unk_34 = 1.0f;
     arg0->func_ptr = &func_800F9E44_135804;
 }
@@ -188,18 +188,18 @@ void func_800F9E44_135804(unkObjectStruct* arg0) {
     if (temp_v1 != 0) {
         arg0->unk_10 = 0;
         if (temp_v1 == 1) {
-            arg0->unk_4C += arg0->unk_4F;
-            arg0->unk_4F = 0;
-            arg0->unk_4D = 2;
+            arg0->unk_4C[0] += arg0->unk_4C[3];
+            arg0->unk_4C[3] = 0;
+            arg0->unk_4C[1] = 2;
             arg0->unk_34 = 1.0f;
         }
     }
     
-    switch (arg0->unk_4D) {
+    switch (arg0->unk_4C[1]) {
     case 2:
         arg0->unk_34 += 0.3f;
         if (arg0->unk_34 >= 2.4f) {
-            arg0->unk_4D = 4;
+            arg0->unk_4C[1] = 4;
             arg0->unk_34 = 2.4f;
         }
         break;
@@ -207,14 +207,14 @@ void func_800F9E44_135804(unkObjectStruct* arg0) {
     case 4:
         arg0->unk_34 -= 0.3f;
         if (arg0->unk_34 <= 1.0f) {
-            arg0->unk_4D = 0;
+            arg0->unk_4C[1] = 0;
             arg0->unk_34 = 1.0f;
         }
         break;
     }
 
-    temp_s1 = arg0->unk_4C;
-    temp_s0 = arg0->unk_4C;
+    temp_s1 = arg0->unk_4C[0];
+    temp_s0 = arg0->unk_4C[0];
     temp_s0 = temp_s0 / 10;
     func_80018E50(D_800FB69E, temp_s0, 0);
     func_80018E50(D_800FB6A0, temp_s1 - (temp_s0 * 0xA), 0);
