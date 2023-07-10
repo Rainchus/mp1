@@ -356,8 +356,13 @@ D_800FD710_1E07C0 = 0x1E07C0; //rom:0x1E07C0 force_not_migration:True type:f64
 D_800FD718_1E07C8 = 0x1E07C8; //rom:0x1E07C8 force_not_migration:True type:f64
 D_800FD5CC_1E067C = 0x800FD5CC; //rom:0x1E067C force_not_migration:True type:s16
 D_800FD5CE_1E067E = 0x800FD5CE; //rom:0x1E067E force_not_migration:True type:s16
-D_800FD5EC_1E069C = 0x800FD5EC; // rom:0x1E069C force_not_migration:True type:f32
-
+D_800FD5EC_1E069C = 0x800FD5EC; //rom:0x1E069C force_not_migration:True type:f32
+D_800FD630_1E06E0 = 0x800FD630; //rom:0x1E06E0 force_migration:True type:f64
+D_800FD638_1E06E8 = 0x800FD638; //rom:0x1E06E8 force_migration:True type:f64
+D_800FD640_1E06F0 = 0x800FD640; //rom:0x1E06F0 force_migration:True type:f64
+D_800FD648_1E06F8 = 0x800FD648; //rom:0x1E06F8 force_migration:True type:f64
+D_800FD650_1E0700 = 0x800FD650; //rom:0x1E0700 force_migration:True type:f64
+D_800FD658_1E0708 = 0x800FD658; //rom:0x1E0708 force_migration:True type:f64
 // ovl_29_LimboDance
 D_800FE9A8_1E8DF8 = 0x800FE9A8; // rom:0x1E8DF8 force_not_migration:True type:f32
 D_800FE9AC_1E8DFC = 0x800FE9AC; // rom:0x1E8DFC force_not_migration:True type:f32
