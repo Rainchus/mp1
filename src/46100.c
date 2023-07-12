@@ -8,11 +8,11 @@ void func_80045500(unkObjectStruct* arg0) {
     Vec3f sp10;
     Vec2f sp20;
 
-    sp10.x = (gPlayers[arg0->unk_4F].playerObj)->coords.x;
-    sp10.y = (gPlayers[arg0->unk_4F].playerObj)->coords.y + 250.0f;
-    sp10.z = (gPlayers[arg0->unk_4F].playerObj)->coords.z;
+    sp10.x = (gPlayers[arg0->unk_4C[3]].playerObj)->coords.x;
+    sp10.y = (gPlayers[arg0->unk_4C[3]].playerObj)->coords.y + 250.0f;
+    sp10.z = (gPlayers[arg0->unk_4C[3]].playerObj)->coords.z;
     func_8004B730(&sp10, &sp20);
-    if (arg0->unk_4C < 30) {
+    if (arg0->unk_4C[0] < 30) {
         if (arg0->unk_24 > 0.0f) {
             arg0->unk_1C -= 0.5f;
         } else {
@@ -23,7 +23,7 @@ void func_80045500(unkObjectStruct* arg0) {
         func_800456C4();
         return;
     }
-    arg0->unk_4C++;
+    arg0->unk_4C[0]++;
 }
 
 void func_80045680(void) {
@@ -72,11 +72,11 @@ void ShowPlayerCoinChange(s32 arg0, s32 arg1) {
         sp18.z = (gPlayers[arg0].playerObj)->coords.z;
         func_8004B730(&sp18, &sp28);
         D_800D6478 = func_8005D384(-0x8000, 0, 0, -1, &func_80045500);
-        D_800D6478->unk_4C = 0;
+        D_800D6478->unk_4C[0] = 0;
         D_800D6478->unk_24 = arg1;
         D_800D6478->unk_18 = sp28.x - 16.0f;
         D_800D6478->unk_1C = 0.0f;
-        D_800D6478->unk_4F = arg0;
+        D_800D6478->unk_4C[3] = arg0;
         temp_s5 = func_80064EF4(4, 5);
         D_800D6470 = temp_s5;
         temp_s0 = ReadMainFS(0xA0013);

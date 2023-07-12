@@ -29,10 +29,10 @@ void func_800F6660_2A2580(s32 arg0, s32 arg1) {
 INCLUDE_ASM(s32, "ovl_62_board_intro/2A2500", func_800F66E8_2A2608);
 
 void func_800F677C_2A269C(unkObjectStruct* arg0) {
-    func_80066DC4(D_800FDA60_ovl62[2], arg0->unk_4C, arg0->unk_4D, (arg0->unk_4E * 5) - 0x50);
-    arg0->unk_4E += 2;
-    if (arg0->unk_4E >= 33) {
-        D_800FCD2C[arg0->unk_4C] = 0;
+    func_80066DC4(D_800FDA60_ovl62[2], arg0->unk_4C[0], arg0->unk_4C[1], (arg0->unk_4C[2] * 5) - 0x50);
+    arg0->unk_4C[2] += 2;
+    if (arg0->unk_4C[2] >= 33) {
+        D_800FCD2C[arg0->unk_4C[0]] = 0;
         func_8005D718(arg0);
     }
 }

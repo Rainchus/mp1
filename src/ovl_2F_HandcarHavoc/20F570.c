@@ -103,8 +103,8 @@ void func_800FB7DC_21476C(void) {
 void func_800FB7E4_214774(unkObjectStruct* arg0) {
     unkObjectStruct* temp_a0;
 
-    temp_a0 = D_800FF61C[arg0->unk_50->unk_B0];
-    temp_a0->unk_50->unk_00.unsigned16[1] = 30;
+    temp_a0 = D_800FF61C[((unkGlobalStruct_00*) arg0->unk_50)->unk_B0];
+    ((unkGlobalStruct_00*) temp_a0->unk_50)->unk_02 = 30;
     temp_a0->func_ptr = &func_800FB81C_2147AC;
 }
 

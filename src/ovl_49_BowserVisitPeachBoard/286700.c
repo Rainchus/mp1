@@ -98,7 +98,7 @@ void func_800F66BC_2867DC(void) {
         }
 
         D_800F7188->unk_30 = D_800F70DC[1].y;
-        D_800F7190->unk_4C = 1;
+        D_800F7190->unk_4C[0] = 1;
         SleepVProcess();
         func_8003E81C(D_800F7184, 1, 0);
         func_8004F40C(D_800F7184, 0, 2);
@@ -140,7 +140,7 @@ void func_800F6C10_286D30(unkObjectStruct* arg0) {
     temp_s0->unk_18.x = sinf(arg0->unk_24 * 0.017453292519943295);
     temp_s0_2 = D_800F7188;
     temp_s0_2->unk_18.z = cosf(arg0->unk_24 * 0.017453292519943295);
-    if ((arg0->unk_4C == 0) || !(arg0->unk_24 < -310.0f)) {
+    if ((arg0->unk_4C[0] == 0) || !(arg0->unk_24 < -310.0f)) {
         arg0->unk_24 = arg0->unk_24 - 5.0f;
         if (arg0->unk_24 <= -360.0f) {
             arg0->unk_24 = arg0->unk_24 + 360.0f;
@@ -191,7 +191,7 @@ void func_800F6E18_286F38(void) {
     D_800F7190 = func_8005D384(0x1000, 0, 0, -1, &func_800F6C10_286D30);
     D_800F7190->unk_24 = -12.0f;
     D_800F7190->unk_28 = 0.0f;
-    D_800F7190->unk_4C = 0;
+    D_800F7190->unk_4C[0] = 0;
     D_800F7188->unk_0A |= 1;
     D_800F718C = CreateObject(func_80052F04(D_800F7180), D_800F7158_287278[gPlayers[D_800F7180].characterID]);
     D_800F718C->coords.x = D_800F70F4.x;

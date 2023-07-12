@@ -37,19 +37,17 @@ INCLUDE_ASM(s32, "ovl_0E_FaceLift/12BC20", func_800F8CE0_12E320);
 INCLUDE_ASM(s32, "ovl_0E_FaceLift/12BC20", func_800F8D5C_12E39C);
 
 void func_800F8DC8_12E408(unkObjectStruct* arg0) {
-    unkGlobalStruct_00* temp_v0;
     s16 i;
 
     func_800F80A4_12D6E4(arg0, 4);
-    temp_v0 = arg0->unk_40;
-    func_800FA374_12F9B4(temp_v0->unk_00.unsigned16[0], temp_v0->unk_00.unsigned16[1]);
-    func_800258EC(arg0->unk_40->unk_00.unsigned16[0], 4, 4);
-    func_800258EC(arg0->unk_40->unk_00.unsigned16[1], 4, 4);
-    func_800258EC(arg0->unk_40->unk_04.unsigned16[0], 4, 4);
-    func_800258EC(arg0->unk_40->unk_04.unsigned16[1], 4, 4);
-    arg0->unk_40->unk_08.unsigned16[0] = LoadFormFile(0x200003, 0x219);
-    func_80025F10(arg0->unk_40->unk_08.unsigned16[0], 16);
-    func_80025830(arg0->unk_40->unk_08.unsigned16[0], 3.8f, 3.8f, 3.8f);
+    func_800FA374_12F9B4(arg0->unk_40[0], arg0->unk_40[1]);
+    func_800258EC(arg0->unk_40[0], 4, 4);
+    func_800258EC(arg0->unk_40[1], 4, 4);
+    func_800258EC(arg0->unk_40[2], 4, 4);
+    func_800258EC(arg0->unk_40[3], 4, 4);
+    arg0->unk_40[4] = LoadFormFile(0x200003, 0x219);
+    func_80025F10(arg0->unk_40[4], 16);
+    func_80025830(arg0->unk_40[4], 3.8f, 3.8f, 3.8f);
     
     for (i = 0; i < 6; i++) {
         D_800FC980[i].x = D_800FC4B0[i].unk_00;
@@ -63,7 +61,7 @@ void func_800F8DC8_12E408(unkObjectStruct* arg0) {
     func_80025F10(func_8002451C(0, &func_800F9988_12EFC8, 0), 16);
     D_800FC9F0.x = ((-17.25f - D_800FC500.unk_50) / (D_800FC500.unk_50 - D_800FC500.unk_00));
     D_800FC9F0.y = ((-17.25f - D_800FC500.unk_50) / (D_800FC500.unk_50 - D_800FC500.unk_28));
-    arg0->unk_4C = 0;
+    arg0->unk_4C[0] = 0;
     SetFadeInTypeAndTime(0, 16);
     arg0->func_ptr = &func_800F8FCC_12E60C;
 }
@@ -85,7 +83,7 @@ void func_800F9AD4_12F114(unkObjectStruct* arg0) {
     
     D_800FC960 = func_80019060(temp, 0, 1);
     func_80018C90(D_800FC960);
-    arg0->unk_4D = 0;
+    arg0->unk_4C[1] = 0;
     arg0->func_ptr = &func_800F9B38_12F178;
 }
 

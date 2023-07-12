@@ -39,20 +39,20 @@ void func_800F65E0_29B410(void) {
 void func_800F6788_29B5B8(unkObjectStruct* arg0) {
     s32 pad[2]; //required to match stack alignment
     
-    if (arg0->unk_4D != 0) {
-        arg0->unk_4D--;
+    if (arg0->unk_4C[1] != 0) {
+        arg0->unk_4C[1]--;
         return;
     }
     
-    arg0->unk_4C++;
+    arg0->unk_4C[0]++;
     
-    if (arg0->unk_4C >= 7) {
-        arg0->unk_4C = 0;
+    if (arg0->unk_4C[0] >= 7) {
+        arg0->unk_4C[0] = 0;
     }
     
-    arg0->unk_4D = 0x50;
+    arg0->unk_4C[1] = 0x50;
     
-    func_800FBD48_2A0B78(D_80110460, D_80110448[arg0->unk_4C] + 12, 40.0f);
+    func_800FBD48_2A0B78(D_80110460, D_80110448[arg0->unk_4C[0]] + 12, 40.0f);
 }
 
 unkObjectStruct* func_800F6804_29B634(unkGlobalStruct_00* arg0) {
@@ -60,10 +60,10 @@ unkObjectStruct* func_800F6804_29B634(unkGlobalStruct_00* arg0) {
 
     temp_s0 = func_8005D384(0x1000, 0, 0, -1, &func_800F6788_29B5B8);
     func_8005D96C(temp_s0, 0, 0, 0);
-    func_8005D97C(temp_s0, arg0->unk_18 + arg0->unk_0C.float32, arg0->unk_1C + arg0->unk_10.float32, arg0->unk_20.floatingPoint + arg0->unk_14);
-    func_8005D95C(temp_s0, D_80110450->unk_0C.float32, D_80110450->unk_10.float32, D_80110450->unk_14);
-    temp_s0->unk_4C = 2;
-    temp_s0->unk_4D = 48;
+    func_8005D97C(temp_s0, arg0->unk_18 + arg0->unk_0C, arg0->unk_1C + arg0->unk_10, arg0->unk_20.floatingPoint + arg0->unk_14);
+    func_8005D95C(temp_s0, D_80110450->unk_0C, D_80110450->unk_10, D_80110450->unk_14);
+    temp_s0->unk_4C[0] = 2;
+    temp_s0->unk_4C[1] = 48;
     temp_s0->unk_50 = arg0;
     return temp_s0;
 }

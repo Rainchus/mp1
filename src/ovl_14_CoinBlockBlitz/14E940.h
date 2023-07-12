@@ -32,8 +32,6 @@ extern unkCoinBlockBlitzStruct2 D_800FA8F0;
 extern s16 D_800FAA78;
 extern unkCoinBlockBlitzStruct1 D_800FAA80;
 
-unkObjectStruct* func_8005D384(s32, s32, s32, s32, void*);
-
 void func_800F6D08_14F068(void);
 void func_800F6E1C_14F17C();
 extern unkObjectStruct* D_800F2AF8[];

@@ -65,7 +65,7 @@ void func_800F65E0_1F62C0(void) {
     func_8005D384(0x2710, 0, 0, -1, &func_800FCC6C_1FC94C);
     D_800FF574 = func_8005D384(60, 0, 0, -1, &func_800FE710_1FE3F0);
     D_800FF55C = func_8005D384(40, 2, 0, -1, &func_800F6D98_1F6A78);
-    D_800FF55C->unk_50 = func_80023684(16, 0x7918);
+    D_800FF55C->unk_50 = func_80023684(sizeof(unkKeyPaWayStruct), 0x7918);
     func_8007B168(&D_800FF3B0, 1);
     temp_s0 = ReadMainFS(42);
     D_800FF534 = func_80039084(temp_s0);
@@ -101,44 +101,44 @@ void func_800F6BD8_1F68B8(unkObjectStruct* arg0) {
 INCLUDE_ASM(s32, "ovl_2C_KeyPaWay/1F62C0", func_800F6C58_1F6938);
 
 void func_800F6D98_1F6A78(unkObjectStruct* arg0) {
-    unkGlobalStruct_00* temp_v0;
+    unkKeyPaWayStruct* temp_v0;
 
     temp_v0 = arg0->unk_50;
-    temp_v0->unk_04.unsigned32 = 0;
-    temp_v0->unk_08.unsigned32 = 0;
-    arg0->unk_40->unk_00.unsigned16[0] = LoadFormFile(0x400011, 0xD);
-    arg0->unk_40->unk_00.unsigned16[1] = LoadFormFile(0x400010, 0xD);
-    func_80026040(arg0->unk_40->unk_00.unsigned16[0]);
+    temp_v0->unk_04 = 0;
+    temp_v0->unk_08 = 0;
+    arg0->unk_40[0] = LoadFormFile(0x400011, 0xD);
+    arg0->unk_40[1] = LoadFormFile(0x400010, 0xD);
+    func_80026040(arg0->unk_40[0]);
     arg0->func_ptr = NULL;
 }
 
-void func_800F6E04_1F6AE4(u16 arg0, u32 arg1, u32 arg2, f32 arg3) {
-    unkGlobalStruct_00* temp_v0;
+void func_800F6E04_1F6AE4(u16 arg0, f32 arg1, f32 arg2, f32 arg3) {
+    unkKeyPaWayStruct* temp_v0;
 
     temp_v0 = D_800FF55C->unk_50;
-    temp_v0->unk_04.unsigned32 = arg1;
-    temp_v0->unk_08.unsigned32 = arg2;
-    temp_v0->unk_0C.float32 = arg3;
-    temp_v0->unk_00.unsigned16[0] = arg0;
-    func_800258EC(D_800FF55C->unk_40->unk_00.unsigned16[0], 4, 0);
+    temp_v0->unk_04 = arg1;
+    temp_v0->unk_08 = arg2;
+    temp_v0->unk_0C = arg3;
+    temp_v0->unk_00 = arg0;
+    func_800258EC(D_800FF55C->unk_40[0], 4, 0);
     func_8005D8B8(D_800FF55C, 0xA0);
     D_800FF55C->func_ptr = &func_800F6E6C_1F6B4C;
 }
 
 void func_800F6E6C_1F6B4C(unkObjectStruct* arg0) {
-    unkGlobalStruct_00* temp_s0 = arg0->unk_50;
+    unkKeyPaWayStruct* temp_s0 = arg0->unk_50;
     f32 temp_f0;
     
-    if (temp_s0->unk_00.unsigned16[0] != 0) {
-        temp_s0->unk_00.unsigned16[0] -= 1;
+    if (temp_s0->unk_00 != 0) {
+        temp_s0->unk_00 -= 1;
     } else if ((func_8005FD5C() + D_800F64F8) == 0) {
-        temp_f0 = temp_s0->unk_04.float32 + temp_s0->unk_08.float32;
-        temp_s0->unk_04.float32 = temp_f0;
-        if (temp_s0->unk_0C.float32 < temp_f0) {
-            temp_s0->unk_04.float32 = temp_s0->unk_0C.float32;
+        temp_f0 = temp_s0->unk_04 + temp_s0->unk_08;
+        temp_s0->unk_04 = temp_f0;
+        if (temp_s0->unk_0C < temp_f0) {
+            temp_s0->unk_04 = temp_s0->unk_0C;
         }
     }
-    func_80026174(arg0->unk_40->unk_00.unsigned16[0], arg0->unk_40->unk_00.unsigned16[1], temp_s0->unk_04.float32);
+    func_80026174(arg0->unk_40[0], arg0->unk_40[1], temp_s0->unk_04);
 }
 
 INCLUDE_ASM(s32, "ovl_2C_KeyPaWay/1F62C0", func_800F6F10_1F6BF0);
@@ -196,7 +196,7 @@ INCLUDE_ASM(s32, "ovl_2C_KeyPaWay/1F62C0", func_800FA450_1FA130);
 INCLUDE_ASM(s32, "ovl_2C_KeyPaWay/1F62C0", func_800FA59C_1FA27C);
 
 void func_800FA7E0_1FA4C0(unkObjectStruct* arg0) {
-    arg0->unk_4C = 0;
+    arg0->unk_4C[0] = 0;
     arg0->func_ptr = &func_800FA7F4_1FA4D4;
 }
 

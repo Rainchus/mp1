@@ -9,6 +9,14 @@ typedef struct unk_ovl3C_struct {
 /* 0x14 */ f32 unk_14;
 } unk_ovl3C_struct;
 
+typedef struct unkKeyPaWayStruct {
+    /* 0x00 */ u16 unk_00;
+    /* 0x02 */ char unk_02[2];
+    /* 0x04 */ f32 unk_04;
+    /* 0x08 */ f32 unk_08;
+    /* 0x0C */ f32 unk_0C;
+} unkKeyPaWayStruct; //sizeof 0x10
+
 extern unk_ovl3C_struct D_800EE738;
 
 extern u8 D_800F64F8;

@@ -119,10 +119,10 @@ void func_800F71AC_1F196C(unkObjectStruct* arg0) {
     SetBasicSpriteSize(D_800FBB5E_ovl2B, 2.0f, 2.0f);
     func_80017660(0, 0.0f, 0.0f, 320.0f, 240.0f);
     func_800176C4(0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
-    arg0->unk_40->unk_00.unsigned16[0] = LoadFormFile(0x3F0000, 0x499);
-    arg0->unk_40->unk_04.unsigned16[1] = func_800174C0(0x3F0001, 0x1499);
+    arg0->unk_40[0] = LoadFormFile(0x3F0000, 0x499);
+    arg0->unk_40[3] = func_800174C0(0x3F0001, 0x1499);
     func_80039C48(&D_800FBA64_ovl2B, &D_800FBB60);
-    func_80026040(arg0->unk_40->unk_04.unsigned16[1]);
+    func_80026040(arg0->unk_40[3]);
     arg0->func_ptr = &func_800F7308_1F1AC8;
 }
 

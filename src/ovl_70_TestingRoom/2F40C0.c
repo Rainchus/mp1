@@ -82,23 +82,23 @@ void func_800F6A44_2F4524(void) {
     }
 
     for (i = 0; i < D_800F2BC0; i++) {
-        anotherTemp = &D_800F3FB0[i]->unk_50->unk_60;
+        anotherTemp = &((unkGlobalStruct_00*) D_800F3FB0[i]->unk_50)->unk_60;
         tempVar = &D_800F33F0;
         *anotherTemp = *tempVar;
     }
 }
 
 void func_800F6BD8_2F46B8(unkObjectStruct* arg0) {
-    unkGlobalStruct_00* temp_s1;
+    unkGlobalStruct_02* temp_s1;
 
-    arg0->unk_40->unk_00.unsigned16[0] = func_800174C0(0x380004, 0x99);
+    arg0->unk_40[0] = func_800174C0(0x380004, 0x99);
     arg0->unk_18 = arg0->unk_1C = arg0->unk_20 = 0.0f;
-    func_80025798(arg0->unk_40->unk_00.unsigned16[0], 0.0f, arg0->unk_1C, arg0->unk_20);
-    temp_s1 = func_80023684(0x2C, 0x7918);
+    func_80025798(arg0->unk_40[0], 0.0f, arg0->unk_1C, arg0->unk_20);
+    temp_s1 = func_80023684(sizeof(unkGlobalStruct_02), 0x7918);
     arg0->unk_50 = temp_s1;
-    func_8009B770(temp_s1, 0, 0x2C);
+    func_8009B770(temp_s1, 0, sizeof(unkGlobalStruct_02));
     arg0->func_ptr = &func_800F6A44_2F4524;
-    temp_s1->unk_04.b[0] = 1;
+    temp_s1->unk_04 = 1;
     D_800F6524.x = 8.0f;
     D_800F6524.y = 110.0f;
     D_800F6524.z = -86.0f;
@@ -107,121 +107,121 @@ void func_800F6BD8_2F46B8(unkObjectStruct* arg0) {
     func_800090A4(arg0);
     func_80008FB8(arg0, 0.6f);
     func_80008FC4(arg0, 25.0f);
-    temp_s1->unk_04.b[1] = 0;
+    temp_s1->unk_05 = 0;
 }
 
 void func_800F6D04_2F47E4(unkObjectStruct* arg0) {
-    unkGlobalStruct_00* temp_s1;
+    unkGlobalStruct_02* temp_s1;
 
-    arg0->unk_40->unk_00.unsigned16[0] = func_800174C0(0x380008, 0x899);
+    arg0->unk_40[0] = func_800174C0(0x380008, 0x899);
     arg0->unk_18 = -1500.0f;
     arg0->unk_1C = 75.0f;
     arg0->unk_20 = 1200.0f;
-    func_80025798(arg0->unk_40->unk_00.unsigned16[0], arg0->unk_18, arg0->unk_1C, arg0->unk_20);
-    temp_s1 = func_80023684(0x2C, 0x7918);
+    func_80025798(arg0->unk_40[0], arg0->unk_18, arg0->unk_1C, arg0->unk_20);
+    temp_s1 = func_80023684(sizeof(unkGlobalStruct_02), 0x7918);
     arg0->unk_50 = temp_s1;
-    func_8009B770(temp_s1, 0, 0x2C);
+    func_8009B770(temp_s1, 0, sizeof(unkGlobalStruct_02));
     arg0->func_ptr = &func_800F7EDC_2F59BC;
-    temp_s1->unk_04.b[0] = 1;
+    temp_s1->unk_04 = 1;
     func_80009058(arg0, 160.0f, 160.0f, -100.0f, -100.0f, 100.0f, 100.0f);
     func_80008FB8(arg0, 0.3f);
     func_8000941C(arg0, 1.0f, 1.0f, 1.0f);
-    temp_s1->unk_04.b[1] = 1;
+    temp_s1->unk_05 = 1;
 }
 
 void func_800F6E38_2F4918(unkObjectStruct* arg0) {
-    unkGlobalStruct_00* temp_s1;
+    unkGlobalStruct_02* temp_s1;
 
-    arg0->unk_40->unk_00.unsigned16[0] = func_800174C0(0x380000, 0x899);
+    arg0->unk_40[0] = func_800174C0(0x380000, 0x899);
     arg0->unk_18 = 0.0f;
     arg0->unk_1C = 0.0f;
     arg0->unk_20 = 0.0f;
-    func_80025798(arg0->unk_40->unk_00.unsigned16[0], arg0->unk_18, arg0->unk_1C, arg0->unk_20);
-    temp_s1 = func_80023684(0x2C, 0x7918);
+    func_80025798(arg0->unk_40[0], arg0->unk_18, arg0->unk_1C, arg0->unk_20);
+    temp_s1 = func_80023684(sizeof(unkGlobalStruct_02), 0x7918);
     arg0->unk_50 = temp_s1;
-    func_8009B770(temp_s1, 0, 0x2C);
+    func_8009B770(temp_s1, 0, sizeof(unkGlobalStruct_02));
     arg0->func_ptr = &func_800F9400_2F6EE0;
-    temp_s1->unk_04.b[0] = 1;
+    temp_s1->unk_04 = 1;
     func_80009000(arg0, 4, 0.0f);
     func_800090A4(arg0);
     func_80008FB8(arg0, 0.5f);
     func_8000941C(arg0, 1.0f, 1.0f, 1.0f);
     func_80008FC4(arg0, 20.0f);
-    temp_s1->unk_04.b[1] = 2;
+    temp_s1->unk_05 = 2;
 }
 
 void func_800F6F1C_2F49FC(unkObjectStruct* arg0) {
-    unkGlobalStruct_00* temp_s1;
+    unkGlobalStruct_02* temp_s1;
 
-    arg0->unk_40->unk_00.unsigned16[0] = func_800174C0(0x380006, 0x899);
+    arg0->unk_40[0] = func_800174C0(0x380006, 0x899);
     arg0->unk_18 = 0.0f;
     arg0->unk_1C = 125.0f;
     arg0->unk_20 = 1700.0f;
-    func_80025798(arg0->unk_40->unk_00.unsigned16[0], arg0->unk_18, arg0->unk_1C, 1700.0f);
-    temp_s1 = func_80023684(0x2C, 0x7918);
+    func_80025798(arg0->unk_40[0], arg0->unk_18, arg0->unk_1C, 1700.0f);
+    temp_s1 = func_80023684(sizeof(unkGlobalStruct_02), 0x7918);
     arg0->unk_50 = temp_s1;
-    func_8009B770(temp_s1, 0, 0x2C);
+    func_8009B770(temp_s1, 0, sizeof(unkGlobalStruct_02));
     arg0->func_ptr = &func_800F7F50_2F5A30;
-    temp_s1->unk_04.b[0] = 1;
+    temp_s1->unk_04 = 1;
     func_80009000(arg0, 4, 0.0f);
     func_80008FB8(arg0, 0.5f);
     func_8000941C(arg0, 1.0f, 1.0f, 1.0f);
-    temp_s1->unk_04.b[1] = 3;
+    temp_s1->unk_05 = 3;
 }
 
 void func_800F7010_2F4AF0(unkObjectStruct* arg0) {
-    unkGlobalStruct_00* temp_s1;
+    unkGlobalStruct_02* temp_s1;
 
-    arg0->unk_40->unk_00.unsigned16[0] = func_800174C0(0x380006, 0x899);
+    arg0->unk_40[0] = func_800174C0(0x380006, 0x899);
     arg0->unk_20 = 1000.0f;
-    temp_s1 = func_80023684(0x2C, 0x7918);
+    temp_s1 = func_80023684(sizeof(unkGlobalStruct_02), 0x7918);
     arg0->unk_50 = temp_s1;
-    func_8009B770(temp_s1, 0, 0x2C);
+    func_8009B770(temp_s1, 0, sizeof(unkGlobalStruct_02));
     arg0->func_ptr = NULL;
-    temp_s1->unk_04.b[0] = 1;
+    temp_s1->unk_04 = 1;
     func_80009090(arg0);
     func_80009058(arg0, 250.0f, 250.0f, -250.0f, -250.0f, 250.0f, 250.0f);
     func_80008FB8(arg0, 0.5f);
     func_80008FC4(arg0, 15.0f);
     func_8000941C(arg0, 2.0f, 2.0f, 2.0f);
-    temp_s1->unk_04.b[1] = 4;
+    temp_s1->unk_05 = 4;
 }
 
 void func_800F7108_2F4BE8(unkObjectStruct* arg0) {
-    unkGlobalStruct_00* temp_s1;
+    unkGlobalStruct_02* temp_s1;
 
-    arg0->unk_40->unk_00.unsigned16[0] = func_800174C0(0x380006, 0x899);
+    arg0->unk_40[0] = func_800174C0(0x380006, 0x899);
     arg0->unk_18 = 0.0f;
-    temp_s1 = func_80023684(0x2C, 0x7918);
+    temp_s1 = func_80023684(sizeof(unkGlobalStruct_02), 0x7918);
     arg0->unk_50 = temp_s1;
-    func_8009B770(temp_s1, 0, 0x2C);
+    func_8009B770(temp_s1, 0, sizeof(unkGlobalStruct_02));
     arg0->func_ptr = NULL;
-    temp_s1->unk_04.b[0] = 1;
+    temp_s1->unk_04 = 1;
     func_80009090(arg0);
     func_80009058(arg0, 250.0f, 250.0f, -250.0f, -250.0f, 250.0f, 250.0f);
     func_80008FB8(arg0, 0.5f);
     func_80008FC4(arg0, 15.0f);
     func_8000941C(arg0, 2.0f, 2.0f, 2.0f);
-    temp_s1->unk_04.b[1] = 4;
+    temp_s1->unk_05 = 4;
 }
 
 void func_800F71F4_2F4CD4(unkObjectStruct* arg0) {
-    unkGlobalStruct_00* temp_s1;
+    unkGlobalStruct_02* temp_s1;
 
-    arg0->unk_40->unk_00.unsigned16[0] = func_800174C0(0x38000C, 0x899);
+    arg0->unk_40[0] = func_800174C0(0x38000C, 0x899);
     arg0->unk_18 = -1600.0f;
     arg0->unk_1C = 0.0f;
     arg0->unk_20 = 2000.0f;
-    func_80025798(arg0->unk_40->unk_00.unsigned16[0], arg0->unk_18, arg0->unk_1C, 2000.0f);
-    temp_s1 = func_80023684(0x2C, 0x7918);
+    func_80025798(arg0->unk_40[0], arg0->unk_18, arg0->unk_1C, 2000.0f);
+    temp_s1 = func_80023684(sizeof(unkGlobalStruct_02), 0x7918);
     arg0->unk_50 = temp_s1;
-    func_8009B770(temp_s1, 0, 0x2C);
+    func_8009B770(temp_s1, 0, sizeof(unkGlobalStruct_02));
     arg0->func_ptr = NULL;
-    temp_s1->unk_04.b[0] = 1;
+    temp_s1->unk_04 = 1;
     func_80009000(arg0, 4, 0.0f);
     func_80008FB8(arg0, 0.5f);
     func_8000941C(arg0, 1.0f, 1.0f, 1.0f);
-    temp_s1->unk_04.b[1] = 5;
+    temp_s1->unk_05 = 5;
 }
 
 #ifdef NON_MATCHING //matches but tons of warnings
@@ -283,7 +283,7 @@ void func_800F72DC_2F4DBC(struct1* arg0, s32 arg1, s32 arg2, s32 arg3, f32 arg4,
     arg0->unk_18 = arg4;
     arg0->unk_1C = 10.0f;
     arg0->unk_20 = arg6;
-    func_80025798(arg0->unk_40->unk_00.unsigned16[0], arg0->unk_18, arg0->unk_1C, arg6);
+    func_80025798(arg0->unk_40[0], arg0->unk_18, arg0->unk_1C, arg6);
     func_800090C4(arg0, 0, 2);
     func_800090C4(arg0, 1, 2);
     func_800090C4(arg0, 2, 2);

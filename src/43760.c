@@ -68,7 +68,7 @@ void func_800437B8(void) {
 INCLUDE_ASM(s32, "43760", func_8004388C);
 
 void func_80043D68(void) {
-    D_800D6450->unk_4C = 0;
+    D_800D6450->unk_4C[0] = 0;
 }
 
 INCLUDE_ASM(s32, "43760", func_80043D78);

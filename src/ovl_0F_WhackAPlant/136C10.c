@@ -18,7 +18,7 @@ void func_800FB308_136CC8(unkObjectStruct* arg0, s16 arg1, f32 arg2, f32 arg3, f
         func_8005D95C(arg0, arg2, arg3, arg4);
         return;
     }
-    func_80025798(arg0->unk_40->unk_00.signed16[arg1], arg2, arg3, arg4);
+    func_80025798(arg0->unk_40[arg1], arg2, arg3, arg4);
 }
 
 void func_800FB378_136D38(unkObjectStruct* arg0, s16 arg1, f32 arg2, f32 arg3, f32 arg4) {
@@ -26,7 +26,7 @@ void func_800FB378_136D38(unkObjectStruct* arg0, s16 arg1, f32 arg2, f32 arg3, f
         func_8005D96C(arg0, arg2, arg3, arg4);
         return;
     }
-    func_800257E4(arg0->unk_40->unk_00.signed16[arg1], arg2, arg3, arg4);
+    func_800257E4(arg0->unk_40[arg1], arg2, arg3, arg4);
 }
 
 s32 func_800FB3E8_136DA8(f32 arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5) {

@@ -131,7 +131,7 @@ void func_800F7DF0_2BCDD0(void) {
 INCLUDE_ASM(s32, "ovl_69_GameModeOverworld/2BB5F0", func_800F7E24_2BCE04);
 
 void func_800F86A8_2BD688(unkObjectStruct* arg0) {
-    arg0->unk_40->unk_00.signed16[0] = -1;
+    arg0->unk_40[0] = -1;
     SetFadeInTypeAndTime(0xFF, 0x10);
     arg0->func_ptr = &func_800F86EC_2BD6CC;
 }

@@ -173,7 +173,9 @@ INCLUDE_ASM(s32, "24740", func_80025D90);
 
 INCLUDE_ASM(s32, "24740", func_80025DD8);
 
-INCLUDE_ASM(s32, "24740", func_80025E48);
+s16 func_80025E48(s16 arg0) {
+    return D_800F2B7C[arg0].unk_08;
+}
 
 INCLUDE_ASM(s32, "24740", func_80025E70);
 

@@ -75,7 +75,7 @@ void func_8005546C(s32 arg0) {
         temp_v0 = func_8005D384(-0x8000, 0, 0, -1, &func_8005528C);
         temp_s0->unk2C = temp_v0;
         temp_v0->unk_24 = 0.0f;
-        temp_v0->unk_4C = arg0;
+        temp_v0->unk_4C[0] = arg0;
         for (i = 0; i < 4; i++) {
             for (j = 0; j < 0x0B; j++){
                 func_80067354(D_800D83A8[i].unk_06, j, D_800C5654[j], D_800C5654[j]);
@@ -106,8 +106,8 @@ void func_800555D0(unkObjectStruct* arg0) {
 
     while (arg0->unk_34 <= 0.0f) {
         if (arg0->unk_18 > 0.0f) {
-            AdjustPlayerCoins(arg0->unk_4C, 1);
-            if (((arg0->unk_4F != 0) & (var_s1 == 0)) && (arg0->unk_38 >= 3.0f)) {
+            AdjustPlayerCoins(arg0->unk_4C[0], 1);
+            if (((arg0->unk_4C[3] != 0) & (var_s1 == 0)) && (arg0->unk_38 >= 3.0f)) {
                 PlaySound(0x43);
                 var_s1 = 1;
                 arg0->unk_38 -= 3.0f;
@@ -116,23 +116,23 @@ void func_800555D0(unkObjectStruct* arg0) {
             arg0->unk_18 -= 1.0f;
 
         } else {
-            AdjustPlayerCoins(arg0->unk_4C, -1);
+            AdjustPlayerCoins(arg0->unk_4C[0], -1);
             arg0->unk_18 += 1.0f;
             
-            if (arg0->unk_4F != 0) {
+            if (arg0->unk_4C[3] != 0) {
                 if ((var_s1 == 0) && (arg0->unk_38 >= 3.0f)) {
                     PlaySound(0x57);
                     var_s1 = 1;
                     arg0->unk_38 -= 3.0f;
                 }
-                if (arg0->unk_18 == 0.0f || gPlayers[arg0->unk_4C].coinAmount == 0) {
+                if (arg0->unk_18 == 0.0f || gPlayers[arg0->unk_4C[0]].coinAmount == 0) {
                     PlaySound(0x58);
                 }
             }                
         }
         
-        if (arg0->unk_18 == 0.0f || gPlayers[arg0->unk_4C].coinAmount == 0) {
-            D_800D84D0[arg0->unk_4C] = 0;
+        if (arg0->unk_18 == 0.0f || gPlayers[arg0->unk_4C[0]].coinAmount == 0) {
+            D_800D84D0[arg0->unk_4C[0]] = 0;
             func_8005D718(arg0);
             return;
         }

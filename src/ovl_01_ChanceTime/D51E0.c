@@ -107,23 +107,23 @@ void func_800F99D8_D85D8(unkObjectStruct* arg0) {
     f32 temp_f22 = D_80101214.z;
     
 
-    arg0->unk_40->unk_00.unsigned16[0] = LoadFormFile(0xA0072, 0x689);
-    arg0->unk_40->unk_00.unsigned16[1] = func_800174F4(0x20, 0x299);
-    func_80025830(arg0->unk_40->unk_00.unsigned16[1], 1.3f, 1.0f, 1.3f);
+    arg0->unk_40[0] = LoadFormFile(0xA0072, 0x689);
+    arg0->unk_40[1] = func_800174F4(0x20, 0x299);
+    func_80025830(arg0->unk_40[1], 1.3f, 1.0f, 1.3f);
     func_8001775C(arg0, 0, 0xA0072);
     func_8001775C(arg0, 1, 0xA0073);
     func_8001775C(arg0, 2, 0xA0074);
-    func_80025EB4(arg0->unk_40->unk_00.unsigned16[0], 2, 2);
-    func_800258EC(arg0->unk_40->unk_00.unsigned16[0], 4, 4);
-    func_800258EC(arg0->unk_40->unk_00.unsigned16[1], 4, 4);
+    func_80025EB4(arg0->unk_40[0], 2, 2);
+    func_800258EC(arg0->unk_40[0], 4, 4);
+    func_800258EC(arg0->unk_40[1], 4, 4);
     arg0->unk_18 = temp_f20;
     arg0->unk_1C = temp_f24;
     arg0->unk_20 = temp_f22;
     arg0->unk_28 = 0.0f;
-    func_80025798(arg0->unk_40->unk_00.unsigned16[1], temp_f20, arg0->unk_28, temp_f22);
+    func_80025798(arg0->unk_40[1], temp_f20, arg0->unk_28, temp_f22);
     arg0->unk_30 = arg0->unk_34 = arg0->unk_38 = 0.9f;
-    func_800F9948_D8548(arg0->unk_40->unk_00.signed16[0]);
-    func_80025B34(arg0->unk_40->unk_00.unsigned16[0]);
+    func_800F9948_D8548(arg0->unk_40[0]);
+    func_80025B34(arg0->unk_40[0]);
     arg0->func_ptr = &func_800F8A6C_D766C;
 }
 
