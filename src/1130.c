@@ -89,7 +89,7 @@ void func_800079A8(unkObjectStruct* arg0, f32 arg1, f32 arg2, f32 arg3) {
     func_8001E3B4(temp_s0);
     func_8001E268(temp_s0, 4, 4);
     func_80025798(arg0->unk_40[2], arg1, arg2, arg3);
-    temp_s2->unk_40.float32 = D_800B8990;
+    temp_s2->unk_40 = D_800B8990;
     func_80009438();
 }
 
@@ -106,7 +106,7 @@ void func_80007A50(unkObjectStruct* arg0) {
     var_v1 = !(var_f2 <= 29.0f) ? 0 : 1;
     
     if (var_v0 & var_v1) {
-        func_8000A534(arg0, (temp_s1->unk_40.float32 + D_800B8988) * temp_s1->unk_BC);
+        func_8000A534(arg0, (temp_s1->unk_40 + D_800B8988) * temp_s1->unk_BC);
     }
 }
 

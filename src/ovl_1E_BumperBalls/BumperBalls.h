@@ -1,5 +1,13 @@
 #include "common.h"
 
+typedef struct UnkBumberBallsStruct {
+    /* 0x00 */ u16 unk_00;
+    /* 0x02 */ char unk_02[0x40];
+    /* 0x42 */ u16 unk_42;
+    /* 0x44 */ char unk_44[0xC];
+    /* 0x50 */ f32 unk_50;
+} UnkBumberBallsStruct; //sizeof unknown
+
 extern unkObjectStruct** D_800FCD2C;
 
 void func_800FC618_197738(void);

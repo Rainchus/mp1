@@ -93,14 +93,10 @@ typedef struct unkGlobalStruct_00 {
     /* 0x34 */ f32 unk_34;
     /* 0x38 */ f32 unk_38;
     /* 0x3C */ f32 unk_3C;
-    /* 0x40 */ union {
-        f32 float32;
-        s32 signed32;
-    } unk_40;
-    /* 0x44 */ f32 unk_44;
-    /* 0x48 */ f32 unk_48;
-    /* 0x4C */ f32 unk_4C;
-    /* 0x50 */ f32 unk_50;
+    /* 0x40 */ f32 unk_40;
+    /* 0x44 */ char unk_44[0xC];
+    /* 0x50 */ u16 unk_50;
+    /* 0x52 */ char unk_52[2];
     /* 0x54 */ u8 unk_54[2];
     /* 0x56 */ s8 unk_56;
     /* 0x57 */ s8 unk_57;
@@ -130,7 +126,7 @@ typedef struct unkGlobalStruct_00 {
     /* 0xC0 */ char unk_C0[0x1C];
     /* 0xDC */ s32 unk_DC;
     /* 0xE0 */ s32 unk_E0;
-    /* 0xE4 */ unk_Struct01* unk_E4;
+    /* 0xE4 */ unk_Struct01* unk_E4; // possibly void*
 } unkGlobalStruct_00; /* size = 0xE8 */
 
 typedef struct unkGlobalStruct_01 {
@@ -723,7 +719,8 @@ typedef struct unk_ovl_2D_struct { //actually global??
     /* 0x0A */ s16 unk_0A;
     /* 0x0C */ s16 unk_0C;
     /* 0x0E */ s16 unk_0E;
-    /* 0x10 */ char unk_10[4];
+    /* 0x10 */ s16 unk_10;
+    /* 0x12 */ s16 unk_12;
     /* 0x14 */ s16 unk_14;
     /* 0x16 */ s16 unk_16;
     /* 0x18 */ char unk_18[2];
@@ -740,12 +737,7 @@ typedef struct unk_ovl_2D_struct { //actually global??
     /* 0x40 */ f32 unk_40;
     /* 0x44 */ f32 unk_44;
     /* 0x48 */ f32 unk_48;
-/* 0x4C */ union {
-        f32 float32;
-        u16 unsigned16[2];
-        s16 signed16[2];
-        s32 signed32;
-    } unk_4C;
+    /* 0x4C */ f32 unk_4C;
     /* 0x50 */ f32 unk_50;
     /* 0x54 */ f32 unk_54;
     /* 0x58 */ f32 unk_58;
@@ -756,8 +748,8 @@ typedef struct unk_ovl_2D_struct { //actually global??
     /* 0x6C */ unk2C0C0StructC0* unk_6C;
     /* 0x70 */ char pad70[0xC];
     /* 0x7C */ Mat4 unk7C; // Transformation Matrix
-    /* 0x7C */ char padBC[0x4];
-} unk_ovl_2D_struct;
+    /* 0xBC */ char padBC[0x4];
+} unk_ovl_2D_struct; //sizeof 0xC0
 
 typedef struct SubTextWindow {
     s8 unk0;
