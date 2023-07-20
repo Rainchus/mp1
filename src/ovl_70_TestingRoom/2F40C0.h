@@ -14,14 +14,8 @@ extern u32 D_800F949C;
 extern s32 D_800F94A0;
 extern s16 D_800EDEB4[];
 
-typedef struct unk_ovl_70Struct {
-s32 unk_00;
-char unk_04[0x10];
-} unk_ovl_70Struct;
-
 void func_800F72DC_2F4DBC(void*, s32, s32, s32, f32, f32, f32);
-extern unk_ovl_70Struct D_800C59AC[];
-extern unk_ovl_70Struct D_800C59B0[];
+extern unkStructSize14 D_800C59AC[];
 extern u8 D_800F32E4;
 
 void func_800F9400_2F6EE0(void);
