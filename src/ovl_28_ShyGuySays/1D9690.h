@@ -124,6 +124,57 @@ extern f64 D_800FD820; //BSS
 extern f64 func_800FD658_1C8F28; //BSS
 
 
+typedef struct UnknownBlock8 {
+    /* 0x00 */ s16 unk_00[4];
+} UnknownBlock8;
+
+typedef struct UnknownBlock36 {
+    /* 0x00 */ char unk_00[36];
+} UnknownBlock36;
+
+f32 func_800F74A0_1DA550(f32, f32, f32);
+void func_800F7A8C_1DAB3C(s16, void*);
+void func_800F94A8_1DC558(void);
+void func_800F95BC_1DC66C(void);
+void func_800F96D4_1DC784(void);
+s16 func_800F97A8_1DC858(void);
+s16 func_800F9828_1DC8D8(void);
+void func_800F98EC_1DC99C(void);
+s16 func_800F99C0_1DCA70(void);
+s16 func_800F9A7C_1DCB2C(u16, s16);
+void func_800F9AFC_1DCBAC(u16);
+void func_800FCA8C_1DFB3C(void*, u16);
+s16 func_800FD124_1E01D4(unkObjectStruct*);
+void func_800FD274_1E0324(s16, s16, f32, UnknownBlock8*, UnknownBlock8*);
+
+extern u8 D_800F64F8;
+extern s32 D_800FD5E0;
+extern s32 D_800FD5E4_1E0694;
+extern s16 D_800FD5E8_1E0698;
+extern u16 D_800FD5EA;
+extern f32 D_800FD5EC_1E069C;
+extern UnknownBlock8 D_800FD850;
+extern UnknownBlock8 D_800FD858;
+extern UnknownBlock36 D_800FD860;
+extern f64 D_800FD888;
+extern f64 D_800FD890;
+extern f64 D_800FD8C0_1E0970;
+extern f64 D_800FD8C8_1E0978;
+extern f64 D_800FD8D0_1E0980;
+extern f64 D_800FD8D8_1E0988;
+extern f64 D_800FD8E0_1E0990;
+extern const f64 D_800FD8E8_1E0998;
+extern f64 D_800FD8F0_1E09A0;
+extern f64 D_800FD8F8_1E09A8;
+extern f64 D_800FD900;
+extern f64 D_800FD908;
+extern s32 D_800FDC30;
+extern s16 D_800FDC50;
+extern s16 D_800FDC52;
+void func_800F6A38_1D9AE8(void*);
+void func_800F6E50_1D9F00(unkObjectStruct*);
+
+
 void func_800FB424_1DE4D4(void);
 extern u16 D_800FD5C4;
 
