@@ -9,7 +9,7 @@ typedef struct unkHammerDropStruct {
 void func_8000A534(unkObjectStruct*, s32);
 void func_80017C0C(unkObjectStruct*, s32, f32, f32, f32, s32, f32);
 void func_80018450(unkObjectStruct*, s32);
-void func_80060F04(s8, s32, s32, s32);
+void func_80060F04(s16, s32, s32, s32);
 
 void func_800F67BC_17E8EC(void);
 void func_800F7D28_17FE58(void);

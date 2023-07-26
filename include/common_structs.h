@@ -94,9 +94,11 @@ typedef struct unkGlobalStruct_00 {
     /* 0x38 */ f32 unk_38;
     /* 0x3C */ f32 unk_3C;
     /* 0x40 */ f32 unk_40;
-    /* 0x44 */ char unk_44[0xC];
-    /* 0x50 */ u16 unk_50;
-    /* 0x52 */ char unk_52[2];
+    /* 0x44 */ char unk_44[8];
+    /* 0x4C */ f32 unk_4C;
+    /* 0x50 */ s16 unk_50;
+    /* 0x52 */ s8 unk_52;
+    /* 0x53 */ char unk_53[1];
     /* 0x54 */ u8 unk_54[2];
     /* 0x56 */ s8 unk_56;
     /* 0x57 */ s8 unk_57;
@@ -123,7 +125,9 @@ typedef struct unkGlobalStruct_00 {
     /* 0xB3 */ s8 unk_B3;
     /* 0xB4 */ char unk_B4[0x08];
     /* 0xBC */ f32 unk_BC;
-    /* 0xC0 */ char unk_C0[0x1C];
+    /* 0xC0 */ u16 unk_C0;
+    /* 0xC2 */ char unk_C2[0x16];
+    /* 0xD8 */ void* unk_D8; // possibly unkGlobalStruct_00*
     /* 0xDC */ s32 unk_DC;
     /* 0xE0 */ s32 unk_E0;
     /* 0xE4 */ unk_Struct01* unk_E4; // possibly void*
@@ -193,6 +197,13 @@ typedef struct unkCommonStruct0 {
     /* 0x64 */ f32 unk_64;
 } unkCommonStruct0; //sizeof 0x68
 
+typedef struct unkStructSize14 {
+    /* 0x00 */ s32 unk_00;
+    /* 0x04 */ s32 unk_04;
+    /* 0x08 */ s32 unk_08;
+    /* 0x0C */ char unk_0C[8];
+} unkStructSize14; //sizeof 0x14
+
 typedef struct jump_buf
 {
     void *sp;
@@ -249,7 +260,9 @@ typedef struct unk_Struct00 {
     /* 0x048 */ f32 unk_48;
     /* 0x04C */ char pad4C[0xA8];
     /* 0x0F4 */ s32 unkF4;
-    /* 0x0F8 */ char padF8[0x400];
+    /* 0x0F8 */ char padF8[0x40];
+    /* 0x138 */ Mtx unk_138;
+    /* 0x178 */ char unk_178[0x380];
 } unk_Struct00;
 
 typedef struct unk_Struct04 {
@@ -708,6 +721,19 @@ typedef struct unk2C0C0StructE0 {
     /* 0x0C */ Color_RGB8 unk_0C;
     /* 0x0F */ u8 unk_0F;
 } unk2C0C0StructE0; //sizeof 0x10
+
+typedef struct unk72D90Struct3 {
+    /* 0x00 */ char unk_00[1];
+    /* 0x01 */ u8 unk_01;
+    /* 0x02 */ char unk_02[1];
+    /* 0x03 */ u8 unk_03;
+    /* 0x04 */ u8 unk_04;
+    /* 0x05 */ char unk_05[1];
+    /* 0x06 */ u16 unk_06;
+    /* 0x08 */ char unk_08[2];
+    /* 0x0A */ s16 unk_0A;
+    /* 0x0C */ char unk_0C[0x24];
+} unk72D90Struct3; //sizeof 0x30
 
 typedef struct unk_ovl_2D_struct { //actually global??
     /* 0x00 */ s8 unk_00;
