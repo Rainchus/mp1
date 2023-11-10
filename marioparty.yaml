@@ -15,6 +15,7 @@ options:
   symbol_addrs_path: symbol_addrs.txt
   asm_function_macro: glabel
   asm_data_macro: dlabel
+  ld_legacy_generation: True
   # undefined_syms_path: undefined_syms.txt
   # c_path: c
   asm_path: asm
