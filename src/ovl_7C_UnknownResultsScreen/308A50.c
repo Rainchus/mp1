@@ -28,8 +28,6 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_7C_UnknownResultsScreen/308A50", D_800FA070
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_7C_UnknownResultsScreen/308A50", D_800FA084_30C4F4);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_7C_UnknownResultsScreen/308A50", D_800FA0A0_30C510);
-
 INCLUDE_ASM("asm/nonmatchings/ovl_7C_UnknownResultsScreen/308A50", func_800F6724_308B94);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_7C_UnknownResultsScreen/308A50", func_800F7310_309780);

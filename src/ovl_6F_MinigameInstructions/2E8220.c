@@ -34,16 +34,6 @@ INCLUDE_ASM("asm/nonmatchings/ovl_6F_MinigameInstructions/2E8220", func_801060DC
 
 INCLUDE_ASM("asm/nonmatchings/ovl_6F_MinigameInstructions/2E8220", func_80106358_2EB018);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_6F_MinigameInstructions/2E8220", D_8010F3B8_2F4078);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_6F_MinigameInstructions/2E8220", D_8010F3C4_2F4084);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_6F_MinigameInstructions/2E8220", D_8010F3D0_2F4090);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_6F_MinigameInstructions/2E8220", D_8010F3DC_2F409C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_6F_MinigameInstructions/2E8220", D_8010F3E8_2F40A8);
-
 INCLUDE_ASM("asm/nonmatchings/ovl_6F_MinigameInstructions/2E8220", func_801064A4_2EB164);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_6F_MinigameInstructions/2E8220", func_801066C4_2EB384);

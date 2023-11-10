@@ -12,7 +12,9 @@ options:
   undefined_funcs_auto_path: undefined_funcs_auto.txt
   undefined_syms_auto_path: undefined_syms_auto.txt
   ld_script_path: marioparty.ld
+  ld_legacy_generation: True
   symbol_addrs_path: symbol_addrs.txt
+  auto_decompile_empty_functions: True
   asm_function_macro: glabel
   asm_data_macro: dlabel
   # undefined_syms_path: undefined_syms.txt

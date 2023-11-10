@@ -42,8 +42,6 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_80_MinigameStadiumResults/312850", D_800F86
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_80_MinigameStadiumResults/312850", D_800F864C_3148BC);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_80_MinigameStadiumResults/312850", D_800F8650_3148C0);
-
 INCLUDE_ASM("asm/nonmatchings/ovl_80_MinigameStadiumResults/312850", func_800F67DC_312A4C);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_80_MinigameStadiumResults/312850", func_800F6F30_3131A0);

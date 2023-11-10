@@ -54,16 +54,6 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_1E_BumperBalls/191700", D_800FCBD8_197CF8);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_1E_BumperBalls/191700", D_800FCBDC_197CFC);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_1E_BumperBalls/191700", D_800FCBE0_197D00);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_1E_BumperBalls/191700", D_800FCBEC_197D0C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_1E_BumperBalls/191700", D_800FCBF8_197D18);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_1E_BumperBalls/191700", D_800FCC04_197D24);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_1E_BumperBalls/191700", D_800FCC10_197D30);
-
 INCLUDE_ASM("asm/nonmatchings/ovl_1E_BumperBalls/191700", func_800F6EBC_191FDC);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_1E_BumperBalls/191700", D_800FCC28_197D48);

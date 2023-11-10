@@ -136,10 +136,6 @@ INCLUDE_ASM("asm/nonmatchings/ovl_25_SlotCarDerby/1C1EB0", func_800F70C4_1C2994)
 
 INCLUDE_ASM("asm/nonmatchings/ovl_25_SlotCarDerby/1C1EB0", func_800F70DC_1C29AC);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_25_SlotCarDerby/1C1EB0", D_80100FB8_1CC888);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_25_SlotCarDerby/1C1EB0", D_80100FCC_1CC89C);
-
 INCLUDE_ASM("asm/nonmatchings/ovl_25_SlotCarDerby/1C1EB0", func_800F744C_1C2D1C);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_25_SlotCarDerby/1C1EB0", func_800F7650_1C2F20);
@@ -156,19 +152,11 @@ INCLUDE_ASM("asm/nonmatchings/ovl_25_SlotCarDerby/1C1EB0", func_800F76E8_1C2FB8)
 
 INCLUDE_ASM("asm/nonmatchings/ovl_25_SlotCarDerby/1C1EB0", func_800F7A00_1C32D0);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_25_SlotCarDerby/1C1EB0", D_80100FE0_1CC8B0);
+INCLUDE_RODATA("asm/nonmatchings/ovl_25_SlotCarDerby/1C1EB0", D_80100FB8_1CC888);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_25_SlotCarDerby/1C1EB0", D_80100FF0_1CC8C0);
+INCLUDE_RODATA("asm/nonmatchings/ovl_25_SlotCarDerby/1C1EB0", D_80100FCC_1CC89C);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_25_SlotCarDerby/1C1EB0", D_80101004_1CC8D4);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_25_SlotCarDerby/1C1EB0", D_80101014_1CC8E4);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_25_SlotCarDerby/1C1EB0", D_80101024_1CC8F4);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_25_SlotCarDerby/1C1EB0", D_8010103C_1CC90C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_25_SlotCarDerby/1C1EB0", D_8010104C_1CC91C);
+INCLUDE_RODATA("asm/nonmatchings/ovl_25_SlotCarDerby/1C1EB0", D_80100FD8_1CC8A8);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_25_SlotCarDerby/1C1EB0", D_80101054_1CC924);
 
