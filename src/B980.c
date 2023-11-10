@@ -25,7 +25,31 @@ typedef struct FXDO_Unk {
 /* 0x04 */ s32 unk_04;
 } FXDO_Unk; //unk size
 
+typedef struct unkB980Struct1 {
+    /* 0x00 */ char unk_00[0xA];
+    /* 0x0A */ s16 unk_0A;
+    /* 0x0C */ char unk_0C[8];
+    /* 0x14 */ s16 unk_14[2]; // unknown array size
+    /* 0x18 */ char unk_18[2];
+    /* 0x1A */ s16 unk_1A;
+    /* 0x1C */ char unk_1C[0x38];
+} unkB980Struct1; //sizeof 0x54
+
+typedef struct unkB980Struct2 {
+    /* 0x00 */ char unk_00[8];
+    /* 0x08 */ s32 unk_08;
+    /* 0x0C */ s32 unk_0C;
+    /* 0x15 */ char unk_10[0x15];
+    /* 0x25 */ s8 unk_25;
+    /* 0x26 */ char unk_26[3];
+    /* 0x29 */ s8 unk_29;
+    /* 0x2A */ char unk_2A[2];
+} unkB980Struct2; //sizeof 0x2C
+
 extern FXDO_Unk* D_800CDAC8;
+extern unkB980Struct2* D_800CEA94;
+extern s32 D_800CEAA4;
+extern unkB980Struct1* D_800CEAC0;
 extern s32 D_800C1870;
 
 typedef struct FXD0_Unk2 {
@@ -35,6 +59,8 @@ typedef struct FXD0_Unk2 {
 } FXD0_Unk2;
 
 extern FXD0_Unk2 D_800CDAA8;
+
+void func_8001249C(s16, u8);
 s32 func_8000AFF8(s32, s32, s32);
 s32 alHeapDBAlloc(s32, s32, FXD0_Unk2*, s32, s32);
 
@@ -254,7 +280,22 @@ INCLUDE_ASM(s32, "B980", func_8001085C);
 
 INCLUDE_ASM(s32, "B980", func_800108C8);
 
-INCLUDE_ASM(s32, "B980", func_80010998);
+void func_80010998(s16 arg0, u8 arg1) {
+    unkB980Struct1* temp_s1;
+    s16 var_v0;
+    s16 temp_a0;
+
+    temp_s1 = &D_800CEAC0[arg0];
+    var_v0 = temp_s1->unk_1A;
+
+    while (var_v0 > 0) {
+        var_v0--;
+        temp_a0 = temp_s1->unk_14[var_v0];
+        if (D_800CEAC0[temp_a0].unk_0A == arg0) {
+            func_8001249C(temp_a0, arg1);
+        }
+    }
+}
 
 INCLUDE_ASM(s32, "B980", func_80010A68);
 
@@ -308,7 +349,30 @@ INCLUDE_ASM(s32, "B980", func_80012394);
 
 INCLUDE_ASM(s32, "B980", func_800123DC);
 
-INCLUDE_ASM(s32, "B980", func_8001249C);
+void func_8001249C(s16 arg0, u8 arg1) {
+    unkB980Struct2* temp_s0 = &D_800CEA94[arg0];
+    u8 var_s1 = arg1;
+
+    if (temp_s0->unk_0C != 1) {
+        return;
+    }
+
+    D_800CEAA4 |= 0x10;
+
+    if (var_s1 > 127) {
+        var_s1 = 127;
+    }
+
+    if (!(temp_s0->unk_08 & 0x1000)) {
+        temp_s0->unk_08 |= 4;
+        if (temp_s0->unk_29 == 2) {
+            func_80010998(arg0, var_s1);
+        }
+    }
+
+    temp_s0->unk_25 = var_s1;
+    D_800CEAA4 &= ~0x10;
+}
 
 INCLUDE_ASM(s32, "B980", func_80012574);
 

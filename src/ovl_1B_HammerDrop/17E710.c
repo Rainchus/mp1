@@ -220,7 +220,65 @@ INCLUDE_ASM(s32, "ovl_1B_HammerDrop/17E710", func_800F95E8_181718);
 
 INCLUDE_ASM(s32, "ovl_1B_HammerDrop/17E710", func_800F9794_1818C4);
 
-INCLUDE_ASM(s32, "ovl_1B_HammerDrop/17E710", func_800F9C1C_181D4C);
+s32 func_800F9C1C_181D4C(unkObjectStruct* arg0, unkObjectStruct* arg1) {
+    unkGlobalStruct_00* temp_s0;
+    unkHammerDropStruct* temp_s2;
+    unk_Struct01* temp_a1;
+    f32 temp_f20;
+    f32 temp_f22;
+    f32 temp_f24;
+
+    D_800FB6A4 = 0;
+    temp_s0 = arg0->unk_50;
+    temp_a1 = temp_s0->unk_E4;
+    temp_s2 = (unkHammerDropStruct*) ((unkGlobalStruct_00*) arg1->unk_50)->unk_68; // probably not an unkGlobalStruct_00*
+
+    if (temp_s0->unkAE != 0) {
+        return 0;
+    }
+
+    if (temp_s2->unk_38 == 2) {
+        func_80060540(0x296, temp_a1->unk_24);
+
+        if (arg0->unk_1C < arg1->unk_1C - temp_s2->unk_3C) {
+            func_80018450(arg0, 1);
+        }
+
+        if (temp_s0->unkAE != 0) {
+            D_800F370C++;
+            return 1;
+        }
+
+        temp_f24 = arg1->unk_18 - (arg0->unk_18 + D_800ED6B8);
+        temp_f22 = arg1->unk_20 - (arg0->unk_20 + D_800F5254);
+
+        if (temp_s0->unk_50 & 0x200) {
+            return 1;
+        }
+
+        temp_f20 = func_8000A72C(func_800AEAC0(temp_s0->unk_3C), func_800AEFD0(temp_s0->unk_3C), temp_f24, temp_f22);
+
+        if (temp_s0->unk_50 & 0x20) {
+            func_8000A534(arg0, D_800B8988);
+        }
+
+        if (temp_f20 > 0.0f) {
+            func_800184BC(arg0, 9);
+            temp_s0->unk_40 = -D_800B8980;
+        } else {
+            func_800184BC(arg0, 10);
+            temp_s0->unk_40 = D_800B8980;
+        }
+
+        temp_s0->unk_38 = -D_800B8964 * 0.7f;
+        temp_s0->unkAE = 105;
+
+        func_80017C0C(arg0, 5, arg1->unk_18, arg0->unk_1C, arg1->unk_20, 0, func_800B0CD8(temp_f24, temp_f22) + 180.0f);
+        func_80060F04(temp_s0->unk_58, 2, 2, 20);
+    }
+
+    return D_800FB6A4;
+}
 
 INCLUDE_ASM(s32, "ovl_1B_HammerDrop/17E710", func_800F9E68_181F98);
 

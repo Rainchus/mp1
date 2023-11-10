@@ -52,8 +52,8 @@ s32 func_800FB53C_1F5CFC(f32 arg0, f32 arg1, f32 arg2, u16 arg3, f32 arg4, f32 a
 
 INCLUDE_ASM(const s32, "ovl_2B_CastAways/1F5700", func_800FB5B4_1F5D74);
 
-void func_800FB644_1F5E04(u16 arg0, s32 arg1) {
-    D_800F2B7C[arg0].unk_4C.signed32 = arg1;
+void func_800FB644_1F5E04(u16 arg0, f32 arg1) {
+    D_800F2B7C[arg0].unk_4C = arg1;
 }
 
 INCLUDE_ASM(const s32, "ovl_2B_CastAways/1F5700", func_800FB668_1F5E28);

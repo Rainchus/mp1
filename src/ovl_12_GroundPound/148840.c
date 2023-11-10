@@ -1,13 +1,5 @@
 #include "GroundPound.h"
 
-typedef struct UnkStruct_D_800C59AC {
-    s32 unk0;
-    s32 unk4;
-    s32 unk8;
-    s32 unkC;
-    s32 unk10;
-} UnkStruct_D_800C59AC;
-
 void func_800090C4(unkObjectStruct*, s32, u8);
 void func_800F9908_149528(unkObjectStruct*);
 s32 func_800F9FEC_149C0C(void);
@@ -15,8 +7,8 @@ extern f32 D_800B895C;
 
 // These two arrays are only 8 bytes apart, but their elements are more than 8 bytes large
 // Therefore, they are the same array and the references to both just mean access to different members in the actual array
-extern UnkStruct_D_800C59AC D_800C59B4[];
-extern UnkStruct_D_800C59AC D_800C59AC[];
+extern unkStructSize14 D_800C59B4[];
+extern unkStructSize14 D_800C59AC[];
 
 extern unkObjectStruct* D_800F3FB0[];
 extern s32 D_800FA2D0;
@@ -56,8 +48,8 @@ void func_800F8C20_148840(unkObjectStruct* arg0) {
         temp_s0 = 0;
     }
     
-    temp_s3 = D_800C59AC[gPlayers[temp_s0].characterID].unk0;
-    temp_s1 = D_800C59AC[gPlayers[temp_s0].characterID].unk8;
+    temp_s3 = D_800C59AC[gPlayers[temp_s0].characterID].unk_00;
+    temp_s1 = D_800C59AC[gPlayers[temp_s0].characterID].unk_08;
     func_80009618(1);
     func_8000979C(arg0, temp_s3, temp_s1, temp_s0, 0x699, 0x689);
     arg0->unk_30 *= 1.3f;

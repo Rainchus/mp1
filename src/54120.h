@@ -20,7 +20,7 @@ extern s16 D_800D8504;
 extern Process* D_800D8558;
 extern s8 D_800F37B8;
 void func_80055E08(void);
-void func_80067284(s16, s32, s32);
+void func_80067284(s16, s32, f32);
 extern s16 D_800D855C;
 extern s16 D_800D855E;
 extern s16 D_800D8560;

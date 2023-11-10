@@ -1,11 +1,5 @@
 #include "common.h"
 
-typedef struct unk_ChanceTime_00 {
-    /* 0x00 */ s32 unk_00;
-    /* 0x04 */ s32 unk_04;
-    /* 0x08 */ char unk_08[0x0C];
-} unk_ChanceTime_00;
-
 void func_800F7E08_D6A08(s32, s32, s32, u16, f32, f32, f32);
 void func_800F78C4_D64C4(s32, s32, s32, u16, f32, f32, f32);
 void func_800F80D8_D6CD8(s32);
@@ -47,7 +41,7 @@ extern u32 D_80101288;
 extern unkObjectStruct* D_800F3FB4;
 extern unkObjectStruct* D_800F3FB8;
 extern unkObjectStruct* D_800F3FBC;
-extern unk_ChanceTime_00 D_800C59AC[];
+extern unkStructSize14 D_800C59AC[];
 extern char D_80101464[];
 extern char D_80101470[];
 extern f64 D_80101478;

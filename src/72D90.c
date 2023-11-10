@@ -21,11 +21,6 @@ typedef struct unk72D90Struct2 {
     /* 0x04 */ u16 unk_04;
 } unk72D90Struct2; //sizeof 6
 
-typedef struct unk72D90Struct3 {
-    /* 0x00 */ u8 unk_00;
-    /* 0x01 */ char unk_01[0x2F];
-} unk72D90Struct3; //sizeof 0x30
-
 extern void guLookAt(Mtx*, f32, f32, f32, f32, f32, f32, f32, f32, f32);
 extern void guPerspective(Mtx*, u16*, f32, f32, f32, f32, f32);
 void* HuMemAlloc(s32);
@@ -148,8 +143,7 @@ extern s16 D_800F2CE0;
 extern u8 D_800F2CF8;
 extern s16 D_800F3182;
 extern f32 D_800F3288;
-extern unk72D90Struct3 D_800F32B3[];
-extern unk72D90Struct3 D_800F32B4[];
+extern unk72D90Struct3 D_800F32B0[];
 extern u8 D_800F3394;
 extern unk72D90Struct1 D_800F3744;
 extern u8 D_800F3753;
@@ -1326,7 +1320,7 @@ s32 func_80076174(void) {
             }
 
             for (i = 0; i < 4; i++) {
-                if (D_800EDEB4[D_800F32B3[i].unk_00] & 0xC000) {
+                if (D_800EDEB4[D_800F32B0[i].unk_03] & 0xC000) {
                     return 0;
                 }
             }
@@ -1943,7 +1937,7 @@ s32 func_800789C0(unkCommonStruct0* arg0, Gfx** arg1) {
     }
 
     func_80066DC4(arg0->unk_14[0], 0, arg0->unk_54, arg0->unk_58);
-    func_800673B0(arg0->unk_14[0], 0.0f, arg0->unk_64);
+    func_800673B0(arg0->unk_14[0], 0, arg0->unk_64);
 
     for (i = 0.0f; i < arg0->unk_08; i++) {
         func_80067354(arg0->unk_14[0], i + 1.0f, arg0->unk_5C, arg0->unk_60);
@@ -2358,7 +2352,7 @@ s32 func_8007A978(unkCommonStruct0* arg0, Gfx** arg1) {
         if (arg0->unk_04 < 51) {
             temp_f20 = (arg0->unk_04 - 40) * 25;
 
-            func_800673B0(arg0->unk_14[3], 0.0f, (arg0->unk_04 - 40) * 36);
+            func_800673B0(arg0->unk_14[3], 0, (arg0->unk_04 - 40) * 36);
 
             for (i = 0; i < temp_s8; i++) {
                 func_80067480(arg0->unk_14[3], i + 1, 0x8000);
@@ -2507,17 +2501,17 @@ void func_8007B52C(void) {
                 var_s2 = 2;
                 for (i = 0; i < 4; i++) {
                     if (gPlayers[i].unk_00 == 0) {
-                        func_8006DA5C(temp_v0, (void*) (s32) D_800F32B4[i].unk_00 + 44, var_s3);
-                        func_8006DA5C(var_s6, (void*) (s32) D_800F32B4[i].unk_00 + 44, var_s3++);
+                        func_8006DA5C(temp_v0, (void*) (s32) D_800F32B0[i].unk_04 + 44, var_s3);
+                        func_8006DA5C(var_s6, (void*) (s32) D_800F32B0[i].unk_04 + 44, var_s3++);
                     } else {
-                        func_8006DA5C(temp_v0, (void*) (s32) D_800F32B4[i].unk_00 + 44, var_s2);
-                        func_8006DA5C(var_s6, (void*) (s32) D_800F32B4[i].unk_00 + 44, var_s2++);
+                        func_8006DA5C(temp_v0, (void*) (s32) D_800F32B0[i].unk_04 + 44, var_s2);
+                        func_8006DA5C(var_s6, (void*) (s32) D_800F32B0[i].unk_04 + 44, var_s2++);
                     }
                 }
             } else {
                 for (i = 0; i < 4; i++) {
-                    func_8006DA5C(temp_v0, (void*) (s32) D_800F32B4[i].unk_00 + 44, gPlayers[i].unk_00);
-                    func_8006DA5C(var_s6, (void*) (s32) D_800F32B4[i].unk_00 + 44, gPlayers[i].unk_00);
+                    func_8006DA5C(temp_v0, (void*) (s32) D_800F32B0[i].unk_04 + 44, gPlayers[i].unk_00);
+                    func_8006DA5C(var_s6, (void*) (s32) D_800F32B0[i].unk_04 + 44, gPlayers[i].unk_00);
                 }
             }
         } else {
@@ -2526,14 +2520,14 @@ void func_8007B52C(void) {
                 var_s2 = 1;
                 for (i = 0; i < 4; i++) {
                     if (gPlayers[i].unk_00 == 0) {
-                        func_8006DA5C(temp_v0, (void*) (s32) D_800F32B4[i].unk_00 + 44, var_s3++);
+                        func_8006DA5C(temp_v0, (void*) (s32) D_800F32B0[i].unk_04 + 44, var_s3++);
                     } else {
-                        func_8006DA5C(var_s6, (void*) (s32) D_800F32B4[i].unk_00 + 44, var_s2++);
+                        func_8006DA5C(var_s6, (void*) (s32) D_800F32B0[i].unk_04 + 44, var_s2++);
                     }
                 }
             } else {
                 for (i = 0; i < 4; i++) {
-                    func_8006DA5C(temp_v0, (void*) (s32) D_800F32B4[i].unk_00 + 44, i);
+                    func_8006DA5C(temp_v0, (void*) (s32) D_800F32B0[i].unk_04 + 44, i);
                 }
             }
         }
