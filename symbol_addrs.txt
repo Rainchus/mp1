@@ -889,7 +889,6 @@ gThread1Stack = 0x800CCE50;
 gThread3Stack = 0x800F2A70;
 gInitThread = 0x800CD650;
 gMainThread = 0x800CD800;
-
 DecodeFile = 0x8001745C;
 gPlayers = 0x800F32B0;
 SetPlayerAnimation = 0x80052BE8;
@@ -940,7 +939,6 @@ HidePlayerHUDVisibility = 0x800547F8;
 InitObjSystem = 0x8005CF30;
 CreateObject = 0x8003DBE0;
 DestroyObject = 0x8003E694;
-
 HuMemAlloc = 0x80023668;
 MtxTranslate = 0x80022390;
 MtxScale = 0x80022450;
@@ -951,7 +949,6 @@ MtxReset = 0x80022AD0;
 MtxRotateX = 0x80022B30;
 MtxRotateY = 0x80022C00;
 MtxRotateZ = 0x80022CCC;
-
 LoadSpaceTextures = 0x8004B860;
 FreeSpaceTextures = 0x8004B92C;
 LoadInitialSpaceTextures = 0x8004B994;
@@ -982,11 +979,9 @@ GetRandomChanceSpace = 0x8004CB44;
 GetRandomSpaceOfType = 0x8004C3B8;
 GetRandomSpaceOfTypeInChain = 0x8004C2CC;
 SetEventReturnFlag = 0x8004CB20;
-
 _Printf = 0x80095470;
-
+sprintf = 0x8008C490;
 HuRomDmaCodeRead = 0x80062088;
-
 __osInitialize_common = 0x80093240;
 osDestroyThread = 0x80088720;
 osCreateThread = 0x80088650;
@@ -1004,11 +999,9 @@ osGetTime = 0x80088810;
 osVirtualToPhysical = 0x80089230;
 osWritebackDCache = 0x80088570;
 osWritebackDCacheAll = 0x800885F0;
-
 __osProbeTLB = 0x800937A0;
 __osDisableInt = 0x80093520;
 __osRestoreInt = 0x80093590;
-
 __osEnqueueAndYield = 0x80092EAC;
 __osEnqueueThread = 0x80092FB4;
 __osPopThread = 0x80092FFC;
@@ -1019,27 +1012,22 @@ __osRunningThread = 0x800C64B0;
 __osThreadTail = 0x800C64A0;
 __osActiveQueue = 0x800C64AC;
 __osRunQueue = 0x800C64A8;
-
 __osTimerServicesInit = 0x80088F30;
 __osTimerInterrupt = 0x80088F84;
 __osSetTimerIntr = 0x800890C0;
 __osInsertTimer = 0x80089120;
 __osViIntrCount = 0x800ED608;
 __osTimerCounter = 0x800F37EC;
-
 __osTimerList = 0x800C64C0;
 __osCurrentTime = 0x800F0A30;
 __osBaseCounter = 0x800ECB18;
-
 osInvalDCache = 0x80088300;
 osInvalICache = 0x800883B0;
 osSetIntMask = 0x80088490;
-
 __osSetCause = 0x80088530;
 __osSetCompare = 0x80088540;
 __osSetCount = 0x80088550;
 __osSetSR = 0x80088560;
-
 guRandom = 0x800882D0;
 xseed = 0x800C6490;
 guLookAtF = 0x80085710;
@@ -1069,14 +1057,12 @@ guRotateRPYF = 0x80087C60;
 guRotateRPY = 0x80087DE8;
 guScaleF = 0x80087F80;
 guScale = 0x80087FE0;
-
 alSeqFileNew = 0x800892A0;
 alBnkfNew = 0x800892E0;
 alEvtqNew = 0x80089570;
 alEvtqNextEvent = 0x800895EC;
 alEvtqPostEvent = 0x80089684;
 alEvtqFlushType = 0x80089808;
-
 alGlobals = 0x800C64D0;
 alInit = 0x800898C0;
 alClose = 0x800898EC;
@@ -1088,7 +1074,6 @@ alCopy = 0x80089A00;
 alCSeqNew = 0x80089A40;
 alCSeqNextEvent = 0x80089B4C;
 __alCSeqNextDelta = 0x80089C40;
-
 alSeqGetTicks = 0x80094EC4;
 alSeqpDelete = 0x8008A500;
 alSeqpGetChlFXMix = 0x8008A520;
@@ -1104,13 +1089,11 @@ alSeqpSetSeq = 0x8008A6F0;
 alSeqpSetTempo = 0x8008A720;
 alSeqpSetVol = 0x8008A770;
 alSeqpStop = 0x8008A7A0;
-
 alSeqNextEvent = 0x80094AE8;
 __alSeqNextDelta = 0x80094C50;
 alSeqSetLoc = 0x80094ECC;
 alSynSetPriority = 0x80094FF0;
 alSynAllocFX = 0x80095000;
-
 alLoadNew = 0x80096494;
 alLoadParam = 0x800941A0;
 alResampleNew = 0x80096544;
@@ -1123,7 +1106,6 @@ alSaveNew = 0x80096688;
 alSaveParam = 0x80097FC8;
 alMainBusNew = 0x8009662C;
 alMainBusParam = 0x80094720;
-
 alSndpDelete = 0x8008A7D0;
 alSndpAllocate = 0x8008A800;
 alSndpDeallocate = 0x8008A8C0;
@@ -1140,7 +1122,6 @@ alSndpSetFXMix = 0x8008AB20;
 alSynDelete = 0x8008AB70;
 alSynAddPlayer = 0x8008AB80;
 alSynRemovePlayer = 0x8008ABD0;
-
 alSynFreeVoice = 0x8008AC70;
 alSynAllocVoice = 0x8008AD10;
 _allocatePVoice = 0x8008AE38;
@@ -1152,12 +1133,10 @@ alSynStartVoiceParams = 0x8007BDF0;
 alSynSetPan = 0x8007BF80;
 alCents2Ratio = 0x8008B160;
 alCSPNew = 0x8008C550;
-
 alAdpcmPull = 0x800939C0;
 alAuxBusPull = 0x800944D0;
 alMainBusPull = 0x800945E0;
 alResamplePull = 0x80094750;
-
 osAiSetFrequency = 0x8008F830;
 osAiGetLength = 0x8008B1C0;
 osAiSetNextBuffer = 0x8008B1D0;
@@ -1188,7 +1167,6 @@ osEPiStartDma = 0x8008BEB0;
 __osPiCreateAccessQueue = 0x8008BF50;
 __osPiGetAccess = 0x8008BFA4;
 __osPiRelAccess = 0x8008C010;
-
 __mapVoice = 0x8008E96C;
 __unmapVoice = 0x8008E9BC;
 __lookupVoice = 0x8008EA20;
@@ -1213,7 +1191,6 @@ osCartRomInit = 0x8008F950;
 osEepromRead = 0x8008FB50;
 osEepromWrite = 0x8008FD70;
 __osEepStatus = 0x8008FF80;
-
 osSetEventMesg = 0x800935B0;
 osSetTimer = 0x80093920;
 __osSiRawStartDma = 0x80091F10;
@@ -1221,7 +1198,6 @@ __osSiCreateAccessQueue = 0x80095250;
 __osSiGetAccess = 0x800952A4;
  __osSiRelAccess = 0x80095310;
 osPiGetCmdQueue = 0x80095340;
-
 __osAiDeviceBusy = 0x800950A0;
 __osSpDeviceBusy = 0x800950C0;
 __osSpSetStatus = 0x800950F0;
@@ -1271,7 +1247,6 @@ __osContRamWrite = 0x80098C80;
 __osDevMgrMain = 0x80098F90;
 __osPiRawStartDma = 0x80091E40;
 osAfterPreNMI = 0x80092810;
-
 __osGetCause = 0x80093770;
 __osGetSR = 0x80093790;
 __osSetFpcCsr = 0x80093860;
@@ -1283,22 +1258,16 @@ osMapTLBRdb = 0x800938C0;
 osResetType = 0x8000030C;
 osAppNMIBuffer = 0x8000031C;
 osTvType = 0x80000300;
-
 __udivdi3 = 0x8009BE10;
-
 sinf = 0x80088060;
 cosf = 0x800855C0;
 __libm_qnan_f = 0x800CC6B0;
-
 strchr = 0x8008C400;
 strlen = 0x8008C438;
 memcpy = 0x8008C45C;
-sprintf = 0x8008C490;
 proutSprintf = 0x8008C4E8;
 osSyncPrintf = 0x8008C520;
-
 overlay_table = 0x800C1C74; //size:0x1290
-
 aisetfreq_rodata_0000 = 0x800CC640;
 osViClock = 0x800C7728;
 __CartRomHandle = 0x800F2A80;
@@ -1312,4 +1281,3 @@ __OSGlobalIntMask = 0x800C7730;
 __osFinalrom = 0x800F5458;
 __osEventStateTab = 0x800F5280;
 __osHwIntTable = 0x800C76F0;
-
