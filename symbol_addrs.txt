@@ -891,7 +891,6 @@ gInitThread = 0x800CD650;
 gMainThread = 0x800CD800;
 
 DecodeFile = 0x8001745C;
-MallocTemp = 0x8003B774;
 gPlayers = 0x800F32B0;
 SetPlayerAnimation = 0x80052BE8;
 GetCurrentProcess = 0x800633A8;
@@ -985,7 +984,6 @@ GetRandomSpaceOfTypeInChain = 0x8004C2CC;
 SetEventReturnFlag = 0x8004CB20;
 
 _Printf = 0x80095470;
-sprintf = 0x8008C490;
 
 HuRomDmaCodeRead = 0x80062088;
 
