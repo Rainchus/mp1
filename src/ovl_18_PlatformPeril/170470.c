@@ -66,8 +66,7 @@ INCLUDE_ASM("asm/nonmatchings/ovl_18_PlatformPeril/170470", func_800FCB10_172250
 
 INCLUDE_ASM("asm/nonmatchings/ovl_18_PlatformPeril/170470", func_800FCBD4_172314);
 
-void func_800FCD44_172484(void) {
-}
+INCLUDE_ASM("asm/nonmatchings/ovl_18_PlatformPeril/170470", func_800FCD44_172484);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/170470", D_800FE178_1738B8);
 

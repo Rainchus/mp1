@@ -64,41 +64,7 @@ INCLUDE_ASM("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", func_800FE0E8
 
 INCLUDE_ASM("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", func_800FE8D8_2E3598);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", D_8010F18C_2F3E4C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", D_8010F1A0_2F3E60);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", D_8010F1B4_2F3E74);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", D_8010F1C8_2F3E88);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", D_8010F1D8_2F3E98);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", D_8010F1EC_2F3EAC);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", D_8010F1FC_2F3EBC);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", D_8010F210_2F3ED0);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", D_8010F228_2F3EE8);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", D_8010F23C_2F3EFC);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", D_8010F24C_2F3F0C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", D_8010F260_2F3F20);
-
 INCLUDE_RODATA("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", D_8010F268_2F3F28);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", D_8010F274_2F3F34);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", D_8010F280_2F3F40);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", D_8010F28C_2F3F4C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", D_8010F298_2F3F58);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", D_8010F2A4_2F3F64);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", func_800FE924_2E35E4);
 
@@ -167,17 +133,5 @@ INCLUDE_ASM("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", func_80102C9C
 INCLUDE_ASM("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", func_80102FC4_2E7C84);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", func_801031BC_2E7E7C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", D_8010F2E0_2F3FA0);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", D_8010F2F4_2F3FB4);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", D_8010F308_2F3FC8);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", D_8010F320_2F3FE0);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", D_8010F338_2F3FF8);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", D_8010F34C_2F400C);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_6F_MinigameInstructions/2DF200", D_8010F360_2F4020);

@@ -50,8 +50,6 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_2B_CastAways/1F0DA0", D_800FBA24_1F61E4);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_2B_CastAways/1F0DA0", D_800FBA30_1F61F0);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_2B_CastAways/1F0DA0", D_800FBA40_1F6200);
-
 INCLUDE_ASM("asm/nonmatchings/ovl_2B_CastAways/1F0DA0", func_800F71AC_1F196C);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_2B_CastAways/1F0DA0", func_800F7308_1F1AC8);

@@ -60,16 +60,6 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_34_BumperBallMaze/23CF40", D_800FACD8_24163
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_34_BumperBallMaze/23CF40", D_800FACDC_24163C);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_34_BumperBallMaze/23CF40", D_800FACE0_241640);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_34_BumperBallMaze/23CF40", D_800FACEC_24164C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_34_BumperBallMaze/23CF40", D_800FACF8_241658);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_34_BumperBallMaze/23CF40", D_800FAD04_241664);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_34_BumperBallMaze/23CF40", D_800FAD10_241670);
-
 INCLUDE_ASM("asm/nonmatchings/ovl_34_BumperBallMaze/23CF40", func_800F6C7C_23D5DC);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_34_BumperBallMaze/23CF40", D_800FAD28_241688);

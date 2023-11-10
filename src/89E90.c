@@ -1,4 +1,3 @@
 #include "common.h"
 
-void func_80089290(void) {
-}
+INCLUDE_ASM("asm/nonmatchings/89E90", func_80089290);

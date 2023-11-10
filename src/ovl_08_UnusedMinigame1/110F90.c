@@ -36,5 +36,4 @@ INCLUDE_ASM("asm/nonmatchings/ovl_08_UnusedMinigame1/110F90", func_800F6D88_1117
 
 INCLUDE_ASM("asm/nonmatchings/ovl_08_UnusedMinigame1/110F90", func_800F6E78_111828);
 
-void func_800F6ECC_11187C(void) {
-}
+INCLUDE_ASM("asm/nonmatchings/ovl_08_UnusedMinigame1/110F90", func_800F6ECC_11187C);

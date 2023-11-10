@@ -122,14 +122,6 @@ INCLUDE_ASM("asm/nonmatchings/ovl_32_TugOWar/22D5F0", func_800F9A90_22FE90);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_32_TugOWar/22D5F0", D_800FDCE0_2340E0);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_32_TugOWar/22D5F0", D_800FDCFC_2340FC);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_32_TugOWar/22D5F0", D_800FDD0C_23410C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_32_TugOWar/22D5F0", D_800FDD34_234134);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_32_TugOWar/22D5F0", D_800FDD44_234144);
-
 INCLUDE_ASM("asm/nonmatchings/ovl_32_TugOWar/22D5F0", func_800F9E34_230234);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_32_TugOWar/22D5F0", func_800FA1F4_2305F4);

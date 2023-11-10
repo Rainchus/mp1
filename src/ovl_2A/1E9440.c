@@ -176,5 +176,4 @@ INCLUDE_ASM("asm/nonmatchings/ovl_2A/1E9440", func_800FD880_1F06E0);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_2A/1E9440", func_800FDBF4_1F0A54);
 
-void func_800FDD44_1F0BA4(void) {
-}
+INCLUDE_ASM("asm/nonmatchings/ovl_2A/1E9440", func_800FDD44_1F0BA4);
