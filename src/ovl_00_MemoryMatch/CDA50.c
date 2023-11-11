@@ -1,17 +1,5 @@
 #include "common.h"
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD7E0_D4C50);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD7E4_D4C54);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD7F0_D4C60);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD7F4_D4C64);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD7F8_D4C68);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD85C_D4CCC);
-
 INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD870_D4CE0);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_00_MemoryMatch/CDA50", D_800FD874_D4CE4);

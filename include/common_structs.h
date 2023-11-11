@@ -236,8 +236,10 @@ typedef struct unk_Struct00 {
     /* 0x048 */ f32 unk_48;
     /* 0x04C */ char pad4C[0xA8];
     /* 0x0F4 */ s32 unkF4;
-    /* 0x0F8 */ char padF8[0x400];
-} unk_Struct00;
+    /* 0x0F8 */ char padF8[0x40];
+    /* 0x138 */ s32 *unk_138[4][4];
+    /* 0x13C */ char pad13C[0x3BC];
+} unk_Struct00; // sizeof 0x4F8
 
 typedef struct unk_Struct04 {
     /* 0x00 */ Vec3f pos;
