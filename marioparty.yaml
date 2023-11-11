@@ -458,6 +458,7 @@ segments:
     overlay: True
     exclusive_ram_id: minigame
     symbol_name_format: $VRAM_$ROM
+    #bss_size: 0x3F0
     subalign: 8
     subsegments:
       - [0xD51E0, c]
@@ -469,6 +470,7 @@ segments:
       - [0xDFF80, .rodata, D51E0]
       - [0xE0278, .rodata, DD760]
       - [0xE02B0, .rodata, DE6A0]
+      #- { start: 0xE02F0, type: bss, vram: 0x801016F0, name: chance_time_bss }
   - type: code
     start: 0xE02F0
     vram: 0x800F65E0
@@ -477,6 +479,7 @@ segments:
     overlay: True
     exclusive_ram_id: minigame
     symbol_name_format: $VRAM_$ROM
+    #bss_size: 0xAA0
     subalign: 8
     subsegments:
       - [0xE02F0, c]
@@ -485,6 +488,7 @@ segments:
       - [0xE7E10, .rodata, E02F0] #800FE100
       - [0xE8B30, .rodata, E13F0]
       - [0xE8E10, .rodata, E5DA0]
+      #- { start: 0xE8F60, type: bss, vram: 0x800FF250, name: slot_machine_bss }
   - type: code
     start: 0xE8F60
     vram: 0x800F65E0
