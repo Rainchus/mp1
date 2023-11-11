@@ -1,6 +1,11 @@
 // ovl_00_MemoryMatch
 D_800FD8A4_D4D14 = 0x800FD8A4; // rom:0xD4D14 force_not_migration:True type:f32
 
+// ovl_01_ChanceTime
+D_80101379_DFF79 = 0x80101379; // rom:0xDFF79 type:s8
+D_8010166C_E026C = 0x8010166C; // rom:0xE026C type:asciz size:0x6
+jtbl_80101678_E0278 = 0x80101678; // rom:0xE0278 type:jtbl force_not_migration:True
+
 // ovl_02_SlotMachine
 D_800FECC0_E89D0 = 0x800FECC0; // rom:0xE89D0 force_not_migration:True type:f32
 

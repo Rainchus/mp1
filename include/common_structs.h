@@ -74,8 +74,10 @@ typedef struct unk_Struct01 {
 typedef struct unkGlobalStruct_00 {
     /* 0x00 */ u16 unk_00;
     /* 0x02 */ u16 unk_02;
-    /* 0x04 */ u16 unk_04;
-    /* 0x06 */ char unk_06[4];
+    /* 0x04 */ u8 unk_04;
+    /* 0x05 */ u8 unk_05;
+    /* 0x06 */ char unk_06[2];
+    /* 0x08 */ s16 unk_08;
     /* 0x0A */ u16 unk_0A;
     /* 0x0C */ f32 unk_0C;
     /* 0x10 */ f32 unk_10;
@@ -87,7 +89,7 @@ typedef struct unkGlobalStruct_00 {
                     u8 b[4];
                 } unk_20;
     /* 0x24 */ f32 unk_24;
-    /* 0x28 */ char unk_28[4];
+    /* 0x28 */ struct unkGlobalStruct_00* unk_28;
     /* 0x2C */ f32 unk_2C;
     /* 0x30 */ f32 unk_30;
     /* 0x34 */ f32 unk_34;
@@ -272,7 +274,7 @@ typedef struct Object {
 /* 0x34 */ f32 unk_34;
 /* 0x38 */ f32 unk_38;
 /* 0x3C */ unk_Struct04* unk_3C;
-/* 0x3C */ unk_Struct04* unk_40;
+/* 0x40 */ unk_Struct04* unk_40;
 /* 0x44 */ f32 unk_44;
 /* 0x48 */ f32 unk_48;
 /* 0x4C */ s32 unk_4C;
@@ -830,5 +832,22 @@ typedef struct file_1ACF0_struct {
 /* 0x50 */ s32 unk_50;
 /* 0x54 */ s32 unk_54;
 } file_1ACF0_struct;
+
+typedef struct unkStructSize14 {
+    /* 0x00 */ s32 unk_00;
+    /* 0x04 */ s32 unk_04;
+    /* 0x08 */ s32 unk_08;
+    /* 0x0C */ char unk_0C[8];
+} unkStructSize14; //sizeof 0x14
+
+typedef struct unkGlobalStruct_02 {
+    /* 0x00 */ char unk_00[4];
+    /* 0x04 */ u8 unk_04;
+    /* 0x05 */ u8 unk_05;
+    /* 0x06 */ char unk_06[2];
+    /* 0x08 */ f32 unk_08;
+    /* 0x0C */ char unk_0C[0x1C];
+    /* 0x28 */ unkGlobalStruct_01* unk_28;
+} unkGlobalStruct_02; //sizeof 0x2C
 
 #endif

@@ -17,6 +17,7 @@ options:
   auto_decompile_empty_functions: True
   asm_function_macro: glabel
   asm_data_macro: dlabel
+  asm_jtbl_label_macro: jlabel
   # undefined_syms_path: undefined_syms.txt
   # c_path: c
   asm_path: asm
@@ -464,7 +465,8 @@ segments:
       - [0xDD760, c]
       - [0xDE2D0, c]
       - [0xDE6A0, c]
-      - [0xDFDF0, .rodata, D51E0] #801011F0
+      - [0xDFDF0, data, D51E0] #801011F0
+      - [0xDFF80, .rodata, D51E0]
       - [0xE0278, .rodata, DD760]
       - [0xE02B0, .rodata, DE6A0]
   - type: code

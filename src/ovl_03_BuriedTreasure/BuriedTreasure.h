@@ -156,13 +156,6 @@ u16 func_800FB928_EE2A8(u16);
 void func_800FB998_EE318(u16);
 void func_800FB9E8_EE368(void);
 
-typedef struct unkStructSize14 {
-    /* 0x00 */ s32 unk_00;
-    /* 0x04 */ s32 unk_04;
-    /* 0x08 */ s32 unk_08;
-    /* 0x0C */ char unk_0C[8];
-} unkStructSize14; //sizeof 0x14
-
 void guMtxCatF(Matrix4f, Matrix4f, Matrix4f);
 void guMtxL2F(Matrix4f, Mtx*);
 void guTranslateF(Matrix4f, f32, f32, f32);
