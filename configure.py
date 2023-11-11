@@ -45,7 +45,7 @@ header = (
     'ASFLAGS = -G 0 -I include -mips3 -mabi=32\n'
     'CFLAGS = -G0 -mips3 -mgp32 -mfp32 -D_LANGUAGE_C\n'
     'CPPFLAGS = -I. -I include -I include/PR -I include/engine -I include/gcc -I build/include -I src -DF3DEX_GBI_2 -DNDEBUG\n'
-    'LDFLAGS = -T undefined_syms.txt -T undefined_funcs.txt -T undefined_funcs_auto.txt -T undefined_syms_auto.txt -T $LD_SCRIPT -Map $LD_MAP --no-check-sections\n'
+    'LDFLAGS = -T undefined_syms.txt -T undefined_funcs.txt -T undefined_funcs_auto.txt -T undefined_syms_auto.txt -T $LD_SCRIPT -Map $LD_MAP --no-check-sections -liconv\n'
     'CHECK_WARNINGS = -Wall -Wextra -Wunused-but-set-variable -Wno-format-security -Wno-unused-parameter -Wno-sign-compare -Wno-unused-variable -Wno-pointer-to-int-cast -Wno-int-to-pointer-cast -m32\n'
     'CFLAGS_CHECK = -fsyntax-only -fsigned-char -nostdinc -fno-builtin -D CC_CHECK -D _LANGUAGE_C -std=gnu90 $CHECK_WARNINGS\n'
     'AS = mips-linux-gnu-as\n'
@@ -73,11 +73,11 @@ header = (
     '\n'
 
     'rule main_cc\n'
-    '  command = (export COMPILER_PATH=tools/gcc_2.7.2/$DETECTED_OS && $CC $OPTFLAGS $CFLAGS $CPPFLAGS -c -o $out $in) && ($STRIP $out -N dummy-symbol-name)\n'
+    '  command = iconv -f UTF-8 -t SHIFT_JIS $in > $out && (export COMPILER_PATH=tools/gcc_2.7.2/$DETECTED_OS && $CC $OPTFLAGS $CFLAGS $CPPFLAGS -c -o $out $out) && ($STRIP $out -N dummy-symbol-name)\n'
     '\n'
 
     'rule s_file\n'
-    '  command = $AS $ASFLAGS -o $out $in\n'
+    '  command = "iconv --from UTF-8 --to SHIFT-JIS $in | $AS $ASFLAGS -o $out\n"
     '\n'
 
     "rule bin_file\n"

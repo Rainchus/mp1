@@ -449,5 +449,8 @@ s16 func_80039084(void*);
 void func_8005D98C(s32, s32);
 unkObjectStruct** func_8005DB44(s32);
 void func_80009468(void);
+void guMtxCatF(Matrix4f, Matrix4f, Matrix4f);
+void guMtxL2F(Matrix4f, Mtx*);
+void guTranslateF(Matrix4f, f32, f32, f32);
 
 #endif

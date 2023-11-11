@@ -155,10 +155,6 @@ void func_800FB920_EE2A0(s32);
 u16 func_800FB928_EE2A8(u16);
 void func_800FB998_EE318(u16);
 void func_800FB9E8_EE368(void);
-
-void guMtxCatF(Matrix4f, Matrix4f, Matrix4f);
-void guMtxL2F(Matrix4f, Mtx*);
-void guTranslateF(Matrix4f, f32, f32, f32);
 u32 func_80009C90(unkObjectStruct*, s8, s8);
 void func_80017A60(unkObjectStruct*);
 void func_80024198(s32, void*, s32);

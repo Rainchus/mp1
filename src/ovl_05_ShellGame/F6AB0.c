@@ -1,60 +1,113 @@
 #include "common.h"
+#include "ShellGame.h"
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_05_ShellGame/F6AB0", D_800FEC10_FF0E0);
+void func_800F65E0_F6AB0(void) {
+    unk_Struct00* temp_s0_2;
+    s32 temp_s0;
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_05_ShellGame/F6AB0", D_800FEC14_FF0E4);
+    func_80029090(50);
+    InitObjSystem(50, 0);
+    func_80060088();
+    func_8001DE70(64);
+    func_8005D8B8(func_8005D384(0x7FDA, 0, 0, -1, func_8005EB1C), 0xA0);
+    func_800234B8(0, 0xA0, 0x78, 0x78);
+    func_800234B8(1, 0xFF, 0xA8, 0xA8);
+    func_80023504(1, -96.0f, 100.0f, 26.0f);
+    func_800178A0(1);
+    temp_s0 = func_800178E8();
+    func_80017660(temp_s0, 0.0f, 0.0f, 320.0f, 240.0f);
+    func_800176C4(temp_s0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
+    func_8001D494(0, 45.0f, 80.0f, 4000.0f);
+    func_800F7034_F7504();
+    func_800F720C_F76DC(GetRandomByte());
+    func_800F7550_F7A20();
+    func_800F828C_F875C();
+    func_800F87CC_F8C9C();
+    temp_s0_2 = D_800C3110;
+    D_800FF168 = func_800AEAC0(temp_s0_2->unk_40 / 2.0) / func_800AEFD0(temp_s0_2->unk_40 / 2.0);
+    guMtxL2F(D_800FF128, &temp_s0_2->unk_138);
+    func_80028510(0x3A5, 0x402, 0xFF, 0xC8, 0xC8);
+    D_800F2BC0 = 0;
+    D_800ED440 = 0;
+    D_800EE984 = 0;
+    D_800FF0F8 = func_8005D384(0x20, 0, 0, -1, &func_800F689C_F6D6C);
+    D_800FF9EC = 0;
+    D_800FFA3C = 0;
+    D_800FF10C = 0x14A;
+    D_800FEC14_FF0E4 = 1;
+    D_800FF780 = 0;
+    D_800FF782 = 0;
+    D_800FEC16_FF0E6 = 0;
+    D_800FEC18_FF0E8 = 0;
+    D_800FEC1C_FF0EC = 0;
+    D_800FF784 = 0;
+    // func_8007B168("ＳＴＡＲＴ", 1);
+    // func_8007B168("ＦＩＮＩＳＨ", 1);
+    // func_8007B168("ＴＩＭＥＵＰ", 1);
+    func_8007B168("\x82\x72\x82\x73\x82\x60\x82\x71\x82\x73", 1);
+    func_8007B168("\x82\x65\x82\x68\x82\x6D\x82\x68\x82\x72\x82\x67", 1);
+    func_8007B168("\x82\x73\x82\x68\x82\x6C\x82\x64\x82\x74\x82\x6F", 1);
+}
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_05_ShellGame/F6AB0", D_800FEC18_FF0E8);
+void func_800F689C_F6D6C(unkObjectStruct* arg0) {
+    arg0->func_ptr = &func_800F68E8_F6DB8;
+    func_800F9618_F9AE8();
+    func_800F9738_F9C08();
+    func_800F915C_F962C();
+    if (IsFlagSet(0x2B) != 0) {
+        D_800FF784 = 1;
+    }
+}
+void func_800F68E8_F6DB8(unkObjectStruct* arg0) {
+    func_800F76C4_F7B94();
+    func_800F85B4_F8A84();
+    func_800F8CF8_F91C8();
+    func_800F7BDC_F80AC();
+    func_800F6A98_F6F68(arg0);
+    
+    if (D_800FEC16_FF0E6 == 1) {
+        if (D_800ED430 == D_800FEC16_FF0E6) {
+            if ((func_800F8154_F8624()) == 0) {
+                if (D_800F3FB0->unk_1C == 0.0f) {
+                    D_800FF10C = 0;
+                    D_800FFA3C = 0;
+                    D_800FEC16_FF0E6 = 0;
+                    D_800FEC14_FF0E4 = 0;
+                    if (D_800FF784 == 0) {
+                        D_800FF0F8->func_ptr = &func_800F6AC0_F6F90;
+                    } else {
+                        func_800601D4(0x28);
+                        D_800FF0F8->func_ptr = &func_800F6EE4_F73B4;
+                    }
+                    D_800FF9D6 = 5;
+                    D_800ED430 = 0;
+                    D_800FF780 = 1;
+                    D_800ED430 = 0;                    
+                }
+            }
+        }
+    }
+}
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_05_ShellGame/F6AB0", D_800FEC1C_FF0EC);
+void func_800F6A14_F6EE4(void) {
+    u16 i;
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_05_ShellGame/F6AB0", D_800FEC20_FF0F0);
+    func_800F87AC_F8C7C();
+    func_800F913C_F960C();
+    func_80060198();
+    
+    for (i = 0; i < D_800F37DA; i++) {
+        FreePerm(D_800FF718[i]);
+    }
+    
+    func_8005DFB8(1);
+}
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_05_ShellGame/F6AB0", D_800FEC24_FF0F4);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_05_ShellGame/F6AB0", D_800FEC28_FF0F8);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_05_ShellGame/F6AB0", D_800FEC2C_FF0FC);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_05_ShellGame/F6AB0", D_800FEC30_FF100);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_05_ShellGame/F6AB0", D_800FEC34_FF104);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_05_ShellGame/F6AB0", D_800FEC38_FF108);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_05_ShellGame/F6AB0", D_800FEC3C_FF10C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_05_ShellGame/F6AB0", D_800FEC40_FF110);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_05_ShellGame/F6AB0", D_800FEC44_FF114);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_05_ShellGame/F6AB0", D_800FEC48_FF118);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_05_ShellGame/F6AB0", D_800FEC4C_FF11C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_05_ShellGame/F6AB0", D_800FEC50_FF120);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_05_ShellGame/F6AB0", D_800FEC54_FF124);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_05_ShellGame/F6AB0", D_800FEC58_FF128);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_05_ShellGame/F6AB0", D_800FEC5C_FF12C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_05_ShellGame/F6AB0", D_800FEC60_FF130);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_05_ShellGame/F6AB0", D_800FEC6C_FF13C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_05_ShellGame/F6AB0", D_800FEC7C_FF14C);
-
-INCLUDE_ASM("asm/nonmatchings/ovl_05_ShellGame/F6AB0", func_800F65E0_F6AB0);
-
-INCLUDE_ASM("asm/nonmatchings/ovl_05_ShellGame/F6AB0", func_800F689C_F6D6C);
-
-INCLUDE_ASM("asm/nonmatchings/ovl_05_ShellGame/F6AB0", func_800F68E8_F6DB8);
-
-INCLUDE_ASM("asm/nonmatchings/ovl_05_ShellGame/F6AB0", func_800F6A14_F6EE4);
-
-INCLUDE_ASM("asm/nonmatchings/ovl_05_ShellGame/F6AB0", func_800F6A98_F6F68);
+void func_800F6A98_F6F68(unkObjectStruct* arg0) {
+    if (D_800F5144 == 1) {
+        arg0->func_ptr = &func_800F6A14_F6EE4;
+    }
+}
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_05_ShellGame/F6AB0", D_800FEC98_FF168);
 
@@ -64,19 +117,51 @@ INCLUDE_ASM("asm/nonmatchings/ovl_05_ShellGame/F6AB0", func_800F6AC0_F6F90);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_05_ShellGame/F6AB0", func_800F6EE4_F73B4);
 
-INCLUDE_ASM("asm/nonmatchings/ovl_05_ShellGame/F6AB0", func_800F6FFC_F74CC);
+void func_800F6FFC_F74CC(unkObjectStruct* arg0) {
+    if (func_80072718() == 0) {
+        arg0->func_ptr = &func_800F6A14_F6EE4;
+    }
+}
 
-INCLUDE_ASM("asm/nonmatchings/ovl_05_ShellGame/F6AB0", func_800F7034_F7504);
+void func_800F7034_F7504(void) {
+    D_800F33EC.y = -34.26f;
+    D_800F33EC.x = 0.0f;
+    D_800F33EC.z = 0.0f;
+    D_800F6524.x = -5.5f;
+    D_800F6524.y = -81.0f;
+    D_800F6524.z = 0.0f;
+    D_800EE98C = 1328.0f;
+}
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_05_ShellGame/F6AB0", D_800FECB8_FF188);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_05_ShellGame/F6AB0", jtbl_800FECC8_FF198);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_05_ShellGame/F6AB0", func_800F7098_F7568);
+// void func_800F7098_F7568(f32 arg0) {
+//     unkObjectStruct* temp_a0;
+    
+//     if (arg0 == 0.0) {
+//         temp_a0 = D_800F3FB0;
+//         D_800FF0A0.x = D_800F6524.x;
+//         D_800FF0A0.y = D_800F6524.y;
+//         D_800FF0A0.z = D_800F6524.z;
+//         D_800FF0AC.x = temp_a0->unk_18;
+//         D_800FF0AC.y = temp_a0->unk_1C;
+//         D_800FF0AC.z = temp_a0->unk_20;
+//         return;
+//     }
+//     D_800F6524.x = D_800FF0A0.x + (arg0 * (D_800FF0AC.x - D_800FF0A0.x));
+//     D_800F6524.y = D_800FF0A0.y + (arg0 * (D_800FF0AC.y - D_800FF0A0.y));
+//     D_800F6524.z = D_800FF0A0.z + (arg0 * (D_800FF0AC.z - D_800FF0A0.z));
+//     D_800EE98C = D_800FECE8 - (arg0 * 664.0); //D_800FECE8 should D_800FECE8_FF1B8, but there's 2 doubles?
+// }
 
 INCLUDE_ASM("asm/nonmatchings/ovl_05_ShellGame/F6AB0", func_800F719C_F766C);
 
-INCLUDE_ASM("asm/nonmatchings/ovl_05_ShellGame/F6AB0", func_800F720C_F76DC);
+void func_800F720C_F76DC(u8 arg0) {
+    D_800FEC10_FF0E0 = arg0 + (arg0 * D_800FEC10_FF0E0);
+}
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_05_ShellGame/F6AB0", D_800FECE8_FF1B8);
 
@@ -84,7 +169,19 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_05_ShellGame/F6AB0", D_800FECF8_FF1C8);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_05_ShellGame/F6AB0", func_800F7230_F7700);
 
-INCLUDE_ASM("asm/nonmatchings/ovl_05_ShellGame/F6AB0", func_800F7398_F7868);
+f32 func_800F7398_F7868(f32 arg0, f32 arg1) {
+    f32 var_f4;
+
+    var_f4 = func_800B0CD8(arg0, arg1);
+    if ((D_800FED30 < var_f4)) {
+        var_f4 -= D_800FED30;
+    } else {
+        if (var_f4 < 0.0) {
+            var_f4 += D_800FED38_FF208;
+        }        
+    }
+    return var_f4;
+}
 
 INCLUDE_ASM("asm/nonmatchings/ovl_05_ShellGame/F6AB0", func_800F7410_F78E0);
 

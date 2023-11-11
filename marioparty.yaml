@@ -517,7 +517,8 @@ segments:
       - [0xEE9A0, c]
       - [0xF2800, c]
       - [0xF4420, c]
-      - [0xF6750, .rodata, EE9A0] #800FE390
+      - [0xF6750, data, EE9A0] #800FE390
+      - [0xF6830, .rodata, EE9A0]
       - [0xF6A40, .rodata, F2800]
       - [0xF6A90, .rodata, F4420]
   - type: code
@@ -532,7 +533,8 @@ segments:
     subsegments:
       - [0xF6AB0, c]
       - [0xFD460, c]
-      - [0xFF0E0, .rodata, F6AB0]
+      - [0xFF0E0, data, F6AB0]
+      - [0xFF130, .rodata, F6AB0]
       - [0xFF490, .rodata, FD460]
   - type: code
     start: 0xFF570
