@@ -1,10 +1,13 @@
 #include "common.h"
+#include "mallocblock.h"
 
 INCLUDE_ASM("asm/nonmatchings/../src/engine/mallocblock", func_800235F0);
 
 INCLUDE_ASM("asm/nonmatchings/../src/engine/mallocblock", HuMemAlloc);
 
-INCLUDE_ASM("asm/nonmatchings/../src/engine/mallocblock", func_80023684);
+void* func_80023684(s32 arg0, s16 arg1) {
+    return func_800236A4(arg0, arg1);
+}
 
 INCLUDE_ASM("asm/nonmatchings/../src/engine/mallocblock", func_800236A4);
 

@@ -118,6 +118,9 @@ D_800FBA80_11C6B0 = 0x800FBA80; // rom:0x11C6B0 force_not_migration:True type:s3
 D_800FBA90_11C6C0 = 0x800FBA90; // rom:0x11C6C0 force_not_migration:True type:s32
 D_800FBAD0_11C700 = 0x800FBAD0; // rom:0x11C700 force_not_migration:True type:f64
 
+// ovl_0B_D_MusicalMushroom
+D_800FB778 = 0x800FB778; // type:f32 size:0x10
+
 // ovl_0C_PedalPower
 D_800F9E10_125000 = 0x800F9E10; // rom:0x125000 force_not_migration:True type:f32
 

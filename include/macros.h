@@ -24,6 +24,8 @@ obj->coords.y = vec3f.y; \
 obj->coords.z = vec3f.z;
 #endif
 
+#define UNK_SIZE_2C 0x2C
+
 #define EXTRACT_SIGN_BIT(var) (var &= (~(var) >> 0x1F))
 
 #define ARRLEN(x) ((s32)(sizeof(x) / sizeof(x[0])))

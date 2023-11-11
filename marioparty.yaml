@@ -548,7 +548,8 @@ segments:
       - [0xFF570, c]
       - [0x103D80, c]
       - [0x105EA0, c]
-      - [0x10BA80, .rodata, FF570]
+      - [0x10BA80, data, FF570]
+      - [0x10C710, .rodata, FF570]
       - [0x10CA20, .rodata, 103D80]
       - [0x10CAF0, .rodata, 105EA0]
   - type: code
@@ -563,7 +564,8 @@ segments:
       - [0x10CD10, c]
       - [0x10CF70, c]
       - [0x10F6D0, c]
-      - [0x110460, .rodata, 10CD10]
+      - [0x110460, data, 10CD10]
+      - [0x110D00, .rodata, 10CD10]
       - [0x110D40, .rodata, 10CF70]
       - [0x110E70, .rodata, 10F6D0]
   - type: code
@@ -578,7 +580,8 @@ segments:
       - [0x110F90, c]
       - [0x111890, c]
       - [0x113730, c]
-      - [0x113B20, .rodata, 110F90]
+      - [0x113B20, data, 110F90]
+      - [0x113C60, .rodata, 110F90]
       - [0x113C90, .rodata, 111890]
       - [0x113DA0, .rodata, 113730]
   - type: code
@@ -615,7 +618,8 @@ segments:
     subsegments:
       - [0x11C810, c]
       - [0x11F890, c]
-      - [0x1216F0, .rodata, 11C810]
+      - [0x1216F0, data, 11C810]
+      - [0x121750, .rodata, 11C810]
       - [0x1217B0, .rodata, 11F890]
   - type: code
     start: 0x1217D0
@@ -629,7 +633,8 @@ segments:
       - [0x1217D0, c]
       - [0x122BA0, c]
       - [0x1240D0, c]
-      - [0x124FD0, .rodata, 1217D0]
+      - [0x124FD0, data, 1217D0]
+      - [0x125050, .rodata, 1217D0]
       - [0x125080, .rodata, 122BA0]
   - type: code
     start: 0x1250D0
@@ -642,7 +647,8 @@ segments:
     subsegments:
       - [0x1250D0, c]
       - [0x12AFE0, c]
-      - [0x12B7E0, .rodata, 1250D0]
+      - [0x12B7E0, data, 1250D0]
+      - [0x12BB00, .rodata, 1250D0]
   - type: code
     start: 0x12BC20
     vram: 0x800F65E0

@@ -41,9 +41,9 @@ void func_800FE9D8_DD5D8(unkObjectStruct* arg0) {
     func_80025798(arg0->unk_40[1], arg0->unk_18, arg0->unk_1C, arg0->unk_20);
     func_80025830(arg0->unk_40[1], 0.8f, 0.8f, 0.8f);
     func_800257E4(arg0->unk_40[1], 0.0f, 0.0f, 0.0f);
-    temp_s1 = func_80023684(sizeof(unkGlobalStruct_02), 0x7918);
+    temp_s1 = func_80023684(UNK_SIZE_2C, 0x7918);
     arg0->unk_50 = temp_s1;
-    func_8009B770(temp_s1, 0, sizeof(unkGlobalStruct_02));
+    func_8009B770(temp_s1, 0, UNK_SIZE_2C);
     temp_s1->unk_04 = 1;
     temp_s1->unk_05 = 3;
     temp_s1->unk_28 = func_80023684(sizeof(unkGlobalStruct_01), 0x7918);
