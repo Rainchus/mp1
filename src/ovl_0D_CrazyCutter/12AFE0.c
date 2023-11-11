@@ -16,4 +16,4 @@ INCLUDE_ASM("asm/nonmatchings/ovl_0D_CrazyCutter/12AFE0", func_800FCAAC_12B59C);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_0D_CrazyCutter/12AFE0", func_800FCC64_12B754);
 
-INCLUDE_ASM("asm/nonmatchings/ovl_0D_CrazyCutter/12AFE0", func_800FCCC8_12B7B8);
+INCLUDE_ASM("asm/nonmatchings/ovl_0D_CrazyCutter/12AFE0", func_800FCCC4_12B7B4);

@@ -491,11 +491,14 @@ segments:
     overlay: True
     exclusive_ram_id: minigame
     symbol_name_format: $VRAM_$ROM
+    #bss_size: 0x5E0
     subsegments:
       - [0xE8F60, c]
       - [0xEB0E0, c]
-      - [0xEE3F0, .rodata, E8F60] #800FBA70
+      - [0xEE3F0, data, E8F60] #800FBA70
+      - [0xEE7E0, .rodata, E8F60]
       - [0xEE8B0, .rodata, EB0E0] #800FBF30
+      #- { start: 0xEE9A0, type: bss, vram: 0x800FC020, name: buried_treasure_bss }
   - type: code
     start: 0xEE9A0
     vram: 0x800F65E0
@@ -953,7 +956,8 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x1D9690, c]
-      - [0x1E0670, .rodata, 1D9690]
+      - [0x1E0670, data, 1D9690]
+      - [0x1E06A0, .rodata, 1D9690]
   - type: code
     start: 0x1E0A30
     vram: 0x800F65E0

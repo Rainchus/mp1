@@ -3,6 +3,7 @@
 
 #include "types.h"
 #include "engine/math.h"
+#include "PR/gbi.h"
 
 typedef struct Vec2f {
                f32 x;
@@ -34,6 +35,12 @@ typedef struct Vec3s {
                s32 y;
                s32 z;
 } Vec3s;
+
+typedef struct Color_RGB8 {
+    /* 0x00 */ u8 r;
+    /* 0x01 */ u8 g;
+    /* 0x02 */ u8 b;
+} Color_RGB8; //sizeof 3
 
 typedef struct Vec4f {
                f32 x;
@@ -86,14 +93,12 @@ typedef struct unkGlobalStruct_00 {
     /* 0x34 */ f32 unk_34;
     /* 0x38 */ f32 unk_38;
     /* 0x3C */ f32 unk_3C;
-    /* 0x40 */ union {
-        f32 float32;
-        s32 signed32;
-    } unk_40;
-    /* 0x44 */ f32 unk_44;
-    /* 0x48 */ f32 unk_48;
+    /* 0x40 */ f32 unk_40;
+    /* 0x44 */ char unk_44[8];
     /* 0x4C */ f32 unk_4C;
-    /* 0x50 */ f32 unk_50;
+    /* 0x50 */ s16 unk_50;
+    /* 0x52 */ s8 unk_52;
+    /* 0x53 */ char unk_53[1];
     /* 0x54 */ u8 unk_54[2];
     /* 0x56 */ s8 unk_56;
     /* 0x57 */ s8 unk_57;
@@ -120,10 +125,12 @@ typedef struct unkGlobalStruct_00 {
     /* 0xB3 */ s8 unk_B3;
     /* 0xB4 */ char unk_B4[0x08];
     /* 0xBC */ f32 unk_BC;
-    /* 0xC0 */ char unk_C0[0x1C];
+    /* 0xC0 */ u16 unk_C0;
+    /* 0xC2 */ char unk_C2[0x16];
+    /* 0xD8 */ void* unk_D8; // possibly unkGlobalStruct_00*
     /* 0xDC */ s32 unk_DC;
     /* 0xE0 */ s32 unk_E0;
-    /* 0xE4 */ unk_Struct01* unk_E4;
+    /* 0xE4 */ unk_Struct01* unk_E4; // possibly void*
 } unkGlobalStruct_00; /* size = 0xE8 */
 
 typedef struct unkGlobalStruct_01 {
@@ -236,7 +243,9 @@ typedef struct unk_Struct00 {
     /* 0x048 */ f32 unk_48;
     /* 0x04C */ char pad4C[0xA8];
     /* 0x0F4 */ s32 unkF4;
-    /* 0x0F8 */ char padF8[0x400];
+    /* 0x0F8 */ char padF8[0x40];
+    /* 0x138 */ Mtx unk_138;
+    /* 0x178 */ char unk_178[0x380];
 } unk_Struct00;
 
 typedef struct unk_Struct04 {
@@ -456,26 +465,271 @@ typedef struct unk_Struct02 {
     s16* unk_0C;
 } unk_Struct02;
 
-typedef struct unk_ovl_2D_struct { //actually global??
-    /* 0x00 */ s32 unk_00;
-    /* 0x00 */ s32 unk_04;
-    /* 0x00 */ s16 unk_08;
+typedef struct unk2C0C0Struct20 {
+    /* 0x00 */ u8 unk_00;
+    /* 0x01 */ char unk_01[3];
+    /* 0x04 */ s16 unk_04[2]; // unknown array size
+    /* 0x08 */ char unk_08[4];
+    /* 0x0C */ f32 unk_0C[1]; // unknown array size
+    /* 0x10 */ char unk_10[0xC];
+    /* 0x1C */ f32 unk_1C[1]; // unknown array size
+    /* 0x20 */ char unk_20[0xC];
+    /* 0x2C */ u8 unk_2C[4]; // unknown array size
+    /* 0x30 */ s16 unk_30;
+    /* 0x32 */ s16 unk_32;
+} unk2C0C0Struct20; //sizeof 0x34
+
+typedef struct unk2C0C0Struct30 {
+    /* 0x00 */ s16 unk_00;
+    /* 0x02 */ s16 unk_02;
+    /* 0x04 */ u16 unk_04;
+    /* 0x06 */ s16 unk_06;
+    /* 0x08 */ s16 unk_08;
     /* 0x0A */ s16 unk_0A;
-    /* 0x0C */ char unk_0C[0x3C];
+    /* 0x0C */ u16 unk_0C;
+    /* 0x0E */ s16 unk_0E;
+    /* 0x10 */ u16 unk_10;
+    /* 0x12 */ s16 unk_12;
+    /* 0x14 */ u32 unk_14;
+    /* 0x18 */ u8 unk_18[4]; // unknown array size
+    /* 0x1C */ char unk_1C[0x14];
+    /* 0x30 */ u8 unk_30;
+    /* 0x31 */ char unk_31[3];
+    /* 0x34 */ unk2C0C0Struct20* unk_34;
+    /* 0x38 */ char unk_38[0x12];
+    /* 0x4A */ s16 unk_4A;
+    /* 0x4C */ s16 unk_4C;
+    /* 0x4E */ s16 unk_4E;
+    /* 0x50 */ s16 unk_50;
+    /* 0x52 */ s16 unk_52;
+    /* 0x54 */ s16 unk_54;
+    /* 0x56 */ char unk_56[2];
+    /* 0x58 */ struct unk2C0C0StructC0* unk_58;
+} unk2C0C0Struct30; //sizeof 0x5C
+
+typedef struct unk2C0C0Struct40 {
+    /* 0x00 */ s16 unk_00;
+    /* 0x02 */ s16 unk_02;
+    /* 0x04 */ s16 unk_04;
+    /* 0x02 */ char unk_06[2];
+    /* 0x08 */ Vec3f unk_08;
+    /* 0x14 */ Vec3f unk_14;
+    /* 0x20 */ Vec3f unk_20;
+    /* 0x2C */ Vec3f unk_2C;
+    /* 0x38 */ Vec3f unk_38;
+    /* 0x44 */ s8 unk_44;
+    /* 0x45 */ s8 unk_45;
+    /* 0x46 */ char unk_46[2];
+    /* 0x48 */ struct unk2C0C0StructC0* unk_48;
+    /* 0x4C */ Matrix4f unk_4C;
+} unk2C0C0Struct40; //sizeof 0x8C
+
+typedef struct unk2C0C0Struct50 {
+    /* 0x00 */ s16 unk_00;
+    /* 0x02 */ char unk_02[2];
+    /* 0x04 */ s16* unk_04;
+    /* 0x08 */ Vec3f unk_08;
+    /* 0x14 */ Vec3f unk_14;
+    /* 0x20 */ Vec3f unk_20;
+    /* 0x2C */ Vec3f unk_2C;
+    /* 0x38 */ Vec3f unk_38;
+    /* 0x44 */ Vec3f unk_44;
+    /* 0x50 */ Vec3f unk_50;
+    /* 0x5C */ s8 unk_5C;
+    /* 0x5D */ s8 unk_5D;
+    /* 0x5E */ s8 unk_5E;
+    /* 0x5F */ char unk_5F;
+    /* 0x60 */ struct unk2C0C0StructC0* unk_60;
+    /* 0x64 */ Matrix4f unk_64;
+} unk2C0C0Struct50; //sizeof 0xA4
+
+typedef struct unk2C0C0Struct60 {
+    /* 0x00 */ char unk_00[0x1A];
+    /* 0x1A */ s16 unk_1A;
+    /* 0x1C */ char unk_1C[8];
+    /* 0x2C */ s32 unk_24;
+} unk2C0C0Struct60; //sizeof unknown
+
+typedef struct unk2C0C0Struct70 {
+    /* 0x00 */ char unk_00[0x18];
+    /* 0x1A */ u8 unk_18;
+    /* 0x1B */ u8 unk_19;
+    /* 0x1A */ u8 unk_1A;
+    /* 0x1B */ u8 unk_1B;
+    /* 0x1C */ char unk_1C[4];
+    /* 0x20 */ u16 unk_20;
+    /* 0x22 */ char unk_22[2];
+    /* 0x24 */ u8* unk_24;
+    /* 0x28 */ struct unk2C0C0StructC0* unk_28;
+    /* 0x2C */ unk2C0C0Struct60* unk_2C;
+} unk2C0C0Struct70; //sizeof 0x30
+
+typedef struct unk2C0C0Struct80 {
+    /* 0x00 */ s8 unk_00;
+    /* 0x01 */ s8 unk_01;
+    /* 0x02 */ s8 unk_02;
+    /* 0x03 */ s8 unk_03;
+    /* 0x04 */ s8 unk_04;
+    /* 0x05 */ u8 unk_05;
+    /* 0x06 */ u8 unk_06;
+    /* 0x07 */ u8 unk_07;
+    /* 0x08 */ char unk_08;
+    /* 0x09 */ u8 unk_09;
+    /* 0x0A */ char unk_0A[2];
+    /* 0x0C */ unk2C0C0Struct70* unk_0C;
+} unk2C0C0Struct80; //sizeof 0x10
+
+typedef struct unk2C0C0Struct90 {
+    /* 0x00 */ char unk_00;
+    /* 0x01 */ u8 unk_01;
+    /* 0x02 */ u8 unk_02;
+    /* 0x03 */ u8 unk_03;
+    /* 0x04 */ char unk_04;
+    /* 0x05 */ Color_RGB8 unk_05;
+    /* 0x08 */ u8 unk_08;
+    /* 0x09 */ s8 unk_09;
+    /* 0x0A */ s8 unk_0A;
+    /* 0x0B */ s8 unk_0B;
+    /* 0x0C */ s8 unk_0C;
+    /* 0x0D */ u8 unk_0D;
+} unk2C0C0Struct90; //sizeof 0xE
+
+typedef struct unk2C0C0StructA0 {
+    /* 0x00 */ s16 unk_00;
+    /* 0x02 */ s16 unk_02;
+    /* 0x04 */ s16 unk_04;
+} unk2C0C0StructA0; //sizeof 6
+
+typedef struct unk2C0C0StructB0 {
+    /* 0x00 */ u8 unk_00;
+    /* 0x01 */ char unk_01;
+    /* 0x02 */ s16 unk_02[1]; // unknown array size
+    /* 0x04 */ char unk_04[8];
+    /* 0x08 */ f32 unk_0C;
+    /* 0x10 */ f32 unk_10;
+    /* 0x14 */ f32 unk_14;
+} unk2C0C0StructB0; //sizeof 0x18
+
+typedef struct unk2C0C0StructB4 {
+    /* 0x00 */ s16 unk_00;
+    /* 0x02 */ s16 unk_02;
+    /* 0x04 */ s16 unk_04;
+    /* 0x06 */ s16 unk_06;
+    /* 0x08 */ u16* unk_08;
+    /* 0x0C */ s32* unk_0C;
+} unk2C0C0StructB4; //sizeof 0x10
+
+typedef struct unk2C0C0StructB8 {
+    /* 0x00 */ s16 unk_00;
+    /* 0x02 */ s16 unk_02;
+    /* 0x04 */ s16 unk_04;
+    /* 0x06 */ char unk_06[2];
+    /* 0x08 */ s32 unk_08;
+    /* 0x0C */ unk2C0C0StructB4 unk_0C[16]; // array size unknown
+} unk2C0C0StructB8; //sizeof 0x10C
+
+typedef struct unk2C0C0StructC0 {
+    /* 0x00 */ Gfx** unk_00;
+    /* 0x04 */ struct unk2C0C0StructE0* unk_04;
+    /* 0x08 */ struct unk2C0C0StructE0* unk_08[8];
+    /* 0x28 */ u8 unk_28;
+    /* 0x29 */ char unk_29;
+    /* 0x2A */ s8 unk_2A;
+    /* 0x2B */ s8 unk_2B;
+    /* 0x2C */ s8 unk_2C;
+    /* 0x2D */ s8 unk_2D;
+    /* 0x2E */ s8 unk_2E;
+    /* 0x2F */ s8 unk_2F;
+    /* 0x30 */ s8 unk_30;
+    /* 0x31 */ s8 unk_31;
+    /* 0x32 */ char unk_32[2];
+    /* 0x34 */ u8* unk_34;
+    /* 0x38 */ u8* unk_38;
+    /* 0x3C */ u8* unk_3C;
+    /* 0x40 */ void* unk_40;
+    /* 0x44 */ void* unk_44;
+    /* 0x48 */ void* unk_48;
+    /* 0x4C */ void* unk_4C;
+    /* 0x50 */ void* unk_50;
+    /* 0x54 */ void* unk_54;
+    /* 0x58 */ void* unk_58;
+    /* 0x5C */ void* unk_5C;
+    /* 0x60 */ void* unk_60;
+    /* 0x64 */ u8 unk_64;
+    /* 0x65 */ char unk_65;
+    /* 0x66 */ s16 unk_66;
+    /* 0x68 */ u16 unk_68;
+    /* 0x6A */ s16 unk_6A;
+    /* 0x6C */ s16 unk_6C;
+    /* 0x6E */ s16 unk_6E;
+    /* 0x70 */ s16 unk_70;
+    /* 0x72 */ u16 unk_72;
+    /* 0x74 */ s16 unk_74;
+    /* 0x76 */ s16 unk_76;
+    /* 0x78 */ unk2C0C0StructA0* unk_78;
+    /* 0x7C */ Color_RGB8* unk_7C;
+    /* 0x80 */ unk2C0C0Struct30* unk_80;
+    /* 0x84 */ s16 unk_84;
+    /* 0x86 */ char unk_86[2];
+    /* 0x88 */ unk2C0C0Struct40* unk_88;
+    /* 0x8C */ char unk_8C[0x14];
+    /* 0xA0 */ unk2C0C0Struct50* unk_A0;
+    /* 0xA4 */ unk2C0C0Struct80* unk_A4;
+    /* 0xA8 */ unk2C0C0Struct90* unk_A8;
+    /* 0xAC */ s32 unk_AC;
+    /* 0xB0 */ s32 unk_B0;
+    /* 0xB4 */ s32 unk_B4;
+    /* 0xB8 */ unk2C0C0StructB8* unk_B8;
+    /* 0xBC */ unk2C0C0Struct70* unk_BC;
+    /* 0xC0 */ s32 unk_C0;
+    /* 0xC4 */ s32 unk_C4;
+    /* 0xC8 */ s32 unk_C8;
+    /* 0xCC */ s32 unk_CC;
+    /* 0xD0 */ unk2C0C0StructB0* unk_D0;
+    /* 0xD4 */ char unk_D4[0xC];
+} unk2C0C0StructC0; //sizeof 0xE0
+
+typedef struct unk_ovl_2D_struct { //actually global??
+    /* 0x00 */ s8 unk_00;
+    /* 0x01 */ char unk_01;
+    /* 0x02 */ s16 unk_02;
+    /* 0x04 */ s16 unk_04;
+    /* 0x06 */ char unk_06[2];
+    /* 0x08 */ s16 unk_08;
+    /* 0x0A */ s16 unk_0A;
+    /* 0x0C */ s16 unk_0C;
+    /* 0x0E */ s16 unk_0E;
+    /* 0x10 */ s16 unk_10;
+    /* 0x12 */ s16 unk_12;
+    /* 0x14 */ s16 unk_14;
+    /* 0x16 */ s16 unk_16;
+    /* 0x18 */ char unk_18[2];
+    /* 0x1A */ s16 unk_1A;
+    /* 0x1C */ char unk_1C[4];
+    /* 0x20 */ s32 unk_20;
+    /* 0x24 */ f32 unk_24;
+    /* 0x28 */ f32 unk_28;
+    /* 0x2C */ f32 unk_2C;
+    /* 0x30 */ f32 unk_30;
+    /* 0x34 */ f32 unk_34;
+    /* 0x38 */ f32 unk_38;
+    /* 0x3C */ f32 unk_3C;
+    /* 0x40 */ f32 unk_40;
+    /* 0x44 */ f32 unk_44;
     /* 0x48 */ f32 unk_48;
-/* 0x4C */ union {
-        f32 float32;
-        u16 unsigned16[2];
-        s16 signed16[2];
-        s32 signed32;
-    } unk_4C;
+    /* 0x4C */ f32 unk_4C;
     /* 0x50 */ f32 unk_50;
-    /* 0x54 */ char unk_54[0x18];
-    /* 0x6C */ s32 unk_6C;
+    /* 0x54 */ f32 unk_54;
+    /* 0x58 */ f32 unk_58;
+    /* 0x5C */ f32 unk_5C;
+    /* 0x60 */ f32 unk_60;
+    /* 0x64 */ f32 unk_64;
+    /* 0x68 */ f32 unk_68;
+    /* 0x6C */ unk2C0C0StructC0* unk_6C;
     /* 0x70 */ char pad70[0xC];
     /* 0x7C */ Mat4 unk7C; // Transformation Matrix
-    /* 0x7C */ char padBC[0x4];
-} unk_ovl_2D_struct;
+    /* 0xBC */ char padBC[0x4];
+} unk_ovl_2D_struct; //sizeof 0xC0
 
 typedef struct SubTextWindow {
     s8 unk0;

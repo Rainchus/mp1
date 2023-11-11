@@ -122,6 +122,10 @@ D_800FB724_1370E4 = 0x800FB724; // rom:0x1370E4 force_not_migration:True type:s3
 D_800FB728_1370E8 = 0x800FB728; // rom:0x1370E8 force_not_migration:True type:s32
 D_800FB72C_1370EC = 0x800FB72C; // rom:0x1370EC force_not_migration:True type:s32
 
+// ovl_0D_CrazyCutter
+//???
+func_800FCCC4_12B7B4 = 0x800FCCC4; //rom:0x12B7B4 type:func
+
 // ovl_11_BowlOver
 D_800FD310_145CE0 = 0x800FD310; // rom:0x145CE0 force_not_migration:True type:Vec3f
 D_800FD33C_145D0C = 0x800FD33C; // rom:0x145D0C force_not_migration:True type:s32
