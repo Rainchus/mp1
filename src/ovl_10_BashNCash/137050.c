@@ -31,44 +31,6 @@ INCLUDE_ASM("asm/nonmatchings/ovl_10_BashNCash/137050", func_800F72BC_137D2C);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_10_BashNCash/137050", func_800F73F0_137E60);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_10_BashNCash/137050", D_800FE3A0_13EE10);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_10_BashNCash/137050", D_800FE3A4_13EE14);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_10_BashNCash/137050", D_800FE3A8_13EE18);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_10_BashNCash/137050", D_800FE3D4_13EE44);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_10_BashNCash/137050", D_800FE3D8_13EE48);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_10_BashNCash/137050", D_800FE3DC_13EE4C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_10_BashNCash/137050", D_800FE3E0_13EE50);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_10_BashNCash/137050", D_800FE3E4_13EE54);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_10_BashNCash/137050", D_800FE3E8_13EE58);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_10_BashNCash/137050", D_800FE3EC_13EE5C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_10_BashNCash/137050", D_800FE3F0_13EE60);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_10_BashNCash/137050", D_800FE3F4_13EE64);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_10_BashNCash/137050", D_800FE3F8_13EE68);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_10_BashNCash/137050", D_800FE3FC_13EE6C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_10_BashNCash/137050", D_800FE40C_13EE7C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_10_BashNCash/137050", D_800FE41C_13EE8C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_10_BashNCash/137050", D_800FE420_13EE90);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_10_BashNCash/137050", D_800FE424_13EE94);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_10_BashNCash/137050", D_800FE428_13EE98);
-
 INCLUDE_ASM("asm/nonmatchings/ovl_10_BashNCash/137050", func_800F7458_137EC8);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_10_BashNCash/137050", func_800F7A54_1384C4);

@@ -659,7 +659,8 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x12BC20, c]
-      - [0x131A10, .rodata, 12BC20]
+      - [0x131A10, data, 12BC20]
+      - [0x131F00, .rodata, 12BC20]
   - type: code
     start: 0x131FA0
     vram: 0x800F65E0
@@ -671,7 +672,8 @@ segments:
     subsegments:
       - [0x131FA0, c]
       - [0x136C10, c]
-      - [0x136F40, .rodata, 131FA0]
+      - [0x136F40, data, 131FA0]
+      - [0x136FF0, .rodata, 131FA0]
   - type: code
     start: 0x137050
     vram: 0x800F65E0
@@ -682,7 +684,8 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x137050, c]
-      - [0x13EE10, .rodata, 137050]
+      - [0x13EE10, data, 137050]
+      - [0x13EEC0, .rodata, 137050]
   - type: code
     start: 0x13EFB0
     vram: 0x800F65E0
@@ -693,7 +696,8 @@ segments:
     subsegments:
       - [0x13EFB0, c]
       - [0x142EA0, c]
-      - [0x145CA0, .rodata, 13EFB0]
+      - [0x145CA0, data, 13EFB0]
+      - [0x145FB0, .rodata, 13EFB0]
       - [0x146190, .rodata, 142EA0]
   - type: code
     start: 0x146200
@@ -706,8 +710,8 @@ segments:
       - [0x146200, c]
       - [0x146B60, c]
       - [0x148840, c]
-      - [0x149C40, .rodata, 146200]
-      - [0x149E60, .rodata, 146B60]
+      - [0x149C40, data, 146200]
+      - [0x149E00, .rodata, 146200]
       - [0x149E60, .rodata, 148840]
   - type: code
     start: 0x149E80
@@ -718,7 +722,8 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x149E80, c]
-      - [0x14E540, .rodata, 149E80]
+      - [0x14E540, data, 149E80]
+      - [0x14E840, .rodata, 149E80]
   - type: code
     start: 0x14E940
     vram: 0x800F65E0
