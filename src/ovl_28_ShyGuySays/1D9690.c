@@ -1,4 +1,4 @@
-#include "common.h"
+#include "1D9690.h"
 
 INCLUDE_ASM("asm/nonmatchings/ovl_28_ShyGuySays/1D9690", func_800F65E0_1D9690);
 
