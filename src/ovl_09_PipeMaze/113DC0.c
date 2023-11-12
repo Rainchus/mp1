@@ -1,8 +1,30 @@
 #include "common.h"
+#include "PipeMaze.h"
 
-INCLUDE_ASM("asm/nonmatchings/ovl_09_PipeMaze/113DC0", func_800F65E0_113DC0);
+void func_800F65E0_113DC0(void) {
+    func_80029090(32);
+    func_8001DE70(32);
+    InitObjSystem(50, 0);
+    func_80060088();
+    func_8005D8B8(func_8005D384(0x7FDA, 0, 0, -1, func_8005EB1C), 160);
+    D_800F9A34 = 0;
+    func_800F6678_113E58();
+    D_800F9902_1170E2 = 0;
+    func_800F7EA4_115684();
+    func_800F7100_1148E0();
+    func_800F68BC_11409C();
+    SetFadeInTypeAndTime(0, 16);
+}
 
-INCLUDE_ASM("asm/nonmatchings/ovl_09_PipeMaze/113DC0", func_800F6678_113E58);
+void func_800F6678_113E58(void) {
+    s16 temp_s0;
+    
+    func_800178A0(1);
+    temp_s0 = func_800178E8();
+    func_80017660(temp_s0, 0.0f, 0.0f, 320.0f, 240.0f);
+    func_800176C4(temp_s0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
+    func_8001D494(temp_s0, 36.0f, 80.0f, 8000.0f);
+}
 
 void func_800F673C_113F1C(void) {
 }

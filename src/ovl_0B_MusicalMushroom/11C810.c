@@ -1,4 +1,5 @@
 #include "common.h"
+#include "MusicalMushroom.h"
 
 INCLUDE_ASM("asm/nonmatchings/ovl_0B_MusicalMushroom/11C810", func_800F65E0_11C810);
 
@@ -23,43 +24,40 @@ INCLUDE_ASM("asm/nonmatchings/ovl_0B_MusicalMushroom/11C810", func_800F7484_11D6
 
 INCLUDE_ASM("asm/nonmatchings/ovl_0B_MusicalMushroom/11C810", func_800F7508_11D738);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_0B_MusicalMushroom/11C810", D_800FB4C0_1216F0);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_0B_MusicalMushroom/11C810", D_800FB4D0_121700);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_0B_MusicalMushroom/11C810", D_800FB4D4_121704);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_0B_MusicalMushroom/11C810", D_800FB4D8_121708);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_0B_MusicalMushroom/11C810", D_800FB4DC_12170C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_0B_MusicalMushroom/11C810", D_800FB4E0_121710);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_0B_MusicalMushroom/11C810", D_800FB4E4_121714);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_0B_MusicalMushroom/11C810", D_800FB4E8_121718);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_0B_MusicalMushroom/11C810", D_800FB4EC_12171C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_0B_MusicalMushroom/11C810", D_800FB4F0_121720);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_0B_MusicalMushroom/11C810", D_800FB4F4_121724);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_0B_MusicalMushroom/11C810", D_800FB4F8_121728);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_0B_MusicalMushroom/11C810", D_800FB4FC_12172C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_0B_MusicalMushroom/11C810", D_800FB500_121730);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_0B_MusicalMushroom/11C810", D_800FB504_121734);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_0B_MusicalMushroom/11C810", D_800FB508_121738);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_0B_MusicalMushroom/11C810", D_800FB50C_12173C);
-
 INCLUDE_RODATA("asm/nonmatchings/ovl_0B_MusicalMushroom/11C810", D_800FB520_121750);
 
-INCLUDE_ASM("asm/nonmatchings/ovl_0B_MusicalMushroom/11C810", func_800F75D8_11D808);
+void func_800F75D8_11D808(unkObjectStruct* arg0) {
+    unkGlobalStruct_00* temp_s1 = arg0->unk_50;
+    f32* temp_a1 = &D_800FB778[arg0->unk_4C[0]];
+
+    switch (D_800FB4D0_121700) {
+    case 1:
+        func_80009624(temp_s1, 0);
+        D_800FB4D0_121700 = 2;
+        break;
+    case 2:
+        func_800F7508_11D738(arg0, temp_a1);
+        break;
+    case 3:
+        func_8006071C(temp_s1->unk_B3);
+        
+        if (arg0->unk_4C[0] == (D_800F2BC0 - 1)) {
+            D_800FB4D0_121700 = 4;
+        }
+        arg0->unk_28 = arg0->unk_28 + 90.0f;
+        temp_s1->unk_3C = arg0->unk_28;
+        /* fall through */
+    case 0:
+        func_800184BC(arg0, 0);
+        break;
+    case 4:
+        arg0->unk_28 = 0.0f;
+        func_80009458();
+        break;
+    }
+    func_80017DB0(arg0);
+    func_800F7484_11D6B4(arg0, 1.0f, 0, 1);
+}
 
 INCLUDE_ASM("asm/nonmatchings/ovl_0B_MusicalMushroom/11C810", func_800F76E8_11D918);
 

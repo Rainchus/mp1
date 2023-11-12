@@ -4,28 +4,6 @@ INCLUDE_ASM("asm/nonmatchings/ovl_15_CoinBlockBash/152BE0", func_800F65E0_152BE0
 
 INCLUDE_ASM("asm/nonmatchings/ovl_15_CoinBlockBash/152BE0", func_800F66F8_152CF8);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_15_CoinBlockBash/152BE0", D_80101B20_15E120);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_15_CoinBlockBash/152BE0", D_80101B24_15E124);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_15_CoinBlockBash/152BE0", D_80101B28_15E128);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_15_CoinBlockBash/152BE0", D_80101B2C_15E12C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_15_CoinBlockBash/152BE0", D_80101B30_15E130);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_15_CoinBlockBash/152BE0", D_80101BA4_15E1A4);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_15_CoinBlockBash/152BE0", D_80101BA8_15E1A8);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_15_CoinBlockBash/152BE0", D_80101BAC_15E1AC);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_15_CoinBlockBash/152BE0", D_80101BC8_15E1C8);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_15_CoinBlockBash/152BE0", D_80101BD4_15E1D4);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_15_CoinBlockBash/152BE0", D_80101BDC_15E1DC);
-
 INCLUDE_RODATA("asm/nonmatchings/ovl_15_CoinBlockBash/152BE0", D_80101C00_15E200);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_15_CoinBlockBash/152BE0", D_80101C04_15E204);

@@ -1,104 +1,44 @@
 #include "common.h"
+#include "PlatformPeril.h"
 
-INCLUDE_ASM("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", func_800F65E0_16BD20);
+void func_800F65E0_16BD20(void) {
+    func_8001DE70(0x20);
+    InitObjSystem(0x32, 0);
+    func_80060088();
+    func_8000942C();
+    func_8007B168(&D_800FDF60_1736A0, 1);
+    func_8007B168(&D_800FDF6C_1736AC, 1);
+    func_8007B168(&D_800FDF78_1736B8, 1);
+    func_8005D8B8(func_8005D384(0x7FDA, 0, 0, -1, func_8005EB1C), 0xA0);
+    D_800EE984 = 0;
+    D_800F2BC0 = 0;
+    D_800ED440 = 0;
+    func_8005D384(4, 0, 0, -1, &func_800F66E8_16BE28);
+    func_8005D384(1, 0, 0, 1, &func_800F6720_16BE60);
+    D_800B895C = 10.0f;
+    SetFadeInTypeAndTime(0, 0x10);
+}
 
-INCLUDE_ASM("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", func_800F66E8_16BE28);
 
-INCLUDE_ASM("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", func_800F6720_16BE60);
+void func_800F66E8_16BE28(void) {
+    if (D_800F5144 == 1) {
+        func_800601D4(0x28);
+        func_8005DFB8(1);
+    }
+}
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FCD90_1724D0);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FCD94_1724D4);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FCD98_1724D8);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FCDA0_1724E0);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FCDA4_1724E4);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FCDB4_1724F4);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FCDB8_1724F8);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FD2A0_1729E0);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FD2A4_1729E4);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FD2A8_1729E8);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FD2AC_1729EC);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FD2B0_1729F0);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FD2B4_1729F4);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FD2B8_1729F8);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FD2BC_1729FC);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FD2C0_172A00);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FD6D8_172E18);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FD6F0_172E30);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FD6F4_172E34);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FD6F8_172E38);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FD744_172E84);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FD768_172EA8);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FD78C_172ECC);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FD8F4_173034);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FD8F8_173038);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FD8FC_17303C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FD900_173040);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FD904_173044);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FDD2C_17346C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FDD40_173480);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FDD50_173490);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FDD60_1734A0);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FDD78_1734B8);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FDD7C_1734BC);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FDEB8_1735F8);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FDEBC_1735FC);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FDEC0_173600);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FDEC4_173604);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FDEC8_173608);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FDECC_17360C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FDED0_173610);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FDED4_173614);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FDED8_173618);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FDF40_173680);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FDF44_173684);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FDF48_173688);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FDF50_173690);
+void func_800F6720_16BE60(unkObjectStruct* arg0) {
+    D_800FE2F8 = 0;
+    D_800FCD90_1724D0 = 0;
+    func_800FC1DC_17191C();
+    func_80009468();
+    func_800F6F68_16C6A8();
+    func_800F90C0_16E800();
+    func_800F76E4_16CE24();
+    func_800F8B7C_16E2BC();
+    func_800FC8E4_172024();
+    arg0->func_ptr = &func_800F6790_16BED0;
+}
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FDF60_1736A0);
 
@@ -108,7 +48,13 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", D_800FDF78_1736B8
 
 INCLUDE_ASM("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", func_800F6790_16BED0);
 
-INCLUDE_ASM("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", func_800F6DF4_16C534);
+s32 func_800F6DF4_16C534(void) {
+    if (func_800FC95C_17209C()) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/ovl_18_PlatformPeril/16BD20", func_800F6E14_16C554);
 

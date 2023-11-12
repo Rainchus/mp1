@@ -5,10 +5,11 @@
 #include "common_structs.h"
 #include "engine/math.h"
 
+s32 LoadFormBinary(void*, s32);
 void func_8006EEB8(s16, u8, u8, s16, s16);
 void func_8006F3BC(s16, s16, s16, s32, s32);
 s32 func_8006E93C(TextWindow*, void*);
-void func_800673B0(s16, f32, f32);
+void func_800673B0(s16, s16, f32);
 void func_800477AC(void);
 void func_80048060(void);
 void func_80046B24(void);
@@ -305,7 +306,7 @@ void func_80018E50(s32, u16, s32);
 void func_80009058(unkObjectStruct*, f32, f32, f32, f32, f32, f32);
 void SetBasicSpritePos(s32, s16, s16);
 void func_80018D84(u16, s32);
-void func_80060540(s32, s32);
+s16 func_80060540(s32, s32);
 void func_8009ECB0(void*, f32, f32, f32);
 void func_800258EC(s16, s32, s32);
 u16 func_8001E00C(void*, s32, u8);
@@ -319,7 +320,7 @@ void func_800A0D00(void*, f32, f32, f32);
 void func_80025CA8(s16, s32);
 void func_80025B34(s16);
 void func_80026040(s16);
-void func_80039C48(s32*, s16*);
+void func_80039C48(char*, s16*);
 void func_80009340(unkObjectStruct*, s32, s32, s32, s32);
 void func_8001E2F8(s16, u8);
 void func_8001E360(s16, u8, u8, u8);
@@ -370,7 +371,7 @@ f32 func_800AEAC0(f32);
 void func_80009E20(unkObjectStruct*);
 void func_800186E4(unkObjectStruct*, s32, s32);
 f32 func_800AEFD0(f32);
-u32 func_8005EB1C(void);
+u32 func_8005EB1C(unkObjectStruct*);
 s32 IsFlagSet(s32);
 s16 func_8000C544(void);
 s32 func_80075FE0(void);
@@ -381,7 +382,7 @@ void func_800790C0(void);
 s32 func_8005DFB8(s32);
 void func_80060198(void);
 void func_80060398(s32);
-void func_80075CCC(s32, ...);
+s32 func_80075CCC(s16, ...);
 u16 ReadImgPackand(s32, s32, s32);
 void func_80025930(s16, s32, s32);
 s32 func_80076174(void);
@@ -423,7 +424,7 @@ void func_8006071C(s16);
 void func_80008FB8(unkObjectStruct*, f32);
 void func_80008FC4(unkObjectStruct*, f32);
 u16 func_800174C0(s32, s32);
-unkGlobalStruct_00* func_80023684(s32, s32);
+void* func_80023684(s32, s16);
 void func_8009B770(unkGlobalStruct_00*, s32, s32);
 void func_80009500(void);
 void func_800090B8(u16);
@@ -449,5 +450,8 @@ s16 func_80039084(void*);
 void func_8005D98C(s32, s32);
 unkObjectStruct** func_8005DB44(s32);
 void func_80009468(void);
+void guMtxCatF(Matrix4f, Matrix4f, Matrix4f);
+void guMtxL2F(Matrix4f, Mtx*);
+void guTranslateF(Matrix4f, f32, f32, f32);
 
 #endif

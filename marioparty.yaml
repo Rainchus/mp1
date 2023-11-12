@@ -17,6 +17,7 @@ options:
   auto_decompile_empty_functions: True
   asm_function_macro: glabel
   asm_data_macro: dlabel
+  asm_jtbl_label_macro: jlabel
   # undefined_syms_path: undefined_syms.txt
   # c_path: c
   asm_path: asm
@@ -458,6 +459,7 @@ segments:
     overlay: True
     exclusive_ram_id: minigame
     symbol_name_format: $VRAM_$ROM
+    #bss_size: 0x3F0
     subalign: 8
     subsegments:
       - [0xD51E0, c]
@@ -465,9 +467,11 @@ segments:
       - [0xDD760, c]
       - [0xDE2D0, c]
       - [0xDE6A0, c]
-      - [0xDFDF0, .rodata, D51E0] #801011F0
+      - [0xDFDF0, data, D51E0] #801011F0
+      - [0xDFF80, .rodata, D51E0]
       - [0xE0278, .rodata, DD760]
       - [0xE02B0, .rodata, DE6A0]
+      #- { start: 0xE02F0, type: bss, vram: 0x801016F0, name: chance_time_bss }
   - type: code
     start: 0xE02F0
     vram: 0x800F65E0
@@ -476,6 +480,7 @@ segments:
     overlay: True
     exclusive_ram_id: minigame
     symbol_name_format: $VRAM_$ROM
+    #bss_size: 0xAA0
     subalign: 8
     subsegments:
       - [0xE02F0, c]
@@ -484,6 +489,7 @@ segments:
       - [0xE7E10, .rodata, E02F0] #800FE100
       - [0xE8B30, .rodata, E13F0]
       - [0xE8E10, .rodata, E5DA0]
+      #- { start: 0xE8F60, type: bss, vram: 0x800FF250, name: slot_machine_bss }
   - type: code
     start: 0xE8F60
     vram: 0x800F65E0
@@ -492,11 +498,14 @@ segments:
     overlay: True
     exclusive_ram_id: minigame
     symbol_name_format: $VRAM_$ROM
+    #bss_size: 0x5E0
     subsegments:
       - [0xE8F60, c]
       - [0xEB0E0, c]
-      - [0xEE3F0, .rodata, E8F60] #800FBA70
+      - [0xEE3F0, data, E8F60] #800FBA70
+      - [0xEE7E0, .rodata, E8F60]
       - [0xEE8B0, .rodata, EB0E0] #800FBF30
+      #- { start: 0xEE9A0, type: bss, vram: 0x800FC020, name: buried_treasure_bss }
   - type: code
     start: 0xEE9A0
     vram: 0x800F65E0
@@ -509,7 +518,8 @@ segments:
       - [0xEE9A0, c]
       - [0xF2800, c]
       - [0xF4420, c]
-      - [0xF6750, .rodata, EE9A0] #800FE390
+      - [0xF6750, data, EE9A0] #800FE390
+      - [0xF6830, .rodata, EE9A0]
       - [0xF6A40, .rodata, F2800]
       - [0xF6A90, .rodata, F4420]
   - type: code
@@ -524,7 +534,8 @@ segments:
     subsegments:
       - [0xF6AB0, c]
       - [0xFD460, c]
-      - [0xFF0E0, .rodata, F6AB0]
+      - [0xFF0E0, data, F6AB0]
+      - [0xFF130, .rodata, F6AB0]
       - [0xFF490, .rodata, FD460]
   - type: code
     start: 0xFF570
@@ -538,7 +549,8 @@ segments:
       - [0xFF570, c]
       - [0x103D80, c]
       - [0x105EA0, c]
-      - [0x10BA80, .rodata, FF570]
+      - [0x10BA80, data, FF570]
+      - [0x10C710, .rodata, FF570]
       - [0x10CA20, .rodata, 103D80]
       - [0x10CAF0, .rodata, 105EA0]
   - type: code
@@ -553,7 +565,8 @@ segments:
       - [0x10CD10, c]
       - [0x10CF70, c]
       - [0x10F6D0, c]
-      - [0x110460, .rodata, 10CD10]
+      - [0x110460, data, 10CD10]
+      - [0x110D00, .rodata, 10CD10]
       - [0x110D40, .rodata, 10CF70]
       - [0x110E70, .rodata, 10F6D0]
   - type: code
@@ -568,7 +581,8 @@ segments:
       - [0x110F90, c]
       - [0x111890, c]
       - [0x113730, c]
-      - [0x113B20, .rodata, 110F90]
+      - [0x113B20, data, 110F90]
+      - [0x113C60, .rodata, 110F90]
       - [0x113C90, .rodata, 111890]
       - [0x113DA0, .rodata, 113730]
   - type: code
@@ -605,7 +619,8 @@ segments:
     subsegments:
       - [0x11C810, c]
       - [0x11F890, c]
-      - [0x1216F0, .rodata, 11C810]
+      - [0x1216F0, data, 11C810]
+      - [0x121750, .rodata, 11C810]
       - [0x1217B0, .rodata, 11F890]
   - type: code
     start: 0x1217D0
@@ -619,7 +634,8 @@ segments:
       - [0x1217D0, c]
       - [0x122BA0, c]
       - [0x1240D0, c]
-      - [0x124FD0, .rodata, 1217D0]
+      - [0x124FD0, data, 1217D0]
+      - [0x125050, .rodata, 1217D0]
       - [0x125080, .rodata, 122BA0]
   - type: code
     start: 0x1250D0
@@ -632,7 +648,8 @@ segments:
     subsegments:
       - [0x1250D0, c]
       - [0x12AFE0, c]
-      - [0x12B7E0, .rodata, 1250D0]
+      - [0x12B7E0, data, 1250D0]
+      - [0x12BB00, .rodata, 1250D0]
   - type: code
     start: 0x12BC20
     vram: 0x800F65E0
@@ -643,7 +660,8 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x12BC20, c]
-      - [0x131A10, .rodata, 12BC20]
+      - [0x131A10, data, 12BC20]
+      - [0x131F00, .rodata, 12BC20]
   - type: code
     start: 0x131FA0
     vram: 0x800F65E0
@@ -655,7 +673,8 @@ segments:
     subsegments:
       - [0x131FA0, c]
       - [0x136C10, c]
-      - [0x136F40, .rodata, 131FA0]
+      - [0x136F40, data, 131FA0]
+      - [0x136FF0, .rodata, 131FA0]
   - type: code
     start: 0x137050
     vram: 0x800F65E0
@@ -666,7 +685,8 @@ segments:
     symbol_name_format: $VRAM_$ROM
     subsegments:
       - [0x137050, c]
-      - [0x13EE10, .rodata, 137050]
+      - [0x13EE10, data, 137050]
+      - [0x13EEC0, .rodata, 137050]
   - type: code
     start: 0x13EFB0
     vram: 0x800F65E0
@@ -677,7 +697,8 @@ segments:
     subsegments:
       - [0x13EFB0, c]
       - [0x142EA0, c]
-      - [0x145CA0, .rodata, 13EFB0]
+      - [0x145CA0, data, 13EFB0]
+      - [0x145FB0, .rodata, 13EFB0]
       - [0x146190, .rodata, 142EA0]
   - type: code
     start: 0x146200
@@ -690,8 +711,8 @@ segments:
       - [0x146200, c]
       - [0x146B60, c]
       - [0x148840, c]
-      - [0x149C40, .rodata, 146200]
-      - [0x149E60, .rodata, 146B60]
+      - [0x149C40, data, 146200]
+      - [0x149E00, .rodata, 146200]
       - [0x149E60, .rodata, 148840]
   - type: code
     start: 0x149E80
@@ -702,7 +723,8 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x149E80, c]
-      - [0x14E540, .rodata, 149E80]
+      - [0x14E540, data, 149E80]
+      - [0x14E840, .rodata, 149E80]
   - type: code
     start: 0x14E940
     vram: 0x800F65E0
@@ -713,7 +735,7 @@ segments:
     subsegments:
       - [0x14E940, c]
       - [0x150E30, c]
-      - [0x152B20, .rodata, 14E940]
+      - [0x152B20, data, 14E940]
       - [0x152BD0, .rodata, 150E30]
   - type: code
     start: 0x152BE0
@@ -722,10 +744,12 @@ segments:
     name: CoinBlockBash
     overlay: True
     exclusive_ram_id: minigame
+    subalign: 8
     subsegments:
       - [0x152BE0, c]
       - [0x15AC50, c]
-      - [0x15E120, .rodata, 152BE0]
+      - [0x15E120, data, 152BE0]
+      - [0x15E200, .rodata, 152BE0] #fairly sure rodata starts at 15E208 not 15E200, but it splits wrong
       - [0x15E9B0, .rodata, 15AC50]
   - type: code
     start: 0x15EAF0
@@ -736,7 +760,8 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x15EAF0, c]
-      - [0x165F10, .rodata, 15EAF0]
+      - [0x165F10, data, 15EAF0]
+      - [0x1660D0, .rodata, 15EAF0]
   - type: code
     start: 0x166220
     vram: 0x800F65E0
@@ -748,7 +773,8 @@ segments:
       - [0x166220, c]
       - [0x166D50, c]
       - [0x168CA0, c]
-      - [0x16BC00, .rodata, 166220]
+      - [0x16BC00, data, 166220]
+      - [0x16BCD0, .rodata, 166220]
       - [0x16BD10, .rodata, 166D50]
   - type: code
     start: 0x16BD20
@@ -762,7 +788,8 @@ segments:
       - [0x16C6A0, c]
       - [0x170470, c]
       - [0x172490, c]
-      - [0x1724D0, .rodata, 16BD20]
+      - [0x1724D0, data, 16BD20]
+      - [0x1736A0, .rodata, 16BD20]
       - [0x173720, .rodata, 16C6A0]
       - [0x173800, .rodata, 170470]
   - type: code
@@ -775,7 +802,8 @@ segments:
     subsegments:
       - [0x1738E0, c]
       - [0x176130, c]
-      - [0x177C30, .rodata, 1738E0]
+      - [0x177C30, data, 1738E0]
+      - [0x1782E0, .rodata, 1738E0]
   - type: code
     start: 0x1784E0
     vram: 0x800F65E0
@@ -786,7 +814,9 @@ segments:
     subalign: 8
     subsegments:
       - [0x1784E0, c]
-      - [0x17E600, .rodata, 1784E0]
+      #- [0x17BDC0, c]
+      - [0x17E600, data, 1784E0]
+      - [0x17E640, .rodata, 1784E0]
   - type: code
     start: 0x17E710
     vram: 0x800F65E0
@@ -954,7 +984,8 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x1D9690, c]
-      - [0x1E0670, .rodata, 1D9690]
+      - [0x1E0670, data, 1D9690]
+      - [0x1E06A0, .rodata, 1D9690]
   - type: code
     start: 0x1E0A30
     vram: 0x800F65E0

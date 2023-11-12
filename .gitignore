@@ -10,8 +10,8 @@ rsp/
 marioparty.ld
 ctx.c
 build.ninja
-.ninja_log
 .ninja_deps
+.ninja_log
 .vscode/configurationCache.log
 .vscode/dryrun.log
 .vscode/targets.log

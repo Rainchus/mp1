@@ -1,6 +1,11 @@
 // ovl_00_MemoryMatch
 D_800FD8A4_D4D14 = 0x800FD8A4; // rom:0xD4D14 force_not_migration:True type:f32
 
+// ovl_01_ChanceTime
+D_80101379_DFF79 = 0x80101379; // rom:0xDFF79 type:s8
+D_8010166C_E026C = 0x8010166C; // rom:0xE026C type:asciz size:0x6
+jtbl_80101678_E0278 = 0x80101678; // rom:0xE0278 type:jtbl force_not_migration:True
+
 // ovl_02_SlotMachine
 D_800FECC0_E89D0 = 0x800FECC0; // rom:0xE89D0 force_not_migration:True type:f32
 
@@ -113,6 +118,9 @@ D_800FBA80_11C6B0 = 0x800FBA80; // rom:0x11C6B0 force_not_migration:True type:s3
 D_800FBA90_11C6C0 = 0x800FBA90; // rom:0x11C6C0 force_not_migration:True type:s32
 D_800FBAD0_11C700 = 0x800FBAD0; // rom:0x11C700 force_not_migration:True type:f64
 
+// ovl_0B_D_MusicalMushroom
+D_800FB778 = 0x800FB778; // type:f32 size:0x10
+
 // ovl_0C_PedalPower
 D_800F9E10_125000 = 0x800F9E10; // rom:0x125000 force_not_migration:True type:f32
 
@@ -121,6 +129,22 @@ D_800FC550_131B90 = 0x800FC550; // rom:0x131B90 force_not_migration:True type:f3
 D_800FB724_1370E4 = 0x800FB724; // rom:0x1370E4 force_not_migration:True type:s32
 D_800FB728_1370E8 = 0x800FB728; // rom:0x1370E8 force_not_migration:True type:s32
 D_800FB72C_1370EC = 0x800FB72C; // rom:0x1370EC force_not_migration:True type:s32
+
+// ovl_0D_CrazyCutter
+//this MUST start with 'mult' or it wont match...kmc being weird
+mult_Func = 0x800FCCC8; //rom:0x12B7B8 type:func
+
+// ovl_0E_FaceLift
+D_800FC8C0_131F00 = 0x800FC8C0; // rom:0x131F00 type:char*
+D_800FC8CC_131F0C = 0x800FC8CC; // rom:0x131F0C type:char*
+D_800FC8D4_131F14 = 0x800FC8D4; // rom:0x131F14 type:char*
+D_800FC8DC_131F1C = 0x800FC8DC; // rom:0x131F1C type:char*
+D_800FC8E4_131F24 = 0x800FC8E4; // rom:0x131F24 type:char*
+D_800FC500_131B40 = 0x800FC500; // rom:0x131B40 type:s32
+
+// ovl_0F_WhackAPlant
+D_800FB61C_136FDC = 0x800FB61C; // rom:0x136FDC type:u16
+D_800FB61E_136FDE = 0x800FB61E; // rom:0x136FDE type:u16
 
 // ovl_11_BowlOver
 D_800FD310_145CE0 = 0x800FD310; // rom:0x145CE0 force_not_migration:True type:Vec3f
