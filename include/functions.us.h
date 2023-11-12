@@ -5,6 +5,7 @@
 #include "common_structs.h"
 #include "engine/math.h"
 
+s32 LoadFormBinary(void*, s32);
 void func_8006EEB8(s16, u8, u8, s16, s16);
 void func_8006F3BC(s16, s16, s16, s32, s32);
 s32 func_8006E93C(TextWindow*, void*);

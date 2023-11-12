@@ -1,8 +1,21 @@
 #include "common.h"
+#include "PlatformPeril.h"
 
-INCLUDE_ASM("asm/nonmatchings/ovl_18_PlatformPeril/170470", func_800FAD30_170470);
+void func_800FAD30_170470(void) {
+    func_8005D384(3, 0, 0, -1, &func_800FAD64_1704A4);
+}
 
-INCLUDE_ASM("asm/nonmatchings/ovl_18_PlatformPeril/170470", func_800FAD64_1704A4);
+
+void func_800FAD64_1704A4(unkObjectStruct* arg0) {
+    s32 temp_s0;
+
+    arg0->func_ptr = NULL;
+    temp_s0 = InitSprite(0x2A0009);
+    temp_s0 = func_80019060(temp_s0, 0, 0);
+    func_80018D44(temp_s0, 0x4000);
+    SetBasicSpritePos(temp_s0, 0xA0, 0x78);
+    ShowBasicSprite(temp_s0);
+}
 
 INCLUDE_ASM("asm/nonmatchings/ovl_18_PlatformPeril/170470", func_800FADC8_170508);
 
