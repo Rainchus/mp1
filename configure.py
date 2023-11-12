@@ -77,7 +77,7 @@ header = (
     '\n'
 
     'rule s_file\n'
-    '  command = "iconv --from UTF-8 --to SHIFT-JIS $in | $AS $ASFLAGS -o $out\n"
+    '  command = "iconv --from UTF-8 --to SHIFT-JIS $in | $AS $ASFLAGS -o $out\n'
     '\n'
 
     "rule bin_file\n"
