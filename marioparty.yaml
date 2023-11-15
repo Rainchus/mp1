@@ -448,7 +448,8 @@ segments:
     subsegments:
       - [0xCDA50, c]
       - [0xD27D0, c]
-      - [0xD4C50, .rodata, CDA50] #800FD7E0
+      - [0xD4C50,    data, CDA50] # 800FD7E0
+      - [0xD4CE0, .rodata, CDA50] # 800FD850
       - [0xD5090, .rodata, D27D0]
   - type: code
     start: 0xD51E0
