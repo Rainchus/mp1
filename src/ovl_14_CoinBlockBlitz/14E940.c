@@ -66,8 +66,8 @@ void func_800F6D08_14F068(void) {
     s16 temp_a0;
     s32 i;
 
-    var_s0 = &D_800FAA80;
-    var_s1 = &D_800FA8F0;
+    var_s0 = &D_800FAA80_152BE0;
+    var_s1 = &D_800FA8F0_152BE0;
     temp_a0 = GetRandomByte() % 3;
     
     for (i = 0; i < 4; i++, var_s0++, var_s1++) {
@@ -83,7 +83,7 @@ void func_800F6D08_14F068(void) {
         var_s1->unkA = temp_a0;
     }
     
-    D_800FAA78 = 0;
+    D_800FAA78_152BE0 = 0;
     D_800EE98C = 3510.0f;
     D_800F33EC.y = -40.5f;
     D_800F33EC.x = 25.25f;

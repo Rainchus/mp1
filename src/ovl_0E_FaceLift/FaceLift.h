@@ -26,14 +26,17 @@ void func_800F9988_12EFC8(void);
 void func_800FAA38_130078(void);
 void func_800FACD8_130318(unkObjectStruct*, s32);
 
-extern s32 D_800FCA18;
+extern u16 D_800F5144; // true extern data
+
 extern u16 D_800FC3D0_131A10;
-extern u16 D_800F5144;
-extern s16 D_800FC960;
-extern unk_FaceLift_01 D_800FC4B0[];
+extern unk_FaceLift_01 D_800FC4B0_131AF0[];
 extern unk_FaceLift_00 D_800FC500_131B40;
-extern Vec3f D_800FC980[];
-extern Vec2f D_800FC9F0;
-extern s16 D_800FCA1E;
-extern s16 D_800FCA28;
-extern s16 D_800FCA2A;
+
+/* BSS DATA */
+extern s16 D_800FC960_131FA0;
+extern Vec3f D_800FC980_131FA0[];
+extern Vec2f D_800FC9F0_131FA0;
+extern s32 D_800FCA18_131FA0;
+extern s16 D_800FCA1E_131FA0;
+extern s16 D_800FCA28_131FA0;
+extern s16 D_800FCA2A_131FA0;

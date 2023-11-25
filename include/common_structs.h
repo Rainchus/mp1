@@ -10,6 +10,11 @@ typedef struct Vec2f {
                f32 y;
 } Vec2f;
 
+typedef struct Vec2d {
+               f64 x;
+               f64 y;
+} Vec2d;
+
 typedef struct Vec2s {
                s16 x;
                s16 y;

@@ -20,14 +20,14 @@ void func_800F7818_D6418(s32 arg0) {
     s32 temp_a1;
     s32 temp_a2;
 
-    temp_v0 = gPlayers[D_80101AAE].characterID;
+    temp_v0 = gPlayers[D_80101AAE_E02F0].characterID;
     temp_a1 = D_800C59AC[temp_v0].unk_00;
     temp_a2 = D_800C59AC[temp_v0].unk_04;
     
     if (D_801011F0_DFDF0 == 0) {
-        func_800F78C4_D64C4(arg0, temp_a1, temp_a2, D_80101AAE, 0.0f, 0, 1400.0f);
+        func_800F78C4_D64C4(arg0, temp_a1, temp_a2, D_80101AAE_E02F0, 0.0f, 0, 1400.0f);
     } else {
-        func_800F78C4_D64C4(arg0, temp_a1, temp_a2, D_80101AAE, -140.0f, 0, 1400.0f);
+        func_800F78C4_D64C4(arg0, temp_a1, temp_a2, D_80101AAE_E02F0, -140.0f, 0, 1400.0f);
     }
 }
 
@@ -42,10 +42,10 @@ void func_800F80D8_D6CD8(s32 arg0) {
     s32 temp2;
     s32 temp3;
 
-    temp_v1 = gPlayers[D_80101AAF].characterID;
+    temp_v1 = gPlayers[D_80101AAF_E02F0].characterID;
     temp2 = D_800C59AC[temp_v1].unk_00;
     temp3 = D_800C59AC[temp_v1].unk_04;
-    func_800F7E08_D6A08(arg0, temp2, temp3, D_80101AAF, -800.0f, 10.0f, 800.0f);
+    func_800F7E08_D6A08(arg0, temp2, temp3, D_80101AAF_E02F0, -800.0f, 10.0f, 800.0f);
 }
 
 void func_800F8168_D6D68(s32 arg0) {
@@ -53,10 +53,10 @@ void func_800F8168_D6D68(s32 arg0) {
     s32 temp2;
     s32 temp3;
 
-    temp_v1 = gPlayers[D_80101AB0].characterID;
+    temp_v1 = gPlayers[D_80101AB0_E02F0].characterID;
     temp2 = D_800C59AC[temp_v1].unk_00;
     temp3 = D_800C59AC[temp_v1].unk_04;
-    func_800F7E08_D6A08(arg0, temp2, temp3, D_80101AB0, -700.0f, 10.0f, 800.0f);
+    func_800F7E08_D6A08(arg0, temp2, temp3, D_80101AB0_E02F0, -700.0f, 10.0f, 800.0f);
 }
 
 void func_800F81F8_D6DF8(s32 arg0) {
@@ -64,10 +64,10 @@ void func_800F81F8_D6DF8(s32 arg0) {
     s32 temp2;
     s32 temp3;
 
-    temp_v1 = gPlayers[D_80101AB1].characterID;
+    temp_v1 = gPlayers[D_80101AB1_E02F0].characterID;
     temp2 = D_800C59AC[temp_v1].unk_00;
     temp3 = D_800C59AC[temp_v1].unk_04;
-    func_800F7E08_D6A08(arg0, temp2, temp3, D_80101AB1, -600.0f, 10.0f, 800.0f);
+    func_800F7E08_D6A08(arg0, temp2, temp3, D_80101AB1_E02F0, -600.0f, 10.0f, 800.0f);
 }
 
 INCLUDE_ASM("asm/nonmatchings/ovl_01_ChanceTime/D51E0", func_800F8288_D6E88);
@@ -145,7 +145,7 @@ void func_800F9B50_D8750(void) {
     var_s0 = CreateTextWindow(0x46, 0x3C, 0x10, 4);
 
     ShowTextWindow(var_s0);
-    if (D_8010175C == 0) {
+    if (D_8010175C_E02F0 == 0) {
         func_8006DA5C(var_s0, D_80101330_DFF30[gPlayers[D_801012E0_DFEE0].characterID], 0);
         func_8006DA5C(var_s0, D_80101330_DFF30[gPlayers[D_801012E1_DFEE1].characterID], 1);
     } else {

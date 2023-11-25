@@ -30,30 +30,31 @@ void func_800F9514_128004(s32);
 void func_800F731C_125E0C(s32, s32);
 s32 func_800FC4F0_12AFE0(s8, s32, s32*, s32*);
 void func_800FBB94_12A684(void);
-extern s16 D_800FD5C0;
-extern s32 D_800FD51C;
-extern s32 D_800FD528;
-extern s32 D_800FD52C;
-extern s32 D_800FD538;
-extern s32 D_800FD518;
-extern s32 D_800FD520;
-extern s32 D_800FD524;
-extern s32 D_800FD530;
-extern s32 D_800FD4D8[];
-extern u16 D_800FD590;
-extern f32 D_800FCCF0_12B7E0[];
-extern f32 D_800FCD00[];
-extern s32 D_800FD488[];
-extern f32 D_800FD558[];
-extern f32 D_800FD568[];
-extern f32 D_800FD578[];
-extern s16 D_800FD5C8;
-extern u16 D_800FD14E;
-extern u16 D_800FD150;
-extern s16 D_800FD5C6;
-extern s16 D_800FD544;
-extern s32 D_800FD554;
-extern s32 D_800FD460;
-extern s32 D_800FD464;
-extern s32 D_800FD468;
-extern s32 D_800FD4B0;
+
+extern f32 D_800FCCF0_12B7E0[]; // -690f, 140f, -690f, 140f
+extern f32 D_800FCD00_12B7F0[]; // -530f, -530f, 95f, 95f
+
+/* BSS DATA */
+extern u16 D_800FD14E_12BC20;
+extern u16 D_800FD150_12BC20;
+extern s32 D_800FD460_12BC20;
+extern s32 D_800FD464_12BC20;
+extern s32 D_800FD468_12BC20;
+extern s32 D_800FD488_12BC20[];
+extern s32 D_800FD4B0_12BC20;
+extern s32 D_800FD4D8_12BC20[];
+extern s32 D_800FD518_12BC20;
+extern s32 D_800FD51C_12BC20;
+extern s32 D_800FD520_12BC20;
+extern s32 D_800FD524_12BC20;
+extern s32 D_800FD528_12BC20;
+extern s32 D_800FD52C_12BC20;
+extern s32 D_800FD530_12BC20;
+extern s32 D_800FD538_12BC20;
+extern f32 D_800FD558_12BC20[];
+extern f32 D_800FD568_12BC20[];
+extern f32 D_800FD578_12BC20[];
+extern u16 D_800FD590_12BC20;
+extern s16 D_800FD5C0_12BC20;
+extern s16 D_800FD5C6_12BC20;
+extern s16 D_800FD5C8_12BC20;

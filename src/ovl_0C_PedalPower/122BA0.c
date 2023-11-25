@@ -25,18 +25,18 @@ void func_800F7AEC_122CDC(unkObjectStruct* arg0) {
 void func_800F7C04_122DF4(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp_s0;
 
-    D_800F9EFA = arg0->unk_40[3] = func_800174C0(0x1E0004, 0x99);
-    D_800F9EF6 = arg0->unk_40[2] = func_800174C0(0x1E0006, 0x99);
-    D_800F9EF8 = arg0->unk_40[0] = func_800174C0(0x1E0000, 0x99);
-    D_800F9EFC = arg0->unk_40[1] = func_800174C0(0x1E0001, 0x699);
+    D_800F9EFA_1250D0 = arg0->unk_40[3] = func_800174C0(0x1E0004, 0x99);
+    D_800F9EF6_1250D0 = arg0->unk_40[2] = func_800174C0(0x1E0006, 0x99);
+    D_800F9EF8_1250D0 = arg0->unk_40[0] = func_800174C0(0x1E0000, 0x99);
+    D_800F9EFC_1250D0 = arg0->unk_40[1] = func_800174C0(0x1E0001, 0x699);
     arg0->unk_40[4] = func_800174C0(0x1E0009, 0x99);
     arg0->unk_40[5] = func_800174C0(0x1E000A, 0x99);
-    func_80025CA8(D_800F9EF6, D_800FA720);
-    func_80025EB4(D_800F9EF8, 2, 1);
-    func_80025EB4(D_800F9EF6, 2, 1);
-    func_80026040(D_800F9EFA);
-    func_80039C48("15mt001_DEF", &D_800F9EFE);
-    D_800F9F04 = 0;
+    func_80025CA8(D_800F9EF6_1250D0, D_800FA720_1250D0);
+    func_80025EB4(D_800F9EF8_1250D0, 2, 1);
+    func_80025EB4(D_800F9EF6_1250D0, 2, 1);
+    func_80026040(D_800F9EFA_1250D0);
+    func_80039C48("15mt001_DEF", &D_800F9EFE_1250D0);
+    D_800F9F04_1250D0 = 0;
     arg0->unk_18 = arg0->unk_1C = arg0->unk_20 = 0.0f;
     arg0->unk_24 = 0.0f;
     func_80025798(arg0->unk_40[0], arg0->unk_18, arg0->unk_1C, arg0->unk_20);
@@ -59,7 +59,7 @@ void func_800F8D34_123F24(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp_s0;
 
     arg0->unk_40[0]= func_800174C0(0x190002, 0x99);
-    arg0->unk_18 = D_800F9E38[D_800F9E20];
+    arg0->unk_18 = D_800F9E38_1250D0[D_800F9E20_1250D0];
     arg0->unk_1C = 0.0f;
     arg0->unk_20 = -50.0f;
     func_80025798(arg0->unk_40[0], arg0->unk_18, arg0->unk_1C, -50.0f);
@@ -69,7 +69,7 @@ void func_800F8D34_123F24(unkObjectStruct* arg0) {
     temp_s0->unk_04 = 1;
     temp_s0->unk_05 = 0;
     arg0->func_ptr = NULL;
-    D_800F9E20 += 1;
+    D_800F9E20_1250D0 += 1;
 }
 
 

@@ -552,7 +552,7 @@ INCLUDE_ASM("asm/nonmatchings/ovl_28_ShyGuySays/1D9690", func_800FBAE4_1DEB94);
 void func_800FBE60_1DEF10(unkObjectStruct* arg0) {
     UnknownBlock8 sp18;
     UnknownBlock8 sp1C;
-    UnknownBlock36 sp20;
+    UnknownBlock36 sp20; // probably together with top variable
     f64 var_f12;
     f32 var_f12_2;
     u16 var_s3;

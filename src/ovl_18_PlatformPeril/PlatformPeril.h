@@ -47,19 +47,15 @@ void func_800FC8E4_172024(void);
 void func_800F7868_16CFA8(void);
 void func_800F6790_16BED0(void);
 
-extern s8 D_800B8955;
-extern unkObjectStruct* D_800F3FB0[];
+extern s8 D_800B8955; // true extern data
+extern f32 D_800B895C; // true extern data
+extern unkObjectStruct* D_800EDE70[]; // true extern data
+extern u16 D_800EE984; // true extern data
+extern unkObjectStruct* D_800F3FB0[]; // true extern data
+
 extern f32 D_800FCDA0_1724E0;
-extern unk_800FE2B0 D_800FE2B0;
-extern unkObjectStruct* D_800EDE70[];
-extern u16 D_800EE984;
 extern unkPPStruct D_800FD8F4_173034[];
-extern s32 D_800FE250;
-extern unkObjectStruct* D_800FE1D8[];
-extern unkPPStruct D_800FDD74;
 extern s32 D_800FCD90_1724D0;
-extern s32 D_800FE2F8;
-extern f32 D_800B895C;
 extern char D_800FDF60_1736A0[];
 extern char D_800FDF6C_1736AC[];
 extern char D_800FDF78_1736B8[];
@@ -67,3 +63,20 @@ extern unkPPStruct D_800FD2A0_1729E0[];
 extern s32 D_800FE1D0_173910;
 extern s32 D_800FE1D4_173914;
 extern s32 D_800FE258_173998[];
+
+typedef struct unk_800FDD60_1734A0 {
+    f32 unk0;
+    f32 unk4;
+    f32 unk8;
+    f32 unkC;
+    f32 unk10;
+    f32 unk14;
+} unk_800FDD60_1734A0;
+
+extern unkPPStruct D_800FDD74; // data splits look wrong?
+
+/* BSS DATA */
+extern unkObjectStruct* D_800FE1D8_1738E0[];
+extern s32 D_800FE250_1738E0;
+extern unk_800FE2B0 D_800FE2B0_1738E0;
+extern s32 D_800FE2F8_1738E0;

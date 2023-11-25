@@ -21,32 +21,31 @@ extern u8 D_801012E2_DFEE2;
 extern s32* D_80101330_DFF30[];
 extern s32 D_80101480;
 extern s32 D_80101488;
-extern s8 D_8010175C;
+extern s8 D_8010175C_E02F0; // bss data
 extern s8 D_801011F9_DFDF9;
 extern s8 D_80101370_DFF70;
 extern s8 D_80101378_DFF78;
-extern s8 D_8010183C;
-extern s8 D_8010183D;
+extern s8 D_8010183C_E02F0; // bss data
+extern s8 D_8010183D_E02F0; // bss data
 extern s8 D_801011F8_DFDF8;
 extern s8 D_80101360_DFF60;
 extern s8 D_80101320_DFF20;
 extern s16 D_801012B4_DFEB4;
 extern s16 D_8010131A_DFF1A;
-extern s16 D_80101760;
-extern unkObjectStruct* D_800F3FB0;
+extern s16 D_80101760_E02F0; // bss data
+extern unkObjectStruct* D_800F3FB0; // true extern data
 extern Vec3f D_80101214_DFE14;
 extern unkObjectStruct* D_80101284_DFE84;
 extern u32 D_80101288_DFE88;
-//extern u16 D_8010128A;
-extern unkObjectStruct* D_800F3FB4;
-extern unkObjectStruct* D_800F3FB8;
-extern unkObjectStruct* D_800F3FBC;
-extern unkStructSize14 D_800C59AC[];
+extern unkObjectStruct* D_800F3FB4; // true extern data
+extern unkObjectStruct* D_800F3FB8; // true extern data
+extern unkObjectStruct* D_800F3FBC; // true extern data
+extern unkStructSize14 D_800C59AC[]; // true extern data
 extern char D_80101464[];
 extern char D_80101470[];
 extern f64 D_80101478;
 extern s8 D_801011F0_DFDF0;
-extern s8 D_80101AAE;
-extern s8 D_80101AAF;
-extern s8 D_80101AB0;
-extern s8 D_80101AB1;
+extern s8 D_80101AAE_E02F0; // bss data
+extern s8 D_80101AAF_E02F0; // bss data
+extern s8 D_80101AB0_E02F0; // bss data
+extern s8 D_80101AB1_E02F0; // bss data

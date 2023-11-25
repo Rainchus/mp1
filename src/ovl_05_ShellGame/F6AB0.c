@@ -24,23 +24,23 @@ void func_800F65E0_F6AB0(void) {
     func_800F828C_F875C();
     func_800F87CC_F8C9C();
     temp_s0_2 = D_800C3110;
-    D_800FF168 = func_800AEAC0(temp_s0_2->unk_40 / 2.0) / func_800AEFD0(temp_s0_2->unk_40 / 2.0);
-    guMtxL2F(D_800FF128, &temp_s0_2->unk_138);
+    D_800FF168_FF570 = func_800AEAC0(temp_s0_2->unk_40 / 2.0) / func_800AEFD0(temp_s0_2->unk_40 / 2.0);
+    guMtxL2F(D_800FF128_FF570, &temp_s0_2->unk_138);
     func_80028510(0x3A5, 0x402, 0xFF, 0xC8, 0xC8);
     D_800F2BC0 = 0;
     D_800ED440 = 0;
     D_800EE984 = 0;
-    D_800FF0F8 = func_8005D384(0x20, 0, 0, -1, &func_800F689C_F6D6C);
-    D_800FF9EC = 0;
-    D_800FFA3C = 0;
-    D_800FF10C = 0x14A;
+    D_800FF0F8_FF570 = func_8005D384(0x20, 0, 0, -1, &func_800F689C_F6D6C);
+    D_800FF9EC_FF570 = 0;
+    D_800FFA3C_FF570 = 0;
+    D_800FF10C_FF570 = 0x14A;
     D_800FEC14_FF0E4 = 1;
-    D_800FF780 = 0;
-    D_800FF782 = 0;
+    D_800FF780_FF570 = 0;
+    D_800FF782_FF570 = 0;
     D_800FEC16_FF0E6 = 0;
     D_800FEC18_FF0E8 = 0;
     D_800FEC1C_FF0EC = 0;
-    D_800FF784 = 0;
+    D_800FF784_FF570 = 0;
     // func_8007B168("ＳＴＡＲＴ", 1);
     // func_8007B168("ＦＩＮＩＳＨ", 1);
     // func_8007B168("ＴＩＭＥＵＰ", 1);
@@ -55,7 +55,7 @@ void func_800F689C_F6D6C(unkObjectStruct* arg0) {
     func_800F9738_F9C08();
     func_800F915C_F962C();
     if (IsFlagSet(0x2B) != 0) {
-        D_800FF784 = 1;
+        D_800FF784_FF570 = 1;
     }
 }
 void func_800F68E8_F6DB8(unkObjectStruct* arg0) {
@@ -69,19 +69,19 @@ void func_800F68E8_F6DB8(unkObjectStruct* arg0) {
         if (D_800ED430 == D_800FEC16_FF0E6) {
             if ((func_800F8154_F8624()) == 0) {
                 if (D_800F3FB0->unk_1C == 0.0f) {
-                    D_800FF10C = 0;
-                    D_800FFA3C = 0;
+                    D_800FF10C_FF570 = 0;
+                    D_800FFA3C_FF570 = 0;
                     D_800FEC16_FF0E6 = 0;
                     D_800FEC14_FF0E4 = 0;
-                    if (D_800FF784 == 0) {
-                        D_800FF0F8->func_ptr = &func_800F6AC0_F6F90;
+                    if (D_800FF784_FF570 == 0) {
+                        D_800FF0F8_FF570->func_ptr = &func_800F6AC0_F6F90;
                     } else {
                         func_800601D4(0x28);
-                        D_800FF0F8->func_ptr = &func_800F6EE4_F73B4;
+                        D_800FF0F8_FF570->func_ptr = &func_800F6EE4_F73B4;
                     }
-                    D_800FF9D6 = 5;
+                    D_800FF9D6_FF570 = 5;
                     D_800ED430 = 0;
-                    D_800FF780 = 1;
+                    D_800FF780_FF570 = 1;
                     D_800ED430 = 0;                    
                 }
             }
@@ -97,7 +97,7 @@ void func_800F6A14_F6EE4(void) {
     func_80060198();
     
     for (i = 0; i < D_800F37DA; i++) {
-        FreePerm(D_800FF718[i]);
+        FreePerm(D_800FF718_FF570[i]);
     }
     
     func_8005DFB8(1);
@@ -137,25 +137,24 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_05_ShellGame/F6AB0", D_800FECB8_FF188);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_05_ShellGame/F6AB0", jtbl_800FECC8_FF198);
 
-INCLUDE_ASM("asm/nonmatchings/ovl_05_ShellGame/F6AB0", func_800F7098_F7568);
-// void func_800F7098_F7568(f32 arg0) {
-//     unkObjectStruct* temp_a0;
+void func_800F7098_F7568(f32 arg0) {
+    unkObjectStruct* temp_a0;
     
-//     if (arg0 == 0.0) {
-//         temp_a0 = D_800F3FB0;
-//         D_800FF0A0.x = D_800F6524.x;
-//         D_800FF0A0.y = D_800F6524.y;
-//         D_800FF0A0.z = D_800F6524.z;
-//         D_800FF0AC.x = temp_a0->unk_18;
-//         D_800FF0AC.y = temp_a0->unk_1C;
-//         D_800FF0AC.z = temp_a0->unk_20;
-//         return;
-//     }
-//     D_800F6524.x = D_800FF0A0.x + (arg0 * (D_800FF0AC.x - D_800FF0A0.x));
-//     D_800F6524.y = D_800FF0A0.y + (arg0 * (D_800FF0AC.y - D_800FF0A0.y));
-//     D_800F6524.z = D_800FF0A0.z + (arg0 * (D_800FF0AC.z - D_800FF0A0.z));
-//     D_800EE98C = D_800FECE8 - (arg0 * 664.0); //D_800FECE8 should D_800FECE8_FF1B8, but there's 2 doubles?
-// }
+    if (arg0 == 0.0) {
+        temp_a0 = D_800F3FB0;
+        D_800FF0A0_FF570.x = D_800F6524.x;
+        D_800FF0A0_FF570.y = D_800F6524.y;
+        D_800FF0A0_FF570.z = D_800F6524.z;
+        D_800FF0AC_FF570.x = temp_a0->unk_18;
+        D_800FF0AC_FF570.y = temp_a0->unk_1C;
+        D_800FF0AC_FF570.z = temp_a0->unk_20;
+        return;
+    }
+    D_800F6524.x = D_800FF0A0_FF570.x + (arg0 * (D_800FF0AC_FF570.x - D_800FF0A0_FF570.x));
+    D_800F6524.y = D_800FF0A0_FF570.y + (arg0 * (D_800FF0AC_FF570.y - D_800FF0A0_FF570.y));
+    D_800F6524.z = D_800FF0A0_FF570.z + (arg0 * (D_800FF0AC_FF570.z - D_800FF0A0_FF570.z));
+    D_800EE98C = D_800FECE8_FF1B8.x - (arg0 * 664.0); //D_800FECE8 should D_800FECE8_FF1B8, but there's 2 doubles?
+}
 
 INCLUDE_ASM("asm/nonmatchings/ovl_05_ShellGame/F6AB0", func_800F719C_F766C);
 
@@ -173,8 +172,8 @@ f32 func_800F7398_F7868(f32 arg0, f32 arg1) {
     f32 var_f4;
 
     var_f4 = func_800B0CD8(arg0, arg1);
-    if ((D_800FED30 < var_f4)) {
-        var_f4 -= D_800FED30;
+    if ((D_800FED28_FF1F8.y < var_f4)) {
+        var_f4 -= D_800FED28_FF1F8.y;
     } else {
         if (var_f4 < 0.0) {
             var_f4 += D_800FED38_FF208;

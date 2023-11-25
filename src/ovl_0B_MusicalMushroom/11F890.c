@@ -42,10 +42,10 @@ void func_800F9D70_11FFA0(unkObjectStruct* arg0) {
     phi_f2 = temp_v1_2;
     
     if (temp_v1_2 < 0) {
-        phi_f2 += 4294967296.0;
+        phi_f2 += 4294967296.0; // 2^32
     }
     
-    D_800FB678 = phi_f2;
+    D_800FB678_1217D0 = phi_f2;
     temp_v0->unk_04 = 1;
     func_80008FB8(arg0, 0.5f);
     func_80008FC4(arg0, 20.0f);

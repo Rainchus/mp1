@@ -15,16 +15,19 @@ void func_800F6870_121A60(void);
 void func_800F6CF8_121EE8(void);
 void func_800F79B0_122BA0(void);
 void func_800F8EE0_1240D0(void);
-extern u16 D_800F9EF6;
-extern u16 D_800F9EF8;
-extern u16 D_800F9EFA;
-extern u16 D_800F9EFC;
-extern s16 D_800F9EFE;
-extern s32 D_800F9F04;
-extern s32 D_800FA720;
-extern s8 D_800FA72C;
-extern s8 D_800FA72D;
-extern s8 D_800FA738;
-extern Vec3f D_800FA73C;
-extern u8 D_800F9E20;
-extern f32 D_800F9E38[];
+
+
+/* BSS DATA */
+extern u8 D_800F9E20_1250D0;
+extern f32 D_800F9E38_1250D0[];
+extern u16 D_800F9EF6_1250D0;
+extern u16 D_800F9EF8_1250D0;
+extern u16 D_800F9EFA_1250D0;
+extern u16 D_800F9EFC_1250D0;
+extern s16 D_800F9EFE_1250D0;
+extern s32 D_800F9F04_1250D0;
+extern s32 D_800FA720_1250D0;
+extern s8 D_800FA72C_1250D0;
+extern s8 D_800FA72D_1250D0;
+extern s8 D_800FA738_1250D0;
+extern Vec3f D_800FA73C_1250D0;

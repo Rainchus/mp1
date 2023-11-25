@@ -1,4 +1,5 @@
 #include "common.h"
+#include "MemoryMatch.h"
 
 INCLUDE_ASM("asm/nonmatchings/ovl_00_MemoryMatch/D27D0", func_800FB360_D27D0);
 

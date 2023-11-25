@@ -8,7 +8,8 @@ void func_800184BC(unkObjectStruct*, s32);
 void func_800F7484_11D6B4(unkObjectStruct*, f32, s32, s32);
 void func_800F7508_11D738(unkObjectStruct*, f32*);
 extern u32 D_800FB4D0_121700;
-extern f32 D_800FB778[4];
-extern f64 D_800FB580;
-extern f32 D_800FB678;
 void func_800F9660_11F890(void);
+
+/* BSS DATA */
+extern f32 D_800FB678_1217D0; // bss data
+extern f32 D_800FB778_1217D0[4]; // bss data

@@ -10,18 +10,18 @@ void func_800F7E2C_11560C(void);
 void func_800F7194_114974(void);
 void func_800F7E78_115658(void);
 
-extern s8 D_800F64F2;
-extern f32 D_800F6528[2]; //camera
-extern s32 D_800F990C;
-extern s32 D_800F9908;
-extern s32 D_800F9910;
-extern s32 D_800F9A38[];
-extern s32 D_800F9A78[];
-extern s16 D_800F9B48[];
+extern s8 D_800F64F2; // true extern data
+extern f32 D_800F6528[2]; //camera: true extern data
+extern s32 D_800F990C_1170EC;
+extern s32 D_800F9908_1170E8;
+extern s32 D_800F9910_1170F0;
+extern s32 D_800F9A38_117210[]; // bss data
+extern s32 D_800F9A78_117210[]; // bss data
+extern s16 D_800F9B48_117210[]; // bss data
 extern s16 D_800F9902_1170E2;
-extern s32 D_800F9A34;
-extern u8 D_800F9914;
-extern s32 D_800F9984;
-extern unkObjectStruct* D_800EDE70[];
-extern u16 D_800EE984;
-extern s32 D_800F9B80;
+extern s32 D_800F9A34_117210; // bss data
+extern u8 D_800F9914_1170F4;
+extern s32 D_800F9984_117164;
+extern unkObjectStruct* D_800EDE70[]; // true extern data
+extern u16 D_800EE984; // true extern data
+extern s32 D_800F9B80_117210; // bss data

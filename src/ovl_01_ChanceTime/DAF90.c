@@ -2,8 +2,8 @@
 #include "ChanceTime.h"
 
 void func_800FC390_DAF90(void) {
-    D_80101760 = func_800174F4(0x130001, 0x289);
-    func_800258EC(D_80101760, 4, 4);
+    D_80101760_E02F0 = func_800174F4(0x130001, 0x289);
+    func_800258EC(D_80101760_E02F0, 4, 4);
 }
 
 INCLUDE_ASM("asm/nonmatchings/ovl_01_ChanceTime/DAF90", func_800FC3D0_DAFD0);
@@ -30,7 +30,7 @@ void func_800FE97C_DD57C(s32 arg0) {
 void func_800FE9D8_DD5D8(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp_s1;
 
-    arg0->unk_40[0] = func_80023FC8(D_80101760);
+    arg0->unk_40[0] = func_80023FC8(D_80101760_E02F0);
     func_800258EC(arg0->unk_40[0], 4, 4);
     arg0->unk_40[1] = func_800174F4(0x130002, 0x699);
     arg0->unk_18 = 140.0f;

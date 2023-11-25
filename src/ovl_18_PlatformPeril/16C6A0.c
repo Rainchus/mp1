@@ -37,14 +37,14 @@ INCLUDE_ASM("asm/nonmatchings/ovl_18_PlatformPeril/16C6A0", func_800F8220_16D960
 INCLUDE_ASM("asm/nonmatchings/ovl_18_PlatformPeril/16C6A0", func_800F87A0_16DEE0);
 
 void func_800F8AE8_16E228(unkObjectStruct* arg0) {
-    arg0->unk_1C = D_800FE1D8[arg0->unk_4C[0]]->unk_1C + 50.0f;
-    func_80025798(arg0->unk_40[1], arg0->unk_18, D_800FE1D8[arg0->unk_4C[0]]->unk_1C, arg0->unk_20);
+    arg0->unk_1C = D_800FE1D8_1738E0[arg0->unk_4C[0]]->unk_1C + 50.0f;
+    func_80025798(arg0->unk_40[1], arg0->unk_18, D_800FE1D8_1738E0[arg0->unk_4C[0]]->unk_1C, arg0->unk_20);
     func_80025830(arg0->unk_40[1], 0.7f, 0.7f, 0.7f);
 }
 
 void func_800F8B7C_16E2BC(void) {
     s32 i;
-    D_800FE250 = 0;
+    D_800FE250_1738E0 = 0;
     
     for (i = 0; D_800FD8F4_173034[i].unk_00.signed32 != 0; i++) {
         D_800EDE70[D_800EE984++] = func_8005D384(0xA, 5, 5, -1, &func_800F8C2C_16E36C);
@@ -55,10 +55,10 @@ INCLUDE_ASM("asm/nonmatchings/ovl_18_PlatformPeril/16C6A0", func_800F8C2C_16E36C
 
 void func_800F90C0_16E800(void) {
     D_800FCDA0_1724E0 = 300.0f;
-    D_800FE2B0.unk0 = 0;
-    D_800FE2B0.unk4 = 0;
-    D_800FE2B0.unk8 = 0;
-    D_800FE2B0.unkC = 0;
+    D_800FE2B0_1738E0.unk0 = 0;
+    D_800FE2B0_1738E0.unk4 = 0;
+    D_800FE2B0_1738E0.unk8 = 0;
+    D_800FE2B0_1738E0.unkC = 0;
     func_80009500();
     func_80009618(0);
     D_800B8955 = 0;

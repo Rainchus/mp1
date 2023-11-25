@@ -28,15 +28,18 @@ s16 unk10;
 s16 unk12;
 } unkCoinBlockBlitzStruct2;
 
-extern unkCoinBlockBlitzStruct2 D_800FA8F0;
-extern s16 D_800FAA78;
-extern unkCoinBlockBlitzStruct1 D_800FAA80;
+extern unkObjectStruct* D_800EDE70[]; // true extern data
+extern u16 D_800EE984; // true extern data
+extern unkObjectStruct* D_800F2AF8[]; // true extern data
+extern unkObjectStruct* D_800F3FB0[]; // true extern data
+
+/* BSS DATA */
+extern unkCoinBlockBlitzStruct2 D_800FA8F0_152BE0;
+extern s16 D_800FAA78_152BE0;
+extern unkCoinBlockBlitzStruct1 D_800FAA80_152BE0;
 
 void func_800F6D08_14F068(void);
 void func_800F6E1C_14F17C();
-extern unkObjectStruct* D_800F2AF8[];
-extern unkObjectStruct* D_800F3FB0[];
-extern unkObjectStruct* D_800EDE70[];
 void func_800F6CB4_14F014(void);
 void func_800F9208_151568(void);
 void func_800F9FB8_152318(void);
@@ -58,4 +61,3 @@ void func_800FA65C_1529BC(void);
 void func_800FA6B0_152A10(void);
 void func_800FA704_152A64(void);
 void func_800FA758_152AB8(void);
-extern u16 D_800EE984;

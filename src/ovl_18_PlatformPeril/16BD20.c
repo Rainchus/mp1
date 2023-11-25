@@ -28,7 +28,7 @@ void func_800F66E8_16BE28(void) {
 }
 
 void func_800F6720_16BE60(unkObjectStruct* arg0) {
-    D_800FE2F8 = 0;
+    D_800FE2F8_1738E0 = 0;
     D_800FCD90_1724D0 = 0;
     func_800FC1DC_17191C();
     func_80009468();

@@ -2,7 +2,7 @@
 #include "GroundPound.h"
 
 void func_800F65E0_146200(void) {
-    D_800FA26C = -1;
+    D_800FA26C_149E80 = -1;
     func_80029090(0x18);
     func_8001DE70(0x40);
     D_800EE984 = 0;
@@ -19,39 +19,39 @@ void func_800F65E0_146200(void) {
     func_8005D8B8(func_8005D384(0x7FDA, 0, 0, -1, &func_8005EB1C), 160);
     func_8005D384(0, 0, 0, -1, &func_800F67E0_146400);
     func_800F7FEC_147C0C();
-    D_800FA43C = func_8005D384(8, 0xA, 0x64, -1, &func_800F8C20_148840);
+    D_800FA43C_149E80 = func_8005D384(8, 0xA, 0x64, -1, &func_800F8C20_148840);
     func_8005D384(0x2710, 0, 0, -1, &func_800F6EE4_146B04);
     SetFadeInTypeAndTime(0, 0x10);
-    D_800FA262 = 3;
+    D_800FA262_149E80 = 3;
     PlaySound(0x1A2);
 }
 
 void func_800F67E0_146400(unkObjectStruct* arg0) {
-    D_800FA260 = 0;
-    D_800FA266 = 30;
-    D_800FA268 = 30;
+    D_800FA260_149E80 = 0;
+    D_800FA266_149E80 = 30;
+    D_800FA268_149E80 = 30;
     D_800ED430 = 0;
     arg0->func_ptr = &func_800F6814_146434;
 }
 
 void func_800F6814_146434(void) {
     if (D_800C5982 != 1) {
-        switch (D_800FA260) {
+        switch (D_800FA260_149E80) {
         case 0:
             func_800F6924_146544();
             return;
         case 1:
-            D_800FA268--;
-            if (D_800FA268 == 0) {
-                if (D_800FA266 != 0) {
-                    D_800FA266--;
-                    func_80079078(D_800FA266);
+            D_800FA268_149E80--;
+            if (D_800FA268_149E80 == 0) {
+                if (D_800FA266_149E80 != 0) {
+                    D_800FA266_149E80--;
+                    func_80079078(D_800FA266_149E80);
                 }
-                D_800FA268 = 30;
+                D_800FA268_149E80 = 30;
             }
-            if (D_800FA266 == 0 || D_800FA310 != 0) {
-                D_800FA260 = 2;
-                D_800FA264 = 1;
+            if (D_800FA266_149E80 == 0 || D_800FA310_149E80 != 0) {
+                D_800FA260_149E80 = 2;
+                D_800FA264_149E80 = 1;
                 return;
             }
             break;
