@@ -837,7 +837,8 @@ segments:
       - [0x1837D0, c]
       - [0x184450, c]
       - [0x184870, c]
-      - [0x188280, .rodata, 1837D0]
+      - [0x188280, data,    1837D0]
+      - [0x188320, .rodata, 1837D0]
       - [0x1883A0, .rodata, 184870]
   - type: code
     start: 0x188410
@@ -848,7 +849,8 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x188410, c]
-      - [0x1910D0, .rodata, 188410]
+      - [0x1910D0, data, 188410]
+      - [0x191620, .rodata, 188410] # pretty sure starts at 1911E8
   - type: code
     start: 0x191700
     vram: 0x800F65E0
@@ -859,7 +861,8 @@ segments:
     subsegments:
       - [0x191700, c]
       - [0x196300, c]
-      - [0x197C50, .rodata, 191700]
+      - [0x197C50,   data, 191700]
+      - [0x197D00, .rodata, 191700]
       - [0x197E10, .rodata, 196300]
   - type: code
     start: 0x197E20
@@ -873,7 +876,8 @@ segments:
       - [0x19A360, c]
       - [0x19ACC0, c]
       - [0x19D510, c]
-      - [0x19FAF0, .rodata, 197E20]
+      - [0x19FAF0,    data, 197E20]
+      - [0x19FC90, .rodata, 197E20]
       - [0x19FD70, .rodata, 19ACC0]
       - [0x19FEB0, .rodata, 19D510]
   - type: code
@@ -888,7 +892,8 @@ segments:
       - [0x19FEE0, c]
       - [0x1A2E40, c]
       - [0x1A42B0, c]
-      - [0x1A4E00, .rodata, 19FEE0]
+      - [0x1A4E00,    data, 19FEE0]
+      - [0x1A4E50, .rodata, 19FEE0]
       - [0x1A4E98, .rodata, 1A2E40]
   - type: code
     start: 0x1A4EB0
@@ -899,7 +904,8 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x1A4EB0, c]
-      - [0x1AA080, .rodata, 1A4EB0]
+      - [0x1AA080,    data, 1A4EB0]
+      - [0x1AA290, .rodata, 1A4EB0]
   - type: code
     start: 0x1AA2A0
     vram: 0x800F65E0
@@ -911,7 +917,8 @@ segments:
       - [0x1AA2A0, c]
       - [0x1AF980, c]
       - [0x1B02A0, c]
-      - [0x1B3730, .rodata, 1AA2A0]
+      - [0x1B3730,    data, 1AA2A0]
+      - [0x1B3800, .rodata, 1AA2A0]
       - [0x1B3C00, .rodata, 1AF980]
       - [0x1B3C70, .rodata, 1B02A0]
   - type: code
@@ -926,7 +933,8 @@ segments:
       - [0x1B3E00, c]
       - [0x1B9050, c]
       - [0x1BAA60, c]
-      - [0x1BCD20, .rodata, 1B3E00]
+      - [0x1BCD20,    data, 1B3E00]
+      - [0x1BD160, .rodata, 1B3E00]
       - [0x1BD4F8, .rodata, 1B9050]
       - [0x1BD570, .rodata, 1BAA60]
   - type: code
@@ -938,7 +946,8 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x1BD640, c]
-      - [0x1C1D90, .rodata, 1BD640]
+      - [0x1C1D90,    data, 1BD640]
+      - [0x1C1E50, .rodata, 1BD640] # Probably 0x1C1E48
   - type: code
     start: 0x1C1EB0
     vram: 0x800F65E0
@@ -948,7 +957,8 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x1C1EB0, c]
-      - [0x1CBB80, .rodata, 1C1EB0] 
+      - [0x1CBB80,    data, 1C1EB0] 
+      - [0x1CC820, .rodata, 1C1EB0] 
   - type: code
     start: 0x1CCCF0
     vram: 0x800F65E0
@@ -960,7 +970,7 @@ segments:
       - [0x1CCCF0, c]
       - [0x1CD680, c]
       - [0x1D3040, c]
-      - [0x1D3300, .rodata, 1CCCF0]
+      - [0x1D3300,    data, 1CCCF0]
       - [0x1D3900, .rodata, 1CD680]
   - type: code
     start: 0x1D3990
@@ -972,7 +982,8 @@ segments:
     subsegments:
       - [0x1D3990, c]
       - [0x1D6E30, c]
-      - [0x1D93B0, .rodata, 1D3990]
+      - [0x1D93B0,    data, 1D3990]
+      - [0x1D9400, .rodata, 1D3990]
       - [0x1D9600, .rodata, 1D6E30]
   - type: code
     start: 0x1D9690

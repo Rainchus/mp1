@@ -12,28 +12,6 @@ INCLUDE_ASM("asm/nonmatchings/ovl_22_BombsAway/1AA2A0", func_800F71E4_1AAEA4);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_22_BombsAway/1AA2A0", func_800F7218_1AAED8);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_22_BombsAway/1AA2A0", D_800FFA70_1B3730);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_22_BombsAway/1AA2A0", D_800FFAAC_1B376C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_22_BombsAway/1AA2A0", D_800FFAC0_1B3780);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_22_BombsAway/1AA2A0", D_800FFAC4_1B3784);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_22_BombsAway/1AA2A0", D_800FFAC8_1B3788);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_22_BombsAway/1AA2A0", D_800FFAEC_1B37AC);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_22_BombsAway/1AA2A0", D_800FFB20_1B37E0);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_22_BombsAway/1AA2A0", D_800FFB24_1B37E4);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_22_BombsAway/1AA2A0", D_800FFB28_1B37E8);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_22_BombsAway/1AA2A0", D_800FFB2C_1B37EC);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_22_BombsAway/1AA2A0", D_800FFB30_1B37F0);
-
 INCLUDE_RODATA("asm/nonmatchings/ovl_22_BombsAway/1AA2A0", D_800FFB40_1B3800);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_22_BombsAway/1AA2A0", D_800FFB4C_1B380C);

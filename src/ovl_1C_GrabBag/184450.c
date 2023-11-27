@@ -1,4 +1,5 @@
 #include "common.h"
+#include "GrabBag.h"
 
 INCLUDE_ASM("asm/nonmatchings/ovl_1C_GrabBag/184450", func_800F7260_184450);
 
