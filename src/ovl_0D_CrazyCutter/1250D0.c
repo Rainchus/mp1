@@ -4,9 +4,9 @@
 INCLUDE_ASM("asm/nonmatchings/ovl_0D_CrazyCutter/1250D0", func_800F65E0_1250D0);
 
 void func_800F686C_12535C(unkObjectStruct* arg0) {
-    D_800FD460--;
-    if (D_800FD460 == 0) {
-        D_800FD460 = 20;
+    D_800FD460_12BC20--;
+    if (D_800FD460_12BC20 == 0) {
+        D_800FD460_12BC20 = 20;
         func_80075CCC(0);
         arg0->func_ptr = &func_800F68C4_1253B4;
     }
@@ -14,9 +14,9 @@ void func_800F686C_12535C(unkObjectStruct* arg0) {
 
 void func_800F68C4_1253B4(unkObjectStruct* arg0) {
     if (func_80075FE0() == 0 || func_80075FE0() & 2) {
-        D_800FD460--;
-        if (D_800FD460 == 0) {
-            D_800FD4B0 = 1;
+        D_800FD460_12BC20--;
+        if (D_800FD460_12BC20 == 0) {
+            D_800FD4B0_12BC20 = 1;
             func_800F978C_12827C();
             arg0->func_ptr = &func_800F97C8_1282B8;
         }
@@ -36,9 +36,9 @@ void func_800F6938_125428(f32 arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 
 }
 
 void func_800F69EC_1254DC(Object* arg0) {
-    D_800FD468--;
-    if (D_800FD468 == 0) {
-        D_800FD464 = 1;
+    D_800FD468_12BC20--;
+    if (D_800FD468_12BC20 == 0) {
+        D_800FD464_12BC20 = 1;
         func_8005D384(4, 10, 10, 4, &func_800F94C0_127FB0);
         func_8005D384(4, 10, 10, 4, &func_800F94DC_127FCC);
         func_8005D384(4, 10, 10, 4, &func_800F94F8_127FE8);
@@ -90,7 +90,7 @@ INCLUDE_ASM("asm/nonmatchings/ovl_0D_CrazyCutter/1250D0", func_800F9530_128020);
 
 void func_800F9654_128144(s32 arg0) {
     if (D_800F5144 != 0) {
-        func_8006071C(D_800FD5C6);
+        func_8006071C(D_800FD5C6_12BC20);
         func_800601D4(40);
         func_8005DFB8(1);
     }
@@ -116,8 +116,8 @@ void func_800F9694_128184(Vec3f* arg0, s16 arg1[], s32 arg2) {
 }
 
 void func_800F978C_12827C(void) {
-    D_800FD14E = 30;
-    D_800FD150 = 30;
+    D_800FD14E_12BC20 = 30;
+    D_800FD150_12BC20 = 30;
     func_80075CCC(8, 30, 160, 32);
 }
 
@@ -125,32 +125,32 @@ void func_800F97C8_1282B8(unkObjectStruct* arg0) {
     s32 i;
     s32 temp;
 
-    D_800FD150 -= 1;
-    if (D_800FD150 == 0) {
-        D_800FD150 = 30;
-        D_800FD14E--;
+    D_800FD150_12BC20 -= 1;
+    if (D_800FD150_12BC20 == 0) {
+        D_800FD150_12BC20 = 30;
+        D_800FD14E_12BC20--;
     }
 
-    func_80079078(D_800FD14E);
+    func_80079078(D_800FD14E_12BC20);
     temp = 0;
     for (i = 0; i < 4; i++) {
         temp += func_800FAAB0_1295A0(i, 1);
     }
 
-    if ((D_800FD14E == 0) | (temp == 4)) {
+    if ((D_800FD14E_12BC20 == 0) | (temp == 4)) {
         func_800790C0();
         func_800601D4(40);
-        func_8006071C(D_800FD5C6);
+        func_8006071C(D_800FD5C6_12BC20);
         arg0->func_ptr = &func_800FA56C_12905C;
     }
 }
 
 void func_800F98B4_1283A4(unkCrazyCutter_00* arg0) {
-    D_800FD488[arg0->unk_30] = 1;
-    D_800FD558[arg0->unk_30] = D_800FCCF0_12B7E0[arg0->unk_30] + arg0->unk_00;
-    D_800FD568[arg0->unk_30] = arg0->unk_04;
-    D_800FD578[arg0->unk_30] = D_800FCD00[arg0->unk_30] + arg0->unk_08 + -4.0f;
-    D_800FD5C8 = PlaySound(0x237);
+    D_800FD488_12BC20[arg0->unk_30] = 1;
+    D_800FD558_12BC20[arg0->unk_30] = D_800FCCF0_12B7E0[arg0->unk_30] + arg0->unk_00;
+    D_800FD568_12BC20[arg0->unk_30] = arg0->unk_04;
+    D_800FD578_12BC20[arg0->unk_30] = D_800FCD00_12B7F0[arg0->unk_30] + arg0->unk_08 + -4.0f;
+    D_800FD5C8_12BC20 = PlaySound(0x237);
 }
 
 INCLUDE_ASM("asm/nonmatchings/ovl_0D_CrazyCutter/1250D0", func_800F9968_128458);
@@ -163,9 +163,9 @@ INCLUDE_ASM("asm/nonmatchings/ovl_0D_CrazyCutter/1250D0", func_800FA56C_12905C);
 
 void func_800FA808_1292F8(unkObjectStruct* arg0) {
     if (func_80075FE0() == 0 || func_80075FE0() & 2) {
-        if (D_800FD590 == 0) {
+        if (D_800FD590_12BC20 == 0) {
             func_800FBB2C_12A61C();
-            D_800FD590 += 1;
+            D_800FD590_12BC20 += 1;
         }
         arg0->func_ptr = &func_800FA880_129370;
     }
@@ -219,14 +219,14 @@ void func_800FAA18_129508(Object* arg0) {
 }
 
 s32 func_800FAAB0_1295A0(s32 arg0, s32 arg1) {
-    return (arg1 & D_800FD4D8[arg0]) != 0;
+    return (arg1 & D_800FD4D8_12BC20[arg0]) != 0;
 }
 
 void func_800FAACC_1295BC(s32 arg0, s32 arg1, s32 arg2) {
     if (arg2 != 0) {
-        D_800FD4D8[arg0] = arg1 | D_800FD4D8[arg0];
+        D_800FD4D8_12BC20[arg0] = arg1 | D_800FD4D8_12BC20[arg0];
     } else {
-        D_800FD4D8[arg0] = ~arg1 & D_800FD4D8[arg0];
+        D_800FD4D8_12BC20[arg0] = ~arg1 & D_800FD4D8_12BC20[arg0];
     }
 }
 
@@ -242,8 +242,8 @@ void func_800FB450_129F40(s32 arg0) {
     s8 temp_s1;
     s8 temp_s0;
 
-    if (arg0 != D_800FD530) {
-        D_800FD530 = arg0;
+    if (arg0 != D_800FD530_12BC20) {
+        D_800FD530_12BC20 = arg0;
         temp_s1 = InitSprite(arg0 | 0x1F0000);
         temp_s0 = func_80064EF4(1, 0);
         func_8006752C(temp_s0, 0, 0xFF);
@@ -252,7 +252,7 @@ void func_800FB450_129F40(s32 arg0) {
         func_80067354(temp_s0, 0, 1.0f, 1.0f);
         func_800672B0(temp_s0, 0, 1);
         func_80067208(temp_s0, 0, temp_s1, 0);
-        D_800FD518 = func_800FC4F0_12AFE0(temp_s0, 0, &D_800FD520, &D_800FD524);
+        D_800FD518_12BC20 = func_800FC4F0_12AFE0(temp_s0, 0, &D_800FD520_12BC20, &D_800FD524_12BC20);
         func_80064D38(temp_s0);
     }
 }
@@ -261,8 +261,8 @@ void func_800FB548_12A038(s32 arg0) {
     s8 temp_s1;
     s8 temp_s0;
 
-    if (arg0 != D_800FD538) {
-        D_800FD538 = arg0;
+    if (arg0 != D_800FD538_12BC20) {
+        D_800FD538_12BC20 = arg0;
         temp_s1 = InitSprite(arg0 | 0x1F0000);
         temp_s0 = func_80064EF4(1, 0);
         func_8006752C(temp_s0, 0, 0xFF);
@@ -271,7 +271,7 @@ void func_800FB548_12A038(s32 arg0) {
         func_80067354(temp_s0, 0, 1.0f, 1.0f);
         func_800672B0(temp_s0, 0, 1);
         func_80067208(temp_s0, 0, temp_s1, 0);
-        D_800FD51C = func_800FC4F0_12AFE0(temp_s0, 0, &D_800FD528, &D_800FD52C);
+        D_800FD51C_12BC20 = func_800FC4F0_12AFE0(temp_s0, 0, &D_800FD528_12BC20, &D_800FD52C_12BC20);
         func_80064D38(temp_s0);
     }
 }
@@ -292,7 +292,7 @@ void func_800FBB2C_12A61C(void) {
     temp_v0 = func_80023684(sizeof(unkCrazyCutter0), 0x7918);
     temp_s0->unk_50 = temp_v0;
     temp_v0->unk0 = 90;
-    D_800FD5C0 = PlaySound(0x1C0);
+    D_800FD5C0_12BC20 = PlaySound(0x1C0);
 }
 
 INCLUDE_ASM("asm/nonmatchings/ovl_0D_CrazyCutter/1250D0", func_800FBB94_12A684);

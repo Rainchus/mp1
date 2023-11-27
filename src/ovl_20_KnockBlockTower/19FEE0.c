@@ -60,23 +60,7 @@ INCLUDE_ASM("asm/nonmatchings/ovl_20_KnockBlockTower/19FEE0", func_800F7BF8_1A14
 
 INCLUDE_ASM("asm/nonmatchings/ovl_20_KnockBlockTower/19FEE0", func_800F7C0C_1A150C);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_20_KnockBlockTower/19FEE0", D_800FB500_1A4E00);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_20_KnockBlockTower/19FEE0", D_800FB514_1A4E14);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_20_KnockBlockTower/19FEE0", D_800FB518_1A4E18);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_20_KnockBlockTower/19FEE0", D_800FB51C_1A4E1C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_20_KnockBlockTower/19FEE0", D_800FB520_1A4E20);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_20_KnockBlockTower/19FEE0", D_800FB524_1A4E24);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_20_KnockBlockTower/19FEE0", D_800FB528_1A4E28);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_20_KnockBlockTower/19FEE0", D_800FB52C_1A4E2C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_20_KnockBlockTower/19FEE0", D_800FB530_1A4E30);
+INCLUDE_RODATA("asm/nonmatchings/ovl_20_KnockBlockTower/19FEE0", D_800FB550_1A4E50);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_20_KnockBlockTower/19FEE0", func_800F7D0C_1A160C);
 

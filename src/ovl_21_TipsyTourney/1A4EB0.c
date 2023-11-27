@@ -50,50 +50,6 @@ INCLUDE_ASM("asm/nonmatchings/ovl_21_TipsyTourney/1A4EB0", func_800F8C2C_1A74FC)
 
 INCLUDE_ASM("asm/nonmatchings/ovl_21_TipsyTourney/1A4EB0", func_800F8D2C_1A75FC);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_21_TipsyTourney/1A4EB0", D_800FB7B0_1AA080);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_21_TipsyTourney/1A4EB0", D_800FB7B4_1AA084);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_21_TipsyTourney/1A4EB0", D_800FB7B8_1AA088);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_21_TipsyTourney/1A4EB0", D_800FB7C4_1AA094);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_21_TipsyTourney/1A4EB0", D_800FB7C8_1AA098);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_21_TipsyTourney/1A4EB0", D_800FB7DC_1AA0AC);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_21_TipsyTourney/1A4EB0", D_800FB880_1AA150);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_21_TipsyTourney/1A4EB0", D_800FB884_1AA154);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_21_TipsyTourney/1A4EB0", D_800FB888_1AA158);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_21_TipsyTourney/1A4EB0", D_800FB8B0_1AA180);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_21_TipsyTourney/1A4EB0", D_800FB8B4_1AA184);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_21_TipsyTourney/1A4EB0", D_800FB8B8_1AA188);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_21_TipsyTourney/1A4EB0", D_800FB8BC_1AA18C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_21_TipsyTourney/1A4EB0", D_800FB8C0_1AA190);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_21_TipsyTourney/1A4EB0", D_800FB8C8_1AA198);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_21_TipsyTourney/1A4EB0", D_800FB908_1AA1D8);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_21_TipsyTourney/1A4EB0", D_800FB948_1AA218);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_21_TipsyTourney/1A4EB0", D_800FB94C_1AA21C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_21_TipsyTourney/1A4EB0", D_800FB950_1AA220);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_21_TipsyTourney/1A4EB0", D_800FB954_1AA224);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_21_TipsyTourney/1A4EB0", D_800FB9A0_1AA270);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_21_TipsyTourney/1A4EB0", D_800FB9A8_1AA278);
-
 INCLUDE_ASM("asm/nonmatchings/ovl_21_TipsyTourney/1A4EB0", func_800F8FE0_1A78B0);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_21_TipsyTourney/1A4EB0", func_800F9290_1A7B60);

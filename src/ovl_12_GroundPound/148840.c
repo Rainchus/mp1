@@ -15,9 +15,9 @@ void func_800F8C20_148840(unkObjectStruct* arg0) {
     s32 i;
     unkGlobalStruct_00* temp_s4;
 
-    D_800FA2D0 = 0;
-    D_800FA310 = 0;
-    D_800FA2D8 = 0;
+    D_800FA2D0_149E80 = 0;
+    D_800FA310_149E80 = 0;
+    D_800FA2D8_149E80 = 0;
 
     temp_s0 = 0;
     for (; temp_s0 < 4; temp_s0++) {
@@ -44,7 +44,7 @@ void func_800F8C20_148840(unkObjectStruct* arg0) {
     arg0->unk_40[7] = LoadFormFile(0x1E, 0x68D);
     arg0->unk_40[8] = LoadFormFile(0x1D, 0x68D);
     temp_s4 = arg0->unk_50;
-    func_8005D95C(arg0, D_800FA36C.x, D_800FA36C.y, D_800FA36C.z);
+    func_8005D95C(arg0, D_800FA36C_149E80.x, D_800FA36C_149E80.y, D_800FA36C_149E80.z);
     D_800B895C = 10.0f;
     func_8001874C(arg0, 0, temp_s3, 1, 0);
     func_8001874C(arg0, 1, temp_s3 | 1, 1, 0);
@@ -84,13 +84,13 @@ void func_800F8C20_148840(unkObjectStruct* arg0) {
     func_800184BC(arg0, 1);
 
     if (gPlayers[temp_s4->unk_58].unk_06 & 1) {
-        D_800FA2D6 = temp_s4->unk_56;
-        D_800FA2D4 = 0;
+        D_800FA2D6_149E80 = temp_s4->unk_56;
+        D_800FA2D4_149E80 = 0;
         func_800F9908_149528(arg0);
     }
 
     temp_s4->unk_DC = 0;
-    D_800FA2E0 = 10;
+    D_800FA2E0_149E80 = 10;
     arg0->func_ptr = &func_800F9094_148CB4;
 }
 
@@ -98,9 +98,9 @@ void func_800F9094_148CB4(unkObjectStruct* arg0) { //related to movement
     unkGlobalStruct_00* temp_s0 = arg0->unk_50;
     
     if (D_800ED430 == 1) {
-        if (D_800FA2D0 != 0) {
-            D_800FA2D0--;
-            if (D_800FA2D0 == 0) {
+        if (D_800FA2D0_149E80 != 0) {
+            D_800FA2D0_149E80--;
+            if (D_800FA2D0_149E80 == 0) {
                 func_800184BC(arg0, 0);
             }
         }
@@ -110,20 +110,20 @@ void func_800F9094_148CB4(unkObjectStruct* arg0) { //related to movement
         func_800F9B18_149738(arg0);
     }
     
-    switch (D_800FA2D8) {
+    switch (D_800FA2D8_149E80) {
     case 1:
         D_800F5460[temp_s0->unk_56] = D_800F5460[temp_s0->unk_56] & 0x1030;
         D_800EDEB4[temp_s0->unk_56] = D_800EDEB4[temp_s0->unk_56] & 0x1030;
         D_800ECE14[temp_s0->unk_56] = 0;
         D_800F3843[temp_s0->unk_56] = 0;
-        if (arg0->unk_18 > D_800FA2DC) {
-            if ((arg0->unk_18 + (-D_800FA2DC)) < 10.0f) {
-                D_800FA2D8 = 2;
+        if (arg0->unk_18 > D_800FA2DC_149E80) {
+            if ((arg0->unk_18 + (-D_800FA2DC_149E80)) < 10.0f) {
+                D_800FA2D8_149E80 = 2;
             } else {
                 D_800ECE14[temp_s0->unk_56] = -127;
             }
-        } else if ((D_800FA2DC + (-arg0->unk_18)) < 10.0f) {
-            D_800FA2D8 = 2;
+        } else if ((D_800FA2DC_149E80 + (-arg0->unk_18)) < 10.0f) {
+            D_800FA2D8_149E80 = 2;
         } else {
             D_800ECE14[temp_s0->unk_56] = 127;
         }
@@ -133,8 +133,8 @@ void func_800F9094_148CB4(unkObjectStruct* arg0) { //related to movement
         D_800EDEB4[temp_s0->unk_56] &= 0x1030;
         D_800ECE14[temp_s0->unk_56] = 0;
         D_800F3843[temp_s0->unk_56] = 0;
-        if (D_800FA2E0 != 0) {
-            D_800FA2E0--;
+        if (D_800FA2E0_149E80 != 0) {
+            D_800FA2E0_149E80--;
         } else if ((func_800184A8(temp_s0, 0) != 0) && (D_800ED430 != 2)) {
             D_800ED430 = 2;
         }
@@ -153,10 +153,10 @@ INCLUDE_ASM("asm/nonmatchings/ovl_12_GroundPound/148840", func_800F9870_149490);
 void func_800F9908_149528(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp = arg0->unk_50;
     
-    D_800FA2F4 = -1;
-    D_800FA2F8 = 0;
-    D_800FA2FC = gPlayers[temp->unk_58].cpuDifficulty;
-    D_800FA2F0 = 0;
+    D_800FA2F4_149E80 = -1;
+    D_800FA2F8_149E80 = 0;
+    D_800FA2FC_149E80 = gPlayers[temp->unk_58].cpuDifficulty;
+    D_800FA2F0_149E80 = 0;
 }
 
 INCLUDE_ASM("asm/nonmatchings/ovl_12_GroundPound/148840", func_800F9950_149570);
@@ -167,9 +167,9 @@ s32 func_800F9A24_149644(unkObjectStruct* arg0, f32 arg1) { //matches, needs rod
     s32 phi_s3;
     s32 i;
     f32 temp;
-    f64 temp2 = D_800FA250;
+    f64 temp2 = D_800FA250_149E80;
 
-    phi_s0 = D_800FA380;
+    phi_s0 = D_800FA380_149E80;
     phi_s3 = -1;
     
    
@@ -179,7 +179,7 @@ s32 func_800F9A24_149644(unkObjectStruct* arg0, f32 arg1) { //matches, needs rod
         }
         temp_f14 = phi_s0->unk_00 - arg0->unk_18;
         temp_f12 = phi_s0->unk_04 - arg0->unk_20;
-        if ((SQ(temp_f14) + SQ(temp_f12) < D_800FA2E8)) {
+        if ((SQ(temp_f14) + SQ(temp_f12) < D_800FA2E8_149E80)) {
             temp = arg1 - func_800B0CD8(temp_f12, temp_f14);
             if ((fabs((temp)) < 45.0)) {
                 phi_s3 = i;
@@ -194,12 +194,12 @@ s32 func_800F9A24_149644(unkObjectStruct* arg0, f32 arg1) { //matches, needs rod
 INCLUDE_ASM("asm/nonmatchings/ovl_12_GroundPound/148840", func_800F9B18_149738);
 
 void func_800F9E4C_149A6C(f32 arg0) {
-    D_800FA2DC = arg0;
+    D_800FA2DC_149E80 = arg0;
     
     if (arg0 == 0.0f) {
-        D_800FA2D8 = 2;
+        D_800FA2D8_149E80 = 2;
     } else {
-        D_800FA2D8 = 1;
+        D_800FA2D8_149E80 = 1;
     }
 }
 

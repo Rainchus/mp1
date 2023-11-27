@@ -164,12 +164,12 @@ void func_80067284(s16, s32, f32);
 s32 func_80067328(s16, s16);
 f64 func_8009B618(f64, f64);
 
-extern unkStructSize14 D_800C59AC[];
-extern unkStructSizeUnknown* D_800EC700[];
-extern s16 D_800EDEB4[];
-extern unk72D90Struct3 D_800F32B0[];
-extern s8 D_800F3843[];
-extern unkObjectStruct* D_800F3FB0[];
+extern unkStructSize14 D_800C59AC[]; // true extern data
+extern unkStructSizeUnknown* D_800EC700[]; // true extern data
+extern s16 D_800EDEB4[]; // true extern data
+extern unk72D90Struct3 D_800F32B0[]; // true extern data
+extern s8 D_800F3843[]; // true extern data
+extern unkObjectStruct* D_800F3FB0[]; // true extern data
 extern s16 D_800FBA70_EE3F0;
 extern s16 D_800FBA72_EE3F2;
 extern s16 D_800FBA74_EE3F4[];
@@ -182,31 +182,33 @@ extern s8 D_800FBE24_EE7A4[];
 extern unkStructSize4 D_800FBE30_EE7B0[];
 extern u32 D_800FBE54_EE7D4; //rng sub seed
 extern s16 D_800FBE58_EE7D8;
-extern s16 D_800FC020;
-extern s16 D_800FC022;
-extern s16 D_800FC024;
-extern s16 D_800FC026;
-extern s16 D_800FC028;
-extern s16 D_800FC02A;
-extern s16 D_800FC02C;
-extern unkObjectStruct* D_800FC030;
-extern s16 D_800FC034;
-extern s16 D_800FC040[1];
-extern unkStructSize4_2 D_800FC050[];
-extern unkObjectStruct* D_800FC05C;
-extern unkObjectStruct* D_800FC060;
-extern unkStructSize0x28 D_800FC068[2];
-extern u16 D_800FC0B8[];
-extern s16 D_800FC0BE;
-extern Matrix4f D_800FC0C0;
-extern s32 D_800FC100[16];
-extern s16 D_800FC140;
-extern unkObjectStruct* D_800FC144;
-extern Matrix4f D_800FC148;
-extern unkStructSize0x5C* D_800FC188[4];
-extern s16 D_800FC198[6]; // length >= 6
-extern unkStructSize0x20 D_800FC1C0[32];
-extern unkStructSize0x28 D_800FC5C0[1];
-extern Gfx* D_800FC5E8;
-extern s16 D_800FC5EC;
-extern f32 D_800FC5F0;
+
+/* BSS DATA */
+extern s16 D_800FC020_EE9A0;
+extern s16 D_800FC022_EE9A0;
+extern s16 D_800FC024_EE9A0;
+extern s16 D_800FC026_EE9A0;
+extern s16 D_800FC028_EE9A0;
+extern s16 D_800FC02A_EE9A0;
+extern s16 D_800FC02C_EE9A0;
+extern unkObjectStruct* D_800FC030_EE9A0;
+extern s16 D_800FC034_EE9A0;
+extern s16 D_800FC040_EE9A0[1];
+extern unkStructSize4_2 D_800FC050_EE9A0[];
+extern unkObjectStruct* D_800FC05C_EE9A0;
+extern unkObjectStruct* D_800FC060_EE9A0;
+extern unkStructSize0x28 D_800FC068_EE9A0[2];
+extern u16 D_800FC0B8_EE9A0[];
+extern s16 D_800FC0BE_EE9A0;
+extern Matrix4f D_800FC0C0_EE9A0;
+extern s32 D_800FC100_EE9A0[16];
+extern s16 D_800FC140_EE9A0;
+extern unkObjectStruct* D_800FC144_EE9A0;
+extern Matrix4f D_800FC148_EE9A0;
+extern unkStructSize0x5C* D_800FC188_EE9A0[4];
+extern s16 D_800FC198_EE9A0[6]; // length >= 6
+extern unkStructSize0x20 D_800FC1C0_EE9A0[32];
+extern unkStructSize0x28 D_800FC5C0_EE9A0[1];
+extern Gfx* D_800FC5E8_EE9A0;
+extern s16 D_800FC5EC_EE9A0;
+extern f32 D_800FC5F0_EE9A0;

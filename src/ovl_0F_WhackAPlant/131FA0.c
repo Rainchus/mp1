@@ -14,24 +14,24 @@ void func_800F6BC4_132584(unkObjectStruct* arg0) {
     s16 temp_s2;
     s32 i;
 
-    D_800FB740 = 0;
-    D_800FB69A = 0;
-    D_800FB6F4 = 0;
-    D_800FB710[1] = 0;
+    D_800FB740_137050 = 0;
+    D_800FB69A_137050 = 0;
+    D_800FB6F4_137050 = 0;
+    D_800FB710_137050[1] = 0;
 
     for (i = 0; i < 9; i++) {
         temp_s2 = func_8001E00C((void*)-1, 0x68D, 8);
-        D_800ECDE0[temp_s2].unk_02 = D_800FB6BA;
+        D_800ECDE0[temp_s2].unk_02 = D_800FB6BA_137050;
         func_80025930(D_800ECDE0[temp_s2].unk_00, 0x60000000, 0x60000000);
-        D_800FB6C0[i] = temp_s2;
-        D_800FB6EA[i] = 0;
+        D_800FB6C0_137050[i] = temp_s2;
+        D_800FB6EA_137050[i] = 0;
     }
 
     for (i = 0; i < 9; i++) {
         temp_s2 = func_8001E00C((void*)-1, 0x68D, 8);
-        D_800ECDE0[temp_s2].unk_02 = D_800FB6BC;
+        D_800ECDE0[temp_s2].unk_02 = D_800FB6BC_137050;
         func_80025930(D_800ECDE0[temp_s2].unk_00, 0x60000000, 0x60000000);
-        D_800FB6D8[i] = temp_s2;
+        D_800FB6D8_137050[i] = temp_s2;
         func_8001E2F8(temp_s2, 0xE0);
         func_8001E360(temp_s2, 0xFF, 0xFF, 0xBE);
     }
@@ -41,7 +41,7 @@ void func_800F6BC4_132584(unkObjectStruct* arg0) {
 }
 
 void func_800F6D54_132714(void) {
-    switch (D_800FB740) {
+    switch (D_800FB740_137050) {
     case 0:
         func_800FA078_135A38();
         break;
@@ -78,17 +78,17 @@ void func_800F7570_132F30(unkObjectStruct* arg0) {
         func_8005D95C(arg0, arg0->unk_18, arg0->unk_1C + PI, arg0->unk_20);
         func_80017DB0(arg0);
     } else {
-        D_800FB710[0] = 3;
+        D_800FB710_137050[0] = 3;
         arg0->func_ptr = &func_800F7714_1330D4;
-        func_800258EC(D_800FB6F8->unk_40[0], 0x1C00, 0x400);
+        func_800258EC(D_800FB6F8_137050->unk_40[0], 0x1C00, 0x400);
         temp_s1->unk_3C = 0.0f;
     }
 
     D_800FB60A_136FCA += 1;
-    D_800FB724.x = func_800AEAC0(D_800FB60C_136FCC) * D_800FB610_136FD0;
-    D_800FB724.z = func_800AEFD0(D_800FB60C_136FCC) * D_800FB610_136FD0;
-    D_800FB724.y = D_800FB614_136FD4 + 270.0f;
-    D_800FB718 = D_800FB618_136FD8 + 270.0f;
+    D_800FB724_137050.x = func_800AEAC0(D_800FB60C_136FCC) * D_800FB610_136FD0;
+    D_800FB724_137050.z = func_800AEFD0(D_800FB60C_136FCC) * D_800FB610_136FD0;
+    D_800FB724_137050.y = D_800FB614_136FD4 + 270.0f;
+    D_800FB718_137050 = D_800FB618_136FD8 + 270.0f;
     D_800FB60C_136FCC -= 3.4285715f;
     D_800FB610_136FD0 = D_800FB610_136FD0 + 7.561905f;
     D_800FB614_136FD4 = D_800FB614_136FD4 + 7.6190476f;
@@ -111,8 +111,8 @@ void func_800F7F90_133950(unkObjectStruct* arg0) {
         if (D_800FB61C_136FDC == 0xF) {
             func_800184BC(arg0, 0);
             arg0->unk_18 = arg0->unk_20 = 0.0f;
-            if (D_800FB698 == 0) {
-                D_800FB730 = 1;
+            if (D_800FB698_137050 == 0) {
+                D_800FB730_137050 = 1;
             }
         }
     }
@@ -159,15 +159,15 @@ INCLUDE_ASM("asm/nonmatchings/ovl_0F_WhackAPlant/131FA0", func_800F998C_13534C);
 INCLUDE_ASM("asm/nonmatchings/ovl_0F_WhackAPlant/131FA0", func_800F9AF4_1354B4);
 
 void func_800F9D38_1356F8(unkObjectStruct* arg0) {
-    D_800FB6A4 = func_80019060(D_800FB6A2, 0, 1);
-    func_80018D84(D_800FB6A4, 0x8000);
-    D_800FB69E = func_80019060(D_800FB69C, 0, 1);
-    D_800FB6A0 = func_80019060(D_800FB69C, 0, 1);
-    func_80018D84(D_800FB69E, 0x8000);
-    func_80018D84(D_800FB6A0, 0x8000);
-    SetBasicSpritePos(D_800FB6A4, 0x8E, 0x20);
-    SetBasicSpritePos(D_800FB69E, 0xA2, 0x20);
-    SetBasicSpritePos(D_800FB6A0, 0xAA, 0x20);
+    D_800FB6A4_137050 = func_80019060(D_800FB6A2_137050, 0, 1);
+    func_80018D84(D_800FB6A4_137050, 0x8000);
+    D_800FB69E_137050 = func_80019060(D_800FB69C_137050, 0, 1);
+    D_800FB6A0_137050 = func_80019060(D_800FB69C_137050, 0, 1);
+    func_80018D84(D_800FB69E_137050, 0x8000);
+    func_80018D84(D_800FB6A0_137050, 0x8000);
+    SetBasicSpritePos(D_800FB6A4_137050, 0x8E, 0x20);
+    SetBasicSpritePos(D_800FB69E_137050, 0xA2, 0x20);
+    SetBasicSpritePos(D_800FB6A0_137050, 0xAA, 0x20);
     arg0->unk_4C[0] = 0;
     arg0->unk_4C[1] = 0;
     arg0->unk_4C[2] = 0;
@@ -214,12 +214,12 @@ void func_800F9E44_135804(unkObjectStruct* arg0) {
     temp_s1 = arg0->unk_4C[0];
     temp_s0 = arg0->unk_4C[0];
     temp_s0 = temp_s0 / 10;
-    func_80018E50(D_800FB69E, temp_s0, 0);
-    func_80018E50(D_800FB6A0, temp_s1 - (temp_s0 * 0xA), 0);
-    SetBasicSpriteSize(D_800FB69E, 1.0f, arg0->unk_34);
-    SetBasicSpriteSize(D_800FB6A0, 1.0f, arg0->unk_34);
-    SetBasicSpritePos(D_800FB69E, 0xA0, 32.0f - ((arg0->unk_34 - 1.0f) * 6.0f));
-    SetBasicSpritePos(D_800FB6A0, 0xB0, 32.0f - ((arg0->unk_34 - 1.0f) * 6.0f));
+    func_80018E50(D_800FB69E_137050, temp_s0, 0);
+    func_80018E50(D_800FB6A0_137050, temp_s1 - (temp_s0 * 0xA), 0);
+    SetBasicSpriteSize(D_800FB69E_137050, 1.0f, arg0->unk_34);
+    SetBasicSpriteSize(D_800FB6A0_137050, 1.0f, arg0->unk_34);
+    SetBasicSpritePos(D_800FB69E_137050, 0xA0, 32.0f - ((arg0->unk_34 - 1.0f) * 6.0f));
+    SetBasicSpritePos(D_800FB6A0_137050, 0xB0, 32.0f - ((arg0->unk_34 - 1.0f) * 6.0f));
 }
 
 INCLUDE_ASM("asm/nonmatchings/ovl_0F_WhackAPlant/131FA0", func_800FA078_135A38);

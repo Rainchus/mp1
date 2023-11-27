@@ -29,26 +29,31 @@ void func_800F690C_17EA3C(unkObjectStruct* arg0);
 void func_800F6A54_17EB84(unkObjectStruct* arg0);
 void func_800F6AF8_17EC28(unkObjectStruct* arg0, s32 arg1);
 
+// External to overlay
 extern f32 D_800B8964;
 extern f32 D_800B8980;
 extern s32 D_800B8988;
-extern unkObjectStruct* D_800FB998_EE318[];
-extern s32 D_800FB6A0;
-extern s16 D_800EDEB4[];
-extern s16 D_800F5460[];
 //extern s8 D_800ECE14[];
-extern s8 D_800F3843[];
-extern f32 D_800ED6B8;
-extern s32 D_800EDEC0;
-extern s16 D_800EE984;
-extern u16 D_800F370C;
-extern f32 D_800F5254;
+extern f32 D_800ED6B8; // true extern data
+extern s16 D_800EDEB4[]; // true extern data
+extern s32 D_800EDEC0; // true extern data
+extern s16 D_800EE984; // true extern data
+extern unkObjectStruct* D_800F2AF8[]; // true extern data
+extern u16 D_800F370C; // true extern data
+extern s8 D_800F3843[]; // true extern data
+extern u16 D_800F5144; // true extern data
+extern f32 D_800F5254; // true extern data
+extern s16 D_800F5460[]; // true extern data
+
+// Local to overlay
 extern s32 D_800FB5C0;
-extern s32 D_800FB6A4;
-extern s32 D_800FB6C4;
-extern s32 D_800FB6C8;
-extern s32 D_800FB988;
-extern s32 D_800FB98C;
-extern u16 D_800F5144;
-extern f32 D_800FB6CC;
-extern unkObjectStruct* D_800F2AF8[];
+
+/* BSS DATA*/
+extern s32 D_800FB6A0_1837D0;
+extern s32 D_800FB6A4_1837D0;
+extern s32 D_800FB6C4_1837D0;
+extern s32 D_800FB6C8_1837D0;
+extern f32 D_800FB6CC_1837D0;
+extern s32 D_800FB988_1837D0;
+extern s32 D_800FB98C_1837D0;
+extern unkObjectStruct* D_800FB998_1837D0[];

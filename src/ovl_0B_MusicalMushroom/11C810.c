@@ -28,7 +28,7 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_0B_MusicalMushroom/11C810", D_800FB520_1217
 
 void func_800F75D8_11D808(unkObjectStruct* arg0) {
     unkGlobalStruct_00* temp_s1 = arg0->unk_50;
-    f32* temp_a1 = &D_800FB778[arg0->unk_4C[0]];
+    f32* temp_a1 = &D_800FB778_1217D0[arg0->unk_4C[0]];
 
     switch (D_800FB4D0_121700) {
     case 1:

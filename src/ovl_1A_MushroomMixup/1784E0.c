@@ -49,7 +49,7 @@ s32 func_800F7574_179474(void) {
     index = 0; // goes from 0 -> 6
 
     // check if all flags are 1(?)
-    flags = (s32) D_800FC98C; // is D_800FC98C a 1-byte array of length 6?
+    flags = (s32) D_800FC98C_17E710; // is D_800FC98C_17E710 a 1-byte array of length 6?
     while (1) {
         if ((flags >> index) & 1) {
             index += 1;
@@ -95,12 +95,12 @@ INCLUDE_ASM("asm/nonmatchings/ovl_1A_MushroomMixup/1784E0", func_800F88AC_17A7AC
 INCLUDE_ASM("asm/nonmatchings/ovl_1A_MushroomMixup/1784E0", func_800F8A58_17A958);
 
 void func_800F9364_17B264(unkObjectStruct* arg0) {
-    if (D_800FC994 != 0) {
-        D_800F6524.x += D_800FC89C;
-        D_800F6524.y += D_800FC99C;
-        D_800F6524.z += D_800FC998;
-        D_800EE98C += D_800FC988;
-        D_800FC994 -= 1;
+    if (D_800FC994_17E710 != 0) {
+        D_800F6524.x += D_800FC89C_17E710;
+        D_800F6524.y += D_800FC99C_17E710;
+        D_800F6524.z += D_800FC998_17E710;
+        D_800EE98C += D_800FC988_17E710;
+        D_800FC994_17E710 -= 1;
     }
     else {
         arg0->func_ptr = NULL;

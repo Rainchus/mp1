@@ -16,27 +16,29 @@ void func_800FBB0C_F3ECC(void);
 s16 func_80076FF4(s16);
 void guMtxL2F(Matrix4f, Mtx*);
 
-extern unkObjectStruct* D_800F2AF8[];
-extern unkObjectStruct* D_800F3FB0[];
-extern s16 D_800FE6F2;
-extern s16 D_800FE6F4;
-extern s16 D_800FE6F6;
-extern s16 D_800FE6F8;
-extern s16 D_800FE6FA;
-extern s16 D_800FE6FC;
-extern s16 D_800FE6FE;
-extern s16 D_800FE700;
-extern s16 D_800FE702;
-extern s16 D_800FE760;
-extern unkObjectStruct* D_800FE764;
-extern s16 D_800FE768;
-extern unkObjectStruct* D_800FED08[];
-extern s16 D_800FED30;
-extern s32 D_800FED40[256];
-extern Matrix4f D_800FF140;
-extern s16 D_800FF180;
-extern unkObjectStruct* D_800FF248;
-extern unkObjectStruct* D_800FF24C[];
-extern f32 D_800FF258;
-extern s16 D_800FF25C;
-extern Matrix4f D_800FFAE0;
+extern unkObjectStruct* D_800F2AF8[]; // true extern data
+extern unkObjectStruct* D_800F3FB0[]; // true extern data
+
+/* BSS DATA */
+extern s16 D_800FE6F2_F6AB0;
+extern s16 D_800FE6F4_F6AB0;
+extern s16 D_800FE6F6_F6AB0;
+extern s16 D_800FE6F8_F6AB0;
+extern s16 D_800FE6FA_F6AB0;
+extern s16 D_800FE6FC_F6AB0;
+extern s16 D_800FE6FE_F6AB0;
+extern s16 D_800FE700_F6AB0;
+extern s16 D_800FE702_F6AB0;
+extern s16 D_800FE760_F6AB0;
+extern unkObjectStruct* D_800FE764_F6AB0;
+extern s16 D_800FE768_F6AB0;
+extern unkObjectStruct* D_800FED08_F6AB0[];
+extern s16 D_800FED30_F6AB0;
+extern s32 D_800FED40_F6AB0[256];
+extern Matrix4f D_800FF140_F6AB0;
+extern s16 D_800FF180_F6AB0;
+extern unkObjectStruct* D_800FF248_F6AB0;
+extern unkObjectStruct* D_800FF24C_F6AB0[];
+extern f32 D_800FF258_F6AB0;
+extern s16 D_800FF25C_F6AB0;
+extern Matrix4f D_800FFAE0_F6AB0;

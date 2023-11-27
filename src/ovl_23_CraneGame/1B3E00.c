@@ -4,38 +4,6 @@ INCLUDE_ASM("asm/nonmatchings/ovl_23_CraneGame/1B3E00", func_800F65E0_1B3E00);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_23_CraneGame/1B3E00", func_800F6B10_1B4330);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_23_CraneGame/1B3E00", D_800FF500_1BCD20);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_23_CraneGame/1B3E00", D_800FF510_1BCD30);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_23_CraneGame/1B3E00", D_800FF520_1BCD40);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_23_CraneGame/1B3E00", D_800FF524_1BCD44);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_23_CraneGame/1B3E00", D_800FF52C_1BCD4C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_23_CraneGame/1B3E00", D_800FF538_1BCD58);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_23_CraneGame/1B3E00", D_800FF5B0_1BCDD0);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_23_CraneGame/1B3E00", D_800FF870_1BD090);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_23_CraneGame/1B3E00", D_800FF8B0_1BD0D0);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_23_CraneGame/1B3E00", D_800FF8F8_1BD118);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_23_CraneGame/1B3E00", D_800FF8FC_1BD11C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_23_CraneGame/1B3E00", D_800FF900_1BD120);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_23_CraneGame/1B3E00", D_800FF91C_1BD13C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_23_CraneGame/1B3E00", D_800FF920_1BD140);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_23_CraneGame/1B3E00", D_800FF924_1BD144);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_23_CraneGame/1B3E00", D_800FF928_1BD148);
-
 INCLUDE_ASM("asm/nonmatchings/ovl_23_CraneGame/1B3E00", func_800F6B3C_1B435C);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_23_CraneGame/1B3E00", func_800F6EC4_1B46E4);

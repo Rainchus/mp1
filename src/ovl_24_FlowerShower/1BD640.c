@@ -8,47 +8,13 @@ INCLUDE_ASM("asm/nonmatchings/ovl_24_FlowerShower/1BD640", func_800F6A90_1BDAF0)
 
 INCLUDE_ASM("asm/nonmatchings/ovl_24_FlowerShower/1BD640", func_800F6FF4_1BE054);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_24_FlowerShower/1BD640", D_800FAD30_1C1D90);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_24_FlowerShower/1BD640", D_800FAD34_1C1D94);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_24_FlowerShower/1BD640", D_800FAD38_1C1D98);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_24_FlowerShower/1BD640", D_800FAD3C_1C1D9C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_24_FlowerShower/1BD640", D_800FAD40_1C1DA0);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_24_FlowerShower/1BD640", D_800FAD44_1C1DA4);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_24_FlowerShower/1BD640", D_800FAD48_1C1DA8);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_24_FlowerShower/1BD640", D_800FAD4C_1C1DAC);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_24_FlowerShower/1BD640", D_800FAD50_1C1DB0);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_24_FlowerShower/1BD640", D_800FAD5C_1C1DBC);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_24_FlowerShower/1BD640", D_800FAD60_1C1DC0);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_24_FlowerShower/1BD640", D_800FAD64_1C1DC4);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_24_FlowerShower/1BD640", D_800FAD68_1C1DC8);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_24_FlowerShower/1BD640", D_800FAD6C_1C1DCC);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_24_FlowerShower/1BD640", D_800FAD70_1C1DD0);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_24_FlowerShower/1BD640", D_800FAD74_1C1DD4);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_24_FlowerShower/1BD640", D_800FADCC_1C1E2C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_24_FlowerShower/1BD640", D_800FADD0_1C1E30);
-
 INCLUDE_ASM("asm/nonmatchings/ovl_24_FlowerShower/1BD640", func_800F712C_1BE18C);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_24_FlowerShower/1BD640", func_800F726C_1BE2CC);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_24_FlowerShower/1BD640", func_800F7348_1BE3A8);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_24_FlowerShower/1BD640", D_800FADF0_1C1E50);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_24_FlowerShower/1BD640", func_800F761C_1BE67C);
 

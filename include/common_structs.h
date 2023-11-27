@@ -10,6 +10,11 @@ typedef struct Vec2f {
                f32 y;
 } Vec2f;
 
+typedef struct Vec2d {
+               f64 x;
+               f64 y;
+} Vec2d;
+
 typedef struct Vec2s {
                s16 x;
                s16 y;
@@ -690,6 +695,17 @@ typedef struct unk2C0C0StructC0 {
     /* 0xD0 */ unk2C0C0StructB0* unk_D0;
     /* 0xD4 */ char unk_D4[0xC];
 } unk2C0C0StructC0; //sizeof 0xE0
+
+typedef struct unk2C0C0StructE0 {
+    /* 0x00 */ s16 unk_00;
+    /* 0x02 */ s16 unk_02;
+    /* 0x04 */ s16 unk_04;
+    /* 0x06 */ char unk_06[2];
+    /* 0x08 */ s16 unk_08;
+    /* 0x0A */ s16 unk_0A;
+    /* 0x0C */ Color_RGB8 unk_0C;
+    /* 0x0F */ u8 unk_0F;
+} unk2C0C0StructE0; //sizeof 0x10
 
 typedef struct unk_ovl_2D_struct { //actually global??
     /* 0x00 */ s8 unk_00;
