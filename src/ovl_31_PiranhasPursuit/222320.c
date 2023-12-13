@@ -92,6 +92,18 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_31_PiranhasPursuit/222320", D_80100498_22C1
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_31_PiranhasPursuit/222320", D_801004A0_22C1E0);
 
+INCLUDE_RODATA("asm/nonmatchings/ovl_31_PiranhasPursuit/222320", D_801004B0_22C1F0);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_31_PiranhasPursuit/222320", D_801004BC_22C1FC);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_31_PiranhasPursuit/222320", D_801004C8_22C208);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_31_PiranhasPursuit/222320", D_801004D4_22C214);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_31_PiranhasPursuit/222320", D_801004E0_22C220);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_31_PiranhasPursuit/222320", D_801004EC_22C22C);
+
 INCLUDE_RODATA("asm/nonmatchings/ovl_31_PiranhasPursuit/222320", jtbl_80100520_22C260);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_31_PiranhasPursuit/222320", jtbl_80100538_22C278);

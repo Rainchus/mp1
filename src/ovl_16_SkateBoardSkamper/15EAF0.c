@@ -66,6 +66,14 @@ INCLUDE_ASM("asm/nonmatchings/ovl_16_SkateBoardSkamper/15EAF0", func_800F9D3C_16
 
 INCLUDE_ASM("asm/nonmatchings/ovl_16_SkateBoardSkamper/15EAF0", func_800F9D80_162290);
 
+INCLUDE_RODATA("asm/nonmatchings/ovl_16_SkateBoardSkamper/15EAF0", D_800FDC24_166134);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_16_SkateBoardSkamper/15EAF0", D_800FDC30_166140);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_16_SkateBoardSkamper/15EAF0", D_800FDC3C_16614C);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_16_SkateBoardSkamper/15EAF0", D_800FDC48_166158);
+
 INCLUDE_RODATA("asm/nonmatchings/ovl_16_SkateBoardSkamper/15EAF0", D_800FDC54_166164);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_16_SkateBoardSkamper/15EAF0", D_800FDC60_166170);

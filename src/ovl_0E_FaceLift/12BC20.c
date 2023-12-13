@@ -21,6 +21,8 @@ INCLUDE_ASM("asm/nonmatchings/ovl_0E_FaceLift/12BC20", func_800F8274_12D8B4);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_0E_FaceLift/12BC20", D_800FC8C0_131F00);
 
+INCLUDE_RODATA("asm/nonmatchings/ovl_0E_FaceLift/12BC20", D_800FC8C4_131F04);
+
 INCLUDE_RODATA("asm/nonmatchings/ovl_0E_FaceLift/12BC20", D_800FC8CC_131F0C);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_0E_FaceLift/12BC20", D_800FC8D4_131F14);
@@ -28,6 +30,18 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_0E_FaceLift/12BC20", D_800FC8D4_131F14);
 INCLUDE_RODATA("asm/nonmatchings/ovl_0E_FaceLift/12BC20", D_800FC8DC_131F1C);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_0E_FaceLift/12BC20", D_800FC8E4_131F24);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_0E_FaceLift/12BC20", D_800FC8EC_131F2C);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_0E_FaceLift/12BC20", D_800FC8F4_131F34);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_0E_FaceLift/12BC20", D_800FC900_131F40);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_0E_FaceLift/12BC20", D_800FC90C_131F4C);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_0E_FaceLift/12BC20", D_800FC918_131F58);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_0E_FaceLift/12BC20", D_800FC924_131F64);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_0E_FaceLift/12BC20", D_800FC930_131F70);
 
