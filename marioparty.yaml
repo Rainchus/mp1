@@ -437,6 +437,9 @@ segments:
       - [0xB2340, c] # sqrtd
       - [0xB2350, c] # sqrtf
       - [0xB2360, bin]
+      - [0xCB6C0, .rodata, 3F5B0]
+      - [0xCB920, bin]
+      
   - type: code
     start: 0xCDA50
     vram: 0x800F65E0
