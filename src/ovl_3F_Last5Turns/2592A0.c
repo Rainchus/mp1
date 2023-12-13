@@ -18,6 +18,14 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_3F_Last5Turns/2592A0", D_800F7174_259E34);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_3F_Last5Turns/2592A0", D_800F7184_259E44);
 
+INCLUDE_RODATA("asm/nonmatchings/ovl_3F_Last5Turns/2592A0", D_800F71A0_259E60);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_3F_Last5Turns/2592A0", D_800F71A8_259E68);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_3F_Last5Turns/2592A0", D_800F71B0_259E70);
+
+INCLUDE_RODATA("asm/nonmatchings/ovl_3F_Last5Turns/2592A0", D_800F71B8_259E78);
+
 INCLUDE_RODATA("asm/nonmatchings/ovl_3F_Last5Turns/2592A0", D_800F71C0_259E80);
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_3F_Last5Turns/2592A0", D_800F71C4_259E84);

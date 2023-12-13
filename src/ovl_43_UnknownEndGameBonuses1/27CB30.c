@@ -42,6 +42,8 @@ INCLUDE_RODATA("asm/nonmatchings/ovl_43_UnknownEndGameBonuses1/27CB30", D_800FA6
 
 INCLUDE_RODATA("asm/nonmatchings/ovl_43_UnknownEndGameBonuses1/27CB30", D_800FA65C_280BAC);
 
+INCLUDE_RODATA("asm/nonmatchings/ovl_43_UnknownEndGameBonuses1/27CB30", D_800FA660_280BB0);
+
 INCLUDE_ASM("asm/nonmatchings/ovl_43_UnknownEndGameBonuses1/27CB30", func_800F67EC_27CD3C);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_43_UnknownEndGameBonuses1/27CB30", func_800F6FC8_27D518);
