@@ -4,55 +4,9 @@ INCLUDE_ASM("asm/nonmatchings/ovl_29_LimboDance/1E0A30", func_800F65E0_1E0A30);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_29_LimboDance/1E0A30", func_800F67D4_1E0C24);
 
-INCLUDE_RODATA("asm/nonmatchings/ovl_29_LimboDance/1E0A30", D_800FE980_1E8DD0);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_29_LimboDance/1E0A30", D_800FE984_1E8DD4);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_29_LimboDance/1E0A30", D_800FE988_1E8DD8);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_29_LimboDance/1E0A30", D_800FE98C_1E8DDC);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_29_LimboDance/1E0A30", D_800FE990_1E8DE0);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_29_LimboDance/1E0A30", D_800FE994_1E8DE4);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_29_LimboDance/1E0A30", D_800FE998_1E8DE8);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_29_LimboDance/1E0A30", D_800FE99C_1E8DEC);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_29_LimboDance/1E0A30", D_800FE9A0_1E8DF0);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_29_LimboDance/1E0A30", D_800FE9A4_1E8DF4);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_29_LimboDance/1E0A30", D_800FE9A8_1E8DF8);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_29_LimboDance/1E0A30", D_800FE9AC_1E8DFC);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_29_LimboDance/1E0A30", D_800FE9B0_1E8E00);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_29_LimboDance/1E0A30", D_800FE9B4_1E8E04);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_29_LimboDance/1E0A30", D_800FE9B8_1E8E08);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_29_LimboDance/1E0A30", D_800FE9BC_1E8E0C);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_29_LimboDance/1E0A30", D_800FE9C0_1E8E10);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_29_LimboDance/1E0A30", D_800FEA00_1E8E50);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_29_LimboDance/1E0A30", D_800FEA20_1E8E70);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_29_LimboDance/1E0A30", D_800FEA28_1E8E78);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_29_LimboDance/1E0A30", D_800FEA68_1E8EB8);
-
 INCLUDE_ASM("asm/nonmatchings/ovl_29_LimboDance/1E0A30", func_800F6844_1E0C94);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_29_LimboDance/1E0A30", func_800F6AB8_1E0F08);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_29_LimboDance/1E0A30", D_800FEAE0_1E8F30);
-
-INCLUDE_RODATA("asm/nonmatchings/ovl_29_LimboDance/1E0A30", D_800FEAEC_1E8F3C);
 
 INCLUDE_ASM("asm/nonmatchings/ovl_29_LimboDance/1E0A30", func_800F6C7C_1E10CC);
 

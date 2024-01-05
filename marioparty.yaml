@@ -994,7 +994,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x1D9690, c]
-      - [0x1E0670, data, 1D9690]
+      - [0x1E0670,    data, 1D9690]
       - [0x1E06A0, .rodata, 1D9690]
   - type: code
     start: 0x1E0A30
@@ -1006,7 +1006,8 @@ segments:
     subsegments:
       - [0x1E0A30, c]
       - [0x1E4480, c]
-      - [0x1E8DD0, .rodata, 1E0A30]
+      - [0x1E8DD0,    data, 1E0A30]
+      - [0x1E8F60, .rodata, 1E0A30]
       - [0x1E9250, .rodata, 1E4480]
   - type: code
     start: 0x1E9440
@@ -1028,7 +1029,8 @@ segments:
     subsegments:
       - [0x1F0DA0, c]
       - [0x1F5700, c]
-      - [0x1F60F0, .rodata, 1F0DA0]
+      - [0x1F60F0,    data, 1F0DA0]
+      - [0x1F6200, .rodata, 1F0DA0]
   - type: code
     start: 0x1F62C0
     vram: 0x800F65E0
