@@ -26,7 +26,7 @@ INCLUDE_ASM(const s32, "ovl_1F_TightropeTreachery/19D510", func_800FD70C_19EF4C)
 
 INCLUDE_ASM(const s32, "ovl_1F_TightropeTreachery/19D510", func_800FDCE8_19F528);
 
-INCLUDE_ASM(const s32, "ovl_1F_TightropeTreachery/19D510", jtbl_800FE040_19F880);
+INCLUDE_ASM(const s32, "ovl_1F_TightropeTreachery/19D510", func_800FE040_19F880);
 
 INCLUDE_ASM(const s32, "ovl_1F_TightropeTreachery/19D510", func_800FE10C_19F94C);
 

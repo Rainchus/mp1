@@ -449,3 +449,6 @@ __OSGlobalIntMask = 0x800C7730;
 __osFinalrom = 0x800F5458;
 __osEventStateTab = 0x800F5280;
 __osHwIntTable = 0x800C76F0;
+
+//ovl_1F
+func_800FE040_19F880 = 0x800FE040; //rom:0x19F880
