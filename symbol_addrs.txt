@@ -478,10 +478,10 @@ omSetTra= 0x8005D95C;
 omSetRot = 0x8005D96C;
 omSetSca = 0x8005D97C;
 
-D_80103C18_10CBA8 = 0x80103C18; //rom:0x10CBA8 force_migration:True
-D_80103C1C_10CBAC = 0x80103C1C; //rom:0x10CBAC force_migration:True
-
+D_80103C18_10CBA8 = 0x80103C18; //rom:0x10CBA8 type:f64 force_migration:True
 D_800FB920_11C550 = 0x800FB920; //rom:0x11C550 type:f64 force_migration:True
+D_80100318_222248 = 0x80100318; //rom:0x222248 type:f64 force_migration:True
+D_80100920_22C660 = 0x80100920; //rom:0x22C660 type:f64 force_migration:True
 
 //ovl_1F
 func_800FE040_19F880 = 0x800FE040; //rom:0x19F880
