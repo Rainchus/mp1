@@ -43,7 +43,7 @@ void func_80054834(s32 arg0, s32 arg1) {
 
 INCLUDE_ASM(s32, "54120", func_80054868);
 
-s32 func_80054FA8() {
+s32 func_80054FA8(void) {
     s32 i;
     s32 ret = 0;
 
@@ -65,17 +65,17 @@ INCLUDE_ASM(s32, "54120", func_80055228);
 INCLUDE_ASM(s32, "54120", func_8005528C);
 
 void func_8005546C(s32 arg0) {
-    unkObjectStruct* temp_v0;
+    omObjData* temp_v0;
     unkStruct4* temp_s0;
     s32 i;
     s32 j;
 
     temp_s0 = &D_800D83A8[arg0];
     if (temp_s0->unk2C == NULL) {
-        temp_v0 = func_8005D384(-0x8000, 0, 0, -1, &func_8005528C);
+        temp_v0 = omAddObj(-0x8000, 0, 0, -1, &func_8005528C);
         temp_s0->unk2C = temp_v0;
-        temp_v0->unk_24 = 0.0f;
-        temp_v0->unk_4C[0] = arg0;
+        temp_v0->rot.x = 0.0f;
+        temp_v0->work[0] = arg0;
         for (i = 0; i < 4; i++) {
             for (j = 0; j < 0x0B; j++){
                 func_80067354(D_800D83A8[i].unk_06, j, D_800C5654[j], D_800C5654[j]);
@@ -101,46 +101,46 @@ void func_80055544(s32 arg0) {
 }
 
 extern void AdjustPlayerCoins(s32, s32); // TODO: Possibly same file, if not add header to 53680.c
-void func_800555D0(unkObjectStruct* arg0) {
+void func_800555D0(omObjData* arg0) {
     u32 var_s1 = 0;
 
-    while (arg0->unk_34 <= 0.0f) {
-        if (arg0->unk_18 > 0.0f) {
-            AdjustPlayerCoins(arg0->unk_4C[0], 1);
-            if (((arg0->unk_4C[3] != 0) & (var_s1 == 0)) && (arg0->unk_38 >= 3.0f)) {
+    while (arg0->scale.y <= 0.0f) {
+        if (arg0->trans.x > 0.0f) {
+            AdjustPlayerCoins(arg0->work[0], 1);
+            if (((arg0->work[3] != 0) & (var_s1 == 0)) && (arg0->scale.z >= 3.0f)) {
                 PlaySound(0x43);
                 var_s1 = 1;
-                arg0->unk_38 -= 3.0f;
+                arg0->scale.z -= 3.0f;
             }
             
-            arg0->unk_18 -= 1.0f;
+            arg0->trans.x -= 1.0f;
 
         } else {
-            AdjustPlayerCoins(arg0->unk_4C[0], -1);
-            arg0->unk_18 += 1.0f;
+            AdjustPlayerCoins(arg0->work[0], -1);
+            arg0->trans.x += 1.0f;
             
-            if (arg0->unk_4C[3] != 0) {
-                if ((var_s1 == 0) && (arg0->unk_38 >= 3.0f)) {
+            if (arg0->work[3] != 0) {
+                if ((var_s1 == 0) && (arg0->scale.z >= 3.0f)) {
                     PlaySound(0x57);
                     var_s1 = 1;
-                    arg0->unk_38 -= 3.0f;
+                    arg0->scale.z -= 3.0f;
                 }
-                if (arg0->unk_18 == 0.0f || gPlayers[arg0->unk_4C[0]].coinAmount == 0) {
+                if (arg0->trans.x == 0.0f || gPlayers[arg0->work[0]].coinAmount == 0) {
                     PlaySound(0x58);
                 }
             }                
         }
         
-        if (arg0->unk_18 == 0.0f || gPlayers[arg0->unk_4C[0]].coinAmount == 0) {
-            D_800D84D0[arg0->unk_4C[0]] = 0;
+        if (arg0->trans.x == 0.0f || gPlayers[arg0->work[0]].coinAmount == 0) {
+            D_800D84D0[arg0->work[0]] = 0;
             func_8005D718(arg0);
             return;
         }
         
-        arg0->unk_34 += arg0->unk_30;
+        arg0->scale.y += arg0->scale.x;
     }         
-    arg0->unk_34 = arg0->unk_34 - 1.0f;
-    arg0->unk_38 = arg0->unk_38 + 2.0f;
+    arg0->scale.y = arg0->scale.y - 1.0f;
+    arg0->scale.z = arg0->scale.z + 2.0f;
 }
 
 INCLUDE_ASM(s32, "54120", func_80055810);
@@ -161,7 +161,7 @@ void func_80055994(s32 arg0) {
     D_800D83A8[arg0].unk_04 = 0;
 }
 
-s32 func_800559A8() {
+s32 func_800559A8(void) {
     if (D_800D83A8[0].unk_05 & 1) {
         return 0;
     } else {
@@ -169,7 +169,7 @@ s32 func_800559A8() {
     }
 }
 
-void func_800559BC() {
+void func_800559BC(void) {
     s32 i;
 
     for (i = 0; i < 4; i++) {
@@ -177,7 +177,7 @@ void func_800559BC() {
     }
 }
 
-void func_800559F8() {
+void func_800559F8(void) {
     s32 i;
 
     for (i = 0; i < 4; i++) {
@@ -197,13 +197,13 @@ void func_80055A40(s32 arg1) {
         func_800546B4(i, gPlayers[i].turn_status);
     }
 
-    D_800D83A0 = InitProcess(func_80053A1C, 0U, 0x2000, 0);
+    D_800D83A0 = omAddPrcObj(func_80053A1C, 0U, 0x2000, 0);
     func_8005D900(D_800D83A0, 0x80);
     D_800D84AA = -1;
     D_800D84A8 = -1;
 }
 
-void func_80055AFC() {
+void func_80055AFC(void) {
     func_8005456C(D_800C54D0);
     func_8005456C(D_800C54D4);
     HuPrcKill(D_800D83A0);
@@ -217,15 +217,15 @@ void func_80055B50(s32 arg0, s32 arg1) {
     D_800C54D4 = arg1;
 }
 
-void func_80055B64() {
+void func_80055B64(void) {
     func_80054868(0x16);
 }
 
-void func_80055B80() {
+void func_80055B80(void) {
     func_80054868(0x17);
 }
 
-void func_80055B9C() {
+void func_80055B9C(void) {
     s32 i;
 
     while (1) {
@@ -254,7 +254,7 @@ void func_80055B9C() {
     }
 }
 
-void func_80055D28() {
+void func_80055D28(void) {
     s32 lives;
 
     while (1) {
@@ -275,7 +275,7 @@ void func_80055D28() {
     }
 }
 
-void func_80055E08() {
+void func_80055E08(void) {
     s32 coins;
 
     while (1) {
@@ -296,7 +296,7 @@ void func_80055E08() {
     }
 }
 
-void func_80055EE8() {
+void func_80055EE8(void) {
     void* file;
     s32 i;
 
@@ -321,12 +321,12 @@ void func_80055EE8() {
         }
     }
     
-    D_800D86A8 = InitProcess(func_80055B9C, 0U, 0, 0);
+    D_800D86A8 = omAddPrcObj(func_80055B9C, 0U, 0, 0);
     func_8005D900(D_800D86A8, 0x80);
 }
 
 
-void func_8005608C() {
+void func_8005608C(void) {
     Process* process;
     void* file;
     s32 i;
@@ -369,11 +369,11 @@ void func_8005608C() {
         }
     }
 
-    D_800D8558 = InitProcess(func_80055D28, 0, 0, 0);
+    D_800D8558 = omAddPrcObj(func_80055D28, 0, 0, 0);
     func_8005D900(D_800D8558, 0x80);
 }
 
-void func_80056380() {
+void func_80056380(void) {
     Process* process;
     void* file;
     s32 i;
@@ -407,17 +407,17 @@ void func_80056380() {
         }
     }
 
-    D_800D85D0 = InitProcess(func_80055E08, 0, 0, 0);
+    D_800D85D0 = omAddPrcObj(func_80055E08, 0, 0, 0);
     func_8005D900(D_800D85D0, 0x80);
 }
 
-void func_800565B4() {
+void func_800565B4(void) {
     func_8005608C();
     func_80056380();
     func_80055EE8();
 }
 
-void func_800565E0() {
+void func_800565E0(void) {
     func_80077044(D_800D85D8);
     func_80077044(D_800D8640);
     func_80067704(D_800D85D6);
@@ -425,7 +425,7 @@ void func_800565E0() {
     EndProcess(D_800D86A8);
 }
 
-void func_80056630() {
+void func_80056630(void) {
     func_80067704(D_800D84E2);
     func_80064D38(D_800D84E0);
     func_80077044(D_800D84F0);
@@ -437,7 +437,7 @@ void func_80056630() {
 }
 
 
-void func_800566A4() {
+void func_800566A4(void) {
     func_80077044(D_800D8568);
     func_80067704(D_800D855E);
     func_80064D38(D_800D855C);
@@ -446,7 +446,7 @@ void func_800566A4() {
     EndProcess(D_800D85D0);
 }
 
-void func_80056700() {
+void func_80056700(void) {
     func_80056630();
     func_800566A4();
     func_800565E0();

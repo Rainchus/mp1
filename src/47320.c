@@ -35,39 +35,39 @@ void func_80046760(void) {
     D_800D6500 &= 0xCF;
 }
 
-void func_80046828(unkObjectStruct* arg0) {
+void func_80046828(omObjData* arg0) {
     Vec2s* temp;
     s32 i;
     
-    switch (arg0->unk_4C[0]) {
+    switch (arg0->work[0]) {
     case 0:
-        arg0->unk_24 =  arg0->unk_24 + 30.0f;
-        arg0->unk_30 = sinf(arg0->unk_24 * D_800CAFF0) * 0.5f + 1.0f;
+        arg0->rot.x =  arg0->rot.x + 30.0f;
+        arg0->scale.x = sinf(arg0->rot.x * D_800CAFF0) * 0.5f + 1.0f;
         
         for (i = 1; (((D_800D6658 + 1) / 10) + 1) >= i; i++) {
-            func_80067354(D_800D65FC[D_800D6654], i, arg0->unk_30, arg0->unk_30);
+            func_80067354(D_800D65FC[D_800D6654], i, arg0->scale.x, arg0->scale.x);
         }
         
-        if (arg0->unk_24 >= 360.0f) {
-            arg0->unk_24 -=  360.0f;
+        if (arg0->rot.x >= 360.0f) {
+            arg0->rot.x -=  360.0f;
         }
 
         return;
     case 1:
         
         for (i = 1; (((D_800D6658 + 1) / 10) + 1) >= i; i++) {
-            func_8006752C(D_800D65FC[D_800D6654], i, arg0->unk_4C[1]);
+            func_8006752C(D_800D65FC[D_800D6654], i, arg0->work[1]);
         }
 
         for (i = 1; i < 5; i++) {
-            func_8006752C(D_800D652C[D_800D6650.x], i, arg0->unk_4C[1]);
-            func_8006752C(D_800D6594[D_800D6650.y], i, arg0->unk_4C[1]);
+            func_8006752C(D_800D652C[D_800D6650.x], i, arg0->work[1]);
+            func_8006752C(D_800D6594[D_800D6650.y], i, arg0->work[1]);
         }
 
-        arg0->unk_4C[1] -=  0xA;
+        arg0->work[1] -=  0xA;
         
-        if (arg0->unk_4C[1] == 0) {
-            arg0->unk_4C[0] = 2;
+        if (arg0->work[1] == 0) {
+            arg0->work[0] = 2;
             return;
         }
         break;
@@ -89,31 +89,31 @@ void func_800471FC(void) {
     D_800D6510 = 1;
 }
 
-void func_8004720C(unkObjectStruct* arg0) {
-    arg0->unk_1C = 74.0f - (sinf((f32) ((f64) arg0->unk_28 * D_800CB008)) * 5.0f);
-    arg0->unk_28 += 8.0f;
+void func_8004720C(omObjData* arg0) {
+    arg0->trans.y = 74.0f - (sinf((f32) ((f64) arg0->rot.y * D_800CB008)) * 5.0f);
+    arg0->rot.y += 8.0f;
     
-    if (arg0->unk_28 >= 360.0f) {
-        arg0->unk_28 -=  360.0f;
+    if (arg0->rot.y >= 360.0f) {
+        arg0->rot.y -=  360.0f;
     }
     
-    func_80066DC4(D_800D64A4[D_800D64F8], 0, (arg0->unk_18 + arg0->unk_24), arg0->unk_1C);
-    func_80066DC4(D_800D6502, 0, (s32)arg0->unk_18 + 0x54, (s32)arg0->unk_1C - 0x23);
+    func_80066DC4(D_800D64A4[D_800D64F8], 0, (arg0->trans.x + arg0->rot.x), arg0->trans.y);
+    func_80066DC4(D_800D6502, 0, (s32)arg0->trans.x + 0x54, (s32)arg0->trans.y - 0x23);
 }
 
-void func_80047348(unkObjectStruct* arg0) {
-    arg0->unk_18 -= 19.0f;
+void func_80047348(omObjData* arg0) {
+    arg0->trans.x -= 19.0f;
     
-    if (arg0->unk_18 == 80.0f) {
+    if (arg0->trans.x == 80.0f) {
         arg0->func_ptr = &func_8004720C;
         D_800D64FC = D_800F383C;
-        arg0->unk_30 = arg0->unk_18;
-        arg0->unk_34 = arg0->unk_1C;
-        arg0->unk_28 = 0.0f;
+        arg0->scale.x = arg0->trans.x;
+        arg0->scale.y = arg0->trans.y;
+        arg0->rot.y = 0.0f;
     }
     
-    func_80066DC4(D_800D64A4[D_800D64F8], 0, arg0->unk_18 + arg0->unk_24, arg0->unk_1C);
-    func_80066DC4(D_800D6502, 0, (s32)arg0->unk_18 + 0x54, (s32) arg0->unk_1C - 0x23);
+    func_80066DC4(D_800D64A4[D_800D64F8], 0, arg0->trans.x + arg0->rot.x, arg0->trans.y);
+    func_80066DC4(D_800D6502, 0, (s32)arg0->trans.x + 0x54, (s32) arg0->trans.y - 0x23);
 }
 
 void func_8004746C(s32 arg0) {
@@ -153,27 +153,27 @@ void func_8004746C(s32 arg0) {
 }
 
 void func_80047694(s32 arg0) {
-    unkObjectStruct* temp_v0;
+    omObjData* temp_v0;
 
     if (!(D_800D6500 & 4)) {
         func_8004746C(arg0);
-        temp_v0 = func_8005D384(-0x8000, 0, 0, -1, &func_80046E84);
+        temp_v0 = omAddObj(-0x8000, 0, 0, -1, &func_80046E84);
         D_800D6508 = temp_v0;
-        temp_v0->unk_18 = 380.0f;
-        temp_v0->unk_1C = 100.0f;
+        temp_v0->trans.x = 380.0f;
+        temp_v0->trans.y = 100.0f;
         
         if (arg0 >= 4) {
-            temp_v0->unk_24 = D_800C4EF6;
+            temp_v0->rot.x = D_800C4EF6;
         } else {
-            temp_v0->unk_24 = D_800C4EF0[gPlayers[arg0].characterID];
+            temp_v0->rot.x = D_800C4EF0[gPlayers[arg0].characterID];
         }
 
-        temp_v0->unk_3C = 0;
-        temp_v0->unk_2C = 0.001f;
-        temp_v0->unk_4C[0] = 0;
-        temp_v0->unk_4C[1] = 0x2D;
-        temp_v0->unk_4C[2] = 0x2D;
-        temp_v0->unk_4C[3] = 0;
+        temp_v0->mdlcnt = 0;
+        temp_v0->rot.z = 0.001f;
+        temp_v0->work[0] = 0;
+        temp_v0->work[1] = 0x2D;
+        temp_v0->work[2] = 0x2D;
+        temp_v0->work[3] = 0;
         D_800D64FC = 0;
         D_800D6500 = 0x15;
         D_800D6510 = 0;
@@ -184,7 +184,7 @@ void func_80047694(s32 arg0) {
 INCLUDE_ASM(s32, "47320", func_800477AC);
 
 void func_800479B8(s32 arg0) {
-    unkObjectStruct* obj;
+    omObjData* obj;
     void* file;
     tempTest copyTempTest;
 
@@ -202,17 +202,17 @@ void func_800479B8(s32 arg0) {
     func_80067384(D_800D6502, 0, 0x10);
     func_800674BC(D_800D6502, 0, 0x1000U);
     func_80066DC4(D_800D6502, 0, 0xA0, 0x78);
-    obj = func_8005D384(-0x8000, 0, 0, -1, &func_80046B24);
+    obj = omAddObj(-0x8000, 0, 0, -1, &func_80046B24);
     D_800D6508 = obj;
-    obj->unk_30 = 0.0f;
-    obj->unk_24 = 180.0f;
-    obj->unk_4C[2] = 0x1E;
-    obj->unk_4C[0] = 1;
-    obj->unk_4C[1] = 0xC;
+    obj->scale.x = 0.0f;
+    obj->rot.x = 180.0f;
+    obj->work[2] = 0x1E;
+    obj->work[0] = 1;
+    obj->work[1] = 0xC;
     if (D_800D650C != NULL) {
-        obj->unk_4C[1] = 0x18;
+        obj->work[1] = 0x18;
     }
-    obj->unk_4C[3] = arg0;
+    obj->work[3] = arg0;
 }
 
 s32 func_80047B68(void) {
@@ -235,10 +235,10 @@ void func_80047BE0(s32 arg0) {
         func_8004746C(-1);
         D_800D64F8 = func_80076740(D_800D6490, (char*) D_800C4ED0[var_s1], 0, 0, 0);
         func_80066DC4(D_800D64A4[D_800D64F8], 0, 0x1C0, 0x4A);
-        D_800D6508 = func_8005D384(-0x8000, 0, 0, -1, &func_80047348);
-        D_800D6508->unk_18 = 384.0f;
-        D_800D6508->unk_1C = 74.0f;
-        D_800D6508->unk_24 = D_800C4EEC[var_s1];
+        D_800D6508 = omAddObj(-0x8000, 0, 0, -1, &func_80047348);
+        D_800D6508->trans.x = 384.0f;
+        D_800D6508->trans.y = 74.0f;
+        D_800D6508->rot.x = D_800C4EEC[var_s1];
         D_800D64FC = 0;
         D_800D6500 = 54;
         
@@ -291,7 +291,7 @@ Process* func_80047E54(void) {
     Process* temp_v0;
     unkUserData* temp_v0_2;
 
-    temp_v0 = InitProcess(func_80047DBC, 0, 0, 0x40);
+    temp_v0 = omAddPrcObj(func_80047DBC, 0, 0, 0x40);
     temp_v0_2 = HuMemMemoryAlloc(temp_v0->heap, sizeof(unkUserData));
     temp_v0->user_data = temp_v0_2;
     temp_v0_2->unk0 = 0;
@@ -303,7 +303,7 @@ Process* func_80047EAC(void) {
     Process* temp_v0;
     unkUserData* temp_v0_2;
 
-    temp_v0 = InitProcess(func_80047DBC, 0, 0, 0x40);
+    temp_v0 = omAddPrcObj(func_80047DBC, 0, 0, 0x40);
     temp_v0_2 = HuMemMemoryAlloc(temp_v0->heap, sizeof(unkUserData));
     temp_v0->user_data = temp_v0_2;
     temp_v0_2->unk0 = 0;
@@ -349,7 +349,7 @@ Process* func_80048000(s32 arg0) {
     Process* temp_v0;
     unkUserData* temp_v0_2;
 
-    temp_v0 = InitProcess(func_80047F04, 0, 0, 0x40);
+    temp_v0 = omAddPrcObj(func_80047F04, 0, 0, 0x40);
     temp_v0_2 = HuMemMemoryAlloc(temp_v0->heap, sizeof(unkUserData));
     temp_v0->user_data = temp_v0_2;
     temp_v0_2->unk0 = 0;
@@ -398,7 +398,7 @@ Process* func_80048134(void) {
     Process* temp_v0;
     unkUserData* temp_v0_2;
 
-    temp_v0 = InitProcess(func_80048060, 0, 0, 64);
+    temp_v0 = omAddPrcObj(func_80048060, 0, 0, 64);
     temp_v0_2 = HuMemMemoryAlloc(temp_v0->heap, sizeof(unkUserData));
     temp_v0->user_data = temp_v0_2;
     temp_v0_2->unk0 = 0;

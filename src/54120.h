@@ -90,4 +90,4 @@ extern s16 D_800D8654;
 extern s16 D_800F329A;
 extern s16 D_800F3750;
 extern f32 D_800C5654[];
-void func_8005528C(unkObjectStruct* arg0);
+void func_8005528C(omObjData* arg0);

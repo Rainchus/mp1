@@ -84,12 +84,12 @@ void func_800176C4(u8 arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, f3
     func_8001D520(i & 0xff, &D_800C2F04[arg0], &D_800C2F4C[arg0]);
 }
 
-void func_8001775C(unkObjectStruct* arg0, u16 arg1, s32 arg2) {
+void func_8001775C(omObjData* arg0, u16 arg1, s32 arg2) {
     s16 temp_v0;
 
     temp_v0 = func_8001755C(arg2);
     if (temp_v0 >= 0) {
-        arg0->unk_48[arg1] = temp_v0;
+        arg0->motion[arg1] = temp_v0;
     }
 }
 

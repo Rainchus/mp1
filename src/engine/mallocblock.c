@@ -26,7 +26,7 @@ void* HuMemAlloc(s32 size) {
     return func_800236A4(size, 0);
 }
 
-void* func_80023684(s32 size, s16 arg1) {
+void* HuMemTempDirectMalloc(s32 size, s16 arg1) {
     return func_800236A4(size, arg1);
 }
 
@@ -74,7 +74,7 @@ void func_80023780(unkMallocBlockStruct* arg0) {
     D_800F33A4(arg0->unk_00);
 }
 
-void func_800237BC(s16 arg0) {
+void HuMemTempDirectFree(s16 arg0) {
     unkMallocBlockStruct* var_a0 = D_800F65DC->unk_14;
     unkMallocBlockStruct* temp_s0;
 
@@ -157,7 +157,7 @@ void func_800239EC(void) {
     if (D_800C32A0 != 0) {
         func_80023974();
     } else if (D_800ECB10 != 0) {
-        func_800237BC(-1);
+        HuMemTempDirectFree(-1);
     }
 }
 

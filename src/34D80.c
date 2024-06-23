@@ -85,7 +85,7 @@ s16 func_800342E0(unk2C0C0StructC0* arg0, u8* arg1, s16 arg2) {
     }
 
     temp_s0 = var_a1[1] + 4;
-    temp_v0 = func_80023684(temp_s0, D_800F0A28);
+    temp_v0 = HuMemTempDirectMalloc(temp_s0, D_800F0A28);
 
     func_80023A38(arg1, temp_v0, temp_s0);
     func_80034E04(&D_800ED554[arg2], temp_v0);
@@ -135,10 +135,10 @@ s32 func_800344BC(unk34D80Struct80* arg0, unk2C0C0StructC0* arg1) {
         return 0;
     }
 
-    arg0->unk_04 = func_80023684(var_s0 * sizeof(unk34D80Struct60*), D_800F0A28);
-    arg0->unk_08 = func_80023684(var_s0 * sizeof(u8), D_800F0A28);
-    sp44 = arg0->unk_0C = func_80023684(4096 * sizeof(s16), D_800F0A28);
-    sp3C = arg0->unk_10 = func_80023684(4096 * sizeof(s32), D_800F0A28);
+    arg0->unk_04 = HuMemTempDirectMalloc(var_s0 * sizeof(unk34D80Struct60*), D_800F0A28);
+    arg0->unk_08 = HuMemTempDirectMalloc(var_s0 * sizeof(u8), D_800F0A28);
+    sp44 = arg0->unk_0C = HuMemTempDirectMalloc(4096 * sizeof(s16), D_800F0A28);
+    sp3C = arg0->unk_10 = HuMemTempDirectMalloc(4096 * sizeof(s32), D_800F0A28);
 
     D_800D6022 = 0;
     D_800D6020 = 0;
@@ -156,7 +156,7 @@ s32 func_800344BC(unk34D80Struct80* arg0, unk2C0C0StructC0* arg1) {
             }
 
             var_s2 += 13;
-            sp14 = func_80023684(temp_s3 * sizeof(unk34D80Struct60), D_800F0A28);
+            sp14 = HuMemTempDirectMalloc(temp_s3 * sizeof(unk34D80Struct60), D_800F0A28);
 
             for (i = 0; i < temp_s3; i++) {
                 temp_a0 = var_s2[2];
@@ -181,7 +181,7 @@ s32 func_800344BC(unk34D80Struct80* arg0, unk2C0C0StructC0* arg1) {
                         break;
                     case 8:
                         if (var_s6 == 0) {
-                            arg1->unk_B8 = func_80023684(sizeof(unk2C0C0StructB8), arg1->unk_68 + 1);
+                            arg1->unk_B8 = HuMemTempDirectMalloc(sizeof(unk2C0C0StructB8), arg1->unk_68 + 1);
                         }
                         if (func_80034C28(arg1, var_s6, var_s2 + 4) != 0) {
                             var_s6++;
@@ -211,11 +211,11 @@ s32 func_800344BC(unk34D80Struct80* arg0, unk2C0C0StructC0* arg1) {
         arg1->unk_B8->unk_02 = 0;
     }
 
-    arg0->unk_0C = func_80023684(D_800D6020 * sizeof(s16), D_800F0A28);
+    arg0->unk_0C = HuMemTempDirectMalloc(D_800D6020 * sizeof(s16), D_800F0A28);
     func_80023A38(sp44, arg0->unk_0C, D_800D6020 * sizeof(s16));
     func_80023728(sp44);
 
-    arg0->unk_10 = func_80023684(D_800D6022 * sizeof(s32), D_800F0A28);
+    arg0->unk_10 = HuMemTempDirectMalloc(D_800D6022 * sizeof(s32), D_800F0A28);
     func_80023A38(sp3C, arg0->unk_10, D_800D6022 * sizeof(s32));
     func_80023728(sp3C);
 
@@ -241,8 +241,8 @@ s32 func_80034C28(unk2C0C0StructC0* arg0, s16 arg1, u8* arg2) {
     arg0->unk_A8[temp_s3->unk_00].unk_0C |= 5;
 
     temp_s0 = temp_s3->unk_02 = (arg2[6] << 8) + arg2[7];
-    temp_s3->unk_08 = func_80023684(temp_s0 * sizeof(u16), arg0->unk_68 + 1);
-    temp_s3->unk_0C = func_80023684(temp_s0 * sizeof(s32), arg0->unk_68 + 1);
+    temp_s3->unk_08 = HuMemTempDirectMalloc(temp_s0 * sizeof(u16), arg0->unk_68 + 1);
+    temp_s3->unk_0C = HuMemTempDirectMalloc(temp_s0 * sizeof(s32), arg0->unk_68 + 1);
 
     arg2 += 8;
 
@@ -274,7 +274,7 @@ s32 func_80034E04(unk34D80Struct80* arg0, unk34D80Struct40* arg1) {
     arg0->unk_08 = (void*) arg1 + arg1->unk_0C;
     arg0->unk_0C = (void*) arg1 + arg1->unk_10;
     arg0->unk_10 = (void*) arg1 + arg1->unk_14;
-    arg0->unk_04 = func_80023684(temp_s3 * sizeof(unk34D80Struct60*), D_800F0A28);
+    arg0->unk_04 = HuMemTempDirectMalloc(temp_s3 * sizeof(unk34D80Struct60*), D_800F0A28);
 
     var_a1 = arg1->unk_18;
     for (i = 0; i < temp_s3; i++) {

@@ -137,7 +137,7 @@ void func_80052DC8(s16 index, void *param_2) {
 
     player->playerObj = CreateObject(character, param_2);
 
-    process = InitProcess(func_80052D34, 0x5000, 0, 0);
+    process = omAddPrcObj(func_80052D34, 0x5000, 0, 0);
     player->process = process;
     process->user_data = player;
 }

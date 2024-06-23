@@ -86,7 +86,7 @@ Process* func_80050E10(s16 arg0, s32 arg1) {
     Process* process;
     unkMallocStruct* processUserData;
 
-    process = InitProcess(func_80050D68, 0x1005, 0, 0x40);
+    process = omAddPrcObj(func_80050D68, 0x1005, 0, 0x40);
     processUserData = HuMemMemoryAlloc(process->heap, sizeof(unkMallocStruct));
     process->user_data = processUserData;
     processUserData->unk0 = arg1;

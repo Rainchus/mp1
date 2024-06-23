@@ -30,6 +30,12 @@ typedef struct Vec3f {
                f32 z;
 } Vec3f;
 
+typedef struct Vec {
+               f32 x;
+               f32 y;
+               f32 z;
+} Vec;
+
 typedef struct Vec3s {
                s32 x;
                s32 y;
@@ -147,34 +153,29 @@ typedef struct unkGlobalStruct_02 {
     /* 0x28 */ unkGlobalStruct_01* unk_28;
 } unkGlobalStruct_02; //sizeof 0x2C
 
-typedef struct unkObjectStruct {
-/* 0x00 */ s16 unk_00;
-/* 0x02 */ s16 unk_02;
-/* 0x04 */ s16 unk_04;
-/* 0x00 */ char unk_06[4];
-/* 0x0A */ s16 unk_0A;
-/* 0x0C */ s16 unk_0C;
-/* 0x0E */ s16 unk_0E;
+typedef struct omObjData {
+/* 0x00 */ u16 stat;
+/* 0x02 */ s16 next_idx_alloc;
+/* 0x04 */ s16 prio;
+/* 0x06 */ s16 prev;
+/* 0x08 */ s16 next;
+/* 0x0A */ s16 next_idx;
+/* 0x0C */ s16 group;
+/* 0x0E */ s16 group_idx;
 /* 0x10 */ s32 unk_10;
 /* 0x14 */ void* func_ptr;
-/* 0x18 */ f32 unk_18;
-/* 0x1C */ f32 unk_1C;
-/* 0x20 */ f32 unk_20;
-/* 0x24 */ f32 unk_24;
-/* 0x28 */ f32 unk_28;
-/* 0x2C */ f32 unk_2C;
-/* 0x30 */ f32 unk_30;
-/* 0x34 */ f32 unk_34;
-/* 0x38 */ f32 unk_38;
-/* 0x3C */ s16 unk_3C;
-/* 0x3E */ char unk_3E[2];
-/* 0x40 */ s16* unk_40;
-/* 0x44 */ u16 unk_44;
-/* 0x46 */ char unk_46[2];
-/* 0x48 */ s16* unk_48;
-/* 0x4C */ u8  unk_4C[4];
+/* 0x18 */ Vec trans;
+/* 0x24 */ Vec rot;
+/* 0x30 */ Vec scale;
+/* 0x3C */ u16 mdlcnt;
+// /* 0x3E */ char unk_3E[2];
+/* 0x40 */ s16* model;
+/* 0x44 */ u16 mtncnt;
+// /* 0x46 */ char unk_46[2];
+/* 0x48 */ s16* motion;
+/* 0x4C */ u8 work[4];
 /* 0x50 */ void* unk_50;
-} unkObjectStruct; //sizeof 0x54
+} omObjData; //sizeof 0x54
 
 typedef struct unkCommonStruct0 {
     /* 0x00 */ u8 unk_00;

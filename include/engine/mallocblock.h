@@ -19,7 +19,7 @@ void* HuMemAlloc(s32);
 void* func_800236A4(s32, s16);
 void func_80023728(void*);
 void func_80023780(unkMallocBlockStruct*);
-void func_800237BC(s16);
+void HuMemTempDirectFree(s16);
 void func_80023888(void*);
 void func_80023974();
 void func_80023A38(void*, void*, s32);

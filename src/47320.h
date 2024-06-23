@@ -46,5 +46,5 @@ extern s16 D_800D64F8;
 extern u8 D_800D6500;
 extern s16 D_800D6502;
 extern Vec2s D_800D6504;
-extern unkObjectStruct* D_800D6508;
-extern unkObjectStruct* D_800D650C;
+extern omObjData* D_800D6508;
+extern omObjData* D_800D650C;

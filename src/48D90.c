@@ -466,7 +466,7 @@ void func_8004AFFC(void) {
     D_800D80BC.x = 159.5f;
     D_800D80BC.y = 119.5f;
     D_800D80B4 = 1.0f;
-    temp_v0 = InitProcess(&func_8004B208, 0x1001, 0, 0);
+    temp_v0 = omAddPrcObj(&func_8004B208, 0x1001, 0, 0);
     D_800D80B0 = temp_v0;
     func_8005D900(temp_v0, 0x80);
     func_8001D494(0, ((f32*)D_800C4F78)[4], 80.0f, 8000.0f);

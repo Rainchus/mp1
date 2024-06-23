@@ -453,9 +453,9 @@ s32 func_80073008(Gfx** arg0) {
     unk72D90Struct0* temp_v0;
 
     if (D_800F5024 == 0.0f) {
-        temp_v0 = D_800ED438 = func_80023684(sizeof(unk72D90Struct0), 28000);
-        temp_v0->unk_00 = func_80023684(400 * sizeof(Vtx), 28000);
-        temp_v0->unk_04 = func_80023684(1000 * sizeof(Gfx), 28000);
+        temp_v0 = D_800ED438 = HuMemTempDirectMalloc(sizeof(unk72D90Struct0), 28000);
+        temp_v0->unk_00 = HuMemTempDirectMalloc(400 * sizeof(Vtx), 28000);
+        temp_v0->unk_04 = HuMemTempDirectMalloc(1000 * sizeof(Gfx), 28000);
         func_80073100(temp_v0->unk_04, temp_v0->unk_00);
     }
 
@@ -2462,7 +2462,7 @@ void func_8007B4AC(void) {
 }
 
 void func_8007B4EC(void) {
-    D_800F0A24 = InitProcess(func_8007B52C, 0x3FFF, 0x800, 0);
+    D_800F0A24 = omAddPrcObj(func_8007B52C, 0x3FFF, 0x800, 0);
     func_8005D900(D_800F0A24, 0xA0);
 }
 

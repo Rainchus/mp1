@@ -94,7 +94,7 @@ void func_8001AC00(unk2C0C0StructC0* arg0, u8* arg1, s16 arg2) {
         return;
     }
 
-    arg0->unk_80 = func_80023684(temp_v0 * sizeof(unk2C0C0Struct30), D_800EE32E);
+    arg0->unk_80 = HuMemTempDirectMalloc(temp_v0 * sizeof(unk2C0C0Struct30), D_800EE32E);
     var_s3 += 4;
 
     for (var_fp = var_s6 = i = 0; i < temp_v0; i++) {
@@ -136,7 +136,7 @@ void func_8001AC00(unk2C0C0StructC0* arg0, u8* arg1, s16 arg2) {
                 break;
             case 61:
                 if (var_fp == 0) {
-                    arg0->unk_A0 = func_80023684(temp_v0 * sizeof(unk2C0C0Struct50), D_800EE32E);
+                    arg0->unk_A0 = HuMemTempDirectMalloc(temp_v0 * sizeof(unk2C0C0Struct50), D_800EE32E);
                 }
                 func_8001BF64(arg0, var_fp, var_s3 + 5);
                 var_fp++;
@@ -187,7 +187,7 @@ s16 func_8001B290(unk2C0C0StructC0* arg0, u8* arg1) {
     }
 
     arg0->unk_84 = temp_s4 = *(var_s1 + 10);
-    arg0->unk_88 = func_80023684(temp_s4 * sizeof(unk2C0C0Struct40), D_800EE32E);
+    arg0->unk_88 = HuMemTempDirectMalloc(temp_s4 * sizeof(unk2C0C0Struct40), D_800EE32E);
     var_s1 += 11;
 
     for (i = 0; i < temp_s4; i++) {
@@ -283,10 +283,10 @@ void func_8001B6FC(unk2C0C0StructC0* arg0) {
         return;
     }
 
-    arg0->unk_78 = func_80023684(temp_v0 * sizeof(unk2C0C0StructA0), D_800F502C);
+    arg0->unk_78 = HuMemTempDirectMalloc(temp_v0 * sizeof(unk2C0C0StructA0), D_800F502C);
     var_s2 = (s16*) arg0->unk_78;
 
-    arg0->unk_7C = func_80023684(temp_v0 * sizeof(Color_RGB8), D_800F502C);
+    arg0->unk_7C = HuMemTempDirectMalloc(temp_v0 * sizeof(Color_RGB8), D_800F502C);
     var_a0 = (u8*) arg0->unk_7C;
 
     temp_a1.s = (var_s1[12] << 24) + (var_s1[13] << 16) + (var_s1[14] << 8) + var_s1[15];
@@ -336,7 +336,7 @@ s16 func_8001B900(unk2C0C0StructC0* arg0) {
     }
 
     arg0->unk_76 = temp_v0;
-    arg0->unk_A8 = func_80023684(temp_v0 * sizeof(unk2C0C0Struct90), D_800EE32E);
+    arg0->unk_A8 = HuMemTempDirectMalloc(temp_v0 * sizeof(unk2C0C0Struct90), D_800EE32E);
     var_a2 = arg0->unk_4C + 0xA;
 
     for (i = 0; i < temp_v0; i++) {
@@ -388,7 +388,7 @@ s16 func_8001BD60(unk2C0C0StructC0* arg0) {
     temp_v0 = arg0->unk_54;
     temp_s0 = (temp_v0[8] << 8) + temp_v0[9];
 
-    arg0->unk_A4 = func_80023684(temp_s0 * sizeof(unk2C0C0Struct80), D_800EE32E);
+    arg0->unk_A4 = HuMemTempDirectMalloc(temp_s0 * sizeof(unk2C0C0Struct80), D_800EE32E);
     sp14 = HuMemAlloc(temp_s0 * 2);
 
     var_s1 = arg0->unk_54 + 0xA;
@@ -457,7 +457,7 @@ s16 func_8001BF64(unk2C0C0StructC0* arg0, u16 arg1, u8* arg2) {
     temp_s2 = &arg0->unk_A0[arg1];
 
     temp_s0 = temp_s2->unk_00 = (arg2[0] << 8) + arg2[1];
-    temp_s2->unk_04 = func_80023684(temp_s0 * sizeof(s16), D_800EE32E);
+    temp_s2->unk_04 = HuMemTempDirectMalloc(temp_s0 * sizeof(s16), D_800EE32E);
     arg2 += 2;
 
     for (i = 0; i < temp_s0; i++) {

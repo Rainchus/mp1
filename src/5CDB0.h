@@ -3,10 +3,10 @@
 s16 func_80010ED4(s16, s16);
 void func_8001249C(s16, u8);
 s32 func_80012C7C(s16);
-void func_8005D5F4(unkObjectStruct*);
-void func_8005DA64(u16, unkObjectStruct*);
+void func_8005D5F4(omObjData*);
+void func_8005DA64(u16, omObjData*);
 
-extern unkObjectStruct* D_800C5984;
+extern omObjData* D_800C5984;
 extern unkProcessStruct* D_800C5990;
 extern s16 D_800C5988;
 extern s16 D_800C598A;

@@ -85,7 +85,7 @@ s32 LoadFormBinary(u8* arg0, u32 arg1) {
             }
         }
         if (j == temp_v0->unk_6A) {
-            func_800237BC(D_800F502C);
+            HuMemTempDirectFree(D_800F502C);
         }
     }
 

@@ -69,51 +69,51 @@ void func_8005CEDC(s32 arg0) {
     D_800F37BC[temp_a1] = D_800F37BC[temp_a1] & ~(1 << (arg0 - ((var_v0 >> 3) * 8)));
 }
 
-INCLUDE_ASM(s32, "5CDB0", InitObjSystem);
+INCLUDE_ASM(s32, "5CDB0", omInitObjMan);
 
-INCLUDE_ASM(s32, "5CDB0", func_8005D184);
+INCLUDE_ASM(s32, "5CDB0", omDestroyObjMan);
 
-unkObjectStruct* func_8005D384(s16 arg0, u16 arg1, u16 arg2, s16 arg3, void* arg4) {
-    unkObjectStruct* temp_s0;
+omObjData* omAddObj(s16 arg0, u16 arg1, u16 arg2, s16 arg3, void* arg4) {
+    omObjData* temp_s0;
 
     if (D_800ED56C == D_800ED550) {
         return NULL;
     }
 
     temp_s0 = &D_800C5984[D_800F65BA];
-    temp_s0->unk_02 = D_800F65BA;
-    temp_s0->unk_04 = arg0;
+    temp_s0->next_idx_alloc = D_800F65BA;
+    temp_s0->prio = arg0;
     func_8005D5F4(temp_s0);
 
     if (arg1 != 0) {
-        temp_s0->unk_40 = func_80023684(arg1 * sizeof(s16), 0x7918);
-        temp_s0->unk_3C = arg1;
+        temp_s0->model = HuMemTempDirectMalloc(arg1 * sizeof(s16), 0x7918);
+        temp_s0->mdlcnt = arg1;
     } else {
-        temp_s0->unk_40 = NULL;
-        temp_s0->unk_3C = 0;
+        temp_s0->model = NULL;
+        temp_s0->mdlcnt = 0;
     }
 
     if (arg2 != 0) {
-        temp_s0->unk_48 = func_80023684(arg2 * sizeof(s16), 0x7918);
-        temp_s0->unk_44 = arg2;
+        temp_s0->motion = HuMemTempDirectMalloc(arg2 * sizeof(s16), 0x7918);
+        temp_s0->mtncnt = arg2;
     } else {
-        temp_s0->unk_48 = NULL;
-        temp_s0->unk_44 = 0;
+        temp_s0->motion = NULL;
+        temp_s0->mtncnt = 0;
     }
 
     if (arg3 >= 0) {
         func_8005DA64(arg3, temp_s0);
     } else {
-        temp_s0->unk_0C = arg3;
-        temp_s0->unk_0E = 0;
+        temp_s0->group = arg3;
+        temp_s0->group_idx = 0;
     }
 
-    temp_s0->unk_00 = 4;
+    temp_s0->stat = 4;
     temp_s0->unk_10 = 0;
     temp_s0->func_ptr = arg4;
-    temp_s0->unk_4C[0] = temp_s0->unk_4C[1] = temp_s0->unk_4C[2] = temp_s0->unk_4C[3] = 0;
+    temp_s0->work[0] = temp_s0->work[1] = temp_s0->work[2] = temp_s0->work[3] = 0;
 
-    D_800F65BA = temp_s0->unk_0A;
+    D_800F65BA = temp_s0->next_idx;
     D_800ED56C++;
 
     return temp_s0;
@@ -159,7 +159,7 @@ INCLUDE_ASM(s32, "5CDB0", func_8005DBE4);
 
 INCLUDE_ASM(s32, "5CDB0", func_8005DC18);
 
-Process* InitProcess(void (*func)(), u16 priority, s32 stack_size, s32 extra_data_size) {
+Process* omAddPrcObj(void (*func)(), u16 priority, s32 stack_size, s32 extra_data_size) {
     unkProcessStruct* temp_s0;
     Process* process;
     s16 temp_s1;
@@ -172,7 +172,7 @@ Process* InitProcess(void (*func)(), u16 priority, s32 stack_size, s32 extra_dat
         process = HuPrcCreate(*func, priority, stack_size, extra_data_size);
         temp_s0->processInstance = process;
         process->dtor_idx = temp_s1;
-        HuPrcDestructorSet2(temp_s0->processInstance, &func_8005DDDC);
+        HuPrcDestructorSet2(temp_s0->processInstance, &omDelPrcObj);
         temp_s0->unk8 = 0;
         D_800C598A++;
         return temp_s0->processInstance;
@@ -194,7 +194,7 @@ Process* func_8005DCD8(process_func arg0, u16 arg1, s32 arg2, s32 arg3, Process*
         process = HuPrcChildCreate(arg0, arg1, arg2, arg3, arg4);
         temp_s0->processInstance = process;
         process->dtor_idx = temp_s1;
-        HuPrcDestructorSet2(temp_s0->processInstance, func_8005DDDC);
+        HuPrcDestructorSet2(temp_s0->processInstance, omDelPrcObj);
         temp_s0->unk8 = 0;
         D_800C598A++;
         return temp_s0->processInstance;
@@ -215,7 +215,7 @@ s32 EndProcess(Process* arg0) {
     return -1;
 }
 
-void func_8005DDDC() {
+void omDelPrcObj(void) {
     Process* temp_s1 = HuPrcCurrentGet();
     unkProcessStruct* temp_s0 = &D_800C5990[temp_s1->dtor_idx];
     
@@ -229,12 +229,12 @@ void func_8005DDDC() {
     D_800C598A--;
 }
 
-void func_8005DE6C(s32 arg0, void (*arg1)()) {
+void omDestroyPrcObj(s32 arg0, void (*arg1)()) {
     unkProcessStruct* temp = &D_800C5990[HuPrcCurrentGet()->dtor_idx];
     temp->unk8 = arg1;
 }
 
-void func_8005DEB0() {
+void omPrcSetDestructor(void) {
     unkProcessStruct* var_v1 = D_800C5990;
     s32 i;
     

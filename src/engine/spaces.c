@@ -302,7 +302,7 @@ void SpaceStepAnim(void) {
 /* Init Space Process. */
 void SetSpaceStepAnim(s16 spaceIndex) {
    Process *process;
-   process = InitProcess(SpaceStepAnim, 0xEF00, 0, 0);
+   process = omAddPrcObj(SpaceStepAnim, 0xEF00, 0, 0);
    process->user_data = (void *)(s32)spaceIndex;
 }
 
@@ -336,7 +336,7 @@ void SpaceDisappearAnim(void) {
 /* Init Space Process. */
 void SetSpaceDisappearAnim(s16 spaceIndex) {
    Process *process;
-   process = InitProcess(SpaceDisappearAnim, 0xEF00, 0, 0);
+   process = omAddPrcObj(SpaceDisappearAnim, 0xEF00, 0, 0);
    process->user_data = (void *)(s32)spaceIndex;
 }
 
@@ -370,7 +370,7 @@ void SpaceSpawnAnim(void) {
 /* Init Space process. */
 void SetSpaceSpawnAnim(s16 spaceIndex) {
    Process *process;
-   process = InitProcess(SpaceSpawnAnim, 0xEF00, 0, 0);
+   process = omAddPrcObj(SpaceSpawnAnim, 0xEF00, 0, 0);
    process->user_data = (void *)(s32)spaceIndex;
 }
 
@@ -447,7 +447,7 @@ s32 ExecuteEventForSpace(s16 index, s16 activationType) {
                case 2:
                   {
                      Process *currProcess = HuPrcCurrentGet();
-                     Process *spaceProcess = InitProcess(eventList->eventFunc, 0x4800, 0, 0);
+                     Process *spaceProcess = omAddPrcObj(eventList->eventFunc, 0x4800, 0, 0);
                      HuPrcChildLink(currProcess, spaceProcess);
                      HuPrcChildWatch();
                   }

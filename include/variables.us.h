@@ -40,10 +40,10 @@ extern s16 D_800F6EE2;
 extern s32 D_800EDEC0;
 extern u8 D_800F37F0;
 extern s16 D_800F3FA8;
-extern s16 process_count;
-extern Process* top_process;
+extern s16 processcnt;
+extern Process* processtop;
 extern jmp_buf process_jmp_buf; // 800E2370
-extern Process* current_process;
+extern Process* processcur;
 extern GameStatus D_800ED5C0;
 extern f32 D_800C34A4;
 extern s8 D_800ECE14[];

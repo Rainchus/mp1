@@ -210,7 +210,7 @@ void func_8002B4C0(void* (*arg0)(s32), void (*arg1)(void*), u16 arg2, u16 arg3, 
     D_800ED0C8 = 1;
 }
 
-void func_8002B6C8() {
+void func_8002B6C8(void) {
     func_800239EC();
 
     if (D_800F3854 != 0) {
@@ -244,7 +244,7 @@ void func_8002B6C8() {
     }
 }
 
-void func_8002B808() {
+void func_8002B808(void) {
     unk2C0C0StructF0** temp_v1;
     s16 i;
 
@@ -277,7 +277,7 @@ void func_8002B890(unk2C0C0StructC0* arg0) {
     temp_s7 = D_800F50BC;
     temp_s6 = D_800EE992;
 
-    arg0->unk_00 = func_80023684(arg0->unk_6A * sizeof(Gfx*), D_800EE32E);
+    arg0->unk_00 = HuMemTempDirectMalloc(arg0->unk_6A * sizeof(Gfx*), D_800EE32E);
 
     D_800F50BC = HuMemAlloc(4096 * sizeof(unk2C0C0StructE0));
     if (D_800F50BC == NULL) {
@@ -332,14 +332,14 @@ void func_8002B890(unk2C0C0StructC0* arg0) {
         gSPEndDisplayList(D_800F37DC++);
 
         temp_s0_2 = (D_800F37DC - var_s4) * sizeof(Gfx);
-        arg0->unk_00[i] = func_80023684(temp_s0_2, D_800EE32E);
+        arg0->unk_00[i] = HuMemTempDirectMalloc(temp_s0_2, D_800EE32E);
         func_80023A38(var_s4, arg0->unk_00[i], temp_s0_2);
     }
 
     arg0->unk_72 = D_800EE992;
     arg0->unk_74 = D_800F546A;
 
-    temp_v0 = func_80023684(D_800EE992 * sizeof(unk2C0C0StructE0), D_800EE32E);
+    temp_v0 = HuMemTempDirectMalloc(D_800EE992 * sizeof(unk2C0C0StructE0), D_800EE32E);
     func_80023A38(D_800F50BC, temp_v0, D_800EE992 * sizeof(unk2C0C0StructE0));
     arg0->unk_04 = temp_v0;
 
@@ -374,7 +374,7 @@ void func_8002BCD4(unk2C0C0StructC0* arg0) {
     }
 
     if (var_a3 && arg0->unk_D0 == NULL) {
-        arg0->unk_D0 = func_80023684(var_a2 * sizeof(unk2C0C0StructB0), D_800EE32E);
+        arg0->unk_D0 = HuMemTempDirectMalloc(var_a2 * sizeof(unk2C0C0StructB0), D_800EE32E);
     }
 }
 
@@ -1511,7 +1511,7 @@ void func_800318D0(u16 arg0) {
     }
 }
 
-void func_80031BB4() {
+void func_80031BB4(void) {
     gMoveWd(D_800F37DC++, G_MW_CLIP, G_MWO_CLIP_RNX, *(D_800ED0C8 * 2 + &D_800C3510[0]));
     gMoveWd(D_800F37DC++, G_MW_CLIP, G_MWO_CLIP_RNY, *(D_800ED0C8 * 2 + &D_800C3510[0]));
     gMoveWd(D_800F37DC++, G_MW_CLIP, G_MWO_CLIP_RPX, *(D_800ED0C8 * 2 + &D_800C3510[1]));

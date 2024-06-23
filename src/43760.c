@@ -68,7 +68,7 @@ void func_800437B8(void) {
 INCLUDE_ASM(s32, "43760", func_8004388C);
 
 void func_80043D68(void) {
-    D_800D6450->unk_4C[0] = 0;
+    D_800D6450->work[0] = 0;
 }
 
 INCLUDE_ASM(s32, "43760", func_80043D78);
@@ -81,7 +81,7 @@ Process* func_800444DC(void) {
     Process* process;
     s32* data;
 
-    process = InitProcess(&func_800441D4, 0, 0x2000, 0x40);
+    process = omAddPrcObj(&func_800441D4, 0, 0x2000, 0x40);
     data = HuMemMemoryAlloc(process->heap, 16);
     process->user_data = data;
     *data = 0;
@@ -131,7 +131,7 @@ Process* func_80044680(s32 arg0) {
     Process* process;
     unkUserData_00* userData;
 
-    process = InitProcess(func_8004452C, 0, 0x2000, 0x40);
+    process = omAddPrcObj(func_8004452C, 0, 0x2000, 0x40);
     userData = HuMemMemoryAlloc(process->heap, sizeof(unkUserData_00));
     process->user_data = userData;
     userData->unk_00 = 0;
@@ -145,7 +145,7 @@ Process* func_800448A0(s32 arg0) {
     Process* process;
     unkUserData_00* userData;
 
-    process = InitProcess(func_800446E0, 0, 0x2000, 0x40);
+    process = omAddPrcObj(func_800446E0, 0, 0x2000, 0x40);
     userData = HuMemMemoryAlloc(process->heap, sizeof(unkUserData_00));
     process->user_data = userData;
     userData->unk_00 = 10;
