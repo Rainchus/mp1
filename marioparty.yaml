@@ -504,6 +504,10 @@ segments:
       - [0xC8AB0, data, B1DC0]
       - [0xC8AC0, data, B1FD0]
       - [0xC8AD0, rodata] #is this rodata or data?
+      - [0xC8AE0, rodata]
+      - [0xC8DC0, rodata]
+      - [0xCA030, rodata]
+      - [0xCA7B0, rodata]
       - [0xCAA70, rodata, 1130]
       - [0xCAB20, rodata, 99E0]
       - [0xCAB90, rodata, B980]
@@ -579,7 +583,6 @@ segments:
     name: MemoryMatch
     overlay: True
     exclusive_ram_id: minigame
-    symbol_name_format: $VRAM_$ROM
     bss_size: 0x7B0
     subsegments:
       - [0xCDA50, c]
@@ -592,11 +595,10 @@ segments:
   - type: code
     start: 0xD51E0
     vram: 0x800F65E0
-    dir: ovl_01_ChanceTime
+    dir: overlays/ovl_01_ChanceTime
     name: ChanceTime
     overlay: True
     exclusive_ram_id: minigame
-    symbol_name_format: $VRAM_$ROM
     bss_size: 0x3F0
     subalign: 8
     subsegments:
@@ -610,5 +612,475 @@ segments:
       - [0xE0278, .rodata, DD760]
       - [0xE02B0, .rodata, DE6A0]
       - { start: 0xE02F0, type: bss, vram: 0x801016F0, name: ovl_01_bss }
-  - [0xE02F0, bin]
+  - type: code
+    start: 0xE02F0
+    vram: 0x800F65E0
+    dir: overlays/ovl_02_SlotMachine
+    name: SlotMachine
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0xAA0
+    subalign: 8
+    subsegments:
+      - [0xE02F0, c]
+      - [0xE13F0, c]
+      - [0xE5DA0, c]
+      - [0xE7E10, data]
+      - [0xE8AF0, .rodata, E02F0]
+      - [0xE8B30, .rodata, E13F0]
+      - [0xE8E10, .rodata, E5DA0]
+      - { start: 0xE8F60, type: bss, vram: 0x800FF250, name: ovl_02_bss }
+  - type: code
+    start: 0xE8F60
+    vram: 0x800F65E0
+    dir: overlays/ovl_03_BuriedTreasure
+    name: BuriedTreasure
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x5E0
+    subsegments:
+      - [0xE8F60, c]
+      - [0xEB0E0, c]
+      - [0xEE3F0, data, E8F60] #800FBA70
+      - [0xEE7E0, .rodata, E8F60]
+      - [0xEE8B0, .rodata, EB0E0] #800FBF30
+      - { start: 0xEE9A0, type: bss, vram: 0x800FC020, name: ovl_03_bss }
+  - type: code
+    start: 0xEE9A0
+    vram: 0x800F65E0
+    dir: overlays/ovl_04_TreasureDivers
+    name: TreasureDivers
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x1430
+    subsegments:
+      - [0xEE9A0, c]
+      - [0xF2800, c]
+      - [0xF4420, c]
+      - [0xF6750, data, EE9A0]
+      - [0xF6830, .rodata, EE9A0]
+      - [0xF6A40, .rodata, F2800]
+      - [0xF6A90, .rodata, F4420]
+      - {0xF6AB0, type: bss, vram: 0x800FE6F0, name: ovl_04_bss}
+  - type: code
+    start: 0xF6AB0
+    vram: 0x800F65E0
+    dir: overlays/ovl_05_ShellGame
+    name: ShellGame
+    overlay: True
+    exclusive_ram_id: minigame
+    subalign: 8
+    bss_size: 0x9A0
+    subsegments:
+      - [0xF6AB0, c]
+      - [0xFD460, c]
+      - [0xFF0E0, data, F6AB0]
+      - [0xFF180, .rodata, F6AB0]
+      - [0xFF490, .rodata, FD460]
+      - {0xFF570, type: bss, vram: 0x800FF0A0, name: ovl_05_bss}
+  - type: code
+    start: 0xFF570
+    vram: 0x800F65E0
+    dir: overlays/ovl_06_UnusedMinigame0
+    name: UnusedMinigame0
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x77F0
+    subsegments:
+      - [0xFF570, c]
+      - [0x103D80, c]
+      - [0x105EA0, c]
+      - [0x10BA80, data, FF570]
+      - [0x10C720, .rodata, FF570]
+      - [0x10CA20, .rodata, 103D80]
+      - [0x10CAF0, .rodata, 105EA0]
+      - {0x10CD10, type: bss, vram: 0x80103D80, name: ovl_06_bss}
+  - type: code
+    start: 0x10CD10
+    vram: 0x800F65E0
+    dir: overlays/ovl_07_HotBobOmb
+    name: HotBobOmb
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x160
+    subsegments:
+      - [0x10CD10, c]
+      - [0x10CF70, c]
+      - [0x10F6D0, c]
+      - [0x110460, data, 10CD10]
+      - [0x110D00, .rodata, 10CD10]
+      - [0x110D40, .rodata, 10CF70]
+      - [0x110E70, .rodata, 10F6D0]
+      - {0x110F90, type: bss, vram: 0x800FA860, name: ovl_07_bss}
+  - type: code
+    start: 0x110F90
+    vram: 0x800F65E0
+    dir: overlays/ovl_08_UnusedMinigame1
+    name: UnusedMinigame1
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0xA0
+    subsegments:
+      - [0x110F90, c]
+      - [0x111890, c]
+      - [0x1127C0, c]
+      - [0x113730, c]
+      - [0x113B20, data, 110F90]
+      - [0x113B30, data, 111890]
+      - [0x113BE0, data, 1127C0]
+      - [0x113C50, data, 113730]
+      - [0x113C60, .rodata, 110F90]
+      - [0x113C90, .rodata, 111890]
+      - [0x113D50, .rodata, 1127C0]
+      - [0x113DA0, .rodata, 113730]
+      - {0x113DC0, type: bss, vram: 0x800F9410, name: ovl_08_bss}
+  - type: code
+    start: 0x113DC0
+    vram: 0x800F65E0
+    dir: overlays/ovl_09_PipeMaze
+    name: PipeMaze
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x160
+    subsegments:
+      - [0x113DC0, c]
+      - [0x1170E0, data, 113DC0]
+      - [0x1171E0, .rodata, 113DC0]
+      - {0x117210, type: bss, vram: 0x800F9A30, name: ovl_09_bss}
+  - type: code
+    start: 0x117210
+    vram: 0x800F65E0
+    dir: overlays/ovl_0A_GhostGuess
+    name: GhostGuess
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x750
+    subsegments:
+      - [0x117210, c]
+      - [0x11BFE0, c]
+      - [0x11C2A0, data, 117210]
+      - [0x11C340, .rodata, 117210]
+      - {0x11C810, type: bss, vram: 0x800FBBE0, name: ovl_0A_bss}
+  - type: code
+    start: 0x11C810
+    vram: 0x800F65E0
+    dir: overlays/ovl_0B_MusicalMushroom
+    name: MusicalMushroom
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x200
+    subsegments:
+      - [0x11C810, c]
+      - [0x11F890, c]
+      - [0x1216F0, data, 11C810]
+      - [0x121750, .rodata, 11C810]
+      - [0x1217B0, .rodata, 11F890]
+      - {0x1217D0, type: bss, vram: 0x800FB5A0, name: ovl_0B_bss}
+  - type: code
+    start: 0x1217D0
+    vram: 0x800F65E0
+    dir: overlays/ovl_0C_PedalPower
+    name: PedalPower
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x870
+    subsegments:
+      - [0x1217D0, c]
+      - [0x122BA0, c]
+      - [0x1240D0, c]
+      - [0x124FD0, data, 1217D0]
+      - [0x125050, .rodata, 1217D0]
+      - [0x125080, .rodata, 122BA0]
+      - {0x1250D0, type: bss, vram: 0x800F9EE0, name: ovl_0C_bss}
+  - type: code
+    start: 0x1250D0
+    vram: 0x800F65E0
+    dir: overlays/ovl_0D_CrazyCutter
+    name: CrazyCutter
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x4A0
+    subsegments:
+      - [0x1250D0, c]
+      - [0x12AFE0, c]
+      - [0x12B7E0, data, 1250D0]
+      - [0x12BB00, .rodata, 1250D0]
+      - {0x12BC20, type: bss, vram: 0x800FD130, name: ovl_0D_bss}
+  - type: code
+    start: 0x12BC20
+    vram: 0x800F65E0
+    dir: overlays/ovl_0E_FaceLift
+    name: FaceLift
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0xE0
+    subsegments:
+      - [0x12BC20, c]
+      - [0x131A10, data, 12BC20]
+      - [0x131F00, .rodata, 12BC20]
+      - {0x131FA0, type: bss, vram: 0x800FC960, name: ovl_0E_bss}
+  - type: code
+    start: 0x131FA0
+    vram: 0x800F65E0
+    dir: overlays/ovl_0F_WhackAPlant
+    name: WhackAPlant
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0xC0
+    subsegments:
+      - [0x131FA0, c]
+      - [0x136C10, c]
+      - [0x136F40, .rodata, 131FA0]
+      - {0x137050, type: bss, vram: 0x800FB690, name: ovl_0F_bss}
+  - type: code
+    start: 0x137050
+    vram: 0x800F65E0
+    dir: overlays/ovl_10_BashNCash
+    name: BashNCash
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x220
+    subsegments:
+      - [0x137050, c]
+      - [0x13EE10, data, 137050]
+      - [0x13EEC0, .rodata, 137050]
+      - {0x13EFB0, type: bss, vram: 0x800FE540, name: ovl_10_bss}
+  - type: code
+    start: 0x13EFB0
+    vram: 0x800F65E0
+    dir: overlays/ovl_11_BowlOver
+    name: BowlOver
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x580
+    subsegments:
+      - [0x13EFB0, c]
+      - [0x142EA0, c]
+      - [0x145CA0, data, 13EFB0]
+      - [0x145DB0, data, 142EA0]
+      - [0x1460E0, .rodata, 13EFB0]
+      - [0x146190, .rodata, 142EA0]
+      - {0x146200, type: bss, vram: 0x800FD830, name: ovl_11_bss}
+  - type: code
+    start: 0x146200
+    vram: 0x800F65E0
+    dir: overlays/ovl_12_GroundPound
+    name: GroundPound
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x200
+    subsegments:
+      - [0x146200, c]
+      - [0x146B60, c]
+      - [0x148840, c]
+      - [0x149C40, data, 146200]
+      - [0x149C50, data, 146B60]
+      - [0x149DE0, data, 148840]
+      - [0x149E00, .rodata, 146200]
+      - [0x149E50, .rodata, 146B60]
+      - [0x149E60, .rodata, 148840]
+      - {0x149E80, type: bss, vram: 0x800FA260, name: ovl_12_bss}
+  - type: code
+    start: 0x149E80
+    vram: 0x800F65E0
+    dir: overlays/ovl_13_BalloonBurst
+    name: BalloonBurst
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x1320
+    subsegments:
+      - [0x149E80, c]
+      - [0x14E540, data, 149E80]
+      - [0x14E840, .rodata, 149E80]
+      - {0x14E940, type: bss, vram: 0x800FB0A0, name: ovl_13_bss}
+  - type: code
+    start: 0x14E940
+    vram: 0x800F65E0
+    dir: overlays/ovl_14_CoinBlockBlitz
+    name: CoinBlockBlitz
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x270
+    subsegments:
+      - [0x14E940, c]
+      - [0x150E30, c]
+      - [0x152B20, data, 14E940]
+      - [0x152BD0, .rodata, 150E30]
+      - {0x152BE0, type: bss, vram: 0x800FA880, name: ovl_14_bss}
+  - type: code
+    start: 0x152BE0
+    vram: 0x800F65E0
+    dir: overlays/ovl_15_CoinBlockBash
+    name: CoinBlockBash
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0xDB0
+    subsegments:
+      - [0x152BE0, c]
+      - [0x15AC50, c]
+      - [0x15E120, data, 152BE0]
+      - [0x15E200, data, 15AC50]
+      - [0x15E2B0, .rodata, 152BE0]
+      - [0x15E980, .rodata, 15AC50]
+      - {0x15EAF0, type: bss, vram: 0x801024F0, name: ovl_15_bss}
+  - type: code
+    start: 0x15EAF0
+    vram: 0x800F65E0
+    dir: overlays/ovl_16_SkateBoardSkamper
+    name: SkateBoardSkamper
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x20
+    subsegments:
+      - [0x15EAF0, c]
+      - [0x165F10, data, 15EAF0]
+      - [0x1660D0, .rodata, 15EAF0]
+      - {0x166220, type: bss, vram: 0x800FDD10, name: ovl_16_bss}
+  - type: code
+    start: 0x166220
+    vram: 0x800F65E0
+    dir: overlays/ovl_17_BoxMountainMayhem
+    name: BoxMountainMayhem
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x1B0
+    subsegments:
+      - [0x166220, c]
+      - [0x166D50, c]
+      - [0x168CA0, c]
+      - [0x16BC00, data, 166220]
+      - [0x16BC10, data, 166D50]
+      - [0x16BC20, data, 168CA0]
+      - [0x16BCD0, .rodata, 166220]
+      - [0x16BD00, .rodata, 166D50]
+      - {0x16BD20, type: bss, vram: 0x800FC0E0, name: ovl_17_bss}
+  - type: code
+    start: 0x16BD20
+    vram: 0x800F65E0
+    dir: overlays/ovl_18_PlatformPeril
+    name: PlatformPeril
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0xD70
+    subsegments:
+      - [0x16BD20, c]
+      - [0x16C6A0, c]
+      - [0x170470, c]
+      - [0x172490, c]
+      - [0x1724D0, data, 16BD20]
+      - [0x1724E0, data, 16C6A0]
+      - [0x173480, data, 170470]
+      - [0x173690, data, 172490]
+      - [0x1736A0, .rodata, 16BD20]
+      - [0x173710, .rodata, 16C6A0]
+      - [0x173800, .rodata, 170470]
+      - {0x1738E0, type: bss, vram: 0x800FE1A0, name: ovl_18_bss}
+  - type: code
+    start: 0x1738E0
+    vram: 0x800F65E0
+    dir: overlays/ovl_19_TeeteringTowers
+    name: TeeteringTowers
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0xA0
+    subsegments:
+      - [0x1738E0, c]
+      - [0x176130, c]
+      - [0x177C30, data, 1738E0]
+      - [0x1780D0, data, 176130]
+      - [0x1782E0, .rodata, 1738E0]
+      - {0x1784E0, type: bss, vram: 0x800FB1E0, name: ovl_19_bss}
+  - type: code
+    start: 0x1784E0
+    vram: 0x800F65E0
+    dir: overlays/ovl_1A_MushroomMixup
+    name: MushroomMixup
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x2B0
+    subsegments:
+      - [0x1784E0, c]
+      - [0x17BDC0, c]
+      - [0x17E600, data, 1784E0]
+      - [0x17E620, data, 17BDC0]
+      - {0x17E710, type: bss, vram: 0x800FC810, name: ovl_1A_bss}
+  - type: code
+    start: 0x17E710
+    vram: 0x800F65E0
+    dir: overlays/ovl_1B_HammerDrop
+    name: HammerDrop
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x310
+    subsegments:
+      - [0x17E710, c]
+      - [0x1836C0, data, 17E710]
+      - {0x1837D0, type: bss, vram: 0x800FB6A0, name: ovl_1B_bss}
+  - type: code
+    start: 0x1837D0
+    vram: 0x800F65E0
+    dir: overlays/ovl_1C_GrabBag
+    name: GrabBag
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x80
+    subsegments:
+      - [0x1837D0, c]
+      - [0x184450, c]
+      - [0x184870, c]
+      - [0x188280, data, 1837D0]
+      - [0x1882B0, data, 184450]
+      - [0x1882C0, data, 184870]
+      - [0x188320, .rodata, 184870]
+      - {0x188410, type: bss, vram: 0x800FB220, name: ovl_1C_bss}
+  - type: code
+    start: 0x188410
+    vram: 0x800F65E0
+    dir: overlays/ovl_1D_BobsledRun
+    name: BobsledRun
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x230
+    subsegments:
+      - [0x188410, c]
+      - [0x1910D0, data, 188410]
+      - [0x191670, .rodata, 188410]
+      - {0x191700, type: bss, vram: 0x800FF8D0, name: ovl_1D_bss}
+  - type: code
+    start: 0x191700
+    vram: 0x800F65E0
+    dir: overlays/ovl_1E_BumperBalls
+    name: BumperBalls
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x300
+    subsegments:
+      - [0x191700, c]
+      - [0x196300, c]
+      - [0x197C50, data, 191700]
+      - [0x197CE0, data, 196300]
+      - [0x197D00, .rodata, 191700]
+      - [0x197DF0, .rodata, 196300]
+      - {0x197E20, type: bss, vram: 0x800FCD00, name: ovl_1E_bss}
+  - type: code
+    start: 0x197E20
+    vram: 0x800F65E0
+    dir: overlays/ovl_1F_TightropeTreachery
+    name: TightropeTreachery
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x230
+    subsegments:
+      - [0x197E20, c]
+      - [0x19A360, c]
+      - [0x19ACC0, c]
+      - [0x19D510, c]
+      - [0x19FAF0, data, 197E20]
+      - [0x19FB40, data, 19A360]
+      - [0x19FB90, data, 19ACC0]
+      - [0x19FD40, .rodata, 197E20]
+      - [0x19FD70, .rodata, 19ACC0]
+      - [0x19FEB0, .rodata, 19D510]
+      - {0x19FEE0, type: bss, vram: 0x800FE6A0, name: ovl_1F_bss}
+  - [0x19FEE0, bin]
   - [0x2000000]
