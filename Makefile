@@ -53,7 +53,7 @@ LD_MAP    := $(BUILD_DIR)/$(TARGET).map
 PYTHON     := python3
 N64CKSUM   := $(PYTHON) tools/n64cksum.py
 SPLAT_YAML := marioparty.yaml
-SPLAT      := $(PYTHON) tools/splat/split.py $(SPLAT_YAML)
+SPLAT      := splat split $(SPLAT_YAML)
 EMULATOR   := mupen64plus
 DIFF       := diff
 
@@ -85,7 +85,7 @@ ENDLINE := \n'
 
 ASFLAGS        := -G 0 -I include -mips3 -mabi=32
 CFLAGS         := -G0 -mips3 -mgp32 -mfp32 -Wa,--vr4300mul-off -D_LANGUAGE_C 
-CPPFLAGS       := -I. -I include -I include/PR -I include/engine -I include/gcc -I $(BUILD_DIR)/include -I src -DF3DEX_GBI_2
+CPPFLAGS     := -I include -I $(BUILD_DIR)/include -I src -DF3DEX_GBI_2 -D_LANGUAGE_C
 LDFLAGS        := -T undefined_syms.txt -T undefined_funcs.txt -T undefined_funcs_auto.txt -T undefined_syms_auto.txt -T $(LD_SCRIPT) -Map $(LD_MAP) --no-check-sections
 CHECK_WARNINGS := -Wall -Wextra -Wunused-but-set-variable -Wno-format-security -Wno-unused-parameter -Wno-sign-compare -Wno-unused-variable -Wno-pointer-to-int-cast -Wno-int-to-pointer-cast -m32
 CFLAGS_CHECK   := -fsyntax-only -fsigned-char -nostdinc -fno-builtin -D CC_CHECK -D _LANGUAGE_C -std=gnu90 $(CHECK_WARNINGS)
@@ -191,6 +191,7 @@ build/src/95F40.c.o: OPTFLAGS = -O2
 $(BUILD_DIR)/src/%.c.o: src/%.c
 	@$(PRINT)$(GREEN)Compiling C file: $(ENDGREEN)$(BLUE)$<$(ENDBLUE)$(ENDLINE)
 	@mkdir -p $(shell dirname $@)
+# @echo $(CC_HOST) $(CFLAGS_CHECK) $(CPPFLAGS) -MMD -MP -MT $@ -MF $@.d $<
 	@$(CC_HOST) $(CFLAGS_CHECK) $(CPPFLAGS) -MMD -MP -MT $@ -MF $@.d $<
 	$(V)export COMPILER_PATH=tools/gcc_2.7.2/$(DETECTED_OS) && $(CC) $(OPTFLAGS) $(CFLAGS) $(CPPFLAGS) -c -o $@ $<
 	@$(STRIP) $@ -N dummy-symbol-name

@@ -102,7 +102,7 @@ file_path = "src/mod/mod_boot_func_hook.s"
 if not os.path.exists(file_path):
     with open(file_path, "w") as f:
         f.write("""\
-	.include "macro.inc"
+	.include "labels.inc"
 	.set noat
 	.set noreorder
 

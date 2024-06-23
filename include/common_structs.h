@@ -2,7 +2,7 @@
 #define _COMMON_STRUCTS_
 
 #include "types.h"
-#include "math.h"
+#include "engine/math.h"
 #include "PR/mbi.h"
 
 typedef struct Vec2f {

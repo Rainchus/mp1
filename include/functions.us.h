@@ -3,7 +3,7 @@
 
 #include "types.h"
 #include "common_structs.h"
-#include "math.h"
+#include "engine/math.h"
 
 void func_8006EEB8(s16, u8, u8, s16, s16);
 void func_8006F3BC(s16, s16, s16, s32, s32);
