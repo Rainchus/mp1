@@ -1385,5 +1385,188 @@ segments:
       - [0x23C9B0, .rodata, 2341E0]
       - [0x23CA40, .rodata, 234F80]
       - {0x23CF40, type: bss, vram: 0x800FF340, name: ovl_33_bss}
-  - [0x23CF40, bin]
+  - type: code
+    start: 0x23CF40
+    vram: 0x800F65E0
+    dir: overlays/ovl_34_BumperBallMaze
+    name: BumperBallMaze
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x3F0
+    subsegments:
+      - [0x23CF40, c]
+      - [0x240010, c]
+      - [0x241460, data, 23CF40]
+      - [0x241640, .rodata, 23CF40]
+      - [0x241720, .rodata, 240010]
+      - {0x241740, type: bss, vram: 0x800FADE0, name: ovl_34_bss}
+  - type: code
+    start: 0x241740
+    vram: 0x800F65E0
+    dir: overlays/ovl_35
+    name: name_35
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x241740, c]
+      - [0x241770, c]
+      - [0x241880, data, 241740]
+  - type: code
+    start: 0x2418A0
+    vram: 0x800F65E0
+    dir: overlays/ovl_36_DKsJungleAdventure
+    name: DKsJungleAdventure
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x80
+    subsegments:
+      - [0x2418A0, c]
+      - [0x2418D0, c]
+      - [0x244B50, data, 2418A0]
+      - [0x244B80, data, 2418D0]
+      - [0x245500, .rodata, 2418D0]
+      # - [0x244B50, .rodata, 2418A0]
+      # - [0x244B88, .rodata, 2418D0]
+      - {0x2455C0, type: bss, vram: 0x800FA300, name: ovl_36_bss}
+  - type: code
+    start: 0x2455C0
+    vram: 0x800F65E0
+    dir: overlays/ovl_37_PeachsBirthdayCake
+    name: PeachsBirthdayCake
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0xA0
+    subsegments:
+      - [0x2455C0, c]
+      - [0x2455F0, c]
+      - [0x246A60, data, 2455C0]
+      - [0x246A90, data, 2455F0]
+      - [0x246D10, .rodata, 2455F0]
+      - {0x246DF0, type: bss, vram: 0x800F7E10, name: ovl_37_bss}
+  - type: code
+    start: 0x246DF0
+    vram: 0x800F65E0
+    dir: overlays/ovl_38_YoshisTropicalIsland
+    name: YoshisTropicalIsland
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x60
+    subsegments:
+      - [0x246DF0, c]
+      - [0x246E20, c]
+      - [0x248820, data, 246DF0]
+      - [0x248850, data, 246E20]
+      - {0x248F00, type: bss, vram: 0x800F86F0, name: ovl_38_bss}
+  - type: code
+    start: 0x248F00
+    vram: 0x800F65E0
+    dir: overlays/ovl_39_WariosBattleCanyon
+    name: WariosBattleCanyon
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x2E0
+    subsegments:
+      - [0x248F00, c]
+      - [0x248F30, c]
+      - [0x24C0D0, data, 248F00]
+      - [0x24C100, data, 248F30]
+      - {0x24C390, type: bss, vram: 0x800F9A70, name: ovl_39_bss}
+  - type: code
+    start: 0x24C390
+    vram: 0x800F65E0
+    dir: overlays/ovl_3A_LuigisEngineRoom
+    name: LuigisEngineRoom
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x390
+    subsegments:
+      - [0x24C390, c]
+      - [0x24C3C0, c]
+      - [0x24F280, data, 24C390]
+      - [0x24F2B0, data, 24C3C0]
+      - [0x24FA70, .rodata, 24C3C0]
+      - {0x24FA80, type: bss, vram: 0x800F9CD0, name: ovl_3A_bss}
+  - type: code
+    start: 0x24FA80
+    vram: 0x800F65E0
+    dir: overlays/ovl_3B_MariosRainbowCastle
+    name: MariosRainbowCastle
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x30
+    subsegments:
+      - [0x24FA80, c]
+      - [0x24FAB0, c]
+      - [0x251400, data, 24FA80]
+      - [0x251430, data, 24FAB0]
+      - {0x2518D0, type: bss, vram: 0x800F8430, name: ovl_3B_bss}
+  - type: code
+    start: 0x2518D0
+    vram: 0x800F65E0
+    dir: overlays/ovl_3C_BowsersMagmaMountain
+    name: BowsersMagmaMountain
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x50
+    subsegments:
+      - [0x2518D0, c]
+      - [0x251900, c]
+      - [0x253A50, data, 2518D0]
+      - [0x253A80, data, 251900]
+      - {0x254450, type: bss, vram: 0x800F9160, name: ovl_3C_bss}
+  - type: code
+    start: 0x254450
+    vram: 0x800F65E0
+    dir: overlays/ovl_3D_EternalStar
+    name: EternalStar
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x80
+    subsegments:
+      - [0x254450, c]
+      - [0x254480, c]
+      - [0x2569F0, .rodata, 254450]
+      - [0x256A20, .rodata, 254480]
+      - {0x256FF0, type: bss, vram: 0x800F9180, name: ovl_3D_bss}
+  - type: code
+    start: 0x256FF0
+    vram: 0x800F65E0
+    dir: overlays/ovl_3E_FirstMap
+    name: FirstMap
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x20
+    subsegments:
+      - [0x256FF0, c]
+      - [0x257020, c]
+      - [0x259140, .rodata, 256FF0]
+      - [0x259220, .rodata, 257020]
+      - {0x2592A0, type: bss, vram: 0x800F8890, name: ovl_3E_bss}
+  - type: code
+    start: 0x2592A0
+    vram: 0x800F65E0
+    dir: overlays/ovl_3F_Last5Turns
+    name: Last5Turns
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x10
+    subsegments:
+      - [0x2592A0, c]
+      - [0x259DD0, data, 2592A0]
+      - [0x259E90, .rodata, 2592A0]
+      - {0x259EB0, type: bss, vram: 0x800F71F0, name: ovl_3F_bss}
+  - type: code
+    start: 0x259EB0
+    vram: 0x800F65E0
+    dir: overlays/ovl_40_ResultsScene
+    name: ResultsScene
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x800
+    subsegments:
+      - [0x259EB0, c]
+      - [0x25F920, data, 259EB0] #800FC050
+      - [0x25FBE0, .rodata, 259EB0]
+      - {0x25FC70, type: bss, vram: 0x800FC3A0, name: ovl_40_bss}
+  - [0x25FC70, bin]
   - [0x2000000]
