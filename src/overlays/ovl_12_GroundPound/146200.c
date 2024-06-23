@@ -15,7 +15,7 @@ void func_800F65E0_146200(void) {
     func_800176C4(0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
     func_8001D494(0, 20.0f, 80.0f, 8000.0f);
     func_8002578C(0);
-    func_8005D8B8(omAddObj(0x7FDA, 0, 0, -1, &func_8005EB1C), 160);
+    omSetStatBit(omAddObj(0x7FDA, 0, 0, -1, &func_8005EB1C), 160);
     omAddObj(0, 0, 0, -1, &func_800F67E0_146400);
     func_800F7FEC_147C0C();
     D_800FA43C = omAddObj(8, 0xA, 0x64, -1, &func_800F8C20_148840);

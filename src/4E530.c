@@ -100,7 +100,7 @@ void func_8004E248(omObjData* arg0) {
             gPlayers[arg0->work[0]].playerObj->coords.x = arg0->trans.x;
             gPlayers[arg0->work[0]].playerObj->coords.y = arg0->trans.y;
             gPlayers[arg0->work[0]].playerObj->coords.z = arg0->trans.z;
-            func_8005D718(arg0);
+            omDelObj(arg0);
             return;
         }
         temp_v0 = gPlayers[arg0->work[0]].playerObj;
@@ -117,7 +117,7 @@ void func_8004E248(omObjData* arg0) {
         temp_v1->unk_10 = arg0->trans.y;
         temp_v1->unk_14 = arg0->trans.z;
         arg0->unk_50 = NULL;
-        func_8005D718(arg0);
+        omDelObj(arg0);
         return;
     }
     
@@ -178,7 +178,7 @@ void func_8004E564(omObjData* arg0) { //matches, needs rodata support
             gPlayers[arg0->work].playerObj->coords.x = arg0->unk_18;
             gPlayers[arg0->work].playerObj->coords.y = arg0->unk_1C;
             gPlayers[arg0->work].playerObj->coords.z = arg0->unk_20;
-            func_8005D718(arg0);
+            omDelObj(arg0);
             return;
         }
         
@@ -202,7 +202,7 @@ void func_8004E564(omObjData* arg0) { //matches, needs rodata support
         var_s0->coords.y = arg0->unk_1C;
         var_s0->coords.z = arg0->unk_20;
         arg0->unk_50 = NULL;
-        func_8005D718(arg0);
+        omDelObj(arg0);
         return;
     } else {
         var_s0->coords.x += arg0->unk_30;
@@ -268,7 +268,7 @@ void func_8004F140(s32 arg0) {
     temp_v0->trans.x = 0.0f;
     temp_v0->mdlcnt = arg0;
     temp_v0->mtncnt = D_800C524E;
-    func_8005D8B8(temp_v0, 0xA0);
+    omSetStatBit(temp_v0, 0xA0);
 }
 
 INCLUDE_ASM(s32, "4E530", func_8004F1D0);

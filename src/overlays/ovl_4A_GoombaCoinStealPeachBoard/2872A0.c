@@ -122,7 +122,7 @@ void func_800F7928_2885E8(void) {
         }
         
         if (D_800F7AF4[i] != 0) {
-            func_8005D718(D_800F7AF4[i]);
+            omDelObj(D_800F7AF4[i]);
         }
     }
 

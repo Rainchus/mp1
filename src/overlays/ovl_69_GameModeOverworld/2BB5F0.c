@@ -17,7 +17,7 @@ INCLUDE_ASM(s32, "overlays/ovl_69_GameModeOverworld/2BB5F0", func_800F6610_2BB5F
 //     func_80060088();
 //     func_8006CEA0();
 //     temp_s1 = omAddObj(0x7FDA, 0, 0, -1, func_800F884C_2BD82C);
-//     func_8005D8B8(temp_s1, 0xA0);
+//     omSetStatBit(temp_s1, 0xA0);
 //     D_800F64F2 = 1;
 //     omAddObj(0x2710, 0, 0, -1, &func_800F8AB8_2BDA98);
 //     D_800EE98C = 7120.0f;

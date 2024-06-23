@@ -83,7 +83,7 @@ omObjData* omAddObj(s16 arg0, u16 arg1, u16 arg2, s16 arg3, void* arg4) {
     temp_s0 = &D_800C5984[D_800F65BA];
     temp_s0->next_idx_alloc = D_800F65BA;
     temp_s0->prio = arg0;
-    func_8005D5F4(temp_s0);
+    omInsertObj(temp_s0);
 
     if (arg1 != 0) {
         temp_s0->model = HuMemTempDirectMalloc(arg1 * sizeof(s16), 0x7918);
@@ -119,29 +119,29 @@ omObjData* omAddObj(s16 arg0, u16 arg1, u16 arg2, s16 arg3, void* arg4) {
     return temp_s0;
 }
 
-INCLUDE_ASM(s32, "5CDB0", func_8005D4E0);
+INCLUDE_ASM(s32, "5CDB0", omSetObjPrio);
 
-INCLUDE_ASM(s32, "5CDB0", func_8005D5F4);
+INCLUDE_ASM(s32, "5CDB0", omInsertObj);
 
-INCLUDE_ASM(s32, "5CDB0", func_8005D718); //https://decomp.me/scratch/mL688
+INCLUDE_ASM(s32, "5CDB0", omDelObj); //https://decomp.me/scratch/mL688
 
-INCLUDE_ASM(s32, "5CDB0", func_8005D8B0);
+INCLUDE_ASM(s32, "5CDB0", omSetStat);
 
-INCLUDE_ASM(s32, "5CDB0", func_8005D8B8);
+INCLUDE_ASM(s32, "5CDB0", omSetStatBit);
 
-INCLUDE_ASM(s32, "5CDB0", func_8005D8C8);
+INCLUDE_ASM(s32, "5CDB0", omResetStatBit);
 
-INCLUDE_ASM(s32, "5CDB0", func_8005D8DC);
+INCLUDE_ASM(s32, "5CDB0", omPrcSetStat);
 
-INCLUDE_ASM(s32, "5CDB0", func_8005D900);
+INCLUDE_ASM(s32, "5CDB0", omPrcSetStatBit);
 
-INCLUDE_ASM(s32, "5CDB0", func_8005D92C);
+INCLUDE_ASM(s32, "5CDB0", omPrcResetStatBit);
 
-INCLUDE_ASM(s32, "5CDB0", func_8005D95C);
+INCLUDE_ASM(s32, "5CDB0", omSetTra);
 
-INCLUDE_ASM(s32, "5CDB0", func_8005D96C);
+INCLUDE_ASM(s32, "5CDB0", omSetRot);
 
-INCLUDE_ASM(s32, "5CDB0", func_8005D97C);
+INCLUDE_ASM(s32, "5CDB0", omSetSca);
 
 INCLUDE_ASM(s32, "5CDB0", func_8005D98C);
 

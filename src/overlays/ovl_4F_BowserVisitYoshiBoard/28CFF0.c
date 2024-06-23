@@ -30,7 +30,7 @@ void func_800F66BC_28D0CC(Object* arg0) {
         D_800F75FC = ((10.0f - D_800F75FC) / 30.0f) + D_800F75FC;
         if (D_800F75F8 > 1.0f) {
             func_8003E664(D_800F7628);
-            func_8005D718(arg0);
+            omDelObj(arg0);
         }
     }
 }

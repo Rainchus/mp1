@@ -58,7 +58,7 @@ void func_800F65E0_EE9A0(void) {
     func_80060088();
 
     temp_v0 = omAddObj(32730, 0, 0, -1, func_8005EB1C);
-    func_8005D8B8(temp_v0, 160);
+    omSetStatBit(temp_v0, 160);
 
     func_800178A0(1);
 
@@ -106,7 +106,7 @@ void func_800F65E0_EE9A0(void) {
     D_800FF248 = omAddObj(10, 0, 0, -1, &func_800F6B2C_EEEEC);
 
     D_800F2AF8[D_800ED440++] = temp_v0_4 = omAddObj(2, 9, 0, -1, &func_800F7010_EF3D0);
-    func_8005D8B8(temp_v0_4, 160);
+    omSetStatBit(temp_v0_4, 160);
 
     D_800F2AF8[D_800ED440++] = omAddObj(2, 6, 0, -1, &func_800F7560_EF920);
 
@@ -119,10 +119,10 @@ void func_800F65E0_EE9A0(void) {
     }
 
     D_800FF24C[D_800FED30++] = temp_v0_4 = omAddObj(5, 3, 0, -1, &func_800F7470_EF830);
-    func_8005D8B8(temp_v0_4, 160);
+    omSetStatBit(temp_v0_4, 160);
 
     D_800FF24C[D_800FED30++] = temp_v0_4 = omAddObj(5, 2, 0, -1, &func_800F74E8_EF8A8);
-    func_8005D8B8(temp_v0_4, 160);
+    omSetStatBit(temp_v0_4, 160);
 
     D_800FE764 = omAddObj(0, 0, 0, -1, &func_800F6F18_EF2D8);
 

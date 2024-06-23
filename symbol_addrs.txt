@@ -463,9 +463,20 @@ omDestroyPrcObj = 0x8005DE6C;
 omDelPrcObj = 0x8005DDDC;
 omDestroyObjMan = 0x8005D184;
 omAddObj = 0x8005D384;
-
+omSetObjPrio = 0x8005D4E0;
 HuMemTempDirectFree = 0x800237BC;
 HuMemTempDirectMalloc = 0x80023684;
+omInsertObj = 0x8005D5F4;
+omDelObj = 0x8005D718;
+omSetStat = 0x8005D8B0;
+omSetStatBit = 0x8005D8B8;
+omResetStatBit = 0x8005D8C8;
+omPrcSetStat = 0x8005D8DC;
+omPrcSetStatBit = 0x8005D900;
+omPrcResetStatBit = 0x8005D92C;
+omSetTra= 0x8005D95C;
+omSetRot = 0x8005D96C;
+omSetSca = 0x8005D97C;
 
 //ovl_1F
 func_800FE040_19F880 = 0x800FE040; //rom:0x19F880

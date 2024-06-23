@@ -45,7 +45,7 @@ void func_800F65E0_188410(void) {
     omAddObj(2, 10, 60, -1, &func_800FBD5C_18DB8C);
     Obj = omAddObj(0x7FDA, 0, 0, -1, &func_800FC180_18DFB0);
     Obj->work[0] = 2;
-    func_8005D8B8(Obj, 0xA0);
+    omSetStatBit(Obj, 0xA0);
     D_800B895C = 10.0f;
     D_800B8968 = 0.06f;
     D_800B896C = 5.0f;

@@ -339,11 +339,11 @@ void func_800F7680_28CD10(void) {
     }
     
     if (D_800F7854_28CEE4 != NULL) {
-        func_8005D718(D_800F7854_28CEE4);
+        omDelObj(D_800F7854_28CEE4);
     }
 
     if (D_800F785C_28CEEC != NULL) {
-        func_8005D718(D_800F785C_28CEEC);
+        omDelObj(D_800F785C_28CEEC);
     }
     
     func_8004F2EC();

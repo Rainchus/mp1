@@ -18,7 +18,7 @@ void func_800F65E0_E8F60(void) {
     func_80060088();
 
     temp_s1 = omAddObj(0x7FDA, 0, 0, -1, func_8005EB1C);
-    func_8005D8B8(temp_s1, 0xA0);
+    omSetStatBit(temp_s1, 0xA0);
     func_800178A0(1);
 
     temp_s0 = func_800178E8();

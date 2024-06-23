@@ -38,7 +38,7 @@ void func_800F65E0_2F40C0(void) {
     D_800EDE70[D_800EE984++] = omAddObj(3, 5, 0, -1, &func_800F7C38_2F5718);
     D_800EDE70[D_800EE984++] = omAddObj(3, 1, 0, -1, &func_800F7BF4_2F56D4);
     
-    func_8005D8B8(omAddObj(0x7FDA, 0, 0, -1, func_8005EB1C), 0xA0);
+    omSetStatBit(omAddObj(0x7FDA, 0, 0, -1, func_8005EB1C), 0xA0);
     D_800B895C = 10.0f;
     SetFadeInTypeAndTime(0, 0x10);
 }

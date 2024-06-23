@@ -8,7 +8,7 @@ void func_800F65E0_17E710(void) {
     func_8001DE70(0x42);
     omInitObjMan(0x28, 0);
     func_80060088();
-    func_8005D8B8(omAddObj(0x7FDA, 0, 0, -1, func_8005EB1C), 0xA0);
+    omSetStatBit(omAddObj(0x7FDA, 0, 0, -1, func_8005EB1C), 0xA0);
     func_800F6848_17E978(2370.0f, 324.0f, 0.0f, 0.0f, 0.0f, 205.0f, 0.0f);
     func_8005D98C(4, 4);
     omAddObj(0xA, 0, 0, -1, &func_800F6814_17E944);
@@ -77,7 +77,7 @@ void func_800F6A54_17EB84(omObjData* arg0) {
     arg0->unk_50 = HuMemTempDirectMalloc(sizeof(unkGlobalStruct_02), 0x7918);
     arg0->model[0] = LoadFormFile(0x380002, 0x48D);
     arg0->model[1] = LoadFormFile(0x380003, 0x48D);
-    func_8005D95C(arg0, 0.0f, 1000.0f, 1000.0f);
+    omSetTra(arg0, 0.0f, 1000.0f, 1000.0f);
     func_800FA2E0_182410();
     arg0->func_ptr = &func_800F6ADC_17EC0C;
 }

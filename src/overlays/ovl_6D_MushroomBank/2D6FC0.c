@@ -5,7 +5,7 @@ void func_800F65E0_2D6FC0(void) {
     InitCameras(1);
     func_8001DE70(1);
     omInitObjMan(0x20, 4);
-    func_8005D8B8(omAddObj(0x7FDA, 0, 0, -1, func_80059EBC), 0xA0);
+    omSetStatBit(omAddObj(0x7FDA, 0, 0, -1, func_80059EBC), 0xA0);
     D_800F384C = 0;
     func_8006CEA0();
     func_8004F8DC();

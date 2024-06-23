@@ -98,7 +98,7 @@ void func_800F9948_D8548(s32 arg0) {
     D_80101284->trans.x = 0.0f;
     D_80101284->mdlcnt = arg0;
     D_80101284->mtncnt = (u16)D_80101288;
-    func_8005D8B8(D_80101284, 0xA0);
+    omSetStatBit(D_80101284, 0xA0);
 }
 
 void func_800F99D8_D85D8(omObjData* arg0) {

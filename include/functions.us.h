@@ -62,7 +62,7 @@ void func_8000C250(s32);
 void func_8004A510(void);
 void func_8004CC8C(s16, s16);
 void func_8004CDA0(s16);
-void func_8005D900(Process*, s32);
+void omPrcSetStatBit(Process*, s32);
 void func_80041F84(s32);
 void func_80041FE0(s32);
 u16 func_8004B61C(Vec2f*);
@@ -277,8 +277,8 @@ void func_800421E0(void);
 omObjData* func_8004E3E0(s32, Vec3f*, s32, void*); //arg2 should be Vec3f*
 void func_8004F4D4(void*, s32, s32);
 void func_80055960(s32, s32);
-void func_8005D96C(omObjData*, f32, f32, f32);
-void func_8005D97C(omObjData*, f32, f32, f32);
+void omSetRot(omObjData*, f32, f32, f32);
+void omSetSca(omObjData*, f32, f32, f32);
 void InitCameras(s32);
 void func_8005AD18(void);
 void func_80062450(void);
@@ -313,7 +313,7 @@ void func_80064D38(s16);
 void func_8006752C(s16, s16, u16);
 void Convert3DTo2D(s16 index, Vec3f* arg1, Vec2f* arg2);
 void func_80079078(s16);
-void func_8005D718(void*); //idk what type this arg is, either omObjData* or Object*
+void omDelObj(void*); //idk what type this arg is, either omObjData* or Object*
 s32 func_8005021C(f32); //getRandInRange
 void func_800A0D00(void*, f32, f32, f32);
 void func_80025CA8(s16, s32);
@@ -361,7 +361,7 @@ void func_80023504(s32, f32, f32, f32);
 void func_80029090(s32);
 void omInitObjMan (s32 maxObjects, s32 maxProcesses);
 omObjData* omAddObj(s16, u16, u16, s16, void*);
-void func_8005D8B8(omObjData*, s32);
+void omSetStatBit(omObjData*, s32);
 void func_80060088(void);
 s32 PlaySound(s32);
 void func_8007B168(void*, u8); //arg1 is a u8*
@@ -414,7 +414,7 @@ void func_80067354(s16, s16, f32, f32);
 void func_80060128(s32);
 void func_80025C20(s16, s16, s16, s16, s16);
 s16 func_80025E48(s16);
-void func_8005D95C(omObjData*, f32, f32, f32);
+void omSetTra(omObjData*, f32, f32, f32);
 void func_80009458(void);
 void func_80009624(unkGlobalStruct_00*, s32);
 void func_80017DB0(omObjData*);

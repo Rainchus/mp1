@@ -23,7 +23,7 @@ void func_800F65E0_191700(void) {
     func_800FB1E0_196300(20.0f, 3000.0f, 328.0f, 0, 0, 0, 0, -140.0f);
     func_80017660(0, 0.0f, 0.0f, 320.0f, 240.0f);
     func_800176C4(0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
-    func_8005D8B8(omAddObj(0x7FDA, 0, 0, -1, &func_8005EB1C), 160);
+    omSetStatBit(omAddObj(0x7FDA, 0, 0, -1, &func_8005EB1C), 160);
     func_80023448(3);
     func_800234B8(0, 44, 44, 64);
     func_800234B8(1, 96, 96, 16);
@@ -36,7 +36,7 @@ void func_800F65E0_191700(void) {
     D_800FCD2C = func_8005DB44(0);
     func_8005D98C(1, 4);
     D_800FCD30 = func_8005DB44(1);
-    func_8005D8B8(omAddObj(100, 0, 0, -1, &func_800FB298_1963B8), 160);
+    omSetStatBit(omAddObj(100, 0, 0, -1, &func_800FB298_1963B8), 160);
     omAddObj(20, 9, 7, 0, &func_800F6E2C_191F4C);
     omAddObj(20, 9, 7, 0, &func_800F6E68_191F88);
     omAddObj(20, 9, 7, 0, &func_800F6E84_191FA4);
@@ -121,7 +121,7 @@ void func_800F821C_19333C(omObjData* arg0) {
         }
     }
     if (temp_s1->unk_00 != 5) {
-        func_8005D95C(arg0, arg0->trans.x, (2.0f * func_800AEAC0(temp_s1->unk_50)) + arg0->trans.y, arg0->trans.z);
+        omSetTra(arg0, arg0->trans.x, (2.0f * func_800AEAC0(temp_s1->unk_50)) + arg0->trans.y, arg0->trans.z);
         temp_s1->unk_50 = temp_s1->unk_50 + 8.0f;
         
         if (temp_s1->unk_50 >= 360.0f) {

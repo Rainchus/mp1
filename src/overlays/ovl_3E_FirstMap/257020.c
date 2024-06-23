@@ -553,6 +553,6 @@ void func_800F852C_258F3C(void) {
     func_8004B5DC(&GetPlayerStruct(CURRENT_PLAYER)->playerObj->coords);
     omAddPrcObj(func_800F77B4_2581C4, 0x1005, 0, 0);
     omAddPrcObj(func_800F6E20_257830, 0x1005, 0, 0);
-    func_8005D900(omAddPrcObj(func_800F83D4_258DE4, 0x1005, 0, 0), 0x80);
+    omPrcSetStatBit(omAddPrcObj(func_800F83D4_258DE4, 0x1005, 0, 0), 0x80);
 }
 

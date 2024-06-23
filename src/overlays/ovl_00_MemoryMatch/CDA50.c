@@ -12,7 +12,7 @@ void func_800F65E0_CDA50(void) { //needs rodata support
     omInitObjMan (50, 0);
     func_80060088();
     func_8001DE70(64);
-    func_8005D8B8(omAddObj(0x7FDA, 0, 0, -1, &func_8005EB1C), 0xA0);
+    omSetStatBit(omAddObj(0x7FDA, 0, 0, -1, &func_8005EB1C), 0xA0);
     func_80023448(2);
     func_800234B8(0, 0xA0, 0xA0, 0xA0);
     func_800234B8(1, 0xFF, 0xFF, 0xFF);

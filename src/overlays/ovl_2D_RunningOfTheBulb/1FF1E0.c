@@ -15,7 +15,7 @@ void func_800F65E0_1FF1E0(void) {
     func_800FE090_206C90(20.0f, 3100.0f, 324.0f, 45.0f, 0, -280.0f, 0, 1675.0f);
     func_80017660(0, 0.0f, 0.0f, 320.0f, 240.0f);
     func_800176C4(0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
-    func_8005D8B8(omAddObj(0x7FDA, 0, 0, -1, func_8005EB1C), 0xA0);
+    omSetStatBit(omAddObj(0x7FDA, 0, 0, -1, func_8005EB1C), 0xA0);
     func_80023448(3);
     func_800234B8(0, 0, 0, 0);
     func_800234B8(1, 0, 0, 0);
@@ -30,7 +30,7 @@ void func_800F65E0_1FF1E0(void) {
     D_800FE49C = func_8005DB44(1);
     D_800FE460 = func_8005DB44(0);
     D_800FE480 = func_8005DB44(2);
-    func_8005D8B8(omAddObj(0x64, 0, 0, -1, &func_800FE140_206D40), 0xA0);
+    omSetStatBit(omAddObj(0x64, 0, 0, -1, &func_800FE140_206D40), 0xA0);
     omAddObj(10, 13, 38, 0, &func_800F7AEC_2006EC);
     omAddObj(10, 13, 38, 0, &func_800F7B08_200708);
     omAddObj(10, 13, 38, 0, &func_800F7B24_200724);
@@ -159,14 +159,14 @@ void func_800F6F04_1FFB04(omObjData* arg0) {
     temp_s0->unk_04 = 1;
     temp_s0->unk_05 = 2;
     D_800F2AF8[D_800ED440++] = arg0;
-    func_8005D95C(arg0, 0.0f, 0.0f, D_800F652C.x + -935.0f);
+    omSetTra(arg0, 0.0f, 0.0f, D_800F652C.x + -935.0f);
     func_800258EC(arg0->model[0], 4, 4);
     func_80009090(arg0);
     arg0->func_ptr = &func_800F6FF4_1FFBF4;
 }
 
 void func_800F6FF4_1FFBF4(omObjData* arg0) {
-    func_8005D95C(arg0, 0.0f, 0.0f, D_800F652C.x + -935.0f);
+    omSetTra(arg0, 0.0f, 0.0f, D_800F652C.x + -935.0f);
 }
 
 INCLUDE_ASM(s32, "overlays/ovl_2D_RunningOfTheBulb/1FF1E0", func_800F7034_1FFC34);
@@ -262,8 +262,8 @@ void func_800F8D80_201980(omObjData* arg0) {
 
     temp_s0 = ((unkGlobalStruct_00*) arg0->unk_50)->unk_E4;
     temp_s0->unk_58 -= 0.05f;
-    func_8005D97C(arg0, temp_s0->unk_58, temp_s0->unk_58, temp_s0->unk_58);
-    func_8005D95C(arg0, arg0->trans.x + temp_s0->unk_5C, arg0->trans.y + temp_s0->unk_60, arg0->trans.z + temp_s0->unk_64);
+    omSetSca(arg0, temp_s0->unk_58, temp_s0->unk_58, temp_s0->unk_58);
+    omSetTra(arg0, arg0->trans.x + temp_s0->unk_5C, arg0->trans.y + temp_s0->unk_60, arg0->trans.z + temp_s0->unk_64);
     
     if (++temp_s0->unk_54 >= 20) {
         func_800258EC(arg0->model[0], 4, 4);
@@ -453,7 +453,7 @@ void func_800FBAA4_2046A4(omObjData* arg0) {
     case 1:
         if ((func_80075FE0() == 0) || (func_80075FE0() & 2)) {
             D_800FE464 = 1;
-            func_8005D718(arg0);
+            omDelObj(arg0);
             D_800FE490 = NULL;
             D_800ED430 = 1;
             func_80060128(0x1C);
@@ -667,7 +667,7 @@ s32 func_800FDDC0_2069C0(omObjData* arg0) {
                 if (temp_s1->unk_00 & 8) {
                     temp_s1->unk_00 &= ~0x8;
                     if (temp_s1->unk_02 < 5) {
-                        func_8005D95C(D_800FE49C[i], 0.0f, 0.0f, 5000.0f);
+                        omSetTra(D_800FE49C[i], 0.0f, 0.0f, 5000.0f);
                     } else {
                         temp_s1->unk_04 = 0x10;
                         func_800211BC(D_800FE49C[i]->model[0], temp_s1->unk_04);

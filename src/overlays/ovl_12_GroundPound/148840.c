@@ -61,7 +61,7 @@ void func_800F8C20_148840(omObjData* arg0) {
     arg0->model[7] = LoadFormFile(0x1E, 0x68D);
     arg0->model[8] = LoadFormFile(0x1D, 0x68D);
     temp_s4 = arg0->unk_50;
-    func_8005D95C(arg0, D_800FA36C.x, D_800FA36C.y, D_800FA36C.z);
+    omSetTra(arg0, D_800FA36C.x, D_800FA36C.y, D_800FA36C.z);
     D_800B895C = 10.0f;
     func_8001874C(arg0, 0, temp_s3, 1, 0);
     func_8001874C(arg0, 1, temp_s3 | 1, 1, 0);

@@ -56,7 +56,7 @@ void func_800F7D94_25B664(void) {
     func_80064D38(D_800FC5BA);
     func_80067704(D_800FC5B6);
     func_80064D38(D_800FC5B2);
-    func_8005D718(D_800FC790);
+    omDelObj(D_800FC790);
     
     for (i = 0; i < 2; i++) {
         func_80067704(D_800FC5C4[i]);

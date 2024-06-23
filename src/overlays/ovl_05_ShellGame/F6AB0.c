@@ -10,7 +10,7 @@ void func_800F65E0_F6AB0(void) {
     omInitObjMan(50, 0);
     func_80060088();
     func_8001DE70(64);
-    func_8005D8B8(omAddObj(0x7FDA, 0, 0, -1, func_8005EB1C), 0xA0);
+    omSetStatBit(omAddObj(0x7FDA, 0, 0, -1, func_8005EB1C), 0xA0);
     func_800234B8(0, 0xA0, 0x78, 0x78);
     func_800234B8(1, 0xFF, 0xA8, 0xA8);
     func_80023504(1, -96.0f, 100.0f, 26.0f);

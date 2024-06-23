@@ -45,7 +45,7 @@ void func_800F69EC_1254DC(Object* arg0) {
         omAddObj(0, 0, 0, -1, &func_800F686C_12535C);
         omAddObj(2, 1, 1, -1, &func_800F6B04_1255F4);
         SetFadeInTypeAndTime(0, 16);
-        func_8005D718(arg0);
+        omDelObj(arg0);
     }
 }
 
@@ -239,7 +239,7 @@ void func_800FAA18_129508(Object* arg0) {
         }
         func_800601D4(0x28);
         omOvlReturnEx(1);
-        func_8005D718(arg0);
+        omDelObj(arg0);
     }
 }
 

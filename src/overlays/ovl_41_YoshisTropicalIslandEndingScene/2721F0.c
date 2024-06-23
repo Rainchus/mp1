@@ -65,7 +65,7 @@ omObjData* func_801091A4_272834(u8 arg0) {
 
     temp_v0 = omAddObj(0x600, 0, 0, -1, &func_80109110_2727A0);
     temp_v0->work[0] = arg0;
-    func_8005D96C(temp_v0, 0.0f, 0.0f, 0.0f);
+    omSetRot(temp_v0, 0.0f, 0.0f, 0.0f);
     return temp_v0;
 }
 

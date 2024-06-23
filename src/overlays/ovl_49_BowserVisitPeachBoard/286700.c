@@ -202,7 +202,7 @@ void func_800F6E18_286F38(void) {
 }
 
 void func_800F6FBC_2870DC(void) {
-    func_8005D718(D_800F7190);
+    omDelObj(D_800F7190);
     DestroyObject(D_800F718C);
     DestroyObject(D_800F7184);
     DestroyObject(D_800F7188);

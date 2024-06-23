@@ -8,7 +8,7 @@ void func_800F65E0_16BD20(void) {
     func_8007B168(&D_800FDF60_1736A0, 1);
     func_8007B168(&D_800FDF6C_1736AC, 1);
     func_8007B168(&D_800FDF78_1736B8, 1);
-    func_8005D8B8(omAddObj(0x7FDA, 0, 0, -1, func_8005EB1C), 0xA0);
+    omSetStatBit(omAddObj(0x7FDA, 0, 0, -1, func_8005EB1C), 0xA0);
     D_800EE984 = 0;
     D_800F2BC0 = 0;
     D_800ED440 = 0;

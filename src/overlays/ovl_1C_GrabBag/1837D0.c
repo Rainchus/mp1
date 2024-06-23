@@ -6,7 +6,7 @@ void func_800F65E0_1837D0(void) {
     func_8001DE70(0x10);
     omInitObjMan(0x14, 0);
     func_80060088();
-    func_8005D8B8(omAddObj(0x7FDA, 0, 0, -1, func_8005EB1C), 0xA0);
+    omSetStatBit(omAddObj(0x7FDA, 0, 0, -1, func_8005EB1C), 0xA0);
     func_8000942C();
     D_800F6524.x = -10.0f;
     D_800F6524.y = 0.0f;

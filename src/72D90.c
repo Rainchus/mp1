@@ -2463,7 +2463,7 @@ void func_8007B4AC(void) {
 
 void func_8007B4EC(void) {
     D_800F0A24 = omAddPrcObj(func_8007B52C, 0x3FFF, 0x800, 0);
-    func_8005D900(D_800F0A24, 0xA0);
+    omPrcSetStatBit(D_800F0A24, 0xA0);
 }
 
 void func_8007B52C(void) {

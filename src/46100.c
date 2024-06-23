@@ -54,7 +54,7 @@ void func_800456C4(void) {
     }  
     
     if (D_800D6478 != NULL) {
-        func_8005D718(D_800D6478);
+        omDelObj(D_800D6478);
         D_800D6478 = NULL;
     }
 }

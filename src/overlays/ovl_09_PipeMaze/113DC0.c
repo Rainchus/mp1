@@ -6,7 +6,7 @@ void func_800F65E0_113DC0(void) {
     func_8001DE70(32);
     omInitObjMan(50, 0);
     func_80060088();
-    func_8005D8B8(omAddObj(0x7FDA, 0, 0, -1, func_8005EB1C), 160);
+    omSetStatBit(omAddObj(0x7FDA, 0, 0, -1, func_8005EB1C), 160);
     D_800F9A34 = 0;
     func_800F6678_113E58();
     D_800F9902 = 0;
@@ -91,7 +91,7 @@ void func_800F7100_1148E0(void) {
     func_8006B870();
     temp_v0 = omAddObj(1, 8, 0, -1, &func_800F7194_114974);
     D_800EDE70[D_800EE984++] = temp_v0;
-    func_8005D8B8(temp_v0, 0xA0);
+    omSetStatBit(temp_v0, 0xA0);
 }
 
 INCLUDE_ASM(s32, "overlays/ovl_09_PipeMaze/113DC0", func_800F7194_114974);

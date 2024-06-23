@@ -25,7 +25,7 @@ void func_800F65E0_29B410(void) {
     func_800FB670_2A04A0(&sp18, &sp28, 1200.0f);
     func_800FB7F8_2A0628(20.0f, 80.0f, 8000.0f);
     temp_s0 = omAddObj(0x7FDA, 0, 0, -1, func_800FB810_2A0640);
-    func_8005D8B8(temp_s0, 0xA0);
+    omSetStatBit(temp_s0, 0xA0);
     func_800FB810_2A0640(temp_s0);
     func_80023448(3);
     func_800234B8(0, 0x78, 0x78, 0x78);
@@ -59,9 +59,9 @@ omObjData* func_800F6804_29B634(unkGlobalStruct_00* arg0) {
     omObjData* temp_s0;
 
     temp_s0 = omAddObj(0x1000, 0, 0, -1, &func_800F6788_29B5B8);
-    func_8005D96C(temp_s0, 0, 0, 0);
-    func_8005D97C(temp_s0, arg0->unk_18 + arg0->unk_0C, arg0->unk_1C + arg0->unk_10, arg0->unk_20.floatingPoint + arg0->unk_14);
-    func_8005D95C(temp_s0, D_80110450->unk_0C, D_80110450->unk_10, D_80110450->unk_14);
+    omSetRot(temp_s0, 0, 0, 0);
+    omSetSca(temp_s0, arg0->unk_18 + arg0->unk_0C, arg0->unk_1C + arg0->unk_10, arg0->unk_20.floatingPoint + arg0->unk_14);
+    omSetTra(temp_s0, D_80110450->unk_0C, D_80110450->unk_10, D_80110450->unk_14);
     temp_s0->work[0] = 2;
     temp_s0->work[1] = 48;
     temp_s0->unk_50 = arg0;

@@ -3,7 +3,7 @@
 s16 func_80010ED4(s16, s16);
 void func_8001249C(s16, u8);
 s32 func_80012C7C(s16);
-void func_8005D5F4(omObjData*);
+void omInsertObj(omObjData*);
 void func_8005DA64(u16, omObjData*);
 
 extern omObjData* D_800C5984;

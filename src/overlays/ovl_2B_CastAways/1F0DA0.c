@@ -19,7 +19,7 @@ void func_800F65E0_1F0DA0(void) {
     D_800FBB9C_ovl2B[0].x = 0;
     D_800FBB9C_ovl2B[0].y = 1.0f;
     D_800FBB9C_ovl2B[0].z = 0;
-    func_8005D8B8(omAddObj(0x7FDA, 0, 0, -1, &func_800FB884_1F6044), 0xA0);
+    omSetStatBit(omAddObj(0x7FDA, 0, 0, -1, &func_800FB884_1F6044), 0xA0);
     func_80023448(3);
     func_800234B8(0, 0x78, 0x78, 0x78);
     func_800234B8(1, 0x40, 0x40, 0x60);
@@ -34,7 +34,7 @@ void func_800F65E0_1F0DA0(void) {
     func_8005D98C(4, 4);
     omAddObj(0x64, 0, 0, -1, &func_800F7014_1F17D4);
     omAddObj(0, 0, 0, -1, &func_800F704C_1F180C);
-    func_8005D8B8(omAddObj(4, 4, 0, -1, &func_800F71AC_1F196C), 0xA0);
+    omSetStatBit(omAddObj(4, 4, 0, -1, &func_800F71AC_1F196C), 0xA0);
     D_800FBB48_ovl2B[0] = omAddObj(6, 0, 0, -1, &func_800F761C_1F1DDC);
     D_800FBB48_ovl2B[1] = omAddObj(6, 0, 0, -1, &func_800F7650_1F1E10);
     D_800FBB48_ovl2B[2] = omAddObj(6, 0, 0, -1, &func_800F7684_1F1E44);

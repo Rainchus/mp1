@@ -23,12 +23,12 @@ void func_80046760(void) {
     }
     
     if (D_800D6508 != NULL) {
-        func_8005D718(D_800D6508);
+        omDelObj(D_800D6508);
         D_800D6508 = NULL;
     }
     
     if (D_800D650C != NULL) {
-        func_8005D718(D_800D650C);
+        omDelObj(D_800D650C);
         D_800D650C = NULL;
     }
     
@@ -76,7 +76,7 @@ void func_80046828(omObjData* arg0) {
         func_80077044(D_800D6580);
         func_80077044(D_800D65E8);
         D_800D650C = 0;
-        func_8005D718(arg0);
+        omDelObj(arg0);
         break;
     }
 }
@@ -223,7 +223,7 @@ void func_80047B78(void) {
     func_80064D38(D_800D6502);
     func_80067704(D_800D6504.x);
     func_80067704(D_800D6504.y);
-    func_8005D718(D_800D6508);
+    omDelObj(D_800D6508);
     D_800D6508 = NULL;
     D_800D6500 &= ~0x3C;
 }
@@ -260,7 +260,7 @@ void func_80047D48(void) {
     func_80064D38(D_800D6502);
     func_80067704(D_800D6504.x);
     func_80067704(D_800D6504.y);
-    func_8005D718(D_800D6508);
+    omDelObj(D_800D6508);
     D_800D6508 = NULL;
     func_80077044(D_800D6490);
     D_800D6500 &= ~0x3C;

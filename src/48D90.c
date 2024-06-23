@@ -440,7 +440,7 @@ INCLUDE_ASM(s32, "48D90", func_8004AAA8);
 INCLUDE_ASM(s32, "48D90", func_8004ACEC);
 
 void func_8001D57C(s32);                                         /* extern */
-void func_8005D900(Process*, s32);                               /* extern */
+void omPrcSetStatBit(Process*, s32);                               /* extern */
 void func_8004B208();                                            /* extern */
 void func_8004AFFC(void) {
     f32 temp_f2;
@@ -468,7 +468,7 @@ void func_8004AFFC(void) {
     D_800D80B4 = 1.0f;
     temp_v0 = omAddPrcObj(&func_8004B208, 0x1001, 0, 0);
     D_800D80B0 = temp_v0;
-    func_8005D900(temp_v0, 0x80);
+    omPrcSetStatBit(temp_v0, 0x80);
     func_8001D494(0, ((f32*)D_800C4F78)[4], 80.0f, 8000.0f);
     func_8001D420(0, &D_800D80CC, &D_800D80D8, &D_800D80E4);
     func_8001D57C(0);

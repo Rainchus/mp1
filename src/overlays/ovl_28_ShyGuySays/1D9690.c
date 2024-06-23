@@ -8,7 +8,7 @@ void func_800F65E0_1D9690(void) {
     omInitObjMan(50, 0);
     func_80060088();
     func_8001DE70(64);
-    func_8005D8B8(omAddObj(0x7FDA, 0, 0, -1, &func_8005EB1C), 0xA0);
+    omSetStatBit(omAddObj(0x7FDA, 0, 0, -1, &func_8005EB1C), 0xA0);
     func_800234B8(0U, 0xFF, 0xFF, 0xFF);
     func_800234B8(1U, 0xFF, 0xFF, 0xFF);
     func_80023504(1, -96.0f, 100.0f, 26.0f);
@@ -42,7 +42,7 @@ void func_800F67F8_1D98A8(omObjData* arg0) {
     func_800F736C_1DA41C();
     func_800F8068_1DB118();
     D_800FDC20 = omAddObj(1, 7, 0, -1, &func_800FBAE4_1DEB94);
-    func_8005D8B8(D_800FDC20, 0xA0);
+    omSetStatBit(D_800FDC20, 0xA0);
     func_800F81A4_1DB254();
     D_800F2AF8[D_800ED440] = omAddObj(0, 0, 0, -1, &func_800FA77C_1DD82C);
     D_800ED440++;

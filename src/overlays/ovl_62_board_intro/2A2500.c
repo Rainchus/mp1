@@ -33,7 +33,7 @@ void func_800F677C_2A269C(omObjData* arg0) {
     arg0->work[2] += 2;
     if (arg0->work[2] >= 33) {
         D_800FCD2C[arg0->work[0]] = 0;
-        func_8005D718(arg0);
+        omDelObj(arg0);
     }
 }
 

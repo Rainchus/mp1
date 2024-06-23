@@ -92,7 +92,7 @@ void func_80055544(s32 arg0) {
     temp_s1 = &D_800D83A8[arg0];
     
     if (temp_s1->unk2C != NULL) {
-        func_8005D718(temp_s1->unk2C);
+        omDelObj(temp_s1->unk2C);
         temp_s1->unk2C = NULL;
         for (i = 0; i < 0xB; i++) {
             func_80067354(temp_s1->unk_06, i, D_800C5654[i], D_800C5654[i]);
@@ -133,7 +133,7 @@ void func_800555D0(omObjData* arg0) {
         
         if (arg0->trans.x == 0.0f || gPlayers[arg0->work[0]].coinAmount == 0) {
             D_800D84D0[arg0->work[0]] = 0;
-            func_8005D718(arg0);
+            omDelObj(arg0);
             return;
         }
         
@@ -198,7 +198,7 @@ void func_80055A40(s32 arg1) {
     }
 
     D_800D83A0 = omAddPrcObj(func_80053A1C, 0U, 0x2000, 0);
-    func_8005D900(D_800D83A0, 0x80);
+    omPrcSetStatBit(D_800D83A0, 0x80);
     D_800D84AA = -1;
     D_800D84A8 = -1;
 }
@@ -322,7 +322,7 @@ void func_80055EE8(void) {
     }
     
     D_800D86A8 = omAddPrcObj(func_80055B9C, 0U, 0, 0);
-    func_8005D900(D_800D86A8, 0x80);
+    omPrcSetStatBit(D_800D86A8, 0x80);
 }
 
 
@@ -370,7 +370,7 @@ void func_8005608C(void) {
     }
 
     D_800D8558 = omAddPrcObj(func_80055D28, 0, 0, 0);
-    func_8005D900(D_800D8558, 0x80);
+    omPrcSetStatBit(D_800D8558, 0x80);
 }
 
 void func_80056380(void) {
@@ -408,7 +408,7 @@ void func_80056380(void) {
     }
 
     D_800D85D0 = omAddPrcObj(func_80055E08, 0, 0, 0);
-    func_8005D900(D_800D85D0, 0x80);
+    omPrcSetStatBit(D_800D85D0, 0x80);
 }
 
 void func_800565B4(void) {

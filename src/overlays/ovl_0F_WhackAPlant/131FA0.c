@@ -75,7 +75,7 @@ void func_800F7570_132F30(omObjData* arg0) {
     unkGlobalStruct_00* temp_s1 = arg0->unk_50;
 
     if (D_800FB60A < 0x69) {
-        func_8005D95C(arg0, arg0->trans.x, arg0->trans.y + PI, arg0->trans.z);
+        omSetTra(arg0, arg0->trans.x, arg0->trans.y + PI, arg0->trans.z);
         func_80017DB0(arg0);
     } else {
         D_800FB710[0] = 3;
