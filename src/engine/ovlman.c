@@ -31,7 +31,7 @@ s16 func_8001755C(s32 arg0) {
     return LoadFormBinary(ReadMainFS(arg0), 0x1D);
 }
 
-u8 GetRandomByte(void) {
+u8 rand8(void) {
     D_800C2FF4 = D_800C2FF4 * 0x41C64E6D + 0x3039;
     return (D_800C2FF4 + 1) >> 16;
 }
@@ -93,7 +93,7 @@ void func_8001775C(unkObjectStruct* arg0, u16 arg1, s32 arg2) {
     }
 }
 
-s8 func_8000B4B4() {
+s8 func_8000B4B4(void) {
     s8 ret;
     if (D_800F3778 > D_800C1C70) {
         ret = D_800C1C70++;
@@ -109,7 +109,7 @@ u16 ReadImgPackand(s32 arg0, s32 arg1, s32 arg2) {
 
     temp_v0 = ReadMainFS(arg0);
     temp_s0 = func_8001E00C(temp_v0, arg1, arg2 );
-    FreePerm(temp_v0);
+    HuMemDirectFree(temp_v0);
     return temp_s0;
 }
 

@@ -10,7 +10,7 @@ INCLUDE_ASM(s32, "138F0", func_800130E8);
 
 INCLUDE_ASM(s32, "138F0", func_80013234);
 
-void func_80013358(void) {
+void func_80013358() {
 }
 
 INCLUDE_ASM(s32, "138F0", func_80013360);

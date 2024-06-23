@@ -21,11 +21,11 @@ s32 func_80050A98(s32 arg0) {
     temp_s5 = func_80045D84(9, 0xAE, 0);
     temp_s4 = func_80045D84(5, 0xBC, 0);
     temp_s3 = func_8005077C(0);
-    SleepVProcess();
+    HuPrcVSleep();
     temp_s0 = &D_800F5460[arg0];
 
     while (1) {
-        SleepVProcess();
+        HuPrcVSleep();
         if (D_800C52F8 != 0) {
             if ((*temp_s0 & 2) != 0) {
             var_s0 = 3;
@@ -67,7 +67,7 @@ void func_80050D68(void) {
     s16 var_s0;
     s32* temp_s2;
     s16 temp;
-    Process* process = GetCurrentProcess();
+    Process* process = HuPrcCurrentGet();
 
     temp_s2 = ((unk51200*)process->user_data)->unk0;
     temp = ((unk51200*)process->user_data)->unk4;
@@ -78,7 +78,7 @@ void func_80050D68(void) {
             var_s0 = temp_v0_2;
             func_80050D1C(D_800D8370->unk8, temp_s2[temp_v0_2]);
         }
-        SleepVProcess();        
+        HuPrcVSleep();        
     }
 }
 
@@ -87,7 +87,7 @@ Process* func_80050E10(s16 arg0, s32 arg1) {
     unkMallocStruct* processUserData;
 
     process = InitProcess(func_80050D68, 0x1005, 0, 0x40);
-    processUserData = Malloc(process->heap, sizeof(unkMallocStruct));
+    processUserData = HuMemMemoryAlloc(process->heap, sizeof(unkMallocStruct));
     process->user_data = processUserData;
     processUserData->unk0 = arg1;
     processUserData->unk4 = arg0;

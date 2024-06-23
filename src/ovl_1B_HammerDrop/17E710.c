@@ -38,7 +38,7 @@ void func_800F67BC_17E8EC(void) {
 void func_800F6814_17E944(void) {
     if (D_800F5144 != 0) {
         func_800601D4(40);
-        func_8005DFB8(1);
+        omOvlReturnEx(1);
     }
 }
 
@@ -120,7 +120,7 @@ void func_800F7AD4_17FC04(unkObjectStruct *arg0) {
     temp_f22 = temp_s0->unk_3C;
     (void) test2->unk_50;
     if (test2->unk_50 && temp_s0->unk_E4) {}
-    GetRandomByte();
+    rand8();
     temp = 70.0f;
     D_800ECE14[temp_s0->unk_56] = func_800AEAC0(temp_f22) * temp;
     D_800F3843[temp_s0->unk_56] = func_800AEFD0(temp_f22) * -temp;

@@ -59,7 +59,7 @@ void func_800F6BC4_2D4E14(void) {
     if (func_80072718() == 0) {
         func_80070ED4();
         func_8005B244();
-        func_8005DFB8(1);
+        omOvlReturnEx(1);
     }
 }
 

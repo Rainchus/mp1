@@ -31,7 +31,7 @@ typedef struct unkMallocPermStruct {
     u8* unk14;
 } unkMallocPermStruct;
 
-void func_80014220() {
+void func_80014220(void) {
     s16 i;
 
     u16 *D_800F544C_ptr;
@@ -82,7 +82,7 @@ void func_80014460(void* fs_rom_loc) {
     func_80061FE8(fs_rom_loc, archiveHeader, 16); // ExecRomCopy
     D_800D12F4 = archiveHeader->dir;
     dir_table_size = archiveHeader->dir * 4;
-    D_800D12F8 = (s32 *)MallocPerm(dir_table_size);
+    D_800D12F8 = (s32 *)HuMemDirectMalloc(dir_table_size);
     func_80061FE8(fs_rom_loc + 4, D_800D12F8, dir_table_size);
     D_800D12FC = D_800D12F0;
     D_800D1300 = D_800D12F4;
@@ -161,7 +161,7 @@ void *func_80014678(s32 type, s32 index) {
     void* ret;
 
     func_80014504(type, index, &info);
-    ret = MallocPerm((info.size + 1) & -2);
+    ret = HuMemDirectMalloc((info.size + 1) & -2);
     if (ret != NULL) {
         DecodeFile(info.bytes, ret, info.size, info.compType);
     }
@@ -184,21 +184,21 @@ void* func_800146D4(s32 type, s32 index) {
 }
 
 /*
- * Free file previously obtained through ReadMainFS.
+ * HuMemMemoryFree file previously obtained through ReadMainFS.
  * 80014730
 */
 void FreeMainFS(void *file) {
     if (file != NULL) {
-        FreePerm(file);
+        HuMemDirectFree(file);
     }
 }
 
 /*
- * Free file previously obtained through func_80014614.
+ * HuMemMemoryFree file previously obtained through func_80014614.
 */
 void func_80014750(void *file) {
     if (file != NULL) {
-        FreePerm(file); //! Should be FreeTemp, but not functionally problematic.
+        HuMemDirectFree(file); //! Should be FreeTemp, but not functionally problematic.
     }
 }
 
@@ -211,7 +211,7 @@ void func_80014770(u32 arg0, u32 arg1) {
     sp10.bytes = D_800D12F0 + D_800D12F8[arg1];
     if (D_800D12FC != sp10.bytes) {
         if (D_800D12FC != D_800D12F0) {
-            FreePerm(D_800D1304);
+            HuMemDirectFree(D_800D1304);
         }
         
         D_800D12FC = sp10.bytes;
@@ -222,7 +222,7 @@ void func_80014770(u32 arg0, u32 arg1) {
         
         D_800D1300 = dir;
         tableSize = dir * 4;
-        D_800D1304 = MallocPerm(tableSize);
+        D_800D1304 = HuMemDirectMalloc(tableSize);
         func_80061FE8(sp10.bytes + 4, D_800D1304, tableSize);
     }
 }
@@ -231,14 +231,14 @@ void* func_80014828(s32 arg0, s32 arg1) {
     HuFileInfo sp10;
     unkMallocPermStruct* temp_s0;
 
-    temp_s0 = MallocPerm(sizeof(unkMallocPermStruct));
+    temp_s0 = HuMemDirectMalloc(sizeof(unkMallocPermStruct));
     if (temp_s0 == NULL) {
         return NULL;
     } else {
         func_80014504(arg0, arg1, &sp10);
         temp_s0->unk4 = sp10.size;
         temp_s0->unk0 = (u16)sp10.compType;
-        temp_s0->unk8 = MallocPerm(0x400);
+        temp_s0->unk8 = HuMemDirectMalloc(0x400);
         temp_s0->unkC = 1;
         temp_s0->unkE = 0;
         temp_s0->unk10 = temp_s0->unk14 = sp10.bytes;
@@ -247,8 +247,8 @@ void* func_80014828(s32 arg0, s32 arg1) {
 }
 
 void func_800148BC(void *param_1) {
-    FreePerm((void *)(((s32 *)param_1)[2]));
-    FreePerm(param_1);
+    HuMemDirectFree((void *)(((s32 *)param_1)[2]));
+    HuMemDirectFree(param_1);
 }
 
 INCLUDE_ASM(s32, "engine/data", func_800148EC);

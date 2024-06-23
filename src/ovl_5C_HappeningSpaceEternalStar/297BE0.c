@@ -38,9 +38,9 @@ void func_800F66B4_297CB4(void) {
     s32 textWindowID;
 
     func_800421E0();
-    SleepProcess(0x10);
+    HuPrcSleep(0x10);
     PlaySound(0x46A);
-    SleepProcess(0xA);
+    HuPrcSleep(0xA);
     textWindowID = CreateTextWindow(0x50, 0x3C, 0xF, 3);
     LoadStringIntoWindow(textWindowID, (void*)0x208, -1, -1);
     func_8006E070(textWindowID, 0);
@@ -49,10 +49,10 @@ void func_800F66B4_297CB4(void) {
     HideTextWindow(textWindowID);
     PlaySound(0x71);
     func_8004F4D4(D_800F69B4, 2, 0);
-    SleepProcess(0x1E);
+    HuPrcSleep(0x1E);
     D_800F5144 = 1;
     while (1) {
-        SleepVProcess();  
+        HuPrcVSleep();  
     }
 }
 
@@ -62,7 +62,7 @@ void func_800F6794_297D94(void) {
         func_800F6898_297E98();
         func_80054654();
         func_80070ED4();
-        func_8005DFB8(1);
+        omOvlReturnEx(1);
     }
 }
 

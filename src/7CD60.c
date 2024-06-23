@@ -478,7 +478,7 @@ static inline s32 calc_E7730val(s32 index){
     }
 }
 
-void func_8007FAC0(void) {
+void func_8007FAC0() {
     s32 i;
     s32 var_v1;
     u8 var_v0;

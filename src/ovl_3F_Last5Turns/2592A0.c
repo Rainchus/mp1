@@ -27,7 +27,7 @@ void func_800F6F10_259BD0(void) {
         func_800F700C_259CCC();
         func_80054654();
         func_80070ED4();
-        func_8005DFB8(1);
+        omOvlReturnEx(1);
     }
 }
 

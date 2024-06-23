@@ -79,7 +79,7 @@ void func_800F692C_2935AC(void) {
     s32 i;
     f32 var_f20;
     
-    SleepProcess(26);
+    HuPrcSleep(26);
     PlaySound(226);
 
     if (D_800ED154.unk_00 != 0) {
@@ -90,7 +90,7 @@ void func_800F692C_2935AC(void) {
     
     for (var_f20 = 0.0f; var_f20 >= -180.0f; var_f20 -= 5.0f) {
         func_800F66AC_29332C(var_f20);
-        SleepVProcess();
+        HuPrcVSleep();
     }
 
     PlaySound(228);
@@ -109,13 +109,13 @@ void func_800F692C_2935AC(void) {
     } else {
         PlaySound(1130);
         func_8003E81C(D_800F6DF4, 0, 2);
-        SleepProcess(40);
+        HuPrcSleep(40);
     }
     
     D_800F5144 = 1;
     
     while(1) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
     
 }
@@ -125,7 +125,7 @@ void func_800F6A84_293704(void) {
         func_800F6D88_293A08();
         func_800F6CB0_293930();
         func_80054654();
-        func_8005DFB8(1);
+        omOvlReturnEx(1);
     }
 }
 

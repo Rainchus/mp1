@@ -5,7 +5,7 @@ void func_800F65E0_2888A0(void) {
     D_800F78E0 = D_800ED5DD;
     if ((u32) (D_800ED178.unk0 - 1) >= 3U) {
         D_800ED178.unk0 = 4U;
-        D_800ED178.unk2 = GetRandomByte() & 3 & 0xFF;
+        D_800ED178.unk2 = rand8() & 3 & 0xFF;
         D_800ED178.unk4 = D_800ED178.unk6 = D_800ED178.unk8 = D_800ED178.unkA = -1;
     }
     InitObjSystem(50, 10);
@@ -36,7 +36,7 @@ void func_800F72D4_289594(void) {
         func_800F7658_289918();
         func_80054654();
         func_80070ED4();
-        func_8005DFB8(1);
+        omOvlReturnEx(1);
     }
 }
 

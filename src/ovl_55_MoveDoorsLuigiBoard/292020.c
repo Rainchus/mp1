@@ -34,11 +34,11 @@ void func_800F7198_292BD8(void) {
 
     if (D_800C597A == 0) {
         func_800421E0();
-        SleepProcess(0x10);
+        HuPrcSleep(0x10);
         PlaySound(0xDA);
-        SleepProcess(10);
+        HuPrcSleep(10);
     } else {
-        SleepProcess(8);
+        HuPrcSleep(8);
     }
     
     temp_v0 = CreateTextWindow(0x3C, 0x28, 0x11, 7);
@@ -57,7 +57,7 @@ void func_800F7198_292BD8(void) {
     ShowTextWindow(temp_v0);
 
     while (func_8006FCC0(temp_v0) != 0) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
     
     temp_s0 = func_800F6F14_292954(temp_v0, sp10);
@@ -75,7 +75,7 @@ void func_800F7198_292BD8(void) {
         D_800ED156 = 0;
     } else {
         func_80055960(D_800F7820, -0x14);
-        SleepProcess(30);
+        HuPrcSleep(30);
         D_800ED156 = 1;
         temp_v0 = CreateTextWindow(0x50, 0x3C, 0xD, 3);
         LoadStringIntoWindow(temp_v0, (void* )0x1D6, -1, -1);
@@ -86,13 +86,13 @@ void func_800F7198_292BD8(void) {
         func_8004F4D4(D_800F7824, 0, 0);
         func_800503B0(D_800F7820, 1);
         PlaySound(0xE1);
-        SleepProcess(15);
+        HuPrcSleep(15);
     }
     
     D_800F5144 = 1;
     
     while (1) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
 }
 
@@ -103,7 +103,7 @@ void func_800F744C_292E8C(void) {
         func_80054654();
         func_80070ED4();
         if (D_800F7720 == 0) {
-            func_8005DFB8(1);
+            omOvlReturnEx(1);
             return;
         }
         func_8004F284();

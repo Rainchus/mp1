@@ -29,8 +29,8 @@ void LoadSpaceTextures(s16 type) {
     }
 }
 
-/* Free D_800D8118. */
-void FreeSpaceTextures() {
+/* HuMemMemoryFree D_800D8118. */
+void FreeSpaceTextures(void) {
     s32 i;
     for (i = 0; i < SPACE_TYPE_TOTAL; i++) {
         if (D_800D8118[i] != NULL) {
@@ -41,16 +41,16 @@ void FreeSpaceTextures() {
 }
 
 /* Set board as 0? */
-void LoadInitialSpaceTextures() {
+void LoadInitialSpaceTextures(void) {
     LoadSpaceTextures(0);
     D_800C4FD0 = NULL;
 }
 
-void FreeSpaceTexturesWrapper() {
+void FreeSpaceTexturesWrapper(void) {
     FreeSpaceTextures();
 }
 
-/* Free and then set D_800D8118 */
+/* HuMemMemoryFree and then set D_800D8118 */
 void ChangeSpaceTextures(s16 type) {
     FreeSpaceTextures();
     LoadSpaceTextures(type);
@@ -146,8 +146,8 @@ s32 LoadBoardSpaces(s16 dir, s16 file) {
     return 0;
 }
 
-/* Free board temps */
-void FreeBoardSpaces() {
+/* HuMemMemoryFree board temps */
+void FreeBoardSpaces(void) {
    s32 i;
    ChainData *chainData;
 
@@ -155,10 +155,10 @@ void FreeBoardSpaces() {
       D_800C4FD0 = NULL;
       D_800F3290 = 0;
 
-      // Free space data
+      // HuMemMemoryFree space data
       FreeTemp(D_800D8108);
 
-      // Free both chain data
+      // HuMemMemoryFree both chain data
       for (i = 0, chainData = D_800D810C; i < D_800D8102; i++, chainData++) {
          FreeTemp(chainData->spaceIndices);
       }
@@ -202,7 +202,7 @@ s16 GetRandomSpaceOfTypeInChain(u16 type, u16 chainIndex) {
    s32 chainLen;
 
    chainLen = GetChainLength(chainIndex);
-   randByte = (GetRandomByte() % 30) + 1;
+   randByte = (rand8() % 30) + 1;
 
    i = 0;
    while (TRUE) {
@@ -228,7 +228,7 @@ s16 GetRandomSpaceOfType(u16 type) {
    s32 i;
    SpaceData *space;
 
-   randByte = GetRandomByte() % D_800D8100;
+   randByte = rand8() % D_800D8100;
 
    i = 0;
    while (TRUE) {
@@ -273,18 +273,18 @@ void SetSpaceTypeInChain(u16 chainIndex, u16 oldType, u8 newType) {
 }
 
 /* Space process */
-void SpaceStepAnim() {
+void SpaceStepAnim(void) {
    Process *process;
    SpaceData *space;
    f32 fval;
 
-   process = GetCurrentProcess();
+   process = HuPrcCurrentGet();
    space = GetSpaceData((s16)(s32)process->user_data);
 
    fval = 1.4f;
    if (D_800C4FD0 != NULL) {
       do {
-         SleepVProcess();
+         HuPrcVSleep();
          fval -= 0.05f;
          if (fval <= 1.0f) {
             fval = 1.0f;
@@ -307,18 +307,18 @@ void SetSpaceStepAnim(s16 spaceIndex) {
 }
 
 /* Space process */
-void SpaceDisappearAnim() {
+void SpaceDisappearAnim(void) {
    Process *process;
    SpaceData *space;
    f32 fval;
 
-   process = GetCurrentProcess();
+   process = HuPrcCurrentGet();
    space = GetSpaceData((s16)(s32)process->user_data);
 
    fval = 1.0f;
    if (D_800C4FD0 != NULL) {
       do {
-         SleepVProcess();
+         HuPrcVSleep();
          fval -= 0.1f;
          if (fval <= 0.0f) {
             fval = 0.0f;
@@ -341,18 +341,18 @@ void SetSpaceDisappearAnim(s16 spaceIndex) {
 }
 
 /* Space process */
-void SpaceSpawnAnim() {
+void SpaceSpawnAnim(void) {
    Process *process;
    SpaceData *space;
    f32 fval;
 
-   process = GetCurrentProcess();
+   process = HuPrcCurrentGet();
    space = GetSpaceData((s16)(s32)process->user_data);
 
    fval = 0.0f;
    if (D_800C4FD0 != NULL) {
       do {
-         SleepVProcess();
+         HuPrcVSleep();
 
          fval += 0.1f;
          if (fval >= 1.0f) {
@@ -446,10 +446,10 @@ s32 ExecuteEventForSpace(s16 index, s16 activationType) {
                   break;
                case 2:
                   {
-                     Process *currProcess = GetCurrentProcess();
+                     Process *currProcess = HuPrcCurrentGet();
                      Process *spaceProcess = InitProcess(eventList->eventFunc, 0x4800, 0, 0);
-                     LinkChildProcess(currProcess, spaceProcess);
-                     WaitForChildProcess();
+                     HuPrcChildLink(currProcess, spaceProcess);
+                     HuPrcChildWatch();
                   }
                   break;
             }
@@ -472,7 +472,7 @@ void SetCurrentSpaceIndex(s16 spaceIndex) {
     D_800ED5E0 = spaceIndex;
 }
 
-s16 GetCurrentSpaceIndex() {
+s16 GetCurrentSpaceIndex(void) {
     return D_800ED5E0;
 }
 

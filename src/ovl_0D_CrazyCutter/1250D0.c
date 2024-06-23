@@ -145,7 +145,7 @@ void func_800F9654_128144(s32 arg0) {
     if (D_800F5144 != 0) {
         func_8006071C(D_800FD5C6);
         func_800601D4(40);
-        func_8005DFB8(1);
+        omOvlReturnEx(1);
     }
 }
 
@@ -238,7 +238,7 @@ void func_800FAA18_129508(Object* arg0) {
             }
         }
         func_800601D4(0x28);
-        func_8005DFB8(1);
+        omOvlReturnEx(1);
         func_8005D718(arg0);
     }
 }

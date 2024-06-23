@@ -2,9 +2,9 @@
 
 INCLUDE_ASM(s32, "engine/memory", MakePermHeap);
 
-INCLUDE_ASM(s32, "engine/memory", MallocPerm);
+INCLUDE_ASM(s32, "engine/memory", HuMemDirectMalloc);
 
-INCLUDE_ASM(s32, "engine/memory", FreePerm);
+INCLUDE_ASM(s32, "engine/memory", HuMemDirectFree);
 
 INCLUDE_ASM(s32, "engine/memory", func_8003B6E4);
 

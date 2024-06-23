@@ -1,6 +1,6 @@
 #include "common.h"
 
-void SleepVProcess(void);
+void HuPrcVSleep(void);
 extern s16 D_800D84E4;
 extern s8 D_800F37BB; //minigame island lives
 extern s8 D_800F37C4; //minigame island coins
@@ -58,7 +58,7 @@ extern s16 D_800D85D4;
 extern s16 D_800D85D6;
 extern unkStruct3 D_800D85EC;
 extern Process* D_800D86A8;
-s32 KillProcess(Process* process);
+s32 HuPrcKill(Process* process);
 void func_8005456C(s32);
 void func_80055228(void);
 extern s32 D_800C54D0;

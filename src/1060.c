@@ -11,7 +11,7 @@ extern u8 gThread3Stack[];
 void ultraMain(void);
 void thread1_idle(void *arg);
 
-void ultraMain(void) {
+void ultraMain() {
     __osInitialize_common();
     osCreateThread(&gInitThread, 1, &thread1_idle, NULL, &gThread1Stack[2048], 10);
     osStartThread(&gInitThread);

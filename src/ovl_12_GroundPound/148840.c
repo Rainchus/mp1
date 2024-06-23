@@ -240,7 +240,7 @@ s32 func_800F9F18_149B38(u32 seed) {
     u32 high, low;
     
     if (seed == 0) {
-        seed = GetRandomByte();
+        seed = rand8();
         seed = (seed ^ osGetCount()) ^ 0xD826BC89;
     }
     

@@ -92,7 +92,7 @@ void func_800F7340_28B900(void) {
         func_80054654();
         func_80070ED4();
         if (D_800F7620 == 0) {
-            func_8005DFB8(1);
+            omOvlReturnEx(1);
             return;
         }
         func_8004F284();

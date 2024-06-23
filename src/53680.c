@@ -12,7 +12,7 @@ extern s16 D_800ED5DC; // current player index
 
 u8 func_80052F6C(s16 index);
 
-s16 GetCurrentPlayerIndex() {
+s16 GetCurrentPlayerIndex(void) {
     return D_800ED5DC;
 }
 
@@ -92,16 +92,16 @@ void func_80052CCC(s32 index, u8 b) {
     }
 }
 
-void func_80052D34() {
-    Process* process = GetCurrentProcess();
+void func_80052D34(void) {
+    Process* process = HuPrcCurrentGet();
     playerMain* player = (playerMain*)process->user_data;
     u16 flags;
     f32 val;
 
     while (1) {
-        SleepVProcess();
+        HuPrcVSleep();
         while (((flags = player->unk_06) & 4) != 0) {
-            SleepVProcess();
+            HuPrcVSleep();
         }
 
         val = 1.0f;
@@ -181,7 +181,7 @@ void func_80052FD4(s16 index) {
     }
 }
 
-void func_80053020() {
+void func_80053020(void) {
     s32 i;
     playerMain* player;
 
@@ -192,9 +192,9 @@ void func_80053020() {
     D_800D8380 = 0;
 }
 
-void func_80053064() {
+void func_80053064(void) {
     D_800D8380 = 1;
 }
 
-void func_80053074() {
+void func_80053074(void) {
 }

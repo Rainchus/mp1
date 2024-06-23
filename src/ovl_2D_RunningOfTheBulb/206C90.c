@@ -18,7 +18,7 @@ void func_800FE140_206D40(void) {
 }
 
 void func_800FE178_206D78(s32 arg0) {
-    func_8005DFB8(1);
+    omOvlReturnEx(1);
 }
 
 void func_800FE194_206D94(void) {

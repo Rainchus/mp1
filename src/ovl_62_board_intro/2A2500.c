@@ -19,11 +19,11 @@ void func_800F6660_2A2580(s32 arg0, s32 arg1) {
 
     temp_s1 = GetPlayerStruct(arg0);
     temp_s2 = GetPlayerStruct(arg1);
-    temp_v0 = MallocPerm(sizeof(playerMain));
+    temp_v0 = HuMemDirectMalloc(sizeof(playerMain));
     bcopy(temp_s1, temp_v0, sizeof(playerMain));
     bcopy(temp_s2, temp_s1, sizeof(playerMain));
     bcopy(temp_v0, temp_s2, sizeof(playerMain));
-    FreePerm(temp_v0);
+    HuMemDirectFree(temp_v0);
 }
 
 INCLUDE_ASM(s32, "ovl_62_board_intro/2A2500", func_800F66E8_2A2608);
@@ -54,20 +54,20 @@ void func_800F6B18_2A2A38(void) {
     f32 var_f20;
 
     func_80060128(57);
-    SleepProcess(10);
+    HuPrcSleep(10);
     sp10[0] = func_800F67F8_2A2718(0);
     
     for (var_f20 = 0.0f; var_f20 <= 1.0f; var_f20 += 0.1f) {
         func_8004F7C0(sp10[0], 1.0f, var_f20);
-        SleepVProcess();
+        HuPrcVSleep();
     }
     
     func_8004F7C0(sp10[0], 1.0f, 1.0f);
-    SleepProcess(34);
+    HuPrcSleep(34);
     sp10[1] = func_800F67F8_2A2718(1);
-    SleepProcess(42);
+    HuPrcSleep(42);
     func_800F684C_2A276C();
-    SleepProcess(60);
+    HuPrcSleep(60);
 }
 
 INCLUDE_ASM(s32, "ovl_62_board_intro/2A2500", func_800F6BE4_2A2B04);

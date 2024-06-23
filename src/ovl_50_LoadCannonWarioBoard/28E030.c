@@ -39,9 +39,9 @@ void func_800F66B4_28E104(void) {
     s32 temp_s1;
 
     func_800421E0();
-    SleepProcess(16);
+    HuPrcSleep(16);
     PlaySound(0xBF);
-    SleepProcess(10);
+    HuPrcSleep(10);
     temp_s1 = CreateTextWindow(100, 80, 10, 4);
 
     LoadStringIntoWindow(temp_s1, (void* )0x1CC, -1, -1);
@@ -50,28 +50,28 @@ void func_800F66B4_28E104(void) {
     func_8004DBD4(temp_s1, D_800F6BE0);
     HideTextWindow(temp_s1);
     func_8004E3E0(0, &D_800F6B38, 20, D_800F6BE4);
-    SleepProcess(20);
+    HuPrcSleep(20);
     PlaySound(0xC2);
     PlaySound(0x145);
     func_800503B0(D_800F6BE0, 1);
     func_8004F4D4(D_800F6BE8, 1, 2);
     func_8004E3E0(0, &D_800F6B44, 5, D_800F6BE8);
-    SleepProcess(20);
+    HuPrcSleep(20);
     func_8004E3E0(0, &D_800F6B50, 5, D_800F6BE4);
     func_8004E3E0(0, &D_800F6B5C, 5, D_800F6BE8);
-    SleepProcess(4);
+    HuPrcSleep(4);
     PlaySound(0xC2);
     PlaySound(0x145);
     func_800503B0(D_800F6BE0, 1);
     func_8004E3E0(0, &D_800F6B68, 20, D_800F6BE8);
-    SleepProcess(5);
+    HuPrcSleep(5);
     func_8004E3E0(0, &D_800F6B5C, 20, D_800F6BE4);
-    SleepProcess(5);
+    HuPrcSleep(5);
     func_800726AC(1, 8);
-    SleepProcess(20);
+    HuPrcSleep(20);
     D_800F5144 = 1;
     while (1) {
-        SleepVProcess();        
+        HuPrcVSleep();        
     }
 }
 
@@ -81,7 +81,7 @@ void func_800F68A8_28E2F8(void) {
         func_800F6A28_28E478();
         func_80054654();
         func_80070ED4();
-        func_8005DFB8(1);
+        omOvlReturnEx(1);
     }
 }
 

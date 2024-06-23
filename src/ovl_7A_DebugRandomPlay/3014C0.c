@@ -35,7 +35,7 @@ INCLUDE_ASM(s32, "ovl_7A_DebugRandomPlay/3014C0", func_800F70BC_301F9C);
 void func_800F72D4_3021B4(void) {
 
     do {
-        D_800F8FB8 = GetRandomByte() % 0x46;
+        D_800F8FB8 = rand8() % 0x46;
     } while ((D_800F7DB0[D_800F8FB8].unk_00) >> 24 != 0);
     
     func_800F7360_302240(D_800F8FB8);
@@ -50,7 +50,7 @@ void func_800F7468_302348(void) {
     LoadStringIntoWindow(D_800F8FBA, (void*)&D_800F8F6C, -1, -1);
     while (1) {
         if ((func_8006FCC0(D_800F8FBA)) != 0) {
-            SleepVProcess();
+            HuPrcVSleep();
         } else {
             break;
         }        
@@ -60,7 +60,7 @@ void func_800F7468_302348(void) {
     D_800F91C8 = InitProcess(func_800F750C_3023EC, 0x3FFF, 0, 0);
     
     while (1) {
-        SleepVProcess(); 
+        HuPrcVSleep(); 
     }
 }
 
@@ -75,7 +75,7 @@ void func_800F750C_3023EC(void) { //TODO: fix call to func_8006DA5C
     LoadStringIntoWindow(D_800F8FBC, D_800F8FC0, -1, -1);
     while (1) {
         if (func_8006FCC0(D_800F8FBC) != 0) {
-            SleepVProcess();
+            HuPrcVSleep();
         } else {
             break;
         }
@@ -84,7 +84,7 @@ void func_800F750C_3023EC(void) { //TODO: fix call to func_8006DA5C
     EndProcess(D_800F91C8);
     
     while (1) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
     
 }
@@ -114,5 +114,5 @@ void func_800F7D50_302C30(void) {
 }
 
 void func_800F7D88_302C68(void) {
-    func_8005DFB8(1);
+    omOvlReturnEx(1);
 }

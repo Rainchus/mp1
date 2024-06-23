@@ -44,7 +44,7 @@ void func_800F65E0_2B74A0(void) {
 }
 
 s32 func_800F6734_2B75F4(void) {
-    return GetRandomByte() / 256.0f * 100.0f;
+    return rand8() / 256.0f * 100.0f;
 }
 
 INCLUDE_ASM(s32, "ovl_65_UnknownBooStealScene/2B74A0", func_800F6788_2B7648);

@@ -25,7 +25,7 @@ void func_8005963C(s16 index, u16 param_2);
 void func_80059768(s16 index, s16 param_2);
 void func_80059354(s16 arg0, s16* arg1, s16* arg2);
 
-void func_80059280() {
+void func_80059280(void) {
     s8* ed100;
     s32 i;
 
@@ -283,7 +283,7 @@ void ClearBoardFeatureFlag(s32 flag) {
     (&D_800ED148)[temp_a1] = (&D_800ED148)[temp_a1] & ~(1 << (flag - ((b >> 3) * 8)));
 }
 
-void* MakeHeap(void* ptr, u32 size) {
+void* HuMemHeapInit(void* ptr, u32 size) {
     HeapNode* heap = (HeapNode*)ptr;
     heap->size = size;
     heap->heap_constant = HEAP_CONSTANT;
@@ -293,7 +293,7 @@ void* MakeHeap(void* ptr, u32 size) {
     return heap;
 }
 
-void* Malloc(HeapNode* heap, s32 size) {
+void* HuMemMemoryAlloc(HeapNode* heap, s32 size) {
     HeapNode* cur_heap;
     HeapNode* new_heap_temp;
 
@@ -329,7 +329,7 @@ void* Malloc(HeapNode* heap, s32 size) {
     return NULL;
 }
 
-void Free(void *ptr)
+void HuMemMemoryFree(void *ptr)
 {
     HeapNode* given_heap;
     HeapNode* heap_other;
@@ -390,10 +390,10 @@ void* Realloc(HeapNode* heap, void* mem, u32 new_size)
 
         return (void *)given_heap + sizeof(HeapNode);
     } else {
-        ret = Malloc(heap, new_size);
+        ret = HuMemMemoryAlloc(heap, new_size);
         if (ret != NULL) {
             bcopy(mem, ret, given_heap->size - sizeof(HeapNode));
-            Free(mem);
+            HuMemMemoryFree(mem);
         }
 
         return ret;
@@ -437,7 +437,7 @@ u32 GetUsedMemoryBlockCount(HeapNode* heap) {
     return count_free;
 }
 
-s32 GetMemoryAllocSize(s32 arg0) {
+s32 HuMemMemoryAllocSizeGet(s32 arg0) {
     return (arg0 + 0x1F) & ~0xF;
 }
 
@@ -547,7 +547,7 @@ void* func_8005B7E8(s32 stringIndex) {
     void* temp_v0;
 
     func_8005B75C(stringIndex, &sp10); //string index to pointer
-    temp_v0 = MallocPerm(sp10.size);
+    temp_v0 = HuMemDirectMalloc(sp10.size);
     
     if (temp_v0 != NULL) {
         func_80061FE8((void*)sp10.string, temp_v0, sp10.size);
@@ -558,6 +558,6 @@ void* func_8005B7E8(s32 stringIndex) {
 
 void func_8005B838(void* arg0) {
     if (arg0 != NULL) {
-        FreePerm(arg0);
+        HuMemDirectFree(arg0);
     }
 }

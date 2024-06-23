@@ -70,10 +70,10 @@ void func_800F72A8_2D7C88(void) {
         func_80070ED4();
         func_8005B244();
         if (D_800F89BC != 0) {
-            func_8005DF44(0x63, 0, 0x91);
+            omOvlCallEx(0x63, 0, 0x91);
             return;
         }
-        func_8005DFB8(1);
+        omOvlReturnEx(1);
     }
 }
 

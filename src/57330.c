@@ -1,16 +1,10 @@
 #include "spaces.h"
 
-typedef struct unkStruct15 {
-s32 unk_00;
-s16 unk_04;
-s16 unk_06;
-} unkStruct15;
-
 void func_80043460(void);                                  /* extern */
 void func_80045EE0(void);                                  /* extern */
 extern s32 D_800D86E4;
 extern s16 D_800ECC20;
-extern s16 D_800ED154[];
+extern s16 D_800ED154[32];
 extern s16 D_800ED3C0;
 extern s16 D_800EE986;
 extern s16 D_800F2CDC;
@@ -23,11 +17,10 @@ extern s16 D_800F64C6;
 extern s16 D_800F65B8;
 extern s16 D_800F65D8;
 extern s32 D_800C56D0[];
-extern s16 D_800C597E;
+extern s16 omovlhisidx;
 extern s16 D_800D86B2;
-extern unkStruct15 D_800D86B8[];
+extern omOvlHisData D_800D86B8[];
 extern s16 D_800ED5C2;
-extern unkStruct15 D_800F37F8[];
 extern s16 D_800D86B0;
 extern s16 D_800D86EC;
 extern s16 D_800D86EE;
@@ -67,23 +60,21 @@ extern f32 func_8004B844();
 
 
 void func_80056730(s32 arg0, s16 arg1, s16 arg2) {
-    s32 var_a0;
-    u16 temp_v0;
-    unkStruct15* temp_v1;
+    omOvlHisData* history; //is this the correct struct??
 
-    temp_v1 = &D_800D86B8[D_800D86B2++];
+    history = &D_800D86B8[D_800D86B2++];
     
     if (arg0 != -2) {
         if (arg0 == -1) {
-            arg0 = D_800F37F8[D_800C597E].unk_00;
+            arg0 = omovlhis[omovlhisidx].overlayID;
         }
     } else {
         arg0 = D_800C56D0[D_800ED5C2];
     }
     
-    temp_v1->unk_00 = arg0;
-    temp_v1->unk_04 = arg1;
-    temp_v1->unk_06 = arg2;
+    history->overlayID = arg0;
+    history->event = arg1;
+    history->stat = arg2;
     
     if (D_800D86B2 >= 5) {
         D_800D86B2 = 4;
@@ -92,18 +83,18 @@ void func_80056730(s32 arg0, s16 arg1, s16 arg2) {
 
 INCLUDE_ASM(s32, "57330", func_800567D4);
 
-void func_800568A4(void) {
-    unkStruct15* temp_v0_2;
+void func_800568A4() {
+    omOvlHisData* history;
 
     D_800D86E0 = 1;
     if (D_800D86B2 != 0) {
-        temp_v0_2 = &D_800D86B8[--D_800D86B2];
-        func_8005DF44(temp_v0_2->unk_00, temp_v0_2->unk_04, temp_v0_2->unk_06);
+        history = &D_800D86B8[--D_800D86B2];
+        omOvlCallEx(history->overlayID, history->event, history->stat);
         return;
     }
     if (D_800D86B0 != 0) {
         D_800D86E0 = 0;
-        func_8005DF44(D_800C56D0[D_800ED5C2], 2, 0x92);
+        omOvlCallEx(D_800C56D0[D_800ED5C2], 2, 0x92);
         return;
     }
     
@@ -114,25 +105,25 @@ void func_800568A4(void) {
     } else {
         ClearBoardFeatureFlag(0x36);
     }
-    func_8005DFB8(1);
+    omOvlReturnEx(1);
 }
 
-void func_80056984(void) {
+void func_80056984() {
     D_800D86B0 = 0;
 }
 
-s16 func_80056990(void) {
+s16 func_80056990() {
     return D_800D86E0;
 }
 
 void func_8005699C(s32 arg0) {
-    D_800D86B8[D_800D86B2].unk_04 = arg0;
+    D_800D86B8[D_800D86B2].event = arg0;
     D_800D86B2++;
     if (D_800D86B2 >= 5) {
         D_800D86B2 = 4;
     }
     func_80056730(-2, 3, 0x92);
-    func_8005DFB8(1);
+    omOvlReturnEx(1);
 }
 
 void func_80056A08(s32 arg0, s16 arg1, s32 arg2, s32 arg3) {
@@ -164,7 +155,7 @@ void func_80056A08(s32 arg0, s16 arg1, s32 arg2, s32 arg3) {
     func_80053080();
 }
 
-void func_80056AF4(void) {
+void func_80056AF4() {
     func_80041370();
     func_80046760();
     func_80043544();
@@ -181,7 +172,7 @@ void func_80056AF4(void) {
     func_80049F0C();
 }
 
-void func_80056B78(void) {
+void func_80056B78() {
     playerMain* temp_v0;
     GameStatus* gameStatus = &D_800ED5C0;
     s32 i;
@@ -250,7 +241,7 @@ void func_80056B78(void) {
             temp_v0->bowserSpacesTotal = 0;
         }
         
-        for (i = 0; i < 32; i++) {
+        for (i = 0; i < ARRAY_COUNT(D_800ED154); i++) {
             D_800ED154[i] = 0;
         }
 
@@ -290,7 +281,7 @@ void func_80056E30(s16 arg0) {
     D_800D86FA = arg0;
 }
 
-s16 func_80056E3C(void) {
+s16 func_80056E3C() {
     return D_800D86FA;
 }
 
@@ -298,7 +289,7 @@ void func_80056E48(Vec3f* arg0) {
     D_800D86FC = *arg0;
 }
 
-void func_80056E6C(void) {
+void func_80056E6C() {
     Vec2f sp10;
     while (1) {
         switch (D_800D86FA) {
@@ -313,11 +304,11 @@ void func_80056E6C(void) {
             func_8004B61C(&sp10);
             break;
         }
-        SleepVProcess();    
+        HuPrcVSleep();    
     }
 }
 
-void func_80056F40(void) {
+void func_80056F40() {
     GameStatus* gameStatus = &D_800ED5C0;
     
     if (++D_800ED5DC >= 4) {
@@ -360,17 +351,16 @@ void func_80057208(s16 arg0) {
 
 INCLUDE_ASM(s32, "57330", func_8005727C);
 
-void func_800582E4(void) {
-    SleepVProcess();
+void func_800582E4() {
+    HuPrcVSleep();
     func_8004A520();
     func_8004B5C4(3.0f);
-    func_800591E0(gPlayers[D_800ED5DC].flags);
+    func_800591E0(gPlayers[D_800ED5DC].flags); //TODO: what arg type should this take?
     func_80056AF4();
-    func_8005DFB8(1);
-    func_8005E3A8();
-    SleepVProcess();
+    omOvlReturnEx(1);
+    omOvlKill();
+    HuPrcVSleep();
 }
-
 
 INCLUDE_ASM(s32, "57330", func_8005835C);
 
@@ -421,7 +411,7 @@ void func_8005884C(Vec3f *coords) {
         coords = &GetPlayerStruct(-1)->playerObj->coords;
     }
     func_8004B5DC(coords);
-    SleepVProcess();
+    HuPrcVSleep();
     func_8004A520();
     func_8004B5C4(temp_f20);
     func_8004B838(temp_f22);

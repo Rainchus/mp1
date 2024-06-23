@@ -10,7 +10,7 @@ s32 InitSprite(s32 arg0) {
     temp_s1 = ReadMainFS(arg0);
     temp_s0 = func_800678A4(temp_s1);
     D_800ED198[D_800F6530++] = temp_s0;
-    FreePerm(temp_s1);
+    HuMemDirectFree(temp_s1);
     return temp_s0;
 }
 

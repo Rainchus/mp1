@@ -50,7 +50,7 @@ void func_800F65E0_1FF1E0(void) {
     D_800FE4A8 = func_8005D384(6, 0, 0, -1, NULL);
     temp_s0 = ReadMainFS(38);
     D_800FE45A = func_80039084(temp_s0);
-    FreePerm(temp_s0);
+    HuMemDirectFree(temp_s0);
     D_800FE458 = IsFlagSet(43);
     SetFadeInTypeAndTime(0, 16);
 }
@@ -99,7 +99,7 @@ void func_800F6BE4_1FF7E4(unkObjectStruct* arg0) {
     func_80038A9C((&D_800F2B7C[arg0->unk_40[0]])->unk_6C, temp_s0, 0, D_800FE3B0);
     func_80025AD4(arg0->unk_40[0]);
     func_80025B34(arg0->unk_40[0]);
-    FreePerm(temp_s0);
+    HuMemDirectFree(temp_s0);
     arg0->unk_40[3] = LoadFormFile(0x410002, 0x699);
     func_80025798(arg0->unk_40[3], 0.0f, 1.0f, 0.0f);
     func_800090B8(D_800ED440);
@@ -496,7 +496,7 @@ void func_800FBF74_204B74(unkObjectStruct* arg0) {
     }
     
     
-    temp_f20 = (GetRandomByte() & 1) + 15.0f;
+    temp_f20 = (rand8() & 1) + 15.0f;
     D_800ECE14[temp_s0] = (func_800AEAC0(temp_f22) * temp_f20);
     D_800F3843[temp_s0] = (-func_800AEFD0(temp_f22) * temp_f20);
     D_800EDEB4[temp_s0] = 0;

@@ -125,7 +125,7 @@ void func_800F7E2C_11560C(void) {
 }
 
 void func_800F7E78_115658(void) {
-    D_800F9914 = GetRandomByte() >> 6;
+    D_800F9914 = rand8() >> 6;
 }
 
 INCLUDE_ASM(s32, "ovl_09_PipeMaze/113DC0", func_800F7EA4_115684);

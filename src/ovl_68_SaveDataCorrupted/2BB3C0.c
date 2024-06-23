@@ -28,25 +28,25 @@ void func_800F6610_2BB3C0(void) {
     SetFadeInTypeAndTime(0xFF, 8);
     
     while (func_80072718() != 0) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
 
     do {
-        SleepVProcess();
+        HuPrcVSleep();
     } while (((((D_800F5460[0] | D_800F5460[1]) | D_800F5460[2]) | D_800F5460[3]) & 0xF00F) == 0);
   
     func_800726AC(0xFF, 8);
     
     while (func_80072718() != 0) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
 
     func_80070D90(temp_s2);
     func_80070D90(new_var);
     func_80070ED4();
-    func_8005E044(0x67, 0, 0x91);
-    func_8005E3A8();
-    SleepVProcess();
+    omOvlGotoEx(0x67, 0, 0x91);
+    omOvlKill();
+    HuPrcVSleep();
 }
 
 void func_800F67C0_2BB570(void) {

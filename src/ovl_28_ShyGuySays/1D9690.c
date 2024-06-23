@@ -18,7 +18,7 @@ void func_800F65E0_1D9690(void) {
     func_800176C4(temp_s0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
     func_8001D494(0, 30.0f, 80.0f, 4000.0f);
     func_800F6FC0_1DA070();
-    func_800F747C_1DA52C((GetRandomByte() << 8) | GetRandomByte());
+    func_800F747C_1DA52C((rand8() << 8) | rand8());
     D_800F2BC0 = 0;
     D_800ED440 = 0;
     D_800EE984 = 0;
@@ -87,7 +87,7 @@ void func_800F69F8_1D9AA8(void) {
     func_800FA8D4_1DD984();
     func_80060198();
     func_80060268(D_800FDD10);
-    func_8005DFB8(1);
+    omOvlReturnEx(1);
 }
 
 INCLUDE_ASM(s32, "ovl_28_ShyGuySays/1D9690", func_800F6A38_1D9AE8);
@@ -204,7 +204,7 @@ void func_800F72A4_1DA354(void) {
 void func_800F736C_1DA41C(void) {
     u16 i;
 
-    D_800FDC64 = MallocPerm(sizeof(unkStruct_ShyGuySays_05));
+    D_800FDC64 = HuMemDirectMalloc(sizeof(unkStruct_ShyGuySays_05));
     D_800FDC64->unk_00[0] = 1.0f;
     
     for (i = 1; i < 100; i++) {
@@ -213,7 +213,7 @@ void func_800F736C_1DA41C(void) {
 }
 
 void func_800F73EC_1DA49C(void) {
-    FreePerm(D_800FDC64);
+    HuMemDirectFree(D_800FDC64);
 }
 
 u16 func_800F740C_1DA4BC(u16 arg0) { //shared overlay function

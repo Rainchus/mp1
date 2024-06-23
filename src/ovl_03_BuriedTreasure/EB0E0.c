@@ -14,7 +14,7 @@ void func_800F8760_EB0E0(void) {
 unkStructSize0x5C* func_800F87A8_EB128(unkObjectStruct* arg0) {
     unkStructSize0x5C* temp_v0;
 
-    D_800FC188[D_800FC140] = temp_v0 = MallocPerm(sizeof(unkStructSize0x5C));
+    D_800FC188[D_800FC140] = temp_v0 = HuMemDirectMalloc(sizeof(unkStructSize0x5C));
 
     arg0->unk_4C[0] = ((u32) temp_v0 >> 24);
     arg0->unk_4C[1] = ((u32) temp_v0 >> 16);
@@ -42,7 +42,7 @@ void func_800F8894_EB214(void) {
 
     for (i = 0; i < D_800FC140; i++) {
         if (D_800FC188[i] != NULL) {
-            FreePerm(D_800FC188[i]);
+            HuMemDirectFree(D_800FC188[i]);
         }
     }
 }
@@ -52,7 +52,7 @@ unkStructSize0x5C* func_800F8914_EB294(unkObjectStruct* arg0) {
 }
 
 u32 func_800F8940_EB2C0(void) {
-    return (GetRandomByte() << 8) | GetRandomByte();
+    return (rand8() << 8) | rand8();
 }
 
 void func_800F8978_EB2F8(Matrix4f arg0) {
@@ -387,7 +387,7 @@ void func_800F9990_EC310(void) {
         func_80067384(D_800FC040[i], 0, 0x8000);
     }
 
-    D_800FC5E8 = MallocPerm(1024 * sizeof(Gfx));
+    D_800FC5E8 = HuMemDirectMalloc(1024 * sizeof(Gfx));
     func_800F9700_EC080(D_800FC5E8);
     func_80024198(0xC0, D_800FC5E8, 4);
 
@@ -492,7 +492,7 @@ void func_800F9F90_EC910(void) {
     u16 i;
 
     D_800FC05C = func_8005D384(5, 0, 0, -1, &func_800FA090_ECA10);
-    func_800FB998_EE318(GetRandomByte());
+    func_800FB998_EE318(rand8());
 
     D_800FC0B8[0] = InitSprite(0x150000);
     D_800FC0B8[1] = InitSprite(0x150004);
@@ -565,7 +565,7 @@ void func_800FA138_ECAB8(void) {
         var_s2->unk_1C = NULL;
 
         if (i & 1) {
-            var_s2->unk_00 = MallocPerm(sizeof(u16));
+            var_s2->unk_00 = HuMemDirectMalloc(sizeof(u16));
             var_s2->unk_04 = 1;
 
             *var_s2->unk_00 = func_800F9C40_EC5C0(2, var_s2->unk_0C - 160, var_s2->unk_0E - 120, 0);
@@ -578,7 +578,7 @@ void func_800FA138_ECAB8(void) {
             func_800671DC(temp_s0, 0, 2);
             func_80067354(temp_s0, 0, 0.65f, 0.65f);
         } else {
-            var_s2->unk_00 = MallocPerm(10 * sizeof(u16));
+            var_s2->unk_00 = HuMemDirectMalloc(10 * sizeof(u16));
             var_s2->unk_04 = 10;
 
             for (j = 0; j < var_s2->unk_04; j++) {
@@ -647,7 +647,7 @@ void func_800FA138_ECAB8(void) {
             continue;
         }
 
-        var_s2->unk_00 = MallocPerm(sizeof(u16));
+        var_s2->unk_00 = HuMemDirectMalloc(sizeof(u16));
         var_s2->unk_04 = 1;
 
         *var_s2->unk_00 = func_800F9C40_EC5C0(3, var_s2->unk_0C - 160, var_s2->unk_0E - 120, 0);
@@ -1034,13 +1034,13 @@ void func_800FB9E8_EE368(void) {
 
     var_s0 = D_800FC5C0;
     for (i = 0; i < ARRAY_COUNT(D_800FC5C0); i++) {
-        FreePerm(var_s0->unk_00);
+        HuMemDirectFree(var_s0->unk_00);
         var_s0++;
     }
 
     var_s0 = D_800FC068;
     for (i = 0; i < ARRAY_COUNT(D_800FC068); i++) {
-        FreePerm(var_s0->unk_00);
+        HuMemDirectFree(var_s0->unk_00);
         var_s0++;
     }
 }

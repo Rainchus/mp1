@@ -199,7 +199,7 @@ extern s32 func_800FC724_2A1554(void);                           /* extern */
 
 void func_800FC758_2A1588(void) {
     func_800FC724_2A1554();
-    SleepProcess(2);
+    HuPrcSleep(2);
 }
 
 

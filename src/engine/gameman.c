@@ -5,7 +5,7 @@ void func_8001DFC0(void);
 void func_80025658(s32, s32);
 void func_8002B6C8(void);
 void func_800621D8(void);
-void func_8005E3FC(void);
+void omMain(void);
 void func_80018B2C(void);
 void func_8001E5A0(s32);
 void func_800247FC(void*, s32);
@@ -53,7 +53,7 @@ void func_8001A0F0(void) {
     s32 temp_s0;
     s32 i;
     
-    SleepVProcess();
+    HuPrcVSleep();
     D_800F33EC.y = 325.0f;
     D_800F33EC.x = 0.0f;
     D_800F33EC.z = 0.0f;
@@ -72,22 +72,22 @@ void func_8001A0F0(void) {
     D_800ED726 = 0x2004;
     D_800F64EC = 0x180;
     func_80072190();
-    func_80023B40(MallocPerm, FreePerm, D_800F3F30, D_800ED726, D_800F64EC, D_800F3705);
+    func_80023B40(HuMemDirectMalloc, HuMemDirectFree, D_800F3F30, D_800ED726, D_800F64EC, D_800F3705);
     InitCameras(1);
     func_80062140();
     func_8005B6D0(&D_FCB860);
     func_8003B710();
-    D_800F2BD0 = CreateProcess(func_8001A3DC, 0xF000, 0x3000, 0);
-    CreateProcess(func_8001A428, 0x4000, 0x3000, 0);
-    D_800F3700 = CreateProcess(func_8001A454, 0x1000, 0x3000, 0);
+    D_800F2BD0 = HuPrcCreate(func_8001A3DC, 0xF000, 0x3000, 0);
+    HuPrcCreate(func_8001A428, 0x4000, 0x3000, 0);
+    D_800F3700 = HuPrcCreate(func_8001A454, 0x1000, 0x3000, 0);
     func_8001A498();
     temp_s0 = func_8005B0C4();
     temp_s1 = func_8000B2BC();
     
     if (temp_s0 == 1) {
-        func_8005DF44(0x68, 0, 0x81);
+        omOvlCallEx(0x68, 0, 0x81);
     } else {
-        func_8005DF44(0x67, 0, 0x81);
+        omOvlCallEx(0x67, 0, 0x81);
     }
     
     func_80010C30(&D_1BB8460, 0, 0, 0);
@@ -105,17 +105,17 @@ void func_8001A0F0(void) {
         func_8000B364(1);
     }
 
-    KillProcess(GetCurrentProcess());
+    HuPrcKill(HuPrcCurrentGet());
     
     while (1) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
     
 }
 
 void func_8001A3DC(void) {
     while (1) {
-        SleepVProcess();
+        HuPrcVSleep();
         func_8002B6C8();
         func_8001DFC0();
         func_80025658(0x02000000, 0x3D0800);
@@ -125,14 +125,14 @@ void func_8001A3DC(void) {
 
 void func_8001A428(void) {
     while (1) {
-        SleepVProcess();
-        func_8005E3FC();       
+        HuPrcVSleep();
+        omMain();       
     }
 }
 
 void func_8001A454(void) {
     while (1) {
-        SleepVProcess();
+        HuPrcVSleep();
         func_80018B2C();
         func_8001E5A0(2);
         func_800247FC(&D_800ED538, 2);        

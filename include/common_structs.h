@@ -879,4 +879,10 @@ typedef struct file_1ACF0_struct {
 /* 0x54 */ s32 unk_54;
 } file_1ACF0_struct;
 
+typedef struct omOvlHisData { //Object Manager History Data
+/* 0x00 */ s32 overlayID;
+/* 0x04 */ s16 event;
+/* 0x06 */ u16 stat;
+} omOvlHisData; //sizeof 0x08
+
 #endif

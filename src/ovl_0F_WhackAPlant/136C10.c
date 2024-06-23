@@ -61,7 +61,7 @@ f32 func_800FB43C_136DFC(f32 arg0, f32 arg1, f32 arg2, f32 arg3) {
 }
 
 void func_800FB4C0_136E80(s32 arg0) {
-    func_8005DFB8(1);
+    omOvlReturnEx(1);
 }
 
 void func_800FB4DC_136E9C(void) {

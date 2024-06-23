@@ -78,12 +78,12 @@ void func_800F67A0_2F98A0(void) {
 }
 
 void func_800F67CC_2F98CC(void) {
-    unkUserData* temp_s1 = GetCurrentProcess()->user_data;
+    unkUserData* temp_s1 = HuPrcCurrentGet()->user_data;
     playerMain* temp_s2 = GetPlayerStruct(-1);
     Vec3f* vec = &temp_s1->vec2;
 
     while (1) {
-        SleepVProcess();
+        HuPrcVSleep();
         func_800A0E80(vec, &temp_s2->playerObj->coords, &temp_s1->vec1);
         func_8003D408(vec);        
     }

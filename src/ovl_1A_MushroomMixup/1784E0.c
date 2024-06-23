@@ -9,7 +9,7 @@ void func_800F6CA8_178BA8(void) {
         default:
             func_800601D4(0x28);
             func_8002890C(0, 0, 0);
-            func_8005DFB8(1);
+            omOvlReturnEx(1);
             break;
     }
 }
@@ -24,8 +24,8 @@ void func_800F6CF4_178BF4(void) {
     s32 conditionLessThanFour;
 
     for (loopIteration = 0; loopIteration < 4; loopIteration++) {
-        // randomByte = (s32) GetRandomByte() % (4 - loopIteration); // first 0-3, then 0-2, etc.
-        GetRandomByte();
+        // randomByte = (s32) rand8() % (4 - loopIteration); // first 0-3, then 0-2, etc.
+        rand8();
         // loopInteriorIteration = 0;
 
         for (loopInteriorIteration = 0; loopInteriorIteration < 4; loopInteriorIteration++) {

@@ -42,7 +42,7 @@ void func_8004367C(void) {
         func_800674BC(D_800D645A, 0, 0x1000U);
         func_80066DC4(D_800D645A, 0, 0xA0, D_800C4DC0[D_800D6459] + D_800D6404);
         
-        if (GetRandomByte() & 1) {
+        if (rand8() & 1) {
             func_800674F4(D_800D645A, 0, 0x35,  0x9D, 0xE6);
         } else {
             func_800674F4(D_800D645A, 0, 0xAD, 0x71, 0xFE);
@@ -82,14 +82,14 @@ Process* func_800444DC(void) {
     s32* data;
 
     process = InitProcess(&func_800441D4, 0, 0x2000, 0x40);
-    data = Malloc(process->heap, 16);
+    data = HuMemMemoryAlloc(process->heap, 16);
     process->user_data = data;
     *data = 0;
     return process;
 }
 
 void func_8004452C(void) { //fix me: remove goto
-    unkUserData_00* temp_s0 = GetCurrentProcess()->user_data;
+    unkUserData_00* temp_s0 = HuPrcCurrentGet()->user_data;
     u16* temp = D_800F5460;
 
 loop_1:
@@ -123,7 +123,7 @@ loop_1:
         }
         break;
     }
-    SleepVProcess();
+    HuPrcVSleep();
     goto loop_1;
 }
 
@@ -132,7 +132,7 @@ Process* func_80044680(s32 arg0) {
     unkUserData_00* userData;
 
     process = InitProcess(func_8004452C, 0, 0x2000, 0x40);
-    userData = Malloc(process->heap, sizeof(unkUserData_00));
+    userData = HuMemMemoryAlloc(process->heap, sizeof(unkUserData_00));
     process->user_data = userData;
     userData->unk_00 = 0;
     userData->unk_04 = arg0;
@@ -146,7 +146,7 @@ Process* func_800448A0(s32 arg0) {
     unkUserData_00* userData;
 
     process = InitProcess(func_800446E0, 0, 0x2000, 0x40);
-    userData = Malloc(process->heap, sizeof(unkUserData_00));
+    userData = HuMemMemoryAlloc(process->heap, sizeof(unkUserData_00));
     process->user_data = userData;
     userData->unk_00 = 10;
     return process;

@@ -43,9 +43,9 @@ void func_800F66BC_2909CC(void) {
     s32 temp_s1;
     s32 i;
 
-    SleepProcess(16);
+    HuPrcSleep(16);
     PlaySound(0x46A);
-    SleepProcess(10);
+    HuPrcSleep(10);
     if (gPlayers[D_800F7050].coinAmount == 0) {
         temp_s1 = CreateTextWindow(60, 40, 17, 4);
         LoadStringIntoWindow(temp_s1, (void* )0x1D1, -1, -1);
@@ -65,7 +65,7 @@ void func_800F66BC_2909CC(void) {
         func_8004F4D4(D_800F7058, 3, 0);
         func_80055960(D_800F7050, -gPlayers[D_800F7050].coinAmount);
         func_800503B0(D_800F7050, 5);
-        SleepProcess(30);
+        HuPrcSleep(30);
     } else {
         temp_s1 = CreateTextWindow(60, 40, 17, 4);
         LoadStringIntoWindow(temp_s1, (void* )0x1CF, -1, -1);
@@ -76,7 +76,7 @@ void func_800F66BC_2909CC(void) {
         func_8004F4D4(D_800F7058, 3, 0);
         func_80055960(D_800F7050, -20);
         func_800503B0(D_800F7050, 5);
-        SleepProcess(30);
+        HuPrcSleep(30);
     }
     
     temp_s1 = CreateTextWindow(60, 60, 18, 2);
@@ -87,7 +87,7 @@ void func_800F66BC_2909CC(void) {
     HideTextWindow(temp_s1);
     func_8004F4D4(D_800F7058, 1, 0);
     func_8004EE14(0, &D_800F6F94_2912A8, 0x14, D_800F7058);
-    SleepProcess(0x14);
+    HuPrcSleep(0x14);
     func_8004F4D4(D_800F7058, 0, 2);
     temp_s1 = CreateTextWindow(80, 60, 16, 2);
     LoadStringIntoWindow(temp_s1, (void* )0x1D3, -1, -1);
@@ -97,9 +97,9 @@ void func_800F66BC_2909CC(void) {
     HideTextWindow(temp_s1);
     func_8004F4D4(D_800F7054, 1, 0);
     func_8004F40C(D_800F7054, 2, 2);
-    SleepProcess(15);
+    HuPrcSleep(15);
     PlaySound(0x6C);
-    SleepProcess(5);
+    HuPrcSleep(5);
     PlaySound(0xD0);
     func_80060468(0x45F, gPlayers[D_800F7050].characterID);
     func_800503B0(D_800F7050, 6);
@@ -113,10 +113,10 @@ void func_800F66BC_2909CC(void) {
         } else {
             func_8004F9F4(D_800F705C, D_800F7058->coords.x, (D_800F7058->coords.y + D_800F7058->unk_30), D_800F7058->coords.z, 1);
         }
-        SleepProcess(1);
+        HuPrcSleep(1);
     }
 
-    SleepProcess(10);
+    HuPrcSleep(10);
     temp_s1 = CreateTextWindow(60, 60, 17, 2);
     LoadStringIntoWindow(temp_s1, (void* )0x1D4, -1, -1);
     func_8006E070(temp_s1, 0);
@@ -126,7 +126,7 @@ void func_800F66BC_2909CC(void) {
     HideTextWindow(temp_s1);
     D_800F5144 = 1;
     while (1) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
     
 }
@@ -137,7 +137,7 @@ void func_800F6C50_290F60(void) {
         func_800F6E6C_29117C();
         func_80054654();
         func_80070ED4();
-        func_8005DFB8(1);
+        omOvlReturnEx(1);
     }
 }
 

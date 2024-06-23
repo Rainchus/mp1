@@ -17,11 +17,11 @@ void func_800F6650_3164B0(s32 arg0, s32 arg1) {
 
     temp_s1 = GetPlayerStruct(arg0);
     temp_s2 = GetPlayerStruct(arg1);
-    temp_s0 = MallocPerm(sizeof(playerMain));
+    temp_s0 = HuMemDirectMalloc(sizeof(playerMain));
     bcopy(temp_s1, temp_s0, sizeof(playerMain));
     bcopy(temp_s2, temp_s1, sizeof(playerMain));
     bcopy(temp_s0, temp_s2, sizeof(playerMain));
-    FreePerm(temp_s0);
+    HuMemDirectFree(temp_s0);
 }
 
 INCLUDE_ASM(s32, "ovl_82_MiniGameStadiumStartCopy/316440", func_800F66D8_316538);

@@ -19,7 +19,7 @@ void func_800FB298_1963B8(void) {
 }
 
 void func_800FB2D0_1963F0(void) {
-    func_8005DFB8(1);
+    omOvlReturnEx(1);
 }
 
 INCLUDE_ASM(const s32, "ovl_1E_BumperBalls/196300", func_800FB2EC_19640C);

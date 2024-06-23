@@ -26,7 +26,7 @@ void func_80045500(unkObjectStruct* arg0) {
     arg0->unk_4C[0]++;
 }
 
-void func_80045680(void) {
+void func_80045680() {
     s32 i;
 
     D_800D6470 = -1;
@@ -38,7 +38,7 @@ void func_80045680(void) {
     D_800D6478 = 0;
 }
 
-void func_800456C4(void) {
+void func_800456C4() {
     s32 i;
 
     if (D_800D6470 != -1) {

@@ -188,10 +188,10 @@ INCLUDE_ASM(s32, "ovl_03_BuriedTreasure/E8F60", func_800F6958_E92D8);
 void func_800F6D6C_E96EC(void) {
     if (D_800FC026 < 0 && func_80072718() == 0) {
         func_800F8894_EB214();
-        FreePerm(D_800FC5E8);
+        HuMemDirectFree(D_800FC5E8);
         func_800FB9E8_EE368();
         func_80060198();
-        func_8005DFB8(1);
+        omOvlReturnEx(1);
     }
 }
 

@@ -50,9 +50,9 @@ void func_800F66C4_296C54(void) { //fix me: remove gotos
     s32 tempVar2;
     s32 temp_s2;
 
-    SleepProcess(0x10);
+    HuPrcSleep(0x10);
     PlaySound(0x46A);
-    SleepProcess(0xA);
+    HuPrcSleep(0xA);
 
     if (gPlayers[D_800F7650].starAmount != 0 && gPlayers[D_800F7650].coinAmount == 0) {
         windowID = CreateTextWindow(0x3C, 0x3C, 0x12, 3);
@@ -63,9 +63,9 @@ void func_800F66C4_296C54(void) { //fix me: remove gotos
         HideTextWindow(windowID);
         labelTest:
         func_8004F4D4(D_800F7658, 2, 0);
-        SleepProcess(15);
+        HuPrcSleep(15);
         PlaySound(0x6C);
-        SleepProcess(5);
+        HuPrcSleep(5);
         func_8003E81C(D_800F765C, 0, 0);
         D_800F7598_297B28 = LoadFormFile(0x1E, 0x6B9);
         var_s1_3 = 0;
@@ -98,7 +98,7 @@ void func_800F66C4_296C54(void) { //fix me: remove gotos
                 temp_s0_4->unk_18.x = sinf(temp_f20_2);
                 temp_s0_4 = D_800F7590_297B20;
                 temp_s0_4->unk_18.z = cosf(temp_f20_2);
-                SleepVProcess();
+                HuPrcVSleep();
                 if (var_s1_3 == 0x4B) {
                     func_8003E81C(D_800F7658, 0, 0);
                     func_8004F40C(D_800F7658, 3, 2);
@@ -137,7 +137,7 @@ void func_800F66C4_296C54(void) { //fix me: remove gotos
         func_80055960(D_800F7650, -var_s2);
         func_800503B0(D_800F7650, 5);
         func_80060618(0x44A, D_800F7650);
-        SleepProcess(0x1E);
+        HuPrcSleep(0x1E);
     }
 
     else if (gPlayers[D_800F7650].starAmount == 0 && gPlayers[D_800F7650].coinAmount == 0) {
@@ -174,10 +174,10 @@ void func_800F66C4_296C54(void) { //fix me: remove gotos
                 break;
             }
             temp_s2++;
-            SleepVProcess();
+            HuPrcVSleep();
         }
 
-        SleepProcess(0x1E);
+        HuPrcSleep(0x1E);
 
         if (func_80041624(D_800F7650) == 0) {
             windowID = CreateTextWindow(0x46, 0x41, 0xE, 2);
@@ -216,7 +216,7 @@ void func_800F66C4_296C54(void) { //fix me: remove gotos
     HideTextWindow(windowID);
     D_800F5144 = 1;
     while (1) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
 }
 
@@ -228,7 +228,7 @@ void func_800F7074_297604(void) {
         func_80070ED4();
         func_80041370();
         func_800405DC(D_800F7650);
-        func_8005DFB8(1);
+        omOvlReturnEx(1);
     }
 }
 

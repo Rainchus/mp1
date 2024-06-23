@@ -78,12 +78,12 @@ void func_800F6790_2FA2D0(void) {
 }
 
 void func_800F67BC_2FA2FC(void) {
-    unkUserData* temp_s1 = GetCurrentProcess()->user_data;
+    unkUserData* temp_s1 = HuPrcCurrentGet()->user_data;
     playerMain* temp_s2 = GetPlayerStruct(-1);
     Vec3f* vec = &temp_s1->vec2;
 
     while (1) {
-        SleepVProcess();
+        HuPrcVSleep();
         func_800A0E80(vec, &temp_s2->playerObj->coords, &temp_s1->vec1);
         func_8003D408(vec);        
     }
@@ -93,30 +93,30 @@ void func_800F682C_2FA36C(void) {
     Object* temp_s0;
     playerMain* temp_s1;
 
-    temp_s0 = GetCurrentProcess()->user_data;
+    temp_s0 = HuPrcCurrentGet()->user_data;
     temp_s1 = GetPlayerStruct(-1);
-    SleepProcess(0x28);
+    HuPrcSleep(0x28);
     
     while (1) {
-        SleepVProcess();
+        HuPrcVSleep();
         if (GetAbsSpaceIndexFromChainSpaceIndex(temp_s1->curChainIndex, temp_s1->curSpaceIndex) != 6) {
             continue;
         }
         
         func_8003E8B8(temp_s0, 0, 0, 6, 0);
-        SleepProcess(0xC);
+        HuPrcSleep(0xC);
         PlaySound(0x9D);
-        SleepProcess(0xC);
+        HuPrcSleep(0xC);
         PlaySound(0x9D);
-        SleepProcess(0x12);
+        HuPrcSleep(0x12);
         PlaySound(0x9D);
         
         while (!(func_8003E940(temp_s0) & 1)) {
-            SleepVProcess();
+            HuPrcVSleep();
         }
         
         func_8003E8B8(temp_s0, -1, 0, 6, 2);
-        SleepProcess(0xA);
+        HuPrcSleep(0xA);
         continue;    
     }
 }

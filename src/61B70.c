@@ -2,7 +2,7 @@
 
 INCLUDE_ASM(s32, "61B70", func_80060F70);
 
-void func_80061094(void) {
+void func_80061094() {
     D_800D8C58.unk_00 = osGetTime();
     while (!osRecvMesg(&D_800D8C60, NULL, 0)) {
 
@@ -51,7 +51,7 @@ void func_80061304(s16 arg0) {
     osSetIntMask(temp_s1);
 }
 
-void func_80061354(void) {
+void func_80061354() {
     unk_Struct_func_800611A4* temp = &D_800D8AA8;
     unk_Struct_func_800611A4* temp2 = &D_800D8C58;
     u32 temp_v0;
@@ -62,7 +62,7 @@ void func_80061354(void) {
     osSetIntMask(temp_v0);
 }
 
-void func_800613A0(void) {
+void func_800613A0() {
     OSIntMask temp_s0;
 
     temp_s0 = osSetIntMask(OS_IM_NONE);
@@ -70,7 +70,7 @@ void func_800613A0(void) {
     osSetIntMask(temp_s0);
 }
 
-void func_800613E8(void) {
+void func_800613E8() {
     unk_Struct_func_800611A4* temp = &D_800D8B80;
     unk_Struct_func_800611A4* temp2 = &D_800D8C58;
     
@@ -78,14 +78,14 @@ void func_800613E8(void) {
     temp->unk_00 = temp2->unk_00;
 }
 
-void func_80061414(void) {
+void func_80061414() {
 }
 
 Gfx* func_8006141C(void * arg0, Gfx* arg1, s32 arg2) {
     return arg1;
 }
 
-void func_80061424(void) {
+void func_80061424() {
     Gfx* gfx = &D_800D8CD0;
     D_800D8CA8 = gThread3Stack;
     D_800D8CC0 = D_800F09F0;

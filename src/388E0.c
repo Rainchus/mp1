@@ -36,7 +36,7 @@ extern unk388E0Struct40* D_800F3708;
 extern unk2C0C0Struct70* D_800F37AC;
 extern unk388E0StructC0* D_800F3F40;
 
-void func_80037CE0(void) {
+void func_80037CE0() {
     s16 i;
 
     D_800F37AC = HuMemAlloc(128 * sizeof(unk2C0C0Struct70));
@@ -149,7 +149,7 @@ INCLUDE_ASM(s32, "388E0", func_80038888);
 
 INCLUDE_ASM(s32, "388E0", func_8003897C);
 
-void func_80038A2C(void) {
+void func_80038A2C() {
     s16 i;
 
     D_800F3708 = HuMemAlloc(128 * sizeof(unk388E0Struct40));
@@ -165,7 +165,7 @@ INCLUDE_ASM(s32, "388E0", func_80038A9C);
 
 INCLUDE_ASM(s32, "388E0", func_80038D5C);
 
-void func_80039020(void) {
+void func_80039020() {
     s16 i;
 
     D_800F3F40 = HuMemAlloc(32 * sizeof(unk388E0StructC0));

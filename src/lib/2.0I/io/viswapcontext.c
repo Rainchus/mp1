@@ -3,7 +3,7 @@
 #include "viint.h"
 
 
-void __osViSwapContext() {
+void __osViSwapContext(void) {
     register OSViMode *vm;
     register __OSViContext *vc;
     u32 origin;

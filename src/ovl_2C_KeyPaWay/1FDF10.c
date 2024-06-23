@@ -19,7 +19,7 @@ void func_800FE2E8_1FDFC8(void) {
 }
 
 void func_800FE320_1FE000(s32 arg0) { //just ignores the arg??
-    func_8005DFB8(1);
+    omOvlReturnEx(1);
 }
 
 void func_800FE33C_1FE01C(void) {

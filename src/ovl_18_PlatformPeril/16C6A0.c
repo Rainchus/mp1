@@ -80,7 +80,7 @@ void func_800F922C_16E96C(unkObjectStruct* arg0, s32 arg1, s32 arg2, u16 arg3, f
     func_800187D0(arg0, 2, arg1 | 3, 1, 0);
     func_800187D0(arg0, 6, arg1 | 5, 1, 0x13);
     
-    if (!(GetRandomByte() & 1)) {
+    if (!(rand8() & 1)) {
         func_8001775C(arg0, 0xD, arg1 | 0xF);
         func_8001775C(arg0, 0xE, arg1 | 0x10);
     } else {

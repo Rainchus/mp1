@@ -210,7 +210,7 @@ void func_8002B4C0(void* (*arg0)(s32), void (*arg1)(void*), u16 arg2, u16 arg3, 
     D_800ED0C8 = 1;
 }
 
-void func_8002B6C8(void) {
+void func_8002B6C8() {
     func_800239EC();
 
     if (D_800F3854 != 0) {
@@ -244,7 +244,7 @@ void func_8002B6C8(void) {
     }
 }
 
-void func_8002B808(void) {
+void func_8002B808() {
     unk2C0C0StructF0** temp_v1;
     s16 i;
 
@@ -1511,7 +1511,7 @@ void func_800318D0(u16 arg0) {
     }
 }
 
-void func_80031BB4(void) {
+void func_80031BB4() {
     gMoveWd(D_800F37DC++, G_MW_CLIP, G_MWO_CLIP_RNX, *(D_800ED0C8 * 2 + &D_800C3510[0]));
     gMoveWd(D_800F37DC++, G_MW_CLIP, G_MWO_CLIP_RNY, *(D_800ED0C8 * 2 + &D_800C3510[0]));
     gMoveWd(D_800F37DC++, G_MW_CLIP, G_MWO_CLIP_RPX, *(D_800ED0C8 * 2 + &D_800C3510[1]));

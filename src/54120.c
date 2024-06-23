@@ -43,7 +43,7 @@ void func_80054834(s32 arg0, s32 arg1) {
 
 INCLUDE_ASM(s32, "54120", func_80054868);
 
-s32 func_80054FA8(void) {
+s32 func_80054FA8() {
     s32 i;
     s32 ret = 0;
 
@@ -161,7 +161,7 @@ void func_80055994(s32 arg0) {
     D_800D83A8[arg0].unk_04 = 0;
 }
 
-s32 func_800559A8(void) {
+s32 func_800559A8() {
     if (D_800D83A8[0].unk_05 & 1) {
         return 0;
     } else {
@@ -169,7 +169,7 @@ s32 func_800559A8(void) {
     }
 }
 
-void func_800559BC(void) {
+void func_800559BC() {
     s32 i;
 
     for (i = 0; i < 4; i++) {
@@ -177,7 +177,7 @@ void func_800559BC(void) {
     }
 }
 
-void func_800559F8(void) {
+void func_800559F8() {
     s32 i;
 
     for (i = 0; i < 4; i++) {
@@ -203,10 +203,10 @@ void func_80055A40(s32 arg1) {
     D_800D84A8 = -1;
 }
 
-void func_80055AFC(void) {
+void func_80055AFC() {
     func_8005456C(D_800C54D0);
     func_8005456C(D_800C54D4);
-    KillProcess(D_800D83A0);
+    HuPrcKill(D_800D83A0);
     func_80055228();
     D_800C54D0 = -1;
     D_800C54D4 = -1;
@@ -217,15 +217,15 @@ void func_80055B50(s32 arg0, s32 arg1) {
     D_800C54D4 = arg1;
 }
 
-void func_80055B64(void) {
+void func_80055B64() {
     func_80054868(0x16);
 }
 
-void func_80055B80(void) {
+void func_80055B80() {
     func_80054868(0x17);
 }
 
-void func_80055B9C(void) {
+void func_80055B9C() {
     s32 i;
 
     while (1) {
@@ -250,11 +250,11 @@ void func_80055B9C(void) {
             func_800672B0(D_800D85D4, 1, 1);
             func_800672DC(D_800D85D4, 1, (u16) D_800F3750, 0);
         }
-        SleepVProcess();        
+        HuPrcVSleep();        
     }
 }
 
-void func_80055D28(void) {
+void func_80055D28() {
     s32 lives;
 
     while (1) {
@@ -271,11 +271,11 @@ void func_80055D28(void) {
         func_800672DC(D_800D84E4, 0, (lives / 10), 0);
         func_800672B0(D_800D84E4, 1, 1);
         func_800672DC(D_800D84E4, 1, (lives % 10), 0);
-        SleepVProcess();      
+        HuPrcVSleep();      
     }
 }
 
-void func_80055E08(void) {
+void func_80055E08() {
     s32 coins;
 
     while (1) {
@@ -292,11 +292,11 @@ void func_80055E08(void) {
         func_800672DC(D_800D855C, 0, (coins / 10), 0);
         func_800672B0(D_800D855C, 1, 1);
         func_800672DC(D_800D855C, 1, (coins % 10), 0);
-        SleepVProcess();      
+        HuPrcVSleep();      
     }
 }
 
-void func_80055EE8(void) {
+void func_80055EE8() {
     void* file;
     s32 i;
 
@@ -326,7 +326,7 @@ void func_80055EE8(void) {
 }
 
 
-void func_8005608C(void) {
+void func_8005608C() {
     Process* process;
     void* file;
     s32 i;
@@ -373,7 +373,7 @@ void func_8005608C(void) {
     func_8005D900(D_800D8558, 0x80);
 }
 
-void func_80056380(void) {
+void func_80056380() {
     Process* process;
     void* file;
     s32 i;
@@ -411,13 +411,13 @@ void func_80056380(void) {
     func_8005D900(D_800D85D0, 0x80);
 }
 
-void func_800565B4(void) {
+void func_800565B4() {
     func_8005608C();
     func_80056380();
     func_80055EE8();
 }
 
-void func_800565E0(void) {
+void func_800565E0() {
     func_80077044(D_800D85D8);
     func_80077044(D_800D8640);
     func_80067704(D_800D85D6);
@@ -425,7 +425,7 @@ void func_800565E0(void) {
     EndProcess(D_800D86A8);
 }
 
-void func_80056630(void) {
+void func_80056630() {
     func_80067704(D_800D84E2);
     func_80064D38(D_800D84E0);
     func_80077044(D_800D84F0);
@@ -437,7 +437,7 @@ void func_80056630(void) {
 }
 
 
-void func_800566A4(void) {
+void func_800566A4() {
     func_80077044(D_800D8568);
     func_80067704(D_800D855E);
     func_80064D38(D_800D855C);
@@ -446,7 +446,7 @@ void func_800566A4(void) {
     EndProcess(D_800D85D0);
 }
 
-void func_80056700(void) {
+void func_80056700() {
     func_80056630();
     func_800566A4();
     func_800565E0();

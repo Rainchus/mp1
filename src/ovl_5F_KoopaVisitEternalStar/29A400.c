@@ -75,7 +75,7 @@ void func_800F673C_29A55C(void) {
     s16 temp_s0;
     
     func_800421E0();
-    SleepProcess(0x1A);
+    HuPrcSleep(0x1A);
     if (D_800ED192.amountOfTimesStartPassed % 10 == 0) {
         temp_s0 = CreateTextWindow(0x32, 0x32, 0xF, 4);
         sprintf(buffer1, "%d", D_800ED192.amountOfTimesStartPassed);
@@ -102,11 +102,11 @@ void func_800F673C_29A55C(void) {
     func_8004F4D4(D_800F6D18, 0, 0);
     func_80060468(0x451, gPlayers[D_800F6D11].characterID);
     func_80055960(D_800F6D11, D_800F6C60_29AA80[D_800F6D12]);
-    SleepProcess(0x28);
+    HuPrcSleep(0x28);
     D_800F5144 = 1;
     
     while (1) {
-       SleepVProcess(); 
+       HuPrcVSleep(); 
     }
 }
 
@@ -116,7 +116,7 @@ void func_800F693C_29A75C(void) {
         func_800F6B3C_29A95C();
         func_80054654();
         func_80070ED4();
-        func_8005DFB8(1);
+        omOvlReturnEx(1);
     }
 }
 

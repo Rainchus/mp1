@@ -62,7 +62,7 @@ void func_800F9810_31ABB0(void) {
 
     for (i = 0; i < 4; i++) {
         while (1) {
-            randByte = GetRandomByte() & 3;
+            randByte = rand8() & 3;
             if (!(sp10[randByte] == 1)) {
                 break;
             }

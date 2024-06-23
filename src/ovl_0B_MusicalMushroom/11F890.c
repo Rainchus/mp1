@@ -20,7 +20,7 @@ void func_800F9D70_11FFA0(unkObjectStruct* arg0) {
     temp_v0 = arg0->unk_50;
     func_8009B770(temp_v0, 0, sizeof(unkGlobalStruct_02));
     arg0->func_ptr = &func_800F9660_11F890;
-    temp_v1 = GetRandomByte() % 100;
+    temp_v1 = rand8() % 100;
     phi_s2 = 140;
     
     if (temp_v1 < 20) {
@@ -35,8 +35,8 @@ void func_800F9D70_11FFA0(unkObjectStruct* arg0) {
         }
     }
     
-    temp_s0 = GetRandomByte();
-    temp_v1_2 = (temp_s0 << 8) | GetRandomByte();
+    temp_s0 = rand8();
+    temp_v1_2 = (temp_s0 << 8) | rand8();
     temp_v1_2 = phi_s2 + (temp_v1_2 % (phi_s1 - phi_s2)); //phi_s1 - phi_s2 will always be 60, 70, or 90
     phi_f2 = temp_v1_2;
     

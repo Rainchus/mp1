@@ -148,7 +148,7 @@ s16 func_8006DB3C(s16 arg0, s32 arg1, s16 arg2, s16 arg3, s16 arg4) {
     file = ReadMainFS(arg1);
     temp_v0_3 = func_800678A4(file);
     temp_s3->unk_46[i] = temp_v0_3;
-    FreePerm(file);
+    HuMemDirectFree(file);
     func_80067208(temp_s3->unk_44, i, temp_v0_3, arg4);
     func_80066DC4(temp_s3->unk_44, i, arg2, arg3);
     func_80067598(temp_s3->unk_44, i, 0);

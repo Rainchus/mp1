@@ -8,8 +8,8 @@ void func_800F6610_2F6FE0(void) {
     D_800ED5C2 = 0xA;
     InitObjSystem(0xA, 0);
     func_8005C208();
-    func_8005E044(0x71, 1, 0x92);
-    func_8005E36C(0, 0x71, 1, 0x92);
+    omOvlGotoEx(0x71, 1, 0x92);
+    omOvlHisChg(0, 0x71, 1, 0x92);
 }
 
 void func_800F6668_2F7038(void) {

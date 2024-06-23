@@ -59,7 +59,7 @@ void func_800F6A44_2F4524(void) {
     case 1:
         D_800F9498 -= 2;
         if ((D_800EDEB4[0] & 0x30) == 0x30) { //D_800EDEB4 maybe not an array
-            func_8005DFB8(1);
+            omOvlReturnEx(1);
         }
         break;
     case 2:

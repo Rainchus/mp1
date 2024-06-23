@@ -28,7 +28,7 @@ void ShowTextWindow(s32 arg0) {
     func_8006DE20(arg0, 0.0f, 0.0f);
     
     for (i = 0; i < 0xB5; i += 0x14) {
-        SleepVProcess();
+        HuPrcVSleep();
         func_8006E01C(arg0, 180.0f - i);
         func_8006DE20(arg0, i / 180.0f, i / 180.0f);        
     }
@@ -42,13 +42,13 @@ void HideTextWindow(s32 arg0) {
     PlaySound(0x37);
     
     for (i = 0xB4; i >= 0; i -= 0x14) {
-        SleepVProcess();
+        HuPrcVSleep();
         func_8006E01C(arg0, (0xB4 - i) * 2);
         func_8006DE20(arg0, i / 180.0f, i / 180.0f);
     }
     
     func_80070D90(arg0);
-    SleepVProcess();
+    HuPrcVSleep();
 }
 
 void func_8004DB9C(s32 arg0) {
@@ -56,7 +56,7 @@ void func_8004DB9C(s32 arg0) {
     func_8004DBC8(arg0);
 }
 
-s32 func_8004DBBC(void) {
+s32 func_8004DBBC() {
     return D_800C5214;
 }
 
@@ -73,11 +73,11 @@ void func_8004E0E8(s32 arg0) {
     func_800710A4(-1, -1, -1, -1);
     
     while ((func_8006FCC0(arg0)) != 0) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
 }
 
-void func_8004E154(void) {
+void func_8004E154() {
     s32 i;
 
     for (i = 0; i < 32; i++) {
@@ -244,7 +244,7 @@ s32 func_8004F018(Object* arg0) {
 
 void func_8004F044(Object* arg0) {
     while (func_8004F018(arg0) != 0) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
 }
 
@@ -277,7 +277,7 @@ INCLUDE_ASM(s32, "4E530", func_8004F234);
 
 INCLUDE_ASM(s32, "4E530", func_8004F25C);
 
-void func_8004F284(void) {
+void func_8004F284() {
 }
 
 INCLUDE_ASM(s32, "4E530", func_8004F28C);

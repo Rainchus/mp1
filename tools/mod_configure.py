@@ -87,7 +87,7 @@ with open('asm/nonmatchings/59E80/func_8005B6D0.s', 'w') as file:
 #     filedata = f.read()
 
 # # define the text we want to search for and replace
-# old_text = "void func_8001A454(void) {\n    while (1) {\n        SleepVProcess();"
+# old_text = "void func_8001A454(void) {\n    while (1) {\n        HuPrcVSleep();"
 # new_text = "void func_8001A454(void) {\n    while (1) {\n        cPerFrameFunction();"
 
 # # do the replacement
@@ -111,7 +111,7 @@ glabel mod_boot_func
     nop
 /* 5C2E4 8005B6E4 3C01800E */  lui        $at, %hi(D_800D8910)
 /* 5C2E8 8005B6E8 AC318910 */  sw         $s1, %lo(D_800D8910)($at)
-/* 5C2EC 8005B6EC 0C00EDA9 */  jal        MallocPerm
+/* 5C2EC 8005B6EC 0C00EDA9 */  jal        HuMemDirectMalloc
 /* 5C2F0 8005B6F0 24040010 */   addiu     $a0, $zero, 0x10
 /* 5C2F4 8005B6F4 00408021 */  addu       $s0, $v0, $zero
 /* 5C2F8 8005B6F8 02202021 */  addu       $a0, $s1, $zero
@@ -121,12 +121,12 @@ glabel mod_boot_func
 /* 5C308 8005B708 8E020000 */  lw         $v0, 0x0($s0)
 /* 5C30C 8005B70C 3C01800E */  lui        $at, %hi(D_800D8914)
 /* 5C310 8005B710 AC228914 */  sw         $v0, %lo(D_800D8914)($at)
-/* 5C314 8005B714 0C00EDB2 */  jal        FreePerm
+/* 5C314 8005B714 0C00EDB2 */  jal        HuMemDirectFree
 /* 5C318 8005B718 02002021 */   addu      $a0, $s0, $zero
 /* 5C31C 8005B71C 3C10800E */  lui        $s0, %hi(D_800D8914)
 /* 5C320 8005B720 8E108914 */  lw         $s0, %lo(D_800D8914)($s0)
 /* 5C324 8005B724 00108080 */  sll        $s0, $s0, 2
-/* 5C328 8005B728 0C00EDA9 */  jal        MallocPerm
+/* 5C328 8005B728 0C00EDA9 */  jal        HuMemDirectMalloc
 /* 5C32C 8005B72C 02002021 */   addu      $a0, $s0, $zero
 J 0x8005B730
 nop
@@ -144,7 +144,7 @@ nop
 # }
 
 # void cPerFrameFunction(void) {
-#     SleepVProcess(); //restore from hook
+#     HuPrcVSleep(); //restore from hook
 # }
 # """)
 

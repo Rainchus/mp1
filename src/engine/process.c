@@ -1,11 +1,11 @@
 #include "process.h"
 
-void InitProcessSys(void) {
+void HuPrcInit(void) {
     process_count = 0; //process_count
     top_process = NULL;
 }
 
-void LinkProcess(Process** root, Process* process) {
+void HuLinkProcess(Process** root, Process* process) {
     Process* src_process = *root;
 
     if (src_process != NULL && (src_process->priority >= process->priority)) {
@@ -32,7 +32,7 @@ void LinkProcess(Process** root, Process* process) {
     }
 }
 
-void UnlinkProcess(Process **root, Process *process) {
+void HuUnlinkPrc(Process **root, Process *process) {
     if (process->next) {
         process->next->youngest_child = process->youngest_child;
     }
@@ -46,7 +46,7 @@ void UnlinkProcess(Process **root, Process *process) {
     }
 }
 
-Process* CreateProcess(process_func func, u16 priority, s32 stack_size, s32 extra_data_size) {
+Process* HuPrcCreate(process_func func, u16 priority, s32 stack_size, s32 extra_data_size) {
     HeapNode* process_heap;
     Process* process;
     s32 alloc_size;
@@ -55,39 +55,39 @@ Process* CreateProcess(process_func func, u16 priority, s32 stack_size, s32 extr
         stack_size = 2048;
     }
 
-    alloc_size = GetMemoryAllocSize(sizeof(Process))
-        + GetMemoryAllocSize(stack_size)
-        + GetMemoryAllocSize(extra_data_size);
+    alloc_size = HuMemMemoryAllocSizeGet(sizeof(Process))
+        + HuMemMemoryAllocSizeGet(stack_size)
+        + HuMemMemoryAllocSizeGet(extra_data_size);
 
-    process_heap = (HeapNode*)MallocPerm(alloc_size);
+    process_heap = (HeapNode*)HuMemDirectMalloc(alloc_size);
 
     if (process_heap == NULL) {
         return NULL;
     }
 
-    MakeHeap(process_heap, alloc_size);
+    HuMemHeapInit(process_heap, alloc_size);
 
-    process = (Process*)Malloc(process_heap, sizeof(Process));
+    process = (Process*)HuMemMemoryAlloc(process_heap, sizeof(Process));
     process->heap = process_heap;
     process->exec_mode = EXEC_PROCESS_DEFAULT;
     process->stat = 0;
     process->priority = priority;
     process->sleep_time = 0;
-    process->base_sp = Malloc(process_heap, stack_size) + stack_size - 8;
+    process->base_sp = HuMemMemoryAlloc(process_heap, stack_size) + stack_size - 8;
     process->prc_jump.func = func;
     process->prc_jump.sp = process->base_sp;
     process->destructor = NULL;
     process->user_data = NULL;
     process->dtor_idx = 0;
-    LinkProcess(&top_process, process);
+    HuLinkProcess(&top_process, process);
     process->oldest_child = NULL;
     process->relative = NULL;
     process_count++;
     return process;
 }
 
-void LinkChildProcess(Process* process, Process* child) {
-    UnlinkChildProcess(child);
+void HuPrcChildLink(Process* process, Process* child) {
+    HuPrcChildUnlink(child);
 
     if (process->oldest_child) {
         process->oldest_child->new_process = child;
@@ -99,7 +99,7 @@ void LinkChildProcess(Process* process, Process* child) {
     child->relative = process;
 }
 
-void UnlinkChildProcess(Process* process) {
+void HuPrcChildUnlink(Process* process) {
     if (process->relative) {
         if (process->parent_oldest_child) {
             process->parent_oldest_child->new_process = process->new_process;
@@ -115,14 +115,14 @@ void UnlinkChildProcess(Process* process) {
     }
 }
 
-Process* CreateChildProcess(process_func func, u16 priority, s32 stack_size, s32 extra_data_size, Process* parent) {
-    Process* child = CreateProcess(func, priority, stack_size, extra_data_size);
-    LinkChildProcess(parent, child);
+Process* HuPrcChildCreate(process_func func, u16 priority, s32 stack_size, s32 extra_data_size, Process* parent) {
+    Process* child = HuPrcCreate(func, priority, stack_size, extra_data_size);
+    HuPrcChildLink(parent, child);
     return child;
 }
 
-void WaitForChildProcess(void) {
-    Process* process = GetCurrentProcess();
+void HuPrcChildWatch(void) {
+    Process* process = HuPrcCurrentGet();
     if (process->oldest_child) {
         process->exec_mode = EXEC_PROCESS_WATCH;
         
@@ -132,7 +132,7 @@ void WaitForChildProcess(void) {
     }
 }
 
-Process* GetCurrentProcess(void) {
+Process* HuPrcCurrentGet(void) {
     return current_process;
 }
 
@@ -148,7 +148,7 @@ Process* GetChildProcess(Process* process) {
 
 s32 SetKillStatusProcess(Process* process) {
     if (process->exec_mode != EXEC_PROCESS_DEAD) {
-        WakeupProcess(process);
+        HuPrcWakeup(process);
         process->exec_mode = EXEC_PROCESS_DEAD;
         return 0;
     } else {
@@ -156,18 +156,18 @@ s32 SetKillStatusProcess(Process* process) {
     }
 }
 
-s32 KillProcess(Process* process) {
-    KillChildProcess(process);
-    UnlinkChildProcess(process);
+s32 HuPrcKill(Process* process) {
+    HuPrcChildKill(process);
+    HuPrcChildUnlink(process);
     return SetKillStatusProcess(process);
 }
 
-void KillChildProcess(Process* process) {
+void HuPrcChildKill(Process* process) {
     Process* curr_child = process->oldest_child;
 
     while (curr_child != NULL) {
         if (curr_child->oldest_child != NULL) {
-            KillChildProcess(curr_child);
+            HuPrcChildKill(curr_child);
         }
 
         SetKillStatusProcess(curr_child);
@@ -178,26 +178,25 @@ void KillChildProcess(Process* process) {
     process->oldest_child = NULL;
 }
 
-void TerminateProcess(Process* process) {
+void n64TerminateProcess(Process* process) {
     if (process->destructor) {
         process->destructor();
     }
 
-    UnlinkProcess(&top_process, process);
+    HuUnlinkPrc(&top_process, process);
     process_count--;
     longjmp(&process_jmp_buf, 2);
-
 }
 
-void ExitProcess(void) {
-    Process* process = GetCurrentProcess();
-    KillChildProcess(process);
-    UnlinkChildProcess(process);
-    TerminateProcess(process);
+void HuPrcEnd(void) {
+    Process* process = HuPrcCurrentGet();
+    HuPrcChildKill(process);
+    HuPrcChildUnlink(process);
+    n64TerminateProcess(process);
 }
 
-void SleepProcess(s32 time) {
-    Process* process = GetCurrentProcess();
+void HuPrcSleep(s32 time) {
+    Process* process = HuPrcCurrentGet();
     if (time != 0 && process->exec_mode != EXEC_PROCESS_DEAD) {
         process->exec_mode = EXEC_PROCESS_SLEEPING;
         process->sleep_time = time;
@@ -208,24 +207,24 @@ void SleepProcess(s32 time) {
     }
 }
 
-void SleepVProcess() {
-    SleepProcess(0);
+void HuPrcVSleep(void) {
+    HuPrcSleep(0);
 }
 
-void WakeupProcess(Process* process) {
+void HuPrcWakeup(Process* process) {
     process->sleep_time = 0;
 }
 
-void SetProcessDestructor(Process* process, process_func destructor) {
+void HuPrcDestructorSet2(Process* process, process_func destructor) {
     process->destructor = destructor;
 }
 
-void SetCurrentProcessDestructor(process_func destructor) {
-    Process* process = GetCurrentProcess();
-    SetProcessDestructor(process, destructor);
+void HuPrcDestructorSet(process_func destructor) {
+    Process* process = HuPrcCurrentGet();
+    HuPrcDestructorSet2(process, destructor);
 }
 
-void CallProcess(s32 time) {
+void HuPrcCall(s32 time) {
     Process* cur_proc_local;
     s32 ret;
 
@@ -234,7 +233,7 @@ void CallProcess(s32 time) {
     while (1) {
         switch (ret) {
             case 2:
-                FreePerm(current_process->heap);
+                HuMemDirectFree(current_process->heap);
                 current_process = current_process->next;
                 break;
             case 1:
@@ -276,7 +275,7 @@ void CallProcess(s32 time) {
                 break;
 
             case EXEC_PROCESS_DEAD:
-                cur_proc_local->prc_jump.func = ExitProcess;
+                cur_proc_local->prc_jump.func = HuPrcEnd;
 
             case 0:
                 longjmp(&cur_proc_local->prc_jump, 1);
@@ -285,11 +284,11 @@ void CallProcess(s32 time) {
     }
 }
 
-void* AllocProcessMemory(s32 size) {
-    Process* process = GetCurrentProcess();
-    return (void*)Malloc((HeapNode*)process->heap, size);
+void* HuPrcMemAlloc(s32 size) {
+    Process* process = HuPrcCurrentGet();
+    return (void*)HuMemMemoryAlloc((HeapNode*)process->heap, size);
 }
 
-void FreeProcessMemory(void* ptr) {
-    Free(ptr);
+void HuPrcMemFree(void* ptr) {
+    HuMemMemoryFree(ptr);
 }

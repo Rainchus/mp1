@@ -269,7 +269,7 @@ void func_80047D48(void) {
 void func_80047DBC(void) {
     unkUserData* temp_s0;
 
-    temp_s0 = GetCurrentProcess()->user_data;
+    temp_s0 = HuPrcCurrentGet()->user_data;
     while (1) {
         switch (temp_s0->unk0) {
         case 0:
@@ -283,7 +283,7 @@ void func_80047DBC(void) {
             break;
         }
         
-        SleepVProcess();       
+        HuPrcVSleep();       
     }
 }
 
@@ -292,7 +292,7 @@ Process* func_80047E54(void) {
     unkUserData* temp_v0_2;
 
     temp_v0 = InitProcess(func_80047DBC, 0, 0, 0x40);
-    temp_v0_2 = Malloc(temp_v0->heap, sizeof(unkUserData));
+    temp_v0_2 = HuMemMemoryAlloc(temp_v0->heap, sizeof(unkUserData));
     temp_v0->user_data = temp_v0_2;
     temp_v0_2->unk0 = 0;
     temp_v0_2->unk4 = 6;
@@ -304,7 +304,7 @@ Process* func_80047EAC(void) {
     unkUserData* temp_v0_2;
 
     temp_v0 = InitProcess(func_80047DBC, 0, 0, 0x40);
-    temp_v0_2 = Malloc(temp_v0->heap, sizeof(unkUserData));
+    temp_v0_2 = HuMemMemoryAlloc(temp_v0->heap, sizeof(unkUserData));
     temp_v0->user_data = temp_v0_2;
     temp_v0_2->unk0 = 0;
     temp_v0_2->unk4 = 5;
@@ -312,7 +312,7 @@ Process* func_80047EAC(void) {
 }
 
 void func_80047F04(void) {
-    unkUserData* temp_s0 = GetCurrentProcess()->user_data;
+    unkUserData* temp_s0 = HuPrcCurrentGet()->user_data;
     
     while (1) {  
         switch (temp_s0->unk0) {
@@ -341,7 +341,7 @@ void func_80047F04(void) {
             break;
         }
         
-        SleepVProcess();        
+        HuPrcVSleep();        
     }
 }
 
@@ -350,7 +350,7 @@ Process* func_80048000(s32 arg0) {
     unkUserData* temp_v0_2;
 
     temp_v0 = InitProcess(func_80047F04, 0, 0, 0x40);
-    temp_v0_2 = Malloc(temp_v0->heap, sizeof(unkUserData));
+    temp_v0_2 = HuMemMemoryAlloc(temp_v0->heap, sizeof(unkUserData));
     temp_v0->user_data = temp_v0_2;
     temp_v0_2->unk0 = 0;
     temp_v0_2->unk4 = arg0;
@@ -362,7 +362,7 @@ void func_80048060(void) {
     s32 temp_v1;
     unkUserData* temp_s0;
 
-    temp_s0 = GetCurrentProcess()->user_data;
+    temp_s0 = HuPrcCurrentGet()->user_data;
     D_800D6658 = D_800ED5C6.x - D_800ED5C6.y;
     switch (D_800D6658) {
         case 0:
@@ -390,7 +390,7 @@ void func_80048060(void) {
                 break;
 
         } 
-        SleepVProcess();    
+        HuPrcVSleep();    
     }
 }
 
@@ -399,7 +399,7 @@ Process* func_80048134(void) {
     unkUserData* temp_v0_2;
 
     temp_v0 = InitProcess(func_80048060, 0, 0, 64);
-    temp_v0_2 = Malloc(temp_v0->heap, sizeof(unkUserData));
+    temp_v0_2 = HuMemMemoryAlloc(temp_v0->heap, sizeof(unkUserData));
     temp_v0->user_data = temp_v0_2;
     temp_v0_2->unk0 = 0;
     return temp_v0;

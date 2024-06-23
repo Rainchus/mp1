@@ -107,7 +107,7 @@ segments:
       - [0x72D90, c]
       - [0x7C9F0, c, "../src/lib/2.0I/audio/synstartvoiceparam"] # -O0
       - [0x7CB80, c, "../src/lib/2.0I/audio/synsetpan"] # -O0
-      - [0x7CC80, hasm, "lib/sys/setjmp"] # and longjmp
+      - [0x7CC80, hasm, "lib/sys/n64setjmp"] # and n64longjmp
       - [0x7CD60, c]
       - [0x80770, bin, "libleo"]
       - [0x861B0, hasm, "lib/2.0I/gu/sqrtf"]

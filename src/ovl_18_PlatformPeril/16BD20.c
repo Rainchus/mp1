@@ -22,7 +22,7 @@ void func_800F65E0_16BD20(void) {
 void func_800F66E8_16BE28(void) {
     if (D_800F5144 == 1) {
         func_800601D4(0x28);
-        func_8005DFB8(1);
+        omOvlReturnEx(1);
     }
 }
 

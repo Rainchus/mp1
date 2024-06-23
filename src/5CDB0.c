@@ -169,10 +169,10 @@ Process* InitProcess(void (*func)(), u16 priority, s32 stack_size, s32 extra_dat
         temp_s0 = &D_800C5990[D_800C598C];
         temp_s0->unk0 = 4;
         D_800C598C = temp_s0->unk2;
-        process = CreateProcess(*func, priority, stack_size, extra_data_size);
+        process = HuPrcCreate(*func, priority, stack_size, extra_data_size);
         temp_s0->processInstance = process;
         process->dtor_idx = temp_s1;
-        SetProcessDestructor(temp_s0->processInstance, &func_8005DDDC);
+        HuPrcDestructorSet2(temp_s0->processInstance, &func_8005DDDC);
         temp_s0->unk8 = 0;
         D_800C598A++;
         return temp_s0->processInstance;
@@ -191,10 +191,10 @@ Process* func_8005DCD8(process_func arg0, u16 arg1, s32 arg2, s32 arg3, Process*
         temp_s0 = &D_800C5990[D_800C598C];
         temp_s0->unk0 = 4;
         D_800C598C = temp_s0->unk2;
-        process = CreateChildProcess(arg0, arg1, arg2, arg3, arg4);
+        process = HuPrcChildCreate(arg0, arg1, arg2, arg3, arg4);
         temp_s0->processInstance = process;
         process->dtor_idx = temp_s1;
-        SetProcessDestructor(temp_s0->processInstance, func_8005DDDC);
+        HuPrcDestructorSet2(temp_s0->processInstance, func_8005DDDC);
         temp_s0->unk8 = 0;
         D_800C598A++;
         return temp_s0->processInstance;
@@ -205,18 +205,18 @@ Process* func_8005DCD8(process_func arg0, u16 arg1, s32 arg2, s32 arg3, Process*
 
 s32 EndProcess(Process* arg0) {
     if (arg0 != NULL) {
-        return KillProcess(arg0);
+        return HuPrcKill(arg0);
     }
     
-    if (KillProcess(GetCurrentProcess()) == 0) {
-        SleepVProcess();
+    if (HuPrcKill(HuPrcCurrentGet()) == 0) {
+        HuPrcVSleep();
     }
     
     return -1;
 }
 
-void func_8005DDDC(void) {
-    Process* temp_s1 = GetCurrentProcess();
+void func_8005DDDC() {
+    Process* temp_s1 = HuPrcCurrentGet();
     unkProcessStruct* temp_s0 = &D_800C5990[temp_s1->dtor_idx];
     
     if (temp_s0->unk8 != 0) {
@@ -230,11 +230,11 @@ void func_8005DDDC(void) {
 }
 
 void func_8005DE6C(s32 arg0, void (*arg1)()) {
-    unkProcessStruct* temp = &D_800C5990[GetCurrentProcess()->dtor_idx];
+    unkProcessStruct* temp = &D_800C5990[HuPrcCurrentGet()->dtor_idx];
     temp->unk8 = arg1;
 }
 
-void func_8005DEB0(void) {
+void func_8005DEB0() {
     unkProcessStruct* var_v1 = D_800C5990;
     s32 i;
     
@@ -249,17 +249,17 @@ void func_8005DEB0(void) {
     }
 }
 
-s32 func_8005DF44(s32 arg0, s32 arg1, u16 arg2) {
-    unkStructTest2* temp_v0_2;
+s32 omOvlCallEx(s32 arg0, s32 arg1, u16 arg2) {
+    omOvlHisData* history;
     s16 temp = arg1;
     s32 ret = 0;
 
-    if (D_800C597E < 8) {
-        temp_v0_2 = &D_800F37F8[++D_800C597E];
-        temp_v0_2->unk_00 = arg0;
-        temp_v0_2->unk_04 = arg1;
-        temp_v0_2->unk_06 = arg2;
-        func_8005E044(arg0, temp, arg2);
+    if (omovlhisidx < 8) {
+        history = &omovlhis[++omovlhisidx];
+        history->overlayID = arg0;
+        history->event = arg1;
+        history->stat = arg2;
+        omOvlGotoEx(arg0, temp, arg2);
         ret = 1;
     } else {
         ret = 0;
@@ -267,39 +267,35 @@ s32 func_8005DF44(s32 arg0, s32 arg1, u16 arg2) {
     return ret;
 }
 
-s32 func_8005DFB8(s32 arg0) {
-    s32 ret;
+s32 omOvlReturnEx(s16 level) {
+    omovlhisidx -= level;
     
-    D_800C597E = D_800C597E - arg0;
-    
-    if (D_800C597E >= 0) {
-        func_8005E044(D_800F37F8[D_800C597E].unk_00, D_800F37F8[D_800C597E].unk_04, D_800F37F8[D_800C597E].unk_06);
-        ret = 1;
-    } else {
-        D_800C597E = 0;
-        func_8005E044(D_800F37F8[0].unk_00, D_800F37F8[0].unk_04, D_800F37F8[0].unk_06);
-        ret = 0;
+    if (omovlhisidx < 0) {
+        omovlhisidx = 0;
+        omOvlGotoEx(omovlhis[0].overlayID, omovlhis[0].event, omovlhis[0].stat);
+        return 0;
     }
-    return ret;
+    omOvlGotoEx(omovlhis[omovlhisidx].overlayID, omovlhis[omovlhisidx].event, omovlhis[omovlhisidx].stat);
+    return 1;
 }
 
-INCLUDE_ASM(s32, "5CDB0", func_8005E044);
+INCLUDE_ASM(s32, "5CDB0", omOvlGotoEx);
 
-void func_8005E36C(s16 arg0, s32 arg1, s32 arg2, s32 arg3) {
-    unkStructTest2* temp_v0_2;
-    s32 temp_v0 = D_800C597E - arg0;
+void omOvlHisChg(s16 arg0, s32 overlay, s16 event, s16 stat) {
+    s32 ovlhisIndex = omovlhisidx - arg0;
+    omOvlHisData* history;
     
-    if (temp_v0 >= 0) {
-        temp_v0_2 = &D_800F37F8[temp_v0];
-        temp_v0_2->unk_00 = arg1;
-        temp_v0_2->unk_04 = arg2;
-        temp_v0_2->unk_06 = arg3;
+    if (ovlhisIndex >= 0) {
+        history = &omovlhis[ovlhisIndex];
+        history->overlayID = overlay;
+        history->event = event;
+        history->stat = stat;
     }
 }
 
-INCLUDE_ASM(s32, "5CDB0", func_8005E3A8);
+INCLUDE_ASM(s32, "5CDB0", omOvlKill);
 
-INCLUDE_ASM(s32, "5CDB0", func_8005E3FC);
+INCLUDE_ASM(s32, "5CDB0", omMain);
 
 INCLUDE_ASM(s32, "5CDB0", func_8005EB1C);
 

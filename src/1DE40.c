@@ -2,7 +2,7 @@
 
 INCLUDE_ASM(s32, "1DE40", InitCameras);
 
-void func_8001D40C(void) {
+void func_8001D40C() {
     D_800F3FA8 = D_800F37F0;
 }
 

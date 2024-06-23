@@ -173,7 +173,7 @@ s32 func_800642FC(unkMesg * siMessg, HuSiFunc func, void * arg, s32 type)
         break;
     case 2:
         while (osRecvMesg(&msgQueue, NULL, OS_MESG_NOBLOCK)) {
-            SleepVProcess();
+            HuPrcVSleep();
         }
         break;
     }

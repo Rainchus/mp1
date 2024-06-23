@@ -108,7 +108,7 @@ void func_800F972C_25CFFC(void) {
                 func_80067480(D_800FC45E, i, 0x8000);
              }
         }
-        SleepVProcess();        
+        HuPrcVSleep();        
     }
 }
 

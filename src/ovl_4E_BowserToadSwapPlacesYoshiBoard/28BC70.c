@@ -73,7 +73,7 @@ void func_800F67BC_28BE4C(void) {
     temp_s4 = func_8004F954(0xA0148, 0x16);
     func_8004FA90(temp_s4, 5.0f, 5.0f, 5.0f);
     func_800421E0();
-    SleepProcess(0x1A);
+    HuPrcSleep(0x1A);
     func_8004F9F4(temp_s3, D_800F7848_28CED8->coords.x - 100.0f, D_800F7848_28CED8->coords.y + 100.0f, D_800F7848_28CED8->coords.z + 1000.0f, 1);
     func_8004F9F4(temp_s3, D_800F7848_28CED8->coords.x + 100.0f, D_800F7848_28CED8->coords.y + 100.0f, D_800F7848_28CED8->coords.z + 1000.0f, 1);
     PlaySound(0xB2);
@@ -97,12 +97,12 @@ void func_800F67BC_28BE4C(void) {
             D_800F7840_28CED0->unk_0A |= 1;
             
         }
-        SleepVProcess();
+        HuPrcVSleep();
     }
 
     D_800F7848_28CED8->unk_3C->unk_24 = 0.0f;
     D_800F7854_28CEE4->unk_18 = 0.0f;
-    SleepProcess(0xA);
+    HuPrcSleep(0xA);
     func_800A0D00(&D_800F7840_28CED0->xScale, 0.5f, 0.5f, 0.5f);
     func_8004EE14(0, &D_800F7890_28CF20, 0x28, D_800F7848_28CED8);
     func_8004EE14(0, &D_800F7890_28CF20, 0x28, D_800F7840_28CED0);
@@ -126,14 +126,14 @@ void func_800F67BC_28BE4C(void) {
         }
         
         var_s2 += 0x28;
-        SleepVProcess();
+        HuPrcVSleep();
     }
 
     func_8004EA8C(D_800F7848_28CED8, &D_800F7890_28CF20, 0x2D, &sp18);
     func_8004F00C(D_800F7848_28CED8, 60.0f, -1.3f);
     func_8004EA8C(D_800F7840_28CED0, &D_800F7890_28CF20, 0x2D, &sp18);
     func_8004F00C(D_800F7840_28CED0, 60.0f, -1.3f);
-    SleepProcess(0x14);
+    HuPrcSleep(0x14);
     func_8004EA8C(D_800F7844_28CED4, &D_800F78CC_28CF5C, 0x2D, &sp28);
     func_8004EA8C(D_800F784C_28CEDC, &D_800F78CC_28CF5C, 0x2D, &sp28);
     
@@ -142,7 +142,7 @@ void func_800F67BC_28BE4C(void) {
             func_8004F9F4(temp_s3, D_800F784C_28CEDC->coords.x, D_800F784C_28CEDC->coords.y, D_800F784C_28CEDC->coords.z, 1);
             func_8004F9F4(temp_s4, D_800F784C_28CEDC->coords.x, D_800F784C_28CEDC->coords.y, D_800F784C_28CEDC->coords.z, 4);
         }
-        SleepVProcess();
+        HuPrcVSleep();
     }
 
     D_800F7844_28CED4->unk_0A &= ~0x1;
@@ -154,21 +154,21 @@ void func_800F67BC_28BE4C(void) {
     for (i = 0; i < 5; i++) {
         func_8004F9F4(temp_s3, D_800F784C_28CEDC->coords.x, D_800F784C_28CEDC->coords.y, D_800F784C_28CEDC->coords.z, 1);
         func_8004F9F4(temp_s4, D_800F784C_28CEDC->coords.x, D_800F784C_28CEDC->coords.y, D_800F784C_28CEDC->coords.z, 4);
-        SleepVProcess();        
+        HuPrcVSleep();        
     }
 
     func_8003E664(D_800F784C_28CEDC);
-    SleepProcess(0xD);
+    HuPrcSleep(0xD);
     PlaySound(0xB7);
-    SleepProcess(0xA);
+    HuPrcSleep(0xA);
     func_800726AC(0, 4);
-    SleepProcess(6);
+    HuPrcSleep(6);
     func_8004A140();
     DestroyObject(D_800F7844_28CED4);
     DestroyObject(D_800F784C_28CEDC);
     D_800F7844_28CED4 = NULL;
     D_800F784C_28CEDC = NULL;
-    SleepProcess(5);
+    HuPrcSleep(5);
     func_8003E5E0(D_800F7858_28CEE8);
     D_800ED15C.unk_02 = (D_800ED15C.unk_02 + 1) & 1;
 
@@ -179,7 +179,7 @@ void func_800F67BC_28BE4C(void) {
     }
     
     SetFadeInTypeAndTime(0, 4);
-    SleepProcess(4);
+    HuPrcSleep(4);
     func_800A0D00(&D_800F7840_28CED0->xScale, 0.5f, 0.5f, 0.5f);
     D_800F7840_28CED0->unk_30 = 80.0f;
     func_8003E5E0(D_800F7840_28CED0);
@@ -195,28 +195,28 @@ void func_800F67BC_28BE4C(void) {
 
     for (i = 0; i < 15; i++) {
         func_8004F9F4(temp_s3, D_800F7848_28CED8->coords.x, D_800F7848_28CED8->coords.y + 100.0f, D_800F7848_28CED8->coords.z, 1);
-        SleepVProcess();
+        HuPrcVSleep();
     }
 
     D_800F7840_28CED0->coords.y -= 30.0f;
 
     for (i = 0; i < 5; i++) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
     
     func_80025EB4(*D_800F7848_28CED8->unk_3C->unk_40, 2, 1);
 
     for (i = 0; i >= -0x1E; i -= 2) {
         D_800F7848_28CED8->unk_3C->unk_24 = i;
-        SleepVProcess();
+        HuPrcVSleep();
     }
     
-    SleepProcess(5);
+    HuPrcSleep(5);
 
     for (; i <= 0; i += 10) {
         D_800F7848_28CED8->unk_3C->unk_24 = i;
         D_800F7854_28CEE4->unk_18 = (i / 30.0f) + 1.0f;
-        SleepVProcess();
+        HuPrcVSleep();
     }
     
     PlaySound(0xAC);
@@ -231,7 +231,7 @@ void func_800F67BC_28BE4C(void) {
 
     for (i = 0; i < 10; i++) {
         func_800A0D00(&D_800F7840_28CED0->xScale, (i / 20.0f) + 0.5f, (i / 20.0f) + 0.5f, (i / 20.0f) + 0.5f);
-        SleepVProcess();
+        HuPrcVSleep();
     }
     
     func_800A0D00(&D_800F7840_28CED0->xScale, 1.0f, 1.0f, 1.0f);
@@ -240,14 +240,14 @@ void func_800F67BC_28BE4C(void) {
     func_8004EE14(0, &D_800F78B4_28CF44, 0x14, D_800F7848_28CED8);
 
     for (i = 0; i < 20; i++) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
     
     func_8004E3E0(0, &D_800F78B4_28CF44, 0xA, D_800F7848_28CED8);
 
     for (i = 0; i < 10; i++) {
         func_8004F9F4(temp_s3, D_800F7848_28CED8->coords.x, D_800F7848_28CED8->coords.y + 100.0f, D_800F7848_28CED8->coords.z, 1);
-        SleepVProcess();
+        HuPrcVSleep();
     }
 
     temp_s1 = CreateTextWindow(0x60, 0x3C, 0xB, 3);
@@ -258,7 +258,7 @@ void func_800F67BC_28BE4C(void) {
     HideTextWindow(temp_s1);
     D_800F5144 = 1;
     while (1) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
 }
 
@@ -269,7 +269,7 @@ void func_800F7330_28C9C0(void) {
         func_800F7680_28CD10();
         func_80054654();
         func_80070ED4();
-        func_8005DFB8(1);
+        omOvlReturnEx(1);
     }
 }
 

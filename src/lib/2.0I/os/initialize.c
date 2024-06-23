@@ -25,7 +25,7 @@ u32 __osFinalrom;
 extern void __osSetWatchLo(u32);
 void __createSpeedParam();
 
-void __osInitialize_common() {
+void __osInitialize_common(void) {
     u32 pifdata;
     __osFinalrom = TRUE;
     __osSetSR(__osGetSR() | SR_CU1);    //enable fpu
@@ -73,7 +73,7 @@ void __osInitialize_common() {
     IO_WRITE(AI_BITRATE_REG, AI_MAX_BIT_RATE - 1);
 }
 
-void __createSpeedParam() {
+void __createSpeedParam(void) {
     __Dom1SpeedParam.type = DEVICE_TYPE_INIT;
     __Dom1SpeedParam.latency = IO_READ(PI_BSD_DOM1_LAT_REG);
     __Dom1SpeedParam.pulse = IO_READ(PI_BSD_DOM1_PWD_REG);
@@ -87,5 +87,5 @@ void __createSpeedParam() {
     __Dom2SpeedParam.relDuration = IO_READ(PI_BSD_DOM2_RLS_REG);
 }
 
-// void __osInitialize_autodetect() {
+// void __osInitialize_autodetect(void) {
 // }

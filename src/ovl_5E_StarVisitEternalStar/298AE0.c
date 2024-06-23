@@ -163,20 +163,20 @@ void func_800F6898_298D98(void) {
     Vec3f* vec;
 
     func_80040780(D_800F7F00);
-    func_800415CC(D_800F7F00, (((GetRandomByte() & 0xFF) % 3) & 0xFF) + 8);
-    SleepProcess(0x14);
+    func_800415CC(D_800F7F00, (((rand8() & 0xFF) % 3) & 0xFF) + 8);
+    HuPrcSleep(0x14);
     func_8004F4D4(D_800F7F08, 0, 2);
     func_8004E3E0(0, &D_800F7DEC_29A2EC, 0x14, D_800F7F08);
-    SleepProcess(0xF);
+    HuPrcSleep(0xF);
     func_8004F4D4(D_800F7F08, 3, 0);
     func_8004F40C(D_800F7F08, 1, 2);
     func_8004EE14(0, D_800F32A0, 0xA, D_800F7F08);
     func_8004F9F4(D_800F7F0C, D_800F7F08->coords.x, D_800F7F08->coords.y - 22.0f, D_800F7F08->coords.z + 50.0f, 1);
-    SleepProcess(3);
+    HuPrcSleep(3);
     func_8004F9F4(D_800F7F0C, D_800F7F08->coords.x + 20.0f, D_800F7F08->coords.y - 22.0f, D_800F7F08->coords.z + 50.0f, 1);
-    SleepProcess(3);
+    HuPrcSleep(3);
     func_8004F9F4(D_800F7F0C, D_800F7F08->coords.x - 20.0f, D_800F7F08->coords.y - 22.0f, D_800F7F08->coords.z + 50.0f, 1);
-    SleepProcess(4);
+    HuPrcSleep(4);
     
     var_s0 = 0;
     var_s2 = 0;
@@ -199,28 +199,28 @@ void func_800F6898_298D98(void) {
             break;
         }
         var_s2++;
-        SleepVProcess();
+        HuPrcVSleep();
     }
         
-    SleepProcess(0x28);
+    HuPrcSleep(0x28);
     array[0] = func_800415E8(D_800F7F00);
     func_800405DC(D_800F7F00);
     func_8004F4D4(D_800F7F08, 0, 2);
     func_8004E3E0(0, &D_800F7DE0_29A2E0, 0x14, D_800F7F08);
-    SleepProcess(0xF);
+    HuPrcSleep(0xF);
     func_8004F4D4(D_800F7F08, 3, 0);
     func_8004F40C(D_800F7F08, 1, 2);
     func_8004EE14(0, &D_800F7DD4_29A2D4, 0xA, D_800F7F08);
     func_8004F9F4(D_800F7F0C, D_800F7F08->coords.x, D_800F7F08->coords.y - 22.0f, D_800F7F08->coords.z + 50.0f, 1);
-    SleepProcess(3);
+    HuPrcSleep(3);
     func_8004F9F4(D_800F7F0C, D_800F7F08->coords.x + 20.0f, D_800F7F08->coords.y - 22.0f, D_800F7F08->coords.z + 50.0f, 1);
-    SleepProcess(3);
+    HuPrcSleep(3);
     func_8004F9F4(D_800F7F0C, D_800F7F08->coords.x - 20.0f, D_800F7F08->coords.y - 22.0f, D_800F7F08->coords.z + 50.0f, 1);
-    SleepProcess(4);
+    HuPrcSleep(4);
     func_80040780(D_800F7F00);
     
     while (1) {
-        array[1] = GetRandomByte() % 10 + 1;
+        array[1] = rand8() % 10 + 1;
         if (array[1] == array[0]) {
             continue;
         } else {
@@ -229,13 +229,13 @@ void func_800F6898_298D98(void) {
         }
     }
     
-    SleepProcess(0x14);
+    HuPrcSleep(0x14);
     func_8004F4D4(D_800F7F04, 3, 2);
     func_8004E3E0(0, &D_800F7DEC_29A2EC, 0x14, D_800F7F04);
-    SleepProcess(0xF);
+    HuPrcSleep(0xF);
     func_8004F4D4(D_800F7F04, -1, 2);
     func_8004EE14(0, D_800F32A0, 0xA, D_800F7F04);
-    SleepProcess(0xA);
+    HuPrcSleep(0xA);
     
     var_s2 = 0;
     temp_s1 = 0;
@@ -258,21 +258,21 @@ void func_800F6898_298D98(void) {
             break;
         }
         var_s2++;
-        SleepVProcess();
+        HuPrcVSleep();
     }
 
-    SleepProcess(0x28);
+    HuPrcSleep(0x28);
     array[1] = func_800415E8(D_800F7F00);
     func_800405DC(D_800F7F00);
     func_800415B0(D_800F7F00, D_800F3FF0);
     func_8004F4D4(D_800F7F04, 3, 2);
     func_8004EE14(0, &D_800F7DD4_29A2D4, 0xA, D_800F7F04);
-    SleepProcess(0xA);
+    HuPrcSleep(0xA);
     func_8004E3E0(0, &D_800F7DD4_29A2D4, 0x14, D_800F7F04);
-    SleepProcess(0xF);
+    HuPrcSleep(0xF);
     func_8004F4D4(D_800F7F04, -1, 2);
     func_8004EE14(0, &D_800F7DE0_29A2E0, 0xA, D_800F7F04);
-    SleepProcess(0xA);
+    HuPrcSleep(0xA);
     if (array[0] > array[1]) {
         windowID = CreateTextWindow(0x3C, 0x3C, 0xE, 3);
         LoadStringIntoWindow(windowID, (void* )0x206, -1, -1);
@@ -296,7 +296,7 @@ void func_800F6898_298D98(void) {
             Obj->unk_18.x = sinf((i * 0xA) * 0.017453292519943295);
             Obj = D_800F7DC0_29A2C0;
             Obj->unk_18.z = cosf((i * 0xA) * 0.017453292519943295);
-            SleepVProcess();
+            HuPrcVSleep();
         }
 
         PlaySound(0x474);
@@ -311,9 +311,9 @@ void func_800F6898_298D98(void) {
         func_8003E81C(D_800F7F08, 4, 0U);
         gPlayers[D_800F7F00].starAmount++;
         D_800F7DD0_29A2D0 = func_8004D8A4();
-        SleepProcess(0x24);
+        HuPrcSleep(0x24);
         func_80060468(0x443, gPlayers[D_800F7F00].characterID);
-        SleepProcess(0x30);
+        HuPrcSleep(0x30);
         func_80050160();
         D_800F7DCC_29A2CC = 1;
         return;
@@ -356,7 +356,7 @@ void func_800F6898_298D98(void) {
             Obj->unk_18.x = sinf((i * 0xA * 0.017453292519943295));
             Obj = D_800F7DC0_29A2C0;
             Obj->unk_18.z = cosf((i * 0xA * 0.017453292519943295));
-            SleepVProcess();
+            HuPrcVSleep();
         }
         
         PlaySound(0x474);
@@ -367,8 +367,8 @@ void func_800F6898_298D98(void) {
         D_800F7DC4_29A2C4 = NULL;
         func_8004F4D4(D_800F7F04, 1, 0);
         func_8004F40C(D_800F7F04, -1, 2);
-        SleepProcess(0x24);
-        SleepProcess(0x30);
+        HuPrcSleep(0x24);
+        HuPrcSleep(0x30);
         func_80050160();
     }
 }
@@ -380,11 +380,11 @@ void func_800F76D4_299BD4(void) {
 
     if (D_800C597A == 0) {
         func_800421E0();
-        SleepProcess(0x10);
+        HuPrcSleep(0x10);
         PlaySound(0xF0);
-        SleepProcess(10);
+        HuPrcSleep(10);
     } else {
-        SleepProcess(8);
+        HuPrcSleep(8);
     }
     
     if (gPlayers[D_800F7F00].starAmount >= 99) {
@@ -408,7 +408,7 @@ void func_800F76D4_299BD4(void) {
         func_8006E070(windowID, 0);
         ShowTextWindow(windowID);
         while ((func_8006FCC0(windowID)) != 0) {
-            SleepVProcess();
+            HuPrcVSleep();
         }
     
         temp_s0 = func_800F66D8_298BD8(windowID);
@@ -425,7 +425,7 @@ void func_800F76D4_299BD4(void) {
             HideTextWindow(windowID);
         } else {
             func_80055960(D_800F7F00, -0x14);
-            SleepProcess(0x1E);
+            HuPrcSleep(0x1E);
             windowID = CreateTextWindow(0x32, 0x3C, 0x13, 3);
             LoadStringIntoWindow(windowID, (void*)0x203, -1, -1);
             func_8006E070(windowID, 0);
@@ -439,7 +439,7 @@ void func_800F76D4_299BD4(void) {
     D_800F5144 = 1;
     
     while (1) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
 
 }
@@ -453,7 +453,7 @@ void func_800F7978_299E78(void) {
         func_80041370();
         func_800405DC(D_800F7F00);
         if (D_800F7DC8_29A2C8 == 0) {
-            func_8005DFB8(1);
+            omOvlReturnEx(1);
             return;
         }
         func_8004F284();

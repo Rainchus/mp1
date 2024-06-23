@@ -144,7 +144,7 @@ s16 GetSumOfPlayerStars(void) {
 }
 
 u8 RNGPercentChance(s8 arg0) {
-    return arg0 > ((GetRandomByte() * 99) >> 8);
+    return arg0 > ((rand8() * 99) >> 8);
 }
 
 s16 GetTurnsElapsed(void) {
@@ -171,7 +171,7 @@ void func_8004D0B0(s16 arg0) {
 }
 
 void func_8004D0DC(void) {
-    unkProcessUserDataStruct *temp_s0 = GetCurrentProcess()->user_data;
+    unkProcessUserDataStruct *temp_s0 = HuPrcCurrentGet()->user_data;
     s32 temp_s1 = temp_s0->unk_1C.signed32Unk1C;
     f32 temp_f20 = func_8003D2B0(&temp_s0->unk_00);
     f32 new_var = func_8003D2B0(&temp_s0->unk_0C) - temp_f20;
@@ -196,7 +196,7 @@ void func_8004D0DC(void) {
         temp_f20 += new_var;
         func_8003D514(temp_s0->unk_18, temp_f20);
         temp_s0->unk_1C.signed32Unk1C = temp_s0->unk_1C.signed32Unk1C - 1;
-        SleepVProcess();
+        HuPrcVSleep();
     }
     
     EndProcess(0);
@@ -207,7 +207,7 @@ Process* func_8004D1EC(Vec3f* arg0, Vec3f* arg1, Vec3f* arg2, s32 arg3) {
     unkProcessUserDataStruct* temp_s0;
 
     temp_s1 = InitProcess(func_8004D0DC, 0x4001, 0, 0x50);
-    temp_s0 = Malloc(temp_s1->heap, sizeof(unkProcessUserDataStruct));
+    temp_s0 = HuMemMemoryAlloc(temp_s1->heap, sizeof(unkProcessUserDataStruct));
     temp_s1->user_data = temp_s0;
     func_800A0D00(temp_s0, arg0->x, 0.0f, arg0->z);
     func_800A0D00(&temp_s0->unk_0C, arg1->x, 0.0f, arg1->z);
@@ -229,7 +229,7 @@ void func_8004D2A4(s16 arg0, s32 arg1, s16 arg2) {
 }
 
 void func_8004D328(void) {
-    unkProcessUserDataStruct* temp_s0 = GetCurrentProcess()->user_data;
+    unkProcessUserDataStruct* temp_s0 = HuPrcCurrentGet()->user_data;
     s32 temp_s1 = temp_s0->unk_1C.signed32Unk1C;
 
     while (temp_s0->unk_1C.signed32Unk1C != 0) {
@@ -237,7 +237,7 @@ void func_8004D328(void) {
         func_800A0F00(temp_s0->unk_18, 1.0f - (1.0f / temp_s1) * (temp_s0->unk_1C.signed32Unk1C - 1), temp_s0->unk_18);
         func_800A0E00(temp_s0->unk_18, temp_s0->unk_18, &temp_s0->unk_00);
         temp_s0->unk_1C.signed32Unk1C = temp_s0->unk_1C.signed32Unk1C - 1;
-        SleepVProcess();        
+        HuPrcVSleep();        
     }
     EndProcess(NULL);
 }
@@ -247,7 +247,7 @@ Process* func_8004D3F4(Vec3f* arg0, Vec3f* arg1, Vec3f* arg2, s32 arg3) {
     unkProcessUserDataStruct* temp_s0;
 
     temp_s1 = InitProcess(func_8004D328, 0x4001, 0, 0x50);
-    temp_s0 = Malloc(temp_s1->heap, 0x20);
+    temp_s0 = HuMemMemoryAlloc(temp_s1->heap, 0x20);
     temp_s1->user_data = temp_s0;
     temp_s0->unk_00 = *arg0;
     temp_s0->unk_0C = *arg1;
@@ -268,12 +268,12 @@ void func_8004D4A8(s16 arg0, s32 arg1) {
     func_8004CB70(arg0, GetAbsSpaceIndexFromChainSpaceIndex(temp_v0->nextChainIndex, temp_v0->nextSpaceIndex), &sp20);
     func_8004CCD0(&sp10, &sp20, &temp_v0->playerObj->unk_18);
     process = func_8004D3F4(&sp10, &sp20, &temp_v0->playerObj->coords, arg1);
-    LinkChildProcess(GetCurrentProcess(), process);
-    WaitForChildProcess();
+    HuPrcChildLink(HuPrcCurrentGet(), process);
+    HuPrcChildWatch();
 }
 
 void func_8004D580(void) {
-    unkProcessUserDataStruct* temp_s0 = GetCurrentProcess()->user_data;
+    unkProcessUserDataStruct* temp_s0 = HuPrcCurrentGet()->user_data;
     Vec3f* temp_s1;
     f32 temp_f20;
     
@@ -286,7 +286,7 @@ void func_8004D580(void) {
         func_800A0F00(temp_s0->unk_18, temp_f20, temp_s0->unk_18);
         func_800A0E00(temp_s0->unk_18, temp_s0->unk_18, &temp_s0->unk_00);
         func_800A0D50(&temp_s0->unk_00, temp_s0->unk_18);
-        SleepVProcess();
+        HuPrcVSleep();
     }
     func_800A0D50(temp_s0->unk_18, &temp_s0->unk_0C);
     EndProcess(NULL);
@@ -297,7 +297,7 @@ Process* func_8004D648(Vec3f* arg0, Vec3f* arg1, Vec3f* arg2, f32 arg3) {
     unkProcessUserDataStruct* temp_s0;
 
     temp_s1 = InitProcess(func_8004D580, 0x4001, 0, 0x50);
-    temp_s0 = Malloc(temp_s1->heap, 0x20);
+    temp_s0 = HuMemMemoryAlloc(temp_s1->heap, 0x20);
     temp_s1->user_data = temp_s0;
     temp_s0->unk_00 = *arg0;
     temp_s0->unk_0C = *arg1;
@@ -317,8 +317,8 @@ void func_8004D6FC(s16 arg0, f32 arg1) {
     func_8004CB70(arg0, GetAbsSpaceIndexFromChainSpaceIndex(temp_v0->nextChainIndex, temp_v0->nextSpaceIndex), &sp20);
     func_8004CCD0(&sp10, &sp20, &temp_v0->playerObj->unk_18);
     process = func_8004D648(&sp10, &sp20, &temp_v0->playerObj->coords, arg1);
-    LinkChildProcess(GetCurrentProcess(), process);
-    WaitForChildProcess();
+    HuPrcChildLink(HuPrcCurrentGet(), process);
+    HuPrcChildWatch();
 }
 
 void SetPlayerOntoChain(s16 player, s16 chain_index, s16 space_index) {

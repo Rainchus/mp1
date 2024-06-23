@@ -35,9 +35,9 @@ void func_800F66BC_2867DC(void) {
     f32 var_f20;
     s32 temp_s1;
 
-    SleepProcess(0x10);
+    HuPrcSleep(0x10);
     PlaySound(0x46A);
-    SleepProcess(0xA);
+    HuPrcSleep(0xA);
     if (gPlayers[D_800F7180].coinAmount == 0) {
         temp_s1 = CreateTextWindow(0x3C, 0x28, 0x10, 3);
         LoadStringIntoWindow(temp_s1, (void* )0x1A0, -1, -1);
@@ -71,7 +71,7 @@ void func_800F66BC_2867DC(void) {
         func_80055960(D_800F7180, -gPlayers[D_800F7180].coinAmount);
         func_800503B0(D_800F7180, 5);
         func_80060618(0x44A, D_800F7180);
-        SleepProcess(0x1E);
+        HuPrcSleep(0x1E);
         temp_s1 = CreateTextWindow(0x64, 0x28, 0x0B, 2);
         LoadStringIntoWindow(temp_s1, (void* )0x19F, -1, -1);
         func_8006E070(temp_s1, 0);
@@ -88,21 +88,21 @@ void func_800F66BC_2867DC(void) {
         HideTextWindow(temp_s1);
         func_8004F4D4(D_800F7184, 2, 0);
         func_8004F40C(D_800F7184, 0, 2);
-        SleepProcess(0x14);
+        HuPrcSleep(0x14);
         var_f20 = D_800F70DC[0].y;
 
         while (D_800F70DC[1].y <= var_f20) {
             D_800F7188->unk_30 = var_f20;
-            SleepVProcess();
+            HuPrcVSleep();
             var_f20 -= 2.0f;
         }
 
         D_800F7188->unk_30 = D_800F70DC[1].y;
         D_800F7190->unk_4C[0] = 1;
-        SleepVProcess();
+        HuPrcVSleep();
         func_8003E81C(D_800F7184, 1, 0);
         func_8004F40C(D_800F7184, 0, 2);
-        SleepProcess(0x28);
+        HuPrcSleep(0x28);
         temp_s1 = CreateTextWindow(0x37, 0x28, 0x11, 3);
         LoadStringIntoWindow(temp_s1, (void* )0x19B, -1, -1);
         func_8006E070(temp_s1, 0);
@@ -115,7 +115,7 @@ void func_800F66BC_2867DC(void) {
         func_80055960(D_800F7180, -20);
         func_800503B0(D_800F7180, 5);
         func_80060618(0x44A, D_800F7180);
-        SleepProcess(0x1E);
+        HuPrcSleep(0x1E);
         temp_s1 = CreateTextWindow(0x46, 0x28, 0x10, 3);
         LoadStringIntoWindow(temp_s1, (void* )0x19C, -1, -1);
         func_8006E070(temp_s1, 0);
@@ -127,7 +127,7 @@ void func_800F66BC_2867DC(void) {
 
     D_800F5144 = 1;
     while (1) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
 }
 
@@ -161,7 +161,7 @@ void func_800F6D80_286EA0(void) {
         func_800F6FBC_2870DC();
         func_80054654();
         func_80070ED4();
-        func_8005DFB8(1);
+        omOvlReturnEx(1);
     }
 }
 

@@ -43,7 +43,7 @@ void func_800F6AD4_2BAED4(void) {
         }
     }
     if (var_s0 != 0) {
-        func_8005E044(0x66, 0, 0x91);
+        omOvlGotoEx(0x66, 0, 0x91);
     }
 }
 

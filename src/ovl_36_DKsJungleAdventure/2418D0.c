@@ -37,8 +37,8 @@ void func_800F663C_2418FC(void) { //ov054_func_800F663C
 
     ed5c0 = &D_800ED5C0;
     for (s1 = 0; s1 < 30; s1++) {
-        rand1 = GetRandomByte() % 7;
-        rand2 = GetRandomByte() % 7;
+        rand1 = rand8() % 7;
+        rand2 = rand8() % 7;
         if (rand1 == rand2) {
             continue;
         }
@@ -163,7 +163,7 @@ void func_800F6A38_241CF8(void) {
     f32 ftt;
     f32 const20;
 
-    space_data = (GetCurrentProcess())->user_data;
+    space_data = (HuPrcCurrentGet())->user_data;
 
     PlaySound(109);
     ptr = CreateObject(64, NULL);
@@ -179,16 +179,16 @@ void func_800F6A38_241CF8(void) {
     for (s0 = 0; s0 < 6; s0++) {
         func_800A0D00(&ptr->xScale, ftemp, ftemp, ftemp);
         ftemp += 0.4f;
-        SleepVProcess();
+        HuPrcVSleep();
     }
 
     for (s0 = 0; s0 < 3; s0++) {
         func_800A0D00(&ptr->xScale, ftemp, ftemp, ftemp);
         ftemp -= 0.4f;
-        SleepVProcess();
+        HuPrcVSleep();
     }
 
-    SleepProcess(30);
+    HuPrcSleep(30);
     PlaySound(68);
 
     ftt = 0.0f;
@@ -205,11 +205,11 @@ void func_800F6A38_241CF8(void) {
 
         func_800A0D00(&ptr->xScale, ftemp, ftemp, ftemp);
         ptr->unk_30 -= 6.0f;
-        SleepVProcess();
+        HuPrcVSleep();
     }
 
     func_800427D4(ret);
-    SleepProcess(30);
+    HuPrcSleep(30);
     DestroyObject(ptr);
     EndProcess(NULL);
 }
@@ -222,10 +222,10 @@ void func_800F6C48_241F08(mystery_struct_ret_func_80048224* a0) { //ov054_ShowNe
     unk0ptr->unk_38 = -3.0f;
 
     func_8003E81C(a0->unk0, 0, 0);
-    SleepProcess(3);
+    HuPrcSleep(3);
 
     while (func_8003E940(a0->unk0) == 0) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
 
     func_8003E81C(a0->unk0, -1, 2);
@@ -245,7 +245,7 @@ void func_800F6CD8_241F98(void) {
     SetFadeInTypeAndTime(2, 16);
 
     while (func_80072718() != 0) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
 
     func_8004A520();
@@ -268,18 +268,18 @@ void func_800F6CD8_241F98(void) {
     spacedata = GetSpaceData(D_800F9910[ed5c0->starSpaces[ed5c0->chosenStarSpaceIndex]]);
     func_8004B5DC(&spacedata->coords);
     func_8004B838(5.0f);
-    SleepProcess(5);
+    HuPrcSleep(5);
 
     while (func_8004B850() != 0) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
 
-    SleepProcess(5);
+    HuPrcSleep(5);
 
     proc_struct = InitProcess(&func_800F6A38_241CF8, 18432, 0, 0);
     proc_struct->user_data = spacedata;
 
-    SleepProcess(30);
+    HuPrcSleep(30);
 
     if (ed5c0->chosenStarSpaceIndex == 0 && !IsFlagSet(68)) {
         string_id = 1257;
@@ -292,14 +292,14 @@ void func_800F6CD8_241F98(void) {
     WaitForTextConfirmation(str->unk8);
     func_80071E80(str->unk8, 1);
     func_800601D4(90);
-    SleepProcess(30);
+    HuPrcSleep(30);
     func_800726AC(2, 16);
-    SleepProcess(17);
+    HuPrcSleep(17);
     func_8004847C(str);
     func_80056AF4();
-    func_8005DFB8(1);
-    func_8005E3A8();
-    SleepVProcess();
+    omOvlReturnEx(1);
+    omOvlKill();
+    HuPrcVSleep();
 }
 
 void func_800F6F0C_2421CC(void) {  //ov054_Entrypoint0
@@ -308,7 +308,7 @@ void func_800F6F0C_2421CC(void) {  //ov054_Entrypoint0
 
     ed5c0->unk_02 = 0;
     InitObjSystem(10, 0); // InitObjectSystem
-    func_8005E044(53, 0, 146);
+    omOvlGotoEx(53, 0, 146);
 }
 
 void func_800F6F44_242204(void) { //ov054_Entrypoint1
@@ -344,7 +344,7 @@ void func_800F6F44_242204(void) { //ov054_Entrypoint1
     D_800ED154[1] = 0;
     D_800ED154[2] = 0;
 
-    func_8005DFB8(1);
+    omOvlReturnEx(1);
 }
 
 void func_800F7024_2422E4(void);

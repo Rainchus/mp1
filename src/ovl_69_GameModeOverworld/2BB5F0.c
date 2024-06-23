@@ -66,7 +66,7 @@ INCLUDE_ASM(s32, "ovl_69_GameModeOverworld/2BB5F0", func_800F6610_2BB5F0);
 //     if (IsFlagSet(0x36) != 0) {
 //         ClearBoardFeatureFlag(0x36);
 //         func_80070ED4();
-//         func_8005DFB8(1);
+//         omOvlReturnEx(1);
 //     }
 // }
 
@@ -82,7 +82,7 @@ void func_800F6F14_2BBEF4(void) {
     var_f20 = 0.0f;
     var_f24 = var_f20;
     while (1) {
-      SleepVProcess();
+      HuPrcVSleep();
         func_80027C1C(temp_s1, var_f24, var_f20, 0x20, 0x20);
         var_f20 += 0.5f;      
     }
@@ -109,7 +109,7 @@ void func_800F7214_2BC1F4(void) {
     InitProcess(func_800F731C_2BC2FC, 0x3F00, 0x1000, 0);
     func_80026A0C(temp_s0, &D_800FA180)->unk_44 = -20.0f;
     while (1) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
 }
 
@@ -121,10 +121,10 @@ void func_800F7DB8_2BCD98(s16 arg0) {
 }
 
 void func_800F7DF0_2BCDD0(void) {
-    SleepProcess(0x37);
+    HuPrcSleep(0x37);
     PlaySound(0);
     while (1) {
-        SleepVProcess(); 
+        HuPrcVSleep(); 
     }
 }
 
@@ -141,10 +141,10 @@ void func_800F86EC_2BD6CC(void) {
     if (D_800FA1C0 == 4) {
         func_80070ED4();
         if (D_800FA1FC == -1) {
-            func_8005DFB8(1);
+            omOvlReturnEx(1);
             return;
         }
-        func_8005DF44(D_800FA1FC, D_800FA202, 0x11);
+        omOvlCallEx(D_800FA1FC, D_800FA202, 0x11);
     }
 }
 
@@ -237,10 +237,10 @@ void func_800F8B38_2BDB18(void) {
     if (func_80072718() == 0) {
         func_80070ED4();
         if (D_800FA1FC == -1) {
-            func_8005DFB8(1);
+            omOvlReturnEx(1);
             return;
         }
-        func_8005DF44(D_800FA1FC, D_800FA202, 0x11);
+        omOvlCallEx(D_800FA1FC, D_800FA202, 0x11);
     }
 }
 

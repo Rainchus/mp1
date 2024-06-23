@@ -1,7 +1,7 @@
 #include "PR/os_internal.h"
 #include "osint.h"
 
-OSTime osGetTime() {
+OSTime osGetTime(void) {
     u32 tmptime;
     u32 elapseCount;
     OSTime currentCount;

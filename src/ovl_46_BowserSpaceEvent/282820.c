@@ -83,7 +83,7 @@ void func_800F6744_282984(void) {
     func_80055A34(D_800F8FF1);
     func_80054868(24);
     func_80055A34(-1);
-    SleepProcess(20);
+    HuPrcSleep(20);
 }
 
 void func_800F677C_2829BC(void) {
@@ -151,7 +151,7 @@ void func_800F69F0_282C30(void) {
     }
     D_800F8ED0 = 1;
     func_8004F4D4(D_800F8FF4, 2, 0);
-    SleepProcess(30);
+    HuPrcSleep(30);
 }
 
 void func_800F6AF8_282D38(void) {
@@ -173,7 +173,7 @@ void func_800F6AF8_282D38(void) {
     func_8004DBD4(windowID, D_800F8FF1);
     HideTextWindow(windowID);
     func_80054868(0);
-    SleepProcess(20);
+    HuPrcSleep(20);
     func_8003E81C(D_800F8FF4, 2, 0);
     func_8004F40C(D_800F8FF4, 0, 2);
     PlaySound(0x56);
@@ -187,7 +187,7 @@ void func_800F6AF8_282D38(void) {
         func_800546B4(1, i % 5);
         func_800546B4(2, i % 5);
         func_800546B4(3, i % 5);
-        SleepVProcess();
+        HuPrcVSleep();
     }
 
     temp_s2 = 0;
@@ -240,7 +240,7 @@ void func_800F6AF8_282D38(void) {
         func_800546B4(1, i % 5);
         func_800546B4(2, i % 5);
         func_800546B4(3, i % 5);
-        SleepVProcess();
+        HuPrcVSleep();
     }
  
     func_800546B4(0, gPlayers[0].turn_status);
@@ -264,18 +264,18 @@ void func_800F6AF8_282D38(void) {
         func_8004F4D4(D_800F8FF8, 3, 0);
         if (temp_s4 + 10 <= gPlayers[D_800F8FF1].coinAmount) {
             func_80060468(0x451, gPlayers[D_800F8FF1].characterID);
-            SleepProcess(10);
+            HuPrcSleep(10);
         }
         break;
     case 2:
         func_8004F4D4(D_800F8FF8, 0, 0);
         if (temp_s4 - 10 >= gPlayers[D_800F8FF1].coinAmount) {
             func_80060468(0x44A, gPlayers[D_800F8FF1].characterID);
-            SleepProcess(10); 
+            HuPrcSleep(10); 
         }
         break;
     }
-    SleepProcess(30);
+    HuPrcSleep(30);
 }
 
 void func_800F7044_283284(void) {
@@ -305,7 +305,7 @@ void func_800F7044_283284(void) {
         
         D_800F8ED0 = 2;
         func_8004F4D4(D_800F8FF4, 2, 0);
-        SleepProcess(0x1E);
+        HuPrcSleep(0x1E);
         return;
     }
 
@@ -391,7 +391,7 @@ void func_800F7410_283650(void) {
         
         D_800F8ED0 = 3;
         func_8004F4D4(D_800F8FF4, 2, 0);
-        SleepProcess(0x1E);
+        HuPrcSleep(0x1E);
         return;
     }
     
@@ -498,7 +498,7 @@ void func_800F7410_283650(void) {
             }            
         }
         
-        SleepProcess(0x14);
+        HuPrcSleep(0x14);
         
         if (gPlayers[D_800F8FF1].miniGameCoins == 0) {
             func_8004F4D4(D_800F8FF8, 0, 0);
@@ -570,7 +570,7 @@ void func_800F7BFC_283E3C(void) {
         }
         D_800F8ED0 = 4;
         func_8004F4D4(D_800F8FF4, 2, 0);
-        SleepProcess(0x1E);
+        HuPrcSleep(0x1E);
         return;
     }
     if (gPlayers[D_800F8FF1].miniGameCoins < 0) {
@@ -611,7 +611,7 @@ void func_800F7BFC_283E3C(void) {
        }
     }
     
-    SleepProcess(20);
+    HuPrcSleep(20);
     
     if (gPlayers[D_800F8FF1].miniGameCoins <= 0) {
         func_8004F4D4(D_800F8FF8, 0, 0);
@@ -688,7 +688,7 @@ void func_800F80EC_28432C(void) {
         
         D_800F8ED0 = 5;
         func_8004F4D4(D_800F8FF4, 2, 0);
-        SleepProcess(0x1E);
+        HuPrcSleep(0x1E);
         return;
     }
 
@@ -733,7 +733,7 @@ void func_800F80EC_28432C(void) {
         }        
     }
     
-    SleepProcess(20);
+    HuPrcSleep(20);
     if (gPlayers[D_800F8FF1].miniGameCoins == 0) {
         func_8004F4D4(D_800F8FF8, 0, 0);
     }
@@ -788,7 +788,7 @@ void func_800F8608_284848(void) {
     if (D_800C597A == 0) {
         func_8004935C();
         func_800499CC(D_800F8FF1);
-        SleepProcess(0x1A);
+        HuPrcSleep(0x1A);
         if (gPlayers[D_800F8FF1].coinAmount == 0) {
             if (gPlayers[D_800F8FF1].starAmount == 0) {
                 windowID = CreateTextWindow(80, 60, 14, 4);
@@ -801,7 +801,7 @@ void func_800F8608_284848(void) {
                 func_800F6744_282984();
                 func_8004F4D4(D_800F8FF8, 2, 0);
                 func_80055960(D_800F8FF1, 20);
-                SleepProcess(30);
+                HuPrcSleep(30);
                 windowID = CreateTextWindow(80, 60, 14, 3);
                 LoadStringIntoWindow(windowID, (void*)0xCB, -1, -1);
                 func_8006E070(windowID, 0);
@@ -827,7 +827,7 @@ void func_800F8608_284848(void) {
                 func_80060618(0x44A, D_800F8FF1);
                 func_80055960(D_800F8FF1, 10);
                 func_800503B0(D_800F8FF1, 6);
-                SleepProcess(0x1E);
+                HuPrcSleep(0x1E);
                 windowID = CreateTextWindow(80, 60, 14, 3);
                 LoadStringIntoWindow(windowID, (void*)0xC9, -1, -1);
                 func_8006E070(windowID, 0);
@@ -845,7 +845,7 @@ void func_800F8608_284848(void) {
             func_8004DBD4(windowID, D_800F8FF1);
             HideTextWindow(windowID);
             func_8004F4D4(D_800F8FF4, 3, 0);
-            SleepProcess(0x20);
+            HuPrcSleep(0x20);
             func_8004F4D4(D_800F8FF4, 0, 2);
             func_8004EE14(0, D_800F32A0, 15, D_800F8FF4);
             var_s0_2 = 0;
@@ -866,7 +866,7 @@ void func_800F8608_284848(void) {
                     var_s2 = 1;
                 }
                 
-                SleepVProcess();     
+                HuPrcVSleep();     
                 
             }
 
@@ -876,12 +876,12 @@ void func_800F8608_284848(void) {
             if (D_800C597A == 0) {
                 D_800F8FB4[func_80049328()]();
             } else {
-                SleepProcess(26);
+                HuPrcSleep(26);
                 D_800F8FB4[func_80049334()](); //function ptr array
             }
         }
     } else {
-        SleepProcess(26);
+        HuPrcSleep(26);
         D_800F8FB4[func_80049334()](); //function ptr array
     }
 
@@ -892,7 +892,7 @@ void func_800F8608_284848(void) {
     D_800F5144 = 1;
     
     while (1) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
 }
 
@@ -904,35 +904,35 @@ void func_800F8B1C_284D5C(void) {
         func_80070ED4();
         switch (D_800F8ED0) {
             case 0:
-                func_8005DFB8(1);
+                omOvlReturnEx(1);
                 break;
             case 1:
                 SetBoardFeatureFlag(69);
-                func_8005E044(1, 0, 146);
+                omOvlGotoEx(1, 0, 146);
                 break;
             case 2:
                 SetBoardFeatureFlag(69);
                 func_80059348(16);
-                func_8005DF44(111, 0, 148);
-                func_8005E36C(1, 70, 1, 146);
+                omOvlCallEx(111, 0, 148);
+                omOvlHisChg(1, 70, 1, 146);
                 break;
             case 3:
                 SetBoardFeatureFlag(69);
                 func_80059348(14);
-                func_8005DF44(111, 0, 148);
-                func_8005E36C(1, 70, 1, 146);
+                omOvlCallEx(111, 0, 148);
+                omOvlHisChg(1, 70, 1, 146);
                 break;
             case 4:
                 SetBoardFeatureFlag(69);
                 func_80059348(51);
-                func_8005DF44(111, 0, 148);
-                func_8005E36C(1, 70, 1, 146);
+                omOvlCallEx(111, 0, 148);
+                omOvlHisChg(1, 70, 1, 146);
                 break;
             case 5:
                 SetBoardFeatureFlag(69);
                 func_80059348(19);
-                func_8005DF44(111, 0, 148);
-                func_8005E36C(1, 70, 1, 146);
+                omOvlCallEx(111, 0, 148);
+                omOvlHisChg(1, 70, 1, 146);
                 break;
         }
     }

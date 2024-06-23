@@ -6,7 +6,7 @@ INCLUDE_ASM(s32, "62140", func_80061540);
 
 INCLUDE_ASM(s32, "62140", func_80061638);
 
-s32 func_80061714(void) {
+s32 func_80061714() {
     s16 i;
 
     for (i = 0; i < 4; i++) {
@@ -15,7 +15,7 @@ s32 func_80061714(void) {
     return 0;
 }
 
-void func_80061758(void) {
+void func_80061758() {
     Vec3s sp10;
 
     func_800642FC(&sp10, &func_80061714, 0, 1);
@@ -150,7 +150,7 @@ void func_80062408(s16 arg0) {
     }
 }
 
-void func_80062450(void) {
+void func_80062450() {
     s32 i;
     D_800F64E4 = 0;
 
@@ -179,11 +179,11 @@ void func_800624BC(s8 arg0, s8 arg1, s8 arg2, s8 arg3, u8 arg4, u8 arg5, u8 arg6
     D_800F09E4.unk_0B = arg8;
 }
 
-void func_80062500(void) { 
+void func_80062500() { 
     D_800F09E4.unk_03 = D_800F09E4.unk_04 = D_800F09E4.unk_05 = 0;
 }
 
-void func_80062518(void) {
+void func_80062518() {
     D_800EE310 = 0;
 }
 

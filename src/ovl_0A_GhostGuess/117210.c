@@ -21,7 +21,7 @@ void func_800F69DC_11760C(unkObjectStruct* arg0) {
 void func_800F6AAC_1176DC(void) {
     if (func_80072718() == 0) {
         func_800FB21C_11BE4C();
-        func_8005DFB8(1);
+        omOvlReturnEx(1);
     }
 }
 

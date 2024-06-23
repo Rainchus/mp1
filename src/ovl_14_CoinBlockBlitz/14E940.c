@@ -56,7 +56,7 @@ void func_800F6CB4_14F014(void) {
         func_800601D4(0x28);
         func_80009730();
         func_8002890C(0, 0, 0);
-        func_8005DFB8(1);
+        omOvlReturnEx(1);
     }
 }
 
@@ -68,7 +68,7 @@ void func_800F6D08_14F068(void) {
 
     var_s0 = &D_800FAA80;
     var_s1 = &D_800FA8F0;
-    temp_a0 = GetRandomByte() % 3;
+    temp_a0 = rand8() % 3;
     
     for (i = 0; i < 4; i++, var_s0++, var_s1++) {
         var_s0->unk0 = 0;

@@ -69,10 +69,10 @@ void func_800F65E0_1F62C0(void) {
     func_8007B168(&D_800FF3B0, 1);
     temp_s0 = ReadMainFS(42);
     D_800FF534 = func_80039084(temp_s0);
-    FreePerm(temp_s0);
+    HuMemDirectFree(temp_s0);
     temp_s0 = ReadMainFS(38);
     D_800FF536 = func_80039084(temp_s0);
-    FreePerm(temp_s0);
+    HuMemDirectFree(temp_s0);
     D_800FF526 = IsFlagSet(43);
     D_800FF5A4 = 0;
     SetFadeInTypeAndTime(0, 16);

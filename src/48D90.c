@@ -219,7 +219,7 @@ void func_8004A2E8(u16 arg0) {
     D_800D6730 = var_v0;
 }
 
-void func_8004A31C() {
+void func_8004A31C(void) {
     unk20* sp10;
 
     while (TRUE) {
@@ -234,7 +234,7 @@ void func_8004A31C() {
 
 extern void func_8007F54C(void*, void*, s32, s32); /* extern */
 extern void func_8007FAC0();                       /* extern */
-void func_8004A394() {
+void func_8004A394(void) {
     unk20* sp10;
 
     func_8007FAC0();
@@ -248,7 +248,7 @@ void func_8004A394() {
     osDestroyThread(0);
 }
 
-void func_8004A41C() {
+void func_8004A41C(void) {
     osCreateMesgQueue(&D_800D6AF0, &D_800D6B08, 0x28);
     osCreateMesgQueue(&D_800D7F20, &D_800D7F38, 0x28);
     osCreateMesgQueue(&D_800D7FD8, &D_800D7FF0, 0x28);
@@ -260,21 +260,21 @@ void func_8004A41C() {
     osStartThread(&D_800D6BA8);
 }
 
-void func_8004A510() {
+void func_8004A510(void) {
     D_800D7710 = 3;
 }
 
-void func_8004A520() {
+void func_8004A520(void) {
     D_800D7710 = 1;
 }
 
-void func_8004A530() {
+void func_8004A530(void) {
     if (osGetThreadPri(&D_800D7560) != D_800D7710) {
         osSetThreadPri(&D_800D7560, D_800D7710);
     }
 }
 
-void func_8004A56C() {
+void func_8004A56C(void) {
     unk20* mesg;
     while (osRecvMesg(&D_800D7FD8, (OSMesg) &mesg, 0) == 0) {
         if (mesg) {
@@ -284,7 +284,7 @@ void func_8004A56C() {
     }
 }
 
-void func_8004A5BC() {
+void func_8004A5BC(void) {
     HuArchive* pArchive;
     s32 i;
     unk20* unkFile;
@@ -305,7 +305,7 @@ void func_8004A5BC() {
     }
 }
 
-void func_8004A684() {
+void func_8004A684(void) {
     unk20* var_s0;
     s32 i;
 
@@ -320,7 +320,7 @@ void func_8004A684() {
     bzero(&D_800D6A60, sizeof(Object));
 }
 
-void func_8004A6F8() {
+void func_8004A6F8(void) {
     unk20* var_v1;
     s32 i;
 
@@ -336,7 +336,7 @@ void func_8004A6F8() {
 }
 
 void func_80023728(void*);  
-void func_8004A73C() {
+void func_8004A73C(void) {
     unk20* unkFile;
     void* pData;
     s32 i;
@@ -354,13 +354,13 @@ void func_8004A73C() {
     }
 }
 
-void func_8004A7A4() {
+void func_8004A7A4(void) {
     func_8004A684();
     func_8004A41C();
     D_800D6730 |= 4;
 }
 
-void func_8004A7DC() {
+void func_8004A7DC(void) {
     func_8004A5BC();
     func_8004A73C();
     D_800D6730 &= 0xFFFB;
@@ -411,7 +411,7 @@ unk20* func_8004A890(u16 arg0) {
 }
 
 // INCLUDE_ASM(s32, "48D90", func_8004A950);
-void func_8004A950() {
+void func_8004A950(void) {
     s32 var_s1;
     u32 var_s2;
     s32 i, j;
@@ -442,7 +442,7 @@ INCLUDE_ASM(s32, "48D90", func_8004ACEC);
 void func_8001D57C(s32);                                         /* extern */
 void func_8005D900(Process*, s32);                               /* extern */
 void func_8004B208();                                            /* extern */
-void func_8004AFFC() {
+void func_8004AFFC(void) {
     f32 temp_f2;
     Process *temp_v0;
     f32 *pFloat = (f32*) D_800C4F78;
@@ -474,18 +474,18 @@ void func_8004AFFC() {
     func_8001D57C(0);
 }
 
-void func_8004B1B8() {
+void func_8004B1B8(void) {
     if (D_800D80B0) {
         EndProcess(D_800D80B0);
         D_800D80B0 = NULL;
     }
 }
 
-void func_8004B1EC() {
+void func_8004B1EC(void) {
     func_8004B1B8();
 }
 
-void func_8004B208() {
+void func_8004B208(void) {
     Vec3f vec2;
     Vec2hu halfs;
     Vec3f vec;
@@ -531,7 +531,7 @@ void func_8004B208() {
         vec2.z = 511.5f;
         func_8001D520(0, &D_800D80F0, &vec2);
         func_8004A19C( -halfs.x + 0xA0, -halfs.y + 0x78);
-        SleepVProcess();
+        HuPrcVSleep();
     }
 }
 
@@ -593,10 +593,10 @@ void func_8004B838(f32 arg0) {
     D_800D672C = arg0;
 }
 
-f32 func_8004B844() {
+f32 func_8004B844(void) {
     return D_800D672C;
 }
 
-s32 func_8004B850() {
+s32 func_8004B850(void) {
     return D_800D6730 & 2;
 }

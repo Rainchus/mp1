@@ -20,7 +20,7 @@ void func_800F65E0_F6AB0(void) {
     func_800176C4(temp_s0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
     func_8001D494(0, 45.0f, 80.0f, 4000.0f);
     func_800F7034_F7504();
-    func_800F720C_F76DC(GetRandomByte());
+    func_800F720C_F76DC(rand8());
     func_800F7550_F7A20();
     func_800F828C_F875C();
     func_800F87CC_F8C9C();
@@ -98,10 +98,10 @@ void func_800F6A14_F6EE4(void) {
     func_80060198();
     
     for (i = 0; i < D_800F37DA; i++) {
-        FreePerm(D_800FF718[i]);
+        HuMemDirectFree(D_800FF718[i]);
     }
     
-    func_8005DFB8(1);
+    omOvlReturnEx(1);
 }
 
 void func_800F6A98_F6F68(unkObjectStruct* arg0) {

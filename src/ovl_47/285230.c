@@ -32,7 +32,7 @@ void func_800F6C40_285890(unkObjectStruct* obj) {
         func_80054654();
         func_80070ED4();
         if (D_800F6EE0 == 0) {
-            func_8005DFB8(1);
+            omOvlReturnEx(1);
             return;
         }
         func_8004F284();

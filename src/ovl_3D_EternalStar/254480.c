@@ -243,7 +243,7 @@ void func_800F6850_2546C0(void) {
 void func_800F68B8_254728(void) {
     while (1) {
         func_800F6850_2546C0();
-        SleepVProcess();   
+        HuPrcVSleep();   
     }
 }
 
@@ -301,10 +301,10 @@ void func_800F6AE8_254958(ProcessHeader* arg0, s16 arg1) {
 
 void func_800F6B58_2549C8(ProcessHeader* arg0) {
     func_8003E8B8(arg0->prev, 0, 0, 6, 0);
-    SleepProcess(3);
+    HuPrcSleep(3);
     while (1) {
         if (!(func_8003E940(arg0->prev))) {
-            SleepVProcess();
+            HuPrcVSleep();
         } else {
             break;
         }
@@ -322,7 +322,7 @@ void func_800F6BD8_254A48(void) {
     SetFadeInTypeAndTime(2, 0x10);
 
     while (func_80072718() != 0) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
     
     func_800F6B58_2549C8(temp_s0);
@@ -351,20 +351,20 @@ void func_800F6BD8_254A48(void) {
     WaitForTextConfirmation(temp_s0->unk_08);
     func_80071E80(temp_s0->unk_08, 1);
     func_800601D4(0x5A);
-    SleepProcess(5);
+    HuPrcSleep(5);
     func_800726AC(2, 0x10);
-    SleepProcess(0x11);
+    HuPrcSleep(0x11);
     func_800F6AA0_254910(temp_s0);
     func_80056AF4();
-    func_8005DFB8(1);
-    func_8005E3A8();
-    SleepVProcess();
+    omOvlReturnEx(1);
+    omOvlKill();
+    HuPrcVSleep();
 }
 
 void func_800F6D30_254BA0(void) {
     D_800ED5C2 = 7;
     InitObjSystem(0xA, 0);
-    func_8005E044(0x35, 0, 0x92);
+    omOvlGotoEx(0x35, 0, 0x92);
 }
 
 void InitBoard(void) {
@@ -375,11 +375,11 @@ void InitBoard(void) {
     SetPlayerOntoChain(3, 0x12, 0);
     SetBoardFeatureFlag(0x43);
     func_800F667C_2544EC();
-    D_800ED172 = GetRandomByte() % 3;
+    D_800ED172 = rand8() % 3;
     ClearBoardFeatureFlag(0x4F);
     ClearBoardFeatureFlag(0x50);
     func_800F7F4C_255DBC();
-    func_8005DFB8(1);
+    omOvlReturnEx(1);
 }
 
 void func_800F6E34_254CA4(void) {
@@ -540,22 +540,22 @@ void func_800F73F0_255260(void) {
     Vec3f sp10;
     
     while (func_80072718() != 0) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
     
-    SleepProcess(0x1E);
+    HuPrcSleep(0x1E);
     func_8003E81C(D_800F91E4, 0, 0);
     PlaySound(0x4D);
 
     while ((func_8003E940(D_800F91E4) & 1) == 0) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
 
     func_8003E81C(D_800F91E4, -1, 2);
     func_8004CD84(&sp10);
-    process = GetCurrentProcess();
-    LinkChildProcess(process, func_8004D1EC(&D_800F91E4->unk_18, &sp10, &D_800F91E4->unk_18, 0x14));
-    WaitForChildProcess();
+    process = HuPrcCurrentGet();
+    HuPrcChildLink(process, func_8004D1EC(&D_800F91E4->unk_18, &sp10, &D_800F91E4->unk_18, 0x14));
+    HuPrcChildWatch();
     EndProcess(NULL);
 }
 
@@ -801,14 +801,14 @@ void func_800F7C3C_255AAC(void) {
 
 void func_800F7C70_255AE0(void) {
     while (func_8004B850() != 0) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
-    SleepVProcess();
+    HuPrcVSleep();
     D_800F91E8 = func_80045D84(0, 0x92, 1);
     D_800F91EC = func_80045D84(1, 0xA0, 1);
     D_800F91F0 = func_80045D84(3, 0xAE, 1);
     D_800F91F4 = func_80045D84(0xB, 0xBC, 1);
-    SleepProcess(3);
+    HuPrcSleep(3);
     D_800EE320 = 1;
 }
 
@@ -848,7 +848,7 @@ void func_800F7E78_255CE8(Object* arg0) {
     for (i = 255; i >= 0; i = i - 8) {
         func_800211BC(*arg0->unk_3C->unk_40, i);
         func_800211BC(*arg0->unk_40->unk_40, ~i); 
-        SleepVProcess();
+        HuPrcVSleep();
     }
 }
 
@@ -858,7 +858,7 @@ void func_800F7EE0_255D50(Object* arg0) {
     for (i = 0; i <= 255; i = i + 8) {
         func_800211BC(*arg0->unk_3C->unk_40, i);
         func_800211BC(*arg0->unk_40->unk_40, ~i); 
-        SleepVProcess();
+        HuPrcVSleep();
     }
 }
 
@@ -888,9 +888,9 @@ void func_800F7F7C_255DEC(void) {
     func_800F7EE0_255D50(temp_s3);
     DestroyObject(temp_s1);
     space = GetSpaceData(GetAbsSpaceIndexFromChainSpaceIndex(player->nextChainIndex, player->nextSpaceIndex));
-    process = GetCurrentProcess();
-    LinkChildProcess(process, func_8004D648(&player->playerObj->coords, &space->coords, &player->playerObj->coords, 25.0f));
-    WaitForChildProcess();
+    process = HuPrcCurrentGet();
+    HuPrcChildLink(process, func_8004D648(&player->playerObj->coords, &space->coords, &player->playerObj->coords, 25.0f));
+    HuPrcChildWatch();
     SetPlayerOntoChain(-1, player->nextChainIndex, player->nextSpaceIndex);
     temp_s1 = CreateObject(0x4C, NULL);
     func_80025EB4(*temp_s1->unk_3C->unk_40, 2, 0);
@@ -915,7 +915,7 @@ void func_800F8130_255FA0(void) {
             continue;
         } else {
             while (func_8004B850() != 0) {
-                SleepProcess(1);
+                HuPrcSleep(1);
             }
             
             D_800ED154.unk_00[i] = 1;
@@ -933,7 +933,7 @@ void func_800F8130_255FA0(void) {
 
 void func_800F8240_2560B0(void) {
     SetPlayerAnimation(-1, -1, 2);
-    SleepProcess(30);
+    HuPrcSleep(30);
     SetBoardFeatureFlag(0x4F);
     func_800587BC(0x5D, 0, 3, 1);
     SetEventReturnFlag(1);
@@ -950,34 +950,34 @@ void func_800F8298_256108(void) {
     player = GetPlayerStruct(-1);
 
     while (func_80072718() != 0) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
     
-    SleepProcess(0x32);
+    HuPrcSleep(0x32);
     SetNextChainAndSpace(-1, 0x13, 0);
     func_800F7F7C_255DEC();
     SetPlayerAnimation(-1, 0, 2);
     temp_s0 = GetSpaceData(GetAbsSpaceIndexFromChainSpaceIndex(0x12, 1));
     func_800A0E80(&player->playerObj->unk_18, &temp_s0->coords, &player->playerObj->coords);
     func_8004D3F4(&player->playerObj->coords, &temp_s0->coords, &player->playerObj->coords, 0xF);
-    SleepProcess(0xF);
+    HuPrcSleep(0xF);
     SetPlayerOntoChain(-1, 0x12, 1);
     SetPlayerAnimation(-1, -1, 2);
-    SleepProcess(0xF);
+    HuPrcSleep(0xF);
     func_800A0D50(&sp10, &player->playerObj->unk_18);
     func_8003D514(&sp10, -90.0f);
     func_8004D1EC(&player->playerObj->unk_18, &sp10, &player->playerObj->unk_18, 4);
-    SleepProcess(4);
+    HuPrcSleep(4);
     func_8003D514(&sp10, 170.0f);
     func_8004D1EC(&player->playerObj->unk_18, &sp10, &player->playerObj->unk_18, 8);
-    SleepProcess(8);
+    HuPrcSleep(8);
     func_8003D514(&sp10, -80.0f);
     func_8004D1EC(&player->playerObj->unk_18, &sp10, &player->playerObj->unk_18, 4);
-    SleepProcess(4);
+    HuPrcSleep(4);
     tempVar = D_800ED172;
     
     while (1) {
-        D_800ED172 =  GetRandomByte() % 3;
+        D_800ED172 =  rand8() % 3;
         if (tempVar != D_800ED172) {
             break;
         }
@@ -1026,10 +1026,10 @@ void func_800F8588_2563F8(void) {
     curPlayer = GetPlayerStruct(-1);
     
     while (func_80072718() != 0) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
     
-    SleepProcess(5);
+    HuPrcSleep(5);
     playerIndex = curPlayer->playerIndex;
     objectStructs[playerIndex] = func_800F7D6C_255BDC(playerIndex);
     PlaySound(0x47);
@@ -1037,13 +1037,13 @@ void func_800F8588_2563F8(void) {
     for (i = 255; i >= 0; i = i - 8) { 
         func_800211BC(*objectStructs[playerIndex]->unk_3C->unk_40, i & 0xFF);
         func_800211BC(*objectStructs[playerIndex]->unk_40->unk_40, ~i & 0xFF);
-        SleepVProcess();
+        HuPrcVSleep();
     }
 
     func_800F7E5C_255CCC(objectStructs[playerIndex]);
     curPlayer->playerObj->unk_0A |= 2;
     func_8003E5E0(curPlayer->playerObj);
-    SleepProcess(0xA);
+    HuPrcSleep(0xA);
 
     for (j = 0; j < 4; j++) {
         temp_s0_3 = GetPlayerStruct(j);
@@ -1063,7 +1063,7 @@ void func_800F8588_2563F8(void) {
                 func_800211BC(*objectStructs[j]->unk_40->unk_40, ~i); 
             }       
         }
-        SleepVProcess();
+        HuPrcVSleep();
     }
 
     for (j = 0; j < 4; j++) {
@@ -1085,7 +1085,7 @@ void func_800F87E4_256654(EventTableUnkStruct* arg0) {
     s32 tempVar;
 
     SetPlayerAnimation(-1, -1, 2);
-    SleepVProcess();
+    HuPrcVSleep();
     func_800F7C70_255AE0();
     temp_s2 = func_8003C218(D_800ED5C0.unk_1C, arg0->spaceIDs);
     func_8003C060(temp_s2, D_800ED5C0.unk_1C, 0);

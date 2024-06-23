@@ -9,7 +9,7 @@ void func_800F6610_24FAB0(void) {
     void* temp_s0;
     void* temp_s2;
 
-    temp_s0 = GetCurrentProcess()->user_data;
+    temp_s0 = HuPrcCurrentGet()->user_data;
     PlaySound(0x6D);
     temp_v0 = CreateObject(0x40U, NULL);
     temp_v0->unk_0A |= 4;
@@ -21,14 +21,14 @@ void func_800F6610_24FAB0(void) {
     for(var_s0 = 0; var_s0 < 6; var_s0++) {
         func_800A0D00(&temp_v0->xScale, var_f20, var_f20, var_f20);
         var_f20 += 0.4f;
-        SleepVProcess();
+        HuPrcVSleep();
     }
     for(var_s0 = 0; var_s0 < 3; var_s0++) {
         func_800A0D00(&temp_v0->xScale, var_f20, var_f20, var_f20);
         var_f20 -= 0.4f;
-        SleepVProcess();
+        HuPrcVSleep();
     }
-    SleepProcess(0x1E);
+    HuPrcSleep(0x1E);
     PlaySound(0x44);
     var_f22 = 0.0f;
     while (TRUE) {
@@ -40,10 +40,10 @@ void func_800F6610_24FAB0(void) {
         }
         func_800A0D00(&temp_v0->xScale, var_f20, var_f20, var_f20);
         temp_v0->unk_30 -= 6.0f;
-        SleepVProcess();
+        HuPrcVSleep();
     }
     func_800427D4(temp_s2);
-    SleepProcess(0x1E);
+    HuPrcSleep(0x1E);
     DestroyObject(temp_v0);
     EndProcess(NULL);
 }

@@ -79,7 +79,7 @@ void* func_800F6D20_188B50(Object* arg0) {
 
 void func_800F6D8C_188BBC(void) {
     if (func_80072718() == 0) {
-        func_8005DFB8(1);
+        omOvlReturnEx(1);
     }
 }
 

@@ -22,7 +22,7 @@ void func_800FF2B8_DDEB8(void) {
     D_80101320 = 1;
     HideTextWindow(temp_s0);
     while (1) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
     
 }
@@ -39,7 +39,7 @@ void func_800FF354_DDF54(void) {
     D_80101320 = 1;
     HideTextWindow((s32) temp_s0);
     while (1) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
     
 }

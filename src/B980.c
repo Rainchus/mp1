@@ -102,7 +102,7 @@ INCLUDE_ASM(s32, "B980", func_8000B044);
 
 INCLUDE_ASM(s32, "B980", func_8000B0C0);
 
-s32 func_8000B13C(void) {
+s32 func_8000B13C() {
     osCreateMesgQueue(&D_800CDA90, &D_800CD9C8, 50);
     D_800ECB2C = 0;
     if (D_800C18A0.unk_00 != 0) {
@@ -113,7 +113,7 @@ s32 func_8000B13C(void) {
     return 1;
 }
 
-s32 func_8000B198(void) {
+s32 func_8000B198() {
     if (D_800CDAEC == 0) {
         if (D_800CEAA0 == 0) {
             if (D_800C1870 & 0x8000) {
@@ -133,22 +133,22 @@ s32 func_8000B198(void) {
 
 INCLUDE_ASM(s32, "B980", func_8000B210);
 
-Addr* func_8000B2BC(void) {
+Addr* func_8000B2BC() {
     return &D_800C1874;
 }
 
-s32 func_8000B2C8(void) {
+s32 func_8000B2C8() {
     if (D_800C1870 & 0x8000) {
         return D_800CDAC8->unk_04;
     }
     return 0;
 }
 
-s32 func_8000B2F0(void) {
+s32 func_8000B2F0() {
     return 0x610032;
 }
 
-s32 func_8000B2FC(void) {
+s32 func_8000B2FC() {
     return D_800CDAA8.unk_08 - (D_800CDAA8.unk_04 - D_800CDAA8.FXD0_header);
 }
 

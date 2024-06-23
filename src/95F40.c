@@ -3,7 +3,7 @@
 
 extern OSDevMgr __osPiDevMgr;
 
-OSMesgQueue* osPiGetCmdQueue(void) {
+OSMesgQueue* osPiGetCmdQueue() {
     if (!__osPiDevMgr.active) {
         return NULL;
     } else {

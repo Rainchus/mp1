@@ -235,7 +235,7 @@ void func_800721D8(Gfx** arg0) {
                 func_80072724(0, 0, 0);
                 if (D_800C6104 != NULL) {
                     if (D_800F50B8 == 0) {
-                        FreePerm(D_800C6104);
+                        HuMemDirectFree(D_800C6104);
                     }
                     D_800C6104 = NULL;
                 }
@@ -387,7 +387,7 @@ s32 func_800729C8(Gfx** arg0) {
     }
 
     if (D_800F50B8 == 0) {
-        FreePerm(D_800C6104);
+        HuMemDirectFree(D_800C6104);
     }
 
     D_800C6104 = NULL;
@@ -401,7 +401,7 @@ s32 func_80072B5C(Gfx** arg0) {
     gSPDisplayList((*arg0)++, D_800C6108);
 
     if (D_800F5024 == 0.0f) {
-        D_800C6104 = MallocPerm(153664);
+        D_800C6104 = HuMemDirectMalloc(153664);
         D_800F545C = (s32) (D_800C6104 + 63) & ~63;
         func_80072C34(arg0, D_800F545C);
         return 1;
@@ -1883,14 +1883,14 @@ s32 func_800786F0(unkCommonStruct0* arg0, Gfx** arg1) {
     f32 i;
 
     if (arg0->unk_04 == 0) {
-        char* temp_v0 = MallocPerm(256);
+        char* temp_v0 = HuMemDirectMalloc(256);
 
         func_8007149C((u8*) temp_v0, arg0->unk_10);
         func_800767B4(arg0, temp_v0, arg0->unk_02, -1, -1);
         arg0->unk_08 = strlen(temp_v0);
         func_80066DC4(arg0->unk_14[0], 0, arg0->unk_54, arg0->unk_58);
 
-        FreePerm(temp_v0);
+        HuMemDirectFree(temp_v0);
     }
 
     if (arg0->unk_04 > arg0->unk_06 || D_800F3394 != 0 || arg0->unk_01 == 4) {
@@ -1922,13 +1922,13 @@ s32 func_800789C0(unkCommonStruct0* arg0, Gfx** arg1) {
     f32 i;
 
     if (arg0->unk_04 == 0) {
-        char* temp_v0 = MallocPerm(256);
+        char* temp_v0 = HuMemDirectMalloc(256);
 
         func_8007149C((u8*) temp_v0, arg0->unk_10);
         func_800767B4(arg0, temp_v0, arg0->unk_02, -1, -1);
         arg0->unk_08 = strlen(temp_v0);
 
-        FreePerm(temp_v0);
+        HuMemDirectFree(temp_v0);
     }
 
     if (arg0->unk_04 > arg0->unk_06 || D_800F3394 != 0 || arg0->unk_01 == 4) {
@@ -2377,7 +2377,7 @@ void func_8007B168(void* arg0, u8 arg1) {
     u8* temp_v0;
     u8* var_s1;
 
-    var_s1 = temp_v0 = MallocPerm(512);
+    var_s1 = temp_v0 = HuMemDirectMalloc(512);
     func_8007149C(temp_v0, arg0);
 
     for (; *var_s1 != 0; var_s1++) {
@@ -2388,7 +2388,7 @@ void func_8007B168(void* arg0, u8 arg1) {
     }
 
     D_800F3753 = 1;
-    FreePerm(temp_v0);
+    HuMemDirectFree(temp_v0);
 }
 
 void func_8007B210(void) {
@@ -2456,7 +2456,7 @@ void func_8007B47C(void) {
 
 void func_8007B4AC(void) {
     func_80023888(D_800E434C);
-    FreePerm(D_800E4340);
+    HuMemDirectFree(D_800E4340);
     func_8002456C(D_800E4352);
     D_800F50B8 = 0;
 }
@@ -2477,7 +2477,7 @@ void func_8007B52C(void) {
     s8 var_s3;
     s16 i;
 
-    SleepProcess(2);
+    HuPrcSleep(2);
 
     D_800ECC22 = 1;
     temp_fp = D_800ED5DE;
@@ -2558,7 +2558,7 @@ void func_8007B52C(void) {
         func_800674BC(D_800ED4B0[var_s6].unk_44, D_800ED4B0[var_s6].unk_274, 0x8000);
     }
 
-    SleepVProcess();
+    HuPrcVSleep();
     PlaySound(0xFA);
     func_8007166C(temp_v0);
     func_80067480(D_800ED4B0[temp_v0].unk_44, D_800ED4B0[temp_v0].unk_274, 0x8000);
@@ -2572,11 +2572,11 @@ void func_8007B52C(void) {
     D_800F3B80 = 1;
 
     while (func_8005FD5C()) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
 
     while (TRUE) {
-        SleepVProcess();
+        HuPrcVSleep();
     }
 }
 
