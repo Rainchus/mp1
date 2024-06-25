@@ -1979,5 +1979,356 @@ segments:
     - [0x2A1D30, data, 29B410]
     - [0x2A2300, .rodata, 29B410]
     - {0x2A2500, type: bss, vram: 0x800FD6D0, name: ovl_61_bss}
-  - [0x2A2500, bin]
+  - type: code
+    start: 0x2A2500
+    vram: 0x800F65E0
+    dir: overlays/ovl_62_board_intro
+    name: BoardIntro
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x140
+    subsegments:
+      - [0x2A2500, c]
+      - [0x2A51E0, c]
+      - [0x2A5420, c]
+      - [0x2A5840, c]
+      - [0x2A5E50, c]
+      - [0x2A6500, c]
+      - [0x2A6EA0, c]
+      - [0x2A74F0, c]
+      - [0x2A76E0, c]
+      - [0x2A8C50, data, 2A2500]
+      - [0x2A9580, data, 2A51E0]
+      - [0x2A95B0, data, 2A5420]
+      - [0x2A95D0, data, 2A5840]
+      - [0x2A9640, data, 2A5E50]
+      - [0x2A9670, data, 2A6500]
+      - [0x2A96F0, data, 2A6EA0]
+      - [0x2A9770, data, 2A76E0]
+      - [0x2A98B0, .rodata, 2A2500]
+      - [0x2A9920, .rodata, 2A5840]
+      - [0x2A9930, .rodata, 2A6EA0]
+      - [0x2A9960, .rodata, 2A76E0]
+      - {0x2A9970, type: bss, vram: 0x800FDA50, name: ovl_62_bss}
+  - type: code
+    start: 0x2A9970
+    vram: 0x800F65E0
+    dir: overlays/ovl_63_StaffScene
+    name: StaffScene
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x20
+    subsegments:
+      - [0x2A9970, c]
+      - [0x2A9CA0, c]
+      - [0x2B0670, data, 2A9970]
+      - [0x2B1540, .rodata, 2A9CA0]
+      - {0x2B1670, type: bss, vram: 0x800FE2E0, name: ovl_63_bss}
+  - type: code
+    start: 0x2B1670
+    vram: 0x800F65E0
+    dir: overlays/ovl_64_ResultsEternalStar2
+    name: ResultsEternalStar2
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x800
+    subsegments:
+      - [0x2B1670, c]
+      - [0x2B7150, data, 2B1670]
+      - [0x2B7410, .rodata, 2B1670]
+      - {0x2B74A0, type: bss, vram: 0x800FC410, name: ovl_64_bss}
+  - type: code
+    start: 0x2B74A0
+    vram: 0x800F65E0
+    dir: overlays/ovl_65_UnknownBooStealScene
+    name: UnknownBooStealScene
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x40
+    subsegments:
+      - [0x2B74A0, c]
+      - [0x2BA290, data, 2B74A0]
+      - [0x2BA460, .rodata, 2B74A0]
+      - {0x2BA4C0, type: bss, vram: 0x800F9600, name: ovl_65_bss}
+  - type: code
+    start: 0x2BA4C0
+    vram: 0x800F65E0
+    dir: overlays/ovl_66_LogosSequence
+    name: LogosSequence
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x10
+    subsegments:
+      - [0x2BA4C0, c]
+      - [0x2BA4F0, c]
+      - [0x2BA9B0, data, 2BA4C0]
+      - {0x2BA9E0, type: bss, vram: 0x800F6B00, name: ovl_66_bss}
+  - type: code
+    start: 0x2BA9E0
+    vram: 0x800F65E0
+    dir: overlays/ovl_67_LogosSequenceCopy
+    name: LogosSequenceCopy
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0xA10
+    subsegments:
+      - [0x2BA9E0, c]
+      - [0x2BAA10, c]
+      - [0x2BB350, data, 2BA9E0]
+      - [0x2BB370, data, 2BAA10]
+      - [0x2BB380, .rodata, 2BAA10]
+      - {0x2BB390, type: bss, vram: 0x800F6F90, name: ovl_67_bss}
+  - type: code
+    start: 0x2BB390
+    vram: 0x800F65E0
+    dir: overlays/ovl_68_SaveDataCorrupted
+    name: SaveDataCorrupted
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x2BB390, c]
+      - [0x2BB3C0, c]
+      - [0x2BB5B0, data, 2BB390]
+  - type: code
+    start: 0x2BB5C0
+    vram: 0x800F65E0
+    dir: overlays/ovl_69_GameModeOverworld
+    name: GameModeOverworld
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x50
+    subsegments:
+      - [0x2BB5C0, c]
+      - [0x2BB5F0, c]
+      - [0x2BE910, data, 2BB5C0]
+      - [0x2BE920, data, 2BB5F0]
+      - [0x2BF150, .rodata, 2BB5F0]
+      - {0x2BF1A0, type: bss, vram: 0x800FA1C0, name: ovl_69_bss}
+  - type: code
+    start: 0x2BF1A0
+    vram: 0x800F65E0
+    dir: overlays/ovl_6A_AdventureModeSetup
+    name: AdventureModeSetup
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x7E0
+    subsegments:
+      - [0x2BF1A0, c]
+      - [0x2BF1D0, c]
+      - [0x2CA400, data, 2BF1A0]
+      - [0x2CA430, data, 2BF1D0]
+      - [0x2CA6B0, .rodata, 2BF1D0]
+      - {0x2CAA00, type: bss, vram: 0x80101E40, name: ovl_6A_bss}
+  - type: code
+    start: 0x2CAA00
+    vram: 0x800F65E0
+    dir: overlays/ovl_6B_MinigameHouse
+    name: MinigameHouse
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x2F0
+    subsegments:
+      - [0x2CAA00, c]
+      - [0x2D42E0, data, 2CAA00]
+      - [0x2D46A0, .rodata, 2CAA00]
+      - {0x2D4830, type: bss, vram: 0x80100410, name: ovl_6B_bss}
+  - type: code
+    start: 0x2D4830
+    vram: 0x800F65E0
+    dir: overlays/ovl_6C_MushroomShop
+    name: MushroomShop
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x100
+    subsegments:
+      - [0x2D4830, c]
+      - [0x2D6BF0, data, 2D4830]
+      - [0x2D6F60, .rodata, 2D4830] #actual start could be 0x2D6FB0, hard to say
+      - {0x2D6FC0, type: bss, vram: 0x800F8D70, name: ovl_6C_bss}
+  - type: code
+    start: 0x2D6FC0
+    vram: 0x800F65E0
+    dir: overlays/ovl_6D_MushroomBank
+    name: MushroomBank
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x20
+    subsegments:
+      - [0x2D6FC0, c]
+      - [0x2D92A0, data, 2D6FC0]
+      - [0x2D9520, .rodata, 2D6FC0]
+      - {0x2D9570, type: bss, vram: 0x800F8B90, name: ovl_6D_bss}
+  - type: code
+    start: 0x2D9570
+    vram: 0x800F65E0
+    dir: overlays/ovl_6E_OptionsHouse
+    name: OptionsHouse
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x20
+    subsegments:
+      - [0x2D9570, c]
+      - [0x2DAE30, data, 2D9570]
+      - [0x2DB270, .rodata, 2D9570]
+      - {0x2DB2A0, type: bss, vram: 0x800F8310, name: ovl_6E_bss}
+  - type: code
+    start: 0x2DB2A0
+    vram: 0x800F65E0
+    dir: overlays/ovl_6F_MinigameInstructions
+    name: MinigameInstructions
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x380
+    subsegments:
+      - [0x2DB2A0, c]
+      - [0x2DB2D0, c]
+      - [0x2DF200, c]
+      - [0x2E8220, c]
+      - [0x2F3190, data, 2DB2A0]
+      - [0x2F31B0, data, 2DB2D0]
+      - [0x2F3620, data, 2DF200]
+      - [0x2F3BA0, data, 2E8220]
+      - [0x2F3D10, .rodata, 2DB2D0]
+      - [0x2F3E40, .rodata, 2DF200]
+      - [0x2F4020, .rodata, 2E8220]
+      - {0x2F40C0, type: bss, vram: 0x8010F400, name: ovl_6F_bss}
+  - type: code
+    start: 0x2F40C0
+    vram: 0x800F65E0
+    dir: overlays/ovl_70_TestingRoom
+    name: TestingRoom
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x10
+    subsegments:
+      - [0x2F40C0, c]
+      - [0x2F6F70, data, 2F40C0]
+      - [0x2F6F90, .rodata, 2F40C0]
+      - {0x2F6FB0, type: bss, vram: 0x800F94D0, name: ovl_70_bss}
+  - type: code
+    start: 0x2F6FB0
+    vram: 0x800F65E0
+    dir: overlays/ovl_71_MinigameIslandOverworld
+    name: MinigameIslandOverworld
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x2F6FB0, c]
+      - [0x2F6FE0, c]
+      - [0x2F7060, data, 2F6FB0]
+  - type: code
+    start: 0x2F7080
+    vram: 0x800F65E0
+    dir: overlays/ovl_72_MinigameIslandOverworldCopy
+    name: MinigameIslandOverworldCopy
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x30
+    subsegments:
+      - [0x2F7080, c]
+      - [0x2F70B0, c]
+      - [0x2F8B50, data, 2F7080]
+      - [0x2F8B90, data, 2F70B0]
+      - {0x2F9040, type: bss, vram: 0x800F85A0, name: ovl_72_bss}
+  - type: code
+    start: 0x2F9040
+    vram: 0x800F65E0
+    dir: overlays/ovl_73
+    name: name_73
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x20
+    subsegments:
+      - [0x2F9040, c]
+      - [0x2F9070, c]
+      - [0x2F95F0, data, 2F9040]
+      - [0x2F9610, data, 2F9070]
+      - {0x2F96E0, type: bss, vram: 0x800F6C80, name: ovl_73_bss}
+  - type: code
+    start: 0x2F96E0
+    vram: 0x800F65E0
+    dir: overlays/ovl_74
+    name: name_74
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x20
+    subsegments:
+      - [0x2F96E0, c]
+      - [0x2F9710, c]
+      - [0x2F9FE0, data, 2F96E0]
+      - {0x2FA120, type: bss, vram: 0x800F7020, name: ovl_74_bss}
+  - type: code
+    start: 0x2FA120
+    vram: 0x800F65E0
+    dir: overlays/ovl_75
+    name: name_75
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x2FA120, c]
+      - [0x2FA150, c]
+      - [0x2FA760, data, 2FA120]
+      - {0x2FA8A0, type: bss, vram: 0x800F6D60, name: ovl_75_bss}
+  - type: code
+    start: 0x2FA8A0
+    vram: 0x800F65E0
+    dir: overlays/ovl_76
+    name: name_76
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x2FA8A0, c]
+      - [0x2FA8D0, c]
+      - [0x2FAC80, data, 2FA8A0]
+  - type: code
+    start: 0x2FADB0
+    vram: 0x800F65E0
+    dir: overlays/ovl_77_MinigameIslandFinish
+    name: MinigameIslandFinish
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0xA0
+    subsegments:
+      - [0x2FADB0, c]
+      - [0x2FD7E0, data, 2FADB0]
+      - {0x2FD940, type: bss, vram: 0x800F9170, name: ovl_77_bss}
+  - type: code
+    start: 0x2FD940
+    vram: 0x800F65E0
+    dir: overlays/ovl_78_MinigameIslandStart
+    name: MinigameIslandStart
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0xE0
+    subsegments:
+      - [0x2FD940, c]
+      - [0x300430, data, 2FD940]
+      - {0x3005B0, type: bss, vram: 0x800F9250, name: ovl_78_bss}
+  - type: code
+    start: 0x3005B0
+    vram: 0x800F65E0
+    dir: overlays/ovl_79
+    name: name_79
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x20
+    subsegments:
+      - [0x3005B0, c]
+      - [0x301410, data, 3005B0]
+      - [0x3014B0, .rodata, 3005B0]
+      - {0x3014C0, type: bss, vram: 0x800F74F0, name: ovl_79_bss}
+  - type: code
+    start: 0x3014C0
+    vram: 0x800F65E0
+    dir: overlays/ovl_7A_DebugRandomPlay
+    name: DebugRandomPlay
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x2B0
+    subsegments:
+      - [0x3014C0, c]
+      - [0x302C90, data, 3014C0]
+      - [0x303810, .rodata, 3014C0]
+      - {0x303E70, type: bss, vram: 0x800F8F90, name: ovl_7A_bss}
+  - [0x303E70, bin]
   - [0x2000000]
