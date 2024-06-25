@@ -453,4 +453,8 @@ void osSyncPrintf(const char*, ...);
 s16 func_80033718_34318(unk2C0C0StructC0*, char*);
 s32 func_80029174_29D74(s16);
 void func_8001B1D4_1BDD4(unk2C0C0StructC0* arg0);
+void func_800A2A50_A3650(Matrix4f);
+void func_8002B890_2C490(unk2C0C0StructC0*);
+void func_8002C030_2CC30(unk2C0C0StructC0*);
+void func_800265EC_271EC(unk2C0C0StructC0*, unk2C0C0StructC0*, f32, s16, s16, s32);
 #endif

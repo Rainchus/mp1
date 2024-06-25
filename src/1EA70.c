@@ -79,31 +79,3 @@ INCLUDE_ASM("asm/nonmatchings/1EA70", func_80021E58_22A58);
 INCLUDE_ASM("asm/nonmatchings/1EA70", func_80021EA0_22AA0);
 
 INCLUDE_ASM("asm/nonmatchings/1EA70", func_80021EC0_22AC0);
-
-INCLUDE_RODATA("asm/nonmatchings/1EA70", D_800CA810_CB410);
-
-INCLUDE_RODATA("asm/nonmatchings/1EA70", D_800CA81C_CB41C);
-
-INCLUDE_RODATA("asm/nonmatchings/1EA70", D_800CA82C_CB42C);
-
-INCLUDE_RODATA("asm/nonmatchings/1EA70", D_800CA83C_CB43C);
-
-INCLUDE_RODATA("asm/nonmatchings/1EA70", D_800CA84C_CB44C);
-
-INCLUDE_RODATA("asm/nonmatchings/1EA70", D_800CA85C_CB45C);
-
-INCLUDE_RODATA("asm/nonmatchings/1EA70", D_800CA868_CB468);
-
-INCLUDE_RODATA("asm/nonmatchings/1EA70", D_800CA878_CB478);
-
-INCLUDE_RODATA("asm/nonmatchings/1EA70", D_800CA888_CB488);
-
-INCLUDE_RODATA("asm/nonmatchings/1EA70", D_800CA898_CB498);
-
-INCLUDE_RODATA("asm/nonmatchings/1EA70", D_800CA8A8_CB4A8);
-
-INCLUDE_RODATA("asm/nonmatchings/1EA70", D_800CA8B8_CB4B8);
-
-INCLUDE_RODATA("asm/nonmatchings/1EA70", D_800CA8C4_CB4C4);
-
-INCLUDE_RODATA("asm/nonmatchings/1EA70", D_800CA8D8_CB4D8);

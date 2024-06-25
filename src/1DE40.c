@@ -4,7 +4,7 @@ void HuGuLookAtF(f32 mf[4][4], f32 xEye, f32 yEye, f32 zEye, f32 xAt, f32 yAt, f
 
 INCLUDE_ASM("asm/nonmatchings/1DE40", InitCameras);
 
-void func_8001D40C_1E00C() {
+void func_8001D40C_1E00C(void) {
     D_800F3FA8_F4038 = D_800F37F0_F3880;
 }
 
