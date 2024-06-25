@@ -27,7 +27,7 @@ typedef struct {
     unkMesg* unkMsg;
 } unkMesgWrapper;
 
-void func_80064234(void* arg0);
+void func_80064234_64E34(void* arg0);
 
 extern OSMesg D_800E3620;
 extern OSMesg D_800E36A0;
@@ -40,6 +40,6 @@ extern OSMesgQueue D_800EE960;
 extern OSMesgQueue D_800F3370;
 
 // TODO: Put this in correct header
-void func_800639F8(unkMesgWrapper*, OSMesgQueue*, s32); // nnsched func
+void func_800639F8_645F8(unkMesgWrapper*, OSMesgQueue*, s32); // nnsched func
 
 #endif

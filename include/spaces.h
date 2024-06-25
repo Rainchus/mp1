@@ -61,32 +61,32 @@ void SetSpaceSpawnAnim(s16 spaceIndex);
 void SetSpaceDisappearAnim(s16 spaceIndex);
 
 
-extern u8 *D_800C4FD0; // Space data bytestream
+extern u8 *D_800C4FD0_C5BD0; // Space data bytestream
 
-extern u8 D_800C51B0[SPACE_TYPE_TOTAL]; // Space type mapping?
+extern u8 D_800C51B0_C5DB0[SPACE_TYPE_TOTAL]; // Space type mapping?
 
-extern EventListEntry *D_800D8144; // EVENT_INDEX_NEWTURN
-extern EventListEntry *D_800D8148; // EVENT_INDEX_UNUSED
-extern EventListEntry *D_800D814C; // EVENT_INDEX_PLAYERTURN
-extern EventListEntry *D_800D8150; // EVENT_INDEX_PLAYERDICE
+extern EventListEntry *D_800D8144_D81D4; // EVENT_INDEX_NEWTURN
+extern EventListEntry *D_800D8148_D81D8; // EVENT_INDEX_UNUSED
+extern EventListEntry *D_800D814C_D81DC; // EVENT_INDEX_PLAYERTURN
+extern EventListEntry *D_800D8150_D81E0; // EVENT_INDEX_PLAYERDICE
 
-extern u16 D_800D8100; // Size of D_800D8108 (Total spaces in board)
-extern u16 D_800D8102; // Size of D_800D810C
-extern u16 D_800D8104; // Size of D_800D8110
+extern u16 D_800D8100_D8190; // Size of D_800D8108 (Total spaces in board)
+extern u16 D_800D8102_D8192; // Size of D_800D810C
+extern u16 D_800D8104_D8194; // Size of D_800D8110
 
-extern SpaceData *D_800D8108;
-extern ChainData *D_800D810C;
-extern ChainData *D_800D8110;
+extern SpaceData *D_800D8108_D8198;
+extern ChainData *D_800D810C_D819C;
+extern ChainData *D_800D8110_D81A0;
 
-extern u32 D_800D8154; // Optional event completion flags
-extern s16 D_800ED5E0; // currSpaceIndex
+extern u32 D_800D8154_D81E4; // Optional event completion flags
+extern s16 D_800ED5E0_ED670; // currSpaceIndex
 
-extern u16 D_800F3290; // D_800C4FD0 is loaded (boolean)
+extern u16 D_800F3290_F3320; // D_800C4FD0 is loaded (boolean)
 
-extern s16 D_800D8140; // Space texture set type
-extern u32 D_800C4FD4[SPACE_TYPE_TOTAL]; // Space Texture Files Set 0
-extern u32 D_800C4FFC[SPACE_TYPE_TOTAL]; // Space Texture Files Set 1
-extern u32 D_800C5024[SPACE_TYPE_TOTAL]; // Space Texture Files Set Default
-extern void *D_800D8118[SPACE_TYPE_TOTAL]; // Loaded Space Texture bytestreams
+extern s16 D_800D8140_D81D0; // Space texture set type
+extern u32 D_800C4FD4_C5BD4[SPACE_TYPE_TOTAL]; // Space Texture Files Set 0
+extern u32 D_800C4FFC_C5BFC[SPACE_TYPE_TOTAL]; // Space Texture Files Set 1
+extern u32 D_800C5024_C5C24[SPACE_TYPE_TOTAL]; // Space Texture Files Set Default
+extern void *D_800D8118_D81A8[SPACE_TYPE_TOTAL]; // Loaded Space Texture bytestreams
 
 #endif

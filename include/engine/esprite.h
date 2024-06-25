@@ -1,7 +1,7 @@
 #include "common.h"
 
-extern s16 D_800ED198[];
-extern u16 D_800F6530;
+extern s16 D_800ED198_ED228[];
+extern u16 D_800F6530_F65C0;
 
 //sprite related
 typedef struct unkSpriteStruct {
@@ -22,4 +22,4 @@ typedef struct unkSpriteStruct {
 /* 0x22 */ s16 pad;
 } unkSpriteStruct;
 
-extern unkSpriteStruct* D_800ED60C;
+extern unkSpriteStruct* D_800ED60C_ED69C;
