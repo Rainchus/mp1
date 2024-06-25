@@ -1638,6 +1638,7 @@ segments:
     subsegments:
       - [0x281D40, c]
       - [0x2826F0, data, 281D40]
+      - [0x2827F0, .rodata, 281D40]
       - {0x282820, type: bss, vram: 0x800F70C0, name: ovl_45_bss}
   - type: code
     start: 0x282820
@@ -2330,5 +2331,150 @@ segments:
       - [0x302C90, data, 3014C0]
       - [0x303810, .rodata, 3014C0]
       - {0x303E70, type: bss, vram: 0x800F8F90, name: ovl_7A_bss}
-  - [0x303E70, bin]
+  - type: code
+    start: 0x303E70
+    vram: 0x800F65E0
+    dir: overlays/ovl_7B_MinigameStadiumMinigameResultsScreen
+    name: MinigameStadiumMinigameResultsScreen
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0xF0
+    subsegments:
+      - [0x303E70, c]
+      - [0x306290, c]
+      - [0x306BA0, c]
+      - [0x308890, data, 303E70]
+      - [0x3089A0, .rodata, 303E70]
+      - {0x308A50, type: bss, vram: 0x800FB1C0, name: ovl_7B_bss}
+  - type: code
+    start: 0x308A50
+    vram: 0x800F65E0
+    dir: overlays/ovl_7C_UnknownResultsScreen
+    name: UnknownResultsScreen
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x4C0
+    subsegments:
+      - [0x308A50, c]
+      - [0x30C440, data, 308A50]
+      - [0x30C510, .rodata, 308A50]
+      - {0x30C540, type: bss, vram: 0x800FA0D0, name: ovl_7C_bss}
+  - type: code
+    start: 0x30C540
+    vram: 0x800F65E0
+    dir: overlays/ovl_7D_MinigameIslandMISS
+    name: MinigameIslandMISS
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x70
+    subsegments:
+      - [0x30C540, c]
+      - [0x30F080, data, 30C540]
+      - [0x30F180, .rodata, 30C540]
+      - {0x30F1B0, type: bss, vram: 0x800F9250, name: ovl_7D_bss}
+  - type: code
+    start: 0x30F1B0
+    vram: 0x800F65E0
+    dir: overlays/ovl_7E_DebugSequentialPlay
+    name: DebugSequentialPlay
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x320
+    subsegments:
+      - [0x30F1B0, c]
+      - [0x310CA0, data, 30F1B0]
+      - [0x311820, .rodata, 30F1B0]
+      - {0x311E90, type: bss, vram: 0x800F92C0, name: ovl_7E_bss}
+  - type: code
+    start: 0x311E90
+    vram: 0x800F65E0
+    dir: overlays/ovl_7F_MinigameStadiumStart
+    name: MinigameStadiumStart
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x30
+    subsegments:
+      - [0x311E90, c]
+      - [0x311EC0, c]
+      - [0x3127C0, data, 311E90]
+      - [0x3127F0, data, 311EC0]
+      - [0x3127F0, .rodata, 311EC0]
+      - {0x312850, type: bss, vram: 0x800F6FA0, name: ovl_7F_bss}
+  - type: code
+    start: 0x312850
+    vram: 0x800F65E0
+    dir: overlays/ovl_80_MinigameStadiumResults
+    name: MinigameStadiumResults
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x80
+    subsegments:
+      - [0x312850, c]
+      - [0x314730, data, 312850]
+      - [0x3148C0, .rodata, 312850]
+      - {0x314950, type: bss, vram: 0x800F86E0, name: ovl_80_bss}
+  - type: code
+    start: 0x314950
+    vram: 0x800F65E0
+    dir: overlays/ovl_81_PressStartScreen
+    name: PressStartScreen
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x110
+    subsegments:
+      - [0x314950, c]
+      - [0x316350, data, 314950]
+      - [0x316430, .rodata, 314950]
+      - {0x316440, type: bss, vram: 0x800F80D0, name: ovl_81_bss}
+  - type: code
+    start: 0x316440
+    vram: 0x800F65E0
+    dir: overlays/ovl_82_MiniGameStadiumStartCopy
+    name: MiniGameStadiumStartCopy
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x316440, c]
+      - [0x3177A0, data, 316440]
+      - [0x317960, .rodata, 316440]
+  - type: bin
+    start: 0x317980
+  - type: code
+    start: 0x317980
+    vram: 0x800F65E0
+    dir: overlays/ovl_83_DebugMinigameMenu
+    name: DebugMinigameMenu
+    overlay: True
+    exclusive_ram_id: minigame
+    bss_size: 0x1E0
+    subsegments:
+      - [0x317980, c]
+      - [0x31AC50, data, 317980]
+      - [0x31B860, .rodata, 317980]
+      - {0x31BFE0, type: bss, vram: 0x800FAC40, name: ovl_83_bss}
+  - [0x31BFE0, bin]
+  - type: bin
+    start: 0xFE2310
+  - type: bin
+    start: 0xFE24BC
+    # Audio Data
+  - {type: bin, start: 0x1539E40, name: "assets/audio/soundbank1.bnk"} # Instrument meta files
+  - {type: bin, start: 0x1563B68, name: "assets/audio/wavetable1.tbl"} # raw/vadpcm audio wave data
+  - {type: bin, start: 0x17473B0, name: "assets/audio/sequencebnk1.tbl"} # sbk file containing seq files below
+  - {type: bin, start: 0x17473B0, name: "assets/midi/twobeeps.seq"} # Test Sound: Two sinusoid wave beeps at different tones.
+  - type: bin
+    start: 0x1747420
+  - {type: bin, start: 0x174CF30, name: "assets/midi/tropical.seq"} # Yoshi Board BGM
+  - type: bin
+    start: 0x174ED10
+  - {type: bin, start: 0x1751958, name: "assets/midi/rainbow.seq"} # Mario Board BGM
+  - type: bin
+    start: 0x1753118
+  - {type: bin, start: 0x1778c70, name: "assets/audio/soundbank2.bnk"} # Instrument meta files
+  - {type: bin, start: 0x1782660, name: "assets/audio/wavetable2.tbl"} # raw/vadpcm audio wave data
+  - {type: bin, start: 0x1820d60, name: "assets/audio/sequencebnk2.tbl"} # sbk file containing seq files below
+
+  - type: bin
+    start: 0x1832AE0
+  - [0x1CED490, bin, romPadding]
   - [0x2000000]
