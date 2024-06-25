@@ -48,8 +48,6 @@ INCLUDE_ASM("asm/nonmatchings/1EA70", func_80020CFC_218FC);
 
 INCLUDE_ASM("asm/nonmatchings/1EA70", func_80020DCC_219CC);
 
-INCLUDE_RODATA("asm/nonmatchings/1EA70", D_800CA7F0_CB3F0);
-
 INCLUDE_ASM("asm/nonmatchings/1EA70", func_80020EA0_21AA0);
 
 INCLUDE_ASM("asm/nonmatchings/1EA70", func_800211BC_21DBC);

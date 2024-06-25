@@ -19,7 +19,7 @@ extern OverlayInfo overlay_table[];
 extern Vec4f D_800C2F94[];
 extern Vec3f D_800C2F04[];
 extern Vec3f D_800C2F4C[];
-extern unk_Struct00 *D_800C3110;
+extern unk_Struct00 *D_800C3110_C3D10;
 
 extern s32 D_800F2C28;
 extern s16 D_800F3778;

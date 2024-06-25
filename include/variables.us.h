@@ -33,13 +33,13 @@ extern cameraPosition D_800F6524;
 extern camera* D_800F32A0; //pointer to camera struct
 extern u32 D_800FB4D0;
 extern u16 D_800F2BC0;
-extern unk_Struct00* D_800C3110;
+extern unk_Struct00* D_800C3110_C3D10;
 extern u8 D_800ED5DD;
 extern u8 D_800F6F20;
 extern s16 D_800F6EE2;
 extern s32 D_800EDEC0;
-extern u8 D_800F37F0;
-extern s16 D_800F3FA8;
+extern u8 D_800F37F0_F3880;
+extern s16 D_800F3FA8_F4038;
 extern s16 processcnt;
 extern Process* processtop;
 extern jmp_buf process_jmp_buf; // 800E2370
@@ -53,11 +53,15 @@ extern Vec2f D_800C51E0[];
 extern s32 D_800C5200[];
 extern s32 D_800C5214;
 extern s32 D_800C5210;
-extern unk_ovl_2D_struct* D_800F2B7C;
+extern unk_ovl_2D_struct* D_800F2B7C_F2C0C;
 extern u8 D_800C5DF0;
 extern u8 D_800C5DF2;
 extern u8 D_800C5E34[0x100];
 extern u8 D_800C5F34[0x100];
 extern omOvlHisData omovlhis[8];
-
+extern char D_800CA7E0_CB3E0[];
+extern u8 D_800ECB30_ECBC0;
+extern s8 D_800ED565_ED5F5;
+extern s16 D_800EE32E_EE3BE;
+extern s16 D_800F502C_F50BC;
 extern unk_800ECDE0* D_800ECDE0;

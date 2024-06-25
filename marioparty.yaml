@@ -552,7 +552,7 @@ segments:
       - [0xCB2E0, .rodata, 156F0]
       - [0xCB300, .rodata, engine/ovlman]
       - [0xCB3E0, .rodata, engine/graphics]
-      - [0xCB3F0, .rodata, 1EA70]
+      - [0xCB3F8, .rodata, 1EA70]
       - [0xCB4F0, .rodata, 2C0C0]
       #- [0xCB580, .rodata, 34D80]
       - [0xCB630, .rodata, 388E0]
@@ -617,6 +617,8 @@ segments:
       - [0xCDA10, .rodata, B1DC0]
       - [0xCDA40, .rodata, B1FD0]
       - { start: 0xCDA50, type: bss, vram: 0x800CCE50 }
+      - { start: 0xCDA50, type: bss, vram: 0x800CD9B0, name: 1130}
+      - { start: 0xCDA50, type: bss, vram: 0x800CD9C0, name: globalBSS}
 
   - type: code
     start: 0xCDA50
@@ -1467,8 +1469,6 @@ segments:
       - [0x244B50, data, 2418A0]
       - [0x244B80, data, 2418D0]
       - [0x245500, .rodata, 2418D0]
-      # - [0x244B50, .rodata, 2418A0]
-      # - [0x244B88, .rodata, 2418D0]
       - {0x2455C0, type: bss, vram: 0x800FA300, name: ovl_36_bss}
   - type: code
     start: 0x2455C0
