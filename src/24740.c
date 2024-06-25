@@ -217,7 +217,7 @@ INCLUDE_ASM("asm/nonmatchings/24740", func_80026040_26C40);
 
 INCLUDE_ASM("asm/nonmatchings/24740", func_80026174_26D74);
 
-void func_80026404_27004(s16 arg0, s16 arg1, f32 arg2, char* arg3, s32 arg4) {
+void func_80026404_27004(s16 arg0, s16 arg1, f32 arg2, u8* arg3, s32 arg4) {
     s16 temp_s0;
     s16 temp_v0;
     unk2C0C0StructC0* temp_s2;

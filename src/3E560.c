@@ -32,9 +32,17 @@ INCLUDE_ASM("asm/nonmatchings/3E560", func_8003E58C_3F18C);
 
 INCLUDE_ASM("asm/nonmatchings/3E560", func_8003E5E0_3F1E0);
 
-INCLUDE_ASM("asm/nonmatchings/3E560", func_8003E610_3F210);
+void func_8003E610_3F210(Object* arg0) {
+    func_800258EC_264EC(*arg0->unk_3C->unk_40, 4, 4);
+    if (arg0->unk_40 != NULL) {
+        func_800258EC_264EC(*arg0->unk_40->unk_40, 4, 4);
+    }
+}
 
-INCLUDE_ASM("asm/nonmatchings/3E560", func_8003E664_3F264);
+void func_8003E664_3F264(Object* arg0) {
+    func_8003E610_3F210(arg0);
+    arg0->unk_0A &= ~8;
+}
 
 INCLUDE_ASM("asm/nonmatchings/3E560", DestroyObject);
 

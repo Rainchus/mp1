@@ -32,7 +32,7 @@ typedef struct unk2C0C0StructF0 {
 } unk2C0C0StructF0; //sizeof 0x5C
 void func_800230D0_23CD0(s32);
 void func_8001AAC4_1B6C4(Gfx*, u16, s32, OSMesgQueue*, s32);
-s16 func_8001CD00_1D900(char*);
+s16 func_8001CD00_1D900(u8*);
 void func_8001D40C_1E00C(void);
 void func_8001D7DC_1E3DC(s16, Gfx**);
 void func_80023040_23C40(void);
@@ -1679,7 +1679,7 @@ INCLUDE_ASM("asm/nonmatchings/2C0C0", func_80033408_34008);
 
 INCLUDE_ASM("asm/nonmatchings/2C0C0", func_800334A0_340A0);
 
-s16 func_80033718_34318(unk2C0C0StructC0* arg0, char* arg1) {
+s16 func_80033718_34318(unk2C0C0StructC0* arg0, u8* arg1) {
     s16 temp_a1;
     s16 i;
 

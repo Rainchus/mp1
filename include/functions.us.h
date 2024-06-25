@@ -450,7 +450,7 @@ s16 func_800342BC_34EBC(u8*);
 void func_8001AC00_1B800(unk2C0C0StructC0*, u8*, s16);
 void func_80023AF0_246F0(void*, s16);
 void osSyncPrintf(const char*, ...);
-s16 func_80033718_34318(unk2C0C0StructC0*, char*);
+s16 func_80033718_34318(unk2C0C0StructC0*, u8*);
 s32 func_80029174_29D74(s16);
 void func_8001B1D4_1BDD4(unk2C0C0StructC0* arg0);
 void func_800A2A50_A3650(Matrix4f);

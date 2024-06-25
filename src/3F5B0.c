@@ -1,8 +1,149 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/3F5B0", RunDecisionTree);
+void func_800622BC_62EBC(u16, u16, s32);
+extern s32 D_800ECB24_ECBB4;
 
-INCLUDE_ASM("asm/nonmatchings/3F5B0", func_8003ECB0_3F8B0);
+
+typedef s32 func_ptr(void);
+s16 GetCurrentPlayerIndex();                        /* extern */
+playerMain* GetPlayerStruct(s32);                           /* extern */
+s16 GetTurnsElapsed();                              /* extern */
+s32 IsFlagSet(s32);                     /* extern */
+s32 PlayerHasCoins(s32 playerIndex, u32 coinAmount);
+s16 RNGPercentChance(s8);                             /* extern */
+s32 func_8004FEBC_50ABC(s16);                             /* extern */
+extern s16 D_800ED154_ED1E4[32]; //board ram
+extern s32 D_800F3FF0_F4080;
+extern s16 D_800C4C30_C5830[7];
+
+s16 RunDecisionTree(DecisionTreeNonLeafNode* currentNode) {
+    s32 loopIndex;
+    DecisionTreeNonLeafNode* tempNode;
+    s32 tempVal1;
+    s16 tempVal2;
+    u32 tempVal3;
+    u32 tempVal4;
+    u8 tempVal5;
+
+    s32 phi_v0;
+    s32 phi_s0;
+    s32 phi_s0_2;
+    s32 phi_v0_2;
+    s32 phi_a0;
+    s32 phi_a1;
+
+    DecisionTreeNonLeafNode* phi_s1 = currentNode;
+    s32 bitMask = 1;
+    s16* boardFeatureArray = D_800C4C30_C5830;
+    s16* playerDataArray = D_800ED154_ED1E4;
+
+    for (;;phi_s1++) {
+        switch ((phi_s1->type >> 24)) {
+        case 1:
+            if (PlayerHasCoins(-1, phi_s1->node_data1.data) != 0) {
+                break;
+            }
+            continue;
+        case 2:
+            for (loopIndex = 0; loopIndex < 7; loopIndex++) {
+                if ((bitMask << loopIndex) & phi_s1->node_data1.data) {
+                    if (!IsFlagSet(boardFeatureArray[loopIndex])) {
+                        break;
+                    }
+                }
+            }
+            if (loopIndex == 7) {
+                continue;
+            }
+            break;
+
+        case 3:
+            if (((bitMask << (D_800F3FF0_F4080 - 1)) & phi_s1->node_data1.data)) {
+                break;
+            }
+            continue;
+        case 4:
+            tempVal4 = phi_s1->node_data1.data;
+            tempVal1 = (tempVal4 >> 0x14);
+            tempVal2 = phi_s1->node_data1.data;
+            tempVal3 = (tempVal4 >> 0x10) & 0xF;
+            tempVal1 &= 0xF;
+
+            switch (tempVal3) {
+            case 0:
+                if (playerDataArray[tempVal1] == tempVal2) {
+                    break;
+                }
+                continue;
+            case 1:
+                if (playerDataArray[tempVal1] != tempVal2) {
+                    break;
+                }
+                continue;
+            case 2:
+                if ((playerDataArray[tempVal1] < tempVal2)) {
+                    break;
+                }
+                continue;
+            case 3:
+                if ((playerDataArray[tempVal1] <= tempVal2)) {
+                    break;
+                }
+                continue;
+            case 4:
+                if ((playerDataArray[tempVal1] > tempVal2)) {
+                    break;
+                }
+                continue;
+            case 5:
+                if ((playerDataArray[tempVal1] < tempVal2)) {
+                    continue;
+                }
+                break;
+            }
+            break;
+        case 5:
+            if (((bitMask << func_8004FEBC_50ABC(GetCurrentPlayerIndex())) & phi_s1->node_data1.data)) {
+                break;
+            }
+            continue;
+        case 6:
+            if (((func_ptr*)phi_s1->node_data1.data)() != 0) {
+                break;
+            }
+            continue;
+        case 7:
+            if ((u32) GetTurnsElapsed() < (u32) phi_s1->node_data1.data) {
+                continue;
+            }
+        case 0:
+            break;
+        }
+        if ((s32)phi_s1->node_data2.data < 0) {
+            phi_s1 = (DecisionTreeNonLeafNode*)phi_s1->node_data2.data - 1;
+        } else {
+            if (GetPlayerStruct(-1)->cpuDifficultyCopy == 0) {
+                phi_a0 = phi_s1->node_data2.data & 0xFF;
+            } else {
+                phi_a0 = (phi_s1->node_data2.data >> 8);
+            }
+            if (RNGPercentChance(phi_a0) != 0) {
+                tempVal2 = (phi_s1->node_data2.data >> 16) & 1;
+            } else {
+                tempVal2 = ((phi_s1->node_data2.data >> 16) ^ 1) & 1;
+            }
+            return tempVal2;
+        }
+    }
+}
+
+void func_8003ECB0_3F8B0(u16 arg0, u16 arg1, s32 arg2, u8 arg3, u8 arg4) {
+    D_800ECB24_ECBB4 = arg4;
+    func_800622BC_62EBC((arg0 + 1), (arg1 + 1), (arg2));
+    D_800ECB24_ECBB4 = arg3;
+    func_800622BC_62EBC(arg0, arg1, arg2);
+}
+
 
 INCLUDE_ASM("asm/nonmatchings/3F5B0", func_8003ED30_3F930);
 
