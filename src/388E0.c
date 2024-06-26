@@ -40,8 +40,8 @@ extern unk388E0StructC0* D_800F3F40_F3FD0;
 void func_80037CE0_388E0(void) {
     s16 i;
 
-    D_800F37AC_F383C = HuMemAlloc(128 * sizeof(unk2C0C0Struct70));
-    D_800ED730_ED7C0 = HuMemAlloc(128 * sizeof(unk388E0Struct80));
+    D_800F37AC_F383C = func_80023668_24268(128 * sizeof(unk2C0C0Struct70));
+    D_800ED730_ED7C0 = func_80023668_24268(128 * sizeof(unk388E0Struct80));
 
     for (i = 0; i < 128; i++) {
         D_800F37AC_F383C[i].unk_20 = 0;
@@ -153,7 +153,7 @@ INCLUDE_ASM("asm/nonmatchings/388E0", func_8003897C_3957C);
 void func_80038A2C_3962C(void) {
     s16 i;
 
-    D_800F3708_F3798 = HuMemAlloc(128 * sizeof(unk388E0Struct40));
+    D_800F3708_F3798 = func_80023668_24268(128 * sizeof(unk388E0Struct40));
 
     for (i = 0; i < 128; i++) {
         D_800F3708_F3798[i].unk_00 = -1;
@@ -169,7 +169,7 @@ INCLUDE_ASM("asm/nonmatchings/388E0", func_80038D5C_3995C);
 void func_80039020_39C20(void) {
     s16 i;
 
-    D_800F3F40_F3FD0 = HuMemAlloc(32 * sizeof(unk388E0StructC0));
+    D_800F3F40_F3FD0 = func_80023668_24268(32 * sizeof(unk388E0StructC0));
 
     for (i = 0; i < 32; i++) {
         D_800F3F40_F3FD0[i].unk_0C = 0;

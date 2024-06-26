@@ -27,7 +27,7 @@ s32 LoadFormBinary(u8* arg0, u32 arg1) {
     D_800EE32E_EE3BE = i * 2 + 10001;
 
     temp_s0 = &D_800F2B7C_F2C0C[i];
-    temp_v0 = temp_s0->unk_6C = HuMemAlloc(sizeof(unk2C0C0StructC0));
+    temp_v0 = temp_s0->unk_6C = func_80023668_24268(sizeof(unk2C0C0StructC0));
     temp_v0->unk_68 = D_800F502C_F50BC;
 
     if (arg0[0] == 77 && arg0[1] == 84 && arg0[2] == 78 && arg0[3] == 88) {
@@ -88,7 +88,7 @@ s32 LoadFormBinary(u8* arg0, u32 arg1) {
             }
         }
         if (j == temp_v0->unk_6A) {
-            HuMemTempDirectFree(D_800F502C_F50BC);
+            func_800237BC_243BC(D_800F502C_F50BC);
         }
     }
 
@@ -235,7 +235,7 @@ void func_80026404_27004(s16 arg0, s16 arg1, f32 arg2, u8* arg3, s32 arg4) {
     func_800265EC_271EC(temp_s3, temp_s2, arg2, temp_s0, temp_v0, arg4);
 }
 
-void func_800264F8_270F8(s16 arg0, s16 arg1, f32 arg2, char* arg3, char* arg4, s32 arg5) { //arg4 is char array string ptr?
+void func_800264F8_270F8(s16 arg0, s16 arg1, f32 arg2, u8* arg3, u8* arg4, s32 arg5) { //arg4 is char array string ptr?
     s16 temp_s0;
     s16 temp_v0;
     unk2C0C0StructC0* temp_s2;

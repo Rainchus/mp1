@@ -43,7 +43,7 @@ extern s16 processcnt;
 extern Process* processtop;
 extern jmp_buf process_jmp_buf; // 800E2370
 extern Process* processcur;
-extern GameStatus D_800ED5C0;
+extern GameStatus D_800ED5C0_ED650;
 extern f32 D_800C34A4_C40A4;
 extern s8 D_800ECE14_ECEA4[];
 extern Vec2s D_800ED5C6_ED656;

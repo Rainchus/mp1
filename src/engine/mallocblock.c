@@ -2,9 +2,9 @@
 
 INCLUDE_ASM("asm/nonmatchings/engine/mallocblock", func_800235F0_241F0);
 
-INCLUDE_ASM("asm/nonmatchings/engine/mallocblock", HuMemAlloc);
+INCLUDE_ASM("asm/nonmatchings/engine/mallocblock", func_80023668_24268);
 
-INCLUDE_ASM("asm/nonmatchings/engine/mallocblock", HuMemTempDirectMalloc);
+INCLUDE_ASM("asm/nonmatchings/engine/mallocblock", func_80023684_24284);
 
 INCLUDE_ASM("asm/nonmatchings/engine/mallocblock", func_800236A4_242A4);
 
@@ -12,7 +12,7 @@ INCLUDE_ASM("asm/nonmatchings/engine/mallocblock", func_80023728_24328);
 
 INCLUDE_ASM("asm/nonmatchings/engine/mallocblock", func_80023780_24380);
 
-INCLUDE_ASM("asm/nonmatchings/engine/mallocblock", HuMemTempDirectFree);
+INCLUDE_ASM("asm/nonmatchings/engine/mallocblock", func_800237BC_243BC);
 
 INCLUDE_ASM("asm/nonmatchings/engine/mallocblock", func_80023888_24488);
 

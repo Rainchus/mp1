@@ -74,7 +74,7 @@ void func_800A2A50_A3650(Matrix4f);
 void guLookAtHilite (Mtx*, LookAt*, Hilite*, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, s32, s32);
 void guLookAtReflect(Mtx*, LookAt*, f32, f32, f32, f32, f32, f32, f32, f32, f32);
 void guMtxIdentF(Matrix4f);
-void* HuMemAlloc(s32);
+void* func_80023668_24268(s32);
 void MtxMult(Matrix4f, Matrix4f, Matrix4f);
 u32 MtxReset(Matrix4f, Matrix4f);
 void MtxScale(Matrix4f, f32, f32, f32);
@@ -184,13 +184,13 @@ void func_8002B4C0_2C0C0(void* (*arg0)(s32), void (*arg1)(void*), u16 arg2, u16 
     D_800F50BA_F514A = arg3;
 
     for (i = 0; i < arg5; i++) {
-        D_800F6500_F6590[i] = HuMemAlloc(arg2 * sizeof(unk2C0C0StructE0));
-        D_800ED5E8_ED678[i] = HuMemAlloc(arg4 * 64);
-        D_800F3720_F37B0[i] = HuMemAlloc(arg3 * sizeof(Gfx));
+        D_800F6500_F6590[i] = func_80023668_24268(arg2 * sizeof(unk2C0C0StructE0));
+        D_800ED5E8_ED678[i] = func_80023668_24268(arg4 * 64);
+        D_800F3720_F37B0[i] = func_80023668_24268(arg3 * sizeof(Gfx));
     }
 
     for (i = 0; i < 8; i++) {
-        D_800ED0D8_ED168[i] = HuMemAlloc(D_800C3500_C4100[i] * sizeof(unk2C0C0StructF0));
+        D_800ED0D8_ED168[i] = func_80023668_24268(D_800C3500_C4100[i] * sizeof(unk2C0C0StructF0));
     }
 
     func_80023040_23C40();
@@ -280,14 +280,14 @@ void func_8002B890_2C490(unk2C0C0StructC0* arg0) {
     temp_s7 = D_800F50BC_F514C;
     temp_s6 = D_800EE992_EEA22;
 
-    arg0->unk_00 = HuMemTempDirectMalloc(arg0->unk_6A * sizeof(Gfx*), D_800EE32E_EE3BE);
+    arg0->unk_00 = func_80023684_24284(arg0->unk_6A * sizeof(Gfx*), D_800EE32E_EE3BE);
 
-    D_800F50BC_F514C = HuMemAlloc(4096 * sizeof(unk2C0C0StructE0));
+    D_800F50BC_F514C = func_80023668_24268(4096 * sizeof(unk2C0C0StructE0));
     if (D_800F50BC_F514C == NULL) {
         D_800F50BC_F514C = arg0->unk_04 = (unk2C0C0StructE0*) 0 + D_800EE992_EEA22;
     }
 
-    var_s4 = HuMemAlloc(8192 * sizeof(Gfx));
+    var_s4 = func_80023668_24268(8192 * sizeof(Gfx));
     if (var_s4 == NULL) {
         var_s4 = D_800F37DC_F386C;
     }
@@ -335,14 +335,14 @@ void func_8002B890_2C490(unk2C0C0StructC0* arg0) {
         gSPEndDisplayList(D_800F37DC_F386C++);
 
         temp_s0_2 = (D_800F37DC_F386C - var_s4) * sizeof(Gfx);
-        arg0->unk_00[i] = HuMemTempDirectMalloc(temp_s0_2, D_800EE32E_EE3BE);
+        arg0->unk_00[i] = func_80023684_24284(temp_s0_2, D_800EE32E_EE3BE);
         func_80023A38_24638(var_s4, arg0->unk_00[i], temp_s0_2);
     }
 
     arg0->unk_72 = D_800EE992_EEA22;
     arg0->unk_74 = D_800F546A_F54FA;
 
-    temp_v0 = HuMemTempDirectMalloc(D_800EE992_EEA22 * sizeof(unk2C0C0StructE0), D_800EE32E_EE3BE);
+    temp_v0 = func_80023684_24284(D_800EE992_EEA22 * sizeof(unk2C0C0StructE0), D_800EE32E_EE3BE);
     func_80023A38_24638(D_800F50BC_F514C, temp_v0, D_800EE992_EEA22 * sizeof(unk2C0C0StructE0));
     arg0->unk_04 = temp_v0;
 
@@ -377,7 +377,7 @@ void func_8002BCD4_2C8D4(unk2C0C0StructC0* arg0) {
     }
 
     if (var_a3 && arg0->unk_D0 == NULL) {
-        arg0->unk_D0 = HuMemTempDirectMalloc(var_a2 * sizeof(unk2C0C0StructB0), D_800EE32E_EE3BE);
+        arg0->unk_D0 = func_80023684_24284(var_a2 * sizeof(unk2C0C0StructB0), D_800EE32E_EE3BE);
     }
 }
 
