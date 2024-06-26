@@ -36,7 +36,7 @@ extern OSThread D_800E3720;
 extern functionListEntry *D_800E40D0;
 extern functionListEntry *D_800E40D4;
 
-extern OSMesgQueue D_800EE960;
+extern OSMesgQueue D_800EE960_EE9F0;
 extern OSMesgQueue D_800F3370;
 
 // TODO: Put this in correct header

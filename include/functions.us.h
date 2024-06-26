@@ -422,7 +422,7 @@ void* HuMemDirectMalloc(s32 size);
 s16 func_80060288_60E88(void);
 void func_80018C90_19890(u16);
 s32 func_80019060_19C60(s32, s16, s16);
-void func_80067480_68080(s16, s16, s32); //could also be  void func_80067480(s16, s32, u16); (as required by functions in face lift)
+void func_80067480_68080(s16, s16, s32); //could also be  void func_80067480_68080(s16, s32, u16); (as required by functions in face lift)
 void func_800672DC_67EDC(s16, s16, u16, s32);
 void func_800674BC_680BC(s16, s16, s32);
 s16 func_80064EF4_65AF4(s32, s32);
@@ -457,4 +457,8 @@ void func_800A2A50_A3650(Matrix4f);
 void func_8002B890_2C490(unk2C0C0StructC0*);
 void func_8002C030_2CC30(unk2C0C0StructC0*);
 void func_800265EC_271EC(unk2C0C0StructC0*, unk2C0C0StructC0*, f32, s16, s16, s32);
+void func_8005B838_5C438(void* arg0);
+s16 func_8006D99C_6E59C(u8* arg0, s16 arg1);
+void* func_8005B7E8_5C3E8(s32 stringIndex);
+
 #endif

@@ -1,4 +1,24 @@
 #include "common.h"
+#include "engine/process.h"
+
+extern s16 omovlhisidx;
+extern s16 D_800D89B2_D8A42[];
+extern s8 D_800F37BC_F384C[];
+extern s16 D_800ED56C_ED5FC;
+extern s16 D_800ED550_ED5E0;
+extern omObjData* D_800C5984_C6584;
+extern s16 D_800F65BA_F664A;
+extern s16 D_800ED56C_ED5FC;
+extern s16 D_800C598A_C658A;
+extern s16 D_800C5988_C6588;
+extern s16 D_800C598C_C658C; //dtor index
+extern u16 D_800C5976_C6576;
+extern unkProcessStruct* D_800C5990_C6590;
+
+s16 func_80010ED4_11AD4(s16, s16);
+s32 func_80012C7C_1387C(s16);
+void func_8005DA64_5E664(u16, omObjData*);
+void omInsertObj(omObjData*);
 
 INCLUDE_ASM("asm/nonmatchings/5CDB0", func_8005C1B0_5CDB0);
 
@@ -46,13 +66,75 @@ INCLUDE_ASM("asm/nonmatchings/5CDB0", func_8005CE48_5DA48);
 
 INCLUDE_ASM("asm/nonmatchings/5CDB0", func_8005CE8C_5DA8C);
 
-INCLUDE_ASM("asm/nonmatchings/5CDB0", func_8005CEDC_5DADC);
+void func_8005CEDC_5DADC(s32 arg0) {
+    s32 temp_a1;
+    s32 var_v0;
+
+    if (arg0 < 0) {
+        var_v0 = arg0 + 7;
+    } else {
+        var_v0 = arg0;
+    }
+    
+    temp_a1 = var_v0 >> 3;
+    var_v0 = arg0;
+    
+    if (arg0 < 0) {
+        var_v0 = arg0 + 7;
+    }
+    
+    D_800F37BC_F384C[temp_a1] = D_800F37BC_F384C[temp_a1] & ~(1 << (arg0 - ((var_v0 >> 3) * 8)));
+}
 
 INCLUDE_ASM("asm/nonmatchings/5CDB0", omInitObjMan);
 
 INCLUDE_ASM("asm/nonmatchings/5CDB0", omDestroyObjMan);
 
-INCLUDE_ASM("asm/nonmatchings/5CDB0", omAddObj);
+omObjData* omAddObj(s16 arg0, u16 arg1, u16 arg2, s16 arg3, void* arg4) {
+    omObjData* temp_s0;
+
+    if (D_800ED56C_ED5FC == D_800ED550_ED5E0) {
+        return NULL;
+    }
+
+    temp_s0 = &D_800C5984_C6584[D_800F65BA_F664A];
+    temp_s0->next_idx_alloc = D_800F65BA_F664A;
+    temp_s0->prio = arg0;
+    omInsertObj(temp_s0);
+
+    if (arg1 != 0) {
+        temp_s0->model = func_80023684_24284(arg1 * sizeof(s16), 0x7918);
+        temp_s0->mdlcnt = arg1;
+    } else {
+        temp_s0->model = NULL;
+        temp_s0->mdlcnt = 0;
+    }
+
+    if (arg2 != 0) {
+        temp_s0->motion = func_80023684_24284(arg2 * sizeof(s16), 0x7918);
+        temp_s0->mtncnt = arg2;
+    } else {
+        temp_s0->motion = NULL;
+        temp_s0->mtncnt = 0;
+    }
+
+    if (arg3 >= 0) {
+        func_8005DA64_5E664(arg3, temp_s0);
+    } else {
+        temp_s0->group = arg3;
+        temp_s0->group_idx = 0;
+    }
+
+    temp_s0->stat = 4;
+    temp_s0->unk_10 = 0;
+    temp_s0->func_ptr = arg4;
+    temp_s0->work[0] = temp_s0->work[1] = temp_s0->work[2] = temp_s0->work[3] = 0;
+
+    D_800F65BA_F664A = temp_s0->next_idx;
+    D_800ED56C_ED5FC++;
+
+    return temp_s0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/5CDB0", omSetObjPrio);
 
@@ -94,25 +176,139 @@ INCLUDE_ASM("asm/nonmatchings/5CDB0", func_8005DBE4_5E7E4);
 
 INCLUDE_ASM("asm/nonmatchings/5CDB0", func_8005DC18_5E818);
 
-INCLUDE_ASM("asm/nonmatchings/5CDB0", omAddPrcObj);
+Process* omAddPrcObj(void (*func)(), u16 priority, s32 stack_size, s32 extra_data_size) {
+    unkProcessStruct* temp_s0;
+    Process* process;
+    s16 temp_s1;
+    
+    if (D_800C598A_C658A != D_800C5988_C6588) {
+        temp_s1 = D_800C598C_C658C;
+        temp_s0 = &D_800C5990_C6590[D_800C598C_C658C];
+        temp_s0->unk0 = 4;
+        D_800C598C_C658C = temp_s0->unk2;
+        process = HuPrcCreate(*func, priority, stack_size, extra_data_size);
+        temp_s0->processInstance = process;
+        process->dtor_idx = temp_s1;
+        HuPrcDestructorSet2(temp_s0->processInstance, &omDelPrcObj);
+        temp_s0->unk8 = 0;
+        D_800C598A_C658A++;
+        return temp_s0->processInstance;
+    } else {
+        return NULL;
+    }
+}
 
-INCLUDE_ASM("asm/nonmatchings/5CDB0", func_8005DCD8_5E8D8);
+Process* func_8005DCD8_5E8D8(process_func arg0, u16 arg1, s32 arg2, s32 arg3, Process* arg4) {
+    unkProcessStruct* temp_s0;
+    Process* process;
+    s16 temp_s1;
+    
+    if (D_800C598A_C658A != D_800C5988_C6588) {
+        temp_s1 = D_800C598C_C658C;
+        temp_s0 = &D_800C5990_C6590[D_800C598C_C658C];
+        temp_s0->unk0 = 4;
+        D_800C598C_C658C = temp_s0->unk2;
+        process = HuPrcChildCreate(arg0, arg1, arg2, arg3, arg4);
+        temp_s0->processInstance = process;
+        process->dtor_idx = temp_s1;
+        HuPrcDestructorSet2(temp_s0->processInstance, omDelPrcObj);
+        temp_s0->unk8 = 0;
+        D_800C598A_C658A++;
+        return temp_s0->processInstance;
+    }
+    
+    return NULL;
+}
 
-INCLUDE_ASM("asm/nonmatchings/5CDB0", EndProcess);
+s32 EndProcess(Process* arg0) {
+    if (arg0 != NULL) {
+        return HuPrcKill(arg0);
+    }
+    
+    if (HuPrcKill(HuPrcCurrentGet()) == 0) {
+        HuPrcVSleep();
+    }
+    
+    return -1;
+}
 
-INCLUDE_ASM("asm/nonmatchings/5CDB0", omDelPrcObj);
+void omDelPrcObj(void) {
+    Process* temp_s1 = HuPrcCurrentGet();
+    unkProcessStruct* temp_s0 = &D_800C5990_C6590[temp_s1->dtor_idx];
+    
+    if (temp_s0->unk8 != 0) {
+        (temp_s0->unk8)();
+    }
+    
+    temp_s0->unk0 = 1;
+    temp_s0->unk2 = D_800C598C_C658C;
+    D_800C598C_C658C = temp_s1->dtor_idx;
+    D_800C598A_C658A--;
+}
 
-INCLUDE_ASM("asm/nonmatchings/5CDB0", omDestroyPrcObj);
+void omDestroyPrcObj(s32 arg0, void (*arg1)()) {
+    unkProcessStruct* temp = &D_800C5990_C6590[HuPrcCurrentGet()->dtor_idx];
+    temp->unk8 = arg1;
+}
 
-INCLUDE_ASM("asm/nonmatchings/5CDB0", omPrcSetDestructor);
+void omPrcSetDestructor(void) {
+    unkProcessStruct* var_v1 = D_800C5990_C6590;
+    s32 i;
+    
+    for (i = 0; i < D_800C5988_C6588; i++) {
+        if ((var_v1->unk0 & 4) && (var_v1->processInstance->exec_mode == EXEC_PROCESS_DEAD)) {
+            var_v1->unk0 = 1;
+            var_v1->unk2 = D_800C598C_C658C;
+            D_800C598C_C658C = i;
+            D_800C598A_C658A--;
+        }
+        var_v1++;
+    }
+}
 
-INCLUDE_ASM("asm/nonmatchings/5CDB0", omOvlCallEx);
+s32 omOvlCallEx(s32 arg0, s32 arg1, u16 arg2) {
+    omOvlHisData* history;
+    s16 temp = arg1;
+    s32 ret = 0;
 
-INCLUDE_ASM("asm/nonmatchings/5CDB0", omOvlReturnEx);
+    if (omovlhisidx < 8) {
+        history = &omovlhis[++omovlhisidx];
+        history->overlayID = arg0;
+        history->event = arg1;
+        history->stat = arg2;
+        omOvlGotoEx(arg0, temp, arg2);
+        ret = 1;
+    } else {
+        ret = 0;
+    }
+    return ret;
+}
+
+s32 omOvlReturnEx(s16 level) {
+    omovlhisidx -= level;
+    
+    if (omovlhisidx < 0) {
+        omovlhisidx = 0;
+        omOvlGotoEx(omovlhis[0].overlayID, omovlhis[0].event, omovlhis[0].stat);
+        return 0;
+    }
+    omOvlGotoEx(omovlhis[omovlhisidx].overlayID, omovlhis[omovlhisidx].event, omovlhis[omovlhisidx].stat);
+    return 1;
+}
 
 INCLUDE_ASM("asm/nonmatchings/5CDB0", omOvlGotoEx);
 
-INCLUDE_ASM("asm/nonmatchings/5CDB0", omOvlHisChg);
+void omOvlHisChg(s16 arg0, s32 overlay, s16 event, s16 stat) {
+    s32 ovlhisIndex = omovlhisidx - arg0;
+    omOvlHisData* history;
+    
+    if (ovlhisIndex >= 0) {
+        history = &omovlhis[ovlhisIndex];
+        history->overlayID = overlay;
+        history->event = event;
+        history->stat = stat;
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/5CDB0", omOvlKill);
 
@@ -180,7 +376,24 @@ INCLUDE_ASM("asm/nonmatchings/5CDB0", func_80060440_61040);
 
 INCLUDE_ASM("asm/nonmatchings/5CDB0", func_80060468_61068);
 
-INCLUDE_ASM("asm/nonmatchings/5CDB0", func_80060540_61140);
+s16 func_80060540_61140(s16 arg0, s16 arg1) {
+    s16 temp_v0;
+
+    if (D_800C5976_C6576 == 0) {
+        return 0;
+    }
+
+    temp_v0 = func_80012C7C_1387C(arg0);
+
+    if (temp_v0 > 0) {
+        if (D_800D89B2_D8A42[temp_v0] == -1) {
+            D_800D89B2_D8A42[temp_v0] = func_80010ED4_11AD4(arg0, arg1);
+        }
+        return D_800D89B2_D8A42[temp_v0];
+    } else {
+        return func_80010ED4_11AD4(arg0, arg1);
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/5CDB0", func_80060618_61218);
 

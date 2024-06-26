@@ -55,7 +55,13 @@ void func_80059348_59F48(s16 arg0) {
 
 INCLUDE_ASM("asm/nonmatchings/59E80", func_80059354_59F54);
 
-INCLUDE_ASM("asm/nonmatchings/59E80", func_800593AC_59FAC);
+void func_800593AC_59FAC(s16 arg0) {
+    s16 sp10;
+    s16 sp12;
+
+    func_80059354_59F54(arg0, &sp10, &sp12);
+    D_800ED100_ED190.unk_12[sp10] = D_800ED100_ED190.unk_12[sp10] | (1 << sp12);
+}
 
 s32 func_80059400_5A000(s16 arg0) {
     s16 var0;
