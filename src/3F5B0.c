@@ -12,7 +12,6 @@ s32 IsFlagSet(s32);                     /* extern */
 s32 PlayerHasCoins(s32 playerIndex, u32 coinAmount);
 s16 RNGPercentChance(s8);                             /* extern */
 s32 func_8004FEBC_50ABC(s16);                             /* extern */
-extern s16 D_800ED154_ED1E4[32]; //board ram
 extern s32 D_800F3FF0_F4080;
 extern s16 D_800C4C30_C5830[7];
 
@@ -35,7 +34,7 @@ s16 RunDecisionTree(DecisionTreeNonLeafNode* currentNode) {
     DecisionTreeNonLeafNode* phi_s1 = currentNode;
     s32 bitMask = 1;
     s16* boardFeatureArray = D_800C4C30_C5830;
-    s16* playerDataArray = D_800ED154_ED1E4;
+    s16* playerDataArray = D_800ED100_ED190.boardRam;
 
     for (;;phi_s1++) {
         switch ((phi_s1->type >> 24)) {

@@ -886,4 +886,19 @@ typedef struct omOvlHisData { //Object Manager History Data
 /* 0x06 */ u16 stat;
 } omOvlHisData; //sizeof 0x08
 
+typedef struct Unk800ED154 {
+/* 0x00 */ s8 unk0;
+/* 0x01 */ char unk_01[1];
+/* 0x02 */ s16 unk_02[8];
+/* 0x12 */ u8 unk_12[7];
+/* 0x19 */ u8 unk_19[7];
+/* 0x20 */ u32 unk_20[8];
+/* 0x40 */ u32 unk_40;
+/* 0x44 */ s16 unk_44;
+/* 0x46 */ s8 unk_46;
+/* 0x47 */ s8 unk_47;
+/* 0x48 */ u8 unk_48[12];
+/* 0x54 */ s16 boardRam[32];
+} Unk800ED154; //sizeof 0x94
+
 #endif
