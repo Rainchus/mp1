@@ -599,10 +599,11 @@ s16 func_8001CBD8_1D7D8(unk2C0C0StructC0* arg0, u8* arg1, s16 arg2) {
 s16 func_8001CD00_1D900(u8* arg0) {
     s16 var_a3 = 0;
     s16 i;
+    u8* temp = (u8*)arg0;
 
-    for (i = 1; *arg0 != 0 && i < 24; i++) {
-        var_a3 += i * (*arg0);
-        arg0++;
+    for (i = 1; *temp != 0 && i < 24; i++) {
+        var_a3 += i * (*temp);
+        temp++;
     }
 
     return var_a3;

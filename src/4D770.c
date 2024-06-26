@@ -103,7 +103,6 @@ void SwapPlayerLocationData(s16 arg0, s16 arg1) {
     player2->nextSpaceIndex = temp;
 }
 
-// INCLUDE_ASM("asm/nonmatchings/4D770", SetPlayerLandedSpaceType);
 void SetPlayerLandedSpaceType(s16 playerIndex, s16 spaceType) {
     playerMain* player = GetPlayerStruct(playerIndex);
     s32 spaceTemp;

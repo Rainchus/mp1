@@ -137,8 +137,8 @@ void func_8003B0AC_3BCAC(unk3AC60Struct1* arg0, f64 arg1, f64 arg2, f64 arg3) {
     f32 temp_f20 = (arg3 - ((s32) (arg3 / 360.0) * 360)) * 3.14158999999999988 / 180.0;
 
     arg0->unk_00 = cosf(temp_f20);
-    arg0->unk_04 = sinf(temp_f20);
-    arg0->unk_10 = -sinf(temp_f20);
+    arg0->unk_04 = _sinf(temp_f20);
+    arg0->unk_10 = -_sinf(temp_f20);
     arg0->unk_14 = cosf(temp_f20);
     arg0->unk_30 = arg1;
     arg0->unk_34 = arg2;
