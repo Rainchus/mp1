@@ -492,6 +492,8 @@ D_800CB44C_CC04C = 0x800CB44C; //rom:0xCC04C type:char* force_migration:True
 D_800CB3C8_CBFC8 = 0x800CB3C8; //rom:0xCBFC8 type:char* force_migration:True
 D_800CB3D0_CBFD0 = 0x800CB3D0; //rom:0xCBFD0 type:char* force_migration:True
 
+D_800F370C_F379C = 0x800F370C; //type:u16
+D_800F370E_F379E = 0x800F370E; //type:s16
 D_800ED100_ED190 = 0x800ED100; //size:0x94
 
 //ovl_1F
