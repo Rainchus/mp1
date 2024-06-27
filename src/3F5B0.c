@@ -1,20 +1,5 @@
 #include "common.h"
 
-void func_800622BC_62EBC(u16, u16, s32);
-extern s32 D_800ECB24_ECBB4;
-
-
-typedef s32 func_ptr(void);
-s16 GetCurrentPlayerIndex();                        /* extern */
-playerMain* GetPlayerStruct(s32);                           /* extern */
-s16 GetTurnsElapsed();                              /* extern */
-s32 IsFlagSet(s32);                     /* extern */
-s32 PlayerHasCoins(s32 playerIndex, u32 coinAmount);
-s16 RNGPercentChance(s8);                             /* extern */
-s32 func_8004FEBC_50ABC(s16);                             /* extern */
-extern s32 D_800F3FF0_F4080;
-extern s16 D_800C4C30_C5830[7];
-
 s16 RunDecisionTree(DecisionTreeNonLeafNode* currentNode) {
     s32 loopIndex;
     DecisionTreeNonLeafNode* tempNode;

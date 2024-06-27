@@ -1,3 +1,5 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/9BBB0", func_8009AFB0_9BBB0);
+s32 func_8009AFB0(s32 arg0) {
+    return (arg0 > 0) ? arg0 : -arg0;
+}

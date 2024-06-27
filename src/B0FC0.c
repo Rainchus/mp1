@@ -1,9 +1,142 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/B0FC0", func_800B03C0_B0FC0);
+extern f64 D_800C7ED0_C8AD0;
+extern f64 D_800C8338_C8F38[];
 
-INCLUDE_ASM("asm/nonmatchings/B0FC0", func_800B0804_B1404);
+// atan2_rad
+f64 func_800B03C0_B0FC0(f64 y, f64 x) {
+    f64 ratio;
+    f64 ratioSq;
+    f64 sp20;
+    f64 sp28;
+    f64 sp30;
+    f64 sp38;
+    f64 sp40;
+    s32 sp48;
 
-INCLUDE_ASM("asm/nonmatchings/B0FC0", func_800B0850_B1450);
+    if (y == 0.0) {
+        return (x > 0.0) ? 0.0 : 3.14159265358979312;
+    }
 
-INCLUDE_ASM("asm/nonmatchings/B0FC0", func_800B0CD8_B18D8);
+    if (x == 0.0) {
+        return (y > 0.0) ? 1.57079632679489656 : -1.57079632679489656;
+    }
+    ratio = y / x;
+    if (ratio == 1.0) {
+        return (y > 0.0) ? 0.785398163397448279 : -2.35619449019234484;
+    }
+
+    if (ratio == -1.0) {
+        return (x > 0.0) ? -0.785398163397448279 : 2.35619449019234484;
+    }
+
+    if ((ratio > 1.0) || (ratio < -1.0)) {
+        sp38 = func_800B03C0_B0FC0(x, y);
+        if (x > 0.0) {
+            return 1.57079632679489656 - sp38;
+        } else {
+            return (y > 0.0) ? (1.57079632679489656 - sp38) : (-4.71238898038468967 - sp38);
+        }
+    }
+
+    ratioSq = ratio * ratio;
+    sp20 = 1.0 / (ratioSq + 1.0);
+    sp40 = ratioSq * sp20;
+
+    sp38 = 1.0;
+    sp48 = 4;
+    sp28 = (2.0 * sp40) / 3.0;
+
+    for (; sp48 < 99; sp48 += 2) {
+        sp30 = sp28;
+        sp38 += sp30;
+
+        if ((sp30 >= -D_800C7ED0_C8AD0) && (sp30 <= D_800C7ED0_C8AD0)) {
+            break;
+        }
+
+        sp28 *= sp48 * sp40 * D_800C8338_C8F38[sp48];
+    }
+
+        sp38 *= ratio * sp20;
+        return (x > 0.0) ? sp38 : ((y > 0.0) ? (sp38 + 3.14159265358979312) : (sp38 + -3.14159265358979312));    
+}
+
+// atan2d_deg
+f64 func_800B0804_B1404(f64 y, f64 x) {
+    return func_800B03C0_B0FC0(y, x) * 57.2957795130823229;
+}
+
+extern f32 D_800C8654_C9254[];
+
+// atan2f_rad
+f32 func_800B0850_B1450(f32 y, f32 x) {
+    f32 ratio;
+    f32 ratioSq;
+    f32 sp18;
+    f32 sp1C;
+    f32 sp20;
+    f32 sp24;
+    f32 sp28;
+    s32 sp2C;
+
+    // vertical
+    if (y == 0.0f) {
+        return (x > 0.0f) ? 0.0f : 3.1415927f;
+    }
+
+    // horizontal
+    if (x == 0.0f) {
+        return (y > 0.0f) ? 1.5707964f : -1.5707964f;
+    }
+
+    ratio = y / x;
+
+    // y == x
+    if (ratio == 1.0f) {
+        return (y > 0.0f) ? 0.7853982f : -2.3561945f;
+    }
+
+    // y == -x
+    if (ratio == -1.0f) {
+        return (x > 0.0f) ? -0.7853982f : 2.3561945f;
+    }
+
+    // outside first/fourth double octants
+    if ((ratio > 1.0f) || (ratio < -1.0f)) {
+            sp24 = func_800B0850_B1450(x, y);
+        if (x > 0.0f) {
+            return 1.5707964f - sp24;
+        } else {        
+            return (y > 0.0f) ? (1.5707964f - sp24): (-4.712389f - sp24);
+        }
+    }
+
+    ratioSq = ratio * ratio;
+    sp18 = 1.0f / (ratioSq + 1.0f);
+    sp28 = ratioSq * sp18;
+
+    sp24 = 1.0f;
+    sp2C = 4;
+    sp1C = (2.0f * sp28) / 3.0f;
+
+    for (; sp2C < 99; sp2C += 2) {
+        sp20 = sp1C;
+        sp24 += sp20;
+
+        if ((sp20 >= -1e-7f) && (sp20 <= 1e-7f)) {
+            break;
+        }
+
+        sp1C *= sp2C * sp28 * D_800C8654_C9254[sp2C];
+    }
+
+    sp24 *= ratio * sp18;
+
+    return (x > 0.0f) ? sp24 : ((y > 0.0f) ? (sp24 + 3.1415927f) : (sp24 + -3.1415927f));
+}
+
+// atan2f_deg
+f32 func_800B0CD8_B18D8(f32 y, f32 x) {
+    return func_800B0850_B1450(y, x) * (f32)(1.0f / M_DTOR);
+}

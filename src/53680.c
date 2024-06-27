@@ -58,7 +58,7 @@ void AdjustPlayerCoins(s32 index, s32 count) {
 /*
  * Returns true if a player has at least the given coin count.
 */
-u32 PlayerHasCoins(s32 index, s32 count) {
+s32 PlayerHasCoins(s32 index, s32 count) {
     playerMain* player = GetPlayerStruct(index);
     return player->coinAmount >= count;
 }

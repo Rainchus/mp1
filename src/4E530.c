@@ -4,7 +4,6 @@
 
 extern char D_800CB110[];
 extern char D_800CB11C[];
-extern f64 D_800CB128;
 extern omObjData* D_800C5248_C5E48;
 extern s32 D_800C524C_C5E4C;
 extern u16 D_800C524E_C5E4E;

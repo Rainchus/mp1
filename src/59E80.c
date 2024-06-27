@@ -27,10 +27,10 @@ void func_80059280_59E80(void) {
     s32 var_s0;
     s32 var_v0;
     s32 i;
-    Unk800ED154* boardData;
+    BoardData* boardData;
 
     boardData = &D_800ED100_ED190;
-    bzero(boardData, sizeof(Unk800ED154));
+    bzero(boardData, sizeof(BoardData));
     boardData->unk0 = 0x12;
     boardData->unk_40 = 0;
     boardData->unk_44 = 0;

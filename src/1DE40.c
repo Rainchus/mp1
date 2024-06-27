@@ -1,7 +1,5 @@
 #include "common.h"
 
-void HuGuLookAtF(f32 mf[4][4], f32 xEye, f32 yEye, f32 zEye, f32 xAt, f32 yAt, f32 zAt, f32 xUp, f32 yUp, f32 zUp);
-
 INCLUDE_ASM("asm/nonmatchings/1DE40", InitCameras);
 
 void func_8001D40C_1E00C(void) {

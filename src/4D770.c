@@ -142,7 +142,7 @@ s16 GetSumOfPlayerStars(void) {
     return starTotal;
 }
 
-u8 RNGPercentChance(s8 arg0) {
+s16 RNGPercentChance(s8 arg0) {
     return arg0 > ((rand8() * 99) >> 8);
 }
 

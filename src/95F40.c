@@ -1,6 +1,14 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/95F40", osPiGetCmdQueue);
+extern OSDevMgr __osPiDevMgr;
+
+OSMesgQueue* osPiGetCmdQueue() {
+    if (!__osPiDevMgr.active) {
+        return NULL;
+    } else {
+        return __osPiDevMgr.cmdQueue;
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/95F40", bcmp);
 

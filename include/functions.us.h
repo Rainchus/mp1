@@ -4,6 +4,9 @@
 #include "types.h"
 #include "common_structs.h"
 #include "engine/math.h"
+#include "PR/os.h"
+
+typedef s32 func_ptr(void);
 
 void func_8006EEB8_6FAB8(s16, u8, u8, s16, s16);
 void func_8006F3BC_6FFBC(s16, s16, s16, s32, s32);
@@ -460,5 +463,65 @@ void func_800265EC_271EC(unk2C0C0StructC0*, unk2C0C0StructC0*, f32, s16, s16, s3
 void func_8005B838_5C438(void* arg0);
 s16 func_8006D99C_6E59C(u8* arg0, s16 arg1);
 void* func_8005B7E8_5C3E8(s32 stringIndex);
-
+void func_800230D0_23CD0(s32);
+void func_8001AAC4_1B6C4(Gfx*, u16, s32, OSMesgQueue*, s32);
+s16 func_8001CD00_1D900(u8*);
+void func_8001D40C_1E00C(void);
+void func_8001D7DC_1E3DC(s16, Gfx**);
+void func_80023040_23C40(void);
+void func_800230D0(s32);
+void func_800230D8_23CD8(s16);
+void func_80023370_23F70();
+void func_800239EC_245EC(void);
+void func_8002B890_2C490(unk2C0C0StructC0*);
+void func_8002BCD4_2C8D4(unk2C0C0StructC0*);
+void func_8002BDC0_2C9C0(unk2C0C0StructC0*);
+void func_8002BEC4_2CAC4(unk2C0C0StructC0*);
+void func_8002C37C_2CF7C(Matrix4f, Matrix4f);
+void func_8002C400_2D000(unk2C0C0StructC0*, s16);
+void func_8002C858_2D458(unk2C0C0StructC0*, s32);
+void func_8002D2CC_2DECC(unk2C0C0StructC0*, s32, void*, Matrix4f);
+void func_8002DC84_2E884(unk2C0C0StructC0*, s16);
+void func_8002E488_2F088(unk2C0C0StructC0*, u32*);
+void func_80030D50_31950(unk2C0C0StructC0*, s16);
+void func_80031054_31C54(unk2C0C0Struct90*, unk2C0C0Struct80*, s32);
+void func_800318D0_324D0(u16);
+void func_80031BB4_327B4(void);
+void func_80031C60_32860(unk2C0C0StructC0*, s32, s16);
+void func_80031F14_32B14(unk2C0C0Struct70*, s32, s32);
+void func_80032C98_33898(unk2C0C0StructC0*, s16);
+s32 func_8003305C_33C5C(unk2C0C0StructC0*, s16, Matrix4f, Matrix4f);
+void func_800339E0(unk2C0C0StructC0*, s16);
+void func_80033CBC_348BC(unk2C0C0StructC0*, s16);
+void func_80033FB0_34BB0(Gfx**, s16, s32);
+void func_80034ED8_35AD8(unk2C0C0StructC0*, s32, s32, s32);
+void func_8003589C_3649C(unk2C0C0StructC0*, s32, s32);
+void func_80037CE0_388E0(void);
+void func_80039D10_3A910(unk2C0C0StructC0*);
+s16 func_80061228_61E28(u8, u8, u8);
+void func_80061264_61E64(s16);
+void func_8009E7E0_9F3E0(Matrix4f, f32, f32, f32);
+void func_8009EA40_9F640(Matrix4f, f32, f32, f32);
+void func_800A0A20_A1620(Matrix4f, void*);
+void func_800A2A50_A3650(Matrix4f);
+void guLookAtHilite (Mtx*, LookAt*, Hilite*, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, s32, s32);
+void guLookAtReflect(Mtx*, LookAt*, f32, f32, f32, f32, f32, f32, f32, f32, f32);
+void guMtxIdentF(Matrix4f);
+void* func_80023668_24268(s32);
+void MtxMult(Matrix4f, Matrix4f, Matrix4f);
+u32 MtxReset(Matrix4f, Matrix4f);
+void MtxScale(Matrix4f, f32, f32, f32);
+void MtxTranslate(Matrix4f, f32, f32, f32);
+void osSyncPrintf(const char*, ...);
+u32 osVirtualToPhysical(void*);
+void func_80031D78_32978(unk2C0C0StructC0* arg0, s16 arg1);
+void func_800622BC_62EBC(u16, u16, s32);
+s16 GetCurrentPlayerIndex(void);
+playerMain* GetPlayerStruct(s32);
+s16 GetTurnsElapsed(void);
+s32 IsFlagSet(s32);
+s32 PlayerHasCoins(s32 index, s32 count);
+s16 RNGPercentChance(s8);
+s32 func_8004FEBC_50ABC(s16);
+void HuGuLookAtF(f32 mf[4][4], f32 xEye, f32 yEye, f32 zEye, f32 xAt, f32 yAt, f32 zAt, f32 xUp, f32 yUp, f32 zUp);
 #endif

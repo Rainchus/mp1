@@ -1,50 +1,5 @@
 #include "common.h"
 
-typedef struct unk3AC60Struct0 {
-    /* 0x00 */ f32 unk_00;
-    /* 0x04 */ f32 unk_04;
-} unk3AC60Struct0; //sizeof unknown
-
-typedef struct unk3AC60Struct1 {
-    /* 0x00 */ f32 unk_00;
-    /* 0x04 */ f32 unk_04;
-    /* 0x08 */ char unk_08[8];
-    /* 0x10 */ f32 unk_10;
-    /* 0x14 */ f32 unk_14;
-    /* 0x18 */ char unk_18[0x18];
-    /* 0x30 */ f32 unk_30;
-    /* 0x34 */ f32 unk_34;
-} unk3AC60Struct1; //sizeof unknown
-
-typedef struct unk3AC60Struct2 {
-    /* 0x00 */ s16 unk_00;
-    /* 0x02 */ s16 unk_02;
-    /* 0x04 */ char unk_04[4];
-    /* 0x08 */ s16 unk_08;
-    /* 0x0A */ s16 unk_0A;
-    /* 0x0C */ char unk_0C[0xC];
-    /* 0x18 */ s16 unk_18;
-    /* 0x1A */ s16 unk_1A;
-    /* 0x1C */ char unk_1C[4];
-    /* 0x20 */ s16 unk_20;
-    /* 0x22 */ s16 unk_22;
-    /* 0x24 */ char unk_24[4];
-    /* 0x28 */ s16 unk_28;
-    /* 0x2A */ s16 unk_2A;
-    /* 0x2C */ char unk_2C[0xC];
-    /* 0x38 */ s16 unk_38;
-    /* 0x3A */ s16 unk_3A;
-} unk3AC60Struct2; //sizeof unknown
-
-extern u32 D_800C4200_C4E00[];
-extern u32 D_800C4210_C4E10[];
-extern s32 D_800C4220_C4E20[];
-extern u32 D_800C4230_C4E30[];
-extern u32 D_800C4240_C4E40[];
-extern f64 D_800CAA70;
-extern f64 D_800CAA78;
-extern f64 D_800CAA80;
-
 void func_8003A060_3AC60(Gfx** arg0, s32 timg, s32 fmt, s32 siz, s32 width, s32 height, s32 uls, s32 ult, s32 lrs, s32 lrt, s32 pal, s32 cms, s32 cmt, s32 masks, s32 maskt, s32 shifts, s32 shiftt) {
     Gfx* gfx = *arg0;
 

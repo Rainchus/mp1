@@ -2,7 +2,7 @@
 
 INCLUDE_ASM("asm/nonmatchings/23C40", func_80023040_23C40);
 
-void func_800230D0_23CD0(void) {
+void func_800230D0_23CD0(s32 arg0) {
 }
 
 INCLUDE_ASM("asm/nonmatchings/23C40", func_800230D8_23CD8);

@@ -886,7 +886,7 @@ typedef struct omOvlHisData { //Object Manager History Data
 /* 0x06 */ u16 stat;
 } omOvlHisData; //sizeof 0x08
 
-typedef struct Unk800ED154 {
+typedef struct BoardData {
 /* 0x00 */ s8 unk0;
 /* 0x01 */ char unk_01[1];
 /* 0x02 */ s16 unk_02[8];
@@ -899,6 +899,71 @@ typedef struct Unk800ED154 {
 /* 0x47 */ s8 unk_47;
 /* 0x48 */ u8 unk_48[12];
 /* 0x54 */ s16 boardRam[32];
-} Unk800ED154; //sizeof 0x94
+} BoardData; //sizeof 0x94
+
+typedef struct unk2C0C0Struct10 {
+    /* 0x00 */ Hilite unk_00;
+    /* 0x10 */ char unk_10[0x30];
+    /* 0x40 */ LookAt unk_40;
+} unk2C0C0Struct10; //sizeof 0x60
+
+typedef struct unk2C0C0StructD0 {
+    /* 0x00 */ s16 unk_00;
+    /* 0x02 */ s16 unk_02[4];
+    /* 0x0A */ s8 unk_0A;
+    /* 0x0B */ char unk_0B;
+    /* 0x0C */ unk2C0C0Struct90* unk_0C;
+    /* 0x10 */ unk2C0C0Struct80* unk_10;
+} unk2C0C0StructD0; //sizeof 0x14
+
+typedef struct unk2C0C0StructF0 {
+    /* 0x00 */ char unk_00[0x40];
+    /* 0x40 */ f32 unk_40;
+    /* 0x44 */ void* unk_44;
+    /* 0x48 */ unk2C0C0StructC0* unk_48;
+    /* 0x4C */ s32 unk_4C;
+    /* 0x50 */ s32 unk_50;
+    /* 0x54 */ s16 unk_54;
+    /* 0x56 */ char unk_56;
+    /* 0x57 */ u8 unk_57;
+    /* 0x58 */ u8 unk_58;
+    /* 0x59 */ char unk_59[3];
+} unk2C0C0StructF0; //sizeof 0x5C
+
+typedef struct unk3AC60Struct0 {
+    /* 0x00 */ f32 unk_00;
+    /* 0x04 */ f32 unk_04;
+} unk3AC60Struct0; //sizeof unknown
+
+typedef struct unk3AC60Struct1 {
+    /* 0x00 */ f32 unk_00;
+    /* 0x04 */ f32 unk_04;
+    /* 0x08 */ char unk_08[8];
+    /* 0x10 */ f32 unk_10;
+    /* 0x14 */ f32 unk_14;
+    /* 0x18 */ char unk_18[0x18];
+    /* 0x30 */ f32 unk_30;
+    /* 0x34 */ f32 unk_34;
+} unk3AC60Struct1; //sizeof unknown
+
+typedef struct unk3AC60Struct2 {
+    /* 0x00 */ s16 unk_00;
+    /* 0x02 */ s16 unk_02;
+    /* 0x04 */ char unk_04[4];
+    /* 0x08 */ s16 unk_08;
+    /* 0x0A */ s16 unk_0A;
+    /* 0x0C */ char unk_0C[0xC];
+    /* 0x18 */ s16 unk_18;
+    /* 0x1A */ s16 unk_1A;
+    /* 0x1C */ char unk_1C[4];
+    /* 0x20 */ s16 unk_20;
+    /* 0x22 */ s16 unk_22;
+    /* 0x24 */ char unk_24[4];
+    /* 0x28 */ s16 unk_28;
+    /* 0x2A */ s16 unk_2A;
+    /* 0x2C */ char unk_2C[0xC];
+    /* 0x38 */ s16 unk_38;
+    /* 0x3A */ s16 unk_3A;
+} unk3AC60Struct2; //sizeof unknown
 
 #endif
