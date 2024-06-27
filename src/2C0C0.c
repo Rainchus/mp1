@@ -1460,7 +1460,7 @@ void func_80031F14_32B14(unk2C0C0Struct70* arg0, s32 arg1, s32 arg2) {
         }
     }
 }
-
+void guLookAtHilite (Mtx*, LookAt*, Hilite*, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, s32, s32);
 void func_80032C98_33898(unk2C0C0StructC0* arg0, s16 arg1) {
     unk2C0C0Struct90* temp_a0;
     s32 timg;
