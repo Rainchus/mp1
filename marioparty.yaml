@@ -78,11 +78,13 @@ segments:
       - [0x156F0, c]
       - [0x17D50, c, engine/decode]
       - [0x180C0, c, engine/ovlman]
-      - [0x19470, c]
+      - [0x18650, c] # unique to mp1?
+      - [0x19470, c, engine/esprite]
       - [0x19E70, c]
       - [0x1A2A0, c]
       - [0x1ACF0, c, engine/gameman]
       - [0x1B200, c, engine/graphics]
+      - [0x1B800, c]
       - [0x1DE40, c]
       - [0x1EA70, c]
       - [0x22F90, c, engine/math]
@@ -133,6 +135,7 @@ segments:
       - [0x6D4E0, c]
       - [0x72D90, c]
       - [0x7C9F0, c, lib/2.0I/audio/synstartvoiceparam] # -O0
+      - [0x7CB80, c, lib/2.0I/audio/synsetpan] # -O0
       - [0x7CC80, hasm, lib/sys/setjmp] # and longjmp
       - [0x7CD60, c]
       - [0x80770, c]
@@ -551,7 +554,7 @@ segments:
       - [0xCAB90, .rodata, B980]
       - [0xCB2D0, .rodata, 138F0]
       - [0xCB2E0, .rodata, 156F0]
-      - [0xCB300, .rodata, engine/ovlman]
+      - [0xCB300, .rodata, 18650]
       - [0xCB3E0, .rodata, engine/graphics]
       - [0xCB3F8, .rodata, 1EA70]
       - [0xCB410, .rodata, 24740]

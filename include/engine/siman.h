@@ -29,15 +29,15 @@ typedef struct {
 
 void func_80064234_64E34(void* arg0);
 
-extern OSMesg D_800E3620;
-extern OSMesg D_800E36A0;
-extern OSThread D_800E3720;
+extern OSMesg D_800E3620_E36B0;
+extern OSMesg D_800E36A0_E3730;
+extern OSThread D_800E3720_E37B0;
 
-extern functionListEntry *D_800E40D0;
-extern functionListEntry *D_800E40D4;
+extern functionListEntry *D_800E40D0_E4160;
+extern functionListEntry *D_800E40D4_E4164;
 
 extern OSMesgQueue D_800EE960_EE9F0;
-extern OSMesgQueue D_800F3370;
+extern OSMesgQueue D_800F3370_F3400;
 
 // TODO: Put this in correct header
 void func_800639F8_645F8(unkMesgWrapper*, OSMesgQueue*, s32); // nnsched func

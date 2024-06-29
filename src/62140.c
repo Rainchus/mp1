@@ -41,7 +41,7 @@ typedef struct unkStruct_zz {
 
 extern unkStruct_zz D_800D9378_D9408[];
 
-void func_800642FC_64EFC(Vec3s*, void*, void*, s32); //maybe incorrect
+s32 func_800642FC(unkMesg * siMessg, HuSiFunc func, void * arg, s32 type);
 void func_800618A4_624A4(OSPfs* arg0);
 s32 func_80061714(void);
 s32 func_80061784(s16* arg0);

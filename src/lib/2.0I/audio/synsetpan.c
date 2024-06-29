@@ -1,5 +1,5 @@
 /*====================================================================
- * synsetpitch.c
+ * synsetpan.c
  *
  * Copyright 1995, Silicon Graphics, Inc.
  * All Rights Reserved.
@@ -22,25 +22,34 @@
 #include <os_internal.h>
 #include <ultraerror.h>
 
-void alSynSetPitch(ALSynth *synth, ALVoice *v, f32 pitch)
+
+extern u8 D_800ECB2C_ECBBC; // TODO: Set up static global;
+
+void alSynSetPan(ALSynth *synth, ALVoice *v, u8 pan)
 {
     ALParam  *update;
     ALFilter *f;
 
-    if (v->pvoice) {        
+    if (v->pvoice) {
+
         /*
          * get new update struct from the free list
          */
-        
         update = __allocParam();
         ALFailIf(update == 0, ERR_ALSYN_NO_UPDATE);
 
         /*
-         * set offset and pitch data
+         * set offset and pan data
          */
         update->delta  = synth->paramSamples + v->pvoice->offset;
-        update->type   = AL_FILTER_SET_PITCH;
-        update->data.f = pitch;
+        update->type   = AL_FILTER_SET_PAN;
+        /* MONO PATCH */
+        if (D_800ECB2C_ECBBC & 1 & 0xFF) {
+            update->data.i = 0x40;
+        } else {
+            update->data.i = pan;
+        }
+        /* MONO PATCH */
         update->next   = 0;
 
         f = v->pvoice->channelKnob;

@@ -5,9 +5,10 @@
 #include "common_structs.h"
 #include "engine/math.h"
 #include "PR/os.h"
+#include "engine/siman.h"
 
 typedef s32 func_ptr(void);
-
+f32 _sinf(f32);
 void func_8006EEB8_6FAB8(s16, u8, u8, s16, s16);
 void func_8006F3BC_6FFBC(s16, s16, s16, s32, s32);
 s32 func_8006E93C_6F53C(TextWindow*, void*);
@@ -419,6 +420,7 @@ u16 func_800174C0_180C0(s32, s32);
 void* func_80023684_24284(s32, s16);
 void* func_8009B770_9C370(void*, u8, u32);
 void func_80009500_A100(void);
+s32 func_800642FC(unkMesg * siMessg, HuSiFunc func, void * arg, s32 type);
 void func_800090B8_9CB8(u16);
 f32 sqrtf(f32);
 void* HuMemDirectMalloc(s32 size);

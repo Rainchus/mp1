@@ -8,7 +8,6 @@ extern omObjData* D_800C5248_C5E48;
 extern s32 D_800C524C_C5E4C;
 extern u16 D_800C524E_C5E4E;
 extern omObjData* D_800F50C0_F5150[32];
-f32 _sinf(f32);
 
 s32 CreateTextWindow(s32 arg0, s32 arg1, s32 arg2, s32 arg3) {
     s32 temp_s1;
