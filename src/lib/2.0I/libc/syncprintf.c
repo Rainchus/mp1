@@ -1,5 +1,17 @@
-#include "common.h"
+#include "stdarg.h"
+#include "PR/os.h"
 
-INCLUDE_ASM("asm/nonmatchings/lib/2.0I/libc/syncprintf", osSyncPrintf);
+// void __osSyncVPrintf(const char *fmt, va_list args) {
+//     // these functions intentionally left blank.  ifdeffed out in rom release
+// }
 
-INCLUDE_ASM("asm/nonmatchings/lib/2.0I/libc/syncprintf", func_8008C534_8D134);
+void osSyncPrintf(const char *fmt, ...) {
+    int ans;
+    va_list ap;
+    // these functions intentionally left blank.  ifdeffed out in rom release
+}
+
+void rmonPrintf(const char *fmt, ...) {
+    int ans;
+    va_list ap;
+}

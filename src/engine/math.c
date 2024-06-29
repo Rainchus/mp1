@@ -26,14 +26,14 @@ void MtxScale(Mat4 mtx, f32 sx, f32 sy, f32 sz) {
 }
 
 /* Rotate Matrix. */
-extern void func_800AF2E0_AFEE0(f32, f32*, f32*);  // Get sin and cos of angle
+extern void func_800AF2E0_AFEE0(f32, f32*, f32*);  // Get sin and _cosf of angle
 void MtxRotate(Mat4 mtx, f32 angle1, f32 angle2, f32 angle3) {    
     Mat3 rot;
     f32 sx, cx;
     f32 sy, cy;
     f32 sz, cz;
 
-    /* Get sin and cos for three angles. */
+    /* Get sin and _cosf for three angles. */
     func_800AF2E0_AFEE0(angle1, &sx, &cx);
     if (angle1 == angle2){
         sy = sx;
@@ -171,7 +171,7 @@ void MtxRotateX(Mat4 mtx, f32 angle) {
 
     vec[0] = angle * D_800C3290_C3E90;
     s = _sinf(vec[0]);
-    c = cosf(vec[0]);
+    c = _cosf(vec[0]);
 
     for (i = 0; i < 3; i++) {
         vec[i] = mtx[1][i];
@@ -191,7 +191,7 @@ void MtxRotateY(Mat4 mtx, f32 angle) {
 
     vec[0] = angle * D_800C3294_C3E94;
     s = _sinf(vec[0]);
-    c = cosf(vec[0]);
+    c = _cosf(vec[0]);
 
     for (i = 0; i < 3; i++) {
         vec[i] = mtx[0][i];
@@ -211,7 +211,7 @@ void MtxRotateZ(Mat4 mtx, f32 angle) {
 
     vec[0] = angle * D_800C3298_C3E98;
     s = _sinf(vec[0]);
-    c = cosf(vec[0]);
+    c = _cosf(vec[0]);
 
     for (i = 0; i < 3; i++) {
         vec[i] = mtx[0][i];

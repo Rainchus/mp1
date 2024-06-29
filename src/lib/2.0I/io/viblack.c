@@ -1,3 +1,17 @@
-#include "common.h"
+#include <PR/os_internal.h>
+#include "viint.h"
 
-INCLUDE_ASM("asm/nonmatchings/lib/2.0I/io/viblack", osViBlack);
+// TODO: this comes from a header
+#ident "$Revision: 1.17 $"
+
+void osViBlack(u8 active) {
+    register u32 saveMask = __osDisableInt();
+    
+    if (active) {
+        __osViNext->state |= VI_STATE_BLACK;
+    } else {
+        __osViNext->state &= ~VI_STATE_BLACK;
+    }
+
+    __osRestoreInt(saveMask);
+}

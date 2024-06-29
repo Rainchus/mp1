@@ -1,3 +1,6 @@
-#include "common.h"
+#include "PR/os_internal.h"
+#include "PR/rcp.h"
 
-INCLUDE_ASM("asm/nonmatchings/lib/2.0I/io/sptaskyield", osSpTaskYield);
+void osSpTaskYield(void) {
+    __osSpSetStatus(SP_SET_YIELD);
+}

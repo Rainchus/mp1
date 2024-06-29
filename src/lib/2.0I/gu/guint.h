@@ -1,6 +1,6 @@
 /**************************************************************************
  *									  *
- *		 Copyright (C) 1995, Silicon Graphics, Inc.		  *
+ *		 Copyright (C) 1994, Silicon Graphics, Inc.		  *
  *									  *
  *  These coded instructions, statements, and computer programs  contain  *
  *  unpublished  proprietary  information of Silicon Graphics, Inc., and  *
@@ -10,25 +10,33 @@
  *									  *
  **************************************************************************/
 
-#include "guint.h"
+#include "mbi.h"
+#include "gu.h"
 
-/*
- *  Return a pseudorandom 32 bit number
- *  try the RAND macro too
- *   
- */
-extern unsigned int xseed;
-int guRandom(void)
+typedef union
 {
-    // static unsigned int xseed = 174823885; TODO: Add this to data section?
-    unsigned int x;
+	struct
+	{
+		unsigned int hi;
+		unsigned int lo;
+	} word;
 
-    x = (xseed<<2) + 2;
+	double	d;
+} du;
 
-    x *= (x+1);
-    x = x >> 2;
+typedef union
+{
+	unsigned int	i;
+	float		f;
+} fu;
 
-    xseed = x;
+#ifndef __GL_GL_H__
 
-    return( x );
-}
+typedef	float	Matrix[4][4];
+
+#endif
+
+#define ROUND(d)	(int)(((d) >= 0.0) ? ((d) + 0.5) : ((d) - 0.5))
+#define	ABS(d)		((d) > 0) ? (d) : -(d)
+
+extern float	__libm_qnan_f;

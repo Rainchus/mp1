@@ -1,5 +1,24 @@
-#include "common.h"
+#include "xstdio.h"
+#include "string.h"
 
-INCLUDE_ASM("asm/nonmatchings/lib/2.0I/libc/sprintf", sprintf);
+// TODO: this comes from a header
+#ident "$Revision: 1.23 $"
 
-INCLUDE_ASM("asm/nonmatchings/lib/2.0I/libc/sprintf", proutSprintf);
+static char *proutSprintf(char *dst, const char *src, size_t count);
+
+int sprintf(char *dst, const char *fmt, ...)
+{
+    s32 ans;
+    va_list ap;
+    va_start(ap, fmt);
+    ans = _Printf(proutSprintf, dst, fmt, ap);
+    if (ans >= 0)
+    {
+        dst[ans] = 0;
+    }
+    return ans; 
+}
+static char *proutSprintf(char *dst, const char *src, size_t count)
+{
+    return (char *)memcpy((u8 *)dst, (u8 *)src, count) + count;
+}

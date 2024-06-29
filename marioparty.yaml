@@ -524,10 +524,17 @@ segments:
       - [0xC6FC0, data, 80770]
       - [0xC6FD0, data, 828C0]
       - [0xC6FE0, data, 83260]
-      - [0xC7070, data, lib/2.0I/gu/rotate]
-      - [0xC7080, data, lib/2.0I/gu/rotateRPY]
+      - [0xC7070, .data, lib/2.0I/gu/rotate]
+      - [0xC7080, .data, lib/2.0I/gu/rotateRPY]
       - [0xC7090, data, lib/2.0I/gu/random]
       - [0xC70A0, data, lib/2.0I/os/thread]
+      - [0xC70D0, .data, lib/2.0I/audio/sl]
+      - [0xC70E0, .data, lib/2.0I/io/aisetnextbuf]
+      - [0xC70F0, .data, lib/2.0I/io/controller]
+      - [0xC7100, .data, lib/2.0I/io/piacs]
+      - [0xC7110, .data, lib/2.0I/io/cartrominit]
+      - [0xC7120, data, lib/2.0I/io/pimgr]
+      - [0xC7150, data, lib/2.0I/io/vimgr]
       - [0xC7170, data, engine/nnsched]
       - [0xC82F0, data]
       - [0xC83C0, data, 95E50]
@@ -622,10 +629,10 @@ segments:
       - [0xCD9C0, .rodata, B1930]
       - [0xCDA10, .rodata, B1DC0]
       - [0xCDA40, .rodata, B1FD0]
-      - { start: 0xCDA50, type: bss, vram: 0x800CCE50 }
-      - { start: 0xCDA50, type: bss, vram: 0x800CD9B0, name: 1130}
-      - { start: 0xCDA50, type: bss, vram: 0x800CD9C0, name: globalBSS}
-
+      - { start: 0xCDA50, type: bss, vram: 0x800CCE50, name: globalBSS}
+      - { start: 0xCDA60, type: bss, vram: 0x800CD9B0, name: 1130}
+      - { start: 0xCDA50, type: bss, vram: 0x800CD9C0, name: globalBSS2}
+      
   - type: code
     start: 0xCDA50
     vram: 0x800F65E0

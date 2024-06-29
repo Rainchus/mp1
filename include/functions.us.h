@@ -97,7 +97,7 @@ void func_80021CDC_228DC(s16, u8, s32);
 void func_800500A4_50CA4(void);
 void func_80050160_50D60(void);
 void func_80060618_61218(s32, u8);
-f32 cosf(f32);
+f32 _cosf(f32);
 void func_8004EA8C_4F68C(Object*, Vec3f*, s32, Vec3f*);
 s32 func_8004F018_4FC18(Object*);
 void func_8004F40C_5000C(Object*, s32, s32);

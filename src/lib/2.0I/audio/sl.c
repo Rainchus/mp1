@@ -23,7 +23,7 @@
 
 #include <libaudio.h>
 
-// ALGlobals *alGlobals=0;
+ALGlobals *alGlobals=0;
 
 void alInit(ALGlobals *g, ALSynConfig *c)
 {

@@ -187,8 +187,8 @@ extern int guRandom(void);
 /*
  *  Math functions
  */
-extern float sinf(float angle);
-extern float cosf(float angle);
+extern float _sinf(float angle);
+extern float _cosf(float angle);
 extern signed short sins (unsigned short angle);
 extern signed short coss (unsigned short angle);
 extern float sqrtf(float value);
