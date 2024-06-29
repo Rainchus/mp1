@@ -1,6 +1,6 @@
 #include "common.h"
 
-void func_800ACE70_ADA70(Matrix4f mf, Vec3f* src, Vec3f* dest) {
+void func_800ACE70(Matrix4f mf, Vec3f* src, Vec3f* dest) {
     f32 sp0 = src->x;
     f32 sp4 = src->y;
     f32 sp8 = src->z;

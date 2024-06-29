@@ -24,7 +24,7 @@
 #include <os_internal.h>
 
 
-extern u8 D_800ECB2C_ECBBC; // TODO: Set up static global;
+extern u8 D_800ECB2C; // TODO: Set up static global;
 
 void alSynStartVoiceParams(ALSynth *s, ALVoice *v, ALWaveTable *w,
                            f32 pitch, s16 vol, ALPan pan, u8 fxmix,
@@ -52,7 +52,7 @@ void alSynStartVoiceParams(ALSynth *s, ALVoice *v, ALWaveTable *w,
 
         update->unity  = v->unityPitch;
         /* MONO PATCH */
-        if (D_800ECB2C_ECBBC & 1 & 0xFF) {
+        if (D_800ECB2C & 1 & 0xFF) {
             update->pan = 0x40;
         } else {
             update->pan = pan;

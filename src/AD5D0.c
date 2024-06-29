@@ -1,6 +1,6 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/AD5D0", func_800AC9D0_AD5D0);
+INCLUDE_ASM("asm/nonmatchings/AD5D0", func_800AC9D0);
 
 // Works but need to know what the other functions are for consistency
 
@@ -10,7 +10,7 @@ INCLUDE_ASM("asm/nonmatchings/AD5D0", func_800AC9D0_AD5D0);
 // #define PACK_MTX4(mtx, i, j) (((((u16(*)[4])mtx)[i][j] << 0x10) | (((u16(*)[4])mtx)[4 + i][j])) * USHRT_MINV)
 
 
-// void func_800AC9D0_AD5D0(s32 arg0, s32 arg1, s32 arg2) {
+// void func_800AC9D0(s32 arg0, s32 arg1, s32 arg2) {
 //     s32 sp10;
 //     s32 sp14;
 //     Matrix4f sp18;

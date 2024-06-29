@@ -10,7 +10,7 @@ options:
   asm_path: asm
   src_path: src
   build_path: build
-  symbol_name_format: $VRAM_$ROM
+  symbol_name_format: $VRAM
   create_asm_dependencies: True
   ld_script_path: marioparty.ld
   subalign: 8
@@ -629,9 +629,9 @@ segments:
       - [0xCD9C0, .rodata, B1930]
       - [0xCDA10, .rodata, B1DC0]
       - [0xCDA40, .rodata, B1FD0]
-      - { start: 0xCDA50, type: bss, vram: 0x800CCE50, name: globalBSS}
-      - { start: 0xCDA60, type: bss, vram: 0x800CD9B0, name: 1130}
-      - { start: 0xCDA50, type: bss, vram: 0x800CD9C0, name: globalBSS2}
+      - {type: bss, vram: 0x800CCE50, name: globalBSS}
+      - {type: bss, vram: 0x800CD9B0, name: 1130}
+      - {type: bss, vram: 0x800CD9C0, name: globalBSS2}
       
   - type: code
     start: 0xCDA50
@@ -640,6 +640,7 @@ segments:
     name: MemoryMatch
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x7B0
     subsegments:
       - [0xCDA50, c]
@@ -656,6 +657,7 @@ segments:
     name: ChanceTime
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x3F0
     subalign: 8
     subsegments:
@@ -676,6 +678,7 @@ segments:
     name: SlotMachine
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0xAA0
     subalign: 8
     subsegments:
@@ -694,6 +697,7 @@ segments:
     name: BuriedTreasure
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x5E0
     subsegments:
       - [0xE8F60, c]
@@ -709,6 +713,7 @@ segments:
     name: TreasureDivers
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x1430
     subsegments:
       - [0xEE9A0, c]
@@ -726,6 +731,7 @@ segments:
     name: ShellGame
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     subalign: 8
     bss_size: 0x9A0
     subsegments:
@@ -742,6 +748,7 @@ segments:
     name: UnusedMinigame0
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x77F0
     subsegments:
       - [0xFF570, c]
@@ -759,6 +766,7 @@ segments:
     name: HotBobOmb
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x160
     subsegments:
       - [0x10CD10, c]
@@ -776,6 +784,7 @@ segments:
     name: UnusedMinigame1
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0xA0
     subsegments:
       - [0x110F90, c]
@@ -798,6 +807,7 @@ segments:
     name: PipeMaze
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x160
     subsegments:
       - [0x113DC0, c]
@@ -811,6 +821,7 @@ segments:
     name: GhostGuess
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x750
     subsegments:
       - [0x117210, c]
@@ -825,6 +836,7 @@ segments:
     name: MusicalMushroom
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x200
     subsegments:
       - [0x11C810, c]
@@ -840,6 +852,7 @@ segments:
     name: PedalPower
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x870
     subsegments:
       - [0x1217D0, c]
@@ -856,6 +869,7 @@ segments:
     name: CrazyCutter
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x4A0
     subsegments:
       - [0x1250D0, c]
@@ -870,6 +884,7 @@ segments:
     name: FaceLift
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0xE0
     subsegments:
       - [0x12BC20, c]
@@ -883,6 +898,7 @@ segments:
     name: WhackAPlant
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0xC0
     subsegments:
       - [0x131FA0, c]
@@ -896,6 +912,7 @@ segments:
     name: BashNCash
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x220
     subsegments:
       - [0x137050, c]
@@ -909,6 +926,7 @@ segments:
     name: BowlOver
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x580
     subsegments:
       - [0x13EFB0, c]
@@ -925,6 +943,7 @@ segments:
     name: GroundPound
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x200
     subsegments:
       - [0x146200, c]
@@ -944,6 +963,7 @@ segments:
     name: BalloonBurst
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x1320
     subsegments:
       - [0x149E80, c]
@@ -957,6 +977,7 @@ segments:
     name: CoinBlockBlitz
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x270
     subsegments:
       - [0x14E940, c]
@@ -971,6 +992,7 @@ segments:
     name: CoinBlockBash
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0xDB0
     subsegments:
       - [0x152BE0, c]
@@ -987,6 +1009,7 @@ segments:
     name: SkateBoardSkamper
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x20
     subsegments:
       - [0x15EAF0, c]
@@ -1000,6 +1023,7 @@ segments:
     name: BoxMountainMayhem
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x1B0
     subsegments:
       - [0x166220, c]
@@ -1018,6 +1042,7 @@ segments:
     name: PlatformPeril
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0xD70
     subsegments:
       - [0x16BD20, c]
@@ -1039,6 +1064,7 @@ segments:
     name: TeeteringTowers
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0xA0
     subsegments:
       - [0x1738E0, c]
@@ -1054,6 +1080,7 @@ segments:
     name: MushroomMixup
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x2B0
     subsegments:
       - [0x1784E0, c]
@@ -1068,6 +1095,7 @@ segments:
     name: HammerDrop
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x310
     subsegments:
       - [0x17E710, c]
@@ -1080,6 +1108,7 @@ segments:
     name: GrabBag
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x80
     subsegments:
       - [0x1837D0, c]
@@ -1097,6 +1126,7 @@ segments:
     name: BobsledRun
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x230
     subsegments:
       - [0x188410, c]
@@ -1110,6 +1140,7 @@ segments:
     name: BumperBalls
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x300
     subsegments:
       - [0x191700, c]
@@ -1126,6 +1157,7 @@ segments:
     name: TightropeTreachery
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x230
     subsegments:
       - [0x197E20, c]
@@ -1146,6 +1178,7 @@ segments:
     name: KnockBlockTower
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x350
     subsegments:
       - [0x19FEE0, c]
@@ -1164,6 +1197,7 @@ segments:
     name: TipsyTourney
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x160
     subsegments:
       - [0x1A4EB0, c]
@@ -1177,6 +1211,7 @@ segments:
     name: BombsAway
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0xB40
     subsegments:
       - [0x1AA2A0, c]
@@ -1195,6 +1230,7 @@ segments:
     name: CraneGame
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x11C0
     subsegments:
       - [0x1B3E00, c]
@@ -1212,6 +1248,7 @@ segments:
     name: FlowerShower
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x20
     subsegments:
       - [0x1BD640, c]
@@ -1225,6 +1262,7 @@ segments:
     name: SlotCarDerby
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x10A0
     subsegments:
       - [0x1C1EB0, c]
@@ -1238,6 +1276,7 @@ segments:
     name: MarioBandstand
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x4A0
     subsegments:
       - [0x1CCCF0, c]
@@ -1256,6 +1295,7 @@ segments:
     name: DesertDash
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x410
     subsegments:
       - [0x1D3990, c]
@@ -1272,6 +1312,7 @@ segments:
     name: ShyGuySays
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x3A0
     subsegments:
       - [0x1D9690, c]
@@ -1285,6 +1326,7 @@ segments:
     name: LimboDance
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x240
     subsegments:
       - [0x1E0A30, c]
@@ -1300,6 +1342,7 @@ segments:
     name: name_2A
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x120
     subsegments:
       - [0x1E9440, c]
@@ -1312,6 +1355,7 @@ segments:
     name: CastAways
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x0B0
     subsegments:
       - [0x1F0DA0, c]
@@ -1327,6 +1371,7 @@ segments:
     name: KeyPaWay
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0xB0
     subsegments:
       - [0x1F62C0, c]
@@ -1342,6 +1387,7 @@ segments:
     name: RunningOfTheBulb
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x90
     subsegments:
       - [0x1FF1E0, c]
@@ -1356,6 +1402,7 @@ segments:
     name: HotRopeJump
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x1D50
     subsegments:
       - [0x207040, c]
@@ -1369,6 +1416,7 @@ segments:
     name: HandcarHavoc
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x2770
     subsegments:
       - [0x20F570, c]
@@ -1384,6 +1432,7 @@ segments:
     name: DeepSeaDivers
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x17F0
     subsegments:
       - [0x218510, c]
@@ -1397,6 +1446,7 @@ segments:
     name: PiranhasPursuit
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x660
     subsegments:
       - [0x222320, c]
@@ -1412,6 +1462,7 @@ segments:
     name: TugOWar
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x1E0
     subsegments:
       - [0x22C9E0, c]
@@ -1434,6 +1485,7 @@ segments:
     name: PaddleBattle
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0xE00
     subsegments:
       - [0x2341E0, c]
@@ -1449,6 +1501,7 @@ segments:
     name: BumperBallMaze
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x3F0
     subsegments:
       - [0x23CF40, c]
@@ -1464,6 +1517,7 @@ segments:
     name: name_35
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     subsegments:
       - [0x241740, c]
       - [0x241770, c]
@@ -1475,6 +1529,7 @@ segments:
     name: DKsJungleAdventure
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x80
     subsegments:
       - [0x2418A0, c]
@@ -1490,6 +1545,7 @@ segments:
     name: PeachsBirthdayCake
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0xA0
     subsegments:
       - [0x2455C0, c]
@@ -1505,6 +1561,7 @@ segments:
     name: YoshisTropicalIsland
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x60
     subsegments:
       - [0x246DF0, c]
@@ -1519,6 +1576,7 @@ segments:
     name: WariosBattleCanyon
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x2E0
     subsegments:
       - [0x248F00, c]
@@ -1533,6 +1591,7 @@ segments:
     name: LuigisEngineRoom
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x390
     subsegments:
       - [0x24C390, c]
@@ -1548,6 +1607,7 @@ segments:
     name: MariosRainbowCastle
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x30
     subsegments:
       - [0x24FA80, c]
@@ -1562,6 +1622,7 @@ segments:
     name: BowsersMagmaMountain
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x50
     subsegments:
       - [0x2518D0, c]
@@ -1576,6 +1637,7 @@ segments:
     name: EternalStar
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x80
     subsegments:
       - [0x254450, c]
@@ -1590,6 +1652,7 @@ segments:
     name: FirstMap
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x20
     subsegments:
       - [0x256FF0, c]
@@ -1604,6 +1667,7 @@ segments:
     name: Last5Turns
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x10
     subsegments:
       - [0x2592A0, c]
@@ -1617,6 +1681,7 @@ segments:
     name: ResultsScene
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x800
     subsegments:
       - [0x259EB0, c]
@@ -1630,6 +1695,7 @@ segments:
     name: YoshisTropicalIslandEndingScene
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0xC50
     subsegments:
       - [0x25FC70, c]
@@ -1650,6 +1716,7 @@ segments:
     name: UnknownEndGameBonuses0
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x40
     subsegments:
       - [0x278ED0, c]
@@ -1663,6 +1730,7 @@ segments:
     name: UnknownEndGameBonuses1
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0xB0
     subsegments:
       - [0x27CB30, c]
@@ -1676,6 +1744,7 @@ segments:
     name: UnknownStarPurchaseScene0
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x10
     subsegments:
       - [0x280C80, c]
@@ -1689,6 +1758,7 @@ segments:
     name: UnknownBowserScene0
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x10
     subsegments:
       - [0x281D40, c]
@@ -1702,6 +1772,7 @@ segments:
     name: BowserSpaceEvent
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x10
     subsegments:
       - [0x282820, c]
@@ -1715,6 +1786,7 @@ segments:
     name: name_47
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x10
     subsegments:
       - [0x285230, c]
@@ -1727,6 +1799,7 @@ segments:
     name: BowserVisitDKBoard
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x20
     subsegments:
       - [0x285B70, c]
@@ -1740,6 +1813,7 @@ segments:
     name: BowserVisitPeachBoard
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x20
     subsegments:
       - [0x286700, c]
@@ -1753,6 +1827,7 @@ segments:
     name: GoombaCoinStealPeachBoard
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x30
     subsegments:
       - [0x2872A0, c]
@@ -1766,6 +1841,7 @@ segments:
     name: FlowerLotteryPeachBoard
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x30
     subsegments:
       - [0x2888A0, c]
@@ -1779,6 +1855,7 @@ segments:
     name: PiranhaPlantStarStealPeachBoard
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x10
     subsegments:
       - [0x289BA0, c]
@@ -1793,6 +1870,7 @@ segments:
     name: ThowmpTollYoshiBoard
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x10
     subsegments:
       - [0x28ABA0, c]
@@ -1806,6 +1884,7 @@ segments:
     name: BowserToadSwapPlacesYoshiBoard
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x10
     subsegments:
       - [0x28BC70, c]
@@ -1818,6 +1897,7 @@ segments:
     name: BowserVisitYoshiBoard
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x20
     subsegments:
       - [0x28CFF0, c]
@@ -1831,6 +1911,7 @@ segments:
     name: LoadCannonWarioBoard
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x10
     subsegments:
       - [0x28E030, c]
@@ -1843,6 +1924,7 @@ segments:
     name: ChangeCannonTargetWarioBoard
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x10
     subsegments:
       - [0x28E630, c]
@@ -1855,6 +1937,7 @@ segments:
     name: FlyGuyWarioBoard
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x40
     subsegments:
       - [0x28ECA0, c]
@@ -1868,6 +1951,7 @@ segments:
     name: BowserVisitWarioBoard
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x10
     subsegments:
       - [0x2908F0, c]
@@ -1880,6 +1964,7 @@ segments:
     name: BowserVisitLuigiBoard
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x10
     subsegments:
       - [0x291360, c]
@@ -1892,6 +1977,7 @@ segments:
     name: MoveDoorsLuigiBoard
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x10
     subsegments:
       - [0x292020, c]
@@ -1904,6 +1990,7 @@ segments:
     name: BowserToadSwapPlacesMarioBoard
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x10
     subsegments:
       - [0x293260, c]
@@ -1917,6 +2004,7 @@ segments:
     name: name_57
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x20
     subsegments:
       - [0x293A70, c]
@@ -1929,6 +2017,7 @@ segments:
     name: BowserVisitMagmaMountain
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x10
     subsegments:
       - [0x295450, c]
@@ -1941,6 +2030,7 @@ segments:
     name: ShortcutRouletteMagmaMountain
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x10
     subsegments:
       - [0x295E40, c]
@@ -1953,6 +2043,7 @@ segments:
     name: BowservisitMagmaMountain
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x10
     subsegments:
       - [0x296B70, c]
@@ -1966,6 +2057,7 @@ segments:
     name: HappeningSpaceEternalStar
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x10
     subsegments:
       - [0x297BE0, c]
@@ -1978,6 +2070,7 @@ segments:
     name: BowserVisitEternalStar
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x10
     subsegments:
       - [0x297FB0, c]
@@ -1990,6 +2083,7 @@ segments:
     name: StarVisitEternalStar
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x10
     subsegments:
       - [0x298AE0, c]
@@ -2003,6 +2097,7 @@ segments:
     name: KoopaVisitEternalStar
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x10
     subsegments:
       - [0x29A400, c]
@@ -2016,6 +2111,7 @@ segments:
     name: name_60
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x10
     subsegments:
     - [0x29AB30, c]
@@ -2029,6 +2125,7 @@ segments:
     name: OpeningScene
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0xD0
     subsegments:
     - [0x29B410, c]
@@ -2042,6 +2139,7 @@ segments:
     name: BoardIntro
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x140
     subsegments:
       - [0x2A2500, c]
@@ -2073,6 +2171,7 @@ segments:
     name: StaffScene
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x20
     subsegments:
       - [0x2A9970, c]
@@ -2087,6 +2186,7 @@ segments:
     name: ResultsEternalStar2
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x800
     subsegments:
       - [0x2B1670, c]
@@ -2100,6 +2200,7 @@ segments:
     name: UnknownBooStealScene
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x40
     subsegments:
       - [0x2B74A0, c]
@@ -2113,6 +2214,7 @@ segments:
     name: LogosSequence
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x10
     subsegments:
       - [0x2BA4C0, c]
@@ -2126,6 +2228,7 @@ segments:
     name: LogosSequenceCopy
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0xA10
     subsegments:
       - [0x2BA9E0, c]
@@ -2141,6 +2244,7 @@ segments:
     name: SaveDataCorrupted
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     subsegments:
       - [0x2BB390, c]
       - [0x2BB3C0, c]
@@ -2152,6 +2256,7 @@ segments:
     name: GameModeOverworld
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x50
     subsegments:
       - [0x2BB5C0, c]
@@ -2167,6 +2272,7 @@ segments:
     name: AdventureModeSetup
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x7E0
     subsegments:
       - [0x2BF1A0, c]
@@ -2182,6 +2288,7 @@ segments:
     name: MinigameHouse
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x2F0
     subsegments:
       - [0x2CAA00, c]
@@ -2195,6 +2302,7 @@ segments:
     name: MushroomShop
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x100
     subsegments:
       - [0x2D4830, c]
@@ -2208,6 +2316,7 @@ segments:
     name: MushroomBank
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x20
     subsegments:
       - [0x2D6FC0, c]
@@ -2221,6 +2330,7 @@ segments:
     name: OptionsHouse
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x20
     subsegments:
       - [0x2D9570, c]
@@ -2234,6 +2344,7 @@ segments:
     name: MinigameInstructions
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x380
     subsegments:
       - [0x2DB2A0, c]
@@ -2255,6 +2366,7 @@ segments:
     name: TestingRoom
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x10
     subsegments:
       - [0x2F40C0, c]
@@ -2268,6 +2380,7 @@ segments:
     name: MinigameIslandOverworld
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     subsegments:
       - [0x2F6FB0, c]
       - [0x2F6FE0, c]
@@ -2279,6 +2392,7 @@ segments:
     name: MinigameIslandOverworldCopy
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x30
     subsegments:
       - [0x2F7080, c]
@@ -2293,6 +2407,7 @@ segments:
     name: name_73
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x20
     subsegments:
       - [0x2F9040, c]
@@ -2307,6 +2422,7 @@ segments:
     name: name_74
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x20
     subsegments:
       - [0x2F96E0, c]
@@ -2320,6 +2436,7 @@ segments:
     name: name_75
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     subsegments:
       - [0x2FA120, c]
       - [0x2FA150, c]
@@ -2332,6 +2449,7 @@ segments:
     name: name_76
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     subsegments:
       - [0x2FA8A0, c]
       - [0x2FA8D0, c]
@@ -2343,6 +2461,7 @@ segments:
     name: MinigameIslandFinish
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0xA0
     subsegments:
       - [0x2FADB0, c]
@@ -2355,6 +2474,7 @@ segments:
     name: MinigameIslandStart
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0xE0
     subsegments:
       - [0x2FD940, c]
@@ -2367,6 +2487,7 @@ segments:
     name: name_79
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x20
     subsegments:
       - [0x3005B0, c]
@@ -2380,6 +2501,7 @@ segments:
     name: DebugRandomPlay
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x2B0
     subsegments:
       - [0x3014C0, c]
@@ -2393,6 +2515,7 @@ segments:
     name: MinigameStadiumMinigameResultsScreen
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0xF0
     subsegments:
       - [0x303E70, c]
@@ -2408,6 +2531,7 @@ segments:
     name: UnknownResultsScreen
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x4C0
     subsegments:
       - [0x308A50, c]
@@ -2421,6 +2545,7 @@ segments:
     name: MinigameIslandMISS
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x70
     subsegments:
       - [0x30C540, c]
@@ -2434,6 +2559,7 @@ segments:
     name: DebugSequentialPlay
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x320
     subsegments:
       - [0x30F1B0, c]
@@ -2447,6 +2573,7 @@ segments:
     name: MinigameStadiumStart
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x30
     subsegments:
       - [0x311E90, c]
@@ -2462,6 +2589,7 @@ segments:
     name: MinigameStadiumResults
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x80
     subsegments:
       - [0x312850, c]
@@ -2475,6 +2603,7 @@ segments:
     name: PressStartScreen
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x110
     subsegments:
       - [0x314950, c]
@@ -2488,6 +2617,7 @@ segments:
     name: MiniGameStadiumStartCopy
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     subsegments:
       - [0x316440, c]
       - [0x3177A0, data, 316440]
@@ -2501,6 +2631,7 @@ segments:
     name: DebugMinigameMenu
     overlay: True
     exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$SEG
     bss_size: 0x1E0
     subsegments:
       - [0x317980, c]

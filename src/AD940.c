@@ -1,5 +1,5 @@
 #include "common.h"
-INCLUDE_ASM("asm/nonmatchings/AD940", func_800ACD40_AD940);
+INCLUDE_ASM("asm/nonmatchings/AD940", func_800ACD40);
 
 // Not clear what the various args are
 
@@ -8,7 +8,7 @@ INCLUDE_ASM("asm/nonmatchings/AD940", func_800ACD40_AD940);
 // #define USHRT_MINV (f32)(1.0 / 0x10000)
 // #define PACK_MTX(mtx, i, j) (((((u16*)mtx)[4 * i + j] << 0x10) | ((u16*)mtx)[16 + 4 * i + j]) * USHRT_MINV)
 
-// void func_800ACD40_AD940(s32 arg0, u16* arg1, s32 arg2) {
+// void func_800ACD40(s32 arg0, u16* arg1, s32 arg2) {
 //     s32 pad;
 //     Matrix4f sp18;
 //     Matrix4f sp58;

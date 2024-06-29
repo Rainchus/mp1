@@ -1,103 +1,103 @@
 #include "common.h"
 #include "spaces.h"
 
-void func_800591E0_59DE0(void* arg0);
-void func_80043460_44060(void);                                  /* extern */
-void func_80045EE0_46AE0(void);                                  /* extern */
-extern s32 D_800D86E4_D8774;
-extern s16 D_800ECC20_ECCB0;
-extern s16 D_800ED3C0_ED450;
-extern s16 D_800EE986_EEA16;
-extern s16 D_800F2CDC_F2D6C;
-extern s16 D_800F3180_F3210;
-extern s16 D_800F3298_F3328;
-extern s16 D_800F37A8_F3838;
-extern s16 D_800F37E8_F3878;
-extern s32 D_800F3FF0_F4080;
-extern s16 D_800F64C6_F6556;
-extern s16 D_800F65B8_F6648;
-extern s16 D_800F65D8_F6668;
-extern s32 D_800C56D0_C62D0[];
+void func_800591E0(void* arg0);
+void func_80043460(void);                                  /* extern */
+void func_80045EE0(void);                                  /* extern */
+extern s32 D_800D86E4;
+extern s16 D_800ECC20;
+extern s16 D_800ED3C0;
+extern s16 D_800EE986;
+extern s16 D_800F2CDC;
+extern s16 D_800F3180;
+extern s16 D_800F3298;
+extern s16 D_800F37A8;
+extern s16 D_800F37E8;
+extern s32 D_800F3FF0;
+extern s16 D_800F64C6;
+extern s16 D_800F65B8;
+extern s16 D_800F65D8;
+extern s32 D_800C56D0[];
 extern s16 omovlhisidx;
-extern s16 D_800D86B2_D8742;
-extern omOvlHisData D_800D86B8_D8748[];
-extern s16 D_800D86B0_D8740;
-extern s16 D_800D86EC_D877C;
-extern s16 D_800D86EE_D877E;
-extern s16 D_800D86F0_D8780;
-extern s16 D_800D86E0_D8770;
-extern s16 D_800D86E2_D8772;
-extern s16 D_800D86FA_D878A;
-extern Vec3f D_800D86FC_D878C;
-extern u16 D_800ED5C8_ED658;
-extern s32 D_800D86F4_D8784;
-extern s16 D_800D86F8_D8788;
+extern s16 D_800D86B2;
+extern omOvlHisData D_800D86B8[];
+extern s16 D_800D86B0;
+extern s16 D_800D86EC;
+extern s16 D_800D86EE;
+extern s16 D_800D86F0;
+extern s16 D_800D86E0;
+extern s16 D_800D86E2;
+extern s16 D_800D86FA;
+extern Vec3f D_800D86FC;
+extern u16 D_800ED5C8;
+extern s32 D_800D86F4;
+extern s16 D_800D86F8;
 
-void func_8003C2D0_3CED0(s32);
-void func_800434E4_440E4(void);
-void func_80045680_46280(void);
-void func_80046720_47320(void);
-void func_80053064_53C64(void);
-void func_80053080_53C80(void);
-void func_800532E0_53EE0(void);
+void func_8003C2D0(s32);
+void func_800434E4(void);
+void func_80045680(void);
+void func_80046720(void);
+void func_80053064(void);
+void func_80053080(void);
+void func_800532E0(void);
 void FreeSpaceTexturesWrapper(void);
-void func_8003C30C_3CF0C(void);
-void func_8003DADC_3E6DC(void);
-void func_80043544_44144(void);
-void func_80046760_47360(void);
-void func_80053074_53C74(void);
-void func_800532F4_53EF4(void);
-void func_8004A510_4B110(void);
-void func_8004A520_4B120(void);
-void func_8004A7A4_4B3A4(void);
-void func_8004A7DC_4B3DC(void);
-void func_8004B5C4_4C1C4(f32);
-f32 func_8004B5D0_4C1D0(void);
-void func_8004B838_4C438(f32);
-f32 func_8004B844_4C444(void);
+void func_8003C30C(void);
+void func_8003DADC(void);
+void func_80043544(void);
+void func_80046760(void);
+void func_80053074(void);
+void func_800532F4(void);
+void func_8004A510(void);
+void func_8004A520(void);
+void func_8004A7A4(void);
+void func_8004A7DC(void);
+void func_8004B5C4(f32);
+f32 func_8004B5D0(void);
+void func_8004B838(f32);
+f32 func_8004B844(void);
 
-void func_80056730_57330(s32 arg0, s16 arg1, s16 arg2) {
+void func_80056730(s32 arg0, s16 arg1, s16 arg2) {
     omOvlHisData* history; //is this the correct struct??
 
-    history = &D_800D86B8_D8748[D_800D86B2_D8742++];
+    history = &D_800D86B8[D_800D86B2++];
     
     if (arg0 != -2) {
         if (arg0 == -1) {
             arg0 = omovlhis[omovlhisidx].overlayID;
         }
     } else {
-        arg0 = D_800C56D0_C62D0[D_800ED5C2_ED652[0]];
+        arg0 = D_800C56D0[D_800ED5C2[0]];
     }
     
     history->overlayID = arg0;
     history->event = arg1;
     history->stat = arg2;
     
-    if (D_800D86B2_D8742 >= 5) {
-        D_800D86B2_D8742 = 4;
+    if (D_800D86B2 >= 5) {
+        D_800D86B2 = 4;
     }
 }
 
-INCLUDE_ASM("asm/nonmatchings/57330", func_800567D4_573D4);
+INCLUDE_ASM("asm/nonmatchings/57330", func_800567D4);
 
-void func_800568A4_574A4(void) {
+void func_800568A4(void) {
     omOvlHisData* history;
 
-    D_800D86E0_D8770 = 1;
-    if (D_800D86B2_D8742 != 0) {
-        history = &D_800D86B8_D8748[--D_800D86B2_D8742];
+    D_800D86E0 = 1;
+    if (D_800D86B2 != 0) {
+        history = &D_800D86B8[--D_800D86B2];
         omOvlCallEx(history->overlayID, history->event, history->stat);
         return;
     }
-    if (D_800D86B0_D8740 != 0) {
-        D_800D86E0_D8770 = 0;
-        omOvlCallEx(D_800C56D0_C62D0[D_800ED5C2_ED652[0]], 2, 0x92);
+    if (D_800D86B0 != 0) {
+        D_800D86E0 = 0;
+        omOvlCallEx(D_800C56D0[D_800ED5C2[0]], 2, 0x92);
         return;
     }
     
     ClearBoardFeatureFlag(0x2C);
     
-    if (D_800D86E2_D8772 != 0) {
+    if (D_800D86E2 != 0) {
         SetBoardFeatureFlag(0x36);
     } else {
         ClearBoardFeatureFlag(0x36);
@@ -105,25 +105,25 @@ void func_800568A4_574A4(void) {
     omOvlReturnEx(1);
 }
 
-void func_80056984_57584(void) {
-    D_800D86B0_D8740 = 0;
+void func_80056984(void) {
+    D_800D86B0 = 0;
 }
 
-s16 func_80056990_57590(void) {
-    return D_800D86E0_D8770;
+s16 func_80056990(void) {
+    return D_800D86E0;
 }
 
-void func_8005699C_5759C(s32 arg0) {
-    D_800D86B8_D8748[D_800D86B2_D8742].event = arg0;
-    D_800D86B2_D8742++;
-    if (D_800D86B2_D8742 >= 5) {
-        D_800D86B2_D8742 = 4;
+void func_8005699C(s32 arg0) {
+    D_800D86B8[D_800D86B2].event = arg0;
+    D_800D86B2++;
+    if (D_800D86B2 >= 5) {
+        D_800D86B2 = 4;
     }
-    func_80056730_57330(-2, 3, 0x92);
+    func_80056730(-2, 3, 0x92);
     omOvlReturnEx(1);
 }
 
-void func_80056A08_57608(s32 arg0, s16 arg1, s32 arg2, s32 arg3) {
+void func_80056A08(s32 arg0, s16 arg1, s32 arg2, s32 arg3) {
     LoadBackgroundData(&D_FE2310);
     if (arg0 >= 0) {
         LoadBackgroundIndex(arg0);
@@ -135,60 +135,60 @@ void func_80056A08_57608(s32 arg0, s16 arg1, s32 arg2, s32 arg3) {
         LoadBoardSpaces(0xA, arg1);
     }
 
-    func_8003C2D0_3CED0(arg2);
-    func_8003DAA8_3E6A8();
-    func_80053020_53C20();
-    func_80053064_53C64();
-    func_800532E0_53EE0();
-    func_800544E4_550E4();
-    func_80045680_46280();
-    func_800434E4_440E4();
-    func_80046720_47320();
-    func_8003FCD4_408D4();
-    func_8006CEA0_6DAA0();
-    D_800D86EC_D877C = -1;
-    D_800D86EE_D877E = 0;
-    D_800D86F0_D8780 = 0;
-    func_80053080_53C80();
+    func_8003C2D0(arg2);
+    func_8003DAA8();
+    func_80053020();
+    func_80053064();
+    func_800532E0();
+    func_800544E4();
+    func_80045680();
+    func_800434E4();
+    func_80046720();
+    func_8003FCD4();
+    func_8006CEA0();
+    D_800D86EC = -1;
+    D_800D86EE = 0;
+    D_800D86F0 = 0;
+    func_80053080();
 }
 
-void func_80056AF4_576F4(void) {
-    func_80041370_41F70();
-    func_80046760_47360();
-    func_80043544_44144();
-    func_800456C4_462C4();
-    func_80054654_55254();
-    func_80070ED4_71AD4();
-    func_800532F4_53EF4();
-    func_80053074_53C74();
-    func_8003DADC_3E6DC();
-    func_8003C30C_3CF0C();
+void func_80056AF4(void) {
+    func_80041370();
+    func_80046760();
+    func_80043544();
+    func_800456C4();
+    func_80054654();
+    func_80070ED4();
+    func_800532F4();
+    func_80053074();
+    func_8003DADC();
+    func_8003C30C();
     FreeBoardSpaces();
     FreeSpaceTexturesWrapper();
-    func_8004A140_4AD40();
-    func_80049F0C_4AB0C();
+    func_8004A140();
+    func_80049F0C();
 }
 
-void func_80056B78_57778(void) {
+void func_80056B78(void) {
     playerMain* temp_v0;
-    GameStatus* gameStatus = &D_800ED5C0_ED650;
+    GameStatus* gameStatus = &D_800ED5C0;
     s32 i;
 
-    D_800F65B8_F6648 = 0;
-    D_800F37A8_F3838 = 0;
-    D_800EE986_EEA16 = 0;
-    D_800F64C6_F6556 = 0;
-    D_800F3298_F3328 = 0;
-    D_800F3180_F3210 = 0;
-    D_800ECC20_ECCB0 = 0;
-    D_800ED3C0_ED450 = 0;
-    D_800F65D8_F6668 = 0;
-    D_800F37E8_F3878 = 0;
-    D_800D86E4_D8774 = 0;
-    D_800F3FF0_F4080 = 0;
-    D_800F2CDC_F2D6C = -1;
-    func_80043460_44060();
-    func_80045EE0_46AE0();
+    D_800F65B8 = 0;
+    D_800F37A8 = 0;
+    D_800EE986 = 0;
+    D_800F64C6 = 0;
+    D_800F3298 = 0;
+    D_800F3180 = 0;
+    D_800ECC20 = 0;
+    D_800ED3C0 = 0;
+    D_800F65D8 = 0;
+    D_800F37E8 = 0;
+    D_800D86E4 = 0;
+    D_800F3FF0 = 0;
+    D_800F2CDC = -1;
+    func_80043460();
+    func_80045EE0();
     if (IsFlagSet(0x41) == 0) {
         gameStatus->chosenStarSpaceIndex = 0;
         gameStatus->currentTurn = 1;
@@ -238,8 +238,8 @@ void func_80056B78_57778(void) {
             temp_v0->bowserSpacesTotal = 0;
         }
         
-        for (i = 0; i < ARRAY_COUNT(D_800ED100_ED190.boardRam); i++) {
-            D_800ED100_ED190.boardRam[i] = 0;
+        for (i = 0; i < ARRAY_COUNT(D_800ED100.boardRam); i++) {
+            D_800ED100.boardRam[i] = 0;
         }
 
         ClearBoardFeatureFlag(0x46);
@@ -274,41 +274,41 @@ void func_80056B78_57778(void) {
 }
 
 
-void func_80056E30_57A30(s16 arg0) {
-    D_800D86FA_D878A = arg0;
+void func_80056E30(s16 arg0) {
+    D_800D86FA = arg0;
 }
 
-s16 func_80056E3C_57A3C(void) {
-    return D_800D86FA_D878A;
+s16 func_80056E3C(void) {
+    return D_800D86FA;
 }
 
-void func_80056E48_57A48(Vec3f* arg0) {
-    D_800D86FC_D878C = *arg0;
+void func_80056E48(Vec3f* arg0) {
+    D_800D86FC = *arg0;
 }
 
-void func_80056E6C_57A6C(void) {
+void func_80056E6C(void) {
     Vec2f sp10;
     while (1) {
-        switch (D_800D86FA_D878A) {
+        switch (D_800D86FA) {
         case 1:
-            func_8004B5DC_4C1DC(&gPlayers[D_800ED5DC_ED66C].playerObj->coords);
+            func_8004B5DC(&gPlayers[D_800ED5DC].playerObj->coords);
             break;
         case 2:
-            func_8004B5DC_4C1DC(&D_800D86FC_D878C);
+            func_8004B5DC(&D_800D86FC);
             break;
         case 3:
-            func_8004B6D8_4C2D8(&sp10);
-            func_8004B61C_4C21C(&sp10);
+            func_8004B6D8(&sp10);
+            func_8004B61C(&sp10);
             break;
         }
         HuPrcVSleep();    
     }
 }
 
-void func_80056F40_57B40(void) {
-    GameStatus* gameStatus = &D_800ED5C0_ED650;
+void func_80056F40(void) {
+    GameStatus* gameStatus = &D_800ED5C0;
     
-    if (++D_800ED5DC_ED66C >= 4) {
+    if (++D_800ED5DC >= 4) {
         gameStatus->unk_1C = 0;
         gameStatus->currentTurn++;
         if (gameStatus->currentTurn >= 0x63) {
@@ -317,11 +317,11 @@ void func_80056F40_57B40(void) {
     }
 }
 
-INCLUDE_ASM("asm/nonmatchings/57330", func_80056FA8_57BA8);
+INCLUDE_ASM("asm/nonmatchings/57330", func_80056FA8);
 
-INCLUDE_ASM("asm/nonmatchings/57330", func_8005700C_57C0C);
+INCLUDE_ASM("asm/nonmatchings/57330", func_8005700C);
 
-void func_80057208_57E08(s16 arg0) {
+void func_80057208(s16 arg0) {
     switch (--arg0) {
     case 3:
     case 5:
@@ -346,22 +346,22 @@ void func_80057208_57E08(s16 arg0) {
     }
 }
 
-INCLUDE_ASM("asm/nonmatchings/57330", func_8005727C_57E7C);
+INCLUDE_ASM("asm/nonmatchings/57330", func_8005727C);
 
-void func_800582E4_58EE4(void) {
+void func_800582E4(void) {
     HuPrcVSleep();
-    func_8004A520_4B120();
-    func_8004B5C4_4C1C4(3.0f);
-    func_800591E0_59DE0(gPlayers[D_800ED5DC_ED66C].flags); //TODO: what arg type should this take?
-    func_80056AF4_576F4();
+    func_8004A520();
+    func_8004B5C4(3.0f);
+    func_800591E0(gPlayers[D_800ED5DC].flags); //TODO: what arg type should this take?
+    func_80056AF4();
     omOvlReturnEx(1);
     omOvlKill();
     HuPrcVSleep();
 }
 
-INCLUDE_ASM("asm/nonmatchings/57330", func_8005835C_58F5C);
+INCLUDE_ASM("asm/nonmatchings/57330", func_8005835C);
 
-INCLUDE_ASM("asm/nonmatchings/57330", func_800584F0_590F0);
+INCLUDE_ASM("asm/nonmatchings/57330", func_800584F0);
 
 void ExecBoardScene(board_overlay_entrypoint* arg0, s16 arg1) {
     if (arg0->index < 0) {
@@ -374,44 +374,44 @@ void ExecBoardScene(board_overlay_entrypoint* arg0, s16 arg1) {
     }       
 }
 
-void func_800587BC_593BC(s32 arg0, s32 arg1, s32 arg2, s32 arg3) {
-    D_800D86F4_D8784 = arg0;
-    D_800D86F8_D8788 = arg1;
-    D_800D86EC_D877C = 8;
-    D_800D86EE_D877E = arg2;
-    D_800D86F0_D8780 = arg3;
+void func_800587BC(s32 arg0, s32 arg1, s32 arg2, s32 arg3) {
+    D_800D86F4 = arg0;
+    D_800D86F8 = arg1;
+    D_800D86EC = 8;
+    D_800D86EE = arg2;
+    D_800D86F0 = arg3;
 }
 
-void func_800587EC_593EC(s32 arg0, s16 arg1, s16 arg2) {
-    func_800587BC_593BC(arg0, arg1,  arg2, 0);
+void func_800587EC(s32 arg0, s16 arg1, s16 arg2) {
+    func_800587BC(arg0, arg1,  arg2, 0);
 }
 
-void func_80058818_59418(s16 arg0, s16 arg1) {
-    D_800D86EC_D877C = 0x10;
-    D_800D86EE_D877E = arg0;
-    D_800D86F0_D8780 = arg1;
-    func_80056984_57584();
+void func_80058818(s16 arg0, s16 arg1) {
+    D_800D86EC = 0x10;
+    D_800D86EE = arg0;
+    D_800D86F0 = arg1;
+    func_80056984();
 }
 
-void func_8005884C_5944C(Vec3f *coords) {
+void func_8005884C(Vec3f *coords) {
     f32 temp_f20;
     f32 temp_f22;
 
-    func_8004A7DC_4B3DC();
-    func_8004A7A4_4B3A4();
-    temp_f22 = func_8004B844_4C444();
-    func_8004B838_4C438(-1.0f);
-    temp_f20 = func_8004B5D0_4C1D0();
-    func_8004B5C4_4C1C4(1.0f);
-    func_8004A510_4B110();
+    func_8004A7DC();
+    func_8004A7A4();
+    temp_f22 = func_8004B844();
+    func_8004B838(-1.0f);
+    temp_f20 = func_8004B5D0();
+    func_8004B5C4(1.0f);
+    func_8004A510();
 
     if (coords == NULL) {
         coords = &GetPlayerStruct(-1)->playerObj->coords;
     }
 
-    func_8004B5DC_4C1DC(coords);
+    func_8004B5DC(coords);
     HuPrcVSleep();
-    func_8004A520_4B120();
-    func_8004B5C4_4C1C4(temp_f20);
-    func_8004B838_4C438(temp_f22);
+    func_8004A520();
+    func_8004B5C4(temp_f20);
+    func_8004B838(temp_f22);
 }

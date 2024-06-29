@@ -1,11 +1,11 @@
 #include "common.h"
 #include "common.h"
 
-extern f32 D_800C81C0_C8DC0[];
-extern s32 D_800F2CD8_F2D68;
+extern f32 D_800C81C0[];
+extern s32 D_800F2CD8;
 
 // sin
-f32 func_800AEAC0_AF6C0(f32 angle) {
+f32 func_800AEAC0(f32 angle) {
     f32 result;
     f32 angleDegrees;
     f32 angleError;
@@ -18,7 +18,7 @@ f32 func_800AEAC0_AF6C0(f32 angle) {
         angle += 360.0f;
     }
 
-    D_800F2CD8_F2D68 = ((angle < 90.0f) || (angle > 270.0f)) ? 1 : -1;
+    D_800F2CD8 = ((angle < 90.0f) || (angle > 270.0f)) ? 1 : -1;
     
     if (angle > 180.0f) {
         inputInQuadrants34 = TRUE;
@@ -33,7 +33,7 @@ f32 func_800AEAC0_AF6C0(f32 angle) {
     // Difference (in radians) between the real angle and the angle rounded to the closest degree
     angleError = (angle - angleDegrees) * (f32)(M_PI / 180.0f);
     angleErrorSq = angleError * angleError;
-    result = D_800C81C0_C8DC0[(s32)angleDegrees] * (1.0f - (angleErrorSq * 0.125f * (angleErrorSq + 4.0f))) + (angleError * D_800C81C0_C8DC0[90 - (s32) angleDegrees]);
+    result = D_800C81C0[(s32)angleDegrees] * (1.0f - (angleErrorSq * 0.125f * (angleErrorSq + 4.0f))) + (angleError * D_800C81C0[90 - (s32) angleDegrees]);
 
     return inputInQuadrants34 ? -result : result;
 }

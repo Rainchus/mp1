@@ -1,7 +1,7 @@
 #include "common.h"
 
 // Multiplies matrix arg0 by arg1, stores in arg2 and copies the bottom row of arg0 to arg2
-void func_800AC380_ACF80(Matrix4f arg0, Matrix4f arg1, Matrix4f dest) {
+void func_800AC380(Matrix4f arg0, Matrix4f arg1, Matrix4f dest) {
     s32 i;
     s32 j;
     Matrix4f temp;

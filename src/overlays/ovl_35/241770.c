@@ -1,9 +1,9 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_35/241770", func_800F6610_241770);
+INCLUDE_ASM("asm/nonmatchings/overlays/ovl_35/241770", func_800F6610_name_35);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_35/241770", func_800F6684_2417E4);
+INCLUDE_ASM("asm/nonmatchings/overlays/ovl_35/241770", func_800F6684_name_35);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_35/241770", func_800F66AC_24180C);
+INCLUDE_ASM("asm/nonmatchings/overlays/ovl_35/241770", func_800F66AC_name_35);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_35/241770", func_800F66D8_241838);
+INCLUDE_ASM("asm/nonmatchings/overlays/ovl_35/241770", func_800F66D8_name_35);

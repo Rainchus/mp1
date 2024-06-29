@@ -1,6 +1,6 @@
 #include "common.h"
 
-void func_800AC780_AD380(Matrix4f arg0, Matrix4f arg1, Matrix4f arg2) {
+void func_800AC780(Matrix4f arg0, Matrix4f arg1, Matrix4f arg2) {
     s32 i;
     s32 j;
     Matrix4f temp;

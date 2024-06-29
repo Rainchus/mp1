@@ -6,51 +6,51 @@ void LoadSpaceTextures(s16 type) {
     int i;
     u32 *ptr;
 
-    D_800D8140_D81D0 = type;
+    D_800D8140 = type;
     switch (type) {
         case 0:
-            ptr = D_800C4FD4_C5BD4;
+            ptr = D_800C4FD4;
             break;
         case 1:
-            ptr = D_800C4FFC_C5BFC;
+            ptr = D_800C4FFC;
             break;
         default:
-            ptr = D_800C5024_C5C24;
+            ptr = D_800C5024;
             break;
     }
 
     for (i = 0; i < SPACE_TYPE_TOTAL; i++) {
         if (ptr[i] != 0) {
-            D_800D8118_D81A8[i] = ReadMainFS(ptr[i]);
+            D_800D8118[i] = ReadMainFS(ptr[i]);
         }
         else {
-            D_800D8118_D81A8[i] = NULL;
+            D_800D8118[i] = NULL;
         }
     }
 }
 
-/* HuMemMemoryFree D_800D8118_D81A8. */
+/* HuMemMemoryFree D_800D8118. */
 void FreeSpaceTextures(void) {
     s32 i;
     for (i = 0; i < SPACE_TYPE_TOTAL; i++) {
-        if (D_800D8118_D81A8[i] != NULL) {
-            FreeMainFS(D_800D8118_D81A8[i]);
+        if (D_800D8118[i] != NULL) {
+            FreeMainFS(D_800D8118[i]);
         }
-        D_800D8118_D81A8[i] = NULL;
+        D_800D8118[i] = NULL;
     }
 }
 
 /* Set board as 0? */
 void LoadInitialSpaceTextures(void) {
     LoadSpaceTextures(0);
-    D_800C4FD0_C5BD0 = NULL;
+    D_800C4FD0 = NULL;
 }
 
 void FreeSpaceTexturesWrapper(void) {
     FreeSpaceTextures();
 }
 
-/* HuMemMemoryFree and then set D_800D8118_D81A8 */
+/* HuMemMemoryFree and then set D_800D8118 */
 void ChangeSpaceTextures(s16 type) {
     FreeSpaceTextures();
     LoadSpaceTextures(type);
@@ -67,7 +67,7 @@ u8 *GetSpaceDataStream(u8 *byteSteam, s32 metaDataOffset) {
     return &byteSteam[*pDataOffset];
 }
 
-void func_80028E8C_29A8C(s16, void*); // Unk
+void func_80028E8C(s16, void*); // Unk
 /* Load Board Related Data From File */
 s32 LoadBoardSpaces(s16 dir, s16 file) {
     //struct board_def *boarddef;
@@ -78,22 +78,22 @@ s32 LoadBoardSpaces(s16 dir, s16 file) {
     s16* chainValues;
     s32 i, j;
 
-    D_800C4FD0_C5BD0 = ReadMainFS((dir << 16) | file);
-    if (D_800C4FD0_C5BD0 != NULL) {
+    D_800C4FD0 = ReadMainFS((dir << 16) | file);
+    if (D_800C4FD0 != NULL) {
         /* Reset special space event lists */
-        D_800D8144_D81D4 = NULL;
-        D_800D8148_D81D8 = NULL;
-        D_800D814C_D81DC = NULL;
-        D_800D8150_D81E0 = NULL;
-        pDataStream = (u16*) D_800C4FD0_C5BD0;
-        D_800D8100_D8190 = *pDataStream++;
-        D_800D8102_D8192 = *pDataStream++;
-        D_800D8104_D8194 = *pDataStream++;
+        D_800D8144 = NULL;
+        D_800D8148 = NULL;
+        D_800D814C = NULL;
+        D_800D8150 = NULL;
+        pDataStream = (u16*) D_800C4FD0;
+        D_800D8100 = *pDataStream++;
+        D_800D8102 = *pDataStream++;
+        D_800D8104 = *pDataStream++;
 
         /* Load space data */
-        D_800D8108_D8198 = (SpaceData*) MallocTemp(D_800D8100_D8190 * sizeof(SpaceData));
-        pDataStream = (u16*) GetSpaceDataStream(D_800C4FD0_C5BD0, 6);
-        for (i = 0, pSpaceData = D_800D8108_D8198; i < D_800D8100_D8190; i++, pSpaceData++) {
+        D_800D8108 = (SpaceData*) MallocTemp(D_800D8100 * sizeof(SpaceData));
+        pDataStream = (u16*) GetSpaceDataStream(D_800C4FD0, 6);
+        for (i = 0, pSpaceData = D_800D8108; i < D_800D8100; i++, pSpaceData++) {
             Vec3f *pos;
             pSpaceData->unk0 = 1;
             pSpaceData->unk2 = *pDataStream++;
@@ -110,9 +110,9 @@ s32 LoadBoardSpaces(s16 dir, s16 file) {
         }
 
         /* Load chain data 1 */
-        D_800D810C_D819C = (ChainData*) MallocTemp(D_800D8102_D8192 * sizeof(ChainData));
-        chainOffsets = GetSpaceDataStream(D_800C4FD0_C5BD0, 8);
-        for (i = 0, pChainData = D_800D810C_D819C; i < D_800D8102_D8192; i++, pChainData++) {
+        D_800D810C = (ChainData*) MallocTemp(D_800D8102 * sizeof(ChainData));
+        chainOffsets = GetSpaceDataStream(D_800C4FD0, 8);
+        for (i = 0, pChainData = D_800D810C; i < D_800D8102; i++, pChainData++) {
             pDataStream = (u16*) GetSpaceDataStream(chainOffsets, i * 2);
             pChainData->len = *pDataStream;
             pDataStream++;
@@ -125,9 +125,9 @@ s32 LoadBoardSpaces(s16 dir, s16 file) {
         }
 
         /* Load chain data 2 */
-        D_800D8110_D81A0 = (ChainData*) MallocTemp(D_800D8104_D8194  * sizeof(ChainData));
-        chainOffsets = GetSpaceDataStream(D_800C4FD0_C5BD0, 10);
-        for (i = 0, pChainData = D_800D8110_D81A0; i < D_800D8104_D8194; i++, pChainData++) {
+        D_800D8110 = (ChainData*) MallocTemp(D_800D8104  * sizeof(ChainData));
+        chainOffsets = GetSpaceDataStream(D_800C4FD0, 10);
+        for (i = 0, pChainData = D_800D8110; i < D_800D8104; i++, pChainData++) {
             pDataStream = (u16*) GetSpaceDataStream(chainOffsets, i * 2);
             pChainData->len = *pDataStream;
             pDataStream++;
@@ -139,9 +139,9 @@ s32 LoadBoardSpaces(s16 dir, s16 file) {
             }
         }
 
-        FreeMainFS(D_800C4FD0_C5BD0);
-        func_80028E8C_29A8C(1, RenderSpaces);
-        D_800F3290_F3320 = 1;
+        FreeMainFS(D_800C4FD0);
+        func_80028E8C(1, RenderSpaces);
+        D_800F3290 = 1;
     }
     return 0;
 }
@@ -151,38 +151,38 @@ void FreeBoardSpaces(void) {
    s32 i;
    ChainData *chainData;
 
-   if (D_800C4FD0_C5BD0 != NULL) {
-      D_800C4FD0_C5BD0 = NULL;
-      D_800F3290_F3320 = 0;
+   if (D_800C4FD0 != NULL) {
+      D_800C4FD0 = NULL;
+      D_800F3290 = 0;
 
       // HuMemMemoryFree space data
-      FreeTemp(D_800D8108_D8198);
+      FreeTemp(D_800D8108);
 
       // HuMemMemoryFree both chain data
-      for (i = 0, chainData = D_800D810C_D819C; i < D_800D8102_D8192; i++, chainData++) {
+      for (i = 0, chainData = D_800D810C; i < D_800D8102; i++, chainData++) {
          FreeTemp(chainData->spaceIndices);
       }
-      FreeTemp(D_800D810C_D819C);
+      FreeTemp(D_800D810C);
 
-      for (i = 0, chainData = D_800D8110_D81A0; i < D_800D8104_D8194; i++, chainData++) {
+      for (i = 0, chainData = D_800D8110; i < D_800D8104; i++, chainData++) {
          FreeTemp(chainData->spaceIndices);
       }
-      FreeTemp(D_800D8110_D81A0);
+      FreeTemp(D_800D8110);
 
-      func_80028E8C_29A8C(1, NULL);
+      func_80028E8C(1, NULL);
    }
 }
 
 SpaceData *GetSpaceData(s16 index) {
-    return &D_800D8108_D8198[index];
+    return &D_800D8108[index];
 }
 
 s16 GetAbsSpaceIndexFromChainSpaceIndex(u16 chainIndex, u16 spaceIndex) {
-    return D_800D8110_D81A0[chainIndex].spaceIndices[spaceIndex];
+    return D_800D8110[chainIndex].spaceIndices[spaceIndex];
 }
 
 s16 GetChainLength(u16 chainIndex) {
-    return D_800D8110_D81A0[chainIndex].len;
+    return D_800D8110[chainIndex].len;
 }
 
 s16 GetChainSpaceIndexFromAbsSpaceIndex(s16 absIndex, s32 chainIndex) {
@@ -210,7 +210,7 @@ s16 GetRandomSpaceOfTypeInChain(u16 type, u16 chainIndex) {
       space = GetSpaceData(absIndex);
 
       // Get Nth space in chain of type
-      if ((D_800C51B0_C5DB0[space->spaceType & 0xf] & type) != 0)
+      if ((D_800C51B0[space->spaceType & 0xf] & type) != 0)
          if (--randByte == 0) {
             break;
       }
@@ -228,18 +228,18 @@ s16 GetRandomSpaceOfType(u16 type) {
    s32 i;
    SpaceData *space;
 
-   randByte = rand8() % D_800D8100_D8190;
+   randByte = rand8() % D_800D8100;
 
    i = 0;
    while (TRUE) {
       space = GetSpaceData(i);
       // Get Nth space that matches type
-      if ((D_800C51B0_C5DB0[space->spaceType & 0xf] & type) != 0)
+      if ((D_800C51B0[space->spaceType & 0xf] & type) != 0)
          if (--randByte == 0) {
             break;
       }
       // Wrap around
-      if (++i >= D_800D8100_D8190) {
+      if (++i >= D_800D8100) {
          i = 0;
       }
    }
@@ -282,7 +282,7 @@ void SpaceStepAnim(void) {
    space = GetSpaceData((s16)(s32)process->user_data);
 
    fval = 1.4f;
-   if (D_800C4FD0_C5BD0 != NULL) {
+   if (D_800C4FD0 != NULL) {
       do {
          HuPrcVSleep();
          fval -= 0.05f;
@@ -293,7 +293,7 @@ void SpaceStepAnim(void) {
          space->sx = fval;
          space->sz = fval;
       }
-      while (!(fval <= 1.0f) && D_800C4FD0_C5BD0 != NULL);
+      while (!(fval <= 1.0f) && D_800C4FD0 != NULL);
    }
 
    EndProcess(NULL);
@@ -316,7 +316,7 @@ void SpaceDisappearAnim(void) {
    space = GetSpaceData((s16)(s32)process->user_data);
 
    fval = 1.0f;
-   if (D_800C4FD0_C5BD0 != NULL) {
+   if (D_800C4FD0 != NULL) {
       do {
          HuPrcVSleep();
          fval -= 0.1f;
@@ -327,7 +327,7 @@ void SpaceDisappearAnim(void) {
          space->sx = fval;
          space->sz = fval;
       }
-      while (!(fval <= 0.0f) && D_800C4FD0_C5BD0 != NULL);
+      while (!(fval <= 0.0f) && D_800C4FD0 != NULL);
    }
 
     EndProcess(NULL);
@@ -350,7 +350,7 @@ void SpaceSpawnAnim(void) {
    space = GetSpaceData((s16)(s32)process->user_data);
 
    fval = 0.0f;
-   if (D_800C4FD0_C5BD0 != NULL) {
+   if (D_800C4FD0 != NULL) {
       do {
          HuPrcVSleep();
 
@@ -361,7 +361,7 @@ void SpaceSpawnAnim(void) {
 
          space->sx = fval;
          space->sz = fval;
-      } while (!(fval >= 1.0f) && D_800C4FD0_C5BD0 != NULL);
+      } while (!(fval >= 1.0f) && D_800C4FD0 != NULL);
    }
 
    EndProcess(NULL);
@@ -378,16 +378,16 @@ void SetSpaceEventList(s16 index, EventListEntry *eventList) {
    /* Event index. */
    switch (index) {
       case EVENT_INDEX_NEWTURN:
-         D_800D8144_D81D4 = eventList;
+         D_800D8144 = eventList;
          return;
       case EVENT_INDEX_UNUSED:
-         D_800D8148_D81D8 = eventList;
+         D_800D8148 = eventList;
          return;
       case EVENT_INDEX_PLAYERTURN:
-         D_800D814C_D81DC = eventList;
+         D_800D814C = eventList;
          return;
       case EVENT_INDEX_PLAYERDICE:
-         D_800D8150_D81E0 = eventList;
+         D_800D8150 = eventList;
          return;
     }
 
@@ -414,16 +414,16 @@ s32 ExecuteEventForSpace(s16 index, s16 activationType) {
    /* Event index. */
    switch (index) {
       case EVENT_INDEX_NEWTURN:
-         eventList = D_800D8144_D81D4;
+         eventList = D_800D8144;
          break;
       case EVENT_INDEX_UNUSED:
-         eventList = D_800D8148_D81D8;
+         eventList = D_800D8148;
          break;
       case EVENT_INDEX_PLAYERTURN:
-         eventList = D_800D814C_D81DC;
+         eventList = D_800D814C;
          break;
       case EVENT_INDEX_PLAYERDICE:
-         eventList = D_800D8150_D81E0;
+         eventList = D_800D8150;
          break;
       default:
          /* Default is event from space index. */
@@ -438,7 +438,7 @@ s32 ExecuteEventForSpace(s16 index, s16 activationType) {
    if (eventList != NULL) {
       while (eventList->activationType != 0) {
          if (eventList->activationType == activationType) {
-            D_800D8154_D81E4 = 0;
+            D_800D8154 = 0;
 
             switch (eventList->executionType) {
                case 1:
@@ -454,7 +454,7 @@ s32 ExecuteEventForSpace(s16 index, s16 activationType) {
                   break;
             }
 
-            ret = ret | D_800D8154_D81E4;
+            ret = ret | D_800D8154;
          }
          eventList++;
       }
@@ -465,15 +465,15 @@ s32 ExecuteEventForSpace(s16 index, s16 activationType) {
 
 /* Set space event global return flags. */
 void SetEventReturnFlag(s32 flags) {
-    D_800D8154_D81E4 = flags;
+    D_800D8154 = flags;
 }
 
 void SetCurrentSpaceIndex(s16 spaceIndex) {
-    D_800ED5E0_ED670 = spaceIndex;
+    D_800ED5E0 = spaceIndex;
 }
 
 s16 GetCurrentSpaceIndex(void) {
-    return D_800ED5E0_ED670;
+    return D_800ED5E0;
 }
 
 /* Pick random chance time space. */

@@ -1,13 +1,13 @@
 #include "common.h"
 
-f32 func_800B1750_B2350(f32);
-extern f32 D_800C8650_C9250[];
-extern f32 D_800C81C0_C8DC0[];
-extern f32 D_800C7E40_C8A40[];
-extern f32 D_800C7E90_C8A90[];
-extern s32 D_800F2CD8_F2D68;
+f32 func_800B1750(f32);
+extern f32 D_800C8650[];
+extern f32 D_800C81C0[];
+extern f32 D_800C7E40[];
+extern f32 D_800C7E90[];
+extern s32 D_800F2CD8;
 
-f32 func_800AFFA0_B0BA0(f32 angle) {
+f32 func_800AFFA0(f32 angle) {
     f32 sp10;
     f32 sp14;
     f32 sp18;
@@ -39,11 +39,11 @@ f32 func_800AFFA0_B0BA0(f32 angle) {
 
     sp28 = (s32) (angle + 0.5f);
     sp24 = (angle - sp28) * 0.017453292f;
-    sp18 = D_800C81C0_C8DC0[(s32) sp28];
-    sp10 = sp1C = func_800B1750_B2350(1.0f - (sp18 * sp18));
+    sp18 = D_800C81C0[(s32) sp28];
+    sp10 = sp1C = func_800B1750(1.0f - (sp18 * sp18));
 
     for (sp30 = 1, sp34 = 2; sp30 < 100; sp34++, sp30++) {
-        sp14 = sp14 * sp24 * D_800C8650_C9250[sp30];
+        sp14 = sp14 * sp24 * D_800C8650[sp30];
         if ((sp14 >= -1e-7f) && (sp14 <= 1e-7f)) {
             break;
         }
@@ -53,10 +53,10 @@ f32 func_800AFFA0_B0BA0(f32 angle) {
         }
 
         if (sp2C == 1) {
-            sp10 += (D_800C7E90_C8A90[sp34] > 0.0f) ? (sp14 * sp18) : (-sp14 * sp18);
+            sp10 += (D_800C7E90[sp34] > 0.0f) ? (sp14 * sp18) : (-sp14 * sp18);
             sp2C = 0;
         } else {
-            sp10 += (D_800C7E90_C8A90[sp34] > 0.0f) ? (sp14 * sp1C) : (-sp14 * sp1C) ;
+            sp10 += (D_800C7E90[sp34] > 0.0f) ? (sp14 * sp1C) : (-sp14 * sp1C) ;
             sp2C = 1;
         }
     }

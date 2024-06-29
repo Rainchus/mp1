@@ -30,7 +30,7 @@ static u8  __getTrackByte(ALCSeq *s,u32 track);
 static u32 __alCSeqGetTrackEvent(ALCSeq *seq, u32 track, ALEvent *event); 
 
 //TODO: this doesn't belong here
-INCLUDE_RODATA("asm/nonmatchings/lib/2.0I/audio/cseq", D_800CC430_CD030);
+INCLUDE_RODATA("asm/nonmatchings/lib/2.0I/audio/cseq", D_800CC430);
 
 void alCSeqNew(ALCSeq *seq, u8 *ptr)
 {

@@ -1,13 +1,13 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_1E_BumperBalls/196300", func_800FB1E0_196300);
+INCLUDE_ASM("asm/nonmatchings/overlays/ovl_1E_BumperBalls/196300", func_800FB1E0_BumperBalls);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_1E_BumperBalls/196300", func_800FB298_1963B8);
+INCLUDE_ASM("asm/nonmatchings/overlays/ovl_1E_BumperBalls/196300", func_800FB298_BumperBalls);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_1E_BumperBalls/196300", func_800FB2D0_1963F0);
+INCLUDE_ASM("asm/nonmatchings/overlays/ovl_1E_BumperBalls/196300", func_800FB2D0_BumperBalls);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_1E_BumperBalls/196300", func_800FB2EC_19640C);
+INCLUDE_ASM("asm/nonmatchings/overlays/ovl_1E_BumperBalls/196300", func_800FB2EC_BumperBalls);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_1E_BumperBalls/196300", func_800FBA20_196B40);
+INCLUDE_ASM("asm/nonmatchings/overlays/ovl_1E_BumperBalls/196300", func_800FBA20_BumperBalls);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_1E_BumperBalls/196300", func_800FC618_197738);
+INCLUDE_ASM("asm/nonmatchings/overlays/ovl_1E_BumperBalls/196300", func_800FC618_BumperBalls);

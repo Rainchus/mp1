@@ -1,3 +1,3 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/9D370", func_8009C770_9D370);
+INCLUDE_ASM("asm/nonmatchings/9D370", func_8009C770);

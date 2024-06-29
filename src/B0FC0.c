@@ -1,10 +1,10 @@
 #include "common.h"
 
-extern f64 D_800C7ED0_C8AD0;
-extern f64 D_800C8338_C8F38[];
+extern f64 D_800C7ED0;
+extern f64 D_800C8338[];
 
 // atan2_rad
-f64 func_800B03C0_B0FC0(f64 y, f64 x) {
+f64 func_800B03C0(f64 y, f64 x) {
     f64 ratio;
     f64 ratioSq;
     f64 sp20;
@@ -31,7 +31,7 @@ f64 func_800B03C0_B0FC0(f64 y, f64 x) {
     }
 
     if ((ratio > 1.0) || (ratio < -1.0)) {
-        sp38 = func_800B03C0_B0FC0(x, y);
+        sp38 = func_800B03C0(x, y);
         if (x > 0.0) {
             return 1.57079632679489656 - sp38;
         } else {
@@ -51,11 +51,11 @@ f64 func_800B03C0_B0FC0(f64 y, f64 x) {
         sp30 = sp28;
         sp38 += sp30;
 
-        if ((sp30 >= -D_800C7ED0_C8AD0) && (sp30 <= D_800C7ED0_C8AD0)) {
+        if ((sp30 >= -D_800C7ED0) && (sp30 <= D_800C7ED0)) {
             break;
         }
 
-        sp28 *= sp48 * sp40 * D_800C8338_C8F38[sp48];
+        sp28 *= sp48 * sp40 * D_800C8338[sp48];
     }
 
         sp38 *= ratio * sp20;
@@ -63,14 +63,14 @@ f64 func_800B03C0_B0FC0(f64 y, f64 x) {
 }
 
 // atan2d_deg
-f64 func_800B0804_B1404(f64 y, f64 x) {
-    return func_800B03C0_B0FC0(y, x) * 57.2957795130823229;
+f64 func_800B0804(f64 y, f64 x) {
+    return func_800B03C0(y, x) * 57.2957795130823229;
 }
 
-extern f32 D_800C8654_C9254[];
+extern f32 D_800C8654[];
 
 // atan2f_rad
-f32 func_800B0850_B1450(f32 y, f32 x) {
+f32 func_800B0850(f32 y, f32 x) {
     f32 ratio;
     f32 ratioSq;
     f32 sp18;
@@ -104,7 +104,7 @@ f32 func_800B0850_B1450(f32 y, f32 x) {
 
     // outside first/fourth double octants
     if ((ratio > 1.0f) || (ratio < -1.0f)) {
-            sp24 = func_800B0850_B1450(x, y);
+            sp24 = func_800B0850(x, y);
         if (x > 0.0f) {
             return 1.5707964f - sp24;
         } else {        
@@ -128,7 +128,7 @@ f32 func_800B0850_B1450(f32 y, f32 x) {
             break;
         }
 
-        sp1C *= sp2C * sp28 * D_800C8654_C9254[sp2C];
+        sp1C *= sp2C * sp28 * D_800C8654[sp2C];
     }
 
     sp24 *= ratio * sp18;
@@ -137,6 +137,6 @@ f32 func_800B0850_B1450(f32 y, f32 x) {
 }
 
 // atan2f_deg
-f32 func_800B0CD8_B18D8(f32 y, f32 x) {
-    return func_800B0850_B1450(y, x) * (f32)(1.0f / M_DTOR);
+f32 func_800B0CD8(f32 y, f32 x) {
+    return func_800B0850(y, x) * (f32)(1.0f / M_DTOR);
 }

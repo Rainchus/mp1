@@ -3,7 +3,7 @@
 #define USHRT_MAX 0x10000
 #define USHRT_MINV (f32)(1.0 / 0x10000)
 
-void func_800ADC20_AE820(u16* arg0, Vec4f* arg1, Vec4f* arg2) {
+void func_800ADC20(u16* arg0, Vec4f* arg1, Vec4f* arg2) {
     f32 sp0 = arg1->x;
     f32 sp4 = arg1->y;
     f32 sp8 = arg1->z;

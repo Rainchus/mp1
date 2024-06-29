@@ -1,6 +1,6 @@
 #include "common.h"
 
-void func_800ADA30_AE630(f32* arg0, Vec4f* arg1, Vec4f* arg2) {
+void func_800ADA30(f32* arg0, Vec4f* arg1, Vec4f* arg2) {
     f32 sp0 = arg1->x;
     f32 sp4 = arg1->y;
     f32 sp8 = arg1->z;

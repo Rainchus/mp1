@@ -1,8 +1,8 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/96AA0", func_80095EA0_96AA0);
+INCLUDE_ASM("asm/nonmatchings/96AA0", func_80095EA0);
 
-INCLUDE_ASM("asm/nonmatchings/96AA0", func_80095F44_96B44);
+INCLUDE_ASM("asm/nonmatchings/96AA0", func_80095F44);
 
 INCLUDE_ASM("asm/nonmatchings/96AA0", alEnvmixerNew);
 

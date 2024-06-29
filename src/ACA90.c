@@ -1,6 +1,6 @@
 #include "common.h"
 
-void func_800ABE90_ACA90(Matrix4f arg0, Vec3f* arg1, Matrix4f arg2) {
+void func_800ABE90(Matrix4f arg0, Vec3f* arg1, Matrix4f arg2) {
     s32 i;
 
     for (i = 0; i < 4; i++) {

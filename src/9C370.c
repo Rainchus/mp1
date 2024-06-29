@@ -1,7 +1,7 @@
 #include "common.h"
 
 // Initializes all bytes of a struct (arg0) with the same value (arg1).
-void* func_8009B770_9C370(void* arg0, u8 arg1, u32 size) {
+void* func_8009B770(void* arg0, u8 arg1, u32 size) {
     u32 var_a2 = size;
     void* var_a3;
     s32 temp_a1;
@@ -45,4 +45,4 @@ void* func_8009B770_9C370(void* arg0, u8 arg1, u32 size) {
     return arg0;
 }
 
-INCLUDE_ASM("asm/nonmatchings/9C370", func_8009B810_9C410);
+INCLUDE_ASM("asm/nonmatchings/9C370", func_8009B810);

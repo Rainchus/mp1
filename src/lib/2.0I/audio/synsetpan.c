@@ -23,7 +23,7 @@
 #include <ultraerror.h>
 
 
-extern u8 D_800ECB2C_ECBBC; // TODO: Set up static global;
+extern u8 D_800ECB2C; // TODO: Set up static global;
 
 void alSynSetPan(ALSynth *synth, ALVoice *v, u8 pan)
 {
@@ -44,7 +44,7 @@ void alSynSetPan(ALSynth *synth, ALVoice *v, u8 pan)
         update->delta  = synth->paramSamples + v->pvoice->offset;
         update->type   = AL_FILTER_SET_PAN;
         /* MONO PATCH */
-        if (D_800ECB2C_ECBBC & 1 & 0xFF) {
+        if (D_800ECB2C & 1 & 0xFF) {
             update->data.i = 0x40;
         } else {
             update->data.i = pan;

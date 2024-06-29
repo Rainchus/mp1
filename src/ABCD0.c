@@ -1,6 +1,6 @@
 #include "common.h"
 
-void func_800AB0D0_ABCD0(Matrix4f arg0, Vec2f* arg1, Matrix4f arg2) {
+void func_800AB0D0(Matrix4f arg0, Vec2f* arg1, Matrix4f arg2) {
     arg2[0][0] = arg0[0][0] * arg1->y + arg0[1][0] * arg1->x;
     arg2[0][1] = arg0[0][1] * arg1->y + arg0[1][1] * arg1->x;
     arg2[0][2] = arg0[0][2] * arg1->y + arg0[1][2] * arg1->x;

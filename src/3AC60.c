@@ -1,49 +1,49 @@
 #include "common.h"
 
-void func_8003A060_3AC60(Gfx** arg0, s32 timg, s32 fmt, s32 siz, s32 width, s32 height, s32 uls, s32 ult, s32 lrs, s32 lrt, s32 pal, s32 cms, s32 cmt, s32 masks, s32 maskt, s32 shifts, s32 shiftt) {
+void func_8003A060(Gfx** arg0, s32 timg, s32 fmt, s32 siz, s32 width, s32 height, s32 uls, s32 ult, s32 lrs, s32 lrt, s32 pal, s32 cms, s32 cmt, s32 masks, s32 maskt, s32 shifts, s32 shiftt) {
     Gfx* gfx = *arg0;
 
     gDPSetTextureImage(gfx++, fmt, siz, width, timg);
-    gDPSetTile(gfx++, fmt, siz, ((lrs - uls + 1) * D_800C4210_C4E10[siz] + 7) >> 3, 0x0000, G_TX_LOADTILE, 0, cmt, maskt, shiftt, cms, masks, shifts);
+    gDPSetTile(gfx++, fmt, siz, ((lrs - uls + 1) * D_800C4210[siz] + 7) >> 3, 0x0000, G_TX_LOADTILE, 0, cmt, maskt, shiftt, cms, masks, shifts);
     gDPLoadSync(gfx++);
     gDPLoadTile(gfx++, G_TX_LOADTILE, uls * 4, ult * 4, lrs * 4, lrt * 4);
     gDPPipeSync(gfx++);
-    gDPSetTile(gfx++, fmt, siz, ((lrs - uls + 1) * D_800C4210_C4E10[siz] + 7) >> 3, 0x0000, G_TX_RENDERTILE, pal, cmt, maskt, shiftt, cms, masks, shifts);
+    gDPSetTile(gfx++, fmt, siz, ((lrs - uls + 1) * D_800C4210[siz] + 7) >> 3, 0x0000, G_TX_RENDERTILE, pal, cmt, maskt, shiftt, cms, masks, shifts);
     gDPSetTileSize(gfx++, G_TX_RENDERTILE, uls * 4, ult * 4, lrs * 4, lrt * 4);
 
     *arg0 = gfx;
 }
 
-void func_8003A28C_3AE8C(Gfx** arg0, s32 timg, s32 fmt, s32 siz, s32 width, s32 arg5, s32 uls, s32 ult, s32 lrs, s32 lrt, s32 pal, s32 cms, s32 cmt, s32 masks, s32 maskt, s32 shifts, s32 shiftt, s32 rtile, s32 tmem) {
+void func_8003A28C(Gfx** arg0, s32 timg, s32 fmt, s32 siz, s32 width, s32 arg5, s32 uls, s32 ult, s32 lrs, s32 lrt, s32 pal, s32 cms, s32 cmt, s32 masks, s32 maskt, s32 shifts, s32 shiftt, s32 rtile, s32 tmem) {
     Gfx* gfx = *arg0;
 
     gDPSetTextureImage(gfx++, fmt, siz, width, timg);
-    gDPSetTile(gfx++, fmt, siz, ((lrs - uls + 1) * D_800C4210_C4E10[siz] + 7) >> 3, tmem, G_TX_LOADTILE, 0, cmt, maskt, shiftt, cms, masks, shifts);
+    gDPSetTile(gfx++, fmt, siz, ((lrs - uls + 1) * D_800C4210[siz] + 7) >> 3, tmem, G_TX_LOADTILE, 0, cmt, maskt, shiftt, cms, masks, shifts);
     gDPLoadSync(gfx++);
     gDPLoadTile(gfx++, G_TX_LOADTILE, uls * 4, ult * 4, lrs * 4, lrt * 4);
     gDPPipeSync(gfx++);
-    gDPSetTile(gfx++, fmt, siz, ((lrs - uls + 1) * D_800C4210_C4E10[siz] + 7) >> 3, tmem, rtile, pal, cmt, maskt, shiftt, cms, masks, shifts);
+    gDPSetTile(gfx++, fmt, siz, ((lrs - uls + 1) * D_800C4210[siz] + 7) >> 3, tmem, rtile, pal, cmt, maskt, shiftt, cms, masks, shifts);
     gDPSetTileSize(gfx++, rtile, uls * 4, ult * 4, lrs * 4, lrt * 4);
 
     *arg0 = gfx;
 }
 
-void func_8003A4EC_3B0EC(Gfx** arg0, s32 arg1, s32 fmt, s32 siz, s32 width, s32 height, s32 uls, s32 ult, s32 lrs, s32 lrt, s32 pal, s32 cms, s32 cmt, s32 masks, s32 maskt, s32 shifts, s32 shiftt) {
+void func_8003A4EC(Gfx** arg0, s32 arg1, s32 fmt, s32 siz, s32 width, s32 height, s32 uls, s32 ult, s32 lrs, s32 lrt, s32 pal, s32 cms, s32 cmt, s32 masks, s32 maskt, s32 shifts, s32 shiftt) {
     Gfx* gfx = *arg0;
     s32 timg = arg1 + ((width * ult) << (siz - 1));
 
-    gDPSetTextureImage(gfx++, fmt, D_800C4220_C4E20[siz], 1, timg);
-    gDPSetTile(gfx++, fmt, D_800C4220_C4E20[siz], 0, 0x0000, G_TX_LOADTILE, 0, cmt, maskt, shiftt, cms, masks, shifts);
+    gDPSetTextureImage(gfx++, fmt, D_800C4220[siz], 1, timg);
+    gDPSetTile(gfx++, fmt, D_800C4220[siz], 0, 0x0000, G_TX_LOADTILE, 0, cmt, maskt, shiftt, cms, masks, shifts);
     gDPLoadSync(gfx++);
-    gDPLoadBlock(gfx++, G_TX_LOADTILE, 0, 0, ((width * height + D_800C4230_C4E30[siz]) >> D_800C4240_C4E40[siz]) - 1, CALC_DXT(width, D_800C4200_C4E00[siz]));
+    gDPLoadBlock(gfx++, G_TX_LOADTILE, 0, 0, ((width * height + D_800C4230[siz]) >> D_800C4240[siz]) - 1, CALC_DXT(width, D_800C4200[siz]));
     gDPPipeSync(gfx++);
-    gDPSetTile(gfx++, fmt, siz, (width * D_800C4210_C4E10[siz] + 7) >> 3, 0x0000, G_TX_RENDERTILE, pal, cmt, maskt, shiftt, cms, masks, shifts);
+    gDPSetTile(gfx++, fmt, siz, (width * D_800C4210[siz] + 7) >> 3, 0x0000, G_TX_RENDERTILE, pal, cmt, maskt, shiftt, cms, masks, shifts);
     gDPSetTileSize(gfx++, G_TX_RENDERTILE, uls * 4, ult * 4, lrs * 4, lrt * 4);
 
     *arg0 = gfx;
 }
 
-void func_8003A828_3B428(Gfx** arg0, s32 arg1, s32 fmt, u32 width, s32 height, s32 uls, s32 ult, s32 lrs, s32 lrt, s32 pal, s32 cms, s32 cmt, s32 masks, s32 maskt, s32 shifts, s32 shiftt) {
+void func_8003A828(Gfx** arg0, s32 arg1, s32 fmt, u32 width, s32 height, s32 uls, s32 ult, s32 lrs, s32 lrt, s32 pal, s32 cms, s32 cmt, s32 masks, s32 maskt, s32 shifts, s32 shiftt) {
     Gfx* gfx = *arg0;
     s32 timg = arg1 + ((width * ult) >> 1);
 
@@ -58,22 +58,22 @@ void func_8003A828_3B428(Gfx** arg0, s32 arg1, s32 fmt, u32 width, s32 height, s
     *arg0 = gfx;
 }
 
-void func_8003AA98_3B698(Gfx** arg0, s32 arg1, s32 fmt, s32 siz, s32 width, s32 height, s32 uls, s32 ult, s32 lrs, s32 lrt, s32 pal, s32 cms, s32 cmt, s32 masks, s32 maskt, s32 shifts, s32 shiftt, s32 rtile, s32 tmem) {
+void func_8003AA98(Gfx** arg0, s32 arg1, s32 fmt, s32 siz, s32 width, s32 height, s32 uls, s32 ult, s32 lrs, s32 lrt, s32 pal, s32 cms, s32 cmt, s32 masks, s32 maskt, s32 shifts, s32 shiftt, s32 rtile, s32 tmem) {
     Gfx* gfx = *arg0;
     s32 timg = arg1 + ((width * ult) << (siz - 1));
 
-    gDPSetTextureImage(gfx++, fmt, D_800C4220_C4E20[siz], 1, timg);
-    gDPSetTile(gfx++, fmt, D_800C4220_C4E20[siz], 0, tmem, G_TX_LOADTILE, 0, cmt, maskt, shiftt, cms, masks, shifts);
+    gDPSetTextureImage(gfx++, fmt, D_800C4220[siz], 1, timg);
+    gDPSetTile(gfx++, fmt, D_800C4220[siz], 0, tmem, G_TX_LOADTILE, 0, cmt, maskt, shiftt, cms, masks, shifts);
     gDPLoadSync(gfx++);
-    gDPLoadBlock(gfx++, G_TX_LOADTILE, 0, 0, ((width * height + D_800C4230_C4E30[siz]) >> D_800C4240_C4E40[siz]) - 1, CALC_DXT(width, D_800C4200_C4E00[siz]));
+    gDPLoadBlock(gfx++, G_TX_LOADTILE, 0, 0, ((width * height + D_800C4230[siz]) >> D_800C4240[siz]) - 1, CALC_DXT(width, D_800C4200[siz]));
     gDPPipeSync(gfx++);
-    gDPSetTile(gfx++, fmt, siz, (width * D_800C4210_C4E10[siz] + 7) >> 3, tmem, rtile, pal, cmt, maskt, shiftt, cms, masks, shifts);
+    gDPSetTile(gfx++, fmt, siz, (width * D_800C4210[siz] + 7) >> 3, tmem, rtile, pal, cmt, maskt, shiftt, cms, masks, shifts);
     gDPSetTileSize(gfx++, rtile, uls * 4, ult * 4, lrs * 4, lrt * 4);
 
     *arg0 = gfx;
 }
 
-void func_8003AE00_3BA00(Gfx** arg0, s32 arg1, s32 fmt, u32 width, s32 height, s32 uls, s32 ult, s32 lrs, s32 lrt, s32 pal, s32 cms, s32 cmt, s32 masks, s32 maskt, s32 shifts, s32 shiftt, s32 rtile, s32 tmem) {
+void func_8003AE00(Gfx** arg0, s32 arg1, s32 fmt, u32 width, s32 height, s32 uls, s32 ult, s32 lrs, s32 lrt, s32 pal, s32 cms, s32 cmt, s32 masks, s32 maskt, s32 shifts, s32 shiftt, s32 rtile, s32 tmem) {
     Gfx* gfx = *arg0;
     s32 timg = arg1 + ((width * ult) >> 1);
 
@@ -88,7 +88,7 @@ void func_8003AE00_3BA00(Gfx** arg0, s32 arg1, s32 fmt, u32 width, s32 height, s
     *arg0 = gfx;
 }
 
-void func_8003B0AC_3BCAC(unk3AC60Struct1* arg0, f64 arg1, f64 arg2, f64 arg3) {
+void func_8003B0AC(unk3AC60Struct1* arg0, f64 arg1, f64 arg2, f64 arg3) {
     f32 temp_f20 = (arg3 - ((s32) (arg3 / 360.0) * 360)) * 3.14158999999999988 / 180.0;
 
     arg0->unk_00 = _cosf(temp_f20);
@@ -99,7 +99,7 @@ void func_8003B0AC_3BCAC(unk3AC60Struct1* arg0, f64 arg1, f64 arg2, f64 arg3) {
     arg0->unk_34 = arg2;
 }
 
-void func_8003B190_3BD90(unk3AC60Struct0* arg0, unk3AC60Struct1* arg1, unk3AC60Struct2* arg2) {
+void func_8003B190(unk3AC60Struct0* arg0, unk3AC60Struct1* arg1, unk3AC60Struct2* arg2) {
     arg1->unk_30 = arg0->unk_00 * arg1->unk_00 + arg1->unk_30 + arg0->unk_04 * arg1->unk_10;
     arg1->unk_34 = arg0->unk_00 * arg1->unk_04 + arg1->unk_34 + arg0->unk_04 * arg1->unk_14;
     arg2->unk_00 = (s32) (arg1->unk_00 * 65536.0f) >> 16;

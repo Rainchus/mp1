@@ -1,7 +1,7 @@
 #include "common.h"
 
-extern u8 *D_800D1320_D13B0;
-extern u8 *D_800D1720_D17B0;
+extern u8 *D_800D1320;
+extern u8 *D_800D1720;
 
 typedef struct DecodeStruct {
 /* 0x00 */ u16 chunk_len;
@@ -11,9 +11,9 @@ typedef struct DecodeStruct {
 /* 0x0C */ u32 len;
 } DecodeStruct;
 
-void func_800171EC_17DEC(DecodeStruct*);
+void func_800171EC(DecodeStruct*);
 
-void func_80017150_17D50(DecodeStruct* decode) { //DecodeNone
+void func_80017150(DecodeStruct* decode) { //DecodeNone
     s32 copy_len;
 
     while(decode->len) {
@@ -25,13 +25,13 @@ void func_80017150_17D50(DecodeStruct* decode) { //DecodeNone
             decode->len -= 1024;
         }
         
-        func_80061FE8_62BE8(decode->src, decode->dest, copy_len);
+        func_80061FE8(decode->src, decode->dest, copy_len);
         decode->src += copy_len;
         decode->dest += copy_len;
     }
 }
 
-INCLUDE_ASM("asm/nonmatchings/engine/decode", func_800171EC_17DEC);
+INCLUDE_ASM("asm/nonmatchings/engine/decode", func_800171EC);
 
 void DecodeFile(void* src, void* dest, s32 len, s32 decode_type) {
     DecodeStruct decode_struct;
@@ -42,11 +42,11 @@ void DecodeFile(void* src, void* dest, s32 len, s32 decode_type) {
     decode_struct.chunk_len = 1024;
     switch(decode_type) {
         case 0:
-            func_80017150_17D50(decode_ptr);
+            func_80017150(decode_ptr);
             break;
 
         case 1:
-            func_800171EC_17DEC(decode_ptr);
+            func_800171EC(decode_ptr);
             break;
 
         default:

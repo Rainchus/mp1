@@ -3,9 +3,9 @@
 #include "PR/gu.h"
 
 
-extern f32 D_800C3290_C3E90;
-extern f32 D_800C3294_C3E94;
-extern f32 D_800C3298_C3E98;
+extern f32 D_800C3290;
+extern f32 D_800C3294;
+extern f32 D_800C3298;
 
 /* Translate Matrix. */
 void MtxTranslate(Mat4 mtx, f32 x, f32 y, f32 z) {
@@ -26,7 +26,7 @@ void MtxScale(Mat4 mtx, f32 sx, f32 sy, f32 sz) {
 }
 
 /* Rotate Matrix. */
-extern void func_800AF2E0_AFEE0(f32, f32*, f32*);  // Get sin and _cosf of angle
+extern void func_800AF2E0(f32, f32*, f32*);  // Get sin and _cosf of angle
 void MtxRotate(Mat4 mtx, f32 angle1, f32 angle2, f32 angle3) {    
     Mat3 rot;
     f32 sx, cx;
@@ -34,12 +34,12 @@ void MtxRotate(Mat4 mtx, f32 angle1, f32 angle2, f32 angle3) {
     f32 sz, cz;
 
     /* Get sin and _cosf for three angles. */
-    func_800AF2E0_AFEE0(angle1, &sx, &cx);
+    func_800AF2E0(angle1, &sx, &cx);
     if (angle1 == angle2){
         sy = sx;
         cy = cx;
     } else {
-        func_800AF2E0_AFEE0(angle2, &sy, &cy);
+        func_800AF2E0(angle2, &sy, &cy);
     }
 
     if (angle1 == angle3){
@@ -49,7 +49,7 @@ void MtxRotate(Mat4 mtx, f32 angle1, f32 angle2, f32 angle3) {
         sz = sy;
         cz = cy;
     } else {
-        func_800AF2E0_AFEE0(angle3, &sz, &cz);
+        func_800AF2E0(angle3, &sz, &cz);
     }
 
     /* Rotation Matrix First Column */
@@ -169,7 +169,7 @@ void MtxRotateX(Mat4 mtx, f32 angle) {
     f32 s, c;
     f32 vec[4];
 
-    vec[0] = angle * D_800C3290_C3E90;
+    vec[0] = angle * D_800C3290;
     s = _sinf(vec[0]);
     c = _cosf(vec[0]);
 
@@ -189,7 +189,7 @@ void MtxRotateY(Mat4 mtx, f32 angle) {
     f32 s, c;
     f32 vec[4];
 
-    vec[0] = angle * D_800C3294_C3E94;
+    vec[0] = angle * D_800C3294;
     s = _sinf(vec[0]);
     c = _cosf(vec[0]);
 
@@ -209,7 +209,7 @@ void MtxRotateZ(Mat4 mtx, f32 angle) {
     f32 s, c;
     f32 vec[4];
 
-    vec[0] = angle * D_800C3298_C3E98;
+    vec[0] = angle * D_800C3298;
     s = _sinf(vec[0]);
     c = _cosf(vec[0]);
 
@@ -225,4 +225,4 @@ void MtxRotateZ(Mat4 mtx, f32 angle) {
 
 /* Unrelated? Animation Code? */
 // https://decomp.me/scratch/OGGnF ~ 80%
-INCLUDE_ASM("asm/nonmatchings/engine/math", func_80022D9C_2399C);
+INCLUDE_ASM("asm/nonmatchings/engine/math", func_80022D9C);
