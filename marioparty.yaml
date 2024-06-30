@@ -632,6 +632,8 @@ segments:
       - {type: bss, vram: 0x800CCE50, name: globalBSS}
       - {type: bss, vram: 0x800CD9B0, name: 1130}
       - {type: bss, vram: 0x800CD9C0, name: globalBSS2}
+      - {type: .bss, vram: 0x800EA180, name: lib/2.0I/io/sptask}
+      - {type: bss, vram: 0x800EA1C0, name: globalBSS3}
       
   - type: code
     start: 0xCDA50
