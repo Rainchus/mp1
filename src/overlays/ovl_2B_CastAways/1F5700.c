@@ -1,6 +1,16 @@
-#include "common.h"
+#include "CastAways.h"
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_2B_CastAways/1F5700", func_800FAF40_CastAways);
+void func_800FAF40_CastAways(f32 arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, f32 arg7) {
+    func_800178A0(1);
+    D_800EE98C = arg1;
+    D_800F33EC.y = arg2;
+    D_800F33EC.x = arg3;
+    D_800F33EC.z = arg4;
+    D_800F6524.x = arg5;
+    D_800F6524.y = arg6;
+    D_800F6524.z = arg7;
+    D_800C3110->unk_40 = arg0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_2B_CastAways/1F5700", func_800FAFF0_CastAways);
 
@@ -10,13 +20,41 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_2B_CastAways/1F5700", func_800FB374_C
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_2B_CastAways/1F5700", func_800FB404_CastAways);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_2B_CastAways/1F5700", func_800FB4D4_CastAways);
+s32 func_800FB4D4_CastAways(f32 arg0, f32 arg1, f32 arg2, u16 arg3, f32 arg4, f32 arg5, f32 arg6) {
+    f32 temp_f0, temp_f2, temp_f12;
+    f32 temp = 18.0f;
+    
+    temp_f2 = D_800FBA30_CastAways[arg3];
+    temp_f12 = (arg0 - arg4) * (arg0 - arg4);
+    temp_f0 = (arg2 - arg6) * (arg2 - arg6);
+    
+    if ( (temp_f12 + temp_f0) <= ((temp_f2 + temp) * (temp_f2 + temp))) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_2B_CastAways/1F5700", func_800FB53C_CastAways);
+s32 func_800FB53C_CastAways(f32 arg0, f32 arg1, f32 arg2, u16 arg3, f32 arg4, f32 arg5, f32 arg6) {
+    f32 temp_f0, temp_f2, temp_f12;
+    f32 temp = 18.0f;
+    
+    temp_f2 = D_800FBA30_CastAways[arg3] - 6.0f;
+    temp_f12 = (arg0 - arg4) * (arg0 - arg4);
+    temp_f0 = (arg2 - arg6) * (arg2 - arg6);
+    
+    if ( (temp_f12 + temp_f0) <= ((temp_f2 + temp) * (temp_f2 + temp))) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_2B_CastAways/1F5700", func_800FB5B4_CastAways);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_2B_CastAways/1F5700", func_800FB644_CastAways);
+void func_800FB644_CastAways(u16 arg0, f32 arg1) {
+    D_800F2B7C[arg0].unk_4C = arg1;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_2B_CastAways/1F5700", func_800FB668_CastAways);
 

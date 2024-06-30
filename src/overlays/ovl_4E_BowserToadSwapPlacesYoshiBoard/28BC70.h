@@ -1,0 +1,54 @@
+#include "common.h"
+
+void func_800F66B4_BowserToadSwapPlacesYoshiBoard(omObjData*);
+void func_800F6708_BowserToadSwapPlacesYoshiBoard(omObjData* arg0);
+void func_800F67BC_BowserToadSwapPlacesYoshiBoard(void);
+void func_800F73C0_BowserToadSwapPlacesYoshiBoard(void);
+void func_800F7764_BowserToadSwapPlacesYoshiBoard(void);
+void func_800F737C_BowserToadSwapPlacesYoshiBoard(omObjData*);
+void func_800F7680_BowserToadSwapPlacesYoshiBoard(void);
+void func_800F7818_BowserToadSwapPlacesYoshiBoard(void);
+void func_800F7330_BowserToadSwapPlacesYoshiBoard(void);
+extern Object* D_800F7840_BowserToadSwapPlacesYoshiBoard;
+extern Object* D_800F7844_BowserToadSwapPlacesYoshiBoard;
+extern Object* D_800F7848_BowserToadSwapPlacesYoshiBoard;
+extern Object* D_800F784C_BowserToadSwapPlacesYoshiBoard;
+extern s32 D_800F7850_BowserToadSwapPlacesYoshiBoard;
+extern omObjData* D_800F7854_BowserToadSwapPlacesYoshiBoard;
+extern Object* D_800F7858_BowserToadSwapPlacesYoshiBoard;
+extern omObjData* D_800F785C_BowserToadSwapPlacesYoshiBoard;
+extern Vec3f D_800F7860_BowserToadSwapPlacesYoshiBoard;
+extern Vec3f D_800F7878_BowserToadSwapPlacesYoshiBoard;
+extern Vec3f D_800F78C0_BowserToadSwapPlacesYoshiBoard;
+
+extern Object* D_800F7848_BowserToadSwapPlacesYoshiBoard;
+extern u8 D_800F7960_BowserToadSwapPlacesYoshiBoard;
+extern s32 D_800F7910_BowserToadSwapPlacesYoshiBoard;
+extern s32 D_800F7920_BowserToadSwapPlacesYoshiBoard;
+extern Object* D_800F7840_BowserToadSwapPlacesYoshiBoard;
+extern Object* D_800F7844_BowserToadSwapPlacesYoshiBoard;
+extern Object* D_800F7848_BowserToadSwapPlacesYoshiBoard;
+extern Object* D_800F784C_BowserToadSwapPlacesYoshiBoard;
+extern s32 D_800F7850_BowserToadSwapPlacesYoshiBoard;
+extern omObjData* D_800F7854_BowserToadSwapPlacesYoshiBoard;
+extern Object* D_800F7858_BowserToadSwapPlacesYoshiBoard;
+extern omObjData* D_800F785C_BowserToadSwapPlacesYoshiBoard;
+
+
+typedef struct ovl4EUnkStruct {
+s16 unk_00;
+s16 unk_02;
+} ovl_4E_UnkStruct;
+
+void func_8004DBD4(s32, u8);
+
+extern ovl_4E_UnkStruct D_800ED15C;
+extern Vec3f D_800F7884_BowserToadSwapPlacesYoshiBoard;
+extern Vec3f D_800F7890_BowserToadSwapPlacesYoshiBoard;
+extern Vec3f D_800F789C_BowserToadSwapPlacesYoshiBoard[];
+extern Vec3f D_800F78B4_BowserToadSwapPlacesYoshiBoard;
+extern Vec3f D_800F78CC_BowserToadSwapPlacesYoshiBoard;
+extern Vec3f D_800F78D8_BowserToadSwapPlacesYoshiBoard;
+extern Vec3f D_800F78E4_BowserToadSwapPlacesYoshiBoard;
+extern Vec3s D_800F7938_BowserToadSwapPlacesYoshiBoard;
+extern Vec3s D_800F7944_BowserToadSwapPlacesYoshiBoard;

@@ -1,4 +1,5 @@
 #include "common.h"
+#include "HotRopeJump.h"
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_2E_HotRopeJump/207040", func_800F65E0_HotRopeJump);
 
@@ -44,7 +45,14 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_2E_HotRopeJump/207040", func_800F8968
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_2E_HotRopeJump/207040", func_800F8A14_HotRopeJump);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_2E_HotRopeJump/207040", func_800F8C08_HotRopeJump);
+void func_800F8C08_HotRopeJump(void) {
+    func_800FB328_HotRopeJump();
+    D_800B8980 = D_80100310_HotRopeJump;
+    D_800B8964 = D_80100314_HotRopeJump;
+    D_800B8968 = D_80100318_HotRopeJump;
+    D_800B8994 = D_8010031C_HotRopeJump;
+    func_800FA60C_HotRopeJump();
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_2E_HotRopeJump/207040", func_800F8C68_HotRopeJump);
 

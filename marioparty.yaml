@@ -1616,7 +1616,7 @@ segments:
     subsegments:
       - [0x24FA80, c]
       - [0x24FAB0, c]
-      - [0x251400, data, 24FA80]
+      - [0x251400, .data, 24FA80]
       - [0x251430, data, 24FAB0]
       - {0x2518D0, type: bss, vram: 0x800F8430, name: ovl_3B_bss}
   - type: code
@@ -1631,7 +1631,7 @@ segments:
     subsegments:
       - [0x2518D0, c]
       - [0x251900, c]
-      - [0x253A50, data, 2518D0]
+      - [0x253A50, .data, 2518D0]
       - [0x253A80, data, 251900]
       - {0x254450, type: bss, vram: 0x800F9160, name: ovl_3C_bss}
   - type: code
@@ -1646,7 +1646,7 @@ segments:
     subsegments:
       - [0x254450, c]
       - [0x254480, c]
-      - [0x2569F0, .rodata, 254450]
+      - [0x2569F0, .data, 254450]
       - [0x256A20, .rodata, 254480]
       - {0x256FF0, type: bss, vram: 0x800F9180, name: ovl_3D_bss}
   - type: code
@@ -1661,7 +1661,8 @@ segments:
     subsegments:
       - [0x256FF0, c]
       - [0x257020, c]
-      - [0x259140, .rodata, 256FF0]
+      - [0x259140, .data, 256FF0]
+      - [0x259160, data, 257020]
       - [0x259220, .rodata, 257020]
       - {0x2592A0, type: bss, vram: 0x800F8890, name: ovl_3E_bss}
   - type: code
@@ -1863,15 +1864,14 @@ segments:
     bss_size: 0x10
     subsegments:
       - [0x289BA0, c]
-      - [0x28AAC0, c]
-      - [0x28AAD0, data, 289BA0] #800F74F0
+      - [0x28AAC0, .data, 289BA0] #800F74F0
       - [0x28AB90, .rodata, 289BA0]
       - {0x28ABA0, type: bss, vram: 0x800F75E0, name: ovl_4C_bss}
   - type: code
     start: 0x28ABA0
     vram: 0x800F65E0
-    dir: overlays/ovl_4D_ThowmpTollYoshiBoard
-    name: ThowmpTollYoshiBoard
+    dir: overlays/ovl_4D_ThwompTollYoshiBoard
+    name: ThwompTollYoshiBoard
     overlay: True
     exclusive_ram_id: minigame
     symbol_name_format: $VRAM_$SEG
@@ -1892,7 +1892,7 @@ segments:
     bss_size: 0x10
     subsegments:
       - [0x28BC70, c]
-      - [0x28CED0, data, 28BC70]
+      - [0x28CED0, .data, 28BC70]
       - {0x28CFF0, type: bss, vram: 0x800F7960, name: ovl_4E_bss}
   - type: code
     start: 0x28CFF0
