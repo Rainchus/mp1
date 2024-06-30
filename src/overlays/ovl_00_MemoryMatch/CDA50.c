@@ -112,7 +112,7 @@ void func_800F71C4_MemoryMatch(omObjData* arg0) {
             func_800601D4(0x28);
             return;
         }
-    } else if (((u16) D_800FE2C4_MemoryMatch != 0) && func_800F9BC8_MemoryMatch(D_800F3FB0) != 0) {
+    } else if (((u16) D_800FE2C4_MemoryMatch != 0) && func_800F9BC8_MemoryMatch(D_800F3FB0[0]) != 0) {
         D_800FE2C2_MemoryMatch = 2;
         D_800ED430 = 0;
         D_800FDE2C_MemoryMatch = 0;
@@ -227,7 +227,7 @@ void func_800F7C70_MemoryMatch(f32 arg0) {
     omObjData* temp_a0;
 
     if (arg0 == 0.0) {
-        temp_a0 = D_800F3FB0;
+        temp_a0 = D_800F3FB0[0];
         D_800FDDC0_MemoryMatch.x = D_800F6524.x;
         D_800FDDC0_MemoryMatch.y = D_800F6524.y;
         D_800FDDC0_MemoryMatch.z = D_800F6524.z;

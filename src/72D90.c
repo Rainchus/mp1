@@ -2348,7 +2348,7 @@ s32 func_8007A978(unkCommonStruct0* arg0, Gfx** arg1) {
 }
 
 // First arg is a u8*
-void func_8007B168(void* arg0, u8 arg1) {
+void func_8007B168(u8* arg0, u8 arg1) {
     u8* temp_v0;
     u8* var_s1;
 

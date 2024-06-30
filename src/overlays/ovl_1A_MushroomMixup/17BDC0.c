@@ -18,7 +18,9 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_1A_MushroomMixup/17BDC0", func_800FAB
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_1A_MushroomMixup/17BDC0", func_800FAF90_MushroomMixup);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_1A_MushroomMixup/17BDC0", func_800FB0FC_MushroomMixup);
+void func_800FB0FC_MushroomMixup(omObjData* arg0) {
+    func_80025B34(arg0->model[0]);
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_1A_MushroomMixup/17BDC0", func_800FB11C_MushroomMixup);
 

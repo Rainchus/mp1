@@ -76,13 +76,13 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_01_ChanceTime/D51E0", func_800F84B4_C
 void func_800F8700_ChanceTime(s16 arg0) {
     switch (arg0) {
     case 1:
-        D_800F3FB4 = omAddObj(0xA, 9, 0x2B, -1, &func_800F80D8_ChanceTime);
+        D_800F3FB0[1] = omAddObj(0xA, 9, 0x2B, -1, &func_800F80D8_ChanceTime);
         return;
     case 2:
-        D_800F3FB8 = omAddObj(0xA, 9, 0x2B, -1, &func_800F8168_ChanceTime);
+        D_800F3FB0[2] = omAddObj(0xA, 9, 0x2B, -1, &func_800F8168_ChanceTime);
         return;
     case 3:
-        D_800F3FBC = omAddObj(0xA, 9, 0x2B, -1, &func_800F81F8_ChanceTime);
+        D_800F3FB0[3] = omAddObj(0xA, 9, 0x2B, -1, &func_800F81F8_ChanceTime);
         return;
     }
 }

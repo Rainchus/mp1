@@ -361,7 +361,7 @@ omObjData* omAddObj(s16, u16, u16, s16, void*);
 void omSetStatBit(omObjData*, s32);
 void func_80060088(void);
 s32 PlaySound(s32);
-void func_8007B168(void*, u8); //arg1 is a u8*
+void func_8007B168(u8*, u8); //arg1 is a u8*
 //void func_80086F08(f32*, void*);
 f32 func_800AEAC0(f32);
 void func_80009E20(omObjData*);
