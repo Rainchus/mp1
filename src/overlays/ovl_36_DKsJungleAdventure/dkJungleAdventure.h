@@ -50,7 +50,6 @@ extern struct D_800F9948_tuple D_800F9948_DKsJungleAdventure[];
     // { -2, 0 },
     // { -3, 0 },
 
-extern s16 D_800ED154[];
 extern s16 D_800ED172;
 
 extern EventTableEntry main_event_table[]; //800FA0CC

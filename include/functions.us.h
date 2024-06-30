@@ -8,6 +8,7 @@
 #include "engine/siman.h"
 
 typedef s32 func_ptr(void);
+void HuPrcSleep(s32);
 f32 sinf(f32);
 void func_8006EEB8(s16, u8, u8, s16, s16);
 void func_8006F3BC(s16, s16, s16, s32, s32);

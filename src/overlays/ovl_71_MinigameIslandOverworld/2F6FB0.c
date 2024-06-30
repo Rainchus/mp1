@@ -1,3 +1,15 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_71_MinigameIslandOverworld/2F6FB0", func_800F65E0_MinigameIslandOverworld);
+void func_800F6610_MinigameIslandOverworld(void);
+void func_800F6668_MinigameIslandOverworld(void);
+
+board_overlay_entrypoint D_800F6690_MinigameIslandOverworld[] = {
+    {0, func_800F6610_MinigameIslandOverworld},
+    {1, func_800F6668_MinigameIslandOverworld},
+    {-1, 0},
+};
+
+void func_800F65E0_MinigameIslandOverworld(void) {
+    ExecBoardScene(&D_800F6690_MinigameIslandOverworld, D_800C597A);
+}
+

@@ -5,8 +5,6 @@ void func_8004F548(void);
 void func_800532E0(void);
 void func_800F7F1C_ResultsScene(void);
 void func_800FB054_ResultsScene(void);
-extern s16 D_800ED154[];
-extern s16 D_800ED168[];
 extern s32 D_800FC430_ResultsScene[4];
 extern s32 D_800FC440_ResultsScene;
 extern s32 D_800FC448_ResultsScene;

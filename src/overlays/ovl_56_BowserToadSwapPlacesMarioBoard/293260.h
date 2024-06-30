@@ -1,0 +1,21 @@
+#include "common.h"
+
+void func_800F6CB0_BowserToadSwapPlacesMarioBoard(void);
+void func_800F6D88_BowserToadSwapPlacesMarioBoard(void);
+void func_800F66AC_BowserToadSwapPlacesMarioBoard(f32);
+void func_800F6A84_BowserToadSwapPlacesMarioBoard(void);
+void func_800F692C_BowserToadSwapPlacesMarioBoard(void);
+void func_800F6B1C_BowserToadSwapPlacesMarioBoard(void);
+void func_800F6CE8_BowserToadSwapPlacesMarioBoard(void);
+void func_800F6AC8_BowserToadSwapPlacesMarioBoard(omObjData*);
+
+extern GameStatus D_800ED154;
+extern Vec3f D_800F6DB0_BowserToadSwapPlacesMarioBoard;
+extern Vec3f D_800F6DBC_BowserToadSwapPlacesMarioBoard;
+extern s32 D_800F6DC8_BowserToadSwapPlacesMarioBoard[];
+extern s32 D_800F6DD0_BowserToadSwapPlacesMarioBoard[];
+extern u8 D_800F6DF0_BowserToadSwapPlacesMarioBoard;
+extern Object* D_800F6DF4_BowserToadSwapPlacesMarioBoard;
+extern Object* D_800F6DF8_BowserToadSwapPlacesMarioBoard;
+extern Object* D_800F6DFC_BowserToadSwapPlacesMarioBoard;
+

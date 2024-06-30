@@ -32,8 +32,6 @@ extern camera* D_800F32A0; //pointer to camera struct
 extern u16 D_800F2BC0;
 extern omObjData* D_800F3FB0[];
 extern unk_Struct00* D_800C3110;
-extern u8 D_800F6F20;
-extern s16 D_800F6EE2;
 extern s32 D_800EDEC0;
 extern u8 D_800F37F0;
 extern s16 D_800F3FA8;

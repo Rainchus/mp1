@@ -484,7 +484,6 @@ D_80100318 = 0x80100318; //rom:0x222248 type:f64 force_migration:True
 D_80100920 = 0x80100920; //rom:0x22C660 type:f64 force_migration:True
 D_800F7600 = 0x800F7600; //rom:0x28E010 type:f64 force_migration:True
 D_800F8D54 = 0x800F8D54; //rom:0x2D6FA4 type:char* force_migration:True
-D_800F6F70 = 0x800F6F70; //rom:0x2BB370 type:s32
 D_800F7DB8_DebugRandomPlay = 0x800F7DB8; //rom:0x302C98 type:s32
 D_800F9240 = 0x800F9240; //rom:0x30F1A0 type:char* force_migration:True
 D_800CC728 = 0x800CC728; //rom:0xCD328 type:char* force_migration:True
@@ -495,7 +494,7 @@ D_800CB3D0 = 0x800CB3D0; //rom:0xCBFD0 type:char* force_migration:True
 D_800F370C = 0x800F370C; //type:u16
 D_800F370E = 0x800F370E; //type:s16
 D_800ED100 = 0x800ED100; //size:0x94
-
+D_800ECDE8 = 0x800ECDE8;
 
 D_800FC500_FaceLift = 0x800FC500; //rom:0x131B40 segment:FaceLift
 
@@ -509,6 +508,7 @@ D_800FEE28_ShellGame = 0x800FEE28; // segment:ShellGame force_migration:True
 D_800F9A00_PipeMaze = 0x800F9A00; // rom:0x1171E0 segment:PipeMaze force_migration:True
 D_800FD5CC_ShyGuySays = 0x800FD5CC; // segment:ShyGuySays
 D_800FD5CE_ShyGuySays = 0x800FD5CE; // segment:ShyGuySays
+D_800F6F70_LogosSequenceCopy = 0x800F6F70; // segment:LogosSequenceCopy type:s32
 
 __MotorDataBuf = 0x800EA1D0;
 piAccessBuf = 0x800EA1C0;
