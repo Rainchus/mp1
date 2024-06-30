@@ -1,7 +1,7 @@
 #include "common.h"
 #include "ShellGame.h"
 
-#ifdef RODATA_SUPPORT
+#ifdef NON_MATCHING //TODO: sjis strings
 void func_800F65E0_ShellGame(void) {
     unk_Struct00* temp_s0_2;
     s32 temp_s0;
@@ -26,7 +26,7 @@ void func_800F65E0_ShellGame(void) {
     func_800F87CC_ShellGame();
     temp_s0_2 = D_800C3110;
     D_800FF168_ShellGame = func_800AEAC0(temp_s0_2->unk_40 / 2.0) / func_800AEFD0(temp_s0_2->unk_40 / 2.0);
-    func_80086F08(&D_800FF128_ShellGame, &temp_s0_2->unk138);
+    func_80086F08(&D_800FF128_ShellGame, &temp_s0_2->unk_138);
     func_80028510(0x3A5, 0x402, 0xFF, 0xC8, 0xC8);
     D_800F2BC0 = 0;
     D_800ED440 = 0;

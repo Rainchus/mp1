@@ -1,9 +1,5 @@
 #include "common.h"
 
-extern f64 D_800FED30_ShellGame;
-extern f64 D_800FED38_ShellGame;
-extern f64 D_800FECE0_ShellGame;
-extern f64 D_800FECE8_ShellGame;
 extern Vec3f D_800FF0A0_ShellGame;
 extern Vec3f D_800FF0AC_ovl05;
 extern s32 D_800FEC10_ShellGame;
@@ -42,10 +38,11 @@ extern s16 D_800FEC14_ShellGame;
 extern s16 D_800FEC16_ShellGame;
 extern s16 D_800FEC18_ShellGame;
 extern s32 D_800FEC1C_ShellGame;
+//sjis
 extern char D_800FEC60_ShellGame[];
 extern char D_800FEC6C_ShellGame[];
 extern char D_800FEC7C_ShellGame[];
-extern f64 D_800FEC90_ShellGame;
+
 extern omObjData* D_800FF0F8_ShellGame;
 extern s32 D_800FF10C_ShellGame;
 extern f32 D_800FF128_ShellGame;

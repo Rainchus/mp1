@@ -2038,7 +2038,7 @@ segments:
     bss_size: 0x10
     subsegments:
       - [0x295E40, c]
-      - [0x296A60, data, 295E40]
+      - [0x296A60, .data, 295E40]
       - {0x296B70, type: bss, vram: 0x800F7310, name: ovl_5A_bss}
   - type: code
     start: 0x296B70
@@ -2051,7 +2051,7 @@ segments:
     bss_size: 0x10
     subsegments:
       - [0x296B70, c]
-      - [0x297B20, data, 296B70]
+      - [0x297B20, .data, 296B70]
       - [0x297BD0, .rodata, 296B70]
       - {0x297BE0, type: bss, vram: 0x800F7650, name: ovl_5B_bss}
   - type: code
@@ -2065,7 +2065,7 @@ segments:
     bss_size: 0x10
     subsegments:
       - [0x297BE0, c]
-      - [0x297F90, data, 297BE0]
+      - [0x297F90, .data, 297BE0]
       - {0x297FB0, type: bss, vram: 0x800F69B0, name: ovl_5C_bss}
   - type: code
     start: 0x297FB0
@@ -2078,7 +2078,7 @@ segments:
     bss_size: 0x10
     subsegments:
       - [0x297FB0, c]
-      - [0x298A30, data, 297FB0]
+      - [0x298A30, .data, 297FB0]
       - {0x298AE0, type: bss, vram: 0x800F7110, name: ovl_5D_bss}
   - type: code
     start: 0x298AE0
