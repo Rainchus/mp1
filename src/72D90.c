@@ -1305,7 +1305,7 @@ s32 func_80076174(void) {
                 return 0;
             }
 
-            for (i = 0; i < 4; i++) {
+            for (i = 0; i < MAX_PLAYERS; i++) {
                 if (D_800EDEB4[gPlayers[i].flags] & 0xC000) {
                     return 0;
                 }
@@ -2465,7 +2465,7 @@ void func_8007B52C(void) {
         D_800F64F4 = func_8006DD8C(var_s6, D_800ED4B0[var_s6].unk_274);
 
         if (D_800C6268[temp_fp].unk_00 == 2) {
-            for (i = 0, var_a0 = 0; i < 4; i++) {
+            for (i = 0, var_a0 = 0; i < MAX_PLAYERS; i++) {
                 if (var_a0 < gPlayers[i].unk_00) {
                     var_a0 = gPlayers[i].unk_00;
                 }
@@ -2474,7 +2474,7 @@ void func_8007B52C(void) {
             if (var_a0 < 2) {
                 var_s3 = 0;
                 var_s2 = 2;
-                for (i = 0; i < 4; i++) {
+                for (i = 0; i < MAX_PLAYERS; i++) {
                     if (gPlayers[i].unk_00 == 0) {
                         func_8006DA5C(temp_v0, (void*) (s32) gPlayers[i].characterID + 44, var_s3);
                         func_8006DA5C(var_s6, (void*) (s32) gPlayers[i].characterID + 44, var_s3++);
@@ -2484,7 +2484,7 @@ void func_8007B52C(void) {
                     }
                 }
             } else {
-                for (i = 0; i < 4; i++) {
+                for (i = 0; i < MAX_PLAYERS; i++) {
                     func_8006DA5C(temp_v0, (void*) (s32) gPlayers[i].characterID + 44, gPlayers[i].unk_00);
                     func_8006DA5C(var_s6, (void*) (s32) gPlayers[i].characterID + 44, gPlayers[i].unk_00);
                 }
@@ -2493,7 +2493,7 @@ void func_8007B52C(void) {
             if (D_800C6268[temp_fp].unk_00 == 3) {
                 var_s3 = 0;
                 var_s2 = 1;
-                for (i = 0; i < 4; i++) {
+                for (i = 0; i < MAX_PLAYERS; i++) {
                     if (gPlayers[i].unk_00 == 0) {
                         func_8006DA5C(temp_v0, (void*) (s32) gPlayers[i].characterID + 44, var_s3++);
                     } else {
@@ -2501,7 +2501,7 @@ void func_8007B52C(void) {
                     }
                 }
             } else {
-                for (i = 0; i < 4; i++) {
+                for (i = 0; i < MAX_PLAYERS; i++) {
                     func_8006DA5C(temp_v0, (void*) (s32) gPlayers[i].characterID + 44, i);
                 }
             }

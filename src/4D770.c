@@ -135,7 +135,7 @@ s16 GetSumOfPlayerStars(void) {
     s32 starTotal = 0;
     s32 i;
 
-    for (i = 0; i < 4; i++) {
+    for (i = 0; i < MAX_PLAYERS; i++) {
         starTotal += GetPlayerStruct(i)->starAmount;
     }
     

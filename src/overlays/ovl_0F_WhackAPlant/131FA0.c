@@ -1,44 +1,142 @@
 #include "common.h"
+#include "WhackAPlant.h"
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_0F_WhackAPlant/131FA0", func_800F65E0_WhackAPlant);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_0F_WhackAPlant/131FA0", func_800F6B8C_WhackAPlant);
+void func_800F6B8C_WhackAPlant(void) {
+    s32 i = 0;
+    
+    for (i = 0; i < D_800F3778; i++) {}
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_0F_WhackAPlant/131FA0", func_800F6BC4_WhackAPlant);
+}
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_0F_WhackAPlant/131FA0", func_800F6D54_WhackAPlant);
+void func_800F6BC4_WhackAPlant(omObjData* arg0) {
+    s16 temp_s2;
+    s32 i;
+
+    D_800FB740_WhackAPlant = 0;
+    D_800FB69A_WhackAPlant = 0;
+    D_800FB6F4_WhackAPlant = 0;
+    D_800FB710_WhackAPlant[1] = 0;
+
+    for (i = 0; i < 9; i++) {
+        temp_s2 = func_8001E00C((void*)-1, 0x68D, 8);
+        D_800ECDE0[temp_s2].unk_02 = D_800FB6BA_WhackAPlant;
+        func_80025930(D_800ECDE0[temp_s2].unk_00, 0x60000000, 0x60000000);
+        D_800FB6C0_WhackAPlant[i] = temp_s2;
+        D_800FB6EA_WhackAPlant[i] = 0;
+    }
+
+    for (i = 0; i < 9; i++) {
+        temp_s2 = func_8001E00C((void*)-1, 0x68D, 8);
+        D_800ECDE0[temp_s2].unk_02 = D_800FB6BC_WhackAPlant;
+        func_80025930(D_800ECDE0[temp_s2].unk_00, 0x60000000, 0x60000000);
+        D_800FB6D8_WhackAPlant[i] = temp_s2;
+        func_8001E2F8(temp_s2, 0xE0);
+        func_8001E360(temp_s2, 0xFF, 0xFF, 0xBE);
+    }
+
+    D_800ED430 = 1;
+    arg0->func_ptr = &func_800F6D54_WhackAPlant;
+}
+
+void func_800F6D54_WhackAPlant(void) {
+    switch (D_800FB740_WhackAPlant) {
+    case 0:
+        func_800FA078_WhackAPlant();
+        break;
+    case 1:
+        break;
+    case 2:
+        func_800FA1E0_WhackAPlant();
+        break;
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_0F_WhackAPlant/131FA0", func_800F6DBC_WhackAPlant);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_0F_WhackAPlant/131FA0", func_800F6FE4_WhackAPlant);
+void func_800F6FE4_WhackAPlant(omObjData* arg0) {
+    unkGlobalStruct_02* temp_s0;
+    
+    D_800F2AF8[D_800ED440++] = arg0;
+    temp_s0 = func_80023684(sizeof(unkGlobalStruct_02), 0x7918);
+    arg0->unk_50 = temp_s0;
+    func_8009B770(temp_s0, 0, sizeof(unkGlobalStruct_02));
+    temp_s0->unk_04 = 1;
+    temp_s0->unk_05 = 1;
+    func_80009058(arg0, 170.0f, 170.0f, -320.0f, -320.0f, 320.0f, 320.0f);
+    func_80008FB8(arg0, 0.5f);
+    arg0->func_ptr = NULL;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_0F_WhackAPlant/131FA0", func_800F70AC_WhackAPlant);
 
-INCLUDE_RODATA("asm/nonmatchings/overlays/ovl_0F_WhackAPlant/131FA0", D_800FB580_WhackAPlant);
+void func_800F7570_WhackAPlant(omObjData* arg0) {
+    unkGlobalStruct_00* temp_s1 = arg0->unk_50;
 
-INCLUDE_RODATA("asm/nonmatchings/overlays/ovl_0F_WhackAPlant/131FA0", D_800FB584_WhackAPlant);
+    if (D_800FB60A_WhackAPlant < 0x69) {
+        omSetTra(arg0, arg0->trans.x, arg0->trans.y + PI, arg0->trans.z);
+        func_80017DB0(arg0);
+    } else {
+        D_800FB710_WhackAPlant[0] = 3;
+        arg0->func_ptr = &func_800F7714_WhackAPlant;
+        func_800258EC(D_800FB6F8_WhackAPlant->model[0], 0x1C00, 0x400);
+        temp_s1->unk_3C = 0.0f;
+    }
 
-INCLUDE_RODATA("asm/nonmatchings/overlays/ovl_0F_WhackAPlant/131FA0", D_800FB5C8_WhackAPlant);
-
-INCLUDE_RODATA("asm/nonmatchings/overlays/ovl_0F_WhackAPlant/131FA0", D_800FB5CC_WhackAPlant);
-
-INCLUDE_RODATA("asm/nonmatchings/overlays/ovl_0F_WhackAPlant/131FA0", D_800FB608_WhackAPlant);
-
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_0F_WhackAPlant/131FA0", func_800F7570_WhackAPlant);
+    D_800FB60A_WhackAPlant += 1;
+    D_800FB724_WhackAPlant.x = func_800AEAC0(D_800FB60C_WhackAPlant) * D_800FB610_WhackAPlant;
+    D_800FB724_WhackAPlant.z = func_800AEFD0(D_800FB60C_WhackAPlant) * D_800FB610_WhackAPlant;
+    D_800FB724_WhackAPlant.y = D_800FB614_WhackAPlant + 270.0f;
+    D_800FB718_WhackAPlant = D_800FB618_WhackAPlant + 270.0f;
+    D_800FB60C_WhackAPlant -= 3.4285715f;
+    D_800FB610_WhackAPlant = D_800FB610_WhackAPlant + 7.561905f;
+    D_800FB614_WhackAPlant = D_800FB614_WhackAPlant + 7.6190476f;
+    D_800FB618_WhackAPlant = D_800FB618_WhackAPlant + -2.5714285f;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_0F_WhackAPlant/131FA0", func_800F7714_WhackAPlant);
 
-INCLUDE_RODATA("asm/nonmatchings/overlays/ovl_0F_WhackAPlant/131FA0", D_800FB61C_WhackAPlant);
-
-INCLUDE_RODATA("asm/nonmatchings/overlays/ovl_0F_WhackAPlant/131FA0", D_800FB620_WhackAPlant);
-
-INCLUDE_RODATA("asm/nonmatchings/overlays/ovl_0F_WhackAPlant/131FA0", D_800FB624_WhackAPlant);
-
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_0F_WhackAPlant/131FA0", func_800F7AE0_WhackAPlant);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_0F_WhackAPlant/131FA0", func_800F7F90_WhackAPlant);
+void func_800F7F90_WhackAPlant(omObjData* arg0) {
+    unkGlobalStruct_00* temp_s1 = arg0->unk_50;
+    unk_Struct01* temp_v1 = temp_s1->unk_E4;
+
+    if (D_800FB61C_WhackAPlant < 0xF) {
+        temp_s1->unk_3C += temp_v1->unk_08;
+        arg0->trans.x += temp_v1->unk_0C;
+        arg0->trans.z += temp_v1->unk_10;
+        D_800FB61C_WhackAPlant += 1;
+        if (D_800FB61C_WhackAPlant == 0xF) {
+            func_800184BC(arg0, 0);
+            arg0->trans.x = arg0->trans.z = 0.0f;
+            if (D_800FB698_WhackAPlant == 0) {
+                D_800FB730_WhackAPlant = 1;
+            }
+        }
+    }
+    func_80017DB0(arg0);
+    func_8009ECB0(&D_800F2B7C[arg0->model[0]].unk7C, 0.0f, temp_s1->unk_3C, 0.0f);
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_0F_WhackAPlant/131FA0", func_800F8098_WhackAPlant);
+
+// void func_800F8098_WhackAPlant(omObjData* arg0) {
+//     u16 temp = (++D_800FB61E_WhackAPlant);
+//     if (temp < 0x5A) {
+//         arg0->unk_1C += -2.7777777f;
+//     }
+    
+//     if (D_800FB620_WhackAPlant != 0) {
+//         u16 temp2 = (--D_800FB620_WhackAPlant); 
+//         if (!temp2) {
+//             func_80060540(0x24B, 0);
+//         }
+//     }
+    
+//     func_80017DB0(arg0);
+// }
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_0F_WhackAPlant/131FA0", func_800F8134_WhackAPlant);
 
@@ -62,15 +160,81 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_0F_WhackAPlant/131FA0", func_800F998C
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_0F_WhackAPlant/131FA0", func_800F9AF4_WhackAPlant);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_0F_WhackAPlant/131FA0", func_800F9D38_WhackAPlant);
+void func_800F9D38_WhackAPlant(omObjData* arg0) {
+    D_800FB6A4_WhackAPlant = func_80019060(D_800FB6A2_WhackAPlant, 0, 1);
+    func_80018D84(D_800FB6A4_WhackAPlant, 0x8000);
+    D_800FB69E_WhackAPlant = func_80019060(D_800FB69C_WhackAPlant, 0, 1);
+    D_800FB6A0_WhackAPlant = func_80019060(D_800FB69C_WhackAPlant, 0, 1);
+    func_80018D84(D_800FB69E_WhackAPlant, 0x8000);
+    func_80018D84(D_800FB6A0_WhackAPlant, 0x8000);
+    SetBasicSpritePos(D_800FB6A4_WhackAPlant, 0x8E, 0x20);
+    SetBasicSpritePos(D_800FB69E_WhackAPlant, 0xA2, 0x20);
+    SetBasicSpritePos(D_800FB6A0_WhackAPlant, 0xAA, 0x20);
+    arg0->work[0] = 0;
+    arg0->work[1] = 0;
+    arg0->work[2] = 0;
+    arg0->work[3] = 0;
+    arg0->scale.y = 1.0f;
+    arg0->func_ptr = &func_800F9E44_WhackAPlant;
+}
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_0F_WhackAPlant/131FA0", func_800F9E44_WhackAPlant);
+void func_800F9E44_WhackAPlant(omObjData* arg0) {
+    s32 temp_v1;
+    u32 temp_s0;
+    s32 temp_s1;
+    
+    temp_v1 = arg0->unk_10;
+    
+    if (temp_v1 != 0) {
+        arg0->unk_10 = 0;
+        if (temp_v1 == 1) {
+            arg0->work[0] += arg0->work[3];
+            arg0->work[3] = 0;
+            arg0->work[1] = 2;
+            arg0->scale.y = 1.0f;
+        }
+    }
+    
+    switch (arg0->work[1]) {
+    case 2:
+        arg0->scale.y += 0.3f;
+        if (arg0->scale.y >= 2.4f) {
+            arg0->work[1] = 4;
+            arg0->scale.y = 2.4f;
+        }
+        break;
+
+    case 4:
+        arg0->scale.y -= 0.3f;
+        if (arg0->scale.y <= 1.0f) {
+            arg0->work[1] = 0;
+            arg0->scale.y = 1.0f;
+        }
+        break;
+    }
+
+    temp_s1 = arg0->work[0];
+    temp_s0 = arg0->work[0];
+    temp_s0 = temp_s0 / 10;
+    func_80018E50(D_800FB69E_WhackAPlant, temp_s0, 0);
+    func_80018E50(D_800FB6A0_WhackAPlant, temp_s1 - (temp_s0 * 0xA), 0);
+    SetBasicSpriteSize(D_800FB69E_WhackAPlant, 1.0f, arg0->scale.y);
+    SetBasicSpriteSize(D_800FB6A0_WhackAPlant, 1.0f, arg0->scale.y);
+    SetBasicSpritePos(D_800FB69E_WhackAPlant, 0xA0, 32.0f - ((arg0->scale.y - 1.0f) * 6.0f));
+    SetBasicSpritePos(D_800FB6A0_WhackAPlant, 0xB0, 32.0f - ((arg0->scale.y - 1.0f) * 6.0f));
+}
+
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_0F_WhackAPlant/131FA0", func_800FA078_WhackAPlant);
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_0F_WhackAPlant/131FA0", func_800FA1E0_WhackAPlant);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_0F_WhackAPlant/131FA0", func_800FA668_WhackAPlant);
+void func_800FA668_WhackAPlant(void) {
+    if ((D_800FB608_WhackAPlant != 0) || (D_800F5144 != 0)) {
+        func_800FB4C0_WhackAPlant(131);
+        func_800601D4(40);
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_0F_WhackAPlant/131FA0", func_800FA6AC_WhackAPlant);
 

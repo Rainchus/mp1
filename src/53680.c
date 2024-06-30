@@ -184,7 +184,7 @@ void func_80053020(void) {
     s32 i;
     playerMain* player;
 
-    for (i = 0; i < 4; i++) {
+    for (i = 0; i < MAX_PLAYERS; i++) {
         player = GetPlayerStruct(i);
         player->playerObj = NULL;
     }

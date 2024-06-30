@@ -255,7 +255,7 @@ void func_80055A34(s32 arg0) {
 
 void func_80055A40(s32 arg1) {
     s32 i;
-    for (i = 0; i < 4; i++) {
+    for (i = 0; i < MAX_PLAYERS; i++) {
         func_800543D8(i);
         func_80054758(i, D_800C54D8[i + 4][0], D_800C54D8[i + 4][1]);
         func_800546B4(i, gPlayers[i].turn_status);

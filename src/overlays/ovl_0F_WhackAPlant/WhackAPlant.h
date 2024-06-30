@@ -1,0 +1,42 @@
+#include "common.h"
+
+void func_800F6D54_WhackAPlant(void);
+void func_800FA078_WhackAPlant(void);
+void func_800FA1E0_WhackAPlant(void);
+void func_800F7714_WhackAPlant(void);
+void func_800F9E44_WhackAPlant(omObjData* arg0);
+void func_800FB4C0_WhackAPlant(s32);
+
+extern s16 D_800FB69A_WhackAPlant;
+extern u16 D_800FB6BA_WhackAPlant;
+extern u16 D_800FB6BC_WhackAPlant;
+extern s16 D_800FB6C0_WhackAPlant[];
+extern s16 D_800FB6D8_WhackAPlant[];
+extern s8 D_800FB6EA_WhackAPlant[];
+extern s16 D_800FB6F4_WhackAPlant;
+extern f32 D_800EE738[];
+extern Vec3f D_800FB734_WhackAPlant;
+extern u16 D_800FB608_WhackAPlant;
+extern s16 D_800FB69C_WhackAPlant;
+extern u16 D_800FB69E_WhackAPlant;
+extern u16 D_800FB6A0_WhackAPlant;
+extern s16 D_800FB6A2_WhackAPlant;
+extern u16 D_800FB6A4_WhackAPlant;
+extern omObjData* D_800F2AF8[];
+extern u16 D_800FB740_WhackAPlant;
+extern s16 D_800F3778;
+extern u16 D_800FB60A_WhackAPlant;
+extern f32 D_800FB60C_WhackAPlant;
+extern f32 D_800FB610_WhackAPlant;
+extern f32 D_800FB614_WhackAPlant;
+extern f32 D_800FB618_WhackAPlant;
+extern omObjData* D_800FB6F8_WhackAPlant;
+extern s16 D_800FB710_WhackAPlant[2];
+extern f32 D_800FB718_WhackAPlant;
+extern Vec3f D_800FB724_WhackAPlant;
+//extern s32 D_800F2B7C;
+extern u16 D_800FB61C_WhackAPlant;
+extern s16 D_800FB698_WhackAPlant;
+extern s16 D_800FB730_WhackAPlant;
+extern u16 D_800FB61E_WhackAPlant;
+extern u16 D_800FB620_WhackAPlant;

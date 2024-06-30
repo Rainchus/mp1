@@ -1,6 +1,8 @@
 #ifndef _MACROS_H_
 #define _MACROS_H_
 
+#define MAX_PLAYERS 4
+
 #define SQ(x) ((x) * (x))
 
 #define PI      3.142857f

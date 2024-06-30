@@ -861,7 +861,8 @@ segments:
       - [0x122BA0, c]
       - [0x1240D0, c]
       - [0x124FD0, data, 1217D0]
-      - [0x125050, .rodata, 1217D0]
+      #- [0x125010, data, 122BA0] #800F9E20
+      - [0x125050, .rodata, 1217D0] #800F9E60
       - [0x125080, .rodata, 122BA0]
       - {0x1250D0, type: bss, vram: 0x800F9EE0, name: ovl_0C_bss}
   - type: code
@@ -905,7 +906,8 @@ segments:
     subsegments:
       - [0x131FA0, c]
       - [0x136C10, c]
-      - [0x136F40, .rodata, 131FA0]
+      - [0x136F40, data, 131FA0]
+      - [0x136FF0, .rodata, 131FA0]
       - {0x137050, type: bss, vram: 0x800FB690, name: ovl_0F_bss}
   - type: code
     start: 0x137050

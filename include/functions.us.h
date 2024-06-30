@@ -316,7 +316,7 @@ void func_800A0D00(void*, f32, f32, f32);
 void func_80025CA8(s16, s32);
 void func_80025B34(s16);
 void func_80026040(s16);
-void func_80039C48(s32*, s16*);
+void func_80039C48(char*, s16*);
 void func_80009340(omObjData*, s32, s32, s32, s32);
 void func_8001E2F8(s16, u8);
 void func_8001E360(s16, u8, u8, u8);

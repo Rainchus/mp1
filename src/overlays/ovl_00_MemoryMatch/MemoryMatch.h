@@ -81,7 +81,6 @@ extern u16 D_800FE2C2_MemoryMatch;
 extern u16 D_800FE2C4_MemoryMatch;
 extern u16 D_800F5144;
 
-extern omObjData* D_800F3FB0;
 extern Vec3f D_800FDDC0_MemoryMatch;
 extern Vec3f D_800FDDCC_MemoryMatch;
 

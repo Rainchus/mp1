@@ -142,7 +142,7 @@ void func_8001A454(void) {
 void func_8001A498(void) {
     s32 i;
 
-    for (i = 0; i < 4; i++) {
+    for (i = 0; i < MAX_PLAYERS; i++) {
         if (i < D_800F3778) {
             D_800ED558[i] = 0;
             gPlayers[i].unk_06 = gPlayers[i].unk_06 & ~1;

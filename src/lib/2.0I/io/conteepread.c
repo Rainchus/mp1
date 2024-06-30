@@ -91,30 +91,3 @@ static void __osPackEepReadData(u8 address) {
 	ptr += sizeof(__OSContEepromFormat);
 	ptr[0] = CONT_CMD_END;
 }
-
-// static void __osPackEepReadData(u8 address) {
-// 	u8 *ptr;
-// 	__OSContEepromFormat eepromformat;
-// 	int i;
-// 	ptr = (u8 *)&__osEepPifRam.ramarray;
-
-// 	for (i = 0; i < ARRLEN(__osEepPifRam.ramarray); i++) {
-// 		__osEepPifRam.ramarray[i] = CONT_CMD_NOP;
-// 	}
-// 	__osEepPifRam.pifstatus = CONT_CMD_EXE;
-
-// 	eepromformat.txsize = CONT_CMD_READ_EEPROM_TX;
-// 	eepromformat.rxsize = CONT_CMD_READ_EEPROM_RX;
-// 	eepromformat.cmd = CONT_CMD_READ_EEPROM;
-// 	eepromformat.address = address;
-// 	for (i = 0; i < ARRLEN(eepromformat.data); i++) {
-// 		eepromformat.data[i] = 0;
-// 	}
-// 	for (i = 0; i < 4; i++) { //skip the first 4 bytes
-// 		*ptr++ = 0;
-// 	}
-
-// 	*(__OSContEepromFormat *)(ptr) = eepromformat;
-// 	ptr += sizeof(__OSContEepromFormat);
-// 	ptr[0] = CONT_CMD_END;
-// }

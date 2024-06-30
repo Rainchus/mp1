@@ -223,7 +223,7 @@ void func_80056B78(void) {
         gameStatus->unk_23 = 0;
         gameStatus->unk_24 = 1;
         
-        for (i = 0; i < 4; i++) {
+        for (i = 0; i < MAX_PLAYERS; i++) {
             temp_v0 = GetPlayerStruct(i);
             temp_v0->starAmount = 0;
             temp_v0->poisonedFlag = 0;
