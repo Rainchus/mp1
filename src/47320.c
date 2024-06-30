@@ -82,7 +82,7 @@ void func_80046828(omObjData* arg0) {
     switch (arg0->work[0]) {
     case 0:
         arg0->rot.x =  arg0->rot.x + 30.0f;
-        arg0->scale.x = _sinf(arg0->rot.x * 0.0174532925199432955) * 0.5f + 1.0f;
+        arg0->scale.x = sinf(arg0->rot.x * 0.0174532925199432955) * 0.5f + 1.0f;
         
         for (i = 1; (((D_800D6658 + 1) / 10) + 1) >= i; i++) {
             func_80067354(D_800D65FC[D_800D6654], i, arg0->scale.x, arg0->scale.x);
@@ -130,7 +130,7 @@ void func_800471FC(void) {
 }
 
 void func_8004720C(omObjData* arg0) {
-    arg0->trans.y = 74.0f - (_sinf((f32) ((f64) arg0->rot.y * 0.0174532925199432955)) * 5.0f);
+    arg0->trans.y = 74.0f - (sinf((f32) ((f64) arg0->rot.y * 0.0174532925199432955)) * 5.0f);
     arg0->rot.y += 8.0f;
     
     if (arg0->rot.y >= 360.0f) {

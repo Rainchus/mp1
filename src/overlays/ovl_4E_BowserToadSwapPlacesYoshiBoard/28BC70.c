@@ -49,9 +49,9 @@ void func_800F6708_BowserToadSwapPlacesYoshiBoard(omObjData* arg0) {
     Object* temp_s0;
 
     temp_s0 = D_800F7858_BowserToadSwapPlacesYoshiBoard;
-    temp_s0->unk_18.x = _sinf(arg0->trans.x * (0.017453292519943295));
+    temp_s0->unk_18.x = sinf(arg0->trans.x * (0.017453292519943295));
     temp_s0 = D_800F7858_BowserToadSwapPlacesYoshiBoard;
-    temp_s0->unk_18.z = _cosf(arg0->trans.x * (0.017453292519943295));
+    temp_s0->unk_18.z = cosf(arg0->trans.x * (0.017453292519943295));
     arg0->trans.x += 5.0f;
     if (arg0->trans.x >= 360.0f) {
         arg0->trans.x -= 360.0f;
@@ -82,7 +82,7 @@ void func_800F67BC_BowserToadSwapPlacesYoshiBoard(void) {
     
     for (i = 0; i < 0x37; i++) {
         temp_s0 = D_800F7848_BowserToadSwapPlacesYoshiBoard->unk_3C;
-        temp_s0->unk_24 = -_sinf( ((i * 6) + 0x1E) * (0.017453292519943295)) * 30.0f;
+        temp_s0->unk_24 = -sinf( ((i * 6) + 0x1E) * (0.017453292519943295)) * 30.0f;
         if (i == 10) {
             func_8004EE14(0, &D_800F7878_BowserToadSwapPlacesYoshiBoard, 0x14, D_800F7840_BowserToadSwapPlacesYoshiBoard);
         }
@@ -109,9 +109,9 @@ void func_800F67BC_BowserToadSwapPlacesYoshiBoard(void) {
     
     for (i = 0, var_s2 = 0; i < 3;) { //strange for loop that only increments if i is 0?
         temp_s0_2 = D_800F7848_BowserToadSwapPlacesYoshiBoard->unk_3C;
-        temp_s0_2->unk_24 = -_sinf((var_s2 * (0.017453292519943295))) * 20.0f;
+        temp_s0_2->unk_24 = -sinf((var_s2 * (0.017453292519943295))) * 20.0f;
         temp_s0 = D_800F7840_BowserToadSwapPlacesYoshiBoard->unk_3C;
-        temp_s0->unk_24 = -_sinf((var_s2 * (0.017453292519943295))) * 20.0f;
+        temp_s0->unk_24 = -sinf((var_s2 * (0.017453292519943295))) * 20.0f;
         
         if (func_8004F018(D_800F7848_BowserToadSwapPlacesYoshiBoard) == 0) {
             if (i != 2) {

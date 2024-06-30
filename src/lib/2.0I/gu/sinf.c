@@ -30,9 +30,9 @@
  * ====================================================================
  */
 
-#pragma weak fsin = _sinf
-#pragma weak sinf = _sinf
-#define	fsin _sinf
+#pragma weak fsin = __sinf
+#pragma weak sinf = __sinf
+#define	fsin __sinf
 
 /* coefficients for polynomial approximation of sin on +/- pi/2 */
 
@@ -67,7 +67,7 @@ static const fu	zero = {0x00000000};
  */
 
 float
-_sinf( float x )
+fsin( float x )
 {
 double	dx, xsq, poly;
 double	dn;

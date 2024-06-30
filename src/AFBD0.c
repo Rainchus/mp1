@@ -2,7 +2,7 @@
 
 extern f32 D_800C81C0[];
 
-// _cosf
+// cosf
 f32 func_800AEFD0(f32 angle) {
     f32 result;
     f32 angleDegrees;

@@ -8,7 +8,7 @@
 #include "engine/siman.h"
 
 typedef s32 func_ptr(void);
-f32 _sinf(f32);
+f32 sinf(f32);
 void func_8006EEB8(s16, u8, u8, s16, s16);
 void func_8006F3BC(s16, s16, s16, s32, s32);
 s32 func_8006E93C(TextWindow*, void*);
@@ -97,7 +97,7 @@ void func_80021CDC(s16, u8, s32);
 void func_800500A4(void);
 void func_80050160(void);
 void func_80060618(s32, u8);
-f32 _cosf(f32);
+f32 cosf(f32);
 void func_8004EA8C(Object*, Vec3f*, s32, Vec3f*);
 s32 func_8004F018(Object*);
 void func_8004F40C(Object*, s32, s32);
@@ -293,7 +293,7 @@ void func_8006E070(s16, s32);
 u16 func_800174F4(s32, s32);
 void func_8001775C(omObjData*, u16, s32);
 void func_800264F8(s16 arg0, s16 arg1, f32 arg2, char* arg3, char* arg4, s32 arg5);
-f32 _sinf(f32);
+f32 sinf(f32);
 void func_8001D420(s32, Vec3f*, Vec3f*, Vec3f*);
 void func_8001D57C(s32);
 f32 func_800B1750(f32);

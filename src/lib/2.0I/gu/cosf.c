@@ -1,156 +1,139 @@
 #include "common.h"
 
-// /**************************************************************************
-//  *									  *
-//  *		 Copyright (C) 1994, Silicon Graphics, Inc.		  *
-//  *									  *
-//  *  These coded instructions, statements, and computer programs  contain  *
-//  *  unpublished  proprietary  information of Silicon Graphics, Inc., and  *
-//  *  are protected by Federal copyright law.  They  may  not be disclosed  *
-//  *  to  third  parties  or copied or duplicated in any form, in whole or  *
-//  *  in part, without the prior written consent of Silicon Graphics, Inc.  *
-//  *									  *
-//  **************************************************************************/
+/**************************************************************************
+ *									  *
+ *		 Copyright (C) 1994, Silicon Graphics, Inc.		  *
+ *									  *
+ *  These coded instructions, statements, and computer programs  contain  *
+ *  unpublished  proprietary  information of Silicon Graphics, Inc., and  *
+ *  are protected by Federal copyright law.  They  may  not be disclosed  *
+ *  to  third  parties  or copied or duplicated in any form, in whole or  *
+ *  in part, without the prior written consent of Silicon Graphics, Inc.  *
+ *									  *
+ **************************************************************************/
 
-// #include "guint.h"
+#include "guint.h"
 
-// /* ====================================================================
-//  * ====================================================================
-//  *
-//  * Module: fcos.c
-//  * $Revision: 1.2 $
-//  * $Date: 1995/07/12 17:47:57 $
-//  * $Author: jeffd $
-//  * $Source: /hosts/liberte/disk6/Master/cvsmdev2/PR/libultra/gu/_cosf.c,v $
-//  *
-//  * Revision history:
-//  *  09-Jun-93 - Original Version
-//  *
-//  * Description:	source code for fcos function
-//  *
-//  * ====================================================================
-//  * ====================================================================
-//  */
+/* ====================================================================
+ * ====================================================================
+ *
+ * Module: fcos.c
+ * $Revision: 1.2 $
+ * $Date: 1995/07/12 17:47:57 $
+ * $Author: jeffd $
+ * $Source: /hosts/liberte/disk6/Master/cvsmdev2/PR/libultra/gu/cosf.c,v $
+ *
+ * Revision history:
+ *  09-Jun-93 - Original Version
+ *
+ * Description:	source code for fcos function
+ *
+ * ====================================================================
+ * ====================================================================
+ */
 
-// #pragma weak fcos = __cosf
-// #pragma weak _cosf = __cosf
-// #define	fcos __cosf
+#pragma weak fcos = __cosf
+#pragma weak cosf = __cosf
+#define	fcos __cosf
 
-// /* coefficients for polynomial approximation of _cosf on +/- pi/2 */
+/* coefficients for polynomial approximation of cosf on +/- pi/2 */
 
-// static const du	P[] =
-// {
-// {{0x3ff00000,	0x00000000}},
-// {{0xbfc55554,	0xbc83656d}},
-// {{0x3f8110ed,	0x3804c2a0}},
-// {{0xbf29f6ff,	0xeea56814}},
-// {{0x3ec5dbdf,	0x0e314bfe}},
-// };
+static const du	P[] =
+{
+{{0x3ff00000,	0x00000000}},
+{{0xbfc55554,	0xbc83656d}},
+{{0x3f8110ed,	0x3804c2a0}},
+{{0xbf29f6ff,	0xeea56814}},
+{{0x3ec5dbdf,	0x0e314bfe}},
+};
 
-// static const du	rpi =
-// {{0x3fd45f30,	0x6dc9c883}};
+static const du	rpi =
+{{0x3fd45f30,	0x6dc9c883}};
 
-// static const du	pihi =
-// {{0x400921fb,	0x50000000}};
+static const du	pihi =
+{{0x400921fb,	0x50000000}};
 
-// static const du	pilo =
-// {{0x3e6110b4,	0x611a6263}};
+static const du	pilo =
+{{0x3e6110b4,	0x611a6263}};
 
-// static const fu	zero = {0x00000000};
-
-
-// /* ====================================================================
-//  *
-//  * FunctionName		fcos
-//  *
-//  * Description		computes cosine of arg
-//  *
-//  * ====================================================================
-//  */
-
-// float
-// fcos( float x )
-// {
-// float	absx;
-// double	dx, xsq, poly;
-// double	dn;
-// int	n;
-// double	result;
-// int	ix, xpt;
+static const fu	zero = {0x00000000};
 
 
-// 	ix = *(int *)&x;
-// 	xpt = (ix >> 22);
-// 	xpt &= 0x1ff;
+/* ====================================================================
+ *
+ * FunctionName		fcos
+ *
+ * Description		computes cosine of arg
+ *
+ * ====================================================================
+ */
 
-// 	/* xpt is exponent(x) + 1 bit of mantissa */
+float
+fcos( float x )
+{
+float	absx;
+double	dx, xsq, poly;
+double	dn;
+int	n;
+double	result;
+int	ix, xpt;
 
 
-// 	if ( xpt < 0x136 )
-// 	{
-// 		/* |x| < 2^28 */
+	ix = *(int *)&x;
+	xpt = (ix >> 22);
+	xpt &= 0x1ff;
 
-// 		/* use the standard algorithm from Cody and Waite, doing
-// 		   the computations in double precision
-// 		*/
+	/* xpt is exponent(x) + 1 bit of mantissa */
 
-// 		absx = ABS(x);
 
-// 		dx = absx;
+	if ( xpt < 0x136 )
+	{
+		/* |x| < 2^28 */
 
-// 		dn = dx*rpi.d + 0.5;
-// 		n = ROUND(dn);
-// 		dn = n;
+		/* use the standard algorithm from Cody and Waite, doing
+		   the computations in double precision
+		*/
 
-// 		dn -= 0.5;
+		absx = ABS(x);
 
-// 		dx = dx - dn*pihi.d;
-// 		dx = dx - dn*pilo.d;	/* dx = x - (n - 0.5)*pi */
+		dx = absx;
 
-// 		xsq = dx*dx;
+		dn = dx*rpi.d + 0.5;
+		n = ROUND(dn);
+		dn = n;
 
-// 		poly = ((P[4].d*xsq + P[3].d)*xsq + P[2].d)*xsq + P[1].d;
+		dn -= 0.5;
 
-// 		result = dx + (dx*xsq)*poly;
+		dx = dx - dn*pihi.d;
+		dx = dx - dn*pilo.d;	/* dx = x - (n - 0.5)*pi */
 
-// 		/* negate result if n is odd */
+		xsq = dx*dx;
 
-// 		if ( (n & 1) == 0 )
-// 			return ( (float)result );
+		poly = ((P[4].d*xsq + P[3].d)*xsq + P[2].d)*xsq + P[1].d;
 
-// 		return ( -(float)result );
-// 	}
+		result = dx + (dx*xsq)*poly;
 
-// 	if ( x != x )
-// 	{
-// 		/* x is a NaN; return a quiet NaN */
+		/* negate result if n is odd */
 
-// #ifdef _IP_NAN_SETS_ERRNO
+		if ( (n & 1) == 0 )
+			return ( (float)result );
 
-// 		*__errnoaddr = EDOM;
-// #endif
+		return ( -(float)result );
+	}
+
+	if ( x != x )
+	{
+		/* x is a NaN; return a quiet NaN */
+
+#ifdef _IP_NAN_SETS_ERRNO
+
+		*__errnoaddr = EDOM;
+#endif
 		
-// 		return ( __libm_qnan_f );
-// 	}
+		return ( __libm_qnan_f );
+	}
 
-// 	/* just give up and return 0.0 */
+	/* just give up and return 0.0 */
 
-// 	return ( zero.f );
-// }
-
-
-INCLUDE_RODATA("asm/nonmatchings/lib/2.0I/gu/cosf", D_800CBB70);
-
-INCLUDE_RODATA("asm/nonmatchings/lib/2.0I/gu/cosf", D_800CBBB0);
-
-INCLUDE_RODATA("asm/nonmatchings/lib/2.0I/gu/cosf", D_800CBBF8);
-
-INCLUDE_RODATA("asm/nonmatchings/lib/2.0I/gu/cosf", D_800CBC04);
-
-INCLUDE_RODATA("asm/nonmatchings/lib/2.0I/gu/cosf", D_800CBC18);
-
-INCLUDE_RODATA("asm/nonmatchings/lib/2.0I/gu/cosf", D_800CBCF8);
-
-INCLUDE_RODATA("asm/nonmatchings/lib/2.0I/gu/cosf", D_800CBD18);
-
-INCLUDE_ASM("asm/nonmatchings/lib/2.0I/gu/cosf", _cosf);
+	return ( zero.f );
+}

@@ -26,12 +26,12 @@ void guRotateRPYF(float mf[4][4], float r, float p, float h)
 	r *= dtor;
 	p *= dtor;
 	h *= dtor;
-	sinr = _sinf(r);
-	cosr = _cosf(r);
-	sinp = _sinf(p);
-	cosp = _cosf(p);
-	sinh = _sinf(h);
-	cosh = _cosf(h);
+	sinr = sinf(r);
+	cosr = cosf(r);
+	sinp = sinf(p);
+	cosp = cosf(p);
+	sinh = sinf(h);
+	cosh = cosf(h);
 
 	guMtxIdentF(mf);
 

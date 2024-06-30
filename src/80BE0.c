@@ -59,3 +59,17 @@ INCLUDE_ASM("asm/nonmatchings/80BE0", func_80081320);
 INCLUDE_ASM("asm/nonmatchings/80BE0", func_800814D0);
 
 INCLUDE_ASM("asm/nonmatchings/80BE0", func_80081578);
+
+INCLUDE_RODATA("asm/nonmatchings/80BE0", D_800CBB70);
+
+INCLUDE_RODATA("asm/nonmatchings/80BE0", D_800CBBB0);
+
+INCLUDE_RODATA("asm/nonmatchings/80BE0", D_800CBBF8);
+
+INCLUDE_RODATA("asm/nonmatchings/80BE0", D_800CBC04);
+
+INCLUDE_RODATA("asm/nonmatchings/80BE0", D_800CBC18);
+
+INCLUDE_RODATA("asm/nonmatchings/80BE0", D_800CBCF8);
+
+INCLUDE_RODATA("asm/nonmatchings/80BE0", D_800CBD18);

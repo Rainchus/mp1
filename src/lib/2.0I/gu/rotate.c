@@ -21,8 +21,8 @@ void guRotateF(float mf[4][4], float a, float x, float y, float z)
 
 	guNormalize(&x, &y, &z);
 	a *= dtor;
-	sine = _sinf(a);
-	cosine = _cosf(a);
+	sine = sinf(a);
+	cosine = cosf(a);
 	t = (1-cosine);
 	ab = x*y*t;
 	bc = y*z*t;

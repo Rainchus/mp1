@@ -185,7 +185,7 @@ INCLUDE_RODATA("asm/nonmatchings/4E530", D_800CB0DC);
 INCLUDE_RODATA("asm/nonmatchings/4E530", D_800CB0E4);
 
 INCLUDE_RODATA("asm/nonmatchings/4E530", D_800CB0EC);
-
+f32 fsin(f32);
 void func_8004E564(omObjData* arg0) { //matches, needs rodata support
     f32 temp_f20;
     f32 temp_f20_2;
@@ -213,14 +213,14 @@ void func_8004E564(omObjData* arg0) { //matches, needs rodata support
         gPlayers[arg0->work[0]].playerObj->coords.z = gPlayers[arg0->work[0]].playerObj->coords.z + arg0->scale.z;   
         new_var = gPlayers[arg0->work[0]].playerObj;
         temp_v0 = new_var;
-        temp_f20 = _sinf(arg0->work[1] * 180.0f / arg0->work[2] * 0.017453292519943295) * arg0->rot.x;
-        temp_v0->coords.x += temp_f20 - (_sinf((arg0->work[1] + 1) * 180.0f / arg0->work[2] * 0.017453292519943295) * arg0->rot.x);
+        temp_f20 = fsin(arg0->work[1] * 180.0f / arg0->work[2] * 0.017453292519943295) * arg0->rot.x;
+        temp_v0->coords.x += temp_f20 - (fsin((arg0->work[1] + 1) * 180.0f / arg0->work[2] * 0.017453292519943295) * arg0->rot.x);
         temp_v0 = gPlayers[arg0->work[0]].playerObj;
-        temp_f20_2 = _sinf(arg0->work[1] * 180.0f / arg0->work[2] * 0.017453292519943295) * arg0->rot.y;
-        temp_v0->coords.y += temp_f20_2 - (_sinf((arg0->work[1] + 1) * 180.0f / arg0->work[2] * 0.017453292519943295) * arg0->rot.y);
+        temp_f20_2 = fsin(arg0->work[1] * 180.0f / arg0->work[2] * 0.017453292519943295) * arg0->rot.y;
+        temp_v0->coords.y += temp_f20_2 - (fsin((arg0->work[1] + 1) * 180.0f / arg0->work[2] * 0.017453292519943295) * arg0->rot.y);
         var_s0 = gPlayers[arg0->work[0]].playerObj;
-        temp_f20_5 = _sinf(arg0->work[1] * 180.0f / arg0->work[2] * 0.017453292519943295)* arg0->rot.z;
-        temp_f20_5 = temp_f20_5 - (_sinf(( (((arg0->work[1] + 1) * 180.0f) / arg0->work[2]) * 0.017453292519943295)) * arg0->rot.z);
+        temp_f20_5 = fsin(arg0->work[1] * 180.0f / arg0->work[2] * 0.017453292519943295)* arg0->rot.z;
+        temp_f20_5 = temp_f20_5 - (fsin(( (((arg0->work[1] + 1) * 180.0f) / arg0->work[2]) * 0.017453292519943295)) * arg0->rot.z);
         temp_f20_5 += var_s0->coords.z;
         var_s0->coords.z = temp_f20_5;
     } else if (arg0->work[1] == 0) {
@@ -235,12 +235,12 @@ void func_8004E564(omObjData* arg0) { //matches, needs rodata support
         var_s0->coords.y += arg0->scale.y;
         var_s0->coords.z += arg0->scale.z;
 
-        temp_f20_3 = _sinf(arg0->work[1] * 180.0f / arg0->work[2] * 0.017453292519943295)* arg0->rot.x;
-        var_s0->coords.x += temp_f20_3 - (_sinf(( (((arg0->work[1] + 1) * 180.0f) / arg0->work[2]) * 0.017453292519943295)) * arg0->rot.x);
-        temp_f20_4 = _sinf(arg0->work[1] * 180.0f / arg0->work[2] * 0.017453292519943295)* arg0->rot.y;
-        var_s0->coords.y += temp_f20_4 - (_sinf(( (((arg0->work[1] + 1) * 180.0f) / arg0->work[2]) * 0.017453292519943295)) * arg0->rot.y);
-        temp_f20_5 = _sinf(arg0->work[1] * 180.0f / arg0->work[2] * 0.017453292519943295)* arg0->rot.z;
-        temp_f20_5 = temp_f20_5 - (_sinf(( (((arg0->work[1] + 1) * 180.0f) / arg0->work[2]) * 0.017453292519943295)) * arg0->rot.z);
+        temp_f20_3 = fsin(arg0->work[1] * 180.0f / arg0->work[2] * 0.017453292519943295)* arg0->rot.x;
+        var_s0->coords.x += temp_f20_3 - (fsin(( (((arg0->work[1] + 1) * 180.0f) / arg0->work[2]) * 0.017453292519943295)) * arg0->rot.x);
+        temp_f20_4 = fsin(arg0->work[1] * 180.0f / arg0->work[2] * 0.017453292519943295)* arg0->rot.y;
+        var_s0->coords.y += temp_f20_4 - (fsin(( (((arg0->work[1] + 1) * 180.0f) / arg0->work[2]) * 0.017453292519943295)) * arg0->rot.y);
+        temp_f20_5 = fsin(arg0->work[1] * 180.0f / arg0->work[2] * 0.017453292519943295)* arg0->rot.z;
+        temp_f20_5 = temp_f20_5 - (fsin(( (((arg0->work[1] + 1) * 180.0f) / arg0->work[2]) * 0.017453292519943295)) * arg0->rot.z);
         temp_f20_5 += var_s0->coords.z;
         var_s0->coords.z = temp_f20_5;
     }
@@ -274,7 +274,7 @@ void func_8004F044(Object* arg0) {
 void func_8004F084(omObjData* arg0) {
     f32 temp_f0;
 
-    func_800264F8(arg0->mdlcnt, arg0->mtncnt, (_sinf((f32) (arg0->trans.x * 0.0174532925199432955)) / 2.0f) + 0.5f, "030-hata1", "hata2", 0);
+    func_800264F8(arg0->mdlcnt, arg0->mtncnt, (fsin((f32) (arg0->trans.x * 0.0174532925199432955)) / 2.0f) + 0.5f, "030-hata1", "hata2", 0);
     arg0->trans.x += 20.0f;
     if (arg0->trans.x >= 360.0f) {
         arg0->trans.x -= 360.0f;

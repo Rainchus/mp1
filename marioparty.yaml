@@ -596,7 +596,7 @@ segments:
       - [0xCC500, rodata]
       - [0xCC590, .rodata, 72D90]
       - [0xCC700, .rodata, 80BE0]
-      - [0xCC770, .rodata, lib/2.0I/gu/cosf]
+      - [0xCCED0, .rodata, lib/2.0I/gu/cosf]
       - [0xCCF30, .rodata, lib/2.0I/gu/lookat]
       - [0xCCF50, .rodata, lib/2.0I/gu/lookatref]
       - [0xCCF60, .rodata, lib/2.0I/gu/lookathil]
@@ -2091,7 +2091,7 @@ segments:
     bss_size: 0x10
     subsegments:
       - [0x298AE0, c]
-      - [0x29A2C0, data, 298AE0]
+      - [0x29A2C0, .data, 298AE0]
       - [0x29A3D0, .rodata, 298AE0]
       - {0x29A400, type: bss, vram: 0x800F7F00, name: ovl_5E_bss}
   - type: code
@@ -2105,7 +2105,7 @@ segments:
     bss_size: 0x10
     subsegments:
       - [0x29A400, c]
-      - [0x29AA80, data, 29A400]
+      - [0x29AA80, .data, 29A400]
       - [0x29AB20, .rodata, 29A400]
       - {0x29AB30, type: bss, vram: 0x800F6D10, name: ovl_5F_bss}
   - type: code
@@ -2582,7 +2582,7 @@ segments:
     subsegments:
       - [0x311E90, c]
       - [0x311EC0, c]
-      - [0x3127C0, data, 311E90]
+      - [0x3127C0, .data, 311E90]
       - [0x3127F0, data, 311EC0]
       - [0x3127F0, .rodata, 311EC0]
       - {0x312850, type: bss, vram: 0x800F6FA0, name: ovl_7F_bss}

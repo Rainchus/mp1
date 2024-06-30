@@ -1,5 +1,11 @@
 #include "common.h"
 
+typedef struct unkMissStruct {
+/* 0x00 */ s16 unk_00;
+} unkMissStruct;
+
+extern unkMissStruct D_800F91B0_MinigameIslandMISS[56];
+
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_7D_MinigameIslandMISS/30C540", func_800F65E0_MinigameIslandMISS);
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_7D_MinigameIslandMISS/30C540", func_800F6708_MinigameIslandMISS);
@@ -48,4 +54,6 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_7D_MinigameIslandMISS/30C540", func_8
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_7D_MinigameIslandMISS/30C540", func_800F9020_MinigameIslandMISS);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_7D_MinigameIslandMISS/30C540", func_800F90F0_MinigameIslandMISS);
+s32 func_800F90F0_MinigameIslandMISS(s16 arg0) {
+    return (D_800F91B0_MinigameIslandMISS[arg0].unk_00 > gPlayers[0].miniGameCoins) ^ 1;
+}

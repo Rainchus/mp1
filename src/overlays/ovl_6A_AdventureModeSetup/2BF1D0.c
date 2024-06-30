@@ -1,12 +1,29 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_6A_AdventureModeSetup/2BF1D0", func_800F6610_AdventureModeSetup);
+void func_800F66A8_AdventureModeSetup(void);
+extern s32 D_80101F70_AdventureModeSetup;
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_6A_AdventureModeSetup/2BF1D0", func_800F6630_AdventureModeSetup);
+void func_800F6610_AdventureModeSetup(void) {
+    D_80101F70_AdventureModeSetup = 0;
+    func_800F66A8_AdventureModeSetup();
+}
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_6A_AdventureModeSetup/2BF1D0", func_800F6654_AdventureModeSetup);
+void func_800F6630_AdventureModeSetup(void) {
+    D_80101F70_AdventureModeSetup = 1;
+    func_800F66A8_AdventureModeSetup();
+}
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_6A_AdventureModeSetup/2BF1D0", func_800F6678_AdventureModeSetup);
+
+void func_800F6654_AdventureModeSetup(void) {
+    D_80101F70_AdventureModeSetup = 2;
+    func_800F66A8_AdventureModeSetup();
+}
+
+void func_800F6678_AdventureModeSetup(void) {
+    D_80101F70_AdventureModeSetup = 3;
+    SetBoardFeatureFlag(0x2C);
+    func_800F66A8_AdventureModeSetup();
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_6A_AdventureModeSetup/2BF1D0", func_800F66A8_AdventureModeSetup);
 
