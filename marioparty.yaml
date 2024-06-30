@@ -1525,7 +1525,7 @@ segments:
     subsegments:
       - [0x241740, c]
       - [0x241770, c]
-      - [0x241880, data, 241740]
+      - [0x241880, .data, 241740]
   - type: code
     start: 0x2418A0
     vram: 0x800F65E0
@@ -1538,7 +1538,7 @@ segments:
     subsegments:
       - [0x2418A0, c]
       - [0x2418D0, c]
-      - [0x244B50, data, 2418A0]
+      - [0x244B50, .data, 2418A0]
       - [0x244B80, data, 2418D0]
       - [0x245500, .rodata, 2418D0]
       - {0x2455C0, type: bss, vram: 0x800FA300, name: ovl_36_bss}
@@ -1554,7 +1554,7 @@ segments:
     subsegments:
       - [0x2455C0, c]
       - [0x2455F0, c]
-      - [0x246A60, data, 2455C0]
+      - [0x246A60, .data, 2455C0]
       - [0x246A90, data, 2455F0]
       - [0x246D10, .rodata, 2455F0]
       - {0x246DF0, type: bss, vram: 0x800F7E10, name: ovl_37_bss}
