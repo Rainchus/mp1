@@ -234,7 +234,7 @@ s16 func_800F8EF0_BuriedTreasure(f32* arg0, f32* arg1, s16 arg2) {
                     var_f26 = var_f4;
                 }
             }
-            var_f20 += incr = D_800FBF30_BuriedTreasure; // necessary to match
+            var_f20 += incr = 1.0; // necessary to match
         }
         var_f22 += incr;
     }
@@ -447,11 +447,6 @@ void func_800F9DCC_BuriedTreasure(s16 arg0) {
     }
 }
 
-#ifdef NON_MATCHING // matches but needs rodata (jtbl)
-// rodata (func_800F9E10_BuriedTreasure)
-extern const f64 D_800FBF50_BuriedTreasure; // 160.0
-extern const f64 D_800FBF58_BuriedTreasure; // 120.0
-
 void func_800F9E10_BuriedTreasure(void) {
     s16 i;
 
@@ -479,13 +474,10 @@ void func_800F9E10_BuriedTreasure(void) {
         }
 
         if (D_800FC1C0_BuriedTreasure[i].unk_00 != 0 && D_800FC1C0_BuriedTreasure[i].unk_04 >= 0) {
-            func_80066DC4(D_800FC1C0_BuriedTreasure[i].unk_04, 0, D_800FC1C0_BuriedTreasure[i].unk_08 + D_800FBF50_BuriedTreasure, D_800FC1C0_BuriedTreasure[i].unk_0C + D_800FBF58_BuriedTreasure);
+            func_80066DC4(D_800FC1C0_BuriedTreasure[i].unk_04, 0, D_800FC1C0_BuriedTreasure[i].unk_08 + 160.0, D_800FC1C0_BuriedTreasure[i].unk_0C + 120.0);
         }
     }
 }
-#else
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_03_BuriedTreasure/EB0E0", func_800F9E10_BuriedTreasure);
-#endif
 
 void func_800F9F90_BuriedTreasure(void) {
     unkStructSize0xC* var_a0;
@@ -518,7 +510,7 @@ void func_800FA0B4_BuriedTreasure(void) {
     func_800FA90C_BuriedTreasure();
 
     if (D_800FC5EC_BuriedTreasure < 0 && func_800FB780_BuriedTreasure() == 2) {
-        D_800F32B0[D_800FC5EC_BuriedTreasure].unk_0A += 10;
+        gPlayers[D_800FC5EC_BuriedTreasure].miniGameCoins += 10;
         func_80060F04(D_800FC5EC_BuriedTreasure, 20, 0, 20);
     }
 }

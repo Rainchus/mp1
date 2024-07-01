@@ -158,7 +158,6 @@ f64 func_8009B618(f64, f64);
 extern unkStructSize14 D_800C59AC[];
 extern unkStructSizeUnknown* D_800EC700[];
 extern s16 D_800EDEB4[];
-extern unk72D90Struct3 D_800F32B0[];
 extern s8 D_800F3843[];
 extern omObjData* D_800F3FB0[];
 extern s16 D_800FBA70_BuriedTreasure;

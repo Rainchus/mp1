@@ -1,0 +1,3 @@
+ninja_syntax
+splat64[mips]==0.24.4
+spimdisasm==1.26.0

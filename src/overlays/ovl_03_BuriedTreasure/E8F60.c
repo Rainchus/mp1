@@ -3,9 +3,6 @@
 
 #define U32_MAX 0xFFFFFFFF
 
-// rodata (func_800F65E0_BuriedTreasure)
-extern const f64 D_800FBE60_BuriedTreasure; // 2.0
-
 void func_800F65E0_BuriedTreasure(void) {
     u8 temp_s0;
     unk_Struct00* temp_s0_2;
@@ -137,7 +134,7 @@ void func_800F6958_BuriedTreasure(void) {
             if (D_800FC022_BuriedTreasure == 0) {
                 D_800FC020_BuriedTreasure++;
                 if (D_800FC034_BuriedTreasure >= 0) {
-                    func_80075CCC(4, D_800F32B0[D_800FC034_BuriedTreasure].unk_04);
+                    func_80075CCC(4, gPlayers[D_800FC034_BuriedTreasure].characterID);
                     D_800FC022_BuriedTreasure = 84;
                 } else {
                     func_80075CCC(0x11);
@@ -213,7 +210,7 @@ void func_800F6EC4_BuriedTreasure(omObjData* arg0) {
     s32 temp_s2;
     s16 temp_v1;
 
-    temp_v1 = D_800F32B0[D_800FBA74_BuriedTreasure[D_800FC02C_BuriedTreasure]].unk_04;
+    temp_v1 = gPlayers[D_800FBA74_BuriedTreasure[D_800FC02C_BuriedTreasure]].characterID;
     temp_s2 = D_800C59AC[temp_v1].unk_00;
 
     arg0->model[0] = LoadFormFile(temp_s2 | D_800C59AC[temp_v1].unk_04, 0x69D);
@@ -242,7 +239,7 @@ void func_800F6EC4_BuriedTreasure(omObjData* arg0) {
 
     temp_s1->unk_50 = 0;
     temp_s1->unk_52 = 0;
-    temp_s1->unk_56 = D_800F32B0[D_800FC02C_BuriedTreasure].unk_03;
+    temp_s1->unk_56 = gPlayers[D_800FC02C_BuriedTreasure].flags;
     temp_s1->unk_C0 = 65535;
 
     func_8001874C(arg0, 0, temp_s2 | 0x40, 1, 0);
@@ -318,7 +315,7 @@ void func_800F7164_BuriedTreasure(omObjData* arg0) {
     temp_v0->unk_1C = temp_v0->unk_10;
 
     if (D_800FC024_BuriedTreasure == 0) {
-        if (!(D_800F32B0[temp_v0->unk_40].unk_06 & 1)) {
+        if (!(gPlayers[temp_v0->unk_40].unk_06 & 1)) {
             temp_v0_4 = func_80009C90(arg0, D_800ECE14[temp_s0], D_800F3843[temp_s0]);
             var_s4 = temp_v0_4 >> 16;
             var_s5 = temp_v0_4;
@@ -367,7 +364,7 @@ void func_800F7164_BuriedTreasure(omObjData* arg0) {
     }
 
     if (temp_s1->unk_40 != 0.0) {
-        if (!(D_800F32B0[temp_v0->unk_40].unk_06 & 1) && temp_v0->unk_08 != 0) {
+        if (!(gPlayers[temp_v0->unk_40].unk_06 & 1) && temp_v0->unk_08 != 0) {
             var_f22 = func_800B0CD8(var_s4, -var_s5) + D_800FBEA8_BuriedTreasure;
         } else {
             var_f22 = temp_v0->unk_3E;
@@ -500,12 +497,6 @@ void func_800F7D50_BuriedTreasure(s16 arg0) {
     }
 }
 
-#ifdef NON_MATCHING // matches but needs rodata
-// rodata (func_800F7E48_BuriedTreasure)
-extern const f64 D_800FBEF0_BuriedTreasure; // 0.75
-extern const f64 D_800FBF00_BuriedTreasure; // 0.75
-extern const f64 D_800FBF10_BuriedTreasure; // 0.75
-
 void func_800F7E48_BuriedTreasure(s16 arg0) {
     unkStructSize0x5C* temp_s1;
     u8 temp_a2;
@@ -521,9 +512,9 @@ void func_800F7E48_BuriedTreasure(s16 arg0) {
         func_800671DC(D_800FC1C0_BuriedTreasure[arg0].unk_04, 0, 0);
 
         temp_s1 = D_800FC188_BuriedTreasure[D_800FC1C0_BuriedTreasure[arg0].unk_06];
-        temp_a2 = (f32) ((temp_s1->unk_5A & 0xF800) >> 8) * D_800FBEF0_BuriedTreasure;
-        temp_a3 = (f32) ((temp_s1->unk_5A & 0x7C0) >> 3) * D_800FBF00_BuriedTreasure;
-        temp_a1 = (f32) ((temp_s1->unk_5A & 0x3E) << 2) * D_800FBF10_BuriedTreasure;
+        temp_a2 = (f32) ((temp_s1->unk_5A & 0xF800) >> 8) * 0.75;
+        temp_a3 = (f32) ((temp_s1->unk_5A & 0x7C0) >> 3) * 0.75;
+        temp_a1 = (f32) ((temp_s1->unk_5A & 0x3E) << 2) * 0.75;
 
         func_80067558(D_800FC1C0_BuriedTreasure[arg0].unk_04, 0, temp_a2, temp_a3, temp_a1, 256);
         func_800673B0(D_800FC1C0_BuriedTreasure[arg0].unk_04, 0, temp_s1->unk_2C);
@@ -538,9 +529,6 @@ void func_800F7E48_BuriedTreasure(s16 arg0) {
         func_800671DC(D_800FC1C0_BuriedTreasure[arg0].unk_04, 0, D_800FC1C0_BuriedTreasure[arg0].unk_10);
     }
 }
-#else
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_03_BuriedTreasure/E8F60", func_800F7E48_BuriedTreasure);
-#endif
 
 void func_800F815C_BuriedTreasure(s16 arg0) {
     if (D_800FC1C0_BuriedTreasure[arg0].unk_00 >= 0) {
@@ -586,7 +574,7 @@ s16 func_800F8334_BuriedTreasure(unkStructSize0x5C* arg0) {
         for (i = 0; i < ARRAY_COUNT(D_800FC5C0_BuriedTreasure); i++) {
             temp_s1 = &D_800FC5C0_BuriedTreasure[i];
             temp_s0 = temp_s1->unk_12;
-            if ((func_800F8940_BuriedTreasure() & 0xFF) < temp_s0 * 28 + D_800F32B0[arg0->unk_40].unk_01 * 8) {
+            if ((func_800F8940_BuriedTreasure() & 0xFF) < temp_s0 * 28 + gPlayers[arg0->unk_40].cpuDifficulty * 8) {
                 arg0->unk_02 |= 4;
                 arg0->unk_44 = temp_s1->unk_0C - 160;
                 arg0->unk_46 = temp_s1->unk_0E - 120;
@@ -616,9 +604,6 @@ s16 func_800F8334_BuriedTreasure(unkStructSize0x5C* arg0) {
 
     return var_s5;
 }
-
-// rodata (func_800F85B4_BuriedTreasure)
-extern const f64 D_800FBF20_BuriedTreasure; // 4.0
 
 s32 func_800F85B4_BuriedTreasure(omObjData* arg0) {
     unkStructSize0x5C* temp_v0;
@@ -652,7 +637,7 @@ s32 func_800F85B4_BuriedTreasure(omObjData* arg0) {
         temp_v0->unk_3E += 360;
     }
 
-    if ((func_800F8940_BuriedTreasure() & 0xFF) < D_800F32B0[temp_v0->unk_40].unk_01 * 8 + 56) {
+    if ((func_800F8940_BuriedTreasure() & 0xFF) < gPlayers[temp_v0->unk_40].cpuDifficulty * 8 + 56) {
         var_s1 |= 0x8000;
     }
 

@@ -12,7 +12,7 @@ For this reason I created a new repo and have been copying things over.
 
 # Building
 1. `git clone https://github.com/Rainchus/mp1 --recurse-submodules` to get the repo.
-2. Run `./install.sh` to get all of the dependencies
-3. Take a vanilla US mario party 1 big-endian (`.z64`) rom named `baserom.us.z64` and place it in the root directory of the repo.
+2. Take a vanilla US mario party 1 big-endian (`.z64`) rom named `baserom.us.z64` and place it in the root directory of the repo.
+3. Run `pip install -r requirements.txt` to get all of the dependencies
 4. Run `make setup`.
 5. Compile with `make`, with or without `-j` or `-j$(nproc)`.
