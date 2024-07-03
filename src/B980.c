@@ -16,7 +16,12 @@ extern s32 D_800CDAEC;
 extern s32 D_800CEA8C;
 extern s32 D_800CEAA0;
 extern s32 D_800CDACC;
-
+extern s32 D_800CDAEC;
+extern s32 D_800CDAF0;
+extern f32 D_800CDAF4;
+extern s32 D_800CDAF8;
+extern u16 D_800CDAFE;
+extern s16 D_800CDB02;
 
 //FXDO related
 typedef struct FXDO_Unk {
@@ -191,7 +196,16 @@ INCLUDE_ASM("asm/nonmatchings/B980", func_8000C1AC);
 
 INCLUDE_ASM("asm/nonmatchings/B980", func_8000C1B8);
 
-INCLUDE_ASM("asm/nonmatchings/B980", func_8000C250);
+void func_8000C250(s16 arg0) {
+    if ((D_800CDAEC == 1) && !(D_800CDAF0 & 2)) {
+        if (arg0 < 0) {
+            arg0 = 1;
+        }
+        D_800CDAF8 = 0;
+        D_800CDAFE = D_800CDB02;
+        D_800CDAF4 = (f32) D_800CDB02 / arg0;
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/B980", func_8000C2D4);
 

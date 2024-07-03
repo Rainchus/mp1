@@ -14,6 +14,8 @@ extern s16 D_800C5988;
 extern s16 D_800C598C; //dtor index
 extern u16 D_800C5976;
 extern unkProcessStruct* D_800C5990;
+extern s16 D_800C5996;
+extern u16 D_800C5998;
 
 s16 func_80010ED4(s16, s16);
 s32 func_80012C7C(s16);
@@ -266,17 +268,16 @@ void omPrcSetDestructor(void) {
     }
 }
 
-s32 omOvlCallEx(s32 arg0, s32 arg1, u16 arg2) {
+s32 omOvlCallEx(s32 arg0, s16 arg1, u16 arg2) {
     omOvlHisData* history;
-    s16 temp = arg1;
-    s32 ret = 0;
+    s32 ret;
 
     if (omovlhisidx < 8) {
         history = &omovlhis[++omovlhisidx];
         history->overlayID = arg0;
         history->event = arg1;
         history->stat = arg2;
-        omOvlGotoEx(arg0, temp, arg2);
+        omOvlGotoEx(arg0, arg1, arg2);
         ret = 1;
     } else {
         ret = 0;
@@ -354,7 +355,11 @@ INCLUDE_ASM("asm/nonmatchings/5CDB0", func_80060128);
 
 INCLUDE_ASM("asm/nonmatchings/5CDB0", func_80060198);
 
-INCLUDE_ASM("asm/nonmatchings/5CDB0", func_800601D4);
+void func_800601D4(s32 arg0) {
+    D_800C5996 = -1;
+    func_8000C250(arg0);
+    D_800C5998 |= 8;
+}
 
 INCLUDE_ASM("asm/nonmatchings/5CDB0", func_80060214);
 

@@ -287,7 +287,7 @@ void func_800F750C_DebugRandomPlay(void) { //TODO: fix call to func_8006DA5C
     func_8006EB40(D_800F8FBC_DebugRandomPlay);
     func_8006EB80();
     func_8006DA5C(D_800F8FBC_DebugRandomPlay, (void*)((D_800F7DB8_DebugRandomPlay[D_800F8FB8_DebugRandomPlay].unk_00) >> 16), 0);
-    sprintf(buffer, D_800F8F78_DebugRandomPlay); //D_800F8F78_DebugRandomPlay
+    sprintf(buffer, D_800F8F78_DebugRandomPlay);
     func_8007149C(D_800F8FC0_DebugRandomPlay, (u8*) buffer);
     LoadStringIntoWindow(D_800F8FBC_DebugRandomPlay, D_800F8FC0_DebugRandomPlay, -1, -1);
     while (1) {
