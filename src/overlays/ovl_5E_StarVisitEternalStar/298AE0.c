@@ -289,11 +289,11 @@ void func_800F6898_StarVisitEternalStar(void) {
         D_800F7DC4_StarVisitEternalStar = func_80042728(D_800F7DC0_StarVisitEternalStar, 0);
         
         for (i = 0; i < 0xB5; i += 5) {
-            func_800A0D00(&D_800F7DC0_StarVisitEternalStar->coords, D_800F7DD4_StarVisitEternalStar.x + (((D_800F7DE0_StarVisitEternalStar.x - D_800F7DD4_StarVisitEternalStar.x) * i) / 180.0f), D_800F7DD4_StarVisitEternalStar.y + 200.0f + (sinf(i * 0.017453292519943295) * 100.0f), D_800F7DD4_StarVisitEternalStar.z + (((D_800F7DE0_StarVisitEternalStar.z - D_800F7DD4_StarVisitEternalStar.z) * i) / 180.0));
+            func_800A0D00(&D_800F7DC0_StarVisitEternalStar->coords, D_800F7DD4_StarVisitEternalStar.x + (((D_800F7DE0_StarVisitEternalStar.x - D_800F7DD4_StarVisitEternalStar.x) * i) / 180.0f), D_800F7DD4_StarVisitEternalStar.y + 200.0f + (sinf(i * (M_PI/180)) * 100.0f), D_800F7DD4_StarVisitEternalStar.z + (((D_800F7DE0_StarVisitEternalStar.z - D_800F7DD4_StarVisitEternalStar.z) * i) / 180.0));
             Obj = D_800F7DC0_StarVisitEternalStar;
-            Obj->unk_18.x = sinf((i * 0xA) * 0.017453292519943295);
+            Obj->unk_18.x = sinf((i * 0xA) * (M_PI/180));
             Obj = D_800F7DC0_StarVisitEternalStar;
-            Obj->unk_18.z = cosf((i * 0xA) * 0.017453292519943295);
+            Obj->unk_18.z = cosf((i * 0xA) * (M_PI/180));
             HuPrcVSleep();
         }
 
@@ -349,11 +349,11 @@ void func_800F6898_StarVisitEternalStar(void) {
         D_800F7DC4_StarVisitEternalStar = func_80042728(D_800F7DC0_StarVisitEternalStar, 0);
         
         for (i = 0; i < 0xB5; i += 5) {
-            func_800A0D00(&D_800F7DC0_StarVisitEternalStar->coords, D_800F7DE0_StarVisitEternalStar.x + (((D_800F7DD4_StarVisitEternalStar.x - D_800F7DE0_StarVisitEternalStar.x) * i) / 180.0f), (D_800F7DE0_StarVisitEternalStar.y + 200.0f) + (sinf(i * 0.017453292519943295) * 100.0f), D_800F7DE0_StarVisitEternalStar.z + (((D_800F7DD4_StarVisitEternalStar.z - D_800F7DE0_StarVisitEternalStar.z) * i) / 180.0));
+            func_800A0D00(&D_800F7DC0_StarVisitEternalStar->coords, D_800F7DE0_StarVisitEternalStar.x + (((D_800F7DD4_StarVisitEternalStar.x - D_800F7DE0_StarVisitEternalStar.x) * i) / 180.0f), (D_800F7DE0_StarVisitEternalStar.y + 200.0f) + (sinf(i * (M_PI/180)) * 100.0f), D_800F7DE0_StarVisitEternalStar.z + (((D_800F7DD4_StarVisitEternalStar.z - D_800F7DE0_StarVisitEternalStar.z) * i) / 180.0));
             Obj = D_800F7DC0_StarVisitEternalStar;
-            Obj->unk_18.x = sinf((i * 0xA * 0.017453292519943295));
+            Obj->unk_18.x = sinf((i * 0xA * (M_PI/180)));
             Obj = D_800F7DC0_StarVisitEternalStar;
-            Obj->unk_18.z = cosf((i * 0xA * 0.017453292519943295));
+            Obj->unk_18.z = cosf((i * 0xA * (M_PI/180)));
             HuPrcVSleep();
         }
         

@@ -89,12 +89,12 @@ void func_800F66C4_BowservisitMagmaMountain(void) { //fix me: remove gotos
             do {
                 temp_s0_4 = D_800F7590_BowservisitMagmaMountain;
                 temp_s0_4->coords.y = D_800F75B8_BowservisitMagmaMountain.y + 200.0f + (f32) (var_s1_3 / 2);
-                temp_f20 = var_s1_3 * 5 * 0.017453292519943295;
+                temp_f20 = var_s1_3 * 5 * (M_PI/180);
                 temp_s0_4->coords.x = (sinf(temp_f20) * var_f22) + D_800F75B8_BowservisitMagmaMountain.x;
                 temp_s0_4 = D_800F7590_BowservisitMagmaMountain;
                 temp_s0_4->coords.z = (cosf(temp_f20) * var_f22) + D_800F75B8_BowservisitMagmaMountain.z;
                 temp_s0_4 = D_800F7590_BowservisitMagmaMountain;
-                temp_f20_2 = var_f24 * 0.017453292519943295;
+                temp_f20_2 = var_f24 * (M_PI/180);
                 temp_s0_4->unk_18.x = sinf(temp_f20_2);
                 temp_s0_4 = D_800F7590_BowservisitMagmaMountain;
                 temp_s0_4->unk_18.z = cosf(temp_f20_2);

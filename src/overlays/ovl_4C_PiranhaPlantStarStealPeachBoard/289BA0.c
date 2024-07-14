@@ -151,20 +151,20 @@ void func_800F66B4_PiranhaPlantStarStealPeachBoard(void) {
         for(i = 0; i < 0x15F; i += 5) {
             
             temp_s0_2 = D_800F74FC_PiranhaPlantStarStealPeachBoard;
-                //temp_s0_2->coords.x = D_800F752C_PiranhaPlantStarStealPeachBoard.x + (sinf((i * 5) * 0.017453292519943295) * var_f24) ;
+                //temp_s0_2->coords.x = D_800F752C_PiranhaPlantStarStealPeachBoard.x + (sinf((i * 5) * (M_PI/180)) * var_f24) ;
             new_var3 = &D_800F752C_PiranhaPlantStarStealPeachBoard.x;
-            temp_s0_2->coords.x = (*new_var3) + (sinf((i * 5) * 0.017453292519943295) * var_f24);
+            temp_s0_2->coords.x = (*new_var3) + (sinf((i * 5) * (M_PI/180)) * var_f24);
             
             temp_s0_2 = D_800F74FC_PiranhaPlantStarStealPeachBoard;
             temp_s0_2->coords.y = D_800F752C_PiranhaPlantStarStealPeachBoard.y + 200.0f + (i / 2);
             
-            temp_s0_2->coords.z = D_800F752C_PiranhaPlantStarStealPeachBoard.z + (cosf((i * 5) * 0.017453292519943295) * var_f24);
+            temp_s0_2->coords.z = D_800F752C_PiranhaPlantStarStealPeachBoard.z + (cosf((i * 5) * (M_PI/180)) * var_f24);
             temp_s0_2 = D_800F74FC_PiranhaPlantStarStealPeachBoard;
             
-            temp_s0_2->unk_18.x = sinf(var_f22 * 0.017453292519943295);
+            temp_s0_2->unk_18.x = sinf(var_f22 * (M_PI/180));
             temp_s0_2 = D_800F74FC_PiranhaPlantStarStealPeachBoard;
             
-            temp_s0_2->unk_18.z = cosf(var_f22 * 0.017453292519943295);
+            temp_s0_2->unk_18.z = cosf(var_f22 * (M_PI/180));
             
             if (i == 0x78) {
                 func_8004E3E0(0, &D_800F7520_PiranhaPlantStarStealPeachBoard, 0x32, D_800F74F0_PiranhaPlantStarStealPeachBoard);
@@ -205,9 +205,9 @@ void func_800F66B4_PiranhaPlantStarStealPeachBoard(void) {
             temp_s0_2->coords.y = D_800F752C_PiranhaPlantStarStealPeachBoard.y + 200.0f + (i / 2);
             temp_s0_2->coords.z = D_800F752C_PiranhaPlantStarStealPeachBoard.z;
             var_f22 += 10.0f;
-            temp_s0_2->unk_18.x = sinf(var_f22 * 0.017453292519943295);
+            temp_s0_2->unk_18.x = sinf(var_f22 * (M_PI/180));
             temp_s0_2 = D_800F74FC_PiranhaPlantStarStealPeachBoard;
-            temp_s0_2->unk_18.z = cosf(var_f22 * 0.017453292519943295);
+            temp_s0_2->unk_18.z = cosf(var_f22 * (M_PI/180));
             HuPrcVSleep();
         }
         

@@ -40,7 +40,7 @@ INCLUDE_RODATA("asm/nonmatchings/overlays/ovl_52_FlyGuyWarioBoard/28ECA0", D_800
 void func_800F72DC_FlyGuyWarioBoard(omObjData* arg0) {
     Object* temp_s0 = D_800F8234_FlyGuyWarioBoard;
 
-    temp_s0->unk_30 = ((sinf((arg0->rot.y * 0.0174532925199432955)) * arg0->work[0]) + arg0->trans.y);
+    temp_s0->unk_30 = ((sinf((arg0->rot.y * (M_PI/180))) * arg0->work[0]) + arg0->trans.y);
     arg0->rot.y += 10.0f;
     if (arg0->rot.y >= 360.0f) {
         arg0->rot.y -= 360.0f;
@@ -50,7 +50,7 @@ void func_800F72DC_FlyGuyWarioBoard(omObjData* arg0) {
 void func_800F7384_FlyGuyWarioBoard(omObjData* arg0) {
     Object* temp_s0 = D_800F8070_FlyGuyWarioBoard;
 
-    temp_s0->unk_30 = ((sinf((arg0->rot.y * 0.0174532925199432955)) * arg0->work[0]) + arg0->trans.y);
+    temp_s0->unk_30 = ((sinf((arg0->rot.y * (M_PI/180))) * arg0->work[0]) + arg0->trans.y);
     arg0->rot.y += 10.0f;
     if (arg0->rot.y >= 360.0f) {
         arg0->rot.y -= 360.0f;

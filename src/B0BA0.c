@@ -38,7 +38,7 @@ f32 func_800AFFA0(f32 angle) {
     }
 
     sp28 = (s32) (angle + 0.5f);
-    sp24 = (angle - sp28) * 0.017453292f;
+    sp24 = (angle - sp28) * (PI_L/180);
     sp18 = D_800C81C0[(s32) sp28];
     sp10 = sp1C = func_800B1750(1.0f - (sp18 * sp18));
 

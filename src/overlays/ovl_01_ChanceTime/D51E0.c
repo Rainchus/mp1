@@ -92,7 +92,7 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_01_ChanceTime/D51E0", func_800F87CC_C
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_01_ChanceTime/D51E0", func_800F8A6C_ChanceTime);
 
 void func_800F988C_ChanceTime(omObjData* arg0) {
-    func_800264F8(arg0->mdlcnt, arg0->mtncnt, (sinf(arg0->trans.x * 0.0174532925199432955) / 2.0f) + 0.5f, "030-hata1", "hata2", 0);
+    func_800264F8(arg0->mdlcnt, arg0->mtncnt, (sinf(arg0->trans.x * (M_PI/180)) / 2.0f) + 0.5f, "030-hata1", "hata2", 0);
     arg0->trans.x += 20.0f;
     if (arg0->trans.x >= 360.0f) {
         arg0->trans.x -= 360.0f;

@@ -6,15 +6,15 @@ s32 D_800F6F74_LogosSequenceCopy[] = {0x00110000, 0x00110001, 0x00110002};
 void func_800F6610_LogosSequenceCopy(unkLogoStruct* arg0, s16 arg1, s16 arg2, s16 arg3, u16 arg4) {
     void* temp_s6;
     s32 i;
-    u8 temp_s0;
+    u8 character;
 
     temp_s6 = ReadMainFS(0x110005);
     sprintf(D_800F5038, "%02d", arg2);
 
     for (i = 0; i < 2; i++) {
-        temp_s0 = D_800F5038[i];
+        character = D_800F5038[i];
         arg0->unkC[arg1] = func_800678A4(temp_s6);
-        func_80067208(arg0->unkA, arg1, arg0->unkC[arg1], temp_s0 - 48);
+        func_80067208(arg0->unkA, arg1, arg0->unkC[arg1], character - '0');
         func_80067384(arg0->unkA, arg1, 0xA);
         func_800674BC(arg0->unkA, arg1, 0x1000);
         func_80066DC4(arg0->unkA, arg1, arg3, arg4);

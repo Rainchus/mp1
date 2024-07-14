@@ -10,7 +10,7 @@ f64 func_800AE850(f64 angle) {
     f64 angleErrorSq;
     s32 inputInQuadrants34 = FALSE;
 
-    angle -= (s32) (angle * 0.00277777777777777788) * 360;
+    angle -= (s32) (angle * (1.0/360.0)) * 360;
     if (angle < 0.0) {
         angle += 360.0;
     }
@@ -25,7 +25,7 @@ f64 func_800AE850(f64 angle) {
     }
 
     angleDegrees = (s32) (angle + 0.5);
-    angleError = (angle - angleDegrees) * 0.0174532925199432955;
+    angleError = (angle - angleDegrees) * (M_PI/180);
     angleErrorSq = angleError * angleError;
     result = D_800C7EE0[(s32) angleDegrees] * (1.0 - (angleErrorSq * 0.125 * (angleErrorSq + 4.0))) + (angleError * D_800C7EE0[90 - (s32) angleDegrees]);
     

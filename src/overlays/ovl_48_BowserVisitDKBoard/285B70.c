@@ -13,11 +13,11 @@ s32 D_800F7124_BowserVisitDKBoard[] = { 0x00000002, 0x0003003C, 0x0003003E };
 s32 D_800F7130_BowserVisitDKBoard[] = { 0x00000002, 0x0004003C, 0x0004003E };
 s32 D_800F713C_BowserVisitDKBoard[] = { 0x00000002, 0x0005003C, 0x0005003E };
 
-s32* D_800F7148_BowserVisitDKBoard[] = {D_800F7100_BowserVisitDKBoard, D_800F710C_BowserVisitDKBoard, D_800F7118_BowserVisitDKBoard, D_800F7124_BowserVisitDKBoard, D_800F7130_BowserVisitDKBoard, D_800F713C_BowserVisitDKBoard};
-
-
-//f64 D_800F7160_BowserVisitDKBoard = 0.017453292519943295;
-//f64 D_800F7160_BowserVisitDKBoard = 0.017453292519943295;
+s32* D_800F7148_BowserVisitDKBoard[] = {
+    D_800F7100_BowserVisitDKBoard, D_800F710C_BowserVisitDKBoard,
+    D_800F7118_BowserVisitDKBoard, D_800F7124_BowserVisitDKBoard,
+    D_800F7130_BowserVisitDKBoard, D_800F713C_BowserVisitDKBoard
+};
 
 //bss
 extern u8 D_800F7170_ovl48;
@@ -149,9 +149,9 @@ void func_800F6C14_BowserVisitDKBoard(omObjData* arg0) {
     Object* temp_s0_3;
 
     temp_s0 = D_800F7178_ovl48;
-    temp_s0->unk_18.x = sinf(arg0->rot.x * 0.017453292519943295);
+    temp_s0->unk_18.x = sinf(arg0->rot.x * (M_PI/180));
     temp_s0_2 = D_800F7178_ovl48;
-    temp_s0_2->unk_18.z = cosf(arg0->rot.x * 0.017453292519943295);
+    temp_s0_2->unk_18.z = cosf(arg0->rot.x * (M_PI/180));
     if ((arg0->work[0] == 0) || !(arg0->rot.x < -310.0f)) {
         arg0->rot.x = arg0->rot.x - 5.0f;
         if (arg0->rot.x <= -360.0f) {
@@ -159,7 +159,7 @@ void func_800F6C14_BowserVisitDKBoard(omObjData* arg0) {
         }
     } else {
         temp_s0_3 = D_800F7178_ovl48;
-        temp_s0_3->unk_30 = ((sinf(arg0->rot.y * 0.017453292519943295)) * 4.0f) + D_800F70CC_BowserVisitDKBoard[1].y;
+        temp_s0_3->unk_30 = ((sinf(arg0->rot.y * (M_PI/180))) * 4.0f) + D_800F70CC_BowserVisitDKBoard[1].y;
         arg0->rot.y = arg0->rot.y + 5.0f;
         if (arg0->rot.y >= 360.0f) {
             arg0->rot.y -= 360.0f;

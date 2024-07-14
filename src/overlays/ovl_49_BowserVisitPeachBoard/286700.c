@@ -137,9 +137,9 @@ void func_800F6C10_BowserVisitPeachBoard(omObjData* arg0) {
     Object* temp_s0_3;
 
     temp_s0 = D_800F7188_BowserVisitPeachBoard;
-    temp_s0->unk_18.x = sinf(arg0->rot.x * 0.017453292519943295);
+    temp_s0->unk_18.x = sinf(arg0->rot.x * (M_PI/180));
     temp_s0_2 = D_800F7188_BowserVisitPeachBoard;
-    temp_s0_2->unk_18.z = cosf(arg0->rot.x * 0.017453292519943295);
+    temp_s0_2->unk_18.z = cosf(arg0->rot.x * (M_PI/180));
     if ((arg0->work[0] == 0) || !(arg0->rot.x < -310.0f)) {
         arg0->rot.x = arg0->rot.x - 5.0f;
         if (arg0->rot.x <= -360.0f) {
@@ -147,7 +147,7 @@ void func_800F6C10_BowserVisitPeachBoard(omObjData* arg0) {
         }
     } else {
         temp_s0_3 = D_800F7188_BowserVisitPeachBoard;
-        temp_s0_3->unk_30 = ((sinf(arg0->rot.y * 0.017453292519943295)) * 4.0f) + D_800F70DC_BowserVisitPeachBoard[1].y;
+        temp_s0_3->unk_30 = ((sinf(arg0->rot.y * (M_PI/180))) * 4.0f) + D_800F70DC_BowserVisitPeachBoard[1].y;
         arg0->rot.y = arg0->rot.y + 5.0f;
         if (arg0->rot.y >= 360.0f) {
             arg0->rot.y -= 360.0f;

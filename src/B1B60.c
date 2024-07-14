@@ -23,8 +23,8 @@ f32 func_800B0F60(f32 arg0) {
     sp10 = 0.0f;
     sp14 = sp18 = sp1C = 1.0f;
 
-    while (arg0 > 2.7182817f) {
-        arg0 *= 0.36787945f;
+    while (arg0 > M_Ef) {
+        arg0 *= 1/M_Ef;
         sp10 += 1.0f;
     }
 

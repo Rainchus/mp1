@@ -15,27 +15,27 @@ f64 func_800B03C0(f64 y, f64 x) {
     s32 sp48;
 
     if (y == 0.0) {
-        return (x > 0.0) ? 0.0 : 3.14159265358979312;
+        return (x > 0.0) ? 0.0 : M_PI;
     }
 
     if (x == 0.0) {
-        return (y > 0.0) ? 1.57079632679489656 : -1.57079632679489656;
+        return (y > 0.0) ? (M_PI/2) : -(M_PI/2);
     }
     ratio = y / x;
     if (ratio == 1.0) {
-        return (y > 0.0) ? 0.785398163397448279 : -2.35619449019234484;
+        return (y > 0.0) ? (M_PI/4) : -((M_PI*3)/4);
     }
 
     if (ratio == -1.0) {
-        return (x > 0.0) ? -0.785398163397448279 : 2.35619449019234484;
+        return (x > 0.0) ? -(M_PI/4) : ((M_PI*3)/4);
     }
 
     if ((ratio > 1.0) || (ratio < -1.0)) {
         sp38 = func_800B03C0(x, y);
         if (x > 0.0) {
-            return 1.57079632679489656 - sp38;
+            return (M_PI/2) - sp38;
         } else {
-            return (y > 0.0) ? (1.57079632679489656 - sp38) : (-4.71238898038468967 - sp38);
+            return (y > 0.0) ? ((M_PI/2) - sp38) : (-((M_PI*3)/2) - sp38);
         }
     }
 
@@ -59,12 +59,12 @@ f64 func_800B03C0(f64 y, f64 x) {
     }
 
         sp38 *= ratio * sp20;
-        return (x > 0.0) ? sp38 : ((y > 0.0) ? (sp38 + 3.14159265358979312) : (sp38 + -3.14159265358979312));    
+        return (x > 0.0) ? sp38 : ((y > 0.0) ? (sp38 + M_PI) : (sp38 + -M_PI));    
 }
 
 // atan2d_deg
 f64 func_800B0804(f64 y, f64 x) {
-    return func_800B03C0(y, x) * 57.2957795130823229;
+    return func_800B03C0(y, x) * (180/M_PI);
 }
 
 extern f32 D_800C8654[];
@@ -82,33 +82,33 @@ f32 func_800B0850(f32 y, f32 x) {
 
     // vertical
     if (y == 0.0f) {
-        return (x > 0.0f) ? 0.0f : 3.1415927f;
+        return (x > 0.0f) ? 0.0f : PI_L;
     }
 
     // horizontal
     if (x == 0.0f) {
-        return (y > 0.0f) ? 1.5707964f : -1.5707964f;
+        return (y > 0.0f) ? PI_L/2 : -(PI_L/2);
     }
 
     ratio = y / x;
 
     // y == x
     if (ratio == 1.0f) {
-        return (y > 0.0f) ? 0.7853982f : -2.3561945f;
+        return (y > 0.0f) ? PI_L/4 : -(PI_L*3/4);
     }
 
     // y == -x
     if (ratio == -1.0f) {
-        return (x > 0.0f) ? -0.7853982f : 2.3561945f;
+        return (x > 0.0f) ? -(PI_L/4) : (PI_L*3/4);
     }
 
     // outside first/fourth double octants
     if ((ratio > 1.0f) || (ratio < -1.0f)) {
             sp24 = func_800B0850(x, y);
         if (x > 0.0f) {
-            return 1.5707964f - sp24;
+            return (PI_L/2) - sp24;
         } else {        
-            return (y > 0.0f) ? (1.5707964f - sp24): (-4.712389f - sp24);
+            return (y > 0.0f) ? (PI_L/2 - sp24): (-(PI_L*3/2) - sp24);
         }
     }
 
@@ -133,7 +133,7 @@ f32 func_800B0850(f32 y, f32 x) {
 
     sp24 *= ratio * sp18;
 
-    return (x > 0.0f) ? sp24 : ((y > 0.0f) ? (sp24 + 3.1415927f) : (sp24 + -3.1415927f));
+    return (x > 0.0f) ? sp24 : ((y > 0.0f) ? (sp24 + PI_L) : (sp24 + -PI_L));
 }
 
 // atan2f_deg

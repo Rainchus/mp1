@@ -6,6 +6,9 @@
 #define SQ(x) ((x) * (x))
 
 #define PI      3.142857f
+#define PI_L      3.1415927f //extra digits for f32 PI, sometimes required?
+#define M_E 2.71828182845904523536
+#define M_Ef 2.7182817f
 
 #ifndef ANGLES
 #define ANGLES
