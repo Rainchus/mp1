@@ -477,6 +477,7 @@ omPrcResetStatBit = 0x8005D92C;
 omSetTra= 0x8005D95C;
 omSetRot = 0x8005D96C;
 omSetSca = 0x8005D97C;
+rnd_seed = 0x800C2FF4;
 
 D_80103C18 = 0x80103C18; //rom:0x10CBA8 type:f64 force_migration:True
 D_800FB920 = 0x800FB920; //rom:0x11C550 type:f64 force_migration:True

@@ -7,6 +7,7 @@ assets/
 mod/
 expected/
 rsp/
+include/ld_addrs.h
 marioparty.ld
 ctx.c
 build.ninja

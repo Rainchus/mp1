@@ -11,5 +11,6 @@
 #include "variables.us.h"
 #include "macros.h"
 #include "enums.h"
+#include "ld_addrs.h"
 
 #endif

@@ -124,7 +124,7 @@ void func_8005699C(s32 arg0) {
 }
 
 void func_80056A08(s32 arg0, s16 arg1, s32 arg2, s32 arg3) {
-    LoadBackgroundData(&D_FE2310);
+    LoadBackgroundData(FE2310_ROM_START);
     if (arg0 >= 0) {
         LoadBackgroundIndex(arg0);
     }

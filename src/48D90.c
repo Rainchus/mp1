@@ -124,7 +124,7 @@ INCLUDE_ASM("asm/nonmatchings/48D90", func_800499CC);
 
 INCLUDE_ASM("asm/nonmatchings/48D90", func_80049E60);
 
-void LoadBackgroundData(Addr* arg0) {
+void LoadBackgroundData(Addr arg0) {
     s32 temp_s0;
     s32* temp_v0;
     s32* temp_v0_2;

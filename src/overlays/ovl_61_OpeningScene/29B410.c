@@ -184,7 +184,7 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_61_OpeningScene/29B410", func_800FB97
 s32 func_800FBAC0_OpeningScene(void) {
     func_800178A0(1);
     func_800FC394_OpeningScene(0);
-    LoadBackgroundData(&D_FE2310);
+    LoadBackgroundData(FE2310_ROM_START);
     func_8004B1B8();
     return 1;
 }

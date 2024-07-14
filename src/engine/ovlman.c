@@ -32,8 +32,8 @@ s16 func_8001755C(s32 arg0) {
 }
 
 u8 rand8(void) {
-    D_800C2FF4 = D_800C2FF4 * 0x41C64E6D + 0x3039;
-    return (D_800C2FF4 + 1) >> 16;
+    rnd_seed = rnd_seed * 0x41C64E6D + 0x3039;
+    return (rnd_seed + 1) >> 16;
 }
 
 // copies in an overlay and clears bss region.

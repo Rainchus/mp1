@@ -36,7 +36,7 @@ s32 LoadFormBinary(u8* arg0, u32 arg1) {
         temp_v0->unk_60 = NULL;
         temp_s0->unk_08 = func_800342BC(arg0);
 
-        arg1 &= ~0x11;
+        arg1 &= ~(0x10 | 0x01);
         if (temp_v0->unk_6E == 0) {
             arg1 |= 4;
         }

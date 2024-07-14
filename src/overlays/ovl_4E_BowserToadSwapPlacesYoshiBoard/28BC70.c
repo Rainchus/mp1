@@ -107,7 +107,7 @@ void func_800F67BC_BowserToadSwapPlacesYoshiBoard(void) {
     func_8004EE14(0, &D_800F7890_BowserToadSwapPlacesYoshiBoard, 0x28, D_800F7848_BowserToadSwapPlacesYoshiBoard);
     func_8004EE14(0, &D_800F7890_BowserToadSwapPlacesYoshiBoard, 0x28, D_800F7840_BowserToadSwapPlacesYoshiBoard);
     
-    for (i = 0, var_s2 = 0; i < 3;) { //strange for loop that only increments if i is 0?
+    for (i = 0, var_s2 = 0; i < 3;) {
         temp_s0_2 = D_800F7848_BowserToadSwapPlacesYoshiBoard->unk_3C;
         temp_s0_2->unk_24 = -sinf((var_s2 * (0.017453292519943295))) * 20.0f;
         temp_s0 = D_800F7840_BowserToadSwapPlacesYoshiBoard->unk_3C;
@@ -353,7 +353,7 @@ void func_800F7764_BowserToadSwapPlacesYoshiBoard(void) {
     func_800178A0(1);
     func_80017660(0, 0.0f, 0.0f, 320.0f, 240.0f);
     func_800176C4(0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
-    LoadBackgroundData(&D_FE2310);
+    LoadBackgroundData(FE2310_ROM_START);
     if (D_800ED100.boardRam[5] == 0) {
         LoadBackgroundIndex(0x16);
     } else {

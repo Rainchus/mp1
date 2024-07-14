@@ -6,6 +6,7 @@ options:
   elf_path: build/marioparty.elf
   base_path: .
   platform: n64
+  ld_symbol_header_path: include/ld_addrs.h
   compiler: GCC
   asm_path: asm
   src_path: src

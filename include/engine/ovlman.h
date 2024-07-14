@@ -21,7 +21,7 @@ extern Vec3f D_800C2F4C[];
 extern unk_Struct00 *D_800C3110;
 extern s32 D_800F2C28;
 extern s16 D_800F3778;
-extern u32 D_800C2FF4;
+extern u32 rnd_seed;
 extern u8 D_800C3000;
 extern u8 D_800C3001;
 extern s32 D_800EE738;

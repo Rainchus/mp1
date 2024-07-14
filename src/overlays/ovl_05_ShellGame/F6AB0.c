@@ -149,13 +149,51 @@ void func_800F7098_ShellGame(f32 arg0) {
     D_800EE98C = 1328.0 - (arg0 * 664.0);
 }
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_05_ShellGame/F6AB0", func_800F719C_ShellGame);
+u16 func_800F719C_ShellGame(u16 arg0) { //shared overlay function
+    D_800FEC10_ShellGame = D_800FEC10_ShellGame * 0x19971204;
+    D_800FEC10_ShellGame = (D_800FEC10_ShellGame + 0x19760831) >> 0x10;
+    if (arg0 == 0) {
+        return D_800FEC10_ShellGame;
+    } else {
+        return (D_800FEC10_ShellGame % arg0);
+    }
+}
 
-void func_800F720C_ShellGame(u8 arg0) {
+void func_800F720C_ShellGame(u8 arg0) { //shared overlay function
     D_800FEC10_ShellGame = arg0 + (arg0 * D_800FEC10_ShellGame);
 }
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_05_ShellGame/F6AB0", func_800F7230_ShellGame);
+f32 func_800F7230_ShellGame(f32 arg0, f32 arg1, f32 arg2) {
+    f32 temp_f4;
+    
+    if ((arg0 >= 360.0)) {
+        arg0 = arg0 - 360.0;
+    } else {
+        if (arg0 < 0.0) {
+            arg0 = arg0 + 360.0;
+        }        
+    }
+    if ((arg1 >= 360.0)) {
+        arg1 = arg1 - 360.0;
+    } else {
+        if (arg1 < 0.0) {
+            arg1 = arg1 + 360.0;
+        }        
+    }
+    
+    temp_f4 = func_8009B618((arg0 - arg1) + 360.0, 360.0);
+    
+    if (temp_f4 < 180.0) {
+        if (temp_f4 <= arg2) {
+            return temp_f4;
+        }
+        return arg2;
+    }
+    if ((360.0 - temp_f4) <= arg2) {
+        return -(360.0 - temp_f4);
+    }
+    return -arg2;
+}
 
 f32 func_800F7398_ShellGame(f32 arg0, f32 arg1) {
     f32 var_f4;
@@ -170,7 +208,7 @@ f32 func_800F7398_ShellGame(f32 arg0, f32 arg1) {
     if ((temp_f2 < temp_f0)) {
         var_f4 = temp_f0 - temp_f2;
     } else {
-        temp_f2_2 = (f64) var_f4;
+        temp_f2_2 = var_f4;
         if (temp_f2_2 < 0.0) {
             var_f4 = temp_f2_2 + 360.0;
         }        

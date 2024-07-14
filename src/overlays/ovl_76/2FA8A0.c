@@ -12,5 +12,5 @@ board_overlay_entrypoint D_800F69C0_name_76[] = {
 };
 
 void func_800F65E0_name_76(void) {
-    ExecBoardScene(&D_800F69C0_name_76, D_800C597A);
+    ExecBoardScene(D_800F69C0_name_76, D_800C597A);
 }

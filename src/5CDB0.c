@@ -85,7 +85,7 @@ void func_8005CEDC(s32 arg0) {
         var_v0 = arg0 + 7;
     }
     
-    D_800F37BC[temp_a1] = D_800F37BC[temp_a1] & ~(1 << (arg0 - ((var_v0 >> 3) * 8)));
+    D_800F37BC[temp_a1] = D_800F37BC[temp_a1] & ~(1 << (arg0 - ((var_v0 >> 3) << 3)));
 }
 
 INCLUDE_ASM("asm/nonmatchings/5CDB0", omInitObjMan);
@@ -272,7 +272,7 @@ s32 omOvlCallEx(s32 arg0, s16 arg1, u16 arg2) {
     omOvlHisData* history;
     s32 ret;
 
-    if (omovlhisidx < 8) {
+    if (omovlhisidx < ARRAY_COUNT(omovlhis)) {
         history = &omovlhis[++omovlhisidx];
         history->overlayID = arg0;
         history->event = arg1;

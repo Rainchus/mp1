@@ -394,7 +394,7 @@ void func_8004A140(void);
 s32 func_80054654(void);
 void func_80070ED4(void);
 void func_8004F1D0(void);
-void LoadBackgroundData(Addr*);
+void LoadBackgroundData(Addr);
 void LoadBackgroundIndex(s32);
 void func_8003DAA8(void);
 void func_8004F140(s32);

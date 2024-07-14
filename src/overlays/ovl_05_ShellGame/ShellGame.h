@@ -2,7 +2,7 @@
 
 extern Vec3f D_800FF0A0_ShellGame;
 extern Vec3f D_800FF0AC_ovl05;
-extern s32 D_800FEC10_ShellGame;
+extern u32 D_800FEC10_ShellGame;
 void func_800F6A14_ShellGame(void);
 void func_800F87AC_ShellGame(void);
 void func_800F913C_ShellGame(void);
@@ -33,6 +33,7 @@ void func_800F7550_ShellGame(void);
 void func_800F828C_ShellGame(void);
 void func_800F87CC_ShellGame(void);
 void func_800F689C_ShellGame(omObjData*);
+f64 func_8009B618(f64, f64);
 extern s16 D_800EE984;
 extern s16 D_800FEC14_ShellGame;
 extern s16 D_800FEC16_ShellGame;

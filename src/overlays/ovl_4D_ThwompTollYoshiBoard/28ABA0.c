@@ -137,7 +137,7 @@ void func_800F7550_ThwompTollYoshiBoard(void) {
     func_800178A0(1);
     func_80017660(0U, 0.0f, 0.0f, 320.0f, 240.0f);
     func_800176C4(0U, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
-    LoadBackgroundData(&D_FE2310);
+    LoadBackgroundData(FE2310_ROM_START);
     LoadBackgroundIndex(0x15);
 }
 
