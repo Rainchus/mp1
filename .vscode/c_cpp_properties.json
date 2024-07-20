@@ -18,8 +18,7 @@
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
                     "${workspaceFolder}/include/**",
-                    "${workspaceFolder}/src/**",
-                    "${workspaceFolder}/src/ovl_1E_BumperBalls"
+                    "${workspaceFolder}/src/**"
                 ]
             },
             "includePath": [

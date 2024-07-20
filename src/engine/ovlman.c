@@ -42,7 +42,7 @@ void LoadOverlay(s32 overlayIndex) {
     u8 *rom_end;
     u8 *bss_start;
     u8 *bss_end;
-    u8 *temp;
+    u8* curBssAddr;
 
     rom_start = overlay_table[overlayIndex].rom_start;
     rom_end = overlay_table[overlayIndex].rom_end;
@@ -51,9 +51,9 @@ void LoadOverlay(s32 overlayIndex) {
 
     HuRomDmaCodeRead(rom_start, overlay_table[overlayIndex].ram_start, rom_end - rom_start);
 
-    temp = bss_start;
+    curBssAddr = bss_start;
     while (bss_start < bss_end) {
-        *(temp++) = 0;
+        *curBssAddr++ = 0;
         bss_start++;
     }
 
