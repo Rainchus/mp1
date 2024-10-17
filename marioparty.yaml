@@ -81,7 +81,7 @@ segments:
       - [0x180C0, c, engine/ovlman]
       - [0x18650, c] # unique to mp1?
       - [0x19470, c, engine/esprite]
-      - [0x19E70, c]
+      - [0x19E70, c, eeprom]
       - [0x1A2A0, c]
       - [0x1ACF0, c, engine/gameman]
       - [0x1B200, c, engine/graphics]

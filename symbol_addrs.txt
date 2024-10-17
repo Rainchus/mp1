@@ -517,3 +517,6 @@ tmp_task = 0x800EA180;
 
 //ovl_1F
 func_800FE040 = 0x800FE040; //rom:0x19F880
+
+GetSaveFileChecksum = 0x80019640;
+GetEepType = 0x80019270;
