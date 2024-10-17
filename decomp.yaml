@@ -1,0 +1,14 @@
+name: Mario Party
+github: https://github.com/Rainchus/mp1
+platform: n64
+versions:
+- name: mp1
+  fullname: MP1
+  paths:
+    baserom: "baserom.us.z64"
+    build: "build/marioparty.z64"
+    asm: "asm"
+    nonmatchings: "asm/nonmatchings"
+    map: "build/marioparty.map"
+    elf: "build/marioparty.elf"
+tools:
